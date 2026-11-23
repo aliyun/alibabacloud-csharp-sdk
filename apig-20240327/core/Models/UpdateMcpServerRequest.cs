@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The protocol. Valid values:</para>
+                /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>TCP.</description></item>
-                /// <item><description>HTTP.</description></item>
-                /// <item><description>DUBBO.</description></item>
+                /// <item><description>TCP: TCP</description></item>
+                /// <item><description>HTTP: HTTP</description></item>
+                /// <item><description>DUBBO: Dubbo</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,11 +131,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The creation source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ApiGatewayHttpToMCP: API Gateway-managed HTTP-to-MCP</description></item>
-        /// <item><description>ApiGatewayProxyMcpHosting: API Gateway-managed direct MCP proxy</description></item>
-        /// <item><description>ApiGatewayAssembly: API Gateway MCP assembly</description></item>
-        /// <item><description>NacosHttpToMCP: API Gateway-managed Nacos-synchronized HTTP-to-MCP</description></item>
-        /// <item><description>NacosMcpHosting: API Gateway-managed Nacos-synchronized direct MCP proxy</description></item>
+        /// <item><description>ApiGatewayHttpToMCP: Gateway-hosted HTTP-to-MCP</description></item>
+        /// <item><description>ApiGatewayProxyMcpHosting: Gateway-hosted direct MCP proxy</description></item>
+        /// <item><description>ApiGatewayAssembly: Gateway MCP assembly</description></item>
+        /// <item><description>NacosHttpToMCP: Gateway-hosted Nacos-synchronized HTTP-to-MCP</description></item>
+        /// <item><description>NacosMcpHosting: Gateway-hosted Nacos-synchronized direct MCP proxy</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol.</para>
+                    /// <para>The service protocol.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTTP</para>
@@ -277,7 +277,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The MCP service description.</para>
+        /// <para>The MCP service instructions. Only gateway-hosted HTTP-to-MCP services of AI Gateway Professional Edition are supported. The maximum length is 2,048 UTF-8 bytes.</para>
+        /// <list type="bullet">
+        /// <item><description>Passing a non-empty string replaces the saved instructions.</description></item>
+        /// <item><description>Omitting this field retains the saved instructions.</description></item>
+        /// <item><description>Passing an empty string <c>&quot;&quot;</c> clears the saved instructions.</description></item>
+        /// </list>
+        /// <para>After you republish the MCP service, newly established MCP connections can read the updated instructions in <c>result.instructions</c> of the <c>initialize</c> response. If cleared, the response omits <c>instructions</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Used to query order status. An order number is required for the query</para>
@@ -301,7 +307,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateMcpServerRequestMcpServerConfig McpServerConfig { get; set; }
         public class UpdateMcpServerRequestMcpServerConfig : TeaModel {
             /// <summary>
-            /// <para>The MCP server configurations. This parameter is mutually exclusive with swaggerConfig.</para>
+            /// <para>The MCP server configurations. This parameter is mutually exclusive with the swaggerConfig parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mcp-server-spec-yaml</para>

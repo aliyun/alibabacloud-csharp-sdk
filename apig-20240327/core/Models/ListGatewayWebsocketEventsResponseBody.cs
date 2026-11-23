@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The query result.</para>
+        /// <para>The query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<Dictionary<string, object>> Items { get; set; }
 
             /// <summary>
-            /// <para>The actual number of entries per page used for the current request. The default value is 50 and the maximum value is 100.</para>
+            /// <para>The actual number of results per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The encrypted cursor returned when there is a next page. This parameter is empty for the last page. The cursor is valid for 10 minutes and is bound to the user, gateway, time range, and filters. You can adjust maxResults for subsequent pages. SLS snapshot isolation is not guaranteed.</para>
+            /// <para>The pagination token for the next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>opaque-token-from-previous-page</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D0A6A1A0-8793-4C10-AB1A-2C03E770A912</para>

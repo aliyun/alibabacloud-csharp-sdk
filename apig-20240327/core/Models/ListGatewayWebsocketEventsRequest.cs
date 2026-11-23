@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayWebsocketEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The connection ID.</para>
+        /// <para>The connection identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>connection-example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793919600.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for cursor-based pagination. If not specified or set to 0, the default value is 50. If the value is greater than 100, it is capped at 100. Negative values are invalid.</para>
+        /// <para>The maximum number of results per page for cursor-based pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The pagination cursor. Do not specify this parameter for the first query. For subsequent pages, use the nextToken value returned in the previous response. The time range and filter conditions must remain unchanged, but you can adjust the maxResults value.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>opaque-token-from-previous-page</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793916000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The turn ID.</para>
+        /// <para>The turn identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>turn-example</para>

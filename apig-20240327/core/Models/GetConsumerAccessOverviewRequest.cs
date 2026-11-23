@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string GatewayId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to also query the model TPM limits. Default value: false. If set to true, modelTpmLimits is returned for dedicated instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("includeModelTpm")]
+        [Validation(Required=false)]
+        public bool? IncludeModelTpm { get; set; }
+
     }
 
 }

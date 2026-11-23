@@ -14506,6 +14506,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 query["gatewayId"] = request.GatewayId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeModelTpm))
+            {
+                query["includeModelTpm"] = request.IncludeModelTpm;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -14551,6 +14555,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {
                 query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeModelTpm))
+            {
+                query["includeModelTpm"] = request.IncludeModelTpm;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18250,6 +18258,124 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetModelGroupWithOptionsAsync(modelGroupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetModelTokenRateLimitRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetModelTokenRateLimitResponse
+        /// </returns>
+        public GetModelTokenRateLimitResponse GetModelTokenRateLimitWithOptions(string gatewayId, string modelId, GetModelTokenRateLimitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetModelTokenRateLimit",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/model-tpm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetModelTokenRateLimitResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetModelTokenRateLimitRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetModelTokenRateLimitResponse
+        /// </returns>
+        public async Task<GetModelTokenRateLimitResponse> GetModelTokenRateLimitWithOptionsAsync(string gatewayId, string modelId, GetModelTokenRateLimitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetModelTokenRateLimit",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/model-tpm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetModelTokenRateLimitResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetModelTokenRateLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetModelTokenRateLimitResponse
+        /// </returns>
+        public GetModelTokenRateLimitResponse GetModelTokenRateLimit(string gatewayId, string modelId, GetModelTokenRateLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetModelTokenRateLimitWithOptions(gatewayId, modelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetModelTokenRateLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetModelTokenRateLimitResponse
+        /// </returns>
+        public async Task<GetModelTokenRateLimitResponse> GetModelTokenRateLimitAsync(string gatewayId, string modelId, GetModelTokenRateLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetModelTokenRateLimitWithOptionsAsync(gatewayId, modelId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24978,12 +25104,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</para>
+        /// <para>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25061,12 +25187,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</para>
+        /// <para>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25144,12 +25270,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</para>
+        /// <para>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25168,12 +25294,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Reads historical events delivered by the dedicated Professional AI gateway of the current user to the user\&quot;s SLS. Standard user log delivery and corresponding indexes must be enabled. The query time range is a left-closed and right-open interval, with a span of no more than 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results are not an online connection directory, and missing logs do not indicate that no calls occurred.</para>
+        /// <para>Retrieves the historical events delivered by the dedicated Professional AI gateway of the current user to Simple Log Service (SLS). Standard user log delivery and the corresponding indexes must be enabled. The query time range is a left-closed and right-open interval. The time span cannot exceed 31 days and cannot include future time. Uses maxResults and nextToken for cursor-based pagination. The results do not represent an online connection directory, and missing logs do not indicate that no calls occurred.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39313,7 +39439,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the configurations of Ingress listeners.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39412,7 +39538,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the configurations of Ingress listeners.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39511,7 +39637,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the configurations of Ingress listeners.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39535,7 +39661,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the configurations of listening Ingresses.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the configurations of Ingress listeners.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40092,6 +40218,152 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateModelGroupWithOptionsAsync(modelGroupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelTokenRateLimitRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelTokenRateLimitResponse
+        /// </returns>
+        public UpdateModelTokenRateLimitResponse UpdateModelTokenRateLimitWithOptions(string gatewayId, string modelId, UpdateModelTokenRateLimitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumers))
+            {
+                body["consumers"] = request.Consumers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedRevision))
+            {
+                body["expectedRevision"] = request.ExpectedRevision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalTpm))
+            {
+                body["globalTpm"] = request.GlobalTpm;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelTokenRateLimit",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/model-tpm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelTokenRateLimitResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelTokenRateLimitRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelTokenRateLimitResponse
+        /// </returns>
+        public async Task<UpdateModelTokenRateLimitResponse> UpdateModelTokenRateLimitWithOptionsAsync(string gatewayId, string modelId, UpdateModelTokenRateLimitRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumers))
+            {
+                body["consumers"] = request.Consumers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedRevision))
+            {
+                body["expectedRevision"] = request.ExpectedRevision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalTpm))
+            {
+                body["globalTpm"] = request.GlobalTpm;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateModelTokenRateLimit",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/model-tpm/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateModelTokenRateLimitResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelTokenRateLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelTokenRateLimitResponse
+        /// </returns>
+        public UpdateModelTokenRateLimitResponse UpdateModelTokenRateLimit(string gatewayId, string modelId, UpdateModelTokenRateLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateModelTokenRateLimitWithOptions(gatewayId, modelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the token throttling rules for a model.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateModelTokenRateLimitRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateModelTokenRateLimitResponse
+        /// </returns>
+        public async Task<UpdateModelTokenRateLimitResponse> UpdateModelTokenRateLimitAsync(string gatewayId, string modelId, UpdateModelTokenRateLimitRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateModelTokenRateLimitWithOptionsAsync(gatewayId, modelId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
