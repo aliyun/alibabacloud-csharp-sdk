@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the security principal.</para>
+            /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sample RAM user</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the security principal.</para>
+            /// <para>The owner ID of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the security principal, such as RAM user SubUser or RAM role AssumedRoleUser.</para>
+            /// <para>The type of the authentication principal, such as RAM user SubUser or RAM role AssumedRoleUser.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SubUser</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the missing permission.</para>
+            /// <para>The no-permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>

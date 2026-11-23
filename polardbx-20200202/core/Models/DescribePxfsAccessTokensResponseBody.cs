@@ -10,34 +10,34 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribePxfsAccessTokensResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reasons for the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribePxfsAccessTokensResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribePxfsAccessTokensResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The authorization action.</para>
+            /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribePxfsAccessTokens</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity used for authorization in the request.</para>
+            /// <para>The identity identifier used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authorization principal.</para>
+            /// <para>The owner ID of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authorization principal.</para>
+            /// <para>The type of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>

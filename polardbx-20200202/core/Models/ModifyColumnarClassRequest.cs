@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyColumnarClassRequest : TeaModel {
         /// <summary>
-        /// <para>The column store specifications.</para>
+        /// <para>The column store specification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The number of column store nodes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>**</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ColumnarNodeCount")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</para>
+        /// <para>The region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to view the regions supported by PolarDB-X, including region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

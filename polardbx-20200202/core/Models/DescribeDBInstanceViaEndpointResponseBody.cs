@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? CnNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The commodity code of the instance. The value is fixed as drds_polarxpost_public_cn.</para>
+            /// <para>The commodity type of the instance. The value is fixed as drds_polarxpost_public_cn.</para>
             /// 
             /// <b>Example:</b>
             /// <para>drds_polarxpost_public_cn</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>The port number.</para>
+                /// <para>The connection port number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3306</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public long? Port { get; set; }
 
                 /// <summary>
-                /// <para>The connection type. <b>VPC</b> indicates an internal network connection. <b>PUBLIC</b> indicates a public network connection.</para>
+                /// <para>The connection type. <b>VPC</b> indicates an internal network connection, and <b>PUBLIC</b> indicates a public network connection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VPC</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>VPC ID。</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-xxxxxx</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The internal CloudInstanceId within the VPC. This parameter can be ignored.</para>
+                /// <para>The internal CloudInstanceId in the VPC. You can ignore this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxc-zkralxpc5d****</para>
@@ -151,8 +151,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ReadWrite</b>: primary instance.</description></item>
-            /// <item><description><b>ReadOnly</b>: read-only instance.</description></item>
+            /// <item><description><b>ReadWrite</b>: primary instance</description></item>
+            /// <item><description><b>ReadOnly</b>: read-only instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBNodeClass { get; set; }
 
             /// <summary>
-            /// <para>The number of instance nodes.</para>
+            /// <para>The number of nodes in the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string NodeClass { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the node.</para>
+                /// <para>The ID of the region where the node resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The zone where the node resides.</para>
+                /// <para>The name of the zone where the node resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-a</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The database type. The value is fixed as polarx.</para>
+            /// <para>The database engine type. The value is fixed as polarx.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBType { get; set; }
 
             /// <summary>
-            /// <para>The database version.</para>
+            /// <para>The database engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.5</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBVersion { get; set; }
 
             /// <summary>
-            /// <para>The instance description.</para>
+            /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test instance</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? DnNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The database type. The value is fixed as MySQL.</para>
+            /// <para>The database engine. The value is fixed as MySQL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. The time is in the yyyy-MM-ddTHH:mm:ss.sss+0000 format (UTC).</para>
+            /// <para>The expiration time. The format is yyyy-MM-ddTHH:mm:ss.sss+0000 (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-31T16:00:00.000+0000</para>
@@ -341,8 +341,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>Indicates whether the instance has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Expired.</description></item>
-            /// <item><description><b>false</b>: Not expired.</description></item>
+            /// <item><description><b>true</b>: The instance has expired.</description></item>
+            /// <item><description><b>false</b>: The instance has not expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? KindCode { get; set; }
 
             /// <summary>
-            /// <para>The LTS version numbers.</para>
+            /// <para>The LTS version number.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("LTSVersions")]
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<string> LTSVersions { get; set; }
 
             /// <summary>
-            /// <para>The latest kernel version supported by the instance.</para>
+            /// <para>The latest kernel version supported by the current instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx-kernel_5.4.11-16301083_xcluster-20210805</para>
@@ -393,12 +393,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The lock mode of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Unlock</b>: Normal.</description></item>
-            /// <item><description><b>ManualLock</b>: Manually locked.</description></item>
-            /// <item><description><b>LockByExpiration</b>: Automatically locked due to instance expiration.</description></item>
-            /// <item><description><b>LockByRestoration</b>: Automatically locked before instance rollback.</description></item>
-            /// <item><description><b>LockByDiskQuota</b>: Automatically locked due to insufficient disk space.</description></item>
-            /// <item><description><b>LockReadInstanceByDiskQuota</b>: Read-only instance automatically locked due to insufficient disk space.</description></item>
+            /// <item><description><b>Unlock</b>: normal</description></item>
+            /// <item><description><b>ManualLock</b>: manually locked</description></item>
+            /// <item><description><b>LockByExpiration</b>: automatically locked due to expiration</description></item>
+            /// <item><description><b>LockByRestoration</b>: automatically locked before a rollback</description></item>
+            /// <item><description><b>LockByDiskQuota</b>: automatically locked due to full storage space</description></item>
+            /// <item><description><b>LockReadInstanceByDiskQuota</b>: automatically locked due to full storage space of the read-only instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -409,7 +409,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The end time of the maintenance window. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</para>
+            /// <para>The end time of the maintenance window for the instance. The time is in UTC. Add 8 hours to the time to obtain the maintenance window displayed in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>06:00</para>
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the maintenance window. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</para>
+            /// <para>The start time of the maintenance window for the instance. The time is in UTC. Add 8 hours to the time to obtain the maintenance window displayed in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>06:00</para>
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The network type of the instance. Only VPC is supported, which indicates a virtual private cloud (VPC).</para>
+            /// <para>The network type of the instance. The only valid value is VPC, which indicates a VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC</para>
@@ -451,8 +451,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-            /// <item><description><b>Prepaid</b>: subscription.</description></item>
+            /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+            /// <item><description><b>Prepaid</b>: subscription</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The port of the instance endpoint.</para>
+            /// <para>The connection port of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3306</para>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The names of read-only instances.</para>
+            /// <para>The names of the read-only instances.</para>
             /// </summary>
             [NameInMap("ReadDBInstances")]
             [Validation(Required=false)]
@@ -502,8 +502,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>Indicates whether the three-role mode is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b>: Disabled.</description></item>
-            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b>: The three-role mode is not enabled.</description></item>
+            /// <item><description><b>true</b>: The three-role mode is enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -516,10 +516,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The three-role mode status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>disabled</b>: Disabled.</description></item>
-            /// <item><description><b>enabled</b>: Enabled.</description></item>
-            /// <item><description><b>processing</b>: Being processed.</description></item>
-            /// <item><description><b>unknown</b>: Unknown. This may be caused by the instance being unreachable.</description></item>
+            /// <item><description><b>disabled</b>: not enabled</description></item>
+            /// <item><description><b>enabled</b>: enabled</description></item>
+            /// <item><description><b>processing</b>: processing</description></item>
+            /// <item><description><b>unknown</b>: unknown, which may be caused by the inability to connect to the instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -532,8 +532,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The instance edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>enterprise</b>: Enterprise Edition.</description></item>
-            /// <item><description><b>standard</b>: Standard Edition.</description></item>
+            /// <item><description><b>enterprise</b>: Enterprise Edition</description></item>
+            /// <item><description><b>standard</b>: Standard Edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -544,7 +544,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Series { get; set; }
 
             /// <summary>
-            /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/339826.html">Instance status</a>.</para>
+            /// <para>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/339826.html">Instance status table</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -595,8 +595,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ReadWrite</b>: primary instance.</description></item>
-            /// <item><description><b>ReadOnly</b>: read-only instance.</description></item>
+            /// <item><description><b>ReadWrite</b>: primary instance</description></item>
+            /// <item><description><b>ReadOnly</b>: read-only instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -607,7 +607,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-xxxxx</para>

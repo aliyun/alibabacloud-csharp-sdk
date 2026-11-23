@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeCdcInfoResponseBodyData Data { get; set; }
         public class DescribeCdcInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of days that binlogs are retained.</para>
+            /// <para>The number of days for which binlogs are retained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CdcNewVersion { get; set; }
 
             /// <summary>
-            /// <para>The checksum switch.</para>
+            /// <para>Indicates whether the checksum feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? EnableCyclicReplication { get; set; }
 
             /// <summary>
-            /// <para>The instance list.</para>
+            /// <para>The list of instances.</para>
             /// </summary>
             [NameInMap("InstanceTopologyList")]
             [Validation(Required=false)]
@@ -86,17 +86,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ClusterType { get; set; }
 
                 /// <summary>
-                /// <para>The instance type remarks.</para>
+                /// <para>The comment on the instance type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>Sample instance type comment</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The multi-stream group name.</para>
+                /// <para>The name of the multi-stream group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string HashLevel { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxc-***</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The node array.</para>
+                /// <para>The array of nodes.</para>
                 /// </summary>
                 [NameInMap("PhysicalNodes")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? Disk { get; set; }
 
                     /// <summary>
-                    /// <para>The instance specifications.</para>
+                    /// <para>The instance type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>polarx.x4.large.2e.cdc</para>
@@ -166,14 +166,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The node ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <hr>
+                    /// <para>pxc-c-jf0pivh2dt</para>
                     /// </summary>
                     [NameInMap("NodeId")]
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
                     /// <summary>
-                    /// <para>The node name.</para>
+                    /// <para>The name of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pxc-c-***</para>
@@ -221,14 +221,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3014767486</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public int? ServerId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether multi-stream CDC is supported.</para>
+            /// <para>Indicates whether multiple CDC streams are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class EnableRightsSeparationRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the audit account.</para>
+        /// <para>The description of the auditor account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AuditAccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the audit account.</para>
+        /// <para>The name of the auditor account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AuditAccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the audit account.</para>
+        /// <para>The password of the auditor account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass1@</para>
         /// </summary>
         [NameInMap("AuditAccountPassword")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the security administrator account.</para>
+        /// <para>The security administrator account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,11 +85,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the security administrator account.</para>
+        /// <para>The password of the security administrator.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass1@</para>
         /// </summary>
         [NameInMap("SecurityAccountPassword")]
         [Validation(Required=false)]

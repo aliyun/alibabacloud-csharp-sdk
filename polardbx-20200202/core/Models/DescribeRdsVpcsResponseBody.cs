@@ -84,7 +84,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the VPC is the default VPC. Valid values: <b>true</b>: The VPC is the default VPC. <b>false</b>: The VPC is not the default VPC.</para>
+                /// <para>Indicates whether the VPC is the default VPC. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The VPC is the default VPC.</description></item>
+                /// <item><description>false: The VPC is not the default VPC.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the VPC resides.</para>
+                /// <para>The region where the VPC resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -104,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// <para>The VPC status.</para>
+                /// <para>The status of the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -131,7 +135,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string CidrBlock { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the vSwitch was created. The value is a UNIX timestamp accurate to milliseconds.</para>
+                    /// <para>The creation time, which is a UNIX timestamp accurate to milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1574156944000</para>
@@ -141,7 +145,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string GmtCreate { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the vSwitch was last modified. The value is a UNIX timestamp.</para>
+                    /// <para>The last modification time. The value is a UNIX timestamp.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-09-03T19:19:13+08:00</para>
@@ -171,7 +175,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string IzNo { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch status.</para>
+                    /// <para>The status of the vSwitch.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Available</para>
@@ -181,7 +185,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch ID.</para>
+                    /// <para>The ID of the vSwitch.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-8vbkwmpn****4nrd639ih</para>

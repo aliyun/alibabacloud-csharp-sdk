@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeParameterGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance details.</para>
+        /// <para>The list of instance details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeParameterGroupsResponseBodyData Data { get; set; }
         public class DescribeParameterGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The parameter template name.</para>
+            /// <para>The name of the parameter template.</para>
             /// </summary>
             [NameInMap("ParameterGroups")]
             [Validation(Required=false)]
             public List<DescribeParameterGroupsResponseBodyDataParameterGroups> ParameterGroups { get; set; }
             public class DescribeParameterGroupsResponseBodyDataParameterGroups : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether a forced restart of CN is required.</para>
+                /// <para>Specifies whether a forcible restart is required for CN.</para>
                 /// </summary>
                 [NameInMap("CnForceRestart")]
                 [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DbType { get; set; }
 
                 /// <summary>
-                /// <para>The database engine version.</para>
+                /// <para>The database version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5.7</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DbVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a forced restart of DN is required.</para>
+                /// <para>Specifies whether a forcible restart is required for DN.</para>
                 /// </summary>
                 [NameInMap("DnForceRestart")]
                 [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The modification time, in timestamp format.</para>
+                /// <para>The modification time in timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1605079985000</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The parameter template ID.</para>
                 /// <remarks>
-                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates in the specified region, including the parameter template ID.</para>
+                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates in the target region, including the parameter template IDs.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ParameterGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The parameter template name.</para>
+                /// <para>The name of the parameter template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dstest_api_new</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ParameterGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The parameter templatetype.</para>
+                /// <para>The parameter template type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

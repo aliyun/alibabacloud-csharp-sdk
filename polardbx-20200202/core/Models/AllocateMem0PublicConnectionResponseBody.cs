@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:AllocateMem0PublicConnection</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity used for authentication in the request.</para>
+            /// <para>The identity identifier used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]

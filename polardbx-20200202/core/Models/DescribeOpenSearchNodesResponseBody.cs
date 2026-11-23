@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchNodes</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity used for authentication in the request.</para>
+            /// <para>The identity identifier used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authentication principal.</para>
+            /// <para>The description as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no-permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? CpuCores { get; set; }
 
                 /// <summary>
-                /// <para>The CPU usage (%).</para>
+                /// <para>The CPU utilization (%).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>35.6</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? DiskSizeGB { get; set; }
 
                 /// <summary>
-                /// <para>The disk space usage of the node.</para>
+                /// <para>The disk space utilization of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>42.5</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DiskUsedPercent { get; set; }
 
                 /// <summary>
-                /// <para>The total number of unresolved baseline check items.</para>
+                /// <para>The total number of unresolved baseline checks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GREEN</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Health { get; set; }
 
                 /// <summary>
-                /// <para>The JVM heap memory usage of the node.</para>
+                /// <para>The JVM heap memory utilization of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>38.2</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Host { get; set; }
 
                 /// <summary>
-                /// <para>The name of the host on which the node instance runs. You can log on to the host and run the <c>hostname</c> command to view the hostname.</para>
+                /// <para>The name of the host where the node instance runs. You can log on to the host and run the <c>hostname</c> command to view the hostname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hb2h-ali-oceanbase-public-online-013</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string LoadOneM { get; set; }
 
                 /// <summary>
-                /// <para>The amount of memory used.</para>
+                /// <para>The amount of used memory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -203,11 +203,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? MemoryGB { get; set; }
 
                 /// <summary>
-                /// <para>The node type to query. Valid values:</para>
+                /// <para>The type of node to query. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>all: queries both dn and gms nodes.</description></item>
-                /// <item><description>gms: queries only gms nodes.</description></item>
-                /// <item><description>dn: queries only dn nodes.</description></item>
+                /// <item><description>all: Queries both dn and gms nodes.</description></item>
+                /// <item><description>gms: Queries only gms nodes.</description></item>
+                /// <item><description>dn: Queries only dn nodes.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

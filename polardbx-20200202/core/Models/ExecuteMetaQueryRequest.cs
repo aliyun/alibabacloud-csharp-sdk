@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The SQL statement to execute.</para>
+        /// <para>The SQL statement to be executed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

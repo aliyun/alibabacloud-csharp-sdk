@@ -20,12 +20,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        /// <summary>
+        /// <para>The name of the instance cluster. You can call the DescribeDBInstanceTopology operation to query the name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example_cluster</para>
+        /// </summary>
         [NameInMap("InstanceClusterName")]
         [Validation(Required=false)]
         public string InstanceClusterName { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

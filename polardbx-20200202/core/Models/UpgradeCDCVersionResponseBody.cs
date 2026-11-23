@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpgradeCDCVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpgradeCDCVersionResponseBodyData Data { get; set; }
         public class UpgradeCDCVersionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The target version number.</para>
+            /// <para>The target minor version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DbInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The target task ID.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1861190497624654848</para>
+                /// <para>2209883</para>
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

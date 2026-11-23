@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeComponentPropetiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The export parameters of exception events.</para>
+        /// <para>The export parameters of the exception event.</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>4C32G</para>
+            /// <para>4 vCPUs and 32 GB</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The display order of the commodity module property.</para>
-            /// <para>The returned content varies depending on the commodity module.</para>
+            /// <para>The display order of the commodity module properties.</para>
+            /// <para>The returned content varies based on the commodity module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

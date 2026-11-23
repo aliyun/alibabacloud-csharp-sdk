@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeGdnInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The message filter type.</para>
+        /// <para>The filter type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn_id、
@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string FilterType { get; set; }
 
         /// <summary>
-        /// <para>The filter value used when querying resources.</para>
-        /// <para>This parameter is used in conjunction with FilterKey.</para>
+        /// <para>The filter value used to query resources. This parameter is used in conjunction with FilterKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-<em><b>、
@@ -53,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PageNum { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

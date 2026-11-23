@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyOpenSearchAccessProtocolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details of the access denied error.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:ModifyOpenSearchAccessProtocol</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The identity type used for authentication in the request. Valid values:</para>
+            /// <para>The type of identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SubUser: RAM user</description></item>
             /// <item><description>AssumedRoleUser: RAM role</description></item>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The permission denial type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. &quot;success&quot; is returned for a successful request. An error code is returned for a failed request.</para>
+        /// <para>The response message. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -106,11 +106,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The backend protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>HTTP</b> (default): supports association with HTTPS, HTTP, and QUIC listeners.</para>
+        /// <item><description><para><b>HTTP</b> (default): Supports association with HTTPS, HTTP, and QUIC listeners.</para>
         /// </description></item>
-        /// <item><description><para><b>HTTPS</b>: supports association with HTTPS listeners.</para>
+        /// <item><description><para><b>HTTPS</b>: Supports association with HTTPS listeners.</para>
         /// </description></item>
-        /// <item><description><para><b>gRPC</b>: supports association with HTTPS and QUIC listeners.</para>
+        /// <item><description><para><b>gRPC</b>: Supports association with HTTPS and QUIC listeners.</para>
         /// </description></item>
         /// </list>
         /// <remarks>

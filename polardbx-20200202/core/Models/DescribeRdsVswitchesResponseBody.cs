@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeRdsVswitchesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeRdsVswitchesResponseBodyData Data { get; set; }
         public class DescribeRdsVswitchesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The vSwitch list.</para>
+            /// <para>The list of vSwitches.</para>
             /// </summary>
             [NameInMap("VswitchList")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The description of the database.</para>
+                /// <para>The database description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>describe</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>babac91eff704edf9bdccfaa6ba4efce</para>
+                /// <para>123456</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the VPC is the default VPC. Valid values:</para>
+                /// <para>Specifies whether the VPC is the default VPC. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The VPC is the default VPC.</description></item>
-                /// <item><description><b>false</b>: The VPC is not the default VPC.</description></item>
+                /// <item><description>true: The VPC is the default VPC.</description></item>
+                /// <item><description>false: The VPC is not the default VPC.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>vpc id。</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf6lis7xmm****t9wrxb5</para>

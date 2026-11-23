@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeOpenSearchResourceUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchResourceUsage</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -106,12 +106,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? DocCount { get; set; }
 
             /// <summary>
-            /// <para>The number of indexes. This is a filter condition for the number of indexes that the missing index table currently has. The input format is <c>operator + separator &quot;&quot; + index count</c>, for example, <c>&gt;=100</c>.</para>
+            /// <para>The number of indexes.</para>
             /// 
             /// <b>Example:</b>
-            /// <remarks>
-            /// <para>=</para>
-            /// </remarks>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("IndexCount")]
             [Validation(Required=false)]
@@ -138,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? StorageTotalInBytes { get; set; }
 
             /// <summary>
-            /// <para>The storage space usage.</para>
+            /// <para>The storage usage percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20.0</para>

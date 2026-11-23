@@ -10,10 +10,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete all tags. This parameter is valid only when TagKey.N is empty. Valid values: true, false, True, and False. Default value: false.</para>
+        /// <para>Specifies whether to delete all tags. This parameter takes effect only when TagKey.N is empty. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Deletes all tags.</description></item>
+        /// <item><description>false: Does not delete all tags.
+        /// Default value: false.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Specifies whether to delete all tags</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -31,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. A maximum of 50 subkeys are supported.</para>
+        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. The value must be PolarDBXInstance.</para>
+        /// <para>The resource type. Valid value: PolarDBXInstance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. A maximum of 20 subkeys are supported.</para>
+        /// <para>The tag keys. You can specify up to 20 tag keys.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

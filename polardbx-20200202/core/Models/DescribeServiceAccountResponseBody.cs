@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeServiceAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details of the access denied error.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeServiceAccount</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The type of the access denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>The type of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIORITY</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeServiceAccountResponseBodyDataServiceAccounts> ServiceAccounts { get; set; }
             public class DescribeServiceAccountResponseBodyDataServiceAccounts : TeaModel {
                 /// <summary>
-                /// <para>The account name.</para>
+                /// <para>The name of the account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polardbx_meta_ro</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The service account type.</para>
+                /// <para>The type of the service account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>METADATA_READONLY</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ServiceAccountType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the backup set. Valid values:</para>
+                /// <para>The status of the backup set:</para>
                 /// <list type="bullet">
                 /// <item><description><b>0</b>: Backing up.</description></item>
                 /// <item><description><b>1</b>: Backup succeeded.</description></item>
@@ -132,10 +132,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. &quot;success&quot; is returned if the request was successful. Otherwise, an error code is returned.</para>
+        /// <para>The message returned. If the request is successful, \&quot;success\&quot; is returned. If the request fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

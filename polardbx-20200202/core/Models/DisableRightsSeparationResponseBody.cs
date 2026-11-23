@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DisableRightsSeparationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returns success if the request is successful, or returns the corresponding error code if an error occurs.</para>
+        /// <para>The returned message. If the request is successful, &quot;success&quot; is returned. If the request fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE5D94E3-3C93-3594-95D9-AAED2A980915</para>

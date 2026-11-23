@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the primary zone for a multi-zone instance. <b>This parameter is required if you want to create a multi-zone instance.</b></para>
+        /// <para>The zone ID of the primary zone for a multi-zone instance. <b>This parameter is required to create a multi-zone instance.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone ID.</para>
+        /// <para>The zone ID of the secondary zone.</para>
         /// <remarks>
-        /// <para>This parameter cannot be the same as the ZoneId property.</para>
+        /// <para>This parameter cannot have the same value as the ZoneId property.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The switch mode. Valid values:</para>
+        /// <para>The switchover mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: Immediate switchover.</description></item>
         /// <item><description>1: Switchover within the O&amp;M window.</description></item>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SwitchMode { get; set; }
 
         /// <summary>
-        /// <para>The third active zone.</para>
+        /// <para>The tertiary zone for a Three-zone deployment. The zone must be active.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-h</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string TopologyType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC where the access endpoint resides.</para>
+        /// <para>The ID of the VPC where the access endpoint is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-****</para>

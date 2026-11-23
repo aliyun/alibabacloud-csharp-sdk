@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>RequestId</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <para>9B2F3840-5C98-475C-B269-2D5C3A31797C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

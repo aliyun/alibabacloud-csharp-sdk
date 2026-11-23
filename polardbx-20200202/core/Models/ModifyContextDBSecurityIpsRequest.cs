@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The modification mode of the whitelist. Valid values:</para>
+        /// <para>The whitelist modification mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: overwrites the whitelist group.</description></item>
-        /// <item><description>1: adds a whitelist group.</description></item>
-        /// <item><description>2: deletes a whitelist group.</description></item>
+        /// <item><description>1: adds IP addresses to the whitelist group.</description></item>
+        /// <item><description>2: removes IP addresses from the whitelist group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ModifyMode { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

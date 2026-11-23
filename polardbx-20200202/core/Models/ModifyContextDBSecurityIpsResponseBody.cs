@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyContextDBSecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:ModifyContextDBSecurityIps</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the authentication principal belongs.</para>
+            /// <para>The Alibaba Cloud account ID of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The identity type used for authentication in the request. Valid values:</para>
+            /// <para>The type of identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SubUser: RAM user.</description></item>
             /// <item><description>AssumedRoleUser: RAM role.</description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyContextDBSecurityIpsResponseBodyData Data { get; set; }
         public class ModifyContextDBSecurityIpsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The context service instance name.</para>
+            /// <para>The name of the context service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pxc-xxxxxxxxxx</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>2209883</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]

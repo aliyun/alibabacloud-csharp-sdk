@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventReason { get; set; }
 
             /// <summary>
-            /// <para>The record time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
+            /// <para>The record time. The time must be in UTC and in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-15T06:39:49Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventRecordTime { get; set; }
 
             /// <summary>
-            /// <para>The event time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</para>
+            /// <para>The event time. The time must be in UTC and in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-15T06:35:00Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDBNodePerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: YYYY-MM-ddTHH:mm:ssZ (UTC).</para>
+        /// <para>The end time of the query. The time is in the YYYY-MM-ddTHH:mm:ssZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-20T02:00Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: YYYY-MM-ddTHH:mm:ssZ (UTC).</para>
+        /// <para>The start time of the query. The time is in the YYYY-MM-ddTHH:mm:ssZ format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-20T00:00Z</para>

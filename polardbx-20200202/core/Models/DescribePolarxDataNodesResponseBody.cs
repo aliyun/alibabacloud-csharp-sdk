@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The description of the node instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pxc-z****nfxsxy728 : PROD-OMS-Auto-ProductionDBCloneInstance</para>
+            /// <para>pxc-z****nfxsxy728 : PROD-OMS-Auto-Production database clone instance</para>
             /// </summary>
             [NameInMap("DBInstanceDescription")]
             [Validation(Required=false)]

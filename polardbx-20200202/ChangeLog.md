@@ -1,3 +1,9 @@
+2026-11-23 Version: 3.13.0
+- Support API ListPxfsTenants.
+- Support API ModifyPxfsTenantQuota.
+- Update API DescribeContextDBInfo: add response parameters Body.Data.Instance.MinorVersion.
+
+
 2026-10-30 Version: 3.12.2
 - Update API DescribeDBInstanceAttribute: add response parameters Body.DBInstance.SearchEnabled.
 - Update API DescribeDBInstanceAttribute: add response parameters Body.DBInstance.SearchInstance.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyMem0SecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The API operation name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:ModifyMem0SecurityIps</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity used for authentication in the request.</para>
+            /// <para>The identity identifier used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the identity used for authentication belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the authenticated principal belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The type of identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SubUser: RAM user.</description></item>
-            /// <item><description>AssumedRoleUser: RAM role.</description></item>
-            /// <item><description>Federated: SSO federated identity.</description></item>
+            /// <item><description>SubUser: RAM user</description></item>
+            /// <item><description>AssumedRoleUser: RAM role</description></item>
+            /// <item><description>Federated: SSO federated identity</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted complete diagnostic information.</para>
+            /// <para>The encoded complete diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -72,9 +72,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial. Valid values:</para>
+            /// <para>The type of access policy denial. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ImplicitDeny</b>: The resource owner has not granted the required permissions to the current user. Unauthorized operations are denied by default.</description></item>
+            /// <item><description><b>ImplicitDeny</b>: The resource owner has not configured a relevant access policy for the current user, and unauthorized operations are denied by default.</description></item>
             /// <item><description><b>ExplicitDeny</b>: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</description></item>
             /// </list>
             /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>PolicyType</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIORITY</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The data structure.</para>
+        /// <para>The data struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

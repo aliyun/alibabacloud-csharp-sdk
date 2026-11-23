@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeEvaluateAndImportTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the restoration tasks.</para>
+        /// <para>The recovery task details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is deleted.</para>
+            /// <para>Specifies whether the task is deleted.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>fase</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Deleted")]
             [Validation(Required=false)]
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The timestamp when the task was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-01-08T15:00Z</para>
+            /// <para>1736348400000</para>
             /// </summary>
             [NameInMap("GmtCreated")]
             [Validation(Required=false)]
             public long? GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the metadata information was last modified.</para>
+            /// <para>The time when the metadata was modified.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-04-02T02:10:59Z</para>
+            /// <para>1743559859000</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ap-northeast-1</para>
+            /// <para>76251</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the slink destination database.</para>
+            /// <para>The name of the destination Slink database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e3plus_*****_prod</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkDstDb { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the destination.</para>
+            /// <para>The destination instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-hzrehc****5zye</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkDstResId { get; set; }
 
             /// <summary>
-            /// <para>The username for the data connection of the destination.</para>
+            /// <para>The username for the destination data connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dts_temp_2_23</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkDstUserName { get; set; }
 
             /// <summary>
-            /// <para>The name of the slink source database.</para>
+            /// <para>The name of the source Slink database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stock</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcDb { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the source.</para>
+            /// <para>The source instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>drdshbga*****w4p</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcResId { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the source.</para>
+            /// <para>The type of the source resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS_MYSQL</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcResType { get; set; }
 
             /// <summary>
-            /// <para>The username for the data connection of the source.</para>
+            /// <para>The username for the source data connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtdba</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcUserName { get; set; }
 
             /// <summary>
-            /// <para>The stage of the synchronization task.</para>
+            /// <para>The stage of the synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DATA_IMPORT_RUNNING</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkStage { get; set; }
 
             /// <summary>
-            /// <para>The running status of the synchronization task.</para>
+            /// <para>The running status of the synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMPORT_NOT_BEGIN</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkStatus { get; set; }
 
             /// <summary>
-            /// <para>The description of the slink task.</para>
+            /// <para>The description of the Slink task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkTaskDesc { get; set; }
 
             /// <summary>
-            /// <para>The slink task ID.</para>
+            /// <para>The Slink task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The returned message. &gt; This parameter is empty when the request succeeds. When the request fails, exception information such as an error code is returned.</para>
+        /// <para>The returned message. &gt; This parameter is empty if the request is successful. If the request fails, an error message (such as an error code) is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

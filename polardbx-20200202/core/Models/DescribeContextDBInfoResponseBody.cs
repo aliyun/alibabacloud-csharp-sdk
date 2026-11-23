@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeContextDBInfo</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of missing permission.</para>
+            /// <para>The type of the permission denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public DescribeContextDBInfoResponseBodyDataInstance Instance { get; set; }
             public class DescribeContextDBInfoResponseBodyDataInstance : TeaModel {
                 /// <summary>
-                /// <para>The instance specifications.</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql.x2.large.2c</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string ConnectionString { get; set; }
 
                     /// <summary>
-                    /// <para>The target node type: service or dashboard.</para>
+                    /// <para>The type of the target node. Valid values: service and dashboard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>service</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string NodeType { get; set; }
 
                     /// <summary>
-                    /// <para>The port.</para>
+                    /// <para>The port number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3306</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC-connected instance ID.</para>
+                    /// <para>The VPC instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pxc-spsil01pww4hfzjayd-cn-20251013180429</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The database instance name.</para>
+                /// <para>The name of the database instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxc-hzr9qzafkeury3</para>
@@ -222,6 +222,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The full tag of the minor version currently confirmed by the service. This parameter is empty if the version is unknown.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>polardb-2.6.0_release_contextdb-20261023</para>
+                /// </summary>
+                [NameInMap("MinorVersion")]
+                [Validation(Required=false)]
+                public string MinorVersion { get; set; }
+
+                /// <summary>
                 /// <para>The number of nodes.</para>
                 /// 
                 /// <b>Example:</b>
@@ -232,7 +242,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? NodeCount { get; set; }
 
                 /// <summary>
-                /// <para>The PolarDB-X Search instance name.</para>
+                /// <para>The name of the PolarDB-X Search instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxs-********</para>
@@ -252,7 +262,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC instance ID of the replica set node.</para>
+                /// <para>The VPC instance IDs of the replica set nodes.</para>
                 /// <remarks>
                 /// <para>This parameter is returned only when the network type of the instance is VPC.</para>
                 /// </remarks>
@@ -262,7 +272,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public List<DescribeContextDBInfoResponseBodyDataInstanceReplicaSets> ReplicaSets { get; set; }
                 public class DescribeContextDBInfoResponseBodyDataInstanceReplicaSets : TeaModel {
                     /// <summary>
-                    /// <para>The instance specifications.</para>
+                    /// <para>The instance type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pg.x2.13large.2c</para>
@@ -289,7 +299,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string ConnectionString { get; set; }
 
                         /// <summary>
-                        /// <para>The target node type: service or dashboard.</para>
+                        /// <para>The type of the target node. Valid values: service and dashboard.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>service</para>
@@ -299,7 +309,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string NodeType { get; set; }
 
                         /// <summary>
-                        /// <para>The port.</para>
+                        /// <para>The port number.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3306</para>
@@ -311,8 +321,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         /// <summary>
                         /// <para>The instance type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>ReadWrite</b>: primary instance.</description></item>
-                        /// <item><description><b>ReadOnly</b>: read-only instance.</description></item>
+                        /// <item><description><b>ReadWrite</b>: primary instance</description></item>
+                        /// <item><description><b>ReadOnly</b>: read-only instance</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -343,7 +353,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string VSwitchId { get; set; }
 
                         /// <summary>
-                        /// <para>The VPC-connected instance ID.</para>
+                        /// <para>The VPC instance ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>vpc-8vbdw66evguopfcfvieoi</para>
@@ -385,7 +395,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? NodeCount { get; set; }
 
                     /// <summary>
-                    /// <para>The target node type: service or dashboard.</para>
+                    /// <para>The type of the target node. Valid values: service and dashboard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>service</para>
@@ -397,13 +407,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <summary>
                     /// <para>The node status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: Running.</description></item>
-                    /// <item><description><b>1</b>: Creating.</description></item>
-                    /// <item><description><b>2</b>: Abnormal.</description></item>
-                    /// <item><description><b>3</b>: Expired.</description></item>
-                    /// <item><description><b>4</b>: Releasing.</description></item>
-                    /// <item><description><b>5</b>: Released.</description></item>
-                    /// <item><description><b>6</b>: Locked.</description></item>
+                    /// <item><description><b>0</b>: running</description></item>
+                    /// <item><description><b>1</b>: creating</description></item>
+                    /// <item><description><b>2</b>: abnormal</description></item>
+                    /// <item><description><b>3</b>: expired</description></item>
+                    /// <item><description><b>4</b>: releasing</description></item>
+                    /// <item><description><b>5</b>: released</description></item>
+                    /// <item><description><b>6</b>: locked</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The plaintext of the token.</para>
+            /// <para>The plaintext token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxfs_tenant-001.token-001.******</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ReleaseContext0PublicConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The detailed reasons for the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public ReleaseContext0PublicConnectionResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class ReleaseContext0PublicConnectionResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The description is as above.</para>
+            /// <para>The description as mentioned above.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:ReleaseContext0PublicConnection</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The identity used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The description is as above.</para>
+            /// <para>The description as mentioned above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The description is as above.</para>
+            /// <para>The description as mentioned above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public ReleaseContext0PublicConnectionResponseBodyData Data { get; set; }
         public class ReleaseContext0PublicConnectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The context service instance name.</para>
+            /// <para>The name of the context service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>context0-example</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pxsp-xxxxxxxxxx</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? NetType { get; set; }
 
             /// <summary>
-            /// <para>The query node type. Valid values:</para>
+            /// <para>The type of the queried node. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>service</description></item>
             /// <item><description>dashboard</description></item>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string OldConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The previous port value.</para>
+            /// <para>The previous port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CloudProduct { get; set; }
 
             /// <summary>
-            /// <para>The data size of cold storage.</para>
+            /// <para>The data size in cold storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public double? CurrentSpaceSize { get; set; }
 
             /// <summary>
-            /// <para>The data redundancy type of cold storage. LRS indicates locally redundant storage.</para>
+            /// <para>The data redundancy type for cold storage. LRS indicates locally redundant storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LRS</para>

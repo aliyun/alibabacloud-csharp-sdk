@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DeleteContext0</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The name of the context service dashboard instance.</para>
+            /// <para>The name of the dashboard instance for the context service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********-d</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DashboardReplicaSetName { get; set; }
 
             /// <summary>
-            /// <para>The name of the context service instance.</para>
+            /// <para>The name of the service instance for the context service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********-s</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>2209883</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]

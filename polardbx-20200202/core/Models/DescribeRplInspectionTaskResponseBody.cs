@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The timestamp when the task was created.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2025-09-25T02:36:20.000+0000</para>
+                /// <para>1758597921000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>slinktaskid。</para>
+                /// <para>The Slink task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>etx-hzrez23btmb6aq</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the task was last updated.</para>
+                /// <para>The timestamp of the last task update.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2025-09-23T03:25:21.000+0000</para>
+                /// <para>1758767780000</para>
                 /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The slink status.</para>
+            /// <para>The Slink status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRE_CHECK</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

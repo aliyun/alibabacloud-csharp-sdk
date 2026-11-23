@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DeleteServiceAccount</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the missing permission.</para>
+            /// <para>The type of the permission denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>The type of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIORITY</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DeleteServiceAccountResponseBodyData Data { get; set; }
         public class DeleteServiceAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The account name.</para>
+            /// <para>The name of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardbx_meta_ro</para>
@@ -86,17 +86,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the import task is successful.</para>
+            /// <para>Indicates whether the import task was successful.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>fase</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Deleted")]
             [Validation(Required=false)]
             public bool? Deleted { get; set; }
 
             /// <summary>
-            /// <para>The request ID.</para>
+            /// <para>The ID of the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1E5DCFFC-A00D-****-836E-73318F8CA577</para>
@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>2209883</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The error message returned if the request failed. This parameter is empty if the request is successful.</para>
+        /// <para>The error message returned if the request fails. This parameter is empty if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B2F3840-5C98-475C-B269-2D5C3A31797C</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

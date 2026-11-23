@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Default value: true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: Disables auto-renewal.</description></item>
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? CNNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You must specify a unique token for each request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can specify a unique value for each creation request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx-xxx</para>
@@ -44,38 +44,38 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The specifications of compute nodes. Required when you create an Enterprise Edition instance. Not required for a Standard Edition instance.</para>
-        /// <para>Local node specifications for Enterprise Edition:</para>
+        /// <para>The compute node specifications. This parameter is required when you create an Enterprise Edition instance and is not required when you create a Standard Edition instance.</para>
+        /// <para>Local SSD specifications for Enterprise Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>polarx.x4.medium.2e</b>: 2 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x4.large.2e</b>: 4 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x4.xlarge.2e</b>: 8 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x4.2xlarge.2e</b>: 16 vCPUs, 64 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x8.large.2e</b>: 4 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x2.large.2x</b>: 8 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x4.xlarge.2x</b>: 8 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x8.xlarge.2e</b>: 8 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x8.2xlarge.2e</b>: 16 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 vCPUs, 470 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 vCPUs, 720 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x4.large.2e</b>: 4 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x4.xlarge.2e</b>: 8 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x4.2xlarge.2e</b>: 16 cores, 64 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x8.large.2e</b>: 4 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x2.large.2x</b>: 8 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x4.xlarge.2x</b>: 8 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x8.xlarge.2e</b>: 8 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x8.2xlarge.2e</b>: 16 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x4.4xlarge.2e</b>: 32 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x8.4xlarge.2e</b>: 32 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.st.8xlarge.2e</b>: 60 cores, 470 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.st.12xlarge.2e</b>: 90 cores, 720 GB (dedicated)</description></item>
         /// </list>
-        /// <para>Cloud node specifications for Enterprise Edition:</para>
+        /// <para>Cloud disk specifications for Enterprise Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>polarx.x4.medium.c2e</b>: 2 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x4.large.c2e</b>: 4 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x4.xlarge.c2e</b>: 8 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x4.2xlarge.c2e</b>: 16 vCPUs, 64 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.x8.large.c2e</b>: 4 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x2.large.c2x</b>: 8 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x4.xlarge.c2x</b>: 8 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x8.xlarge.c2e</b>: 8 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x8.2xlarge.c2e</b>: 16 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x4.4xlarge.c2e</b>: 32 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.x8.4xlarge.c2e</b>: 32 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.st.8xlarge.c2e</b>: 60 vCPUs, 470 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.st.12xlarge.c2e</b>: 90 vCPUs, 720 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x4.medium.c2e</b>: 2 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x4.large.c2e</b>: 4 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x4.xlarge.c2e</b>: 8 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x4.2xlarge.c2e</b>: 16 cores, 64 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.x8.large.c2e</b>: 4 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x2.large.c2x</b>: 8 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x4.xlarge.c2x</b>: 8 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x8.xlarge.c2e</b>: 8 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x8.2xlarge.c2e</b>: 16 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x4.4xlarge.c2e</b>: 32 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.x8.4xlarge.c2e</b>: 32 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.st.8xlarge.c2e</b>: 60 cores, 470 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.st.12xlarge.c2e</b>: 90 cores, 720 GB (dedicated)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,69 +86,69 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CnClass { get; set; }
 
         /// <summary>
-        /// <para>Required when you create a Standard Edition instance. Not required for an Enterprise Edition instance.</para>
-        /// <para>Local disk specifications for Standard Edition:</para>
+        /// <para>The instance type of the node. This parameter is required when you create a Standard Edition instance and is not required when you create an Enterprise Edition instance.</para>
+        /// <para>Local SSD specifications for Standard Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>mysql.n8.small.25</b>: 1 vCPU, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n2.medium.25</b>: 2 vCPUs, 4 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.medium.25</b>: 2 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n8.medium.25</b>: 2 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n2.large.25</b>: 4 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.large.25</b>: 4 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n8.large.25</b>: 4 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n2.xlarge.25</b>: 8 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.xlarge.25</b>: 8 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n8.xlarge.25</b>: 8 vCPUs, 64 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n2.2xlarge.25</b>: 16 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 vCPUs, 64 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n8.2xlarge.25</b>: 16 vCPUs, 128 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.x2.medium.25</b>: 2 vCPUs, 4 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x4.medium.25</b>: 2 vCPUs, 8 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.medium.25</b>: 2 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x2.large.25</b>: 4 vCPUs, 8 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x4.large.25</b>: 4 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.large.25</b>: 4 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x2.xlarge.25</b>: 8 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x4.xlarge.25</b>: 8 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.xlarge.25</b>: 8 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x2.2xlarge.25</b>: 16 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x4.2xlarge.25</b>: 16 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x4.8xlarge.25</b>: 64 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.8xlarge.25</b>: 64 vCPUs, 512 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.st.12xlarge.25</b>: 90 vCPUs, 720 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.n8.small.25</b>: 1 core, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n8.medium.25</b>: 2 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n2.large.25</b>: 4 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.large.25</b>: 4 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n8.large.25</b>: 4 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n2.xlarge.25</b>: 8 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.xlarge.25</b>: 8 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n8.xlarge.25</b>: 8 cores, 64 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n2.2xlarge.25</b>: 16 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 cores, 64 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n8.2xlarge.25</b>: 16 cores, 128 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.x2.medium.25</b>: 2 cores, 4 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x4.medium.25</b>: 2 cores, 8 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.medium.25</b>: 2 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x2.large.25</b>: 4 cores, 8 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x4.large.25</b>: 4 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.large.25</b>: 4 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x2.xlarge.25</b>: 8 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x4.xlarge.25</b>: 8 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.xlarge.25</b>: 8 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x2.2xlarge.25</b>: 16 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x4.2xlarge.25</b>: 16 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x4.8xlarge.25</b>: 64 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.8xlarge.25</b>: 64 cores, 512 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB (dedicated)</description></item>
         /// </list>
         /// <para>Cloud disk specifications for Standard Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>polarx.mysql.n2.medium.c25</b>: 2 vCPUs, 4 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n4.medium.c25</b>: 2 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n8.medium.c25</b>: 2 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n2.large.c25</b>: 4 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n4.large.c25</b>: 4 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n8.large.c25</b>: 4 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n2.xlarge.c25</b>: 8 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n4.xlarge.c25</b>: 8 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n8.xlarge.c25</b>: 8 vCPUs, 64 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.x2.medium.c25</b>: 2 vCPUs, 4 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x4.medium.c25</b>: 2 vCPUs, 8 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.medium.c25</b>: 2 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x2.large.c25</b>: 4 vCPUs, 8 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x4.large.c25</b>: 4 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.large.c25</b>: 4 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x2.xlarge.c25</b>: 8 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x4.xlarge.c25</b>: 8 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.xlarge.c25</b>: 8 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x2.2xlarge.c25</b>: 16 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x4.2xlarge.c25</b>: 16 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.2xlarge.c25</b>: 16 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x2.4xlarge.c25</b>: 32 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x4.4xlarge.c25</b>: 32 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.4xlarge.c25</b>: 32 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x2.8xlarge.c25</b>: 64 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x4.8xlarge.c25</b>: 64 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.8xlarge.c25</b>: 64 vCPUs, 512 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.n2.medium.c25</b>: 2 cores, 4 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n4.medium.c25</b>: 2 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n8.medium.c25</b>: 2 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n2.large.c25</b>: 4 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n4.large.c25</b>: 4 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n8.large.c25</b>: 4 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n2.xlarge.c25</b>: 8 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n4.xlarge.c25</b>: 8 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n8.xlarge.c25</b>: 8 cores, 64 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.x2.medium.c25</b>: 2 cores, 4 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x4.medium.c25</b>: 2 cores, 8 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.medium.c25</b>: 2 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x2.large.c25</b>: 4 cores, 8 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x4.large.c25</b>: 4 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.large.c25</b>: 4 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x2.xlarge.c25</b>: 8 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x4.xlarge.c25</b>: 8 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.xlarge.c25</b>: 8 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x2.2xlarge.c25</b>: 16 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x4.2xlarge.c25</b>: 16 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.2xlarge.c25</b>: 16 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x2.4xlarge.c25</b>: 32 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x4.4xlarge.c25</b>: 32 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.4xlarge.c25</b>: 32 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x2.8xlarge.c25</b>: 64 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x4.8xlarge.c25</b>: 64 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.8xlarge.c25</b>: 64 cores, 512 GB (dedicated)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -159,10 +159,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBNodeClass { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes in the instance. Valid values:</para>
+        /// <para>The number of nodes in the instance.</para>
         /// <list type="bullet">
         /// <item><description>Standard Edition: 1</description></item>
-        /// <item><description>Enterprise Edition: 2 or greater</description></item>
+        /// <item><description>Enterprise Edition: &gt;=2</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,46 +193,46 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The specifications of storage nodes. Required when you create an Enterprise Edition instance. Not required for a Standard Edition instance.</para>
-        /// <para>Local node specifications for Enterprise Edition:</para>
+        /// <para>The storage node specifications. This parameter is required when you create an Enterprise Edition instance and is not required when you create a Standard Edition instance.</para>
+        /// <para>Local SSD specifications for Enterprise Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>mysql.n2.medium.25</b>: 2 vCPUs, 4 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.medium.25</b>: 2 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n2.large.25</b>: 4 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.large.25</b>: 4 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.xlarge.25</b>: 8 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 vCPUs, 64 GB (general-purpose)</description></item>
-        /// <item><description><b>mysql.x4.large.25</b>: 4 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.large.25</b>: 4 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x2.xlarge.25</b>: 8 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.xlarge.25</b>: 8 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.st.8xlarge.25</b>: 60 vCPUs, 470 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.st.12xlarge.25</b>: 90 vCPUs, 720 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.45xlarge.25</b>: 180 vCPUs, 1440 GB (dedicated)</description></item>
-        /// <item><description><b>mysql.x8.60xlarge.25</b>: 240 vCPUs, 1920 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.medium.25</b>: 2 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n2.large.25</b>: 4 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.large.25</b>: 4 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.xlarge.25</b>: 8 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.n4.2xlarge.25</b>: 16 cores, 64 GB (general-purpose)</description></item>
+        /// <item><description><b>mysql.x4.large.25</b>: 4 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.large.25</b>: 4 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x2.xlarge.25</b>: 8 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.xlarge.25</b>: 8 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.2xlarge.25</b>: 16 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x4.4xlarge.25</b>: 32 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.4xlarge.25</b>: 32 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.st.8xlarge.25</b>: 60 cores, 470 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.st.12xlarge.25</b>: 90 cores, 720 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.45xlarge.25</b>: 180 cores, 1440 GB (dedicated)</description></item>
+        /// <item><description><b>mysql.x8.60xlarge.25</b>: 240 cores, 1920 GB (dedicated)</description></item>
         /// </list>
-        /// <para>Cloud node specifications for Enterprise Edition:</para>
+        /// <para>Cloud disk specifications for Enterprise Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>polarx.mysql.n2.medium.c25</b>: 2 vCPUs, 4 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n4.medium.c25</b>: 2 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n2.large.c25</b>: 4 vCPUs, 8 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n4.large.c25</b>: 4 vCPUs, 16 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n4.xlarge.c25</b>: 8 vCPUs, 32 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.n4.2xlarge.c25</b>: 16 vCPUs, 64 GB (general-purpose)</description></item>
-        /// <item><description><b>polarx.mysql.x4.large.c25</b>: 4 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.large.c25</b>: 4 vCPUs, 32 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x2.xlarge.c25</b>: 8 vCPUs, 16 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.xlarge.c25</b>: 8 vCPUs, 64 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.2xlarge.c25</b>: 16 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x4.4xlarge.c25</b>: 32 vCPUs, 128 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.4xlarge.c25</b>: 32 vCPUs, 256 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.st.8xlarge.c25</b>: 60 vCPUs, 470 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.st.12xlarge.c25</b>: 90 vCPUs, 720 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.45xlarge.c25</b>: 180 vCPUs, 1440 GB (dedicated)</description></item>
-        /// <item><description><b>polarx.mysql.x8.60xlarge.c25</b>: 240 vCPUs, 1920 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.n2.medium.c25</b>: 2 cores, 4 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n4.medium.c25</b>: 2 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n2.large.c25</b>: 4 cores, 8 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n4.large.c25</b>: 4 cores, 16 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n4.xlarge.c25</b>: 8 cores, 32 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.n4.2xlarge.c25</b>: 16 cores, 64 GB (general-purpose)</description></item>
+        /// <item><description><b>polarx.mysql.x4.large.c25</b>: 4 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.large.c25</b>: 4 cores, 32 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x2.xlarge.c25</b>: 8 cores, 16 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.xlarge.c25</b>: 8 cores, 64 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.2xlarge.c25</b>: 16 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x4.4xlarge.c25</b>: 32 cores, 128 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.4xlarge.c25</b>: 32 cores, 256 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.st.8xlarge.c25</b>: 60 cores, 470 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.st.12xlarge.c25</b>: 90 cores, 720 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.45xlarge.c25</b>: 180 cores, 1440 GB (dedicated)</description></item>
+        /// <item><description><b>polarx.mysql.x8.60xlarge.c25</b>: 240 cores, 1920 GB (dedicated)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DnClass { get; set; }
 
         /// <summary>
-        /// <para>The disk space of the storage nodes.</para>
+        /// <para>The disk space size of the storage node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1500</para>
@@ -265,6 +265,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         /// <summary>
         /// <para>The extra parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("ExtraParams")]
         [Validation(Required=false)]
@@ -283,8 +286,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>Specifies whether the instance is a read-only instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes.</description></item>
-        /// <item><description><b>false</b>: No.</description></item>
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -330,7 +333,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Valid values for subscription instances: Year and Month. Default value for pay-as-you-go instances: Hour.</para>
+        /// <para>The billing cycle. Valid values: Year and Month for subscription, and Hour for pay-as-you-go.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -360,7 +363,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PrimaryZone { get; set; }
 
         /// <summary>
-        /// <para>The region of the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -407,7 +410,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom_local_ssd: local disk</description></item>
+        /// <item><description>custom_local_ssd: local SSD</description></item>
         /// <item><description>cloud_auto: cloud disk</description></item>
         /// </list>
         /// 
@@ -419,7 +422,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The third active zone in a Three-zone deployment.</para>
+        /// <para>The tertiary zone. This is the third active zone in a Three-zone deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen-e</para>
@@ -431,8 +434,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The topology type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3azones</b>: Three-zone deployment (three active zones).</description></item>
-        /// <item><description><b>1azone</b>: Single active zone.</description></item>
+        /// <item><description><b>3azones</b>: Three-zone deployment</description></item>
+        /// <item><description><b>1azone</b>: single active zone</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -444,7 +447,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string TopologyType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required when the billing method is set to subscription.</para>
+        /// <para>The subscription duration. You can specify a duration in months or years when the billing method is set to subscription.</para>
         /// <remarks>
         /// <para>If Period is set to Year, valid values are 1, 2, and 3.</para>
         /// </remarks>
@@ -477,7 +480,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone of the instance.</para>
+        /// <para>The zone ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-a</para>

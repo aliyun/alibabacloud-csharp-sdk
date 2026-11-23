@@ -17,27 +17,27 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DeletePxfsUserResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DeletePxfsUserResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The authorization action.</para>
+            /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DeletePxfsUser</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authorization principal.</para>
+            /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authorization principal.</para>
+            /// <para>The type of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the no-permission error.</para>
+            /// <para>The no-permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? Deleted { get; set; }
 
             /// <summary>
-            /// <para>The identity name.</para>
+            /// <para>The name of the identity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-runtime</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string IdentityName { get; set; }
 
             /// <summary>
-            /// <para>The tenant ID.</para>
+            /// <para>The ID of the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant-001</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

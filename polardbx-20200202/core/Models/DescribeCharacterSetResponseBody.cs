@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeCharacterSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<string> CharacterSet { get; set; }
 
             /// <summary>
-            /// <para>The storage type of databases in the target instance. Currently, only polarx is supported.</para>
+            /// <para>The storage type of the database on the target instance. Only polarx is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</para>
+        /// <para>The returned message. If the request is successful, success is returned. If the request fails, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

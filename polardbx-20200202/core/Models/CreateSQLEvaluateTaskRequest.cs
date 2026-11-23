@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance on which the target SQL statement is executed. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the instance ID.</para>
+        /// <para>The ID of the instance that executes the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>transfer_for_st</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstDb { get; set; }
 
         /// <summary>
-        /// <para>The password of the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of the target SQL statement, including the password.</para>
+        /// <para>The password of the target SQL statement.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass1@</para>
         /// </summary>
         [NameInMap("DstPassword")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstResId { get; set; }
 
         /// <summary>
-        /// <para>The username of the destination instance.</para>
+        /// <para>The destination username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>drds_test</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstUserName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</para>
+        /// <para>The region ID of the instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the details of regions supported by PolarDB-X, including region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskDesc { get; set; }
 
         /// <summary>
-        /// <para>The task ID for executing the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeCloudCenterInstances</a> operation to query the IDs of target SQL statements supported by PolarDB-X.</para>
+        /// <para>The ID of the task that executes the target SQL statement. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeCloudCenterInstances</a> operation to query the IDs of target SQL statements supported by PolarDB-X.</para>
         /// 
         /// <b>Example:</b>
         /// <para>etx-szr2rr6i*****</para>
@@ -92,7 +92,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the source ApsaraDB RDS instance. Valid values: <b>enable</b>: enables the source ApsaraDB RDS instance. <b>disabled</b>: disables the source ApsaraDB RDS instance.</para>
+        /// <para>Specifies whether the source ApsaraDB RDS instance is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>enable</b>: The source ApsaraDB RDS instance is enabled.</description></item>
+        /// <item><description><b>disabled</b>: The source ApsaraDB RDS instance is disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>transfer_test3</para>
@@ -102,10 +106,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SrcDb { get; set; }
 
         /// <summary>
-        /// <para>The port number of the source instance. Valid values: 3200 to 3999. &gt; This parameter is available and required only when <b>DBEndpointInstanceType</b> is set to <b>polardb-o</b>.</para>
+        /// <para>The source port number. Valid values: 3200 to 3999. &gt; This parameter is available and required only when <b>dbendpointinstancetype</b> is set to <b>polardb-o</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>3306</para>
         /// </summary>
         [NameInMap("SrcPassword")]
         [Validation(Required=false)]
@@ -122,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SrcResId { get; set; }
 
         /// <summary>
-        /// <para>The type of the source instance. Valid values: RDS_MYSQL, POLARX1, POLARX2_STANDARD, POLARX2_ENTERPRISE, and POLARDB_M.</para>
+        /// <para>The source instance type. Valid values: RDS_MYSQL, POLARX1, POLARX2_STANDARD, POLARX2_ENTERPRISE, and POLARDB_M.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POLARX2</para>
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SrcResType { get; set; }
 
         /// <summary>
-        /// <para>The username of the source instance.</para>
+        /// <para>The source username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>drds_test</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the PolarDB-X Search instance.</para>
+        /// <para>The name of the PolarDBX Search instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

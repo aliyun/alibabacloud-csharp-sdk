@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The access protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>http</b>: HTTP protocol.</description></item>
-        /// <item><description><b>https</b>: HTTPS protocol.</description></item>
+        /// <item><description><b>http</b>: HTTP.</description></item>
+        /// <item><description><b>https</b>: HTTPS.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

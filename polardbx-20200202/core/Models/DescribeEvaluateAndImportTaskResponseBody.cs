@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeEvaluateAndImportTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The summary information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;{\&quot;structureImportResult\&quot;:{\&quot;status\&quot;:\&quot;finish\&quot;,\&quot;finishedNum\&quot;:382,\&quot;totalNum\&quot;:382,\&quot;percentage\&quot;:100},\&quot;switchTips\&quot;:\&quot;Forward switchover is allowed only when the forward synchronization latency is low\&quot;,\&quot;autoTableSuggestionSwitch\&quot;:false,\&quot;structureAlterationMap\&quot;:{},\&quot;acceptFilterMap\&quot;:{\&quot;fr_import\&quot;:[\&quot;dy_dr_new\&quot;],\&quot;e3plus_drp_prod_new\&quot;:[],\&quot;qbtong_prod\&quot;:[],\&quot;e3plus_account_prod\&quot;:[],\&quot;e3plus_drp_prod\&quot;:[]},\&quot;structChunkMap\&quot;:{},\&quot;count\&quot;:1,\&quot;requestId\&quot;:\&quot;9380D025-C9B1-51D6-A4B9-733C4879CC4A\&quot;}&quot;,</para>
+            /// <para>&quot;{\&quot;structureImportResult\&quot;:{\&quot;status\&quot;:\&quot;finish\&quot;,\&quot;finishedNum\&quot;:382,\&quot;totalNum\&quot;:382,\&quot;percentage\&quot;:100},\&quot;switchTips\&quot;:\&quot;Forward switchover is allowed only when the forward synchronization latency is low.\&quot;,\&quot;autoTableSuggestionSwitch\&quot;:false,\&quot;structureAlterationMap\&quot;:{},\&quot;acceptFilterMap\&quot;:{\&quot;fr_import\&quot;:[\&quot;dy_dr_new\&quot;],\&quot;e3plus_drp_prod_new\&quot;:[],\&quot;qbtong_prod\&quot;:[],\&quot;e3plus_account_prod\&quot;:[],\&quot;e3plus_drp_prod\&quot;:[]},\&quot;structChunkMap\&quot;:{},\&quot;count\&quot;:1,\&quot;requestId\&quot;:\&quot;9380D025-C9B1-51D6-A4B9-733C4879CC4A\&quot;}&quot;,</para>
             /// </summary>
             [NameInMap("Context")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the import task is successful.</para>
+            /// <para>Indicates whether the import task is deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The timestamp when the task was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-06-08T15:00Z</para>
+            /// <para>1749394800000</para>
             /// </summary>
             [NameInMap("GmtCreated")]
             [Validation(Required=false)]
             public long? GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time in timestamp format.</para>
+            /// <para>The timestamp when the task was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1605080537000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>76251</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the slink destination database.</para>
+            /// <para>The name of the destination database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fr_import</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkDstDb { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the destination.</para>
+            /// <para>The destination instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-hzrehc60jz5zye</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkDstResId { get; set; }
 
             /// <summary>
-            /// <para>The username for the data connection of the destination.</para>
+            /// <para>The username for the destination data connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dts_dtdba</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkDstUserName { get; set; }
 
             /// <summary>
-            /// <para>The name of the slink source database.</para>
+            /// <para>The name of the source database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fr_import</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcDb { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the source.</para>
+            /// <para>The source instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>drdshbga69378w4p</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcResId { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the source.</para>
+            /// <para>The source resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POLARX1</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcResType { get; set; }
 
             /// <summary>
-            /// <para>The username for the data connection of the source.</para>
+            /// <para>The username for the source data connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtdba</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkSrcUserName { get; set; }
 
             /// <summary>
-            /// <para>The stage of the synchronization.</para>
+            /// <para>The current stage of the synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DATA_IMPORT_RUNNING</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkTaskDesc { get; set; }
 
             /// <summary>
-            /// <para>The slink task ID.</para>
+            /// <para>The ID of the slink task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
+        /// <para>The message returned by the request. This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>73559800-****-11ec-bd40-99cfcff3fe1e</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

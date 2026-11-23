@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDataImportTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the failed records.</para>
+        /// <para>The page number for failed records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? FailPageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of failed records to display per page.</para>
+        /// <para>The number of failed records to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the successful records.</para>
+        /// <para>The page number for successful records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? SuccessPageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of successful records to display per page.</para>
+        /// <para>The number of successful records to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateDataImportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the target region, including instance IDs.</para>
+        /// <para>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the destination region, including instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The execution status of the target SQL import. Valid values: * <b>importing</b>: importing. * <b>success</b>: import succeeded. * <b>fail</b>: import failed.</para>
+        /// <para>The execution environment for importing the destination SQL. Valid values: <b>importing</b>: Importing. <b>success</b>: Import succeeded. <b>fail</b>: Import failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>transfer_test3</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstDb { get; set; }
 
         /// <summary>
-        /// <para>The password of the privileged account for the target ApsaraDB RDS instance. &gt; * You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the privileged account information of the target instance, including the password. * This parameter takes effect only when DstPassword is set to true.</para>
+        /// <para>The password of the privileged account of the destination ApsaraDB RDS instance. This parameter takes effect only when [unk]dstpassword=true[unk].</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass1@</para>
         /// </summary>
         [NameInMap("DstPassword")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstResId { get; set; }
 
         /// <summary>
-        /// <para>The username of the target instance.</para>
+        /// <para>The destination username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bbt_cms_prod</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstUserName { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</para>
+        /// <para>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the details of regions supported by PolarDB-X, including region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
-        /// <para>The database information of the migration source when the source database is ApsaraDB RDS for MySQL. &gt; The source database must be consistent with the target database.</para>
+        /// <para>The database information of the migration source when the source database is ApsaraDB RDS for MySQL. &gt; The source database must be consistent with the destination database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>transfer_for_st</para>
@@ -92,17 +92,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SrcDb { get; set; }
 
         /// <summary>
-        /// <para>The read/write mode for executing the import task on the source instance. Valid values: * <b>rw</b>: read/write. * <b>ro</b>: read-only.</para>
+        /// <para>The read/write mode for executing the import task on the source end. Valid values: <b>rw</b>: Read and write. <b>ro</b>: Read-only.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>rw</para>
         /// </summary>
         [NameInMap("SrcPassword")]
         [Validation(Required=false)]
         public string SrcPassword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source ApsaraDB RDS instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDrivingAccess</a> operation to query the details of all source ApsaraDB RDS instances in the target region, including instance IDs.</para>
+        /// <para>The source ApsaraDB RDS instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDrivingAccess</a> operation to query the details of all source ApsaraDB RDS instances in the destination region, including instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-shrnv****kh87z</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SrcResId { get; set; }
 
         /// <summary>
-        /// <para>The username of the source instance.</para>
+        /// <para>The source username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>drds_test</para>

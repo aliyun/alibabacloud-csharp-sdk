@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBackupSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data list.</para>
+        /// <para>The list of data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The backup mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Automatic backup.</description></item>
-            /// <item><description><b>1</b>: Manual backup.</description></item>
+            /// <item><description><b>0</b>: automatic backup</description></item>
+            /// <item><description><b>1</b>: manual backup</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BackupModel { get; set; }
 
             /// <summary>
-            /// <para>The backup set ID.</para>
+            /// <para>The ID of the backup set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? BackupSetId { get; set; }
 
             /// <summary>
-            /// <para>The size of the backup set, in bytes.</para>
+            /// <para>The size of the backup set. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88803195</para>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The backup type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Fast backup.</description></item>
-            /// <item><description><b>1</b>: Consistent backup.</description></item>
+            /// <item><description><b>0</b>: quick backup</description></item>
+            /// <item><description><b>1</b>: consistent backup</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BackupType { get; set; }
 
             /// <summary>
-            /// <para>The backup start time.</para>
+            /// <para>The start time of the backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650250861754</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The backup end time.</para>
+            /// <para>The end time of the backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650251308000</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeBackupSetResponseBodyDataOSSList> OSSList { get; set; }
             public class DescribeBackupSetResponseBodyDataOSSList : TeaModel {
                 /// <summary>
-                /// <para>The OSS file name.</para>
+                /// <para>The name of the OSS file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hins3084_data_20220418110623_qp.xb</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string BackupSetFile { get; set; }
 
                 /// <summary>
-                /// <para>The public download URL.</para>
+                /// <para>The Internet download URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI****************&Expires=1650441697&dd=7KJzkUSbXf6dwy">https://pre-rdsbak-cn-xxx.oss-cn-beijing.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb?OSSAccessKeyId=LTAI****************&amp;Expires=1650441697&amp;dd=7KJzkUSbXf6dwy</a></para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DownloadLink { get; set; }
 
                 /// <summary>
-                /// <para>The internal network OSS download URL.</para>
+                /// <para>The internal OSS download URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb">http://pre-rdsbak-cn-beijing.oss-cn-beijing-internal.aliyuncs.com/custins2255/hins3084_data_20220418110623_qp.xb</a>?</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string IntranetDownloadLink { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the OSS file link.</para>
+                /// <para>The expiration time of the OSS file download link.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-04-20T08:01:37Z</para>
@@ -136,9 +136,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The status of the backup set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Backing up.</description></item>
-            /// <item><description><b>1</b>: Backup succeeded.</description></item>
-            /// <item><description><b>2</b>: Backup failed.</description></item>
+            /// <item><description><b>0</b>: in progress</description></item>
+            /// <item><description><b>1</b>: successful</description></item>
+            /// <item><description><b>2</b>: failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

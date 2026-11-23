@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribePxfsInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribePxfsInfoResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribePxfsInfoResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The authorization action. Same as described above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribePxfsInfo</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authorization action. Same as described above.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of missing permission.</para>
+            /// <para>The type of the permission denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public DescribePxfsInfoResponseBodyDataInstance Instance { get; set; }
             public class DescribePxfsInfoResponseBodyDataInstance : TeaModel {
                 /// <summary>
-                /// <para>The node specification.</para>
+                /// <para>The node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polarx.pxfs.x4.xlarge</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ClassCode { get; set; }
 
                 /// <summary>
-                /// <para>The list of connection addresses.</para>
+                /// <para>The list of endpoints.</para>
                 /// </summary>
                 [NameInMap("ConnAddrs")]
                 [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string ConnectionString { get; set; }
 
                     /// <summary>
-                    /// <para>The endpoint.</para>
+                    /// <para>The access endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>agent-files.example.com</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Endpoint { get; set; }
 
                     /// <summary>
-                    /// <para>The port number.</para>
+                    /// <para>The port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12049</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Protocol { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether TLS is enabled.</para>
+                    /// <para>Specifies whether TLS is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The virtual private cloud (VPC) ID.</para>
+                    /// <para>The VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-xxxxxxxx</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The storage size.</para>
+                /// <para>The storage capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-xxxxxxxx</para>

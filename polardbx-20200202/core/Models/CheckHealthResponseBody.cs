@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the component is healthy. A return value of UP indicates healthy. Any other value or an empty value indicates an exception.</para>
+        /// <para>Indicates whether the component is healthy. A value of UP indicates that the component is healthy. Any other value or an empty value indicates an abnormal state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UP</para>

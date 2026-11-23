@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the link task.</para>
+        /// <para>The ID of the slink task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>etx-szr2rr6i*****</para>

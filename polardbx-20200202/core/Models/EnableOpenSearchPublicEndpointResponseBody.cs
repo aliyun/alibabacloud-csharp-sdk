@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:EnableOpenSearchPublicEndpoint</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>The description is as described above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -99,17 +99,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The additional information returned by the operation. &quot;success&quot; is returned if the operation is successful. Otherwise, the corresponding error code is returned.</para>
+        /// <para>The additional information returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint port.</para>
+        /// <para>The port of the public endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>

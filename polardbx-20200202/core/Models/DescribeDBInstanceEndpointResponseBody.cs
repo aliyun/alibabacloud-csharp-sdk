@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeDBInstanceEndpointResponseBodyData Data { get; set; }
         public class DescribeDBInstanceEndpointResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The internal connection type. The value is fixed as 1, which indicates the classic network.</para>
+            /// <para>The internal connection method. Fixed value: 1, which indicates the classic network.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Address { get; set; }
 
                     /// <summary>
-                    /// <para>The instance specification type (specification code).</para>
+                    /// <para>The instance type (instance type code).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mdb.shard.4x.large.d</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The ID of the endpoint group to which the endpoint belongs.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>epg-bp14wgzai7flglwdtkxfa</para>
+                    /// <para>123456</para>
                     /// </summary>
                     [NameInMap("EndpointGroupId")]
                     [Validation(Required=false)]
                     public long? EndpointGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The logical node ID.</para>
+                    /// <para>The ID of the logical node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2899</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether this is the default vSwitch.</para>
+                    /// <para>Indicates whether the vSwitch is the default vSwitch.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>True</para>
@@ -81,11 +81,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public bool? IsDefault { get; set; }
 
                     /// <summary>
-                    /// <para>The payload type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>agentTurn: agent conversation.</description></item>
-                    /// <item><description>systemEvent: system event.</description></item>
-                    /// </list>
+                    /// <para>The payload type. Valid values: <c>agentTurn</c> (agent conversation) and <c>systemEvent</c> (system event).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>instance</para>
@@ -95,11 +91,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Kind { get; set; }
 
                     /// <summary>
-                    /// <para>The network type of the endpoint. Valid values:</para>
+                    /// <para>The network type of the connection string. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Public</b>: public endpoint.</description></item>
-                    /// <item><description><b>Private</b>: private endpoint.</description></item>
-                    /// <item><description><b>Inner</b>: private endpoint (classic network).</description></item>
+                    /// <item><description><b>Public</b>: public network address.</description></item>
+                    /// <item><description><b>Private</b>: private network address.</description></item>
+                    /// <item><description><b>Inner</b>: private network address (classic network).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -110,11 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string NetType { get; set; }
 
                     /// <summary>
-                    /// <para>The read/write type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>ReadWrite: row store read/write.</description></item>
-                    /// <item><description>ColumnarRead: column store read-only.</description></item>
-                    /// </list>
+                    /// <para>The read/write type. Valid values: ReadWrite (row store read/write) and ColumnarRead (column store read-only).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -158,7 +150,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the endpoint is visible to the user.</para>
+                    /// <para>Indicates whether the endpoint is visible to users.</para>
                     /// </summary>
                     [NameInMap("UserVisible")]
                     [Validation(Required=false)]
@@ -175,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</para>
+                    /// <para>The IP address of the Anti-DDoS instance protected by the policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://100.100.100.200/latest/meta-data">http://100.100.100.200/latest/meta-data</a></para>
@@ -185,7 +177,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Vip { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the VPC in which the endpoint resides.</para>
+                    /// <para>The ID of the VPC where the endpoint resides.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1s9j8s4h4uqejp9k2z3</para>
@@ -198,7 +190,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The VIP port, such as 80, 8080, or 443.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>vport</para>
+                    /// <para>80</para>
                     /// </summary>
                     [NameInMap("Vport")]
                     [Validation(Required=false)]
@@ -224,7 +216,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public List<DescribeDBInstanceEndpointResponseBodyDataItemsRealServer> RealServer { get; set; }
                 public class DescribeDBInstanceEndpointResponseBodyDataItemsRealServer : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the node is enabled. For the compute layer, only the primary zone node is enabled. After a primary/secondary switchover, the standby compute node becomes the primary node. All storage layer nodes are enabled.</para>
+                    /// <para>Indicates whether the node is enabled. In the compute layer, only nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary node in the compute layer is switched to the primary node. All nodes in the storage layer are enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>False</para>
@@ -234,7 +226,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public bool? Activated { get; set; }
 
                     /// <summary>
-                    /// <para>The instance specification type (specification code).</para>
+                    /// <para>The instance type (instance type code).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dds.cs.mid</para>
@@ -254,7 +246,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Ip { get; set; }
 
                     /// <summary>
-                    /// <para>The port number.</para>
+                    /// <para>The connection port number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3306</para>
@@ -267,7 +259,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The replica ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>节点id</para>
+                    /// <para>123456</para>
                     /// </summary>
                     [NameInMap("ReplicaId")]
                     [Validation(Required=false)]
@@ -276,10 +268,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <summary>
                     /// <para>The weight of the destination route.</para>
                     /// <list type="bullet">
-                    /// <item><description>For VPN gateway instances that support the dual-tunnel mode for IPsec-VPN connections, the weight of the destination route is <b>100</b> by default and has no practical significance.</description></item>
-                    /// <item><description>For VPN gateway instances that support the single-tunnel mode for IPsec-VPN connections, the weight represents the priority of the destination route:<list type="bullet">
-                    /// <item><description><b>100</b>: high priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this route serves as the active link.</description></item>
-                    /// <item><description><b>0</b>: low priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this route serves as the standby link.</description></item>
+                    /// <item><description>For VPN gateway instances that support the dual-tunnel mode for IPsec-VPN connections, the default weight of the destination route is <b>100</b>, which has no actual significance.</description></item>
+                    /// <item><description>For VPN gateway instances that support the single-tunnel mode for IPsec-VPN connections, the weight of the destination route indicates the priority of the destination route:<list type="bullet">
+                    /// <item><description><b>100</b>: high priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this destination route serves as the primary link.</description></item>
+                    /// <item><description><b>0</b>: low priority. If multiple destination routes have the same destination CIDR block, the IPsec-VPN connection associated with this destination route serves as the secondary link.</description></item>
                     /// </list>
                     /// </description></item>
                     /// </list>
@@ -298,7 +290,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</para>
+        /// <para>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify a value in Settings or the specified value is less than 10, the default value 10 is used for paging. If the specified value is greater than 100, the default value 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -308,7 +300,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxdds</para>

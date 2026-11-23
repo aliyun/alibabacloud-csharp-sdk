@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IP whitelist. Separate multiple IP addresses with commas.</para>
+        /// <para>The list of IP addresses in the whitelist. Separate multiple IP addresses with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

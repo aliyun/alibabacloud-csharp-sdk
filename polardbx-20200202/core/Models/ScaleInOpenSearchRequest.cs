@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The total number of data nodes after the scale-in. The value must be a positive integer and less than the current number of data nodes.</para>
+        /// <para>The total number of data nodes after the scale-down. The value must be a positive integer and less than the current number of data nodes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

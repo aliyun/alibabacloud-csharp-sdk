@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeActiveOperationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the event can be canceled. Valid values:</para>
+        /// <para>Specifies whether cancellation is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: All O&amp;M events can be canceled.</description></item>
-        /// <item><description><b>0</b>: The event cannot be canceled. </description></item>
-        /// <item><description><b>1</b>: The event can be canceled.</description></item>
+        /// <item><description><b>-1</b>: allows canceling all O&amp;M events</description></item>
+        /// <item><description><b>0</b>: not allowed </description></item>
+        /// <item><description><b>1</b>: allowed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>Specifies whether the time can be modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: The time of all O&amp;M events can be modified.</description></item>
-        /// <item><description><b>0</b>: The time cannot be modified. </description></item>
-        /// <item><description><b>1</b>: The time can be modified.</description></item>
+        /// <item><description><b>-1</b>: allows modifying the time of all O&amp;M events</description></item>
+        /// <item><description><b>0</b>: not allowed</description></item>
+        /// <item><description><b>1</b>: allowed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The change level. Default value: all. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b>: all exception fix and system O&amp;M levels</description></item>
-        /// <item><description><b>S0</b>: exception fix</description></item>
+        /// <item><description><b>all</b>: all anomaly fix and system O&amp;M levels</description></item>
+        /// <item><description><b>S0</b>: anomaly fix</description></item>
         /// <item><description><b>S1</b>: system O&amp;M</description></item>
         /// </list>
         /// 
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: all pending and running tasks  </description></item>
-        /// <item><description><b>3</b>: pending </description></item>
+        /// <item><description><b>-1</b>: all pending and running tasks</description></item>
+        /// <item><description><b>3</b>: pending</description></item>
         /// <item><description><b>4</b>: running</description></item>
         /// </list>
         /// 
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? Status { get; set; }
 
         /// <summary>
-        /// <para>The task type. Set the value to all to query all tasks under the current account.</para>
+        /// <para>The task type. Set the value to all to query all tasks of the current user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>

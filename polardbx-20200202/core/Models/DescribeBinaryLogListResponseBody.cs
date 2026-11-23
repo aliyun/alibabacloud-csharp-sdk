@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The cleanup status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Not deleted. </description></item>
-            /// <item><description>1: Deleted.</description></item>
+            /// <item><description>0: not deleted</description></item>
+            /// <item><description>1: deleted</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,9 +123,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The backup status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Not backed up. </description></item>
-            /// <item><description>1: Being backed up. </description></item>
-            /// <item><description>2: Backed up.</description></item>
+            /// <item><description>0: not backed up</description></item>
+            /// <item><description>1: being backed up</description></item>
+            /// <item><description>2: backed up</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

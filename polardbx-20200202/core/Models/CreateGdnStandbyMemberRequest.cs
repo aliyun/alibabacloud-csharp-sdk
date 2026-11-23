@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateGdnStandbyMemberRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Default value: true.</para>
+        /// <para>Specifies whether to enable auto-renewal. Default value: true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CNNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Make sure that the value is different for each request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Make sure that the token is unique for each request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CloneInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The compute node specifications. This parameter is required for Enterprise Edition instances and is not required for Standard Edition instances.</para>
+        /// <para>The compute node specifications. This parameter is required when you create an Enterprise Edition instance and is not required when you create a Standard Edition instance.</para>
         /// <para>Enterprise Edition with local disks:</para>
         /// <list type="bullet">
         /// <item><description><b>polarx.x4.medium.2e</b>: 2 cores, 8 GB (general-purpose)</description></item>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DNNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The description of the instance.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>go-to-the-docks-for-french-fries</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The storage node specifications. This parameter is required for Enterprise Edition instances and is not required for Standard Edition instances.</para>
+        /// <para>The storage node specifications. This parameter is required when you create an Enterprise Edition instance and is not required when you create a Standard Edition instance.</para>
         /// <para>Enterprise Edition with local disks:</para>
         /// <list type="bullet">
         /// <item><description><b>mysql.n2.medium.25</b>: 2 cores, 4 GB (general-purpose)</description></item>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DnClass { get; set; }
 
         /// <summary>
-        /// <para>The MySQL DPI engine version. Valid values: 5.7 and 8.0.</para>
+        /// <para>The MySQL DPI engine version. Valid values: 5.7 or 8.0</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance.</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PREPAY</b>: subscription</description></item>
         /// <item><description><b>POSTPAY</b>: pay-as-you-go</description></item>
@@ -203,12 +203,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Year</description></item>
-        /// <item><description>Month</description></item>
-        /// </list>
-        /// <para>For pay-as-you-go instances, the default value is Hour.</para>
+        /// <para>The billing cycle. Valid values for the subscription billing method are Year and Month. The default value for the pay-as-you-go billing method is Hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -228,7 +223,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PrimaryZone { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -239,7 +234,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter can be left empty. This parameter is not supported.</para>
+        /// <para>The resource group ID. This parameter can be left empty. Resource groups are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -261,8 +256,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The edition of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enterprise: Enterprise Edition.</description></item>
-        /// <item><description>standard: Standard Edition.</description></item>
+        /// <item><description><b>enterprise</b>: Enterprise Edition</description></item>
+        /// <item><description><b>standard</b>: Standard Edition</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -273,7 +268,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Series { get; set; }
 
         /// <summary>
-        /// <para>The region in which the source instance resides.</para>
+        /// <para>The region where the source instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -294,7 +289,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The zone for Three-zone deployment.</para>
+        /// <para>The third active zone in a Three-zone deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen-e</para>
@@ -306,8 +301,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The topology type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3azones</b>: three-zone deployment.</description></item>
-        /// <item><description><b>1azone</b>: single-zone deployment.</description></item>
+        /// <item><description><b>3azones</b>: three-zone deployment</description></item>
+        /// <item><description><b>1azone</b>: single-zone deployment</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -319,9 +314,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string TopologyType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. Unit: months or years.</para>
+        /// <para>The subscription duration. You can specify a duration in months or years.</para>
         /// <remarks>
-        /// <para>If Period is set to Year, valid values of this parameter are 1, 2, and 3.</para>
+        /// <para>If Period is set to Year, valid values are 1, 2, and 3.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -332,7 +327,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*****</para>

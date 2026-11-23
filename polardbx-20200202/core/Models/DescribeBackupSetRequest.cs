@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeBackupSetRequest : TeaModel {
         /// <summary>
-        /// <para>The backup set ID.</para>
+        /// <para>The ID of the backup set.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

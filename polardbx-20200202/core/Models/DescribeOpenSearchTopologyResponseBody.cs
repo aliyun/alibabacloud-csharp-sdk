@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeOpenSearchTopologyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchTopology</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The OwnerId of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The description as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The total number of CPU cores in the cluster.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0.25</para>
+                /// <para>4</para>
                 /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The Origin Domain Name that you configured in the DCDN console, including IPv4 addresses, IPv6 addresses, common domain names, and OSS domain names.</para>
+                /// <para>The origin domain name that you configured in the DCDN console, including IPv4 addresses, IPv6 addresses, regular domain names, and OSS domain names.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com">https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public bool? IsLeader { get; set; }
 
                 /// <summary>
-                /// <para>The memory size.</para>
+                /// <para>The configured memory size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The role of a node in the three-node RDS cluster. Valid values:</para>
+                /// <para>The role of a node in the three-node RDS architecture. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>leader</b>: primary node</description></item>
                 /// <item><description><b>follower</b>: secondary node</description></item>
@@ -177,13 +177,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The node status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Running</description></item>
-                /// <item><description><b>1</b>: Creating</description></item>
-                /// <item><description><b>2</b>: Abnormal</description></item>
-                /// <item><description><b>3</b>: Expired</description></item>
-                /// <item><description><b>4</b>: Releasing</description></item>
-                /// <item><description><b>5</b>: Released</description></item>
-                /// <item><description><b>6</b>: Locked</description></item>
+                /// <item><description><b>0</b>: running</description></item>
+                /// <item><description><b>1</b>: creating</description></item>
+                /// <item><description><b>2</b>: abnormal</description></item>
+                /// <item><description><b>3</b>: expired</description></item>
+                /// <item><description><b>4</b>: releasing</description></item>
+                /// <item><description><b>5</b>: released</description></item>
+                /// <item><description><b>6</b>: locked</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The configuration of the automatic storage scaling feature for the instance.</para>
+            /// <para>The configuration information of the Automatic storage scaling feature for instance storage.</para>
             /// </summary>
             [NameInMap("Storage")]
             [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The number of secondary nodes in the primary zone.</para>
                 /// <remarks>
-                /// <para>The <b>ReplicaCount</b> and <b>SlaveReplicaCount</b> parameters apply only to cloud-native instances. If the instance uses the cluster architecture, these parameters indicate the number of secondary nodes of a <b>single shard</b> in the primary and secondary zones.</para>
+                /// <para>The <b>ReplicaCount</b> and <b>SlaveReplicaCount</b> parameters apply only to cloud-native instances. If the instance uses a cluster architecture, these parameters indicate the number of secondary nodes in the primary and secondary zones for a <b>single shard</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? ReplicaCount { get; set; }
 
                 /// <summary>
-                /// <para>The total storage capacity of the node. Unit: GB.</para>
+                /// <para>The total storage capacity of the node, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>

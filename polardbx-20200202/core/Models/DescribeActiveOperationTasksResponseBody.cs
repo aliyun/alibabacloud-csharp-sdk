@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<DescribeActiveOperationTasksResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the event can be canceled. Valid values:</para>
+            /// <para>Indicates whether cancellation is allowed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No.</description></item>
-            /// <item><description><b>1</b>: Yes.</description></item>
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AllowCancel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the time can be modified. Valid values:</para>
+            /// <para>Indicates whether modification is allowed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No.</description></item>
-            /// <item><description><b>1</b>: Yes.</description></item>
+            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: yes</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ChangeLevelZh { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The creation time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The modification time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The start time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The start time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>3</b>: pending </description></item>
+            /// <item><description><b>3</b>: pending</description></item>
             /// <item><description><b>4</b>: running</description></item>
             /// </list>
             /// 
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// <para>The switchover time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The switchover time. The time is in UTC and follows the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T16:00:00Z</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>9B2F3840-5C98-475C-B269-2D5C3A31797C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

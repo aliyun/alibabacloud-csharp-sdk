@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateContext0ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denial details.</para>
+        /// <para>The details of the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:CreateContext0</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The name of the authentication principal.</para>
+            /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The dashboard instance name of the context service.</para>
+            /// <para>The dashboard replica set name of the context service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********-d</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DashboardReplicaSetName { get; set; }
 
             /// <summary>
-            /// <para>The name of the PolarDB-X Search instance.</para>
+            /// <para>The name of the PolarDBX Search instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxs-*********</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string OpenSearchInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The service instance name of the context service.</para>
+            /// <para>The service replica set name of the context service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********-s</para>

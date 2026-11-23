@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? ParameterCount { get; set; }
 
             /// <summary>
-            /// <para>The list of parameters.</para>
+            /// <para>The parameter list.</para>
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>Specifies whether the parameter is dynamic. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: no.</description></item>
-                /// <item><description><b>1</b>: yes.</description></item>
+                /// <item><description><b>0</b>: no</description></item>
+                /// <item><description><b>1</b>: yes</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>Specifies whether the parameter can be modified. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The parameter cannot be modified.</description></item>
-                /// <item><description><b>1</b>: The parameter can be modified.</description></item>
+                /// <item><description><b>0</b>: cannot be modified</description></item>
+                /// <item><description><b>1</b>: can be modified</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? Revisable { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the parameter can be modified by the user.</para>
+                /// <para>Specifies whether the parameter can be modified by users.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

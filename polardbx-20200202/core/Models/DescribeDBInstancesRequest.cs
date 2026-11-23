@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbVersion { get; set; }
 
         /// <summary>
-        /// <para>The description or remark of the database.</para>
+        /// <para>The description or remarks of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-test</para>

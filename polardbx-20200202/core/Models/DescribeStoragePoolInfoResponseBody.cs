@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The instance details.</para>
+        /// <para>The list of instance details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeStoragePoolInfoResponseBodyDataStoragePools> StoragePools { get; set; }
             public class DescribeStoragePoolInfoResponseBodyDataStoragePools : TeaModel {
                 /// <summary>
-                /// <para>The specification type of the instance (the specification code).</para>
+                /// <para>The instance type, which is the specification code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polar.mysql.x4.large</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The list of DNs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[pxc-xdb-s-pxcbj<b><b>xxnwp0wac2c4\&quot;,\&quot;pxc-xdb-s-pxcbjr3b8</b></b>p0wa1589\&quot;]</para>
+                /// <para>[&quot;pxc-xdb-s-pxcbj<b><b>xxnwp0wac2c4&quot;,&quot;pxc-xdb-s-pxcbjr3b8</b></b>p0wa1589&quot;]</para>
                 /// </summary>
                 [NameInMap("DnIdList")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DnIdString { get; set; }
 
                 /// <summary>
-                /// <para>A reserved field.</para>
+                /// <para>The reserved field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The time when the storage pool was last modified, in timestamp format.</para>
+                /// <para>The modification time, in timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-02 16:52:47.0</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The list of idle DNs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>none</para>
+                /// <para>[]</para>
                 /// </summary>
                 [NameInMap("IdleDNIdList")]
                 [Validation(Required=false)]

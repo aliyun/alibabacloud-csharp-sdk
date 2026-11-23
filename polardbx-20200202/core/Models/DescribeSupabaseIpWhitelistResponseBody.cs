@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSupabaseIpWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denied error.</para>
+        /// <para>The access denied details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeSupabaseIpWhitelist</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The authentication principal name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authentication principal.</para>
+            /// <para>The authentication principal type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The type of the policy.</para>
+            /// <para>The policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIORITY</para>
@@ -106,14 +106,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The list of whitelist groups.</para>
+            /// <para>The whitelist group list.</para>
             /// </summary>
             [NameInMap("GroupItems")]
             [Validation(Required=false)]
             public List<DescribeSupabaseIpWhitelistResponseBodyDataGroupItems> GroupItems { get; set; }
             public class DescribeSupabaseIpWhitelistResponseBodyDataGroupItems : TeaModel {
                 /// <summary>
-                /// <para>The name of the group.</para>
+                /// <para>The group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>defaultGroup</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the group.</para>
+                /// <para>The group tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group1</para>

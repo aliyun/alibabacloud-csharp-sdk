@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public UpgradeColumnarVersionResponseBodyData Data { get; set; }
         public class UpgradeColumnarVersionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The target version number.</para>
+            /// <para>The target minor version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<UpgradeColumnarVersionResponseBodyDataTaskList> TaskList { get; set; }
             public class UpgradeColumnarVersionResponseBodyDataTaskList : TeaModel {
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The ID of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rm-uf68f345****88zf8</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DbInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The target task ID.</para>
+                /// <para>The ID of the target task.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1861190497624654848</para>
+                /// <para>2209883</para>
                 /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

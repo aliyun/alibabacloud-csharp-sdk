@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the settings are configured. Valid values:</para>
+        /// <para>Specifies whether the O&amp;M window is configured. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: Configured.</description></item>
         /// <item><description>0: Not configured.</description></item>

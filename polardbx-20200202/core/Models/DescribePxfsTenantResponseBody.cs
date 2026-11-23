@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no-permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribePxfsTenantResponseBodyData Data { get; set; }
         public class DescribePxfsTenantResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The capacity quota.</para>
+            /// <para>The storage quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>107374182400</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tenant ID.</para>
+            /// <para>The ID of the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant-001</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The tenant name.</para>
+            /// <para>The name of the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-files</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TenantName { get; set; }
 
             /// <summary>
-            /// <para>The used capacity.</para>
+            /// <para>The used storage capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1048576</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? UsedBytes { get; set; }
 
             /// <summary>
-            /// <para>The used file count.</para>
+            /// <para>The number of used files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

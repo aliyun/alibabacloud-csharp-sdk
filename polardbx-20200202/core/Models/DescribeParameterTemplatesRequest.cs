@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The parameter level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>compute</b>: the compute layer.</description></item>
-        /// <item><description><b>storage</b>: the storage layer.</description></item>
+        /// <item><description><b>compute</b>: compute layer</description></item>
+        /// <item><description><b>storage</b>: storage layer</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

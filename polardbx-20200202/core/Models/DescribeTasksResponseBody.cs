@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of result items.</para>
+        /// <para>The list of items.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the database associated with the task. This field is usually empty.</para>
+            /// <para>The name of the database associated with the task. This parameter is usually empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DBName</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The detailed progress of the task. This field is usually empty.</para>
+            /// <para>The detailed task progress. This parameter is usually empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ProgressInfo</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ProgressInfo { get; set; }
 
             /// <summary>
-            /// <para>The scale-out token. If the task is a scale-out task, this field returns a scale-out ID, which is a unique backend key.</para>
+            /// <para>The scale-out ID, which is a unique backend key. This parameter is returned only for scale-out tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task action. This is a unique key for the backend task type.</para>
+            /// <para>The task action, which is a unique key for the backend task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>multi_scale_out</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TaskAction { get; set; }
 
             /// <summary>
-            /// <para>The error code of the failed task.</para>
+            /// <para>The error code returned when the task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TaskErrorCode</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TaskErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message of the failed task.</para>
+            /// <para>The error message returned when the task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TaskErrorMessage</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

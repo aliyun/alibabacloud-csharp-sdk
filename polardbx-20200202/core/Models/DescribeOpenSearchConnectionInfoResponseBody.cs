@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeOpenSearchConnectionInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denied details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchConnectionInfo</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The display name of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The owner ID of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>The description is as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -89,21 +89,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The data struct.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeOpenSearchConnectionInfoResponseBodyData Data { get; set; }
         public class DescribeOpenSearchConnectionInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The internal endpoint of the OpenSearch Dashboard.</para>
+            /// <para>The internal endpoint of OpenSearch Dashboard.</para>
             /// </summary>
             [NameInMap("DashboardEndpoint")]
             [Validation(Required=false)]
             public DescribeOpenSearchConnectionInfoResponseBodyDataDashboardEndpoint DashboardEndpoint { get; set; }
             public class DescribeOpenSearchConnectionInfoResponseBodyDataDashboardEndpoint : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether static frame check is enabled. Default value: false.</para>
+                /// <para>Specifies whether still frame checking is enabled. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The URL.</para>
+                /// <para>The article URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg">https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg</a></para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The public network access endpoint of the OpenSearch Dashboard.</para>
+            /// <para>The public network access endpoint of OpenSearch Dashboard.</para>
             /// </summary>
             [NameInMap("DashboardPublicEndpoint")]
             [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The hostname. Retrieves data under the specified host.</para>
+                /// <para>The hostname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com">https://secnet-defense-vastip.oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The URL.</para>
+                /// <para>The article URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg">https://static.yipigai.cn/timuocr/tmp_c29e30497575a40193a24a7a83654e30e21b951cc6856cdb.jpg</a></para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The default account name of OpenSearch.</para>
+            /// <para>The default username for OpenSearch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>elastic</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public DescribeOpenSearchConnectionInfoResponseBodyDataPrivateEndpoint PrivateEndpoint { get; set; }
             public class DescribeOpenSearchConnectionInfoResponseBodyDataPrivateEndpoint : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable the echo feature. This parameter is required. Valid values: true/false.</para>
+                /// <para>Specifies whether additional features are enabled. This parameter is required. Valid values: true and false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -247,14 +247,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The protocol of the monitoring task. Valid values:</para>
+            /// <para>The protocol of the probe task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ICMP</b>.</description></item>
-            /// <item><description><b>TCP</b>.</description></item>
-            /// <item><description><b>HTTP</b>.</description></item>
+            /// <item><description><b>ICMP</b></description></item>
+            /// <item><description><b>TCP</b></description></item>
+            /// <item><description><b>HTTP</b></description></item>
             /// </list>
             /// <remarks>
-            /// <para>Private network monitoring supports only the ICMP and TCP protocols.</para>
+            /// <para>Internal network probing supports only the ICMP and TCP protocols.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public DescribeOpenSearchConnectionInfoResponseBodyDataPublicEndpoint PublicEndpoint { get; set; }
             public class DescribeOpenSearchConnectionInfoResponseBodyDataPublicEndpoint : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable dead-letter message delivery.</para>
+                /// <para>Specifies whether dead-letter message delivery is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>

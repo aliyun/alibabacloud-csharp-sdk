@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeOpenSearchWhitelistsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchWhitelists</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The OwnerId of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the missing permission.</para>
+            /// <para>The no-permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The IP address list.</para>
+                /// <para>The list of IP addresses.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[]</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Ips { get; set; }
 
                 /// <summary>
-                /// <para>The network type. Only VPC is supported.</para>
+                /// <para>The network type. Only VPC networks are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The policy remarks.</para>
+                /// <para>The policy remark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-t4nt9qxfgbzab587cshhc</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task was last updated, in timestamp format.</para>
+                /// <para>The last update time of the task in timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0001-01-01T00:00:00Z</para>

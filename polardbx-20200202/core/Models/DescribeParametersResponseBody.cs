@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeParametersResponseBodyData Data { get; set; }
         public class DescribeParametersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of original parameters.</para>
+            /// <para>The original parameter list.</para>
             /// </summary>
             [NameInMap("ConfigParameters")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The list of running parameter details.</para>
+            /// <para>The list of running parameters.</para>
             /// </summary>
             [NameInMap("RunningParameters")]
             [Validation(Required=false)]

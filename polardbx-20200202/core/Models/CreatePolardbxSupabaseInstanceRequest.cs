@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeSpec { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values: PREPAY and POSTPAY.</para>
+        /// <para>The billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle. Valid values: Year, Month, and Hour.</para>
+        /// <para>The billing cycle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable multi-tenant mode.</para>
+        /// <para>Specifies whether to enable the multi-tenant mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

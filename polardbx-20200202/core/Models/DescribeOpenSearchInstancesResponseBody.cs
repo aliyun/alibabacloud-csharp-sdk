@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchInstances</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The access denial type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The DPI engine version. Default value: 2.0.</para>
+                /// <para>The database engine version of the DPI engine. Default value: 2.0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8.0</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The memory size. Unit: GB.</para>
+                /// <para>The configured memory size, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the instance specifications.</para>
+                /// <para>The display name of the instance type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>8 cores 32 GB</para>
+                /// <para>8 vCPUs, 32 GB</para>
                 /// </summary>
                 [NameInMap("SpecDisplay")]
                 [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of a single data node. Unit: GB.</para>
+                /// <para>The storage space of a single data node, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries per page for a paging query. Maximum value: 100. Default value: If you do not specify a value or the value is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</para>
+            /// <para>The number of entries per page for paging in a paged query. Maximum value: 100. Default value: 10 if no Settings are specified or the Settings value is less than 10. If the Settings value is greater than 100, the default value is 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

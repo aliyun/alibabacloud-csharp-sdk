@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ParamLevel { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

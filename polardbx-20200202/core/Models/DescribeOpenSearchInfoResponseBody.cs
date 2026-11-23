@@ -17,27 +17,27 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeOpenSearchInfoResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeOpenSearchInfoResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The authorization action.</para>
+            /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchInfo</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity used for authorization in the request.</para>
+            /// <para>The identity used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the owner of the authorization principal.</para>
+            /// <para>The owner ID of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authorization principal.</para>
+            /// <para>The type of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of access denial.</para>
+            /// <para>The type of the missing permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The last task update time in UNIX timestamp format.</para>
+                /// <para>The last task update time in timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-02T16:01:51Z</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? CoordinatorNodeCpu { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the coordinator node is enabled.</para>
+                /// <para>Specifies whether the coordinator node is enabled.</para>
                 /// </summary>
                 [NameInMap("CoordinatorNodeEnabled")]
                 [Validation(Required=false)]
@@ -334,8 +334,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The master node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: single-node master</description></item>
-                /// <item><description><b>2</b>: cluster-edition master</description></item>
+                /// <item><description><b>0</b>: The master node is a single node.</description></item>
+                /// <item><description><b>2</b>: The master node is of the Cluster Edition.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? MasterNodeCpu { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the dedicated master node is enabled.</para>
+                /// <para>Specifies whether the dedicated master node is enabled.</para>
                 /// </summary>
                 [NameInMap("MasterNodeEnabled")]
                 [Validation(Required=false)]

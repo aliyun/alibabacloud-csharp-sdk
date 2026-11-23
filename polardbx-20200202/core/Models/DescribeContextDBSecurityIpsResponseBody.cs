@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeContextDBSecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeContextDBSecurityIps</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The owner ID of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeContextDBSecurityIpsResponseBodyData Data { get; set; }
         public class DescribeContextDBSecurityIpsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The context service instance name.</para>
+            /// <para>The name of the context service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********</para>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The whitelist group list.</para>
+            /// <para>The list of whitelist groups.</para>
             /// </summary>
             [NameInMap("GroupItems")]
             [Validation(Required=false)]
             public List<DescribeContextDBSecurityIpsResponseBodyDataGroupItems> GroupItems { get; set; }
             public class DescribeContextDBSecurityIpsResponseBodyDataGroupItems : TeaModel {
                 /// <summary>
-                /// <para>The whitelist group name.</para>
+                /// <para>The name of the whitelist group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>defaultGroup</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GroupTag { get; set; }
 
                 /// <summary>
-                /// <para>The details of the whitelist group.</para>
+                /// <para>The whitelist details of the group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127.0.0.1,172.168.0.0</para>

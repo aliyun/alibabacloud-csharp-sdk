@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The node specifications code for PolarDBX Search data nodes. This parameter is required. The active node specifications depend on the region and sales configuration, and must differ from the current node specifications.</para>
+        /// <para>The data node specifications code for PolarDB-X Search. This parameter is required. Active node specifications depend on the region and sales configuration, and must be different from the current node specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>opensearch.sn2ne.large.1</para>

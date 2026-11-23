@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSupabaseInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denied details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The no permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeSupabaseInstanceAttributeResponseBodyData Data { get; set; }
         public class DescribeSupabaseInstanceAttributeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of endpoints.</para>
+            /// <para>The endpoints.</para>
             /// </summary>
             [NameInMap("ConnAddrs")]
             [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The DPI engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The minor engine version.</para>
+            /// <para>The minor version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</para>
@@ -225,14 +225,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? NodeCount { get; set; }
 
             /// <summary>
-            /// <para>The list of nodes.</para>
+            /// <para>The nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<DescribeSupabaseInstanceAttributeResponseBodyDataNodes> Nodes { get; set; }
             public class DescribeSupabaseInstanceAttributeResponseBodyDataNodes : TeaModel {
                 /// <summary>
-                /// <para>The class code.</para>
+                /// <para>The specification code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polarx.supabase.x2.small</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The Supabase class code.</para>
+            /// <para>The Supabase specification code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx.supabase.x4.xlarge</para>

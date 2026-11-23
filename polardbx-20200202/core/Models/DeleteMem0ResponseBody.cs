@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteMem0ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed cause of the access denial.</para>
+        /// <para>The detailed reasons for the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>2209883</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]

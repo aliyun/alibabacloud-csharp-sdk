@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GdnInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The replication mode of the GDN. Valid values: gdn_mode_master_slave and gdn_mode_bidirectional.</para>
+                /// <para>The GDN replication mode. Valid values: gdn_mode_master_slave and gdn_mode_bidirectional.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gdn_mode_master_slave</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string CnNodeClassCode { get; set; }
 
                     /// <summary>
-                    /// <para>The number of compute nodes (CNs).</para>
+                    /// <para>The number of CNs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -125,6 +125,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
                     /// <summary>
                     /// <para>The data synchronization status of the member.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>SYNC</para>
                     /// </summary>
                     [NameInMap("DataSyncStatus")]
                     [Validation(Required=false)]
@@ -158,7 +161,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string DnNodeClassCode { get; set; }
 
                     /// <summary>
-                    /// <para>The number of data nodes (DNs).</para>
+                    /// <para>The number of DNs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string DnNodeCount { get; set; }
 
                     /// <summary>
-                    /// <para>The expiration time. The format is YYYY-MM-DDTHH:mm:ss.SSS±HHmm, which includes the time zone offset.</para>
+                    /// <para>The expiration time. The time is in the YYYY-MM-DDTHH:mm:ss.SSS±HHmm format, which includes the time zone offset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-01-02T13:11:10.000+0000</para>
@@ -200,8 +203,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <summary>
                     /// <para>The billing method of the instance. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-                    /// <item><description><b>Prepaid</b>: subscription</description></item>
+                    /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+                    /// <item><description><b>Prepaid</b>: subscription.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -223,6 +226,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
                     /// <summary>
                     /// <para>The read/write status of the member.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>R</para>
                     /// </summary>
                     [NameInMap("ReadWriteStatus")]
                     [Validation(Required=false)]
@@ -283,18 +289,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <para>The status of the switchover task.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>prepared: Parameter initialization completed
-                    /// set_old_primary_readonly: Write operations disabled on the original primary instance
-                    /// set_new_primary_read_write: Switchover completed
-                    /// timeout: Task timed out
-                    /// rollback: Rolled back</para>
+                    /// <para>prepared: Parameter initialization is complete.
+                    /// set_old_primary_readonly: The original primary instance is set to read-only.
+                    /// set_new_primary_read_write: The switchover is complete.
+                    /// timeout: The task timed out.
+                    /// rollback: The task is rolled back</para>
                     /// </summary>
                     [NameInMap("TaskStatus")]
                     [Validation(Required=false)]
                     public string TaskStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The third active zone in a three-zone deployment.</para>
+                    /// <para>The third active zone in a Three-zone deployment.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-zhangjiakou-a</para>
@@ -363,7 +369,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The switchover logs.</para>
+                /// <para>The switchover log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;&quot;</para>
@@ -385,7 +391,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -407,10 +413,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
-        /// <remarks>
-        /// <para>This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</para>
-        /// </remarks>
+        /// <para>The returned message. If the request is successful, this parameter is empty. If the request fails, an error message such as an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

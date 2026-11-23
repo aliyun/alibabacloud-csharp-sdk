@@ -17,20 +17,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public AllocateContext0PublicConnectionResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class AllocateContext0PublicConnectionResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The action that is evaluated.</para>
+            /// <para>The authorization action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:AllocateContext0PublicConnection</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The identity used for authentication in the request.</para>
+            /// <para>The identity identifier used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The action that is evaluated.</para>
+            /// <para>The authorization action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pxsp-xxxxxxxxxx</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
             public int? DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-hzjasd****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? DBInstanceNetType { get; set; }
 
             /// <summary>
-            /// <para>The target node type. Valid values: service and dashboard.</para>
+            /// <para>The target node type. Valid values: service, dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</para>
+            /// <para>The IP address of the Anti-DDoS instance protected by the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://anchashi.aliyun-inc.coM">https://anchashi.aliyun-inc.coM</a></para>

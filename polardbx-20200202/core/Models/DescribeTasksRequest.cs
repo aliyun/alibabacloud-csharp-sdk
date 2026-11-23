@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The number of entries per page. Valid values: 5 to 1000.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

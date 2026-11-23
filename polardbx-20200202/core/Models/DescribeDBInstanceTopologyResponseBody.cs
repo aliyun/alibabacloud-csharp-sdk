@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Engine { get; set; }
 
                 /// <summary>
-                /// <para>The DPI engine version. Default value: 2.0.</para>
+                /// <para>The database engine version. Default value: 2.0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems> HistoryItems { get; set; }
                 public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the node is enabled. In the compute layer, only the nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary nodes in the compute layer are switched to primary nodes. All nodes in the storage layer are enabled.</para>
+                    /// <para>Indicates whether the node is enabled. In the compute layer, only nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary node in the compute layer is switched to the primary node. All nodes in the storage layer are enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public bool? Activated { get; set; }
 
                     /// <summary>
-                    /// <para>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons (;).</para>
+                    /// <para>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-a</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Azone { get; set; }
 
                     /// <summary>
-                    /// <para>The node attribute. Valid values:</para>
+                    /// <para>The node type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>polarx_cn</b>: Compute node.</description></item>
                     /// <item><description><b>polarx_store</b>: Data node.</description></item>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string PhyInstanceName { get; set; }
 
                     /// <summary>
-                    /// <para>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons (;).</para>
+                    /// <para>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> Items { get; set; }
                 public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the node is enabled. In the compute layer, only the nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary nodes in the compute layer are switched to primary nodes. All nodes in the storage layer are enabled.</para>
+                    /// <para>Indicates whether the node is enabled. In the compute layer, only nodes in the primary zone are enabled. After a primary/secondary switchover is performed on the instance, the secondary node in the compute layer is switched to the primary node. All nodes in the storage layer are enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public bool? Activated { get; set; }
 
                     /// <summary>
-                    /// <para>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons (;).</para>
+                    /// <para>The zone to which the node belongs. If the node is an ApsaraDB RDS node, the zones of multiple child nodes are separated by semicolons.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-a</para>
@@ -249,14 +249,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Azone { get; set; }
 
                     /// <summary>
-                    /// <para>The list of data information for the three-node ApsaraDB RDS deployment.</para>
+                    /// <para>The list of information about the three ApsaraDB RDS nodes.</para>
                     /// </summary>
                     [NameInMap("AzoneRoleList")]
                     [Validation(Required=false)]
                     public List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList> AzoneRoleList { get; set; }
                     public class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList : TeaModel {
                         /// <summary>
-                        /// <para>The zone to which a specific node in the three-node ApsaraDB RDS deployment belongs.</para>
+                        /// <para>The zone to which a specific node among the three ApsaraDB RDS nodes belongs.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cn-hangzhou-a</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string Azone { get; set; }
 
                         /// <summary>
-                        /// <para>The role of a specific node in the three-node ApsaraDB RDS deployment. Valid values:</para>
+                        /// <para>The role of a specific node among the three ApsaraDB RDS nodes. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>leader</b>: Primary node.</description></item>
                         /// <item><description><b>follower</b>: Secondary node.</description></item>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     }
 
                     /// <summary>
-                    /// <para>The node attribute. Valid values:</para>
+                    /// <para>The node type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>polarx_cn</b>: Compute node.</description></item>
                     /// <item><description><b>polarx_store</b>: Data node.</description></item>
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public long? DiskSize { get; set; }
 
                     /// <summary>
-                    /// <para>The DPI engine version. Valid values:</para>
+                    /// <para>The database engine version. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>mysql</b></description></item>
                     /// <item><description><b>polarx_cdc</b></description></item>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Engine { get; set; }
 
                     /// <summary>
-                    /// <para>The DPI engine version. Default value: 2.0.</para>
+                    /// <para>The database engine version. Default value: 2.0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5.7</para>
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string InstanceClusterName { get; set; }
 
                     /// <summary>
-                    /// <para>The lock status. Valid values:</para>
+                    /// <para>Indicates whether the node is locked. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>0</b>: Unlocked.</description></item>
                     /// <item><description><b>1</b>: Locked.</description></item>
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string ReadType { get; set; }
 
                     /// <summary>
-                    /// <para>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons (;).</para>
+                    /// <para>The region to which the node belongs. If the node is an ApsaraDB RDS node, the regions of multiple child nodes are separated by semicolons.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>

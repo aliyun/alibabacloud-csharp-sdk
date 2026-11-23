@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The description of the group.</para>
+        /// <para>The description of the whitelist group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MAIN</para>

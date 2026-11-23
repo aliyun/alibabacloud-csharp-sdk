@@ -17,17 +17,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public ExecuteMetaQueryResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class ExecuteMetaQueryResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:ExecuteMetaQuery</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>Same as above.</para>
+            /// <para>The description is the same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? AppliedOffset { get; set; }
 
             /// <summary>
-            /// <para>The effective upper limit of returned rows for this request.</para>
+            /// <para>The effective maximum number of rows to return for this request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? HasMore { get; set; }
 
             /// <summary>
-            /// <para>The size in bytes of the Rows JSON array in the returned result after UTF-8 encoding, excluding protocol overhead.</para>
+            /// <para>The size in bytes of the Rows JSON array in the response after UTF-8 encoding, excluding protocol overhead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The additional message returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</para>
+        /// <para>The additional information returned by the API operation. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

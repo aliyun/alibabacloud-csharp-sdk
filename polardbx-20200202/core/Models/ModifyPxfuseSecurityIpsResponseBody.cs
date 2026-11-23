@@ -17,27 +17,27 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public ModifyPxfuseSecurityIpsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class ModifyPxfuseSecurityIpsResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The name of the operation.</para>
+            /// <para>The name of the API operation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:ModifyPxfuseSecurityIps</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authenticated principal.</para>
+            /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authenticated principal.</para>
+            /// <para>The owner ID of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the identity used for authentication in the request. Valid values:</para>
+            /// <para>The type of identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SubUser: RAM user.</description></item>
             /// <item><description>AssumedRoleUser: RAM role.</description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The type of access denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>2209883</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]

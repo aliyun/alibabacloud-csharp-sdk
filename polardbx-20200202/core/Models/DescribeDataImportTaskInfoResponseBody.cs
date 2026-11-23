@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDataImportTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</para>
+        /// <para>The response code. This parameter is empty when the request is successful. If the request fails, an exception message such as an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The result set.</para>
+        /// <para>The returned result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public long? FsmId { get; set; }
 
                 /// <summary>
-                /// <para>The state identifier in the data migration or synchronization task.</para>
+                /// <para>A state identifier in a data migration or synchronization task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RECON_FINISHED_CATCH_UP</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string FsmState { get; set; }
 
                 /// <summary>
-                /// <para>The status in the data migration, import, or synchronization system.</para>
+                /// <para>The status in systems such as data migration, import, and synchronization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IMPORT_NOT_BEGIN</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string FsmStatus { get; set; }
 
                 /// <summary>
-                /// <para>The data import task details.</para>
+                /// <para>The details of the data import task.</para>
                 /// </summary>
                 [NameInMap("ServiceDetailList")]
                 [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public long? Delay { get; set; }
 
                         /// <summary>
-                        /// <para>The most recent error message.</para>
+                        /// <para>The latest error message.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>null</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string LastError { get; set; }
 
                         /// <summary>
-                        /// <para>The physical database name.</para>
+                        /// <para>The name of the physical database.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>drds_test</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         /// <para>The task ID.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>fc3b1568-ad96-****-adca-dfe018b38077</para>
+                        /// <para>1991610</para>
                         /// </summary>
                         [NameInMap("TaskId")]
                         [Validation(Required=false)]
@@ -185,10 +185,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     }
 
                     /// <summary>
-                    /// <para>The replication type. Valid values:</para>
+                    /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>FULL_COPY: full replication.</description></item>
-                    /// <item><description>INC_COPY: incremental replication.</description></item>
+                    /// <item><description>FULL_COPY: Full replication.</description></item>
+                    /// <item><description>INC_COPY: Incremental replication.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The response message. This parameter has a value only when the task status is success. Otherwise, an empty value is returned.</para>
+        /// <para>The returned message. This parameter has a value only when the task status is success. Otherwise, it is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeUserEncryptionKeyListResponseBodyData Data { get; set; }
         public class DescribeUserEncryptionKeyListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The key list.</para>
+            /// <para>The list of keys.</para>
             /// </summary>
             [NameInMap("KeyIds")]
             [Validation(Required=false)]

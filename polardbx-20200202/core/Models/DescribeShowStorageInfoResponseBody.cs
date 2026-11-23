@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeShowStorageInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code of the request. &gt; This parameter is empty when the request is successful. When the request fails, exception information such as error codes is returned.</para>
+        /// <para>The return code of the request. This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeShowStorageInfoResponseBodyDataStorageInfos> StorageInfos { get; set; }
             public class DescribeShowStorageInfoResponseBodyDataStorageInfos : TeaModel {
                 /// <summary>
-                /// <para>The specification type (specification code) of the instance.</para>
+                /// <para>The instance type (specification code).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polar.mysql.x4.large</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The role type of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MASTER: primary instance.</description></item>
-                /// <item><description>READONLY: read-only instance.</description></item>
-                /// <item><description>STANDBY: standby instance (high-availability scenario).</description></item>
+                /// <item><description>MASTER: primary instance</description></item>
+                /// <item><description>READONLY: read-only instance</description></item>
+                /// <item><description>STANDBY: secondary instance in high-availability scenarios</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

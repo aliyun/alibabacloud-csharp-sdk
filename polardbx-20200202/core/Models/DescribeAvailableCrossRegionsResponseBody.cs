@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The additional information returned. &quot;success&quot; is returned if the request is successful. Otherwise, the corresponding error code is returned.</para>
+        /// <para>The additional information returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

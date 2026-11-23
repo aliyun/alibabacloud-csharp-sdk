@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The check report.</para>
+        /// <para>The validation report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

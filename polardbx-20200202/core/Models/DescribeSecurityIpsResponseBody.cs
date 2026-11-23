@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeSecurityIpsResponseBodyData Data { get; set; }
         public class DescribeSecurityIpsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-hzjasd****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The details of the whitelist in the group.</para>
+                /// <para>The IP addresses in the whitelist group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127.0.0.1,172.168.0.0</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The additional information returned. &quot;success&quot; is returned if the request is successful. Otherwise, an error code is returned.</para>
+        /// <para>The additional message returned by the API operation. If the call is successful, success is returned. Otherwise, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14036EBE-CF2E-44DB-ACE9-AC6157D3A6FC</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

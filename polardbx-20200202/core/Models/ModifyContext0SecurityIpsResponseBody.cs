@@ -17,27 +17,27 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public ModifyContext0SecurityIpsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class ModifyContext0SecurityIpsResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The authentication action.</para>
+            /// <para>The authorization action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:ModifyContext0SecurityIps</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The name of the authentication principal.</para>
+            /// <para>The display name of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Example RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authentication principal.</para>
+            /// <para>The owner ID of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of identity used for authentication in the request. Valid values:</para>
+            /// <para>The type of the identity used for authentication in the request. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SubUser: RAM user.</description></item>
             /// <item><description>AssumedRoleUser: RAM role.</description></item>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pxsp-xxxxxxxxxx</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>2209883</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public int? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The list of task IDs in the task group.</para>
+            /// <para>The IDs of the tasks in the task group.</para>
             /// </summary>
             [NameInMap("TaskIds")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeStructureImportTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result set.</para>
+        /// <para>The returned result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeStructureImportTaskInfoResponseBodyData Data { get; set; }
         public class DescribeStructureImportTaskInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The slink status.</para>
+            /// <para>The Slink status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRUCTURE_IMPORT</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SlinkStage { get; set; }
 
             /// <summary>
-            /// <para>The import result of the schema import task.</para>
+            /// <para>The import result of the structure import task.</para>
             /// </summary>
             [NameInMap("StructureImportResult")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ExceptionDetail { get; set; }
 
                 /// <summary>
-                /// <para>The name of the table that encountered an exception.</para>
+                /// <para>The name of the table with exceptions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hash_realtime_new.wm_in_job_et</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? FinishedNum { get; set; }
 
                 /// <summary>
-                /// <para>The current progress in percentage.</para>
+                /// <para>The current progress (percentage).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The returned message. This parameter is empty when the request succeeds. When the request fails, an exception message is returned, such as an error code.</para>
+        /// <para>The returned message. This parameter is empty when the request is successful. If the request fails, an error message such as an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

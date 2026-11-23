@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeContext0InfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The access denial details.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeContext0Info</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The no-permission type.</para>
+            /// <para>The type of the access denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>The policy type.</para>
+            /// <para>The type of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIORITY</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public DescribeContext0InfoResponseBodyDataInstance Instance { get; set; }
             public class DescribeContext0InfoResponseBodyDataInstance : TeaModel {
                 /// <summary>
-                /// <para>The instance class.</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql.x2.large.2c</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string ConnectionString { get; set; }
 
                     /// <summary>
-                    /// <para>The target node type. Valid values: service, dashboard.</para>
+                    /// <para>The type of the target node: service or dashboard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>service</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string NodeType { get; set; }
 
                     /// <summary>
-                    /// <para>The port.</para>
+                    /// <para>The port number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3306</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The endpoint type.</para>
+                    /// <para>The type of the endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>VPC</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC instance ID.</para>
+                    /// <para>The VPC-connected instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pxc-spsil01pww4hfzjayd-cn-20251013180429</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The full tag of the minor version currently confirmed for the service. This parameter is empty when the version is unknown.</para>
+                /// <para>The full tag of the currently confirmed minor version of the service. This parameter is empty if the version is unknown.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polardb-2.6.0_release_contextdb-20261023</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public List<DescribeContext0InfoResponseBodyDataInstanceReplicaSets> ReplicaSets { get; set; }
                 public class DescribeContext0InfoResponseBodyDataInstanceReplicaSets : TeaModel {
                     /// <summary>
-                    /// <para>The instance class.</para>
+                    /// <para>The instance type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pg.x2.13large.2c</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string ConnectionString { get; set; }
 
                         /// <summary>
-                        /// <para>The target node type. Valid values: service, dashboard.</para>
+                        /// <para>The type of the target node: service or dashboard.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>service</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string NodeType { get; set; }
 
                         /// <summary>
-                        /// <para>The port.</para>
+                        /// <para>The port number.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3306</para>
@@ -318,8 +318,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         /// <summary>
                         /// <para>The instance type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>ReadWrite</b>: primary instance</description></item>
-                        /// <item><description><b>ReadOnly</b>: read-only instance</description></item>
+                        /// <item><description><b>ReadWrite</b>: primary instance.</description></item>
+                        /// <item><description><b>ReadOnly</b>: read-only instance.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                         public string VSwitchId { get; set; }
 
                         /// <summary>
-                        /// <para>The VPC instance ID.</para>
+                        /// <para>The VPC-connected instance ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>vpc-8vbdw66evguopfcfvieoi</para>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? NodeCount { get; set; }
 
                     /// <summary>
-                    /// <para>The target node type. Valid values: service, dashboard.</para>
+                    /// <para>The type of the target node: service or dashboard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>service</para>
@@ -404,13 +404,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     /// <summary>
                     /// <para>The node status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: running</description></item>
-                    /// <item><description><b>1</b>: creating</description></item>
-                    /// <item><description><b>2</b>: abnormal</description></item>
-                    /// <item><description><b>3</b>: expired</description></item>
-                    /// <item><description><b>4</b>: releasing</description></item>
-                    /// <item><description><b>5</b>: released</description></item>
-                    /// <item><description><b>6</b>: locked</description></item>
+                    /// <item><description><b>0</b>: running.</description></item>
+                    /// <item><description><b>1</b>: creating.</description></item>
+                    /// <item><description><b>2</b>: abnormal.</description></item>
+                    /// <item><description><b>3</b>: expired.</description></item>
+                    /// <item><description><b>4</b>: releasing.</description></item>
+                    /// <item><description><b>5</b>: released.</description></item>
+                    /// <item><description><b>6</b>: locked.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

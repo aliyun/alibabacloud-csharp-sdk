@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ReleaseContext0PublicConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The public network connection string to release. If this parameter is not specified, the Mem0 public address is subject to automatic release.</para>
+        /// <para>The public connection string to release. This parameter is optional. If you do not specify this parameter, the Mem0 public endpoint is automatically released.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-hzjasdyuoo.polarx.rds.aliyuncs.com</para>
@@ -31,11 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The target node type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>service</description></item>
-        /// <item><description>dashboard</description></item>
-        /// </list>
+        /// <para>The type of the target node. Valid values: service, dashboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dn</para>

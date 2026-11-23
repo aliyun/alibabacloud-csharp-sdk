@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The modification mode of the whitelist. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: Overwrites the whitelist group.</description></item>
-        /// <item><description>1: Adds a whitelist group.</description></item>
-        /// <item><description>2: Deletes a whitelist group.</description></item>
+        /// <item><description>1: Appends IP addresses to the whitelist group.</description></item>
+        /// <item><description>2: Deletes the whitelist group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

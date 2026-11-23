@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribeOpenSearchAccountInfo</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic information.</para>
+            /// <para>The encoded diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeOpenSearchAccountInfoResponseBodyDataAccounts> Accounts { get; set; }
             public class DescribeOpenSearchAccountInfoResponseBodyDataAccounts : TeaModel {
                 /// <summary>
-                /// <para>The account status. Valid values: </para>
+                /// <para>The account status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Creating</b>: The account is being created.</description></item>
                 /// <item><description><b>Available</b>: The account is available.</description></item>
@@ -120,8 +120,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <summary>
                 /// <para>The account type.</para>
                 /// <list type="bullet">
-                /// <item><description>Before three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged account.</description></item>
-                /// <item><description>After three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</description></item>
+                /// <item><description>Before the three-role mode is enabled: 0 indicates a standard account, and 1 indicates a privileged account.</description></item>
+                /// <item><description>After the three-role mode is enabled: 0 indicates a standard account, 2 indicates a system administrator account, 3 indicates a security administrator account, and 4 indicates an audit administrator account.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// <para>The account name of the OpenSearch instance.</para>
+                /// <para>The username of the OpenSearch instance account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elastic</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string PasswordLastModified { get; set; }
 
             /// <summary>
-            /// <para>The account name of the OpenSearch instance.</para>
+            /// <para>The username of the OpenSearch instance account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>elastic</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribePxfsUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the PolarDB-X instance.</para>
+        /// <para>The PolarDB-X instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

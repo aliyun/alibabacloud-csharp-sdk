@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The number of tables in the PAUSE state.</para>
+            /// <para>The number of tables whose archiving is paused.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? PausedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of tables being archived.</para>
+            /// <para>The number of tables currently being archived.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

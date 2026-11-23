@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the target node. Valid values: service and dashboard.</para>
+        /// <para>The target node type. Valid values: service and dashboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>service</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The port.</para>
+        /// <para>The port number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

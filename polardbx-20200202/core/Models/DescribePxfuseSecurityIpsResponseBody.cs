@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribePxfuseSecurityIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribePxfuseSecurityIpsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribePxfuseSecurityIpsResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The description is the same as above.</para>
+            /// <para>The description as mentioned above.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:DescribePxfuseSecurityIps</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the no-permission error.</para>
+            /// <para>The no-permission type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The instance details.</para>
+        /// <para>The list of instance details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CustinsName { get; set; }
 
             /// <summary>
-            /// <para>The groups corresponding to the consumed service.</para>
+            /// <para>The groups corresponding to the consumed services.</para>
             /// </summary>
             [NameInMap("Groups")]
             [Validation(Required=false)]
@@ -133,11 +133,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GroupTag { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether an IP address that is already used for a DNAT entry can also be used for an SNAT entry. Valid values:</para>
+                /// <para>Specifies whether an IP address that is already used in a DNAT entry can also be used in an SNAT entry. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>true</b>: Destination IP address can also be used for an SNAT entry.</para>
+                /// <item><description><para><b>true</b>: Destination IP address can also be used in an SNAT entry.</para>
                 /// </description></item>
-                /// <item><description><para><b>false</b>: Destination IP address cannot be used for an SNAT entry.</para>
+                /// <item><description><para><b>false</b>: Destination IP address cannot be used in an SNAT entry.</para>
                 /// </description></item>
                 /// </list>
                 /// 

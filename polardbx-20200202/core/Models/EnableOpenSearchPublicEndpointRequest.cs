@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The target node type. Valid values:</para>
+        /// <para>The type of the target node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>search</b>: data node. This is the default value.</description></item>
         /// <item><description><b>dashboard</b>: dashboard node.</description></item>

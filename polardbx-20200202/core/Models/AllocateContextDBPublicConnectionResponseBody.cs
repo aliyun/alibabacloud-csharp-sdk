@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:AllocateContextDBPublicConnection</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The identity used for authentication in the request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Sample RAM user</para>
             /// </summary>
             [NameInMap("AuthPrincipalDisplayName")]
             [Validation(Required=false)]
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The type of the authentication principal.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of the authentication principal.</para>
+            /// <para>See the preceding description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The type of the missing permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public AllocateContextDBPublicConnectionResponseBodyData Data { get; set; }
         public class AllocateContextDBPublicConnectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoint.</para>
+            /// <para>The connection string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test2.polarx.huhehaote.rds.aliyuncs.com</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pxsp-xxxxxxxxxx</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The network type of the endpoint.</para>
+            /// <para>The network type of the connection string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? DBInstanceNetType { get; set; }
 
             /// <summary>
-            /// <para>The type of the target node. Valid values: service and dashboard.</para>
+            /// <para>The target node type. Valid values: service and dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>The port of the endpoint.</para>
+            /// <para>The port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3300</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? TaskId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the Anti-DDoS Proxy instance protected by the policy.</para>
+            /// <para>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://anchashi.aliyun-inc.coM">https://anchashi.aliyun-inc.coM</a></para>

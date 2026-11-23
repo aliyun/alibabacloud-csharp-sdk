@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the target node. Valid values:</para>
+        /// <para>The type of the destination node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>search</b>: data node. This is the default value.</description></item>
         /// <item><description><b>dashboard</b>: dashboard node.</description></item>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

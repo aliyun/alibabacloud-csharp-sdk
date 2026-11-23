@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass1@</para>
         /// </summary>
         [NameInMap("DbaAccountPassword")]
         [Validation(Required=false)]

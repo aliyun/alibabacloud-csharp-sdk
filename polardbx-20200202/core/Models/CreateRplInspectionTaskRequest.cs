@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateRplInspectionTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS instance to which the migration object belongs in the target instance. &gt; You can invoke the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all ApsaraDB RDS instances in the specified region, including instance IDs.</para>
+        /// <para>The ID of the ApsaraDB RDS instance to which the migrated objects belong in the destination instance. You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all ApsaraDB RDS instances in the destination region, including instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>transfer_test3</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstDb { get; set; }
 
         /// <summary>
-        /// <para>The password of the privileged user for the destination ApsaraDB RDS instance. &gt; * The password must be 8 to 32 characters in length. * The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. * Special characters include ! @ # $ &amp; % ^ * ( ) _ + - =</para>
+        /// <para>The password of the privileged account for the destination ApsaraDB RDS instance. * It must be 8 to 32 characters in length. * It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. * Special characters include !@#$&amp;%^*()_+-=</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass1!</para>
         /// </summary>
         [NameInMap("DstPassword")]
         [Validation(Required=false)]
         public string DstPassword { get; set; }
 
         /// <summary>
-        /// <para>The destination task ID.</para>
+        /// <para>The ID of the destination task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-zkrc1****l54rc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstResId { get; set; }
 
         /// <summary>
-        /// <para>The username used to connect to the target instance.</para>
+        /// <para>The username used to connect to the destination instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bbt_item</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstUserName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The switchover task ID.</para>
+        /// <para>The ID of the switchover task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
-        /// <para>The password of the source ApsaraDB RDS instance. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including the password.</para>
+        /// <para>The password of the user for the source ApsaraDB RDS instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>DemoPass1@</para>
         /// </summary>
         [NameInMap("SrcPassword")]
         [Validation(Required=false)]

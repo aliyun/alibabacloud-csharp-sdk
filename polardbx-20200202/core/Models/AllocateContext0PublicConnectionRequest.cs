@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class AllocateContext0PublicConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the public network connection string.</para>
+        /// <para>The prefix of the public connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxc-**************</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The target node type. Valid values: service and dashboard.</para>
+        /// <para>The target node type. Valid values: service, dashboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dn</para>

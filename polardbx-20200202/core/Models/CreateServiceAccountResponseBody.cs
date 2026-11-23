@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The authentication action.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>polardbx:CreateServiceAccount</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authenticated principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account already exists.</para>
+            /// <para>Indicates whether it already exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -106,10 +106,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The type of the service account.</para>
+            /// <para>The service account type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务账号类型</para>
+            /// <para>Service account type</para>
             /// </summary>
             [NameInMap("ServiceAccountType")]
             [Validation(Required=false)]
@@ -138,10 +138,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The additional information returned. If the request is successful, <b>success</b> is returned. If the request fails, the corresponding error code is returned.</para>
+        /// <para>The additional information returned by the API. success is returned for a successful request, and an error code is returned for a failed request.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

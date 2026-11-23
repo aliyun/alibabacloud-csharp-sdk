@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeTransformStatusResponseBodyData Data { get; set; }
         public class DescribeTransformStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the task can be canceled.</para>
+            /// <para>Specifies whether the task can be canceled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? CanFinish { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a migration switchover can be performed. Valid values:</para>
+            /// <para>Specifies whether a migration switchover can be performed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Yes.</description></item>
             /// <item><description><b>false</b>: No.</description></item>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? CanSwitch { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the switchover operation can be undone.</para>
+            /// <para>Specifies whether the switchover operation can be undone.</para>
             /// </summary>
             [NameInMap("CanUndoSwitch")]
             [Validation(Required=false)]
             public bool? CanUndoSwitch { get; set; }
 
             /// <summary>
-            /// <para>The name of the Enterprise instance.</para>
+            /// <para>The name of the enterprise instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-*****</para>
@@ -78,7 +78,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The report summary.</para>
+            /// <para>The report summary information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;example&quot;:[&quot;Sample report summary&quot;]}</para>
             /// </summary>
             [NameInMap("ReportSummary")]
             [Validation(Required=false)]

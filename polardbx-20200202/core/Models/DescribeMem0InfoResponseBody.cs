@@ -44,21 +44,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeMem0InfoResponseBodyData Data { get; set; }
         public class DescribeMem0InfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Instance information</para>
+            /// <para>The instance information.</para>
             /// </summary>
             [NameInMap("Instance")]
             [Validation(Required=false)]
             public DescribeMem0InfoResponseBodyDataInstance Instance { get; set; }
             public class DescribeMem0InfoResponseBodyDataInstance : TeaModel {
                 /// <summary>
-                /// <para>Instance specifications</para>
+                /// <para>The instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql.x2.large.2c</para>
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ClassCode { get; set; }
 
                 /// <summary>
-                /// <para>Connection address list</para>
+                /// <para>The list of endpoints.</para>
                 /// </summary>
                 [NameInMap("ConnAddrs")]
                 [Validation(Required=false)]
                 public List<DescribeMem0InfoResponseBodyDataInstanceConnAddrs> ConnAddrs { get; set; }
                 public class DescribeMem0InfoResponseBodyDataInstanceConnAddrs : TeaModel {
                     /// <summary>
-                    /// <para>Connection address</para>
+                    /// <para>The endpoint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pxc-spsil01pww4hfz.polarx.singapore.rds.aliyuncs.com</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string ConnectionString { get; set; }
 
                     /// <summary>
-                    /// <para>Port</para>
+                    /// <para>The port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3306</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>Connection address type</para>
+                    /// <para>The endpoint type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>VPC</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string VPCId { get; set; }
 
                     /// <summary>
-                    /// <para>vSwitch ID</para>
+                    /// <para>The vSwitch ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-t4ny14pr37spmjsbv5dc2</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>VPC instance ID</para>
+                    /// <para>The VPC instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pxc-spsil01pww4hfzjayd-cn-20251013180429</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Instance ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxc-spsil01pww4hfz-mem</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Number of nodes</para>
+                /// <para>The number of nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public int? NodeCount { get; set; }
 
                 /// <summary>
-                /// <para>Region ID</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-southeast-1</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Instance status</para>
+                /// <para>The instance status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Storage type</para>
+                /// <para>The storage type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>local_ssd</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string VPCId { get; set; }
 
                 /// <summary>
-                /// <para>vSwitch ID</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-t4ny14pr37spmjsbv5dc2</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>Zone ID</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-southeast-1a</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</para>
