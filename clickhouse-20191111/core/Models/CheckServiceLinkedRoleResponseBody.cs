@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the service-linked role exists.</para>
+        /// <para>Indicates whether a service-linked role exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? HasServiceLinkedRole { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66428721-xxxx-xxxx-xxxx-3BD1B67837E0</para>

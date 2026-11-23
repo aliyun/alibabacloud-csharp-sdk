@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range that was queried. The time is in UTC, formatted as <c>yyyy-MM-ddTHH:mmZ</c>.</para>
+        /// <para>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-27T16:38Z</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of performance metrics for the cluster.</para>
+        /// <para>The list of cluster performance metric values.</para>
         /// </summary>
         [NameInMap("Performances")]
         [Validation(Required=false)]
         public List<DescribeDBClusterPerformanceResponseBodyPerformances> Performances { get; set; }
         public class DescribeDBClusterPerformanceResponseBodyPerformances : TeaModel {
             /// <summary>
-            /// <para>The name of the performance metric.</para>
+            /// <para>The name of the performance metrics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MEM_USAGE</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The name of the performance metric.</para>
+            /// <para>The name of the performance value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mem_usage</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time series data for the metric.</para>
+            /// <para>The collection of performance metrics.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> Series { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformancesSeries : TeaModel {
                 /// <summary>
-                /// <para>The name of the time series.</para>
+                /// <para>The name of the performance data list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cc-bp125e3uu94wo1s0k16****</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The values of the performance metrics, each associated with a sampling timestamp.</para>
+                /// <para>The performance metric values. Each value corresponds to a collection time point.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeDBClusterPerformanceResponseBodyPerformancesSeriesValues> Values { get; set; }
                 public class DescribeDBClusterPerformanceResponseBodyPerformancesSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>The value of the performance metric.</para>
+                    /// <para>The performance value.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             }
 
             /// <summary>
-            /// <para>The unit of the metric.</para>
+            /// <para>The data unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range that was queried. The time is in UTC, formatted as <c>yyyy-MM-ddTHH:mmZ</c>.</para>
+        /// <para>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-27T16:37Z</para>

@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string ClusterNetworkType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Server Load Balancer (SLB) is enabled in the VPC. Valid values:</para>
+        /// <para>Indicates whether SLB is enabled in the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enabled.</para>
-        /// </description></item>
-        /// <item><description><para>false: disabled.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

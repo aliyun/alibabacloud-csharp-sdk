@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

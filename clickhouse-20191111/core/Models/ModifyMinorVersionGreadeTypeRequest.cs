@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The upgrade type. Set this parameter to <b>false</b> for manual upgrades.</para>
+        /// <para>The update type. A value of <b>false</b> indicates a manual update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

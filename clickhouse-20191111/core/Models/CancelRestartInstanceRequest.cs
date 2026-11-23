@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CancelRestartInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region. The information includes the cluster IDs.</para>
+        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the specified region, including their cluster IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,14 +39,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>30 (default)</para>
-        /// </description></item>
-        /// <item><description><para>50</para>
-        /// </description></item>
-        /// <item><description><para>100</para>
-        /// </description></item>
+        /// <item><description>30 (default)</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scheduled restart time. The time must be in the \<c>yyyy-MM-ddTHH:mmZ\\</c> format and in UTC.</para>
+        /// <para>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-03-22T00:00:50Z</para>

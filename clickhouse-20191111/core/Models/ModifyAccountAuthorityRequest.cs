@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The list of databases to authorize. Separate multiple database names with commas (,).</para>
+        /// <para>The databases to which you want to grant permissions. Separate multiple databases with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AllowDatabases { get; set; }
 
         /// <summary>
-        /// <para>The list of dictionaries to authorize. Separate multiple dictionary names with commas (,).</para>
+        /// <para>The dictionaries to which you want to grant permissions. Separate multiple dictionaries with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,12 +54,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to grant DDL permissions to the database account. Valid values:</para>
+        /// <para>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Allows DDL operations.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Denies DDL operations.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: allows DDL operations.</description></item>
+        /// <item><description><b>false</b>: prohibits DDL operations.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,12 +69,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? DdlAuthority { get; set; }
 
         /// <summary>
-        /// <para>The DML permissions granted to the database account. Valid values:</para>
+        /// <para>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>all</b>: Grants read, write, and modify permissions.</para>
-        /// </description></item>
-        /// <item><description><para><b>readonly,modify</b>: Grants read and modify permissions.</para>
-        /// </description></item>
+        /// <item><description><b>all</b>: read, write, and settings permissions.</description></item>
+        /// <item><description><b>readonly,modify</b>: read and settings permissions.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -96,7 +92,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>All databases in the cluster. Separate multiple database names with commas (,).</para>
+        /// <para>The list of all databases. Separate multiple databases with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>db1,db2</para>
@@ -124,7 +120,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string TotalDatabases { get; set; }
 
         /// <summary>
-        /// <para>All dictionaries in the cluster. Separate multiple dictionary names with commas (,).</para>
+        /// <para>The list of all dictionaries. Separate multiple dictionaries with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt1,dt2</para>

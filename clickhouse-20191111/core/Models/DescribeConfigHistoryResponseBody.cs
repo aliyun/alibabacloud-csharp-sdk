@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeConfigHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The change history of the configuration parameters.</para>
+        /// <para>The change history of configuration parameters.</para>
         /// </summary>
         [NameInMap("ConfigHistoryItems")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The reason for the parameter change.</para>
+            /// <para>The description of the configuration parameter change.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the parameter change took effect. Valid values:</para>
+            /// <para>Indicates whether the configuration parameter change took effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The change took effect.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The change did not take effect.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The change took effect.</description></item>
+            /// <item><description><b>false</b>: The change did not take effect.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The time when the change was made. Use the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</para>
+            /// <para>The time when the change occurred. The time is in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-22T10:00:00Z</para>

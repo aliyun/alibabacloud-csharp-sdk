@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result set of the slow SQL queries.</para>
+        /// <para>The result set of slow SQL statements.</para>
         /// </summary>
         [NameInMap("SlowLogTrend")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             }
 
             /// <summary>
-            /// <para>The number of rows in the result set.</para>
+            /// <para>The number of rows in the returned result set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Rows { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of rows that are returned before the \<c>LIMIT\\</c> clause is applied.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RowsBeforeLimitAtLeast { get; set; }
 
             /// <summary>
-            /// <para>The statistics of the query results.</para>
+            /// <para>The statistics information of the query results.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public int? BytesRead { get; set; }
 
                 /// <summary>
-                /// <para>The query execution duration. Unit: seconds.</para>
+                /// <para>The elapsed time for reading SQL statements. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.001703578</para>

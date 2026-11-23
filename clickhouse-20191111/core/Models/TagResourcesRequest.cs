@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. The value must be <b>DBCLUSTER</b>.</para>
+        /// <para>The resource type. Valid value: <b>DBCLUSTER</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can add up to <b>20</b> tag keys.</para>
+            /// <para>The tag key. You can add N tag keys. N is an integer and ranges from <b>1 to 20</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testkey1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag key. You can add up to <b>20</b> tag values.</para>
+            /// <para>The tag value that corresponds to the tag key. You can add N tag values. N is an integer and ranges from <b>1 to 20</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue1</para>

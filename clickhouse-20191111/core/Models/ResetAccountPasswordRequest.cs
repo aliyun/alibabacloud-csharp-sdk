@@ -21,17 +21,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The new password for the database account.</para>
+        /// <para>The new password of the database account.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The password must contain characters from at least three of the following types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The special characters are !@#$%^&amp;\*()_+-=</para>
-        /// </description></item>
-        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
-        /// </description></item>
+        /// <item><description>Special characters include !@#$%^&amp;*()_+-=</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

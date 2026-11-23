@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateRDSToClickhouseDbResponseBody : TeaModel {
         /// <summary>
-        /// <para>The reason for the creation failure. This parameter is returned only if the value of the Status parameter is <b>-1</b>.</para>
+        /// <para>The cause of the creation failure. This parameter is returned when the <b>Status</b> parameter is -1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ClickHouse exception, code: 49, host: 100.100.79.102, port: 14540; Code: 49, e.displayText() = DB::Exception: Logical error: there is no global context (version 20.8.17.25)n</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The duplicate tables in the sync task.</para>
+        /// <para>The duplicate tables in the synchronization task.</para>
         /// </summary>
         [NameInMap("RepeatedDbs")]
         [Validation(Required=false)]
         public List<string> RepeatedDbs { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66676F54-1994-5DCF-993F-74536649628A</para>
@@ -37,14 +37,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task was created. Valid values:</para>
+        /// <para>Indicates whether the creation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: The task was created.</para>
-        /// </description></item>
-        /// <item><description><para><b>0</b>: The task failed to be created because of duplicate tables. The duplicate tables are returned in the <b>RepeatedDbs</b> parameter.</para>
-        /// </description></item>
-        /// <item><description><para><b>-1</b>: The task failed to be created. The error message is returned in the <b>ErrorMsg</b> parameter.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: The creation is successful.</description></item>
+        /// <item><description><b>0</b>: The creation failed. Duplicate tables exist in the synchronization task. The specific duplicate tables are returned in the <b>RepeatedDbs</b> parameter.</description></item>
+        /// <item><description><b>-1</b>: The creation failed. The cause of the failure is returned in the <b>ErrorMsg</b> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

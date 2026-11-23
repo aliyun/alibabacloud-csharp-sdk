@@ -41,12 +41,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>30 (default)</para>
-        /// </description></item>
-        /// <item><description><para>50</para>
-        /// </description></item>
-        /// <item><description><para>100</para>
-        /// </description></item>
+        /// <item><description>30 (default)</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

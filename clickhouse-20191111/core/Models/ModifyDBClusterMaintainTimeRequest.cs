@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maintenance window of the cluster. The format is HH:mmZ-HH:mmZ.</para>
-        /// <para>Example: 00:00Z-01:00Z. This means that routine maintenance can be performed from 00:00 to 01:00 (UTC), which is 08:00 to 09:00 (UTC+8).</para>
+        /// <para>The maintenance window of the cluster. Format: HH:mmZ-HH:mmZ.</para>
+        /// <para>Example: 00:00Z-01:00Z indicates that routine maintenance can be performed from 00:00 to 01:00 UTC (08:00 to 09:00 UTC+8).</para>
         /// <remarks>
-        /// <para>The maintenance window must start on the hour and last for one hour.</para>
+        /// <para>The maintenance window Settings must be full hours with a duration of 1 hour.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

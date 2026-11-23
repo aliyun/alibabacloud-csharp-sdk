@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyDBClusterConfigInXMLRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration parameters to modify. Call the <a href="https://help.aliyun.com/document_detail/452210.html">DescribeDBClusterConfigInXML</a> operation to query the current configuration parameters. Then, modify the returned parameters.</para>
+        /// <para>The configuration parameters to be modified. You can call the <a href="https://help.aliyun.com/document_detail/452210.html">DescribeDBClusterConfigInXML</a> operation to query the configuration parameters and modify the returned parameters.</para>
         /// <remarks>
-        /// <para>When you modify a parameter, you must include all other configuration parameters in the request. If a parameter is not included, it retains its initial value or the modification fails.</para>
+        /// <para>To modify a single parameter, you must pass all configuration parameters. Parameters that are not passed retain their original values or cause the configuration parameter modification to fail.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</para>
+        /// <para>The cluster ID.
+        /// You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in the target region, including their cluster IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The reason for the modification.</para>
+        /// <para>The description of the modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -45,7 +46,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query available region IDs.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

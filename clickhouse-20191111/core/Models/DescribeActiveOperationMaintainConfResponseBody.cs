@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeActiveOperationMaintainConfResponseBody : TeaModel {
         /// <summary>
-        /// <para>The active O\&amp;M configuration items.</para>
+        /// <para>The proactive maintenance configuration.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public DescribeActiveOperationMaintainConfResponseBodyConfig Config { get; set; }
         public class DescribeActiveOperationMaintainConfResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The time when the configuration was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-18T06:51:11+08:00</para>
@@ -27,12 +27,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The day of the cycle.</para>
+            /// <para>The cycle time.</para>
             /// <list type="bullet">
-            /// <item><description><para>If CycleType is Month, this parameter returns one or more numbers from 1 to 28 that indicate the day of the month. Multiple numbers are separated by commas (,).</para>
-            /// </description></item>
-            /// <item><description><para>If CycleType is Week, this parameter returns one or more numbers from 1 to 7 that indicate the day of the week. Multiple numbers are separated by commas (,).</para>
-            /// </description></item>
+            /// <item><description>If CycleType is set to Month, the return value is a number from 1 to 28, which indicates the day of the month. Multiple values are separated by commas (,).</description></item>
+            /// <item><description>If CycleType is set to Week, the return value is a number from 1 to 7, which indicates the day of the week. Multiple values are separated by commas (,).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,12 +41,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string CycleTime { get; set; }
 
             /// <summary>
-            /// <para>The cycle type.</para>
+            /// <para>The cycle type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Month</para>
-            /// </description></item>
-            /// <item><description><para>Week</para>
-            /// </description></item>
+            /// <item><description>Month: Monthly.</description></item>
+            /// <item><description>Week: Weekly.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the configuration was last modified.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-27T07:12:53Z</para>
@@ -89,7 +85,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the configuration. A value of 1 indicates that the configuration is enabled. A value of 2 indicates that the configuration is disabled.</para>
+            /// <para>Indicates whether the configuration takes effect. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Yes.</description></item>
+            /// <item><description>2: No.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -101,12 +101,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether a configuration is set.</para>
+        /// <para>Indicates whether proactive maintenance is configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: A configuration is set.</para>
-        /// </description></item>
-        /// <item><description><para>0: No configuration is set.</para>
-        /// </description></item>
+        /// <item><description>1: Configured.</description></item>
+        /// <item><description>0: Not configured.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

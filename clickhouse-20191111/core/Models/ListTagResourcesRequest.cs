@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first query. If a query does not return all results, a NextToken value is returned. You can use this token in a subsequent query to retrieve the next page of results.</para>
+        /// <para>The token used to return more results. You do not need to specify this parameter for the first query. If not all results are returned in the first query, you can pass the NextToken value returned in the previous response to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707ec21345</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>DBCLUSTER</b>.</para>
+        /// <para>The resource type. Valid value: <b>DBCLUSTER</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can specify from 1 to <b>20</b> tag keys.</para>
+            /// <para>The tag key. You can specify up to N tag keys. N is an integer and ranges from <b>1 to 20</b>.</para>
             /// <remarks>
             /// <para>If you specify the <b>ResourceId.N</b> parameter, you can leave this parameter empty.</para>
             /// </remarks>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify from 1 to <b>20</b> tag values.</para>
+            /// <para>The tag value corresponding to the tag key. You can specify up to N tag values. N is an integer and ranges from <b>1 to 20</b>.</para>
             /// <remarks>
             /// <para>You can leave this parameter empty.</para>
             /// </remarks>

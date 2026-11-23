@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The O\&amp;M event IDs. Multiple IDs are separated by commas (,).</para>
+        /// <para>The IDs of the O&amp;M events. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>188****,188****,188****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>617242AA-04D8-5AF0-8C0C-6E53DDA8C3C3</para>

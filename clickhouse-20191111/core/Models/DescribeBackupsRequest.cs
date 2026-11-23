@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
+        /// <para>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
+        /// <para>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

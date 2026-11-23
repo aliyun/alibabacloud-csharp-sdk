@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The new description of the database account.</para>
         /// <list type="bullet">
-        /// <item><description><para>The description cannot start with http\:// or https\://.</para>
-        /// </description></item>
-        /// <item><description><para>The description must be 0 to 256 characters in length.</para>
-        /// </description></item>
+        /// <item><description>It cannot start with http:// or https://.</description></item>
+        /// <item><description>It must be 0 to 256 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

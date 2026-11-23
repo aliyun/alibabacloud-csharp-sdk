@@ -10,21 +10,18 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of O\&amp;M tasks.</para>
+        /// <para>The list of O&amp;M tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTasksResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the task can be canceled. Return values:</para>
+            /// <para>Indicates whether the task can be canceled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>-1</b>: All</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: No</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Yes</para>
-            /// </description></item>
+            /// <item><description><b>-1</b>: all</description></item>
+            /// <item><description><b>0</b>: not allowed</description></item>
+            /// <item><description><b>1</b>: allowed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -35,14 +32,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string AllowCancel { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the time can be changed. Return values:</para>
+            /// <para>Indicates whether the execution time can be modified. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>-1</b>: All</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: No</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Yes</para>
-            /// </description></item>
+            /// <item><description><b>-1</b>: all</description></item>
+            /// <item><description><b>0</b>: not allowed</description></item>
+            /// <item><description><b>1</b>: allowed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,12 +47,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// <para>The event level code.</para>
+            /// <para>The event level code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>S1</b>: System O\&amp;M.</para>
-            /// </description></item>
-            /// <item><description><para><b>S0</b>: Threat fixing.</para>
-            /// </description></item>
+            /// <item><description><b>S1</b>: system O&amp;M.</description></item>
+            /// <item><description><b>S0</b>: risk fix.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,14 +74,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <para>The event level in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>系统运维</para>
+            /// <para>System O&amp;M</para>
             /// </summary>
             [NameInMap("ChangeLevelZh")]
             [Validation(Required=false)]
             public string ChangeLevelZh { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is in UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The creation time in UTC. The format is YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -119,7 +111,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The kernel version of the cluster.</para>
+            /// <para>The Milvus version of the cluster kernel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23.8</para>
@@ -129,7 +121,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// <para>The latest time to which the task execution time can be adjusted. The time is in UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The deadline for adjusting the task execution time in UTC. The format is YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T23:59:59Z</para>
@@ -172,7 +164,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <para>The business impact in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>实例闪断。</para>
+            /// <para>Transient instance disconnection</para>
             /// </summary>
             [NameInMap("ImpactZh")]
             [Validation(Required=false)]
@@ -199,7 +191,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is in UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The modification time in UTC. The format is YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-15T06:17:54Z</para>
@@ -239,7 +231,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The time when the backend executes the task. The time is in UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time when the backend executes the task in UTC. The format is YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-22T01:06Z</para>
@@ -249,20 +241,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The running status of the task. Return values:</para>
+            /// <para>The running status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>2</b>: Waiting for the user to specify a time.</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: To be processed.</para>
-            /// </description></item>
-            /// <item><description><para><b>4</b>: In progress.</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: Successful.</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: Failed.</para>
-            /// </description></item>
-            /// <item><description><para><b>7</b>: Canceled.</para>
-            /// </description></item>
+            /// <item><description><b>2</b>: waiting for the user to specify a time.</description></item>
+            /// <item><description><b>3</b>: pending.</description></item>
+            /// <item><description><b>4</b>: in progress.</description></item>
+            /// <item><description><b>5</b>: successful.</description></item>
+            /// <item><description><b>6</b>: failed.</description></item>
+            /// <item><description><b>7</b>: canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,14 +259,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The sub-instance IDs.</para>
+            /// <para>The instance ID of the sub-instances.</para>
             /// </summary>
             [NameInMap("SubInsNames")]
             [Validation(Required=false)]
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// <para>The time when the backend initiates the switchover. The time is in UTC format (YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time when the backend initiates the switchover operation in UTC. The format is YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-05-30T14:30:00Z</para>
@@ -290,7 +276,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string SwitchTime { get; set; }
 
             /// <summary>
-            /// <para>The O\&amp;M event parameters.</para>
+            /// <para>The O&amp;M event parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -302,7 +288,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string TaskParams { get; set; }
 
             /// <summary>
-            /// <para>The O\&amp;M event task type.</para>
+            /// <para>The O&amp;M event task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds_apsaradb_upgrade</para>
@@ -322,10 +308,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string TaskTypeEn { get; set; }
 
             /// <summary>
-            /// <para>The task reason in Chinese.</para>
+            /// <para>The task cause in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>小版本升级</para>
+            /// <para>Minor version update</para>
             /// </summary>
             [NameInMap("TaskTypeZh")]
             [Validation(Required=false)]
@@ -344,14 +330,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

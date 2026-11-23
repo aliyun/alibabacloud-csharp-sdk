@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyDBClusterConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region. This information includes the cluster IDs.</para>
+        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query the information about all clusters in the specified region, including cluster IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The reason for the modification.</para>
+        /// <para>The description of the modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -57,10 +57,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters to modify.</para>
-        /// <remarks>
-        /// <para>You can modify a single configuration parameter. Parameters that are not specified in the request are not affected.</para>
-        /// </remarks>
+        /// <para>The configuration parameters to be modified. &gt; You can modify a single configuration parameter. Configuration parameters that are not specified remain unaffected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

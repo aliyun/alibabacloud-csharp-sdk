@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClusterAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</para>
+        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query all clusters in a specified region, including their cluster IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

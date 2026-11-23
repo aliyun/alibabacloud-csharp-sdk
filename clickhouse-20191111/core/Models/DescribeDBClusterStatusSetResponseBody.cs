@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The set of instance statuses.</para>
+        /// <para>The instance status set.</para>
         /// </summary>
         [NameInMap("StatusSet")]
         [Validation(Required=false)]

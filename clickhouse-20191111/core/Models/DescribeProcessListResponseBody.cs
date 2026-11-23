@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeProcessListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of tasks.</para>
+        /// <para>The process list.</para>
         /// </summary>
         [NameInMap("ProcessList")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             }
 
             /// <summary>
-            /// <para>The number of rows returned for the query.</para>
+            /// <para>The number of data rows returned by the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1145700</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Rows { get; set; }
 
             /// <summary>
-            /// <para>The page size in rows.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -73,24 +73,24 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RowsBeforeLimitAtLeast { get; set; }
 
             /// <summary>
-            /// <para>The statistics of the query result.</para>
+            /// <para>The statistics information of the query results.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public DescribeProcessListResponseBodyProcessListStatistics Statistics { get; set; }
             public class DescribeProcessListResponseBodyProcessListStatistics : TeaModel {
                 /// <summary>
-                /// <para>The size of the scanned data, in bytes.</para>
+                /// <para>The size of the scanned data. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>9141300000</para>
+                /// <para>1048576</para>
                 /// </summary>
                 [NameInMap("BytesRead")]
                 [Validation(Required=false)]
                 public int? BytesRead { get; set; }
 
                 /// <summary>
-                /// <para>The elapsed time.</para>
+                /// <para>The average response time. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4156</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public float? ElapsedTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows scanned.</para>
+                /// <para>The number of scanned data rows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000000</para>

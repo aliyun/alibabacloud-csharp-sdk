@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyRDSToClickhouseDbRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the ApsaraDB for ClickHouse database account.</para>
+        /// <para>The password of the database account for the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DbClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows to sync per second.</para>
+        /// <para>The maximum number of rows that can be synchronized per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The instance ID of the ApsaraDB RDS for MySQL database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsId { get; set; }
 
         /// <summary>
-        /// <para>The password of the ApsaraDB RDS for MySQL database account.</para>
+        /// <para>The password of the database account for the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? RdsPort { get; set; }
 
         /// <summary>
-        /// <para>The database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The databases in the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -156,10 +156,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Specifies whether to ignore databases that do not support synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Ignore the databases.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Do not ignore the databases.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Ignore.</description></item>
+        /// <item><description><b>false</b>: Do not ignore.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

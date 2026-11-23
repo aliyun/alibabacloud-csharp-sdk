@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The synchronized data.</para>
+        /// <para>The synchronization data.</para>
         /// </summary>
         [NameInMap("SynDbs")]
         [Validation(Required=false)]
@@ -48,10 +48,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public class DescribeSynDbsResponseBodySynDbs : TeaModel {
             /// <summary>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is not returned if <b>SynStatus</b> is <b>true</b>.</para>
-            /// </description></item>
-            /// <item><description><para>If <b>SynStatus</b> is <b>false</b>, this parameter indicates the reason for the synchronization failure.</para>
-            /// </description></item>
+            /// <item><description>This parameter is not returned when <b>SynStatus</b> is <b>true</b>.</description></item>
+            /// <item><description>When <b>SynStatus</b> is <b>false</b>, this parameter indicates the cause of the synchronization failure.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>The instance ID of the ApsaraDB RDS for MySQL database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-wz9d11qg1j0h4****</para>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RdsId { get; set; }
 
             /// <summary>
-            /// <para>The database account for the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>The database account of the ApsaraDB RDS for MySQL instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RdsUserName { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint of the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>The internal network connection endpoint of the ApsaraDB RDS for MySQL database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp16t9h3999xb0a711****.mysql.rds.aliyuncs.com:3306</para>
@@ -92,7 +90,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RdsVpcUrl { get; set; }
 
             /// <summary>
-            /// <para>The database in the ApsaraDB RDS for MySQL instance.</para>
+            /// <para>The database of the ApsaraDB RDS for MySQL instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>database</para>
@@ -102,12 +100,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string SynDb { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the synchronization was successful. Valid values:</para>
+            /// <para>Indicates whether the synchronization is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The synchronization was successful.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The synchronization failed.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The synchronization is successful.</description></item>
+            /// <item><description><b>false</b>: The synchronization failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +116,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable writes.</para>
+        /// <para>Specifies whether to disable write operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? DisableWrite { get; set; }
 
         /// <summary>
-        /// <para>The time to perform the leader switchover.</para>
+        /// <para>The time when the primary switchover is performed. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-12T07:28:00Z</para>
@@ -59,14 +59,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,10 +74,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
-        /// </remarks>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

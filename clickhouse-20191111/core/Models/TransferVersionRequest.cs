@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time windows during which writes are disabled.</para>
+        /// <para>The write suspension window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</para>
@@ -49,14 +49,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,8 +94,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string SourceAccount { get; set; }
 
         /// <summary>
-        /// <para>The name of the self-managed ClickHouse cluster.
-        /// To obtain the name, execute <c>SELECT * FROM system.clusters</c>.</para>
+        /// <para>The cluster name of the self-managed ClickHouse cluster. You can execute the <c>SELECT * FROM system.clusters</c> statement to obtain the cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -119,7 +115,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string SourcePassword { get; set; }
 
         /// <summary>
-        /// <para>The addresses and TCP ports of the shards in the self-managed ClickHouse cluster.</para>
+        /// <para>The address and TCP port information of the self-managed ClickHouse cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.4:9000,192.168.0.5:9000,192.168.0.6:9000</para>

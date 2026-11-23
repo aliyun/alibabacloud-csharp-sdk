@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in UTC using the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
+        /// <para>The end time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time. The maximum time range cannot exceed 32 days.</para>
+        /// <para>The end time must be later than the start time, and the time interval between the start time and the end time cannot exceed 32 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,66 +35,45 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The performance metrics that you want to query. Separate multiple metric names with a comma (,). You can query up to five performance metrics at a time. The following performance metrics are supported:</para>
+        /// <para>The names of the performance metrics to query. Separate multiple values with commas (,). You can query up to 5 performance metrics at a time. The following performance metrics are supported:</para>
         /// <remarks>
         /// <para><b>Key</b> is required.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para><b>CPU</b>:</para>
-        /// <list type="bullet">
-        /// <item><description><b>CPU_USAGE</b>: The CPU utilization.</description></item>
+        /// <item><description><b>CPU</b>:<list type="bullet">
+        /// <item><description><b>CPU_USAGE</b>: CPU utilization.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Memory</b>:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>MEM_USAGE</b>: The memory utilization.</para>
-        /// </description></item>
-        /// <item><description><para><b>MEM_USAGE_SIZE</b>: The memory usage in MB.</para>
-        /// </description></item>
+        /// <item><description><b>Memory</b>:<list type="bullet">
+        /// <item><description><b>MEM_USAGE</b>: Memory utilization.</description></item>
+        /// <item><description><b>MEM_USAGE_SIZE</b>: Memory usage (unit: MB).</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Disk</b>:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>DISK_USAGE</b>: The disk utilization.</para>
-        /// </description></item>
-        /// <item><description><para><b>DISK_USAGE_SIZE</b>: The disk usage in MB.</para>
-        /// </description></item>
-        /// <item><description><para><b>IOPS</b>: The disk input/output operations per second (IOPS).</para>
-        /// </description></item>
+        /// <item><description><b>Disk</b>:<list type="bullet">
+        /// <item><description><b>DISK_USAGE</b>: Disk utilization. </description></item>
+        /// <item><description><b>DISK_USAGE_SIZE</b>: Disk usage (unit: MB).</description></item>
+        /// <item><description><b>IOPS</b>: Disk IOPS.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Connection</b>:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>CONN_USAGE</b>: The database connection utilization.</para>
-        /// </description></item>
-        /// <item><description><para><b>CONN_USAGE_COUNT</b>: The number of database connections.</para>
-        /// </description></item>
+        /// <item><description><b>Connections</b>:<list type="bullet">
+        /// <item><description><b>CONN_USAGE</b>: Database connection utilization.</description></item>
+        /// <item><description><b>CONN_USAGE_COUNT</b>: Number of database connections in use.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Write</b>:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>TPS</b>: The number of rows written per second (TPS).</para>
-        /// </description></item>
-        /// <item><description><para><b>INSERT_SIZE</b>: The write size per second in MB.</para>
-        /// </description></item>
+        /// <item><description><b>Writes</b>: <list type="bullet">
+        /// <item><description><b>TPS</b>: Number of rows written per second.</description></item>
+        /// <item><description><b>INSERT_SIZE</b>: Size of data written per second (unit: MB).</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Query</b>:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>QPS</b>: The queries per second (QPS).</para>
-        /// </description></item>
-        /// <item><description><para><b>AVG_SEEK</b>: The number of random SEEK calls.</para>
-        /// </description></item>
+        /// <item><description><b>Queries</b>: <list type="bullet">
+        /// <item><description><b>QPS</b>: Queries per second (QPS).</description></item>
+        /// <item><description><b>AVG_SEEK</b>: Number of random SEEK calls.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>WAIT</b>:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>ZK_WAIT</b>: The average wait time of ZooKeeper (ZK) in ms.</para>
-        /// </description></item>
-        /// <item><description><para><b>IO_WAIT</b>: The average I/O wait time in ms.</para>
-        /// </description></item>
-        /// <item><description><para><b>CPU_WAIT</b>: The average CPU wait time in ms.</para>
-        /// </description></item>
+        /// <item><description><b>WAIT</b>: <list type="bullet">
+        /// <item><description><b>ZK_WAIT</b>: Average wait time for ZooKeeper (unit: ms).</description></item>
+        /// <item><description><b>IO_WAIT</b>: Average wait time for IO_WAIT (unit: ms).</description></item>
+        /// <item><description><b>CPU_WAIT</b>: Average wait time for CPU_WAIT (unit: ms).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -123,7 +102,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in UTC using the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
+        /// <para>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

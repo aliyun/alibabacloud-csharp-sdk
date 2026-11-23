@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateRDSToClickhouseDbRequest : TeaModel {
         /// <summary>
-        /// <para>The password for the database account of the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The password of the database account for the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DbClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows to sync per second.</para>
+        /// <para>The maximum number of rows to synchronize per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The instance ID of the ApsaraDB RDS for MySQL database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsId { get; set; }
 
         /// <summary>
-        /// <para>The password for the database account of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The password of the database account for the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsVpcId { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint of the ApsaraDB RDS instance.</para>
+        /// <para>The internal endpoint of ApsaraDB RDS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</para>
@@ -142,12 +142,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip unsupported table schemas. Valid values:</para>
+        /// <para>Specifies whether to ignore table schemas that are not supported for synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Skip.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Do not skip.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Ignore.</description></item>
+        /// <item><description><b>false</b>: Do not ignore.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -159,7 +157,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? SkipUnsupported { get; set; }
 
         /// <summary>
-        /// <para>The tables to sync.</para>
+        /// <para>The tables to be synchronized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

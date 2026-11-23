@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Specifies whether the task can be canceled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: The task cannot be canceled.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: The task can be canceled.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: not allowed.</description></item>
+        /// <item><description><b>1</b>: allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? AllowCancel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the time can be changed. Valid values:</para>
+        /// <para>Specifies whether the execution time can be modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: The time cannot be changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: The time can be changed.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: not allowed.</description></item>
+        /// <item><description><b>1</b>: allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,12 +40,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The task level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>all</b> (Default): All levels.</para>
-        /// </description></item>
-        /// <item><description><para><b>S0</b>: Returns tasks for fixing exceptions.</para>
-        /// </description></item>
-        /// <item><description><para><b>S1</b>: Returns tasks for system O\&amp;M.</para>
-        /// </description></item>
+        /// <item><description><b>all</b> (default): all levels.</description></item>
+        /// <item><description><b>S0</b>: exception fix tasks.</description></item>
+        /// <item><description><b>S1</b>: system O&amp;M tasks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,14 +91,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,7 +116,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -148,20 +138,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The task status. This parameter is used to filter tasks.</para>
+        /// <para>The task status, which is used to filter returned tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>-1:</b> All tasks.</para>
-        /// </description></item>
-        /// <item><description><para><b>3:</b> Tasks to be processed.</para>
-        /// </description></item>
-        /// <item><description><para><b>4:</b> Tasks in progress.</para>
-        /// </description></item>
-        /// <item><description><para><b>5:</b> Successfully completed tasks.</para>
-        /// </description></item>
-        /// <item><description><para><b>6:</b> Failed tasks.</para>
-        /// </description></item>
-        /// <item><description><para><b>7:</b> Canceled tasks.</para>
-        /// </description></item>
+        /// <item><description><b>-1</b>: all tasks.</description></item>
+        /// <item><description><b>3</b>: pending tasks.</description></item>
+        /// <item><description><b>4</b>: in-progress tasks.</description></item>
+        /// <item><description><b>5</b>: successfully completed tasks.</description></item>
+        /// <item><description><b>6</b>: failed tasks.</description></item>
+        /// <item><description><b>7</b>: canceled tasks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -174,10 +158,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>rds_apsaradb_upgrade</b>: Minor version upgrade.</para>
-        /// </description></item>
-        /// <item><description><para><b>all</b>: All task types.</para>
-        /// </description></item>
+        /// <item><description><b>rds_apsaradb_upgrade</b>: minor version update.</description></item>
+        /// <item><description><b>all</b>: all task types.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The search statement to stop. To stop multiple statements, separate them with commas (,).</para>
+        /// <para>The query statements to stop. Separate multiple statements with commas (,).</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, all search statements are stopped by default.</para>
+        /// <para>If this parameter is not specified, all query statements are stopped by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

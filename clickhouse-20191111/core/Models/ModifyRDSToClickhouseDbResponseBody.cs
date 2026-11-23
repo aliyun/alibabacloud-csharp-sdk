@@ -21,10 +21,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is not returned if <b>Status</b> is <b>1</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If <b>Status</b> is <b>0</b>, this parameter indicates the reason why the modification failed.</para>
-        /// </description></item>
+        /// <item><description>This parameter is not returned when <b>Status</b> is <b>1</b>.</description></item>
+        /// <item><description>When <b>Status</b> is <b>0</b>, this parameter indicates the cause of the modification failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,10 +45,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Indicates whether the modification was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: The modification was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>0</b>: The modification failed.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: The modification was successful.</description></item>
+        /// <item><description><b>0</b>: The modification failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

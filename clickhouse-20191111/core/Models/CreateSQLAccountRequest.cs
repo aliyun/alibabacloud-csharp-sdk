@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The description of the database account.</para>
         /// <list type="bullet">
-        /// <item><description><para>It cannot start with http\:// or https\://.</para>
-        /// </description></item>
-        /// <item><description><para>It can be 0 to 256 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The description cannot start with http:// or https://.</description></item>
+        /// <item><description>The description must be 0 to 256 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,14 +26,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The name of the database account.</para>
         /// <list type="bullet">
-        /// <item><description><para>The name must be unique.</para>
-        /// </description></item>
-        /// <item><description><para>It must consist of lowercase letters, digits, or underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>It must start with a lowercase letter and end with a lowercase letter or a digit.</para>
-        /// </description></item>
-        /// <item><description><para>It must be 2 to 64 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The name must be unique.</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>The name must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The name must be 2 to 64 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,14 +41,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password for the database account.</para>
+        /// <para>The password of the database account.</para>
         /// <list type="bullet">
-        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
-        /// </description></item>
-        /// <item><description><para>The following characters are special characters: !@#$%^&amp;\*()_+-=</para>
-        /// </description></item>
-        /// <item><description><para>It must be 8 to 32 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Special characters include !@#$%^&amp;*()_+-=.</description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,10 +59,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The type of the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Super</b>: a privileged account.</para>
-        /// </description></item>
-        /// <item><description><para><b>Normal</b>: a standard account.</para>
-        /// </description></item>
+        /// <item><description><b>Super</b>: privileged account</description></item>
+        /// <item><description><b>Normal</b>: standard account</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

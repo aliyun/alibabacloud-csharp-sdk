@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID. To specify multiple cluster IDs, separate them with commas (,).</para>
+        /// <para>The cluster IDs. Separate multiple cluster IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. The default value is <b>1</b>.</para>
+        /// <para>The renewal duration. Default value: <b>1</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set \<c>PeriodUnit\\</c> to <b>Month</b>, valid values are integers from 1 to 11.</para>
+        /// <item><description><para>If PeriodUnit is set to <b>Month</b>, valid values are 1 to 11.</para>
         /// </description></item>
-        /// <item><description><para>If you set \<c>PeriodUnit\\</c> to <b>Year</b>, valid values are 1, 2, 3, and 5.</para>
+        /// <item><description><para>If PeriodUnit is set to <b>Year</b>, valid values are 1, 2, 3, and 5.</para>
+        /// <remarks>
+        /// <para>A longer subscription duration offers a greater discount. For example, a 1-year subscription is more cost-effective than a 10-month or 11-month subscription.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>A longer subscription period offers a better price. For example, a one-year subscription is more cost-effective than a 10-month or 11-month subscription.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration specified by the \<c>Duration\\</c> parameter. Valid values: Month and Year.</para>
+        /// <para>The unit of the renewal duration, which is the unit of the Duration parameter. Valid values: Month and Year.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -69,13 +69,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The renewal method. Valid values:</para>
+        /// <para>The renewal status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>AutoRenewal</b>: Auto-renewal.</para>
         /// </description></item>
         /// <item><description><para><b>Normal</b>: Manual renewal.</para>
         /// </description></item>
-        /// <item><description><para><b>NotRenewal</b>: The cluster is not renewed after it expires.</para>
+        /// <item><description><para><b>NotRenewal</b>: No renewal upon expiration.</para>
         /// </description></item>
         /// </list>
         /// 

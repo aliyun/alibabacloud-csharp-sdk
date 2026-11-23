@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeConfigVersionDifferenceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration parameters after the change.</para>
+        /// <para>The configuration parameters after the changes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;<?xml version="1.0"?>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string NewConfigXML { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters before the change.</para>
+        /// <para>The configuration parameters before the changes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;<?xml version="1.0"?>

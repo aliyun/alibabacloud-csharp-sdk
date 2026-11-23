@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <para>Indicates whether a restart is required after the configuration parameters are modified. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: A restart is required.</description></item>
-        /// <item><description><b>false</b>: A restart is not required.</description></item>
+        /// <item><description><b>false</b>: No restart is required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? NeedRestart { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06798FEE-BEF2-5FAF-A30D-728973BBE97C</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup retention period. Default value: 7. Valid values: 7 to 730. Unit: day.</para>
+        /// <para>The backup retention period. Default value: 7 days. Valid values: 7 to 730. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -32,20 +32,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Monday</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Tuesday</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Wednesday</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Thursday</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Friday</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Saturday</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Sunday</b></para>
-        /// </description></item>
+        /// <item><description><b>Monday</b>: Monday.</description></item>
+        /// <item><description><b>Tuesday</b>: Tuesday.</description></item>
+        /// <item><description><b>Wednesday</b>: Wednesday.</description></item>
+        /// <item><description><b>Thursday</b>: Thursday.</description></item>
+        /// <item><description><b>Friday</b>: Friday.</description></item>
+        /// <item><description><b>Saturday</b>: Saturday.</description></item>
+        /// <item><description><b>Sunday</b>: Sunday.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,12 +69,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the backup feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the backup service is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The backup feature is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The backup feature is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

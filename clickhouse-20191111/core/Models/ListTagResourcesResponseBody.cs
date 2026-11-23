@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. This parameter is returned only if the results are not fully returned in the current request. You can use this token in a subsequent request to retrieve the next page of results.</para>
+        /// <para>The token used to return more results. If not all results are returned in the current query, you can pass the NextToken value returned in the previous response to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707ec21345</para>
@@ -30,16 +30,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Information about the clusters and their tags.</para>
+        /// <para>The information about the queried clusters and tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>The cluster ID.</para>
-            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Community-Compatible Edition cluster.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cc-bp1t9lbb7a4z7****</para>
@@ -49,7 +48,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. The value is <b>DBCLUSTER</b>.</para>
+            /// <para>The resource type. Valid value: <b>DBCLUSTER</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DBCLUSTER</para>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value corresponding to the tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testvalue1</para>

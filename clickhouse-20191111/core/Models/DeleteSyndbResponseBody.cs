@@ -21,10 +21,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is not returned if <b>Status</b> is <b>true</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If <b>Status</b> is <b>false</b>, this parameter indicates the reason for the failure.</para>
-        /// </description></item>
+        /// <item><description>If <b>Status</b> is <b>true</b>, this parameter is not returned.</description></item>
+        /// <item><description>If <b>Status</b> is <b>false</b>, this parameter indicates the cause of the deletion failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,10 +45,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Indicates whether the deletion was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The deletion was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The deletion failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The deletion was successful.</description></item>
+        /// <item><description><b>false</b>: The deletion failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

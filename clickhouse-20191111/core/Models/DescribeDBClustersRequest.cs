@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>The description of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-bp108z124a8o7****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The cluster IDs.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, information about all clusters is queried by default.</para>
+        /// <para>If you do not specify this parameter, the information about all clusters is queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,18 +33,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The state of the cluster. Valid values:</para>
+        /// <para>The status of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Preparing</b>: The cluster is being prepared.</para>
-        /// </description></item>
-        /// <item><description><para><b>Creating</b>: The cluster is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>Running</b>: The cluster is running.</para>
-        /// </description></item>
-        /// <item><description><para><b>Deleting</b>: The cluster is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>SCALING_OUT</b>: The cluster is being scaled out.</para>
-        /// </description></item>
+        /// <item><description><b>Preparing</b>: preparing</description></item>
+        /// <item><description><b>Creating</b>: creating</description></item>
+        /// <item><description><b>Running</b>: running</description></item>
+        /// <item><description><b>Deleting</b>: deleting</description></item>
+        /// <item><description><b>SCALING_OUT</b>: scaling out</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,12 +70,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +119,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public List<DescribeDBClustersRequestTag> Tag { get; set; }
         public class DescribeDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>department</para>
@@ -137,7 +129,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>it</para>
@@ -147,6 +139,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Value { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The VPC IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</para>
+        /// </summary>
+        [NameInMap("VpcIds")]
+        [Validation(Required=false)]
+        public string VpcIds { get; set; }
 
     }
 

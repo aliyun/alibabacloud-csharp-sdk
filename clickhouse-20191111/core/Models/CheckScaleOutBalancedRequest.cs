@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <list type="bullet">
         /// <item><description><b>30</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b>.</description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,12 +73,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specification change type. Valid values:</para>
+        /// <para>The upgrade/downgrade type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ScaleOut: horizontal scale-out</description></item>
+        /// <item><description>ScaleOut: horizontal scaling</description></item>
         /// <item><description>ScaleIn: horizontal scale-in</description></item>
-        /// <item><description>MultiAzUpgrade: upgrade to multi-active zone deployment</description></item>
-        /// <item><description>DiskDownGrade: cloud disk downgrade.</description></item>
+        /// <item><description>MultiAzUpgrade: upgrade to multi-zone deployment</description></item>
+        /// <item><description>DiskDownGrade: decrease the quota for disks</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -46,14 +46,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,9 +79,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scheduled restart time. The time is in the yyyy-MM-ddTHH:mmZ format and is in UTC.</para>
+        /// <para>The scheduled restart time. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
         /// <remarks>
-        /// <para>If this parameter is left empty or set to a time earlier than the current time, the cluster restarts immediately.</para>
+        /// <para>If this parameter is left empty or set to a time earlier than the current time, the cluster is restarted immediately.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

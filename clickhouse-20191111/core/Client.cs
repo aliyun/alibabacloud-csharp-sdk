@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "clickhouse";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -65,22 +68,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
                 {"rus-west-1-pop", "clickhouse.aliyuncs.com"},
                 {"us-east-1", "clickhouse.aliyuncs.com"},
                 {"us-west-1", "clickhouse.aliyuncs.com"},
-                {"cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"},
                 {"ap-southeast-3", "clickhouse.aliyuncs.com"},
-                {"cn-wulanchabu", "clickhouse.cn-wulanchabu.aliyuncs.com"},
-                {"cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"},
-                {"ap-northeast-1", "clickhouse.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"},
-                {"cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"},
-                {"ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-8", "clickhouse.ap-southeast-8.aliyuncs.com"},
-                {"us-southeast-1", "clickhouse.us-southeast-1.aliyuncs.com"},
-                {"na-south-1", "clickhouse.na-south-1.aliyuncs.com"},
-                {"eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"},
-                {"eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"},
-                {"me-central-1", "clickhouse.me-central-1.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "clickhouse.cn-wulanchabu-gic-1.aliyuncs.com"},
+                {"ap-southeast-7", "clickhouse.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("clickhouse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -102,7 +91,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -164,7 +153,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -226,7 +215,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -244,7 +233,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a public endpoint for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -262,7 +251,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels tasks for O&amp;M events.</para>
+        /// <para>Cancels O&amp;M event tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -324,7 +313,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels tasks for O&amp;M events.</para>
+        /// <para>Cancels O&amp;M event tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -386,7 +375,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels tasks for O&amp;M events.</para>
+        /// <para>Cancels O&amp;M event tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -404,7 +393,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels tasks for O&amp;M events.</para>
+        /// <para>Cancels O&amp;M event tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -422,7 +411,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled ZooKeeper leader switchover on a community-compatible ClickHouse instance.</para>
+        /// <para>Cancels the scheduled ZooKeeper primary node switchover for an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -492,7 +481,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled ZooKeeper leader switchover on a community-compatible ClickHouse instance.</para>
+        /// <para>Cancels the scheduled ZooKeeper primary node switchover for an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -562,7 +551,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled ZooKeeper leader switchover on a community-compatible ClickHouse instance.</para>
+        /// <para>Cancels the scheduled ZooKeeper primary node switchover for an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -580,7 +569,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled ZooKeeper leader switchover on a community-compatible ClickHouse instance.</para>
+        /// <para>Cancels the scheduled ZooKeeper primary node switchover for an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -598,7 +587,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the scheduled restart on the specified ClickHouse nodes.</para>
+        /// <para>Cancels the scheduled restart of ClickHouse nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -668,7 +657,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the scheduled restart on the specified ClickHouse nodes.</para>
+        /// <para>Cancels the scheduled restart of ClickHouse nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -738,7 +727,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the scheduled restart on the specified ClickHouse nodes.</para>
+        /// <para>Cancels the scheduled restart of ClickHouse nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -756,7 +745,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the scheduled restart on the specified ClickHouse nodes.</para>
+        /// <para>Cancels the scheduled restart of ClickHouse nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -774,7 +763,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled restart for a specific community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Cancels the scheduled restart time for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -848,7 +837,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled restart for a specific community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Cancels the scheduled restart time for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -922,7 +911,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled restart for a specific community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Cancels the scheduled restart time for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -940,7 +929,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a scheduled restart for a specific community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Cancels the scheduled restart time for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -958,7 +947,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a community-edition compatible ClickHouse cluster.</para>
+        /// <para>Modifies the resource group of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1008,7 +997,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a community-edition compatible ClickHouse cluster.</para>
+        /// <para>Modifies the resource group of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1058,7 +1047,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a community-edition compatible ClickHouse cluster.</para>
+        /// <para>Modifies the resource group of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1076,7 +1065,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a community-edition compatible ClickHouse cluster.</para>
+        /// <para>Modifies the resource group of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1094,7 +1083,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckClickhouseToRDS operation to verify the connectivity between a community-compatible ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</para>
+        /// <para>Checks the connectivity between an ApsaraDB for ClickHouse Community-compatible Edition cluster and an ApsaraDB RDS for MySQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1188,7 +1177,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckClickhouseToRDS operation to verify the connectivity between a community-compatible ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</para>
+        /// <para>Checks the connectivity between an ApsaraDB for ClickHouse Community-compatible Edition cluster and an ApsaraDB RDS for MySQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1282,7 +1271,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckClickhouseToRDS operation to verify the connectivity between a community-compatible ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</para>
+        /// <para>Checks the connectivity between an ApsaraDB for ClickHouse Community-compatible Edition cluster and an ApsaraDB RDS for MySQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1300,7 +1289,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckClickhouseToRDS operation to verify the connectivity between a community-compatible ApsaraDB for ClickHouse cluster and an ApsaraDB RDS for MySQL instance.</para>
+        /// <para>Checks the connectivity between an ApsaraDB for ClickHouse Community-compatible Edition cluster and an ApsaraDB RDS for MySQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1318,13 +1307,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckModifyConfigNeedRestart operation to check whether modifying configuration parameters in XML mode requires a restart for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
+        /// <para>Queries whether a restart is required after you modify configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-compatible Edition clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1371,13 +1360,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckModifyConfigNeedRestart operation to check whether modifying configuration parameters in XML mode requires a restart for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
+        /// <para>Queries whether a restart is required after you modify configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-compatible Edition clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1424,13 +1413,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckModifyConfigNeedRestart operation to check whether modifying configuration parameters in XML mode requires a restart for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
+        /// <para>Queries whether a restart is required after you modify configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-compatible Edition clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1449,13 +1438,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CheckModifyConfigNeedRestart operation to check whether modifying configuration parameters in XML mode requires a restart for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
+        /// <para>Queries whether a restart is required after you modify configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-compatible Edition clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1474,13 +1463,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckMonitorAlert operation to check whether the alert monitoring feature of Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks whether the monitoring and alerting feature provided by Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1543,13 +1532,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckMonitorAlert operation to check whether the alert monitoring feature of Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks whether the monitoring and alerting feature provided by Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1612,13 +1601,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckMonitorAlert operation to check whether the alert monitoring feature of Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks whether the monitoring and alerting feature provided by Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1637,13 +1626,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CheckMonitorAlert operation to check whether the alert monitoring feature of Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks whether the monitoring and alerting feature provided by Application Real-Time Monitoring Service (ARMS) is enabled for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1662,7 +1651,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a migration scale-out check on a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks the migration and scaling of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1736,7 +1725,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a migration scale-out check on a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks the migration and scaling of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1810,7 +1799,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a migration scale-out check on a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks the migration and scaling of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1828,7 +1817,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a migration scale-out check on a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Checks the migration and scaling of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1990,7 +1979,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2060,7 +2049,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2130,7 +2119,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2148,7 +2137,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2166,12 +2155,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account and grants permissions.</para>
+        /// <para>Creates an account and configures its permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available only for cluster versions 21.8 and earlier. For newer versions, use a high-privilege account and SQL statements to modify user permissions.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. For versions later than 21.8, you must use a privileged account to execute SQL statements to modify the permissions of a standard user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2269,12 +2258,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account and grants permissions.</para>
+        /// <para>Creates an account and configures its permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available only for cluster versions 21.8 and earlier. For newer versions, use a high-privilege account and SQL statements to modify user permissions.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. For versions later than 21.8, you must use a privileged account to execute SQL statements to modify the permissions of a standard user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2372,12 +2361,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account and grants permissions.</para>
+        /// <para>Creates an account and configures its permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available only for cluster versions 21.8 and earlier. For newer versions, use a high-privilege account and SQL statements to modify user permissions.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. For versions later than 21.8, you must use a privileged account to execute SQL statements to modify the permissions of a standard user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2395,12 +2384,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database account and grants permissions.</para>
+        /// <para>Creates an account and configures its permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available only for cluster versions 21.8 and earlier. For newer versions, use a high-privilege account and SQL statements to modify user permissions.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. For versions later than 21.8, you must use a privileged account to execute SQL statements to modify the permissions of a standard user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2424,7 +2413,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for ClickHouse supports data backup for clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2505,7 +2494,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for ClickHouse supports data backup for clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2586,7 +2575,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for ClickHouse supports data backup for clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2611,7 +2600,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ApsaraDB for ClickHouse supports data backup for clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2635,7 +2624,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2802,7 +2791,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2969,7 +2958,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2992,7 +2981,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// <para>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3170,12 +3159,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cold storage space.</para>
+        /// <para>Creates cold storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The tiered storage of hot and cold data feature is supported only by community-compatible clusters that run version 20.8 or later. For clusters that run an earlier version, you must migrate data to a cluster that runs version 20.8 or later before you can configure tiered storage. For more information about data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse instances</a>.</para>
+        /// <para>Only Community-compatible clusters of version 20.8 and later support the tiered storage of hot and cold data feature. For unsupported earlier versions, you can first perform data migration to a cluster of version 20.8 or later before configuring tiered storage of hot and cold data. For more information about how to perform data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse database instances</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3237,12 +3226,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cold storage space.</para>
+        /// <para>Creates cold storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The tiered storage of hot and cold data feature is supported only by community-compatible clusters that run version 20.8 or later. For clusters that run an earlier version, you must migrate data to a cluster that runs version 20.8 or later before you can configure tiered storage. For more information about data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse instances</a>.</para>
+        /// <para>Only Community-compatible clusters of version 20.8 and later support the tiered storage of hot and cold data feature. For unsupported earlier versions, you can first perform data migration to a cluster of version 20.8 or later before configuring tiered storage of hot and cold data. For more information about how to perform data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse database instances</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3304,12 +3293,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cold storage space.</para>
+        /// <para>Creates cold storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The tiered storage of hot and cold data feature is supported only by community-compatible clusters that run version 20.8 or later. For clusters that run an earlier version, you must migrate data to a cluster that runs version 20.8 or later before you can configure tiered storage. For more information about data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse instances</a>.</para>
+        /// <para>Only Community-compatible clusters of version 20.8 and later support the tiered storage of hot and cold data feature. For unsupported earlier versions, you can first perform data migration to a cluster of version 20.8 or later before configuring tiered storage of hot and cold data. For more information about how to perform data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse database instances</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3327,12 +3316,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cold storage space.</para>
+        /// <para>Creates cold storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The tiered storage of hot and cold data feature is supported only by community-compatible clusters that run version 20.8 or later. For clusters that run an earlier version, you must migrate data to a cluster that runs version 20.8 or later before you can configure tiered storage. For more information about data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse instances</a>.</para>
+        /// <para>Only Community-compatible clusters of version 20.8 and later support the tiered storage of hot and cold data feature. For unsupported earlier versions, you can first perform data migration to a cluster of version 20.8 or later before configuring tiered storage of hot and cold data. For more information about how to perform data migration, see <a href="https://help.aliyun.com/document_detail/276926.html">Data migration between ApsaraDB for ClickHouse database instances</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3350,13 +3339,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the MySQL or HTTPS port for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Enables the MySQL or HTTPS port for the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must manually enable the MySQL port for community-compatible clusters of version 20.8 or later that were created before December 1, 2021. For clusters created on or after this date, the MySQL port is enabled automatically.</para>
+        /// <para>For Community-compatible Edition clusters of version 20.8 and later that were created before December 1, 2021, you must manually enable the MySQL port. For clusters created on or after this date, the MySQL port is automatically enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3423,13 +3412,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the MySQL or HTTPS port for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Enables the MySQL or HTTPS port for the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must manually enable the MySQL port for community-compatible clusters of version 20.8 or later that were created before December 1, 2021. For clusters created on or after this date, the MySQL port is enabled automatically.</para>
+        /// <para>For Community-compatible Edition clusters of version 20.8 and later that were created before December 1, 2021, you must manually enable the MySQL port. For clusters created on or after this date, the MySQL port is automatically enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3496,13 +3485,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the MySQL or HTTPS port for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Enables the MySQL or HTTPS port for the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must manually enable the MySQL port for community-compatible clusters of version 20.8 or later that were created before December 1, 2021. For clusters created on or after this date, the MySQL port is enabled automatically.</para>
+        /// <para>For Community-compatible Edition clusters of version 20.8 and later that were created before December 1, 2021, you must manually enable the MySQL port. For clusters created on or after this date, the MySQL port is automatically enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3521,13 +3510,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the MySQL or HTTPS port for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Enables the MySQL or HTTPS port for the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must manually enable the MySQL port for community-compatible clusters of version 20.8 or later that were created before December 1, 2021. For clusters created on or after this date, the MySQL port is enabled automatically.</para>
+        /// <para>For Community-compatible Edition clusters of version 20.8 and later that were created before December 1, 2021, you must manually enable the MySQL port. For clusters created on or after this date, the MySQL port is automatically enabled.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3546,13 +3535,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateRDSToClickhouseDb operation to create a sync task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Creates a synchronization task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3659,13 +3648,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateRDSToClickhouseDb operation to create a sync task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Creates a synchronization task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3772,13 +3761,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateRDSToClickhouseDb operation to create a sync task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Creates a synchronization task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3797,13 +3786,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateRDSToClickhouseDb operation to create a sync task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Creates a synchronization task for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -3822,13 +3811,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateSLB operation to attach a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Mounts a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>An SLB instance is a network-layer dependency that provides services for external connections and supports failover. It attaches a domain name to the IP addresses of ClickHouse nodes. The SLB instance balances and forwards cluster requests to internal nodes to distribute traffic in a multi-node deployment. It also performs health checks on backend nodes. If a node becomes unavailable, the SLB instance checks its health status and automatically isolates it. This ensures that request traffic is distributed to active nodes.</para>
+        /// <para>SLB is a network-layer dependency. It provides external connection services by binding the IP addresses of ClickHouse nodes to a domain name and supports failover. It evenly forwards cluster requests to internal nodes for multi-node traffic distribution and performs health checks on backend nodes. If a node becomes unavailable, SLB checks the node health status and automatically isolates abnormal nodes to ensure that request traffic is distributed only to available nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3878,13 +3867,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateSLB operation to attach a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Mounts a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>An SLB instance is a network-layer dependency that provides services for external connections and supports failover. It attaches a domain name to the IP addresses of ClickHouse nodes. The SLB instance balances and forwards cluster requests to internal nodes to distribute traffic in a multi-node deployment. It also performs health checks on backend nodes. If a node becomes unavailable, the SLB instance checks its health status and automatically isolates it. This ensures that request traffic is distributed to active nodes.</para>
+        /// <para>SLB is a network-layer dependency. It provides external connection services by binding the IP addresses of ClickHouse nodes to a domain name and supports failover. It evenly forwards cluster requests to internal nodes for multi-node traffic distribution and performs health checks on backend nodes. If a node becomes unavailable, SLB checks the node health status and automatically isolates abnormal nodes to ensure that request traffic is distributed only to available nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3934,13 +3923,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateSLB operation to attach a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Mounts a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>An SLB instance is a network-layer dependency that provides services for external connections and supports failover. It attaches a domain name to the IP addresses of ClickHouse nodes. The SLB instance balances and forwards cluster requests to internal nodes to distribute traffic in a multi-node deployment. It also performs health checks on backend nodes. If a node becomes unavailable, the SLB instance checks its health status and automatically isolates it. This ensures that request traffic is distributed to active nodes.</para>
+        /// <para>SLB is a network-layer dependency. It provides external connection services by binding the IP addresses of ClickHouse nodes to a domain name and supports failover. It evenly forwards cluster requests to internal nodes for multi-node traffic distribution and performs health checks on backend nodes. If a node becomes unavailable, SLB checks the node health status and automatically isolates abnormal nodes to ensure that request traffic is distributed only to available nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3958,13 +3947,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateSLB operation to attach a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Mounts a Server Load Balancer (SLB) instance to a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>An SLB instance is a network-layer dependency that provides services for external connections and supports failover. It attaches a domain name to the IP addresses of ClickHouse nodes. The SLB instance balances and forwards cluster requests to internal nodes to distribute traffic in a multi-node deployment. It also performs health checks on backend nodes. If a node becomes unavailable, the SLB instance checks its health status and automatically isolates it. This ensures that request traffic is distributed to active nodes.</para>
+        /// <para>SLB is a network-layer dependency. It provides external connection services by binding the IP addresses of ClickHouse nodes to a domain name and supports failover. It evenly forwards cluster requests to internal nodes for multi-node traffic distribution and performs health checks on backend nodes. If a node becomes unavailable, SLB checks the node health status and automatically isolates abnormal nodes to ensure that request traffic is distributed only to available nodes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3982,14 +3971,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateSQLAccount operation to create a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that run version 20.8 or later and were created after December 1, 2021.</para>
-        /// </remarks>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4063,14 +4050,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateSQLAccount operation to create a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that run version 20.8 or later and were created after December 1, 2021.</para>
-        /// </remarks>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4144,14 +4129,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateSQLAccount operation to create a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that run version 20.8 or later and were created after December 1, 2021.</para>
-        /// </remarks>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4169,14 +4152,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateSQLAccount operation to create a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Creates a privileged or standard account for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that run version 20.8 or later and were created after December 1, 2021.</para>
-        /// </remarks>
+        /// <para>This operation is applicable only to Community-compatible clusters of version 20.8 or later that were created after December 1, 2021.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4338,13 +4319,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes a specified database account of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a database account is deleted, you cannot use it to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
+        /// <para>After you delete a specified database account, you cannot use the account to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4407,13 +4388,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes a specified database account of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a database account is deleted, you cannot use it to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
+        /// <para>After you delete a specified database account, you cannot use the account to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4476,13 +4457,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes a specified database account of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a database account is deleted, you cannot use it to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
+        /// <para>After you delete a specified database account, you cannot use the account to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4501,13 +4482,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes a specified database account of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After a database account is deleted, you cannot use it to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
+        /// <para>After you delete a specified database account, you cannot use the account to connect to ApsaraDB for ClickHouse. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4526,13 +4507,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy for a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data backup feature is available only for ApsaraDB for ClickHouse clusters running version 21.8 or later.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4591,13 +4572,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy for a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data backup feature is available only for ApsaraDB for ClickHouse clusters running version 21.8 or later.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4656,13 +4637,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy for a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data backup feature is available only for ApsaraDB for ClickHouse clusters running version 21.8 or later.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4681,13 +4662,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy for a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The data backup feature is available only for ApsaraDB for ClickHouse clusters running version 21.8 or later.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4706,14 +4687,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// After a cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
+        /// <para>Warning: After the cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4772,14 +4752,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// After a cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
+        /// <para>Warning: After the cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4838,14 +4817,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// After a cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
+        /// <para>Warning: After the cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4864,14 +4842,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the specified pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// After a cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
+        /// <para>Warning: After the cluster is deleted, all data in the cluster is deleted and cannot be recovered. Proceed with caution.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4890,13 +4867,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Server Load Balancer (SLB) instance for a specified ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Releases the SLB instance for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>After you release the SLB instance, the system performs simple load balancing based on the domain name. Health checks are no longer performed on nodes at the request routing layer. This may cause normal requests to be routed to unavailable nodes, which can result in read and write failures.</para>
+        /// <para>After the SLB instance is released, simple load balancing is performed directly based on domain names, and the node health check at the request routing layer is no longer available. This may cause normal requests to be routed to unavailable nodes, resulting in read and write failures for some requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4942,13 +4919,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Server Load Balancer (SLB) instance for a specified ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Releases the SLB instance for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>After you release the SLB instance, the system performs simple load balancing based on the domain name. Health checks are no longer performed on nodes at the request routing layer. This may cause normal requests to be routed to unavailable nodes, which can result in read and write failures.</para>
+        /// <para>After the SLB instance is released, simple load balancing is performed directly based on domain names, and the node health check at the request routing layer is no longer available. This may cause normal requests to be routed to unavailable nodes, resulting in read and write failures for some requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4994,13 +4971,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Server Load Balancer (SLB) instance for a specified ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Releases the SLB instance for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>After you release the SLB instance, the system performs simple load balancing based on the domain name. Health checks are no longer performed on nodes at the request routing layer. This may cause normal requests to be routed to unavailable nodes, which can result in read and write failures.</para>
+        /// <para>After the SLB instance is released, simple load balancing is performed directly based on domain names, and the node health check at the request routing layer is no longer available. This may cause normal requests to be routed to unavailable nodes, resulting in read and write failures for some requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5018,13 +4995,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Server Load Balancer (SLB) instance for a specified ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Releases the SLB instance for a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>After you release the SLB instance, the system performs simple load balancing based on the domain name. Health checks are no longer performed on nodes at the request routing layer. This may cause normal requests to be routed to unavailable nodes, which can result in read and write failures.</para>
+        /// <para>After the SLB instance is released, simple load balancing is performed directly based on domain names, and the node health check at the request routing layer is no longer available. This may cause normal requests to be routed to unavailable nodes, resulting in read and write failures for some requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5202,12 +5179,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Queries the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API applies only to clusters of v21.8 or earlier. For clusters running a later version, you must use a privileged account and execute SQL statements to modify the permissions of a regular user.</para>
+        /// <para>This operation applies only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5273,12 +5250,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Queries the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API applies only to clusters of v21.8 or earlier. For clusters running a later version, you must use a privileged account and execute SQL statements to modify the permissions of a regular user.</para>
+        /// <para>This operation applies only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5344,12 +5321,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Queries the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API applies only to clusters of v21.8 or earlier. For clusters running a later version, you must use a privileged account and execute SQL statements to modify the permissions of a regular user.</para>
+        /// <para>This operation applies only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5367,12 +5344,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Queries the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API applies only to clusters of v21.8 or earlier. For clusters running a later version, you must use a privileged account and execute SQL statements to modify the permissions of a regular user.</para>
+        /// <para>This operation applies only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5390,7 +5367,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the database accounts of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the database account information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5460,7 +5437,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the database accounts of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the database account information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5530,7 +5507,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the database accounts of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the database account information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5548,7 +5525,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the database accounts of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the database account information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5566,7 +5543,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active Operations and Maintenance (O&amp;M) configuration of a ClickHouse instance.</para>
+        /// <para>Queries the proactive maintenance configurations of a ClickHouse instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5624,7 +5601,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active Operations and Maintenance (O&amp;M) configuration of a ClickHouse instance.</para>
+        /// <para>Queries the proactive maintenance configurations of a ClickHouse instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5682,7 +5659,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active Operations and Maintenance (O&amp;M) configuration of a ClickHouse instance.</para>
+        /// <para>Queries the proactive maintenance configurations of a ClickHouse instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5700,7 +5677,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active Operations and Maintenance (O&amp;M) configuration of a ClickHouse instance.</para>
+        /// <para>Queries the proactive maintenance configurations of a ClickHouse instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5718,7 +5695,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active operation tasks of a ClickHouse instance.</para>
+        /// <para>Queries the proactive O&amp;M tasks for ApsaraDB for ClickHouse instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5820,7 +5797,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active operation tasks of a ClickHouse instance.</para>
+        /// <para>Queries the proactive O&amp;M tasks for ApsaraDB for ClickHouse instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5922,7 +5899,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active operation tasks of a ClickHouse instance.</para>
+        /// <para>Queries the proactive O&amp;M tasks for ApsaraDB for ClickHouse instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5940,7 +5917,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active operation tasks of a ClickHouse instance.</para>
+        /// <para>Queries the proactive O&amp;M tasks for ApsaraDB for ClickHouse instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5958,7 +5935,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes all databases, tables, and columns in an instance.</para>
+        /// <para>Enumerates all databases, tables, and columns in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6024,7 +6001,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes all databases, tables, and columns in an instance.</para>
+        /// <para>Enumerates all databases, tables, and columns in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6090,7 +6067,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes all databases, tables, and columns in an instance.</para>
+        /// <para>Enumerates all databases, tables, and columns in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6108,7 +6085,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes all databases, tables, and columns in an instance.</para>
+        /// <para>Enumerates all databases, tables, and columns in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6126,7 +6103,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all data sources.</para>
+        /// <para>Queries the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6192,7 +6169,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all data sources.</para>
+        /// <para>Queries the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6258,7 +6235,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all data sources.</para>
+        /// <para>Queries the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6276,7 +6253,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all data sources.</para>
+        /// <para>Queries the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6294,7 +6271,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the auto-renewal status of ApsaraDB for ClickHouse Community-compatible clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6364,7 +6341,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the auto-renewal status of ApsaraDB for ClickHouse Community-compatible clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6434,7 +6411,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the auto-renewal status of ApsaraDB for ClickHouse Community-compatible clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6452,7 +6429,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the auto-renewal status of ApsaraDB for ClickHouse Community-compatible clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6470,13 +6447,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup settings for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the backup settings of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6535,13 +6512,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup settings for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the backup settings of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6600,13 +6577,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup settings for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the backup settings of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6625,13 +6602,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup settings for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the backup settings of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters of versions 20.3, 20.8, and 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6656,7 +6633,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 and later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6741,7 +6718,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 and later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6826,7 +6803,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 and later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6851,7 +6828,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 or later support the data backup feature.</para>
+        /// <para>Only ApsaraDB for ClickHouse clusters of version 21.8 and later support the data backup feature.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6870,7 +6847,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view columns.</para>
+        /// <para>Queries the columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6936,7 +6913,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view columns.</para>
+        /// <para>Queries the columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7002,7 +6979,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view columns.</para>
+        /// <para>Queries the columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7020,7 +6997,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can view columns.</para>
+        /// <para>Queries the columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7038,13 +7015,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigHistory operation to view the configuration parameter change history of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the change history of configuration parameters for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only by Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7083,13 +7060,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigHistory operation to view the configuration parameter change history of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the change history of configuration parameters for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only by Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7128,13 +7105,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigHistory operation to view the configuration parameter change history of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the change history of configuration parameters for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only by Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7153,13 +7130,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigHistory operation to view the configuration parameter change history of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the change history of configuration parameters for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only by Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7178,13 +7155,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigVersionDifference operation to compare the parameter values of an ApsaraDB for ClickHouse community-compatible cluster before and after a configuration change.</para>
+        /// <para>Queries the parameter values before and after configuration changes for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that were created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7223,13 +7200,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigVersionDifference operation to compare the parameter values of an ApsaraDB for ClickHouse community-compatible cluster before and after a configuration change.</para>
+        /// <para>Queries the parameter values before and after configuration changes for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that were created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7268,13 +7245,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigVersionDifference operation to compare the parameter values of an ApsaraDB for ClickHouse community-compatible cluster before and after a configuration change.</para>
+        /// <para>Queries the parameter values before and after configuration changes for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that were created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7293,13 +7270,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeConfigVersionDifference operation to compare the parameter values of an ApsaraDB for ClickHouse community-compatible cluster before and after a configuration change.</para>
+        /// <para>Queries the parameter values before and after configuration changes for an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible clusters that were created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7318,7 +7295,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7376,7 +7353,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7434,7 +7411,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7452,7 +7429,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7470,7 +7447,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7528,7 +7505,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7586,7 +7563,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7604,7 +7581,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7622,7 +7599,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBClusterConfig operation queries the parameter configuration of a community-compatible ClickHouse cluster.</para>
+        /// <para>Queries the parameter settings of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7684,7 +7661,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBClusterConfig operation queries the parameter configuration of a community-compatible ClickHouse cluster.</para>
+        /// <para>Queries the parameter settings of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7746,7 +7723,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBClusterConfig operation queries the parameter configuration of a community-compatible ClickHouse cluster.</para>
+        /// <para>Queries the parameter settings of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7764,7 +7741,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBClusterConfig operation queries the parameter configuration of a community-compatible ClickHouse cluster.</para>
+        /// <para>Queries the parameter settings of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7782,13 +7759,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeDBClusterConfigInXML operation to query the configuration parameters of an ApsaraDB for ClickHouse Community-Compatible Edition cluster in XML format.</para>
+        /// <para>Queries the configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-Compatible Edition clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-Compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7835,13 +7812,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeDBClusterConfigInXML operation to query the configuration parameters of an ApsaraDB for ClickHouse Community-Compatible Edition cluster in XML format.</para>
+        /// <para>Queries the configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-Compatible Edition clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-Compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7888,13 +7865,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeDBClusterConfigInXML operation to query the configuration parameters of an ApsaraDB for ClickHouse Community-Compatible Edition cluster in XML format.</para>
+        /// <para>Queries the configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-Compatible Edition clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-Compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7913,13 +7890,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeDBClusterConfigInXML operation to query the configuration parameters of an ApsaraDB for ClickHouse Community-Compatible Edition cluster in XML format.</para>
+        /// <para>Queries the configuration parameters in XML mode for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only Community-Compatible Edition clusters that are created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-Compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -7938,7 +7915,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the network information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7996,7 +7973,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the network information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8054,7 +8031,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the network information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8072,7 +8049,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the network information of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8090,7 +8067,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node information for a ClickHouse Community-Compatible instance.</para>
+        /// <para>Retrieves the node information of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8160,7 +8137,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node information for a ClickHouse Community-Compatible instance.</para>
+        /// <para>Retrieves the node information of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8230,7 +8207,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node information for a ClickHouse Community-Compatible instance.</para>
+        /// <para>Retrieves the node information of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8248,7 +8225,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node information for a ClickHouse Community-Compatible instance.</para>
+        /// <para>Retrieves the node information of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8266,14 +8243,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the performance data of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the performance data of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the performance monitoring data for a specified cluster within a time range based on performance metrics. The data is collected every 30 seconds.</para>
+        /// <para>Queries the performance monitoring data of a specified cluster within a specific time range based on performance metrics. The collection granularity is 30 seconds.</para>
         /// <remarks>
-        /// <para>This operation supports only ApsaraDB for ClickHouse Community-Compatible Edition clusters that were created before December 1, 2021.</para>
+        /// <para>This operation is supported only for ApsaraDB for ClickHouse Community-compatible Edition clusters that were created before December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8344,14 +8321,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the performance data of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the performance data of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the performance monitoring data for a specified cluster within a time range based on performance metrics. The data is collected every 30 seconds.</para>
+        /// <para>Queries the performance monitoring data of a specified cluster within a specific time range based on performance metrics. The collection granularity is 30 seconds.</para>
         /// <remarks>
-        /// <para>This operation supports only ApsaraDB for ClickHouse Community-Compatible Edition clusters that were created before December 1, 2021.</para>
+        /// <para>This operation is supported only for ApsaraDB for ClickHouse Community-compatible Edition clusters that were created before December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8422,14 +8399,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the performance data of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the performance data of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the performance monitoring data for a specified cluster within a time range based on performance metrics. The data is collected every 30 seconds.</para>
+        /// <para>Queries the performance monitoring data of a specified cluster within a specific time range based on performance metrics. The collection granularity is 30 seconds.</para>
         /// <remarks>
-        /// <para>This operation supports only ApsaraDB for ClickHouse Community-Compatible Edition clusters that were created before December 1, 2021.</para>
+        /// <para>This operation is supported only for ApsaraDB for ClickHouse Community-compatible Edition clusters that were created before December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8448,14 +8425,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the performance data of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the performance data of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can view the performance monitoring data for a specified cluster within a time range based on performance metrics. The data is collected every 30 seconds.</para>
+        /// <para>Queries the performance monitoring data of a specified cluster within a specific time range based on performance metrics. The collection granularity is 30 seconds.</para>
         /// <remarks>
-        /// <para>This operation supports only ApsaraDB for ClickHouse Community-Compatible Edition clusters that were created before December 1, 2021.</para>
+        /// <para>This operation is supported only for ApsaraDB for ClickHouse Community-compatible Edition clusters that were created before December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -8474,7 +8451,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the status set of a ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the status set of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8532,7 +8509,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the status set of a ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the status set of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8590,7 +8567,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the status set of a ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the status set of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8608,7 +8585,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the status set of a ClickHouse Community-Compatible Edition cluster.</para>
+        /// <para>Queries the status set of an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8626,7 +8603,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes ApsaraDB for ClickHouse clusters in a specified region.</para>
+        /// <para>Queries the information about ApsaraDB for ClickHouse clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8691,6 +8668,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             {
                 query["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIds))
+            {
+                query["VpcIds"] = request.VpcIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8712,7 +8693,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes ApsaraDB for ClickHouse clusters in a specified region.</para>
+        /// <para>Queries the information about ApsaraDB for ClickHouse clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8777,6 +8758,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             {
                 query["Tag"] = request.Tag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIds))
+            {
+                query["VpcIds"] = request.VpcIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8798,7 +8783,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes ApsaraDB for ClickHouse clusters in a specified region.</para>
+        /// <para>Queries the information about ApsaraDB for ClickHouse clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8816,7 +8801,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes ApsaraDB for ClickHouse clusters in a specified region.</para>
+        /// <para>Queries the information about ApsaraDB for ClickHouse clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8834,7 +8819,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBConfig operation queries the configuration of a community-compatible cluster.</para>
+        /// <para>Queries the configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8896,7 +8881,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBConfig operation queries the configuration of a community-compatible cluster.</para>
+        /// <para>Queries the configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8958,7 +8943,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBConfig operation queries the configuration of a community-compatible cluster.</para>
+        /// <para>Queries the configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8976,7 +8961,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DescribeDBConfig operation queries the configuration of a community-compatible cluster.</para>
+        /// <para>Queries the configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9290,7 +9275,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to retrieve running queries on an ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the running queries in an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9380,7 +9365,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to retrieve running queries on an ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the running queries in an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9470,7 +9455,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to retrieve running queries on an ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the running queries in an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9488,7 +9473,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to retrieve running queries on an ApsaraDB for ClickHouse Community-Compatible cluster.</para>
+        /// <para>Queries the running queries in an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9506,7 +9491,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions and zones for ApsaraDB for ClickHouse.</para>
+        /// <para>Queries the information about all regions and zones of ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9560,7 +9545,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions and zones for ApsaraDB for ClickHouse.</para>
+        /// <para>Queries the information about all regions and zones of ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9614,7 +9599,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions and zones for ApsaraDB for ClickHouse.</para>
+        /// <para>Queries the information about all regions and zones of ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9632,7 +9617,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available regions and zones for ApsaraDB for ClickHouse.</para>
+        /// <para>Queries the information about all regions and zones of ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9650,7 +9635,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases in an instance.</para>
+        /// <para>Lists all databases in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9708,7 +9693,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases in an instance.</para>
+        /// <para>Lists all databases in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9766,7 +9751,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases in an instance.</para>
+        /// <para>Lists all databases in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9784,7 +9769,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all databases in an instance.</para>
+        /// <para>Lists all databases in an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10002,7 +9987,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about the slow log trends for a cluster.</para>
+        /// <para>Queries the slow log trends statistics for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10076,7 +10061,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about the slow log trends for a cluster.</para>
+        /// <para>Queries the slow log trends statistics for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10150,7 +10135,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about the slow log trends for a cluster.</para>
+        /// <para>Queries the slow log trends statistics for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10168,7 +10153,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about the slow log trends for a cluster.</para>
+        /// <para>Queries the slow log trends statistics for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10346,7 +10331,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about synchronized databases.</para>
+        /// <para>Queries the synchronized databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10412,7 +10397,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about synchronized databases.</para>
+        /// <para>Queries the synchronized databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10478,7 +10463,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about synchronized databases.</para>
+        /// <para>Queries the synchronized databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10496,7 +10481,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about synchronized databases.</para>
+        /// <para>Queries the synchronized databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10514,7 +10499,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTables operation to query tables in a community-compatible cluster.</para>
+        /// <para>Queries the table information of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10576,7 +10561,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTables operation to query tables in a community-compatible cluster.</para>
+        /// <para>Queries the table information of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10638,7 +10623,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTables operation to query tables in a community-compatible cluster.</para>
+        /// <para>Queries the table information of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10656,7 +10641,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeTables operation to query tables in a community-compatible cluster.</para>
+        /// <para>Queries the table information of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10674,13 +10659,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View migration history.</para>
+        /// <para>Queries migration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is used only to query data migrations between Alibaba Cloud ClickHouse clusters during version upgrades.</para>
+        /// <para>This operation can only query data migration information from a lower version to a higher version between ApsaraDB for ClickHouse clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10739,13 +10724,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View migration history.</para>
+        /// <para>Queries migration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is used only to query data migrations between Alibaba Cloud ClickHouse clusters during version upgrades.</para>
+        /// <para>This operation can only query data migration information from a lower version to a higher version between ApsaraDB for ClickHouse clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10804,13 +10789,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View migration history.</para>
+        /// <para>Queries migration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is used only to query data migrations between Alibaba Cloud ClickHouse clusters during version upgrades.</para>
+        /// <para>This operation can only query data migration information from a lower version to a higher version between ApsaraDB for ClickHouse clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10829,13 +10814,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View migration history.</para>
+        /// <para>Queries migration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This API operation is used only to query data migrations between Alibaba Cloud ClickHouse clusters during version upgrades.</para>
+        /// <para>This operation can only query data migration information from a lower version to a higher version between ApsaraDB for ClickHouse clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10854,7 +10839,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of your KMS keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10904,7 +10889,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of your KMS keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10954,7 +10939,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of your KMS keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10972,7 +10957,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of your KMS keys.</para>
+        /// <para>Queries the list of KMS keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10990,7 +10975,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switches the ZooKeeper leader for a community-compatible ClickHouse instance.</para>
+        /// <para>Initiates a primary switchover for ZooKeeper in an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11068,7 +11053,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switches the ZooKeeper leader for a community-compatible ClickHouse instance.</para>
+        /// <para>Initiates a primary switchover for ZooKeeper in an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11146,7 +11131,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switches the ZooKeeper leader for a community-compatible ClickHouse instance.</para>
+        /// <para>Initiates a primary switchover for ZooKeeper in an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11164,7 +11149,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Switches the ZooKeeper leader for a community-compatible ClickHouse instance.</para>
+        /// <para>Initiates a primary switchover for ZooKeeper in an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11182,7 +11167,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops ongoing tasks.</para>
+        /// <para>Stops an ongoing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11248,7 +11233,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops ongoing tasks.</para>
+        /// <para>Stops an ongoing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11314,7 +11299,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops ongoing tasks.</para>
+        /// <para>Stops an ongoing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11332,7 +11317,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops ongoing tasks.</para>
+        /// <para>Stops an ongoing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11350,7 +11335,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Queries the tags bound to ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11424,7 +11409,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Queries the tags bound to ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11498,7 +11483,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Queries the tags bound to ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11516,7 +11501,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tags that are attached to ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Queries the tags bound to ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11534,12 +11519,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of a database account.</para>
+        /// <para>Modifies the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation applies only to cluster versions 21.8 and earlier. For cluster versions later than 21.8, you must use a high-privilege account to run SQL statements to modify the permissions of standard users.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11629,12 +11614,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of a database account.</para>
+        /// <para>Modifies the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation applies only to cluster versions 21.8 and earlier. For cluster versions later than 21.8, you must use a high-privilege account to run SQL statements to modify the permissions of standard users.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11724,12 +11709,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of a database account.</para>
+        /// <para>Modifies the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation applies only to cluster versions 21.8 and earlier. For cluster versions later than 21.8, you must use a high-privilege account to run SQL statements to modify the permissions of standard users.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11747,12 +11732,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the permissions of a database account.</para>
+        /// <para>Modifies the permissions of an account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation applies only to cluster versions 21.8 and earlier. For cluster versions later than 21.8, you must use a high-privilege account to run SQL statements to modify the permissions of standard users.</para>
+        /// <para>This operation is applicable only to version 21.8 and earlier. To modify the permissions of a standard user in versions later than 21.8, use a privileged account to execute SQL statements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11770,7 +11755,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account in an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the description of a specified database account in a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11836,7 +11821,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account in an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the description of a specified database account in a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11902,7 +11887,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account in an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the description of a specified database account in a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11920,7 +11905,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account in an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the description of a specified database account in a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11938,7 +11923,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of active O&amp;M tasks on a community-compatible ClickHouse cluster.</para>
+        /// <para>Modifies the proactive O&amp;M task configuration for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12016,7 +12001,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of active O&amp;M tasks on a community-compatible ClickHouse cluster.</para>
+        /// <para>Modifies the proactive O&amp;M task configuration for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12094,7 +12079,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of active O&amp;M tasks on a community-compatible ClickHouse cluster.</para>
+        /// <para>Modifies the proactive O&amp;M task configuration for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12112,7 +12097,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of active O&amp;M tasks on a community-compatible ClickHouse cluster.</para>
+        /// <para>Modifies the proactive O&amp;M task configuration for an ApsaraDB for ClickHouse Community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12130,7 +12115,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switch time for operations and maintenance (O&amp;M) events on a ClickHouse Community-compatible cluster.</para>
+        /// <para>Modifies the switchover time of O&amp;M events for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12200,7 +12185,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switch time for operations and maintenance (O&amp;M) events on a ClickHouse Community-compatible cluster.</para>
+        /// <para>Modifies the switchover time of O&amp;M events for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12270,7 +12255,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switch time for operations and maintenance (O&amp;M) events on a ClickHouse Community-compatible cluster.</para>
+        /// <para>Modifies the switchover time of O&amp;M events for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12288,7 +12273,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switch time for operations and maintenance (O&amp;M) events on a ClickHouse Community-compatible cluster.</para>
+        /// <para>Modifies the switchover time of O&amp;M events for an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12306,7 +12291,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Modifies the auto-renewal status of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12380,7 +12365,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Modifies the auto-renewal status of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12454,7 +12439,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Modifies the auto-renewal status of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12472,7 +12457,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the auto-renewal status of a ClickHouse Community-Compatible cluster.</para>
+        /// <para>Modifies the auto-renewal status of an ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12496,7 +12481,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12573,7 +12558,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12650,7 +12635,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12675,7 +12660,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Data backup is supported for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// <para>ApsaraDB for ClickHouse clusters running version 20.3, 20.8, or 21.8 support data backup.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12894,7 +12879,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12968,7 +12953,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13042,7 +13027,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13060,7 +13045,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the IP whitelist of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13254,13 +13239,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the configuration parameters of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13315,13 +13300,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the configuration parameters of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13376,13 +13361,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the configuration parameters of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13401,13 +13386,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the configuration parameters of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation supports only community-compatible clusters created after December 1, 2021.</para>
+        /// <para>This operation is supported only for Community-compatible Edition clusters created after December 1, 2021.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13426,7 +13411,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the name of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13488,7 +13473,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the name of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13550,7 +13535,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the name of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13568,7 +13553,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the description of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the name of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13586,7 +13571,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the maintenance window of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13648,7 +13633,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the maintenance window of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13710,7 +13695,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the maintenance window of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13728,7 +13713,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the maintenance window for a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the maintenance window of a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13746,14 +13731,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ModifyDBConfig operation modifies the dictionary configuration of a community-compatible cluster.</para>
+        /// <para>Modifies the dictionary configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This API applies only to clusters with a kernel version of 20.8 or earlier.</para>
+        /// <para>Notice: This API operation is applicable only to clusters whose kernel version is 20.8 or earlier.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13820,14 +13804,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ModifyDBConfig operation modifies the dictionary configuration of a community-compatible cluster.</para>
+        /// <para>Modifies the dictionary configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This API applies only to clusters with a kernel version of 20.8 or earlier.</para>
+        /// <para>Notice: This API operation is applicable only to clusters whose kernel version is 20.8 or earlier.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13894,14 +13877,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ModifyDBConfig operation modifies the dictionary configuration of a community-compatible cluster.</para>
+        /// <para>Modifies the dictionary configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This API applies only to clusters with a kernel version of 20.8 or earlier.</para>
+        /// <para>Notice: This API operation is applicable only to clusters whose kernel version is 20.8 or earlier.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13920,14 +13902,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ModifyDBConfig operation modifies the dictionary configuration of a community-compatible cluster.</para>
+        /// <para>Modifies the dictionary configuration of a community-compatible cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: 
-        /// This API applies only to clusters with a kernel version of 20.8 or earlier.</para>
+        /// <para>Notice: This API operation is applicable only to clusters whose kernel version is 20.8 or earlier.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13946,7 +13927,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upgrade type for a ClickHouse minor version to automatic or manual.</para>
+        /// <para>Modifies the minor engine version update type (automatic or manual) for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14008,7 +13989,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upgrade type for a ClickHouse minor version to automatic or manual.</para>
+        /// <para>Modifies the minor engine version update type (automatic or manual) for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14070,7 +14051,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upgrade type for a ClickHouse minor version to automatic or manual.</para>
+        /// <para>Modifies the minor engine version update type (automatic or manual) for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14088,7 +14069,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the upgrade type for a ClickHouse minor version to automatic or manual.</para>
+        /// <para>Modifies the minor engine version update type (automatic or manual) for an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14106,13 +14087,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the sync task of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the synchronization task of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible ApsaraDB for ClickHouse clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14219,13 +14200,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the sync task of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the synchronization task of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible ApsaraDB for ClickHouse clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14332,13 +14313,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the sync task of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the synchronization task of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible ApsaraDB for ClickHouse clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14357,13 +14338,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the sync task of a community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the synchronization task of an ApsaraDB for ClickHouse Community-Compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to community-compatible ApsaraDB for ClickHouse clusters.</para>
+        /// <para>This operation is applicable only to ApsaraDB for ClickHouse Community-Compatible Edition clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14382,7 +14363,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the public endpoint of the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14440,7 +14421,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the public endpoint of the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14498,7 +14479,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the public endpoint of the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14516,7 +14497,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases the public endpoint of a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Releases the public endpoint of the specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14534,7 +14515,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account in a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Resets the password of a specified database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14600,7 +14581,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account in a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Resets the password of a specified database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14666,7 +14647,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account in a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Resets the password of a specified database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14684,7 +14665,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account in a specified ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Resets the password of a specified database account for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14886,7 +14867,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch restart nodes of a ClickHouse Community-compatible Edition instance.</para>
+        /// <para>Restarts multiple nodes of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14970,7 +14951,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch restart nodes of a ClickHouse Community-compatible Edition instance.</para>
+        /// <para>Restarts multiple nodes of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15054,7 +15035,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch restart nodes of a ClickHouse Community-compatible Edition instance.</para>
+        /// <para>Restarts multiple nodes of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15072,7 +15053,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch restart nodes of a ClickHouse Community-compatible Edition instance.</para>
+        /// <para>Restarts multiple nodes of an ApsaraDB for ClickHouse Community-compatible Edition instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15266,16 +15247,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migration between versions.</para>
+        /// <para>Migrates a version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Add the IP addresses of the source cluster to the whitelist of the destination cluster.</description></item>
-        /// <item><description>Add the IP addresses of the destination cluster to the whitelist of the source cluster.<remarks>
-        /// <para>You can execute the <c>select * from system.clusters;</c> statement to retrieve the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
+        /// <item><description>Add the IP address of the source cluster to the whitelist of the destination cluster.</description></item>
+        /// <item><description>Add the IP address of the destination cluster to the whitelist of the source cluster.<remarks>
+        /// <para>You can run the <c>select * from system.clusters;</c> statement to view the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -15380,16 +15361,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migration between versions.</para>
+        /// <para>Migrates a version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Add the IP addresses of the source cluster to the whitelist of the destination cluster.</description></item>
-        /// <item><description>Add the IP addresses of the destination cluster to the whitelist of the source cluster.<remarks>
-        /// <para>You can execute the <c>select * from system.clusters;</c> statement to retrieve the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
+        /// <item><description>Add the IP address of the source cluster to the whitelist of the destination cluster.</description></item>
+        /// <item><description>Add the IP address of the destination cluster to the whitelist of the source cluster.<remarks>
+        /// <para>You can run the <c>select * from system.clusters;</c> statement to view the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -15494,16 +15475,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migration between versions.</para>
+        /// <para>Migrates a version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Add the IP addresses of the source cluster to the whitelist of the destination cluster.</description></item>
-        /// <item><description>Add the IP addresses of the destination cluster to the whitelist of the source cluster.<remarks>
-        /// <para>You can execute the <c>select * from system.clusters;</c> statement to retrieve the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
+        /// <item><description>Add the IP address of the source cluster to the whitelist of the destination cluster.</description></item>
+        /// <item><description>Add the IP address of the destination cluster to the whitelist of the source cluster.<remarks>
+        /// <para>You can run the <c>select * from system.clusters;</c> statement to view the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -15524,16 +15505,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migration between versions.</para>
+        /// <para>Migrates a version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Add the IP addresses of the source cluster to the whitelist of the destination cluster.</description></item>
-        /// <item><description>Add the IP addresses of the destination cluster to the whitelist of the source cluster.<remarks>
-        /// <para>You can execute the <c>select * from system.clusters;</c> statement to retrieve the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
+        /// <item><description>Add the IP address of the source cluster to the whitelist of the destination cluster.</description></item>
+        /// <item><description>Add the IP address of the destination cluster to the whitelist of the source cluster.<remarks>
+        /// <para>You can run the <c>select * from system.clusters;</c> statement to view the IP addresses of an ApsaraDB for ClickHouse cluster.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -15554,7 +15535,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Removes tags from one or more ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15628,7 +15609,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Removes tags from one or more ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15702,7 +15683,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Removes tags from one or more ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15720,7 +15701,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Removes tags from one or more ApsaraDB for ClickHouse clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15738,13 +15719,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UpgradeMinorVersion operation upgrades the minor engine version of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Minor engine version upgrades are supported only for community-compatible clusters that are purchased after December 1, 2021.</para>
+        /// <para>Only Community-compatible Edition clusters purchased after December 1, 2021 support minor engine version upgrades.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15815,13 +15796,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UpgradeMinorVersion operation upgrades the minor engine version of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Minor engine version upgrades are supported only for community-compatible clusters that are purchased after December 1, 2021.</para>
+        /// <para>Only Community-compatible Edition clusters purchased after December 1, 2021 support minor engine version upgrades.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15892,13 +15873,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UpgradeMinorVersion operation upgrades the minor engine version of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Minor engine version upgrades are supported only for community-compatible clusters that are purchased after December 1, 2021.</para>
+        /// <para>Only Community-compatible Edition clusters purchased after December 1, 2021 support minor engine version upgrades.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15917,13 +15898,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The UpgradeMinorVersion operation upgrades the minor engine version of a specified community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Upgrades the minor engine version of a specified ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Minor engine version upgrades are supported only for community-compatible clusters that are purchased after December 1, 2021.</para>
+        /// <para>Only Community-compatible Edition clusters purchased after December 1, 2021 support minor engine version upgrades.</para>
         /// </remarks>
         /// </description>
         /// 

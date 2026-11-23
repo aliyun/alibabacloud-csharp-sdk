@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is valid only when the <b>TagKey.N</b> parameter is empty.</para>
+        /// <para>This parameter takes effect only when the <b>TagKey.N</b> parameter is left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

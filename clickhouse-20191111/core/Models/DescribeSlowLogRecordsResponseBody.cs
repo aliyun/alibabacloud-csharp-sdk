@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the slow query logs.</para>
+        /// <para>The list of slow log details.</para>
         /// </summary>
         [NameInMap("SlowLogRecords")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             }
 
             /// <summary>
-            /// <para>The number of rows in the result set.</para>
+            /// <para>The number of rows in the returned result set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Rows { get; set; }
 
             /// <summary>
-            /// <para>The number of entries on each page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RowsBeforeLimitAtLeast { get; set; }
 
             /// <summary>
-            /// <para>The statistics of the query results.</para>
+            /// <para>The statistics information of the query results.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics Statistics { get; set; }
             public class DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics : TeaModel {
                 /// <summary>
-                /// <para>The amount of data read, in bytes.</para>
+                /// <para>The maximum amount of data read. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public int? BytesRead { get; set; }
 
                 /// <summary>
-                /// <para>The time elapsed for the slow query, in milliseconds.</para>
+                /// <para>The time elapsed for the slow query. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21.35</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public float? ElapsedTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows read.</para>
+                /// <para>The maximum number of rows read.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2016722</para>

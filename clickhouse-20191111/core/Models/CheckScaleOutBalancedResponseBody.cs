@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <list type="bullet">
         /// <item><description><b>30</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b>.</description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// <para>The time required for the migration scale-out. Unit: minutes.</para>
+        /// <para>The time required for migration and scaling. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>

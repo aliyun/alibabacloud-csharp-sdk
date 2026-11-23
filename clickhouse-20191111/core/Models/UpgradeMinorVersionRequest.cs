@@ -39,13 +39,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Specifies whether to upgrade the minor engine version immediately. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The minor engine version is upgraded immediately.</para>
+        /// <item><description><para><b>true</b>: Upgrades the minor engine version immediately.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The minor engine version is upgraded at a specified time or within the maintenance window.</para>
+        /// <item><description><para><b>false</b>: Upgrades the minor engine version at a specified time or during the maintenance window.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The <b>UpgradeTime</b> parameter is required if you want to upgrade the minor engine version at a specified time.</para>
+        /// <para>If you specify a time to upgrade the minor engine version, <b>UpgradeTime</b> is required.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? UpgradeImmediately { get; set; }
 
         /// <summary>
-        /// <para>The time to perform the upgrade. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The specified upgrade time. Format: yyyy-MM-ddTHH:mmZ (UTC time).</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the ApsaraDB for ClickHouse cluster is upgraded within the maintenance window.</para>
+        /// <para>If this parameter is left empty, the ApsaraDB for ClickHouse cluster performs a minor kernel version upgrade during the maintenance window.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string UpgradeTime { get; set; }
 
         /// <summary>
-        /// <para>The minor engine version to which you want to upgrade.</para>
+        /// <para>The target minor engine version.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the cluster is upgraded to the latest minor engine version.</para>
+        /// <para>By default, this parameter is left empty, and the minor engine version is upgraded to the latest version.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

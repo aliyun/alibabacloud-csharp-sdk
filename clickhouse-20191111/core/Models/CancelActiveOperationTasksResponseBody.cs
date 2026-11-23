@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CancelActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the O\&amp;M tasks that were canceled. Multiple IDs are separated by a comma (,).</para>
+        /// <para>The IDs of the O&amp;M tasks canceled in batches. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>188****,188****,188****</para>

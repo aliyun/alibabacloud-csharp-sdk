@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckClickhouseToRDSRequest : TeaModel {
         /// <summary>
-        /// <para>The password for the ApsaraDB for ClickHouse database account.</para>
+        /// <para>The password of the database account for the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string CkPassword { get; set; }
 
         /// <summary>
-        /// <para>The database account for the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The database account of the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ClickhousePort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the community-compatible ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The ID of the ApsaraDB for ClickHouse Community-compatible Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS instance.</para>
+        /// <para>The instance ID of the ApsaraDB RDS database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsId { get; set; }
 
         /// <summary>
-        /// <para>The password for the ApsaraDB RDS database account.</para>
+        /// <para>The password of the database account for the ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? RdsPort { get; set; }
 
         /// <summary>
-        /// <para>The database account for the ApsaraDB RDS instance.</para>
+        /// <para>The database account of the ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

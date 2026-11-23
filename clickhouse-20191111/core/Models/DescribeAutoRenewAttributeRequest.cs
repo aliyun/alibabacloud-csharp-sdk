@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The cluster IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-uf6g4417bo*****</para>

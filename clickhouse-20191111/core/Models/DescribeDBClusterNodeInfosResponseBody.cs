@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClusterNodeInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the ClickHouse nodes.</para>
+        /// <para>The ApsaraDB for ClickHouse node information.</para>
         /// </summary>
         [NameInMap("NodeInfos")]
         [Validation(Required=false)]
         public List<DescribeDBClusterNodeInfosResponseBodyNodeInfos> NodeInfos { get; set; }
         public class DescribeDBClusterNodeInfosResponseBodyNodeInfos : TeaModel {
             /// <summary>
-            /// <para>Indicates whether a disaster recovery test is in progress.</para>
+            /// <para>Indicates whether a disaster recovery drill is in progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public bool? FailoverTesting { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the node.</para>
+            /// <para>The node IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.168.0.1</para>
@@ -81,12 +81,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,14 +114,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? TotalNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the ZooKeeper nodes.</para>
+        /// <para>The ZooKeeper node information.</para>
         /// </summary>
         [NameInMap("ZkNodeInfos")]
         [Validation(Required=false)]
         public List<DescribeDBClusterNodeInfosResponseBodyZkNodeInfos> ZkNodeInfos { get; set; }
         public class DescribeDBClusterNodeInfosResponseBodyZkNodeInfos : TeaModel {
             /// <summary>
-            /// <para>Indicates whether a disaster recovery test is in progress.</para>
+            /// <para>Indicates whether a disaster recovery drill is in progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
