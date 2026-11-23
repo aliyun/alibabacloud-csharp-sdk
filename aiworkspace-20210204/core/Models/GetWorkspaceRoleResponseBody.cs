@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetWorkspaceRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account UID of the creator.</para>
+        /// <para>The UID of the Alibaba Cloud account of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2680******4103</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The time when the role was created. It is specified in UTC and formatted in ISO 8601.</para>
+        /// <para>The creation time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-11T08:58:35.438Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the role was last modified. It is specified in UTC and formatted in ISO 8601.</para>
+        /// <para>The modification time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-03-27T02:26:33.872Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The permission configuration of the role.</para>
+        /// <para>The permission configurations of the role.</para>
         /// </summary>
         [NameInMap("ModulePermissions")]
         [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The role ID.</para>
+        /// <para>The ID of the role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>role-dhg*******</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RoleId { get; set; }
 
         /// <summary>
-        /// <para>The role name.</para>
+        /// <para>The name of the role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev-test</para>
@@ -200,16 +200,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Creating</c>: The role is being created.</para>
-        /// </description></item>
-        /// <item><description><para><c>Updating</c>: The role is being updated.</para>
-        /// </description></item>
-        /// <item><description><para><c>Deleting</c>: The role is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><c>Succeeded</c>: The task succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><c>Failed</c>: The task failed.</para>
-        /// </description></item>
+        /// <item><description>Creating: creating</description></item>
+        /// <item><description>Updating: updating</description></item>
+        /// <item><description>Deleting: deleting</description></item>
+        /// <item><description>Successful: succeeded (final state)</description></item>
+        /// <item><description>Failed: failed (final state)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

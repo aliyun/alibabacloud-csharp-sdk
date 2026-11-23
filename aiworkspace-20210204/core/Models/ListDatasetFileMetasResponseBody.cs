@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results returned per request when using NextToken-based pagination.</para>
+        /// <para>The maximum number of results to return per query when NextToken is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. If the number of results that match the query conditions exceeds the page size, this pagination token is returned. To retrieve the next page of data, pass the returned token value as a request parameter until no token value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>The pagination cursor. If the number of returned results that match the query conditions exceeds the page size, this pagination cursor is returned. To obtain the next page of data, use the returned cursor value as a request parameter until no cursor value is returned, which indicates that all data is retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The current page size.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListPromptsRequest : TeaModel {
         /// <summary>
-        /// <para>The prompt template framework type.</para>
+        /// <para>The framework type of the prompt template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ICIO</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FrameworkType { get; set; }
 
         /// <summary>
-        /// <para>The sorting order for the specified field during paging. Default value: ASC.</para>
+        /// <para>The sorting order for the specified field during paging in a paged query. Default value: ASC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: ascending order.</description></item>
-        /// <item><description>DESC: descending order.</description></item>
+        /// <item><description>ASC: Ascending order.</description></item>
+        /// <item><description>DESC: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. Valid values:</para>
+        /// <para>The name of the field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Name: the run name.</description></item>
-        /// <item><description>GmtCreateTime (default): the run creation time.</description></item>
+        /// <item><description>Name: the name of the Run</description></item>
+        /// <item><description>GmtCreateTime: the creation time of the Run (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

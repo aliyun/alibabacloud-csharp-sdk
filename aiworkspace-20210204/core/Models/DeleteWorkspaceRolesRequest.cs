@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteWorkspaceRolesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the roles to delete.</para>
+        /// <para>(Required) The list of role IDs.</para>
         /// </summary>
         [NameInMap("RoleIds")]
         [Validation(Required=false)]

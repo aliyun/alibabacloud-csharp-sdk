@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetFileMetasResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of file metadata that failed to be updated.</para>
+        /// <para>The list of file metadata that failed to be updated.</para>
         /// </summary>
         [NameInMap("FailedDetails")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the batch metadata update. A value of \<c>true\\</c> indicates that all updates succeeded. If the value is \<c>false\\</c>, check the \<c>FailedDetails\\</c> parameter.</para>
+        /// <para>The status of the metadata update result for the current batch. A value of true indicates that all updates succeeded. If the value is false, check FailedDetails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

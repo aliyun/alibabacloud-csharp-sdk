@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetRunRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to get information about metrics, parameters, and labels. This parameter is optional. The default value is false.</para>
+        /// <para>Specifies whether to retrieve metrics, parameters, and labels. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

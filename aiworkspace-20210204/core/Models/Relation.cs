@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
     public class Relation : TeaModel {
         /// <summary>
         /// <para>ErrMsg</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Failed to create lineage relation.</para>
         /// </summary>
         [NameInMap("ErrMsg")]
         [Validation(Required=false)]

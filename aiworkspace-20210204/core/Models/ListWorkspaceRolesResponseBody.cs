@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<ListWorkspaceRolesResponseBodyRoles> Roles { get; set; }
         public class ListWorkspaceRolesResponseBodyRoles : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account UID of the creator.</para>
+            /// <para>The UID of the Alibaba Cloud account of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2680******4103</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UTC and ISO 8601 format.</para>
+            /// <para>The creation time. The time is in UTC and formatted in ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-14T07:40:01.000Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time, in UTC and ISO 8601 format.</para>
+            /// <para>The modification time. The time is in UTC and formatted in ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-15T02:29:52Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The permission configuration of the role.</para>
+            /// <para>The permission configurations of the role.</para>
             /// </summary>
             [NameInMap("ModulePermissions")]
             [Validation(Required=false)]
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The total count of matching entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

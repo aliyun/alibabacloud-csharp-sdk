@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateWorkspaceRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The permission settings for the role.</para>
+        /// <para>The permission configuration of the role.</para>
         /// </summary>
         [NameInMap("ModulePermissions")]
         [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The name of the custom role. The name must be unique within the workspace. It can be up to 64 characters long and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The name of the custom role. The name must be unique within the same workspace. The name can contain letters, digits, underscores (_), and hyphens (-), and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev-test</para>

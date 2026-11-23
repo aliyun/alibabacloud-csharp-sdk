@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<Experiment> Experiments { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. Save this token and include it in the next request to retrieve the next page of results.</para>
+        /// <para>The token for the next page. Record this token and pass it in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C6835C5-A424-5AFB-ACC2-F1E3CA1ABF7C</para>

@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <para>The resource specifications.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>对于MaxCompute {&quot;Endpoint&quot;: &quot;odps.alibaba-inc.com&quot;, &quot;Project&quot;: &quot;mignshi&quot;}</para>
+            /// <para>{&quot;Endpoint&quot;:&quot;odps.alibaba-inc.com&quot;,&quot;Project&quot;:&quot;mignshi&quot;}</para>
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]

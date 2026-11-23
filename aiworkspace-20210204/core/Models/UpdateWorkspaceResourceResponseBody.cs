@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of IDs for the resources that were updated.</para>
+        /// <para>The collection of resource IDs updated in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource-dks******jkf</para>

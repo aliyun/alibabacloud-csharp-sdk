@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The default artifact output path for tasks associated with the experiment. Currently, only OSS paths are supported.</para>
+        /// <para>The default artifact output path for the jobs associated with the experiment. Only OSS paths are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</para>
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The time when the experiment was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-30T12:51:33.028Z</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
@@ -48,13 +51,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The time when the experiment was last modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-30T12:51:33.028Z</para>
         /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The list of experiment labels.</para>
+        /// <para>The list of labels for the experiment.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Run LatestRun { get; set; }
 
         /// <summary>
-        /// <para>The experiment name.</para>
+        /// <para>The name of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exp-test</para>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the experiment owner.</para>
+        /// <para>The Alibaba Cloud account ID of the owner of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631044****3440</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The default OSS storage path for TensorBoard logs of each trial in the experiment.</para>
+        /// <para>The default OSS storage path for the TensorBoard logs of each trial in the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/tensorboard/</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string TensorboardLogUri { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the experiment creator.</para>
+        /// <para>The user ID of the creator of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1557702098******</para>

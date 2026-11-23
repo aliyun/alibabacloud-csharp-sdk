@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateWorkspaceRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task corresponding to the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UpdateWorkspaceCustomRole-role-<em><b>abc</b></em>****</para>

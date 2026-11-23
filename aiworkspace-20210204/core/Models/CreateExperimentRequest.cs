@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateExperimentRequest : TeaModel {
         /// <summary>
-        /// <para>The visibility of the experiment. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PUBLIC: Visible to all users.</description></item>
-        /// <item><description>PRIVATE: Visible only to the creator and the Alibaba Cloud account.</description></item>
-        /// </list>
-        /// <para>Default value: PRIVATE.</para>
+        /// <para>The visibility of the experiment. It can be set to private (visible only to the creator and their Alibaba Cloud account) or public (visible to all users). This parameter is optional. Default value: private.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIVATE</para>
@@ -25,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The default artifact output path for all tasks associated with the experiment. Currently, only OSS paths are supported.</para>
+        /// <para>The default artifact output path for all nodes associated with the experiment. Only OSS paths are currently supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket.oss-cn-hangzhou.aliyuncs.com/test</para>
@@ -42,11 +37,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<LabelInfo> Labels { get; set; }
 
         /// <summary>
-        /// <para>The name of the experiment. The name must meet the following rules:</para>
+        /// <para>The name of the experiment. The naming rules are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The name must start with a lowercase or uppercase letter.</description></item>
-        /// <item><description>The name can contain uppercase letters, lowercase letters, digits, underscores (_), or hyphens (-).</description></item>
-        /// <item><description>The name must be 1 to 63 characters in length.</description></item>
+        /// <item><description>Must start with a lowercase or uppercase letter.</description></item>
+        /// <item><description>Can contain lowercase and uppercase letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>Must be 1 to 63 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

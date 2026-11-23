@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<RunMetric> Metrics { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. A value of 0 indicates that all results have been returned. Use the value of this parameter for the \<c>PageToken\\</c> parameter in your next request to retrieve the next page.</para>
+        /// <para>The pagination token. Leave this parameter empty when you query the first page. The response returns the token for the next page. A value of 0 indicates that all results have been retrieved. You can obtain the token for the next page from the <b>NextPageToken</b> field in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADF6D849-*****-7E7030F0CE53</para>

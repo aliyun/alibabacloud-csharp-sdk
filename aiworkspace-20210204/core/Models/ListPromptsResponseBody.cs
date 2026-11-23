@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned under the current request conditions. This parameter is optional and may not be returned by default.</para>
+        /// <para>The total number of entries that meet the query conditions. This parameter is optional and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListExperimentRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for labels. Separate multiple conditions with commas (,). A single filter condition must be in the <c>Key=Value</c> format.</para>
+        /// <para>The label filter conditions. Separate multiple conditions with commas (,).
+        /// The format of a single filter condition is <c>Key=Value</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>is_evaluation:true</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return. The default is 10.</para>
+        /// <para>The maximum number of results to return for the request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +41,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Optional parameters.</para>
+        /// <para>The optional parameters.</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public ListExperimentRequestOptions Options { get; set; }
         public class ListExperimentRequestOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to perform an exact match for the name. Valid values are &quot;true&quot; and &quot;false&quot;.</para>
+            /// <para>Specifies whether the name is an exact match. Valid values: true and false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -59,12 +60,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The order in which to sort the results of a paged query. Valid values:</para>
+        /// <para>The sort order of the specified field in a paged query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ASC: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>DESC (default): descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.
+        /// Default value: DESC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>A list of sorting methods as strings. You can sort by the following fields: GmtCreateTime, Name, GmtModifiedTime, or ExperimentId. The sorting methods are DESC and ASC. The default is ASC.</para>
+        /// <para>The list of sort order strings. Supported fields for sorting include GmtCreateTime, Name, GmtModifiedTime, and ExperimentId. The sort order can be DESC or ASC. Default value: ASC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime DESC,Name ASC</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The paging token. It starts from 0. The default is 0.</para>
+        /// <para>The pagination token. Pages start from 0. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageToken { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting in a paged query. Currently, only the GmtCreateTime field is supported for sorting.</para>
+        /// <para>The field by which to sort the results of a paged query. Currently, only the GmtCreateTime field is supported for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retrieve the LatestRun information related to the experiment.</para>
+        /// <para>Specifies whether to retrieve the LatestRun information associated with the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -135,9 +135,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace where the experiment resides. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The ID of the workspace to which the experiment belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify a workspace ID, the system returns the list of experiments in the default workspace.</para>
+        /// <para>If you do not specify the workspace ID, the system returns the list of experiments in the default workspace.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

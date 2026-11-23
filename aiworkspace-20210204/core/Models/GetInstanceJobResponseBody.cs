@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetInstanceJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time in UTC, in ISO 8601 format.</para>
+        /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. For example, if a job creates a custom role, this parameter returns the corresponding role ID.</para>
+        /// <para>Instance ID of the task instance. For example, in a task that creates a custom role, this is instance ID of the generated role.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em><b><b>12qb3</b></b></em></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateWorkspaceCustomRole-role-<em><b>abc</b></em>****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string InstanceJobId { get; set; }
 
         /// <summary>
-        /// <para>A message providing details about the job.</para>
+        /// <para>The detailed description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-example</para>
@@ -60,18 +60,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the job. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Creating: The job is being created.</para>
-        /// </description></item>
-        /// <item><description><para>Updating: The job is being updated.</para>
-        /// </description></item>
-        /// <item><description><para>Deleting: The job is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para>Successful: The job completed successfully (a final state).</para>
-        /// </description></item>
-        /// <item><description><para>Failed: The job failed (a final state).</para>
-        /// </description></item>
+        /// <item><description>Creating: The task is being created.</description></item>
+        /// <item><description>Updating: The task is being updated.</description></item>
+        /// <item><description>Deleting: The task is being deleted.</description></item>
+        /// <item><description>Successful: The task succeeded. This is a desired state.</description></item>
+        /// <item><description>Failed: The task failed. This is a desired state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,14 +77,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The job type. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CreateWorkspaceCustomRole</para>
-        /// </description></item>
-        /// <item><description><para>UpdateWorkspaceCustomRole</para>
-        /// </description></item>
-        /// <item><description><para>DeleteWorkspaceCustomRole</para>
-        /// </description></item>
+        /// <item><description>CreateWorkspaceCustomRole</description></item>
+        /// <item><description>UpdateWorkspaceCustomRole</description></item>
+        /// <item><description>DeleteWorkspaceCustomRole</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteWorkspaceResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The resource group name. To get the resource group name, see <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a>.</para>
+        /// <para>The name of the resource group. To obtain the name of the resource group, see <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of labels.</para>
+        /// <para>The list of tags, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system.supported.eas=true</para>
@@ -32,10 +32,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The deletion behavior. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>DetachAndDelete</c> (default): Detaches the resource from the workspace and deletes the resource.</para>
-        /// </description></item>
-        /// <item><description><para><c>Detach</c>: Detaches the resource from the workspace.</para>
-        /// </description></item>
+        /// <item><description>DetachAndDelete: Unbinds the resources from the workspace and deletes the resources. This is the default value.</description></item>
+        /// <item><description>Detach: Unbinds the resources from the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Option { get; set; }
 
         /// <summary>
-        /// <para><b>This parameter is deprecated and will be removed. Use the <c>ResourceType</c> parameter instead.</b></para>
+        /// <para><b>[Deprecated]</b> This field is deprecated and will be retired. Use the ResourceType field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DLC</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of resource IDs. All specified resources must belong to the same <c>GroupName</c>. You must specify a value for at least one of the <c>GroupName</c> or <c>ResourceIds</c> parameters.</para>
+        /// <para>The IDs of the resources, separated by commas. The GroupName of these resource IDs must be the same. GroupName and ResourceIds cannot be empty at the same time, but both can be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource-dks<b><b><b>jkf,Resource-adf</b></b></b>dss</para>
@@ -66,24 +64,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The list of resource types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ECS</c>: general-purpose computing resources</para>
-        /// </description></item>
-        /// <item><description><para><c>Lingjun</c>: Lingjun intelligent computing resources</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS</c>: ACS computing resources</para>
-        /// </description></item>
-        /// <item><description><para><c>Flink</c>: Flink resources.</para>
-        /// </description></item>
-        /// <item><description><para><c>MaxCompute</c>: MaxCompute resources. For this resource type, the <c>Option</c> parameter can only be set to <c>Detach</c>.</para>
-        /// </description></item>
-        /// <item><description><para><c>SelfManagedAckPro</c>: AckPro unified management cluster resources</para>
-        /// </description></item>
-        /// <item><description><para><c>SelfManagedAckLingjun</c>: AckLinjun unified management cluster resources</para>
-        /// </description></item>
-        /// <item><description><para><c>SelfManagedASI</c>: ASI unified management cluster resources (third-party cloud)</para>
-        /// </description></item>
+        /// <item><description>ECS: general computing resources</description></item>
+        /// <item><description>Lingjun: Lingjun AI computing resources</description></item>
+        /// <item><description>ACS: ACS computing resources</description></item>
+        /// <item><description>FLINK: Flink resources</description></item>
+        /// <item><description>MaxCompute: MaxCompute resources. Only the Detach option is supported. The DetachAndDelete option is not supported.</description></item>
+        /// <item><description>SelfManagedAckPro: ACK Pro unified management cluster resources</description></item>
+        /// <item><description>SelfManagedAckLingjun: ACK Lingjun unified management cluster resources</description></item>
+        /// <item><description>SelfManagedASI: ASI unified management cluster resources (third-party cloud)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

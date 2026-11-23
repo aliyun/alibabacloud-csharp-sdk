@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<string> AdminNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who created the workspace.</para>
+        /// <para>The user ID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1157******94123</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The description of the workspace.</para>
+        /// <para>The workspace description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace description example</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The environments that the workspace contains. Valid values:</para>
+        /// <para>The environments included in the workspace.</para>
         /// <list type="bullet">
-        /// <item><description><para>A workspace in basic mode has only the production environment (prod).</para>
-        /// </description></item>
-        /// <item><description><para>A workspace in standard mode has both the development environment (dev) and the production environment (prod).</para>
-        /// </description></item>
+        /// <item><description>Simple mode includes only the production environment (prod).</description></item>
+        /// <item><description>Standard mode includes the development environment (dev) and the production environment (prod).</description></item>
         /// </list>
         /// </summary>
         [NameInMap("EnvTypes")]
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<string> EnvTypes { get; set; }
 
         /// <summary>
-        /// <para>Additional information. This parameter currently contains the tenant ID (TenantId).</para>
+        /// <para>The extra information, which currently includes TenantId (tenant ID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;TenantId&quot;: &quot;4286******98&quot;}</para>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfos { get; set; }
 
         /// <summary>
-        /// <para>The time when the workspace was created. The time is in UTC and follows the ISO 8601 standard.</para>
+        /// <para>The time when the workspace was created. The time is displayed in UTC and formatted in ISO 8601.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the workspace was last modified. The time is in UTC and follows the ISO 8601 standard.</para>
+        /// <para>The time when the workspace was modified. The time is displayed in UTC and formatted in ISO 8601.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -90,12 +88,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the workspace is the default workspace. Valid values:</para>
+        /// <para>Specifies whether the workspace is the default workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false: The workspace is not the default workspace.</para>
-        /// </description></item>
-        /// <item><description><para>true: The workspace is the default workspace.</para>
-        /// </description></item>
+        /// <item><description>false: The workspace is not the default workspace.</description></item>
+        /// <item><description>true: The workspace is the default workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +102,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// <para>The information about the workspace owner. This parameter is returned only when Verbose is set to true.</para>
+        /// <para>The workspace owner information. Displayed when Verbose is set to true.</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
@@ -175,20 +171,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the workspace. Valid values:</para>
+        /// <para>The workspace status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ENABLED: The workspace is running as normal.</para>
-        /// </description></item>
-        /// <item><description><para>INITIALIZING: The workspace is being initialized.</para>
-        /// </description></item>
-        /// <item><description><para>FAILURE: The workspace failed to be created.</para>
-        /// </description></item>
-        /// <item><description><para>DISABLED: The workspace is manually disabled.</para>
-        /// </description></item>
-        /// <item><description><para>FROZEN: The workspace is frozen due to an overdue payment.</para>
-        /// </description></item>
-        /// <item><description><para>UPDATING: The workspace is being updated.</para>
-        /// </description></item>
+        /// <item><description>ENABLED: Normal.</description></item>
+        /// <item><description>INITIALIZING: Initializing.</description></item>
+        /// <item><description>FAILURE: Failed.</description></item>
+        /// <item><description>DISABLED: Manually disabled.</description></item>
+        /// <item><description>FROZEN: Frozen due to overdue payment.</description></item>
+        /// <item><description>UPDATING: Updating.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

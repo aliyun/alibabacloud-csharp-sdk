@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The globally unique identifier of the lineage relationship.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0f94c587-e926-48c8-9efe-bf9f8d9aa5c2</para>
         /// </summary>
         [NameInMap("RelationshipGuid")]
         [Validation(Required=false)]

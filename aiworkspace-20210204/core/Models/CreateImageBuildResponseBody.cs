@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageBuildId { get; set; }
 
         /// <summary>
-        /// <para>The build task ID.</para>
+        /// <para>The build job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-****ks92</para>

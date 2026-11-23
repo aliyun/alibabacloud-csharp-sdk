@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public List<string> Roles { get; set; }
 
             /// <summary>
-            /// <para>The member IDs. Use commas (,) to separate multiple IDs. For more information, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</para>
+            /// <para>The list of member IDs. Separate multiple member IDs with commas (,). For information about how to obtain a member ID, see <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

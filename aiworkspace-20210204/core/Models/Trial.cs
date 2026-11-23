@@ -108,6 +108,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>UserId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1557702098******</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

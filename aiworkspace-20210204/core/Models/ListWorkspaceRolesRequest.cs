@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListWorkspaceRolesRequest : TeaModel {
         /// <summary>
-        /// <para>The sort order for the specified sort field. Valid values:</para>
+        /// <para>The sorting order for the specified sorting field in paging. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ASC</c> (default): Ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><c>DESC</c>: Descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: Ascending order. Default value.</description></item>
+        /// <item><description>DESC: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. The default value is 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of role IDs.</para>
+        /// <para>The list of role IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>role-dhg*******</para>
@@ -66,9 +64,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RoleName { get; set; }
 
         /// <summary>
-        /// <para>The role type.</para>
+        /// <para>The role type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>custom</c>: A custom role.</description></item>
+        /// <item><description>custom: custom role.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,12 +77,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RoleType { get; set; }
 
         /// <summary>
-        /// <para>The sort field for paginated queries. Valid values:</para>
+        /// <para>The sorting field for paging. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>GmtCreateTime</c> (default): Sorts by creation time.</para>
-        /// </description></item>
-        /// <item><description><para><c>GmtModifiedTime</c>: Sorts by modification time.</para>
-        /// </description></item>
+        /// <item><description>GmtCreateTime: Sort by creation time. Default value.</description></item>
+        /// <item><description>GmtModifiedTime: Sort by modification time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,19 +91,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>Creating</c></para>
-        /// </description></item>
-        /// <item><description><para><c>Updating</c></para>
-        /// </description></item>
-        /// <item><description><para><c>Deleting</c></para>
-        /// </description></item>
-        /// <item><description><para><c>Succeeded</c>: A terminal state.</para>
-        /// </description></item>
-        /// <item><description><para><c>Failed</c>: A terminal state.</para>
-        /// </description></item>
-        /// </list>
+        /// <para><b>[Deprecated]</b> The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -117,7 +101,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of fields to return. Currently, only <c>ModulePermissions</c> is supported, which returns the permission configuration of the role.</para>
+        /// <para>The comma-separated list of fields to return. Currently, only ModulePermissions is supported, which indicates whether to return the permission configurations of the role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ModulePermissions</para>

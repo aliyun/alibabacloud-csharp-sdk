@@ -1,3 +1,9 @@
+2026-11-23 Version: 6.3.6
+- Update API CreateImageBuild: add request parameters body.BuildConfig.DataSources.
+- Update API CreateImageBuild: add request parameters body.BuildConfig.DockerfilePath.
+- Update API GetWorkspace: add request parameters ExtraVerboseFields.
+
+
 2026-10-17 Version: 6.3.5
 - Update API ListConfigs: add request parameters Options.
 

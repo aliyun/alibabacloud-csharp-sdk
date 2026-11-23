@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ExperimentId { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was created. The time follows the ISO 8601 standard in UTC. Format: YYYY-MM-DDTHH:mm:ss.sssZ.</para>
+        /// <para>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.sssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The labels of the task for exact match. Supported formats:</para>
+        /// <para>The labels of the task for exact matching. Supported formats:</para>
         /// <list type="bullet">
         /// <item><description>Single-label query: &quot;is_evaluation:true&quot;</description></item>
-        /// <item><description>Multi-label scenario (not recommended except in special cases due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot; separated by commas (,), indicating that multiple label key-value pairs must all match.</description></item>
+        /// <item><description>Multi-label query (not recommended unless necessary due to potential performance issues): &quot;is_evaluation:true,LLM_evaluation:true&quot;. Separate multiple label key-value pairs with commas (,). All specified label key-value pairs must be matched at the same time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return. Default value: 10.</para>
+        /// <para>The maximum number of results to return for the request. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The run name.</para>
+        /// <para>The name of the run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myName</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sorting order for the specified field in a paging query. Used together with SortBy. Valid values:</para>
+        /// <para>The sorting order of the specified field for a paging query. This parameter is used together with SortBy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: Ascending order.</description></item>
-        /// <item><description>DESC (default): Descending order.</description></item>
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC (default): descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of sorting strings. Supported fields: GmtCreateTime and Name. Supported sorting orders: DESC and ASC. Default: ASC. Separate multiple fields with commas (,).</para>
+        /// <para>The list of strings that specify the sorting methods. Supported fields for sorting include GmtCreateTime and Name. Valid sorting methods are DESC and ASC. Default value: ASC. You can specify multiple fields and separate them with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime DESC,Name ASC</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: greater than 0. Default value: 1.</para>
+        /// <para>The current page number. Valid values: integers greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Starts from 0. Default value: 0.</para>
+        /// <para>The pagination token. The token starts from 0. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -118,10 +118,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageToken { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. Valid values:</para>
+        /// <para>The name of the field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Name: The run name.</description></item>
-        /// <item><description>GmtCreateTime (default): The run creation time.</description></item>
+        /// <item><description>Name: the name of the run.</description></item>
+        /// <item><description>GmtCreateTime (default): the time when the run was created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,8 +154,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>Specifies whether to display detailed information, including Metrics, Params, and Labels. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Detailed information is displayed.</description></item>
-        /// <item><description>false (default): Detailed information is not displayed.</description></item>
+        /// <item><description>true: displays detailed information.</description></item>
+        /// <item><description>false (default): does not display detailed information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,9 +166,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace where the experiment resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The ID of the workspace to which the experiment belongs. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify a workspace ID, the system returns the run list of the default workspace.</para>
+        /// <para>If you do not specify the workspace ID, the system returns the list of runs in the default workspace.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

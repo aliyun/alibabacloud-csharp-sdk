@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of code source configurations that match the filter conditions.</para>
+        /// <para>The total number of code source configurations that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

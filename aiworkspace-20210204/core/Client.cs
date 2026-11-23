@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "AIWorkSpace";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -454,6 +457,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Adds labels to a specified image.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为自定义镜像添加标签。
+        /// 前置条件：仅支持为自定义镜像添加标签。请先调用 AddImage 将自定义镜像添加到工作空间，再使用其返回的 ImageId 调用本接口；传入官方镜像会返回错误码 201200010（Can\&quot;t update official images）。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddImageLabelsRequest
         /// </param>
@@ -499,6 +508,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <summary>
         /// <para>Adds labels to a specified image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为自定义镜像添加标签。
+        /// 前置条件：仅支持为自定义镜像添加标签。请先调用 AddImage 将自定义镜像添加到工作空间，再使用其返回的 ImageId 调用本接口；传入官方镜像会返回错误码 201200010（Can\&quot;t update official images）。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddImageLabelsRequest
@@ -546,6 +561,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Adds labels to a specified image.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为自定义镜像添加标签。
+        /// 前置条件：仅支持为自定义镜像添加标签。请先调用 AddImage 将自定义镜像添加到工作空间，再使用其返回的 ImageId 调用本接口；传入官方镜像会返回错误码 201200010（Can\&quot;t update official images）。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddImageLabelsRequest
         /// </param>
@@ -565,6 +586,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Adds labels to a specified image.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为自定义镜像添加标签。
+        /// 前置条件：仅支持为自定义镜像添加标签。请先调用 AddImage 将自定义镜像添加到工作空间，再使用其返回的 ImageId 调用本接口；传入官方镜像会返回错误码 201200010（Can\&quot;t update official images）。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddImageLabelsRequest
         /// </param>
@@ -581,7 +608,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</para>
+        /// <para>Assigns a role to a member in a workspace to grant the permissions associated with the role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -621,7 +648,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</para>
+        /// <para>Assigns a role to a member in a workspace to grant the permissions associated with the role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -661,7 +688,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</para>
+        /// <para>Assigns a role to a member in a workspace to grant the permissions associated with the role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -680,7 +707,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns a role to a member in a workspace, granting that member the role\&quot;s permissions.</para>
+        /// <para>Assigns a role to a member in a workspace to grant the permissions associated with the role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1595,7 +1622,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records in a dataset in batches.</para>
+        /// <para>Creates file metadata records for a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1649,7 +1676,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records in a dataset in batches.</para>
+        /// <para>Creates file metadata records for a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1703,7 +1730,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records in a dataset in batches.</para>
+        /// <para>Creates file metadata records for a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1722,7 +1749,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records in a dataset in batches.</para>
+        /// <para>Creates file metadata records for a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2777,12 +2804,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</para>
+        /// <para>Builds a custom image based on the specified configurations. After the build succeeds, the image is added to the custom images of the current workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -2870,12 +2897,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</para>
+        /// <para>Builds a custom image based on the specified configurations. After the build succeeds, the image is added to the custom images of the current workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -2963,12 +2990,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</para>
+        /// <para>Builds a custom image based on the specified configurations. After the build succeeds, the image is added to the custom images of the current workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -2987,12 +3014,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Builds a custom image based on the specified configuration. After the image is successfully built, it is added to the list of custom images in the current workspace.</para>
+        /// <para>Builds a custom image based on the specified configurations. After the build succeeds, the image is added to the custom images of the current workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -3011,7 +3038,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more users to a workspace.</para>
+        /// <para>Adds one or more users to a workspace as members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3057,7 +3084,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more users to a workspace.</para>
+        /// <para>Adds one or more users to a workspace as members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3103,7 +3130,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more users to a workspace.</para>
+        /// <para>Adds one or more users to a workspace as members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3122,7 +3149,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more users to a workspace.</para>
+        /// <para>Adds one or more users to a workspace as members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4221,7 +4248,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or executed as standalone code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4287,7 +4314,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or executed as standalone code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4353,7 +4380,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or executed as standalone code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4372,7 +4399,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or can be a standalone code execution.</para>
+        /// <para>Creates a run. A run belongs to an experiment and can be associated with a specific workload or executed as standalone code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4691,7 +4718,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a role to a workspace.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4749,7 +4776,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a role to a workspace.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4807,7 +4834,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a role to a workspace.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4826,7 +4853,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a role to a workspace.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6976,9 +7003,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys and values must be non-empty strings and cannot exceed 128 characters in length.</description></item>
         /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
         /// </list>
         /// </description>
@@ -7031,9 +7058,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys and values must be non-empty strings and cannot exceed 128 characters in length.</description></item>
         /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
         /// </list>
         /// </description>
@@ -7086,9 +7113,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys and values must be non-empty strings and cannot exceed 128 characters in length.</description></item>
         /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
         /// </list>
         /// </description>
@@ -7114,9 +7141,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When calling this operation, note the following:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Tag keys and values are non-empty strings and cannot exceed 128 characters in length.</description></item>
+        /// <item><description>Tag keys and values must be non-empty strings and cannot exceed 128 characters in length.</description></item>
         /// <item><description>Tag keys cannot start with aliyun, acs, http://, or https://.</description></item>
         /// </list>
         /// </description>
@@ -7629,7 +7656,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a resource from a workspace. This operation does not delete the underlying resource.</para>
+        /// <para>Deletes references to resources from a workspace without deleting the underlying resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7695,7 +7722,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a resource from a workspace. This operation does not delete the underlying resource.</para>
+        /// <para>Deletes references to resources from a workspace without deleting the underlying resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7761,7 +7788,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a resource from a workspace. This operation does not delete the underlying resource.</para>
+        /// <para>Deletes references to resources from a workspace without deleting the underlying resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7780,7 +7807,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches a resource from a workspace. This operation does not delete the underlying resource.</para>
+        /// <para>Deletes references to resources from a workspace without deleting the underlying resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7799,7 +7826,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more roles from a workspace.</para>
+        /// <para>Deletes workspace roles in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7845,7 +7872,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more roles from a workspace.</para>
+        /// <para>Deletes workspace roles in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7891,7 +7918,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more roles from a workspace.</para>
+        /// <para>Deletes workspace roles in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7910,7 +7937,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more roles from a workspace.</para>
+        /// <para>Deletes workspace roles in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9529,8 +9556,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a job.</para>
+        /// <para>Retrieves a task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询异步任务（InstanceJobId）的执行状态和结果。
+        /// InstanceJobId 由 CreateWorkspaceRole、UpdateWorkspaceRole 等异步接口在响应字段 InstanceJobId 中返回，对应的任务类型见响应字段 Type。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceJobRequest
@@ -9569,8 +9602,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a job.</para>
+        /// <para>Retrieves a task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询异步任务（InstanceJobId）的执行状态和结果。
+        /// InstanceJobId 由 CreateWorkspaceRole、UpdateWorkspaceRole 等异步接口在响应字段 InstanceJobId 中返回，对应的任务类型见响应字段 Type。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceJobRequest
@@ -9609,8 +9648,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a job.</para>
+        /// <para>Retrieves a task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询异步任务（InstanceJobId）的执行状态和结果。
+        /// InstanceJobId 由 CreateWorkspaceRole、UpdateWorkspaceRole 等异步接口在响应字段 InstanceJobId 中返回，对应的任务类型见响应字段 Type。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceJobRequest
@@ -9628,8 +9673,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a job.</para>
+        /// <para>Retrieves a task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询异步任务（InstanceJobId）的执行状态和结果。
+        /// InstanceJobId 由 CreateWorkspaceRole、UpdateWorkspaceRole 等异步接口在响应字段 InstanceJobId 中返回，对应的任务类型见响应字段 Type。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetInstanceJobRequest
@@ -10365,7 +10416,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves run details.</para>
+        /// <para>Retrieves the details of a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10411,7 +10462,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves run details.</para>
+        /// <para>Retrieves the details of a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10457,7 +10508,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves run details.</para>
+        /// <para>Retrieves the details of a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10476,7 +10527,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves run details.</para>
+        /// <para>Retrieves the details of a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10515,6 +10566,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraVerboseFields))
+            {
+                query["ExtraVerboseFields"] = request.ExtraVerboseFields;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
             {
                 query["Verbose"] = request.Verbose;
@@ -10561,6 +10616,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraVerboseFields))
+            {
+                query["ExtraVerboseFields"] = request.ExtraVerboseFields;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Verbose))
             {
                 query["Verbose"] = request.Verbose;
@@ -10625,7 +10684,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific role within a workspace.</para>
+        /// <para>Retrieves workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10665,7 +10724,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific role within a workspace.</para>
+        /// <para>Retrieves workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10705,7 +10764,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific role within a workspace.</para>
+        /// <para>Retrieves workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10724,7 +10783,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets information about a specific role within a workspace.</para>
+        /// <para>Retrieves workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10743,7 +10802,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
+        /// <para>Queries a list of code configurations with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10809,7 +10868,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
+        /// <para>Queries a list of code configurations with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10875,7 +10934,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
+        /// <para>Queries a list of code configurations with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10894,7 +10953,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
+        /// <para>Queries a list of code configurations with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14715,7 +14774,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of metric records for a run.</para>
+        /// <para>Retrieves the list of metric records for a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14769,7 +14828,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of metric records for a run.</para>
+        /// <para>Retrieves the list of metric records for a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14823,7 +14882,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of metric records for a run.</para>
+        /// <para>Retrieves the list of metric records for a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14842,7 +14901,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of metric records for a run.</para>
+        /// <para>Retrieves the list of metric records for a run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15241,7 +15300,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the roles in a specified workspace.</para>
+        /// <para>Lists workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15319,7 +15378,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the roles in a specified workspace.</para>
+        /// <para>Lists workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15397,7 +15456,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the roles in a specified workspace.</para>
+        /// <para>Lists workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15416,7 +15475,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the roles in a specified workspace.</para>
+        /// <para>Lists workspace roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15819,7 +15878,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Records the metrics of a run in a batch.</para>
+        /// <para>Records metrics for a run in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15865,7 +15924,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Records the metrics of a run in a batch.</para>
+        /// <para>Records metrics for a run in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15911,7 +15970,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Records the metrics of a run in a batch.</para>
+        /// <para>Records metrics for a run in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15930,7 +15989,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Records the metrics of a run in a batch.</para>
+        /// <para>Records metrics for a run in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16188,6 +16247,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将镜像的可见性从 PRIVATE 改为 PUBLIC。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持对可见性为 PRIVATE 的镜像调用；已是 PUBLIC 的镜像无需再次发布，直接调用会返回 400 错误。</description></item>
+        /// <item><description>若当前工作空间没有 PRIVATE 镜像，请先调用 AddImage 添加自定义镜像（Accessibility 设为 PRIVATE），再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PublishImageRequest
         /// </param>
@@ -16227,6 +16295,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <summary>
         /// <para>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将镜像的可见性从 PRIVATE 改为 PUBLIC。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持对可见性为 PRIVATE 的镜像调用；已是 PUBLIC 的镜像无需再次发布，直接调用会返回 400 错误。</description></item>
+        /// <item><description>若当前工作空间没有 PRIVATE 镜像，请先调用 AddImage 添加自定义镜像（Accessibility 设为 PRIVATE），再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PublishImageRequest
@@ -16268,6 +16345,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将镜像的可见性从 PRIVATE 改为 PUBLIC。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持对可见性为 PRIVATE 的镜像调用；已是 PUBLIC 的镜像无需再次发布，直接调用会返回 400 错误。</description></item>
+        /// <item><description>若当前工作空间没有 PRIVATE 镜像，请先调用 AddImage 添加自定义镜像（Accessibility 设为 PRIVATE），再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PublishImageRequest
         /// </param>
@@ -16287,6 +16373,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Publishes an image and changes its visibility from PRIVATE to PUBLIC.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将镜像的可见性从 PRIVATE 改为 PUBLIC。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持对可见性为 PRIVATE 的镜像调用；已是 PUBLIC 的镜像无需再次发布，直接调用会返回 400 错误。</description></item>
+        /// <item><description>若当前工作空间没有 PRIVATE 镜像，请先调用 AddImage 添加自定义镜像（Accessibility 设为 PRIVATE），再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// PublishImageRequest
         /// </param>
@@ -16305,6 +16400,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <summary>
         /// <para>Deletes an image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除镜像。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除用户自建（自定义）镜像，传入官方镜像会返回错误码 201200013。</description></item>
+        /// <item><description>若账号下尚无自建镜像，需先调用 AddImage 创建自定义镜像，再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveImageRequest
@@ -16346,6 +16450,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Deletes an image.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除镜像。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除用户自建（自定义）镜像，传入官方镜像会返回错误码 201200013。</description></item>
+        /// <item><description>若账号下尚无自建镜像，需先调用 AddImage 创建自定义镜像，再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveImageRequest
         /// </param>
@@ -16386,6 +16499,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <para>Deletes an image.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除镜像。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除用户自建（自定义）镜像，传入官方镜像会返回错误码 201200013。</description></item>
+        /// <item><description>若账号下尚无自建镜像，需先调用 AddImage 创建自定义镜像，再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveImageRequest
         /// </param>
@@ -16404,6 +16526,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         /// <summary>
         /// <para>Deletes an image.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除镜像。</para>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除用户自建（自定义）镜像，传入官方镜像会返回错误码 201200013。</description></item>
+        /// <item><description>若账号下尚无自建镜像，需先调用 AddImage 创建自定义镜像，再使用其返回的 ImageId 调用本接口。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveImageRequest
@@ -16539,7 +16670,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a member.</para>
+        /// <para>Deletes a member role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16579,7 +16710,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a member.</para>
+        /// <para>Deletes a member role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16619,7 +16750,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a member.</para>
+        /// <para>Deletes a member role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16638,7 +16769,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a role from a member.</para>
+        /// <para>Deletes a member role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17055,7 +17186,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source configuration.</para>
+        /// <para>Updates the code configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17133,7 +17264,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source configuration.</para>
+        /// <para>Updates the code configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17211,7 +17342,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source configuration.</para>
+        /// <para>Updates the code configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17230,7 +17361,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source configuration.</para>
+        /// <para>Updates the code configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17533,7 +17664,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection configuration.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17591,7 +17722,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection configuration.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17649,7 +17780,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection configuration.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17668,7 +17799,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection configuration.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17873,7 +18004,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple file metadata records in a dataset.</para>
+        /// <para>Updates the file metadata records of a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17931,7 +18062,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple file metadata records in a dataset.</para>
+        /// <para>Updates the file metadata records of a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17989,7 +18120,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple file metadata records in a dataset.</para>
+        /// <para>Updates the file metadata records of a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18008,7 +18139,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates multiple file metadata records in a dataset.</para>
+        /// <para>Updates the file metadata records of a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18509,7 +18640,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a workspace as the default.</para>
+        /// <para>Sets a workspace as the default workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18555,7 +18686,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a workspace as the default.</para>
+        /// <para>Sets a workspace as the default workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18601,7 +18732,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a workspace as the default.</para>
+        /// <para>Sets a workspace as the default workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18620,7 +18751,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a workspace as the default.</para>
+        /// <para>Sets a workspace as the default workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19205,12 +19336,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prompt of a dataset.</para>
+        /// <para>Update a prompt</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -19268,12 +19399,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prompt of a dataset.</para>
+        /// <para>Update a prompt</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -19331,12 +19462,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prompt of a dataset.</para>
+        /// <para>Update a prompt</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -19355,12 +19486,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prompt of a dataset.</para>
+        /// <para>Update a prompt</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -19663,7 +19794,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates resources in a workspace.</para>
+        /// <para>Updates the resources of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19733,7 +19864,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates resources in a workspace.</para>
+        /// <para>Updates the resources of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19803,7 +19934,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates resources in a workspace.</para>
+        /// <para>Updates the resources of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19822,7 +19953,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates resources in a workspace.</para>
+        /// <para>Updates the resources of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19841,7 +19972,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a role in a workspace.</para>
+        /// <para>Updates the workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19891,7 +20022,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a role in a workspace.</para>
+        /// <para>Updates the workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19941,7 +20072,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a role in a workspace.</para>
+        /// <para>Updates the workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19960,7 +20091,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a role in a workspace.</para>
+        /// <para>Updates the workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
