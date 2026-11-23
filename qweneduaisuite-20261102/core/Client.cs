@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
             this._productId = "QwenEduAiSuite";
             AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
             this._spi = gatewayClient;
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("qweneduaisuite", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -42,12 +42,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通千问教育API权限</para>
+        /// <para>Activates the learning capability for the current Alibaba Cloud account and supports querying the activation status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开通千问教育API权限</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation activates the Qwen learning AI suite capability for the current Alibaba Cloud account.</description></item>
+        /// <item><description>You must call this operation first. You can call business API operations such as problem solving and grading only after <c>ACTIVE</c> is returned.</description></item>
+        /// </list>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Both Alibaba Cloud accounts and RAM users can call this operation.</description></item>
+        /// <item><description>When a RAM user calls this operation, ensure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -87,12 +97,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通千问教育API权限</para>
+        /// <para>Activates the learning capability for the current Alibaba Cloud account and supports querying the activation status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开通千问教育API权限</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation activates the Qwen learning AI suite capability for the current Alibaba Cloud account.</description></item>
+        /// <item><description>You must call this operation first. You can call business API operations such as problem solving and grading only after <c>ACTIVE</c> is returned.</description></item>
+        /// </list>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Both Alibaba Cloud accounts and RAM users can call this operation.</description></item>
+        /// <item><description>When a RAM user calls this operation, ensure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -132,12 +152,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通千问教育API权限</para>
+        /// <para>Activates the learning capability for the current Alibaba Cloud account and supports querying the activation status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开通千问教育API权限</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation activates the Qwen learning AI suite capability for the current Alibaba Cloud account.</description></item>
+        /// <item><description>You must call this operation first. You can call business API operations such as problem solving and grading only after <c>ACTIVE</c> is returned.</description></item>
+        /// </list>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Both Alibaba Cloud accounts and RAM users can call this operation.</description></item>
+        /// <item><description>When a RAM user calls this operation, ensure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -156,12 +186,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通千问教育API权限</para>
+        /// <para>Activates the learning capability for the current Alibaba Cloud account and supports querying the activation status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开通千问教育API权限</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation activates the Qwen learning AI suite capability for the current Alibaba Cloud account.</description></item>
+        /// <item><description>You must call this operation first. You can call business API operations such as problem solving and grading only after <c>ACTIVE</c> is returned.</description></item>
+        /// </list>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>Both Alibaba Cloud accounts and RAM users can call this operation.</description></item>
+        /// <item><description>When a RAM user calls this operation, ensure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -180,20 +220,19 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交单页作业图片，返回任务ID及初步检测结果。</para>
+        /// <para>Submits a single-page homework image and asynchronously retrieves the grading results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于提交单页作业图片进行批改，支持通过图片URL或Base64编码的图片数据。</description></item>
-        /// <item><description>提交后会立即返回任务ID、矫正图及题目检测结果，但不包含具体的批改结论。</description></item>
-        /// <item><description>需要通过查询接口轮询获取最终的批改结果。</description></item>
-        /// <item><description>支持对图片进行透视矫正，默认开启。</description></item>
-        /// <item><description>图片要求：支持多种格式（JPEG, PNG, GIF等），推荐体积不超过1MB，最大支持15MB（Base64编码后）。</description></item>
-        /// <item><description>每次请求仅处理一张图片，多张图片需分别提交。</description></item>
-        /// <item><description><c>request_id</c>字段建议由调用方生成并传递，以便于问题排查和对账。</description></item>
+        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
+        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses use the JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -252,20 +291,19 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交单页作业图片，返回任务ID及初步检测结果。</para>
+        /// <para>Submits a single-page homework image and asynchronously retrieves the grading results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于提交单页作业图片进行批改，支持通过图片URL或Base64编码的图片数据。</description></item>
-        /// <item><description>提交后会立即返回任务ID、矫正图及题目检测结果，但不包含具体的批改结论。</description></item>
-        /// <item><description>需要通过查询接口轮询获取最终的批改结果。</description></item>
-        /// <item><description>支持对图片进行透视矫正，默认开启。</description></item>
-        /// <item><description>图片要求：支持多种格式（JPEG, PNG, GIF等），推荐体积不超过1MB，最大支持15MB（Base64编码后）。</description></item>
-        /// <item><description>每次请求仅处理一张图片，多张图片需分别提交。</description></item>
-        /// <item><description><c>request_id</c>字段建议由调用方生成并传递，以便于问题排查和对账。</description></item>
+        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
+        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses use the JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -324,20 +362,19 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交单页作业图片，返回任务ID及初步检测结果。</para>
+        /// <para>Submits a single-page homework image and asynchronously retrieves the grading results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于提交单页作业图片进行批改，支持通过图片URL或Base64编码的图片数据。</description></item>
-        /// <item><description>提交后会立即返回任务ID、矫正图及题目检测结果，但不包含具体的批改结论。</description></item>
-        /// <item><description>需要通过查询接口轮询获取最终的批改结果。</description></item>
-        /// <item><description>支持对图片进行透视矫正，默认开启。</description></item>
-        /// <item><description>图片要求：支持多种格式（JPEG, PNG, GIF等），推荐体积不超过1MB，最大支持15MB（Base64编码后）。</description></item>
-        /// <item><description>每次请求仅处理一张图片，多张图片需分别提交。</description></item>
-        /// <item><description><c>request_id</c>字段建议由调用方生成并传递，以便于问题排查和对账。</description></item>
+        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
+        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses use the JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -357,20 +394,19 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交单页作业图片，返回任务ID及初步检测结果。</para>
+        /// <para>Submits a single-page homework image and asynchronously retrieves the grading results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于提交单页作业图片进行批改，支持通过图片URL或Base64编码的图片数据。</description></item>
-        /// <item><description>提交后会立即返回任务ID、矫正图及题目检测结果，但不包含具体的批改结论。</description></item>
-        /// <item><description>需要通过查询接口轮询获取最终的批改结果。</description></item>
-        /// <item><description>支持对图片进行透视矫正，默认开启。</description></item>
-        /// <item><description>图片要求：支持多种格式（JPEG, PNG, GIF等），推荐体积不超过1MB，最大支持15MB（Base64编码后）。</description></item>
-        /// <item><description>每次请求仅处理一张图片，多张图片需分别提交。</description></item>
-        /// <item><description><c>request_id</c>字段建议由调用方生成并传递，以便于问题排查和对账。</description></item>
+        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
+        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses use the JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -390,21 +426,24 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过图片URL或Base64编码接收题目，返回解题过程和结果。</para>
+        /// <para>Provides question resolution services by using image URLs or Base64 encoding.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过单张题目图片的URL或Base64编码进行解题请求。</description></item>
-        /// <item><description>支持处理JPEG、JPG、PNG格式的图片，且图片大小不超过10MB，像素总数不超过260万。</description></item>
-        /// <item><description>请求必须携带<c>request_id</c>字段，用于链路关联和对账；建议使用UUID以保证唯一性。</description></item>
-        /// <item><description><c>Authorization</c>头部需包含有效的<c>appKey</c>，采用<c>Bearer &lt;appKey&gt;</c>格式。</description></item>
-        /// <item><description>接口响应为SSE流式数据，客户端应逐事件读取并解析，不得等待连接关闭后整体读取。</description></item>
-        /// <item><description>成功响应包括<c>message</c>（过程态全量解题快照）和<c>complete</c>（最终完整结果）两种事件类型。</description></item>
-        /// <item><description>错误处理分为建流前与建流后两个阶段，根据错误码及<c>retryable</c>字段决定是否重试。</description></item>
-        /// <item><description>客户端超时设置建议不低于3分钟，并确保代理层不会缓存SSE响应或提前关闭长连接。</description></item>
+        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
+        /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
+        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
+        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -461,21 +500,24 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过图片URL或Base64编码接收题目，返回解题过程和结果。</para>
+        /// <para>Provides question resolution services by using image URLs or Base64 encoding.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过单张题目图片的URL或Base64编码进行解题请求。</description></item>
-        /// <item><description>支持处理JPEG、JPG、PNG格式的图片，且图片大小不超过10MB，像素总数不超过260万。</description></item>
-        /// <item><description>请求必须携带<c>request_id</c>字段，用于链路关联和对账；建议使用UUID以保证唯一性。</description></item>
-        /// <item><description><c>Authorization</c>头部需包含有效的<c>appKey</c>，采用<c>Bearer &lt;appKey&gt;</c>格式。</description></item>
-        /// <item><description>接口响应为SSE流式数据，客户端应逐事件读取并解析，不得等待连接关闭后整体读取。</description></item>
-        /// <item><description>成功响应包括<c>message</c>（过程态全量解题快照）和<c>complete</c>（最终完整结果）两种事件类型。</description></item>
-        /// <item><description>错误处理分为建流前与建流后两个阶段，根据错误码及<c>retryable</c>字段决定是否重试。</description></item>
-        /// <item><description>客户端超时设置建议不低于3分钟，并确保代理层不会缓存SSE响应或提前关闭长连接。</description></item>
+        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
+        /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
+        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
+        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -532,21 +574,24 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过图片URL或Base64编码接收题目，返回解题过程和结果。</para>
+        /// <para>Provides question resolution services by using image URLs or Base64 encoding.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过单张题目图片的URL或Base64编码进行解题请求。</description></item>
-        /// <item><description>支持处理JPEG、JPG、PNG格式的图片，且图片大小不超过10MB，像素总数不超过260万。</description></item>
-        /// <item><description>请求必须携带<c>request_id</c>字段，用于链路关联和对账；建议使用UUID以保证唯一性。</description></item>
-        /// <item><description><c>Authorization</c>头部需包含有效的<c>appKey</c>，采用<c>Bearer &lt;appKey&gt;</c>格式。</description></item>
-        /// <item><description>接口响应为SSE流式数据，客户端应逐事件读取并解析，不得等待连接关闭后整体读取。</description></item>
-        /// <item><description>成功响应包括<c>message</c>（过程态全量解题快照）和<c>complete</c>（最终完整结果）两种事件类型。</description></item>
-        /// <item><description>错误处理分为建流前与建流后两个阶段，根据错误码及<c>retryable</c>字段决定是否重试。</description></item>
-        /// <item><description>客户端超时设置建议不低于3分钟，并确保代理层不会缓存SSE响应或提前关闭长连接。</description></item>
+        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
+        /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
+        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
+        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -566,21 +611,24 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过图片URL或Base64编码接收题目，返回解题过程和结果。</para>
+        /// <para>Provides question resolution services by using image URLs or Base64 encoding.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过单张题目图片的URL或Base64编码进行解题请求。</description></item>
-        /// <item><description>支持处理JPEG、JPG、PNG格式的图片，且图片大小不超过10MB，像素总数不超过260万。</description></item>
-        /// <item><description>请求必须携带<c>request_id</c>字段，用于链路关联和对账；建议使用UUID以保证唯一性。</description></item>
-        /// <item><description><c>Authorization</c>头部需包含有效的<c>appKey</c>，采用<c>Bearer &lt;appKey&gt;</c>格式。</description></item>
-        /// <item><description>接口响应为SSE流式数据，客户端应逐事件读取并解析，不得等待连接关闭后整体读取。</description></item>
-        /// <item><description>成功响应包括<c>message</c>（过程态全量解题快照）和<c>complete</c>（最终完整结果）两种事件类型。</description></item>
-        /// <item><description>错误处理分为建流前与建流后两个阶段，根据错误码及<c>retryable</c>字段决定是否重试。</description></item>
-        /// <item><description>客户端超时设置建议不低于3分钟，并确保代理层不会缓存SSE响应或提前关闭长连接。</description></item>
+        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
+        /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
+        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
+        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -600,8 +648,20 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批改进度、增量结果、终态结果及 Token 用量</para>
+        /// <para>Queries the progress and final results of homework grading based on the task ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the status and detailed results of single-page homework grading by using the <c>taskId</c> returned when the task is submitted.</description></item>
+        /// <item><description>The caller should poll this operation at an interval of 1 to 2 seconds until the task status changes to <c>finished</c> or <c>failed</c>.</description></item>
+        /// <item><description>When the task status is <c>finished</c>, the response contains complete grading information, including question recognition, grading conclusions, dewarped images, and rendered images.</description></item>
+        /// <item><description>If the task fails (the status is <c>failed</c>), check the <c>message</c> field in the response or the specific fault information in <c>data</c>.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetEduHomeworkCorrectionResultRequest
@@ -646,8 +706,20 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批改进度、增量结果、终态结果及 Token 用量</para>
+        /// <para>Queries the progress and final results of homework grading based on the task ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the status and detailed results of single-page homework grading by using the <c>taskId</c> returned when the task is submitted.</description></item>
+        /// <item><description>The caller should poll this operation at an interval of 1 to 2 seconds until the task status changes to <c>finished</c> or <c>failed</c>.</description></item>
+        /// <item><description>When the task status is <c>finished</c>, the response contains complete grading information, including question recognition, grading conclusions, dewarped images, and rendered images.</description></item>
+        /// <item><description>If the task fails (the status is <c>failed</c>), check the <c>message</c> field in the response or the specific fault information in <c>data</c>.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetEduHomeworkCorrectionResultRequest
@@ -692,8 +764,20 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批改进度、增量结果、终态结果及 Token 用量</para>
+        /// <para>Queries the progress and final results of homework grading based on the task ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the status and detailed results of single-page homework grading by using the <c>taskId</c> returned when the task is submitted.</description></item>
+        /// <item><description>The caller should poll this operation at an interval of 1 to 2 seconds until the task status changes to <c>finished</c> or <c>failed</c>.</description></item>
+        /// <item><description>When the task status is <c>finished</c>, the response contains complete grading information, including question recognition, grading conclusions, dewarped images, and rendered images.</description></item>
+        /// <item><description>If the task fails (the status is <c>failed</c>), check the <c>message</c> field in the response or the specific fault information in <c>data</c>.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetEduHomeworkCorrectionResultRequest
@@ -711,8 +795,20 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批改进度、增量结果、终态结果及 Token 用量</para>
+        /// <para>Queries the progress and final results of homework grading based on the task ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the status and detailed results of single-page homework grading by using the <c>taskId</c> returned when the task is submitted.</description></item>
+        /// <item><description>The caller should poll this operation at an interval of 1 to 2 seconds until the task status changes to <c>finished</c> or <c>failed</c>.</description></item>
+        /// <item><description>When the task status is <c>finished</c>, the response contains complete grading information, including question recognition, grading conclusions, dewarped images, and rendered images.</description></item>
+        /// <item><description>If the task fails (the status is <c>failed</c>), check the <c>message</c> field in the response or the specific fault information in <c>data</c>.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetEduHomeworkCorrectionResultRequest
@@ -730,8 +826,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>千问教育API开通状态查询</para>
+        /// <para>Queries whether the current account has activated Qwen education-related services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries whether a specified Alibaba Cloud account or RAM user has successfully activated the Qwen learning AI suite. Before calling any business API operations, you must use this operation to confirm that the service status is <c>ACTIVE</c>. If the service is not activated, perform the corresponding operations based on the returned status information, such as waiting for a period of time and retrying.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation supports calls from Alibaba Cloud accounts and RAM users.</description></item>
+        /// <item><description>When a RAM user calls this operation, make sure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// <item><description>If the status is <c>ACTIVATING</c>, retry the query after the time interval recommended by the returned <c>retry_after_seconds</c> field.</description></item>
+        /// <item><description>If a failure occurs (<c>FAILED</c>), refer to the specific error code, take corresponding measures, and then try again.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQwenEduApiActivationStatusRequest
@@ -770,8 +880,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>千问教育API开通状态查询</para>
+        /// <para>Queries whether the current account has activated Qwen education-related services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries whether a specified Alibaba Cloud account or RAM user has successfully activated the Qwen learning AI suite. Before calling any business API operations, you must use this operation to confirm that the service status is <c>ACTIVE</c>. If the service is not activated, perform the corresponding operations based on the returned status information, such as waiting for a period of time and retrying.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation supports calls from Alibaba Cloud accounts and RAM users.</description></item>
+        /// <item><description>When a RAM user calls this operation, make sure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// <item><description>If the status is <c>ACTIVATING</c>, retry the query after the time interval recommended by the returned <c>retry_after_seconds</c> field.</description></item>
+        /// <item><description>If a failure occurs (<c>FAILED</c>), refer to the specific error code, take corresponding measures, and then try again.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQwenEduApiActivationStatusRequest
@@ -810,8 +934,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>千问教育API开通状态查询</para>
+        /// <para>Queries whether the current account has activated Qwen education-related services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries whether a specified Alibaba Cloud account or RAM user has successfully activated the Qwen learning AI suite. Before calling any business API operations, you must use this operation to confirm that the service status is <c>ACTIVE</c>. If the service is not activated, perform the corresponding operations based on the returned status information, such as waiting for a period of time and retrying.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation supports calls from Alibaba Cloud accounts and RAM users.</description></item>
+        /// <item><description>When a RAM user calls this operation, make sure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// <item><description>If the status is <c>ACTIVATING</c>, retry the query after the time interval recommended by the returned <c>retry_after_seconds</c> field.</description></item>
+        /// <item><description>If a failure occurs (<c>FAILED</c>), refer to the specific error code, take corresponding measures, and then try again.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQwenEduApiActivationStatusRequest
@@ -829,8 +967,22 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>千问教育API开通状态查询</para>
+        /// <para>Queries whether the current account has activated Qwen education-related services.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This operation queries whether a specified Alibaba Cloud account or RAM user has successfully activated the Qwen learning AI suite. Before calling any business API operations, you must use this operation to confirm that the service status is <c>ACTIVE</c>. If the service is not activated, perform the corresponding operations based on the returned status information, such as waiting for a period of time and retrying.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation supports calls from Alibaba Cloud accounts and RAM users.</description></item>
+        /// <item><description>When a RAM user calls this operation, make sure that the RAM user has the required RAM permissions. The service is activated for the Alibaba Cloud account to which the RAM user belongs.</description></item>
+        /// <item><description>This operation is idempotent based on the Alibaba Cloud account ID. Repeated calls do not result in multiple activations.</description></item>
+        /// <item><description>If the status is <c>ACTIVATING</c>, retry the query after the time interval recommended by the returned <c>retry_after_seconds</c> field.</description></item>
+        /// <item><description>If a failure occurs (<c>FAILED</c>), refer to the specific error code, take corresponding measures, and then try again.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQwenEduApiActivationStatusRequest
