@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
 {
     public class UpdateSessionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to pin the session. If this field is not specified, the pinned status remains unchanged.</para>
+        /// <para>Specifies whether to pin the session. If this parameter is not specified, the pinned status remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public bool? Pinned { get; set; }
 
         /// <summary>
-        /// <para>The new title of the session. Leave this field empty if no update is required.</para>
+        /// <para>The updated session title. You can leave this parameter empty if no update is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Updated inspection session</para>
@@ -28,6 +28,13 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable session UI enhancement. This feature is supported only for common sessions.</para>
+        /// </summary>
+        [NameInMap("uiEnabled")]
+        [Validation(Required=false)]
+        public bool? UiEnabled { get; set; }
 
     }
 

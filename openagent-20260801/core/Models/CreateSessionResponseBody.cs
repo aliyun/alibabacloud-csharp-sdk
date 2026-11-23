@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
 {
     public class CreateSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The session information of the created session.</para>
+        /// <para>The created session information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The session status. The value is fixed to <c>IDLE</c> upon successful creation.</para>
+            /// <para>The session status. The value is fixed to <c>IDLE</c> when the session is successfully created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IDLE</para>
@@ -55,6 +55,16 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether session UI enhancement is enabled. A value of true indicates that it is enabled, and a value of false indicates that it is disabled. Only common sessions support this feature. If this field is not returned, it is considered disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("uiEnabled")]
+            [Validation(Required=false)]
+            public bool? UiEnabled { get; set; }
 
             /// <summary>
             /// <para>The time when the session was last updated, in ISO 8601 format.</para>

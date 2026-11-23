@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                 public string LastRunId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the most recent run. Valid values: <c>PENDING</c> (pending), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for user intervention), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), and <c>REJECTED</c> (rejected).</para>
+                /// <para>The status of the most recent run. Valid values: <c>PENDING</c> (pending), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for interrupt handling), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), and <c>REJECTED</c> (rejected).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>COMPLETED</para>
@@ -104,6 +104,16 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
                 public string Title { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether session UI enhancement is enabled. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled. This feature is supported only for regular sessions. If this field is not returned, the feature is considered disabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("uiEnabled")]
+                [Validation(Required=false)]
+                public bool? UiEnabled { get; set; }
+
+                /// <summary>
                 /// <para>The time when the session was last updated, in RFC 3339 format.</para>
                 /// 
                 /// <b>Example:</b>
@@ -138,7 +148,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. true indicates success.</para>
+        /// <para>Indicates whether the request is successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

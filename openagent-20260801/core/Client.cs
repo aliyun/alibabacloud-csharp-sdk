@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session and returns the session information. Use the returned sessionId for subsequent operations such as sending messages, querying records, and updating the session.</para>
+        /// <para>Creates a session and returns the session information. Use the returned sessionId when sending messages, querying records, and updating the session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -238,6 +238,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 body["title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UiEnabled))
+            {
+                body["uiEnabled"] = request.UiEnabled;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -275,7 +279,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session and returns the session information. Use the returned sessionId for subsequent operations such as sending messages, querying records, and updating the session.</para>
+        /// <para>Creates a session and returns the session information. Use the returned sessionId when sending messages, querying records, and updating the session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -298,6 +302,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 body["title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UiEnabled))
+            {
+                body["uiEnabled"] = request.UiEnabled;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -335,7 +343,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session and returns the session information. Use the returned sessionId for subsequent operations such as sending messages, querying records, and updating the session.</para>
+        /// <para>Creates a session and returns the session information. Use the returned sessionId when sending messages, querying records, and updating the session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -359,7 +367,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session and returns the session information. Use the returned sessionId for subsequent operations such as sending messages, querying records, and updating the session.</para>
+        /// <para>Creates a session and returns the session information. Use the returned sessionId when sending messages, querying records, and updating the session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -815,7 +823,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned status of a specified session, as well as the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -860,7 +868,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned status of a specified session, as well as the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -905,7 +913,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned status of a specified session, as well as the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -929,7 +937,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the title, status, pinned status, and the ID and status of the latest run of a specified session.</para>
+        /// <para>Queries the title, status, and pinned status of a specified session, as well as the ID and status of its last run.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1119,7 +1127,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1174,7 +1182,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1229,7 +1237,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1253,7 +1261,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the list of sessions accessible to the current invoke identity. Use the returned nextToken to retrieve the next page.</para>
+        /// <para>Performs a paging query for the list of sessions accessible to the current identity used to invoke. Use the returned nextToken to retrieve the next page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1630,12 +1638,12 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title or pinned status of a session.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1662,6 +1670,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 body["title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UiEnabled))
+            {
+                body["uiEnabled"] = request.UiEnabled;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -1694,12 +1706,12 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title or pinned status of a session.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1726,6 +1738,10 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 body["title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UiEnabled))
+            {
+                body["uiEnabled"] = request.UiEnabled;
             }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
@@ -1758,12 +1774,12 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title or pinned status of a session.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1782,12 +1798,12 @@ namespace AlibabaCloud.SDK.OpenAgent20260801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the title or pinned status of a session.</para>
+        /// <para>Updates a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the title or pinned status of a specified session. Specify at least one of the title and pinned fields. Unspecified fields remain unchanged.</para>
+        /// <para>Updates the title or pinned status of a specified session. You must specify at least one of the title and pinned parameters. Fields that are not specified remain unchanged.</para>
         /// </description>
         /// 
         /// <param name="request">

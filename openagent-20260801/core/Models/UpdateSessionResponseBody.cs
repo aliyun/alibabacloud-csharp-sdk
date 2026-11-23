@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         public UpdateSessionResponseBodyData Data { get; set; }
         public class UpdateSessionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the session was created, in RFC 3339 format.</para>
+            /// <para>The time when the session was created. The time is in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:00:00Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the most recent run.</para>
+            /// <para>The ID of the last run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run_example_001</para>
@@ -37,16 +37,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string LastRunId { get; set; }
 
             /// <summary>
-            /// <para>The status of the most recent run. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>PENDING</c>: pending</description></item>
-            /// <item><description><c>RUNNING</c>: running</description></item>
-            /// <item><description><c>WAITING_USER</c>: waiting for interrupt handling</description></item>
-            /// <item><description><c>COMPLETED</c>: completed</description></item>
-            /// <item><description><c>FAILED</c>: failed</description></item>
-            /// <item><description><c>CANCELLED</c>: canceled</description></item>
-            /// <item><description><c>REJECTED</c>: rejected</description></item>
-            /// </list>
+            /// <para>The status of the last run. Valid values: <c>PENDING</c> (pending), <c>RUNNING</c> (running), <c>WAITING_USER</c> (waiting for interrupt handling), <c>COMPLETED</c> (completed), <c>FAILED</c> (failed), <c>CANCELLED</c> (cancelled), and <c>REJECTED</c> (rejected).</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -76,15 +67,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The session status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>IDLE</c>: idle</description></item>
-            /// <item><description><c>ACTIVE</c>: running</description></item>
-            /// <item><description><c>WAITING_USER_INPUT</c>: waiting for user input</description></item>
-            /// <item><description><c>WAITING_APPROVAL</c>: waiting for user confirmation</description></item>
-            /// <item><description><c>WAITING_OUT_OF_BAND_APPROVAL</c>: waiting for out-of-band approval</description></item>
-            /// <item><description><c>CLOSED</c>: closed</description></item>
-            /// </list>
+            /// <para>The session status. Valid values: <c>IDLE</c> (idle), <c>ACTIVE</c> (running), <c>WAITING_USER_INPUT</c> (waiting for user input), <c>WAITING_APPROVAL</c> (waiting for user confirmation), <c>WAITING_OUT_OF_BAND_APPROVAL</c> (waiting for out-of-band approval), and <c>CLOSED</c> (closed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>IDLE</para>
@@ -94,7 +77,7 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The title of the session.</para>
+            /// <para>The session title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Cloud resource inspection example</para>
@@ -104,7 +87,17 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was last updated, in RFC 3339 format.</para>
+            /// <para>Indicates whether session UI enhancement is enabled. A value of true indicates that the feature is enabled, and a value of false indicates that the feature is disabled. This feature is supported only for common sessions. If this field is not returned, the feature is considered disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("uiEnabled")]
+            [Validation(Required=false)]
+            public bool? UiEnabled { get; set; }
+
+            /// <summary>
+            /// <para>The time when the session was last updated. The time is in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:01:00Z</para>

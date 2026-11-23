@@ -19,6 +19,13 @@ namespace AlibabaCloud.SDK.OpenAgent20260801.Models
         [Validation(Required=false)]
         public string Title { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable session UI enhancement. Only common sessions support this feature.</para>
+        /// </summary>
+        [NameInMap("uiEnabled")]
+        [Validation(Required=false)]
+        public bool? UiEnabled { get; set; }
+
     }
 
 }
