@@ -15305,6 +15305,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["EnableSSLRedirection"] = request.EnableSSLRedirection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                body["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 body["InstanceType"] = request.InstanceType;
@@ -15320,6 +15324,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
             {
                 body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                body["RequestTimeout"] = request.RequestTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
             {
@@ -15387,6 +15395,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["EnableSSLRedirection"] = request.EnableSSLRedirection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeout))
+            {
+                body["IdleTimeout"] = request.IdleTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
             {
                 body["InstanceType"] = request.InstanceType;
@@ -15402,6 +15414,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
             {
                 body["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestTimeout))
+            {
+                body["RequestTimeout"] = request.RequestTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIds))
             {

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Gateway is updated</para>

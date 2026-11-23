@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayName { get; set; }
 
         /// <summary>
+        /// <para>The idle connection timeout. Default value: 600. Valid values: 1 to 3600. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
+        [NameInMap("IdleTimeout")]
+        [Validation(Required=false)]
+        public string IdleTimeout { get; set; }
+
+        /// <summary>
         /// <para>The instance type used by the private gateway.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InternetDomain { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether public network access is enabled.</para>
+        /// <para>Specifies whether public network access is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? InternetEnabled { get; set; }
 
         /// <summary>
-        /// <para>The status of public network access.</para>
+        /// <para>The status of enabling or disabling public network access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string IntranetDomain { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</para>
+        /// <para>Specifies whether internal network access is enabled. A value of true indicates that internal network access is enabled. A value of false indicates that internal network access is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -120,7 +130,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? IntranetEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the private gateway is the default private gateway.</para>
+        /// <para>Specifies whether the private gateway is the default private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -179,7 +189,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether HTTP redirection to HTTPS is enabled.</para>
+        /// <para>The request timeout. Unit: seconds.</para>
+        /// <para>Default value: 600. Valid values: 1 to 3600.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
+        [NameInMap("RequestTimeout")]
+        [Validation(Required=false)]
+        public string RequestTimeout { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether HTTP to HTTPS redirection is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

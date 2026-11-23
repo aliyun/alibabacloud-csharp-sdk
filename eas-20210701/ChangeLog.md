@@ -1,3 +1,10 @@
+2026-11-23 Version: 7.11.2
+- Update API DescribeGateway: add response parameters Body.IdleTimeout.
+- Update API DescribeGateway: add response parameters Body.RequestTimeout.
+- Update API UpdateGateway: add request parameters body.IdleTimeout.
+- Update API UpdateGateway: add request parameters body.RequestTimeout.
+
+
 2026-11-20 Version: 7.11.1
 - Update API CreateGateway: add request parameters body.WorkspaceId.
 - Update API DescribeGateway: add response parameters Body.WorkspaceId.

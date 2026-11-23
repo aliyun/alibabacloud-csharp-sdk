@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? EnableSSLRedirection { get; set; }
 
         /// <summary>
+        /// <para>The idle connection timeout period. Unit: seconds. Default value: 600. Valid values: 1 to 3600.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
+        [NameInMap("IdleTimeout")]
+        [Validation(Required=false)]
+        public int? IdleTimeout { get; set; }
+
+        /// <summary>
         /// <para>The instance type used by the private gateway. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>2c4g</description></item>
@@ -86,14 +96,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitches. This parameter is only applicable to application dedicated gateways.</para>
+        /// <para>The request timeout period. Unit: seconds. Default value: 600. Valid values: 1 to 3600.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
+        /// </summary>
+        [NameInMap("RequestTimeout")]
+        [Validation(Required=false)]
+        public int? RequestTimeout { get; set; }
+
+        /// <summary>
+        /// <para>The list of vSwitches. This parameter applies only to dedicated gateways for applications.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the gateway belongs. This parameter is only applicable to application dedicated gateways.</para>
+        /// <para>The ID of the VPC to which the gateway belongs. This parameter applies only to dedicated gateways for applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1jkde2******3mew</para>
