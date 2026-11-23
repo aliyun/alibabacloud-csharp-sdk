@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "marketing_event";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "";
             CheckConfig(config);
             this._endpoint = GetEndpoint("marketing_event", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1092,6 +1095,10 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             {
                 body["ActivityId"] = request.ActivityId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckinPoint))
+            {
+                body["CheckinPoint"] = request.CheckinPoint;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParam))
             {
                 body["ExtParam"] = request.ExtParam;
@@ -1141,6 +1148,10 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityId))
             {
                 body["ActivityId"] = request.ActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckinPoint))
+            {
+                body["CheckinPoint"] = request.CheckinPoint;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParam))
             {
@@ -1205,6 +1216,123 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return await MosCheckInWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动报名查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosQueryRegistrationInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosQueryRegistrationInfoResponse
+        /// </returns>
+        public MosQueryRegistrationInfoResponse MosQueryRegistrationInfoWithOptions(MosQueryRegistrationInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MosQueryRegistrationInfo",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MosQueryRegistrationInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动报名查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosQueryRegistrationInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosQueryRegistrationInfoResponse
+        /// </returns>
+        public async Task<MosQueryRegistrationInfoResponse> MosQueryRegistrationInfoWithOptionsAsync(MosQueryRegistrationInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MosQueryRegistrationInfo",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MosQueryRegistrationInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动报名查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosQueryRegistrationInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosQueryRegistrationInfoResponse
+        /// </returns>
+        public MosQueryRegistrationInfoResponse MosQueryRegistrationInfo(MosQueryRegistrationInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MosQueryRegistrationInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>MOS活动报名查询</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MosQueryRegistrationInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MosQueryRegistrationInfoResponse
+        /// </returns>
+        public async Task<MosQueryRegistrationInfoResponse> MosQueryRegistrationInfoAsync(MosQueryRegistrationInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MosQueryRegistrationInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id查询所有审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryAllActivityInfoRequest
         /// </param>
@@ -1238,6 +1366,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return TeaModel.ToObject<QueryAllActivityInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id查询所有审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryAllActivityInfoRequest
         /// </param>
@@ -1271,6 +1404,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return TeaModel.ToObject<QueryAllActivityInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id查询所有审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryAllActivityInfoRequest
         /// </param>
@@ -1284,6 +1422,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return QueryAllActivityInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id查询所有审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryAllActivityInfoRequest
         /// </param>
@@ -1985,6 +2128,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return await QuerySignInRecordPopWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id, 参会人名称等查询单个审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySingleActivityInfoRequest
         /// </param>
@@ -2018,6 +2166,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return TeaModel.ToObject<QuerySingleActivityInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id, 参会人名称等查询单个审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySingleActivityInfoRequest
         /// </param>
@@ -2051,6 +2204,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return TeaModel.ToObject<QuerySingleActivityInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id, 参会人名称等查询单个审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySingleActivityInfoRequest
         /// </param>
@@ -2064,6 +2222,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return QuerySingleActivityInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通过活动id, 参会人名称等查询单个审核通过的报名信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QuerySingleActivityInfoRequest
         /// </param>
@@ -2077,6 +2240,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return await QuerySingleActivityInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>签到处理</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncSignInInfoRequest
         /// </param>
@@ -2110,6 +2278,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return TeaModel.ToObject<SyncSignInInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>签到处理</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncSignInInfoRequest
         /// </param>
@@ -2143,6 +2316,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return TeaModel.ToObject<SyncSignInInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>签到处理</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncSignInInfoRequest
         /// </param>
@@ -2156,6 +2334,11 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return SyncSignInInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>签到处理</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncSignInInfoRequest
         /// </param>
@@ -2587,6 +2770,134 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTicketRecordByticketCodePopWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核验指定活动当天的入场权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyActivityAdmissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyActivityAdmissionResponse
+        /// </returns>
+        public VerifyActivityAdmissionResponse VerifyActivityAdmissionWithOptions(VerifyActivityAdmissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityId))
+            {
+                body["ActivityId"] = request.ActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdCardNo))
+            {
+                body["IdCardNo"] = request.IdCardNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyActivityAdmission",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyActivityAdmissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核验指定活动当天的入场权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyActivityAdmissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyActivityAdmissionResponse
+        /// </returns>
+        public async Task<VerifyActivityAdmissionResponse> VerifyActivityAdmissionWithOptionsAsync(VerifyActivityAdmissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActivityId))
+            {
+                body["ActivityId"] = request.ActivityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdCardNo))
+            {
+                body["IdCardNo"] = request.IdCardNo;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyActivityAdmission",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyActivityAdmissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核验指定活动当天的入场权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyActivityAdmissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyActivityAdmissionResponse
+        /// </returns>
+        public VerifyActivityAdmissionResponse VerifyActivityAdmission(VerifyActivityAdmissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VerifyActivityAdmissionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>核验指定活动当天的入场权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyActivityAdmissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyActivityAdmissionResponse
+        /// </returns>
+        public async Task<VerifyActivityAdmissionResponse> VerifyActivityAdmissionAsync(VerifyActivityAdmissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VerifyActivityAdmissionWithOptionsAsync(request, runtime);
         }
 
     }

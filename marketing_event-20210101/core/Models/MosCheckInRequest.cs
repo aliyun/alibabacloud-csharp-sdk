@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
+        [NameInMap("CheckinPoint")]
+        [Validation(Required=false)]
+        public string CheckinPoint { get; set; }
+
         [NameInMap("ExtParam")]
         [Validation(Required=false)]
         public string ExtParam { get; set; }
