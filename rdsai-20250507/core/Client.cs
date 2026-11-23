@@ -5992,7 +5992,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -6050,7 +6050,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -6108,7 +6108,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -6134,7 +6134,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <description>
         /// <h3>Supported engines</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8861,6 +8861,382 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the credit consumption trend and total amount for the caller account within a specified time range. If WorkspaceId is specified, the statistics apply to a single workspace. If omitted, the statistics aggregate all workspaces under the account. Results are bucketed by hour or day, billing item, and applicable context evolution sub-item. MemberId only filters records and does not split buckets by member. To obtain only the total amount for the range, you can omit Interval and read TotalCredits. To rank by member, call GetContextDatabaseCreditUsageSummaryByMember.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption of the caller account within a specified UTC time range, bucketed by hour or day and by billing item. When WorkspaceId is provided, the query is at the workspace dimension (ownership is verified, and locked workspaces can still be queried). When omitted, the query aggregates all workspaces at the account (primary account UID) dimension. Buckets are sorted by BucketStart, Item, and SubItem. Unpriced records are not included in Credits. Note that member filtering does not split buckets. To view details by member, use ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummaryByMember. Credit is represented as a decimal string (1 credit = 1 CNY, up to 6 decimal places).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryResponse
+        /// </returns>
+        public GetContextDatabaseCreditUsageSummaryResponse GetContextDatabaseCreditUsageSummaryWithOptions(GetContextDatabaseCreditUsageSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Item))
+            {
+                query["Item"] = request.Item;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubItem))
+            {
+                query["SubItem"] = request.SubItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseCreditUsageSummary",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseCreditUsageSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the credit consumption trend and total amount for the caller account within a specified time range. If WorkspaceId is specified, the statistics apply to a single workspace. If omitted, the statistics aggregate all workspaces under the account. Results are bucketed by hour or day, billing item, and applicable context evolution sub-item. MemberId only filters records and does not split buckets by member. To obtain only the total amount for the range, you can omit Interval and read TotalCredits. To rank by member, call GetContextDatabaseCreditUsageSummaryByMember.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption of the caller account within a specified UTC time range, bucketed by hour or day and by billing item. When WorkspaceId is provided, the query is at the workspace dimension (ownership is verified, and locked workspaces can still be queried). When omitted, the query aggregates all workspaces at the account (primary account UID) dimension. Buckets are sorted by BucketStart, Item, and SubItem. Unpriced records are not included in Credits. Note that member filtering does not split buckets. To view details by member, use ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummaryByMember. Credit is represented as a decimal string (1 credit = 1 CNY, up to 6 decimal places).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryResponse
+        /// </returns>
+        public async Task<GetContextDatabaseCreditUsageSummaryResponse> GetContextDatabaseCreditUsageSummaryWithOptionsAsync(GetContextDatabaseCreditUsageSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Item))
+            {
+                query["Item"] = request.Item;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubItem))
+            {
+                query["SubItem"] = request.SubItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseCreditUsageSummary",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseCreditUsageSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the credit consumption trend and total amount for the caller account within a specified time range. If WorkspaceId is specified, the statistics apply to a single workspace. If omitted, the statistics aggregate all workspaces under the account. Results are bucketed by hour or day, billing item, and applicable context evolution sub-item. MemberId only filters records and does not split buckets by member. To obtain only the total amount for the range, you can omit Interval and read TotalCredits. To rank by member, call GetContextDatabaseCreditUsageSummaryByMember.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption of the caller account within a specified UTC time range, bucketed by hour or day and by billing item. When WorkspaceId is provided, the query is at the workspace dimension (ownership is verified, and locked workspaces can still be queried). When omitted, the query aggregates all workspaces at the account (primary account UID) dimension. Buckets are sorted by BucketStart, Item, and SubItem. Unpriced records are not included in Credits. Note that member filtering does not split buckets. To view details by member, use ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummaryByMember. Credit is represented as a decimal string (1 credit = 1 CNY, up to 6 decimal places).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryResponse
+        /// </returns>
+        public GetContextDatabaseCreditUsageSummaryResponse GetContextDatabaseCreditUsageSummary(GetContextDatabaseCreditUsageSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseCreditUsageSummaryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the credit consumption trend and total amount for the caller account within a specified time range. If WorkspaceId is specified, the statistics apply to a single workspace. If omitted, the statistics aggregate all workspaces under the account. Results are bucketed by hour or day, billing item, and applicable context evolution sub-item. MemberId only filters records and does not split buckets by member. To obtain only the total amount for the range, you can omit Interval and read TotalCredits. To rank by member, call GetContextDatabaseCreditUsageSummaryByMember.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption of the caller account within a specified UTC time range, bucketed by hour or day and by billing item. When WorkspaceId is provided, the query is at the workspace dimension (ownership is verified, and locked workspaces can still be queried). When omitted, the query aggregates all workspaces at the account (primary account UID) dimension. Buckets are sorted by BucketStart, Item, and SubItem. Unpriced records are not included in Credits. Note that member filtering does not split buckets. To view details by member, use ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummaryByMember. Credit is represented as a decimal string (1 credit = 1 CNY, up to 6 decimal places).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryResponse
+        /// </returns>
+        public async Task<GetContextDatabaseCreditUsageSummaryResponse> GetContextDatabaseCreditUsageSummaryAsync(GetContextDatabaseCreditUsageSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseCreditUsageSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of member credit consumption for a single workspace within the caller\&quot;s account over a specified time range. Returns one aggregated record per member covering the entire range, paginated and sorted in descending order of total credits, without hourly or daily bucketing. The total count for pagination is the number of members matching the filter criteria, not the number of metering records. To view individual records, call ListContextDatabaseCreditUsageRecords.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates and ranks the credit consumption of a single workspace by member within a specified UTC time range, with one row per member. This operation uses a fixed workspace dimension: WorkspaceId is required and its ownership is verified (locked workspaces can still be queried), and there are no Dimension, Interval, or sorting input parameters. Members are returned in descending order of aggregated credits. Pagination and ranking are handled by the upstream service. This layer does not re-sort, re-price, or drop rows, so Total represents the number of filtered members rather than the number of records. Credits are represented as decimal strings (1 credit = 1 CNY, up to 6 decimal places) and are null for members without priced records.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryByMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryByMemberResponse
+        /// </returns>
+        public GetContextDatabaseCreditUsageSummaryByMemberResponse GetContextDatabaseCreditUsageSummaryByMemberWithOptions(GetContextDatabaseCreditUsageSummaryByMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Item))
+            {
+                query["Item"] = request.Item;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseCreditUsageSummaryByMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseCreditUsageSummaryByMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of member credit consumption for a single workspace within the caller\&quot;s account over a specified time range. Returns one aggregated record per member covering the entire range, paginated and sorted in descending order of total credits, without hourly or daily bucketing. The total count for pagination is the number of members matching the filter criteria, not the number of metering records. To view individual records, call ListContextDatabaseCreditUsageRecords.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates and ranks the credit consumption of a single workspace by member within a specified UTC time range, with one row per member. This operation uses a fixed workspace dimension: WorkspaceId is required and its ownership is verified (locked workspaces can still be queried), and there are no Dimension, Interval, or sorting input parameters. Members are returned in descending order of aggregated credits. Pagination and ranking are handled by the upstream service. This layer does not re-sort, re-price, or drop rows, so Total represents the number of filtered members rather than the number of records. Credits are represented as decimal strings (1 credit = 1 CNY, up to 6 decimal places) and are null for members without priced records.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryByMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryByMemberResponse
+        /// </returns>
+        public async Task<GetContextDatabaseCreditUsageSummaryByMemberResponse> GetContextDatabaseCreditUsageSummaryByMemberWithOptionsAsync(GetContextDatabaseCreditUsageSummaryByMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Item))
+            {
+                query["Item"] = request.Item;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseCreditUsageSummaryByMember",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseCreditUsageSummaryByMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of member credit consumption for a single workspace within the caller\&quot;s account over a specified time range. Returns one aggregated record per member covering the entire range, paginated and sorted in descending order of total credits, without hourly or daily bucketing. The total count for pagination is the number of members matching the filter criteria, not the number of metering records. To view individual records, call ListContextDatabaseCreditUsageRecords.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates and ranks the credit consumption of a single workspace by member within a specified UTC time range, with one row per member. This operation uses a fixed workspace dimension: WorkspaceId is required and its ownership is verified (locked workspaces can still be queried), and there are no Dimension, Interval, or sorting input parameters. Members are returned in descending order of aggregated credits. Pagination and ranking are handled by the upstream service. This layer does not re-sort, re-price, or drop rows, so Total represents the number of filtered members rather than the number of records. Credits are represented as decimal strings (1 credit = 1 CNY, up to 6 decimal places) and are null for members without priced records.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryByMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryByMemberResponse
+        /// </returns>
+        public GetContextDatabaseCreditUsageSummaryByMemberResponse GetContextDatabaseCreditUsageSummaryByMember(GetContextDatabaseCreditUsageSummaryByMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseCreditUsageSummaryByMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of member credit consumption for a single workspace within the caller\&quot;s account over a specified time range. Returns one aggregated record per member covering the entire range, paginated and sorted in descending order of total credits, without hourly or daily bucketing. The total count for pagination is the number of members matching the filter criteria, not the number of metering records. To view individual records, call ListContextDatabaseCreditUsageRecords.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates and ranks the credit consumption of a single workspace by member within a specified UTC time range, with one row per member. This operation uses a fixed workspace dimension: WorkspaceId is required and its ownership is verified (locked workspaces can still be queried), and there are no Dimension, Interval, or sorting input parameters. Members are returned in descending order of aggregated credits. Pagination and ranking are handled by the upstream service. This layer does not re-sort, re-price, or drop rows, so Total represents the number of filtered members rather than the number of records. Credits are represented as decimal strings (1 credit = 1 CNY, up to 6 decimal places) and are null for members without priced records.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseCreditUsageSummaryByMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseCreditUsageSummaryByMemberResponse
+        /// </returns>
+        public async Task<GetContextDatabaseCreditUsageSummaryByMemberResponse> GetContextDatabaseCreditUsageSummaryByMemberAsync(GetContextDatabaseCreditUsageSummaryByMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseCreditUsageSummaryByMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a datasource configuration.</para>
         /// </summary>
         /// 
@@ -10189,6 +10565,162 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetContextDatabaseSyncSourceSelectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the context database usage of the caller account within a specified time range. If WorkspaceId is specified, queries a single workspace. If omitted, aggregates all workspaces under the account. Returns fixed metering items with their units and quantities, filling zero for items with no data. This operation does not return a separate credit amount field. To query amounts, call ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummary.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the context database usage (invocation count, token consumption, and storage usage) of the caller account within a UTC time window, excluding any amounts. If WorkspaceId is provided, the query is at the workspace level. If omitted, the query aggregates all workspaces at the account (primary account UID) level. Returns all billing catalog items and fills zero for missing quantities, so the length of Items is fixed. The account identity is obtained from POP common parameters and cannot be specified by input parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseUsageResponse
+        /// </returns>
+        public GetContextDatabaseUsageResponse GetContextDatabaseUsageWithOptions(GetContextDatabaseUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseUsage",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the context database usage of the caller account within a specified time range. If WorkspaceId is specified, queries a single workspace. If omitted, aggregates all workspaces under the account. Returns fixed metering items with their units and quantities, filling zero for items with no data. This operation does not return a separate credit amount field. To query amounts, call ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummary.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the context database usage (invocation count, token consumption, and storage usage) of the caller account within a UTC time window, excluding any amounts. If WorkspaceId is provided, the query is at the workspace level. If omitted, the query aggregates all workspaces at the account (primary account UID) level. Returns all billing catalog items and fills zero for missing quantities, so the length of Items is fixed. The account identity is obtained from POP common parameters and cannot be specified by input parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseUsageResponse
+        /// </returns>
+        public async Task<GetContextDatabaseUsageResponse> GetContextDatabaseUsageWithOptionsAsync(GetContextDatabaseUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextDatabaseUsage",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextDatabaseUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the context database usage of the caller account within a specified time range. If WorkspaceId is specified, queries a single workspace. If omitted, aggregates all workspaces under the account. Returns fixed metering items with their units and quantities, filling zero for items with no data. This operation does not return a separate credit amount field. To query amounts, call ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummary.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the context database usage (invocation count, token consumption, and storage usage) of the caller account within a UTC time window, excluding any amounts. If WorkspaceId is provided, the query is at the workspace level. If omitted, the query aggregates all workspaces at the account (primary account UID) level. Returns all billing catalog items and fills zero for missing quantities, so the length of Items is fixed. The account identity is obtained from POP common parameters and cannot be specified by input parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseUsageResponse
+        /// </returns>
+        public GetContextDatabaseUsageResponse GetContextDatabaseUsage(GetContextDatabaseUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContextDatabaseUsageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the context database usage of the caller account within a specified time range. If WorkspaceId is specified, queries a single workspace. If omitted, aggregates all workspaces under the account. Returns fixed metering items with their units and quantities, filling zero for items with no data. This operation does not return a separate credit amount field. To query amounts, call ListContextDatabaseCreditUsageRecords or GetContextDatabaseCreditUsageSummary.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the context database usage (invocation count, token consumption, and storage usage) of the caller account within a UTC time window, excluding any amounts. If WorkspaceId is provided, the query is at the workspace level. If omitted, the query aggregates all workspaces at the account (primary account UID) level. Returns all billing catalog items and fills zero for missing quantities, so the length of Items is fixed. The account identity is obtained from POP common parameters and cannot be specified by input parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetContextDatabaseUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextDatabaseUsageResponse
+        /// </returns>
+        public async Task<GetContextDatabaseUsageResponse> GetContextDatabaseUsageAsync(GetContextDatabaseUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContextDatabaseUsageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11817,6 +12349,218 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListContextDatabaseApiKeysWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query for the credit consumption of the caller account within a specified time range, where each result corresponds to a metering record. You can query a single workspace or all workspaces under the account, excluding storage items that do not consume credits. By default, the results are in descending order of request time, but sorting by credit amount is supported. Metering records are written asynchronously, so recent usage may not be displayed. To view time trends, invoke <c>GetContextDatabaseCreditUsageSummary</c>.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption details of the caller account within a specified UTC time range in a paginated manner. Each record corresponds to a metered read or write request for a knowledge base or memory base, or a write operation for a knowledge base. The credit amount is frozen at the time of metering and does not change afterward. By default, the records are sorted in descending order of request time, and can be sorted by credit amount. Sorting only changes the order within the page and does not change the total count or the record set. If WorkspaceId is provided, paged query is at the workspace dimension, verifying ownership, and locked workspaces can still be queried. If omitted, paged query aggregates all workspaces under the account dimension, identified by the primary account UID. Storage billing items do not consume credits and do not appear in the details. The credit amount is a decimal string, where 1 credit equals 1 CNY, with up to 6 decimal places. Records that cannot be priced are returned as null and are not included in the aggregated amount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseCreditUsageRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseCreditUsageRecordsResponse
+        /// </returns>
+        public ListContextDatabaseCreditUsageRecordsResponse ListContextDatabaseCreditUsageRecordsWithOptions(ListContextDatabaseCreditUsageRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Item))
+            {
+                query["Item"] = request.Item;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubItem))
+            {
+                query["SubItem"] = request.SubItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseCreditUsageRecords",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseCreditUsageRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query for the credit consumption of the caller account within a specified time range, where each result corresponds to a metering record. You can query a single workspace or all workspaces under the account, excluding storage items that do not consume credits. By default, the results are in descending order of request time, but sorting by credit amount is supported. Metering records are written asynchronously, so recent usage may not be displayed. To view time trends, invoke <c>GetContextDatabaseCreditUsageSummary</c>.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption details of the caller account within a specified UTC time range in a paginated manner. Each record corresponds to a metered read or write request for a knowledge base or memory base, or a write operation for a knowledge base. The credit amount is frozen at the time of metering and does not change afterward. By default, the records are sorted in descending order of request time, and can be sorted by credit amount. Sorting only changes the order within the page and does not change the total count or the record set. If WorkspaceId is provided, paged query is at the workspace dimension, verifying ownership, and locked workspaces can still be queried. If omitted, paged query aggregates all workspaces under the account dimension, identified by the primary account UID. Storage billing items do not consume credits and do not appear in the details. The credit amount is a decimal string, where 1 credit equals 1 CNY, with up to 6 decimal places. Records that cannot be priced are returned as null and are not included in the aggregated amount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseCreditUsageRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseCreditUsageRecordsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseCreditUsageRecordsResponse> ListContextDatabaseCreditUsageRecordsWithOptionsAsync(ListContextDatabaseCreditUsageRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Item))
+            {
+                query["Item"] = request.Item;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberId))
+            {
+                query["MemberId"] = request.MemberId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubItem))
+            {
+                query["SubItem"] = request.SubItem;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextDatabaseCreditUsageRecords",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextDatabaseCreditUsageRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query for the credit consumption of the caller account within a specified time range, where each result corresponds to a metering record. You can query a single workspace or all workspaces under the account, excluding storage items that do not consume credits. By default, the results are in descending order of request time, but sorting by credit amount is supported. Metering records are written asynchronously, so recent usage may not be displayed. To view time trends, invoke <c>GetContextDatabaseCreditUsageSummary</c>.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption details of the caller account within a specified UTC time range in a paginated manner. Each record corresponds to a metered read or write request for a knowledge base or memory base, or a write operation for a knowledge base. The credit amount is frozen at the time of metering and does not change afterward. By default, the records are sorted in descending order of request time, and can be sorted by credit amount. Sorting only changes the order within the page and does not change the total count or the record set. If WorkspaceId is provided, paged query is at the workspace dimension, verifying ownership, and locked workspaces can still be queried. If omitted, paged query aggregates all workspaces under the account dimension, identified by the primary account UID. Storage billing items do not consume credits and do not appear in the details. The credit amount is a decimal string, where 1 credit equals 1 CNY, with up to 6 decimal places. Records that cannot be priced are returned as null and are not included in the aggregated amount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseCreditUsageRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseCreditUsageRecordsResponse
+        /// </returns>
+        public ListContextDatabaseCreditUsageRecordsResponse ListContextDatabaseCreditUsageRecords(ListContextDatabaseCreditUsageRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListContextDatabaseCreditUsageRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query for the credit consumption of the caller account within a specified time range, where each result corresponds to a metering record. You can query a single workspace or all workspaces under the account, excluding storage items that do not consume credits. By default, the results are in descending order of request time, but sorting by credit amount is supported. Metering records are written asynchronously, so recent usage may not be displayed. To view time trends, invoke <c>GetContextDatabaseCreditUsageSummary</c>.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credit consumption details of the caller account within a specified UTC time range in a paginated manner. Each record corresponds to a metered read or write request for a knowledge base or memory base, or a write operation for a knowledge base. The credit amount is frozen at the time of metering and does not change afterward. By default, the records are sorted in descending order of request time, and can be sorted by credit amount. Sorting only changes the order within the page and does not change the total count or the record set. If WorkspaceId is provided, paged query is at the workspace dimension, verifying ownership, and locked workspaces can still be queried. If omitted, paged query aggregates all workspaces under the account dimension, identified by the primary account UID. Storage billing items do not consume credits and do not appear in the details. The credit amount is a decimal string, where 1 credit equals 1 CNY, with up to 6 decimal places. Records that cannot be priced are returned as null and are not included in the aggregated amount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListContextDatabaseCreditUsageRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextDatabaseCreditUsageRecordsResponse
+        /// </returns>
+        public async Task<ListContextDatabaseCreditUsageRecordsResponse> ListContextDatabaseCreditUsageRecordsAsync(ListContextDatabaseCreditUsageRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListContextDatabaseCreditUsageRecordsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
