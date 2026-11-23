@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the token.</para>
+        /// <para>The token details.</para>
         /// </summary>
         [NameInMap("StsTokenModel")]
         [Validation(Required=false)]
         public GetStsTokenResponseBodyStsTokenModel StsTokenModel { get; set; }
         public class GetStsTokenResponseBodyStsTokenModel : TeaModel {
             /// <summary>
-            /// <para>The tenant ID, which is the UID of the Alibaba Cloud account.</para>
+            /// <para>The tenant ID (Alibaba Cloud account UID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>105552640689****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The temporary credentials.</para>
+            /// <para>The temporary identity credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sts****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
             public string StsToken { get; set; }
 
             /// <summary>
-            /// <para>The tenant ID, which is the UID of the Alibaba Cloud account.</para>
+            /// <para>The tenant ID (Alibaba Cloud account UID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>105552640689****</para>
