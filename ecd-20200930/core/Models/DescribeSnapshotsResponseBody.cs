@@ -116,10 +116,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DiskStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pmxgcnb</para>
+            /// </summary>
             [NameInMap("EnvId")]
             [Validation(Required=false)]
             public string EnvId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
             [NameInMap("EnvType")]
             [Validation(Required=false)]
             public string EnvType { get; set; }

@@ -8332,8 +8332,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
-        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</description></item>
+        /// <item><description>For information about the features, Common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policy are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8622,8 +8622,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
-        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</description></item>
+        /// <item><description>For information about the features, Common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policy are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8912,8 +8912,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
-        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</description></item>
+        /// <item><description>For information about the features, Common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policy are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8938,8 +8938,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For information about the features, common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
-        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policies are created.</description></item>
+        /// <item><description>For information about the features, Common scenarios, limits, and scaling policy of shared cloud desktops, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview of shared cloud desktops (formerly cloud desktop pools)</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that required prerequisite resources such as office networks, cloud desktop templates, and policy are created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21898,6 +21898,158 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a list of cloud desktops with detected vulnerabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDesktopIdsByVulNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDesktopIdsByVulNamesResponse
+        /// </returns>
+        public DescribeDesktopIdsByVulNamesResponse DescribeDesktopIdsByVulNamesWithOptions(DescribeDesktopIdsByVulNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
+            {
+                query["Necessity"] = request.Necessity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulName))
+            {
+                query["VulName"] = request.VulName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopIdsByVulNames",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopIdsByVulNamesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of cloud desktops with detected vulnerabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDesktopIdsByVulNamesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDesktopIdsByVulNamesResponse
+        /// </returns>
+        public async Task<DescribeDesktopIdsByVulNamesResponse> DescribeDesktopIdsByVulNamesWithOptionsAsync(DescribeDesktopIdsByVulNamesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Necessity))
+            {
+                query["Necessity"] = request.Necessity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulName))
+            {
+                query["VulName"] = request.VulName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDesktopIdsByVulNames",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDesktopIdsByVulNamesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of cloud desktops with detected vulnerabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDesktopIdsByVulNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDesktopIdsByVulNamesResponse
+        /// </returns>
+        public DescribeDesktopIdsByVulNamesResponse DescribeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDesktopIdsByVulNamesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of cloud desktops with detected vulnerabilities.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDesktopIdsByVulNamesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDesktopIdsByVulNamesResponse
+        /// </returns>
+        public async Task<DescribeDesktopIdsByVulNamesResponse> DescribeDesktopIdsByVulNamesAsync(DescribeDesktopIdsByVulNamesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDesktopIdsByVulNamesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the basic information of cloud computers.</para>
         /// </summary>
         /// 
@@ -31102,6 +31254,170 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the statistics on the number of different resources by region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation is a centralized operation and can only be called by using the endpoints in the China (Shanghai) or Singapore region.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceStatisticByRegionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceStatisticByRegionResponse
+        /// </returns>
+        public DescribeResourceStatisticByRegionResponse DescribeResourceStatisticByRegionWithOptions(DescribeResourceStatisticByRegionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeGroupDesktops))
+            {
+                query["IncludeGroupDesktops"] = request.IncludeGroupDesktops;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeResourceStatisticByRegion",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeResourceStatisticByRegionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the statistics on the number of different resources by region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation is a centralized operation and can only be called by using the endpoints in the China (Shanghai) or Singapore region.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceStatisticByRegionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceStatisticByRegionResponse
+        /// </returns>
+        public async Task<DescribeResourceStatisticByRegionResponse> DescribeResourceStatisticByRegionWithOptionsAsync(DescribeResourceStatisticByRegionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeGroupDesktops))
+            {
+                query["IncludeGroupDesktops"] = request.IncludeGroupDesktops;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeResourceStatisticByRegion",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeResourceStatisticByRegionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the statistics on the number of different resources by region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation is a centralized operation and can only be called by using the endpoints in the China (Shanghai) or Singapore region.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceStatisticByRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceStatisticByRegionResponse
+        /// </returns>
+        public DescribeResourceStatisticByRegionResponse DescribeResourceStatisticByRegion(DescribeResourceStatisticByRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeResourceStatisticByRegionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the statistics on the number of different resources by region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API operation is a centralized operation and can only be called by using the endpoints in the China (Shanghai) or Singapore region.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeResourceStatisticByRegionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeResourceStatisticByRegionResponse
+        /// </returns>
+        public async Task<DescribeResourceStatisticByRegionResponse> DescribeResourceStatisticByRegionAsync(DescribeResourceStatisticByRegionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeResourceStatisticByRegionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询路由条目列表</para>
         /// </summary>
         /// 
@@ -33586,14 +33902,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
+        /// <para>Retrieves the cloud desktop information for vulnerabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
-        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This API operation uses a centralized domain name. The endpoint is in the China (Shanghai) region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this API operation has a delay of 1 to 3 seconds compared to the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33630,6 +33946,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFixResult))
             {
                 query["IncludeFixResult"] = request.IncludeFixResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePatchTask))
+            {
+                query["IncludePatchTask"] = request.IncludePatchTask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
@@ -33700,14 +34020,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
+        /// <para>Retrieves the cloud desktop information for vulnerabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
-        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This API operation uses a centralized domain name. The endpoint is in the China (Shanghai) region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this API operation has a delay of 1 to 3 seconds compared to the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33744,6 +34064,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFixResult))
             {
                 query["IncludeFixResult"] = request.IncludeFixResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePatchTask))
+            {
+                query["IncludePatchTask"] = request.IncludePatchTask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
@@ -33814,14 +34138,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
+        /// <para>Retrieves the cloud desktop information for vulnerabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
-        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This API operation uses a centralized domain name. The endpoint is in the China (Shanghai) region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this API operation has a delay of 1 to 3 seconds compared to the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33840,14 +34164,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud desktop information for a vulnerability.</para>
+        /// <para>Retrieves the cloud desktop information for vulnerabilities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</description></item>
-        /// <item><description>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// <item><description>This API operation uses a centralized domain name. The endpoint is in the China (Shanghai) region. Calls from other regions are not supported.</description></item>
+        /// <item><description>The cloud desktop status information returned by this API operation has a delay of 1 to 3 seconds compared to the actual values.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33871,7 +34195,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerability at each epoch (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33946,7 +34270,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerability at each epoch (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34021,7 +34345,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerability at each epoch (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34044,7 +34368,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerability at each epoch (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43250,12 +43574,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer.</para>
+        /// <para>Modifies a shared cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
+        /// <para>After a shared cloud desktop is created, the system performs automatic creation of a corresponding number of cloud desktops within the shared cloud desktop based on the shared cloud desktop scaling policy Settings and the end-user connection status. These cloud desktops share the same cloud desktop template and security policy. You can modify the configurations of the shared cloud desktop as needed in different scenarios, such as the name, cloud desktop template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43401,12 +43725,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer.</para>
+        /// <para>Modifies a shared cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
+        /// <para>After a shared cloud desktop is created, the system performs automatic creation of a corresponding number of cloud desktops within the shared cloud desktop based on the shared cloud desktop scaling policy Settings and the end-user connection status. These cloud desktops share the same cloud desktop template and security policy. You can modify the configurations of the shared cloud desktop as needed in different scenarios, such as the name, cloud desktop template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43552,12 +43876,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer.</para>
+        /// <para>Modifies a shared cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
+        /// <para>After a shared cloud desktop is created, the system performs automatic creation of a corresponding number of cloud desktops within the shared cloud desktop based on the shared cloud desktop scaling policy Settings and the end-user connection status. These cloud desktops share the same cloud desktop template and security policy. You can modify the configurations of the shared cloud desktop as needed in different scenarios, such as the name, cloud desktop template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43575,12 +43899,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer.</para>
+        /// <para>Modifies a shared cloud desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
+        /// <para>After a shared cloud desktop is created, the system performs automatic creation of a corresponding number of cloud desktops within the shared cloud desktop based on the shared cloud desktop scaling policy Settings and the end-user connection status. These cloud desktops share the same cloud desktop template and security policy. You can modify the configurations of the shared cloud desktop as needed in different scenarios, such as the name, cloud desktop template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVulDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The connection status of the cloud desktop. Valid values: CONNECTED and DISCONNECTED.</para>
+        /// <para>The connection status of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Connected</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ConnectionStatus { get; set; }
 
         /// <summary>
-        /// <para>The CVE ID of the vulnerability.</para>
+        /// <para>The vulnerability ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CVE-2026-43284</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include patch update results.</para>
+        /// <para>Specifies whether to include the patch update results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,11 +57,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IncludeFixResult { get; set; }
 
         /// <summary>
-        /// <para>The language of the returned information. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>ch</b>: Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
-        /// </list>
+        /// <para>Specifies whether to include cloud desktops that have scheduled patch tasks.</para>
+        /// </summary>
+        [NameInMap("IncludePatchTask")]
+        [Validation(Required=false)]
+        public bool? IncludePatchTask { get; set; }
+
+        /// <summary>
+        /// <para>The language of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ch</para>
@@ -71,9 +74,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The number of entries per page for a paging query.
+        /// Maximum value: 100.
+        /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include only cloud desktops that have had fix tasks executed in the current month.</para>
+        /// <para>Specifies whether to include only cloud desktops for which fix tasks have been executed in the current month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? OnlyCurrentMonthFixAttempted { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The page number of the current page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The page size for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID used to filter cloud desktop information for a specific region.</para>
+        /// <para>The search region ID. This parameter is used to filter cloud desktop information for a specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -170,14 +173,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> StatusList { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the intrusion prevention event. Valid values:</para>
+        /// <para>The security level of the intrusion prevention event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>low</b>: Low.</description></item>
-        /// <item><description><b>medium</b>: Medium.</description></item>
-        /// <item><description><b>critical</b>: Critical.</description></item>
+        /// <item><description><b>low</b>: low-risk.</description></item>
+        /// <item><description><b>medium</b>: medium-risk.</description></item>
+        /// <item><description><b>critical</b>: high-risk.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not set this parameter, vulnerabilities of all severity levels are queried.</para>
+        /// <para>If you do not specify this parameter, vulnerabilities of all security levels are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

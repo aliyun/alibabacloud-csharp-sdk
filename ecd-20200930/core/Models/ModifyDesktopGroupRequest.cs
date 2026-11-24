@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow automatic creation of cloud computers in the subscription shared cloud computer. This parameter takes effect only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>, and is required in this case.</para>
+        /// <para>Specifies whether to allow automatic creation of cloud desktops in a subscription shared cloud desktop. This parameter takes effect and is required only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,13 +20,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? AllowAutoSetup { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud computers that can be reserved in a pay-as-you-go shared cloud computer. This parameter takes effect only when the <c>ChargeType</c> parameter is set to <c>PostPaid</c>, and is required in this case. Valid values: </para>
+        /// <para>The number of reserved cloud desktops allowed in a pay-as-you-go shared cloud desktop. This parameter takes effect and is required only when the <c>ChargeType</c> parameter is set to <c>PostPaid</c>. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>0: no reservation</description></item>
-        /// <item><description>N: reserve N cloud computers (1 ≤ N ≤ 100)</description></item>
+        /// <item><description>0: No reserved cloud desktops.</description></item>
+        /// <item><description>N: N reserved cloud desktops (1 ≤ N ≤ 100).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If no available cloud computers are reserved, the system must create and start a cloud computer before assigning it to the user when an end user initiates a connection request. This process takes a relatively long time. Reserve a certain number of cloud computers as needed to ensure a good experience for end users.</para>
+        /// <para>If no available cloud desktops are reserved, when an end user initiates a connection request, the system must first create and start a cloud desktop and then assign it to the user, which takes a relatively long time. Reserve a certain number of cloud desktops as needed to ensure the user experience.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? AllowBufferCount { get; set; }
 
         /// <summary>
-        /// <para>The number of concurrent sessions allowed on each cloud computer in a multi-session shared cloud computer with multiple cloud computers.</para>
+        /// <para>The number of concurrent sessions allowed per cloud desktop in multi-session and multi-desktop shared cloud desktops.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>For subscription shared cloud computers: the number of cloud computers to purchase. Valid values: 0 to 200.</description></item>
-        /// <item><description>For pay-as-you-go shared cloud computers: the minimum number of cloud computers to create in the pool. Default value: 1. Valid values: 0 to the value of <c>MaxDesktopsCount</c>.</description></item>
+        /// <item><description>For a subscription shared cloud desktop: the number of cloud desktops to purchase. Valid values: 0 to 200.</description></item>
+        /// <item><description>For a pay-as-you-go shared cloud desktop: the minimum number of cloud desktops to create in the pool. Default value: 1. Valid values: 0 to the value of <c>MaxDesktopsCount</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? BuyDesktopsCount { get; set; }
 
         /// <summary>
-        /// <para>The type of the shared cloud computer.</para>
+        /// <para>The type of the shared cloud desktop.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Classify { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>comment</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Comments { get; set; }
 
         /// <summary>
-        /// <para>The maximum duration that a session can remain in the connected state. The session is automatically disconnected when this duration is reached. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</para>
+        /// <para>The maximum duration for which a session can remain connected. When the session connection duration reaches this value, the session is automatically disconnected. Unit: milliseconds. Valid values: 900000 (15 minutes) to 345600000 (4 days).</para>
         /// 
         /// <b>Example:</b>
         /// <para>900000</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectDuration { get; set; }
 
         /// <summary>
-        /// <para>The retention period before cloud computers in the cloud computer pool are automatically deleted.</para>
+        /// <para>The retention period before a cloud desktop in the cloud desktop pool is automatically deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? DeleteDuration { get; set; }
 
         /// <summary>
-        /// <para>The shared cloud computer ID.</para>
+        /// <para>The ID of the shared cloud desktop.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The shared cloud computer name.</para>
+        /// <para>The name of the shared cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desktopGroupName1</para>
@@ -137,9 +137,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? DisableSessionConfig { get; set; }
 
         /// <summary>
-        /// <para>The NAS file system ID used by the user data roaming feature.</para>
+        /// <para>The ID of the NAS file system used for the user data roaming feature.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,10 +150,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The maximum idle duration after a user session is connected. If no keyboard or mouse activity occurs within this duration, the session is disconnected. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</para>
-        /// <para>30 seconds before this duration is reached, the end user in the session receives a prompt to save document data. The end user must save document data promptly to avoid data loss.</para>
+        /// <para>The maximum idle time before a user session is disconnected. If no keyboard or mouse operations are performed within this maximum duration after a user session is connected, the session is disconnected. Unit: milliseconds. Valid values: 360000 (6 minutes) to 3600000 (60 minutes).</para>
+        /// <para>30 seconds before this duration is reached, the end user in the session receives a prompt message to save document data. The end user must save the document data promptly to avoid data loss.</para>
         /// <remarks>
-        /// <para>This parameter applies only to cloud computers with an image version of 1.0.2 or later.</para>
+        /// <para>This parameter applies only to cloud desktops with an image version of 1.0.2 or later.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The retention period after a session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</para>
-        /// <para>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within the retention period, the session is logged off and all unsaved data is destroyed. If the user successfully reconnects within the retention period, the user can access the original session and the data that existed before the disconnection.</para>
+        /// <para>If a session is disconnected intentionally by the user or unexpectedly due to other factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within this period, the session is logged off and unsaved data is destroyed. If the user successfully reconnects within this period, the user can enter the original session and access the data before the disconnection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180000</para>
@@ -185,9 +185,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? KeepDuration { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy for multi-session shared cloud computers with multiple cloud computers.</para>
+        /// <para>The load balancing policy for multi-session and multi-desktop shared cloud desktops.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? LoadPolicy { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of cloud computers that a pay-as-you-go shared cloud computer can contain. Valid values: 0 to 500.</para>
+        /// <para>The maximum number of cloud desktops that can be accommodated in a pay-as-you-go shared cloud desktop. Valid values: 0 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxDesktopsCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of cloud computers that can be subject to automatic creation in a subscription shared cloud computer. This parameter takes effect only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>, and is required in this case. Default value: 1. Valid values: 0 to the value of <c>MaxDesktopsCount</c>.</para>
+        /// <para>The upper limit for the automatic creation of cloud desktops in a subscription shared cloud desktop. This parameter takes effect and is required only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>. Default value: 1. Valid values: 0 to the value of <c>MaxDesktopsCount</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MinDesktopsCount { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer template ID.</para>
+        /// <para>The ID of the cloud desktop template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b-7t275tpgjueeu****</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OwnBundleId { get; set; }
 
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The ID of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-53iyi2aar0nd6****</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>Specifies whether to enable user data roaming.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -258,11 +258,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? ProfileFollowSwitch { get; set; }
 
         /// <summary>
-        /// <para>The session occupancy threshold, which is used as the auto scaling trigger condition for multi-session shared cloud computers with multiple cloud computers. The session occupancy is calculated by using the following formula:</para>
-        /// <para><c>Session occupancy = Number of attached sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</c></para>
-        /// <para>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy is below this threshold, excess cloud computers are deleted.</para>
+        /// <para>The session usage threshold, which is used as the trigger for automatic scaling of multi-session and multi-desktop shared cloud desktops. The formula for session usage is:</para>
+        /// <para><c>Session usage = Number of attached sessions / (Total number of cloud desktop resources × Maximum number of sessions supported per cloud desktop) × 100%</c></para>
+        /// <para>When the session usage reaches this threshold, new cloud desktops are created. When the session usage does not reach this threshold, excess cloud desktops are deleted.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public float? RatioThreshold { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer reset type.</para>
+        /// <para>The reset type of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -294,9 +294,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResetType { get; set; }
 
         /// <summary>
-        /// <para>The scaling policy group ID.</para>
+        /// <para>The ID of the scaling policy group.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ScaleStrategyId { get; set; }
 
         /// <summary>
-        /// <para>The idle shutdown duration. When the idle duration of a cloud computer reaches this value, the cloud computer is automatically shut down. If a user connects after the shutdown, the cloud computer is automatically started. Unit: milliseconds.</para>
+        /// <para>The idle shutdown time. When the idle time of a cloud desktop reaches this value, the cloud desktop is automatically shut down. If a user connects to the cloud desktop after it is shut down, the cloud desktop is automatically started. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300000</para>

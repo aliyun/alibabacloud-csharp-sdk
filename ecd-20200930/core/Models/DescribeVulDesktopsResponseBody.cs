@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVulDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -22,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. An empty value indicates that no more results exist.</para>
+        /// <para>The token for the next query. An empty NextToken indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kRxd1mKkNnHlUy14zdjl/I</para>
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,14 +50,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The details of cloud desktops affected by the vulnerability.</para>
+        /// <para>The list of details about cloud desktops affected by the vulnerability.</para>
         /// </summary>
         [NameInMap("VulDesktops")]
         [Validation(Required=false)]
         public List<DescribeVulDesktopsResponseBodyVulDesktops> VulDesktops { get; set; }
         public class DescribeVulDesktopsResponseBodyVulDesktops : TeaModel {
             /// <summary>
-            /// <para>The configuration task ID.</para>
+            /// <para>The ID of the configuration task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccg-0bbay4w7bwbxd****</para>
@@ -89,14 +87,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? CveCount { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability details.</para>
+            /// <para>The list of vulnerability details.</para>
             /// </summary>
             [NameInMap("Cves")]
             [Validation(Required=false)]
             public List<DescribeVulDesktopsResponseBodyVulDesktopsCves> Cves { get; set; }
             public class DescribeVulDesktopsResponseBodyVulDesktopsCves : TeaModel {
                 /// <summary>
-                /// <para>The CVE ID of the vulnerability.</para>
+                /// <para>The vulnerability ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CVE-2026-62690</para>
@@ -106,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CveId { get; set; }
 
                 /// <summary>
-                /// <para>The vulnerability level.</para>
+                /// <para>The severity level of the vulnerability.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>low</para>
@@ -116,17 +114,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CveLevel { get; set; }
 
                 /// <summary>
-                /// <para>The vulnerability name.</para>
+                /// <para>The name of the vulnerability.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Windows Push Notification Elevation of Privilege Vulnerability</para>
+                /// <para>Windows Push Notifications Elevation of Privilege Vulnerability</para>
                 /// </summary>
                 [NameInMap("CveTitle")]
                 [Validation(Required=false)]
                 public string CveTitle { get; set; }
 
                 /// <summary>
-                /// <para>The CVE URL.</para>
+                /// <para>The CVE link.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://avd.aliyun.com/detail/CVE-2026-62690">https://avd.aliyun.com/detail/CVE-2026-62690</a></para>
@@ -146,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ImpactScore { get; set; }
 
                 /// <summary>
-                /// <para>The reference URL for the vulnerability details.</para>
+                /// <para>The reference link for the vulnerability details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62690</a></para>
@@ -156,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ReferenceUrl { get; set; }
 
                 /// <summary>
-                /// <para>The release time. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
+                /// <para>The release time. The time is in the ISO 8601 standard UTC format: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-11 07:00:00</para>
@@ -198,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the vulnerability was first detected. Format: yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The time when the vulnerability was first detected. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-05 00:00:00</para>
@@ -208,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FirstFoundTime { get; set; }
 
             /// <summary>
-            /// <para>The fix records of the cloud desktop.</para>
+            /// <para>The list of fix details for the cloud desktop.</para>
             /// </summary>
             [NameInMap("FixRecords")]
             [Validation(Required=false)]
@@ -225,7 +223,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string BatchId { get; set; }
 
                 /// <summary>
-                /// <para>The failure reason.</para>
+                /// <para>The reason for the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Update failed</para>
@@ -245,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string FixResult { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the fix task ended, in milliseconds.</para>
+                /// <para>The timestamp when the fix task ended. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-05 13:57:31</para>
@@ -267,14 +265,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The patch IDs.</para>
+            /// <para>The list of patch IDs.</para>
             /// </summary>
             [NameInMap("PatchIds")]
             [Validation(Required=false)]
             public List<string> PatchIds { get; set; }
 
             /// <summary>
-            /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+            /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
@@ -284,7 +282,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The enterprise resource group ID.</para>
+            /// <para>The ID of the enterprise resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm2tswogr****</para>
@@ -304,7 +302,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The patch level.</para>
+            /// <para>The severity level of the patch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
