@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "csas";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends associated terminal devices to a static device label in batches.</para>
+        /// <para>Adds associated terminal devices to a static device tag in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends associated terminal devices to a static device label in batches.</para>
+        /// <para>Adds associated terminal devices to a static device tag in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -148,7 +151,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends associated terminal devices to a static device label in batches.</para>
+        /// <para>Adds associated terminal devices to a static device tag in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -166,7 +169,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends associated terminal devices to a static device label in batches.</para>
+        /// <para>Adds associated terminal devices to a static device tag in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// <para>Adds entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. The quota is calculated independently for each combination of matching dimension and list type. For each combination, the whitelist supports up to 10,000 entries and the blacklist supports up to 1,000 entries. If the quota is exceeded after the addition, the entire batch fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -236,7 +239,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// <para>Adds entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. The quota is calculated independently for each combination of matching dimension and list type. For each combination, the whitelist supports up to 10,000 entries and the blacklist supports up to 1,000 entries. If the quota is exceeded after the addition, the entire batch fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -288,7 +291,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// <para>Adds entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. The quota is calculated independently for each combination of matching dimension and list type. For each combination, the whitelist supports up to 10,000 entries and the blacklist supports up to 1,000 entries. If the quota is exceeded after the addition, the entire batch fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -306,7 +309,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// <para>Adds entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. The quota is calculated independently for each combination of matching dimension and list type. For each combination, the whitelist supports up to 10,000 entries and the blacklist supports up to 1,000 entries. If the quota is exceeded after the addition, the entire batch fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -605,7 +608,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// <para>Appends domain name entries to a specified domain name list (<c>ListId</c>) in batches. Domain names must be second-level or higher-level domain names. Wildcard domain names such as <c>*.example.com</c> are supported, but overly broad formats such as <c>*.com</c> and <c>*.com.cn</c> are prohibited.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -666,7 +669,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// <para>Appends domain name entries to a specified domain name list (<c>ListId</c>) in batches. Domain names must be second-level or higher-level domain names. Wildcard domain names such as <c>*.example.com</c> are supported, but overly broad formats such as <c>*.com</c> and <c>*.com.cn</c> are prohibited.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -727,7 +730,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// <para>Appends domain name entries to a specified domain name list (<c>ListId</c>) in batches. Domain names must be second-level or higher-level domain names. Wildcard domain names such as <c>*.example.com</c> are supported, but overly broad formats such as <c>*.com</c> and <c>*.com.cn</c> are prohibited.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -750,7 +753,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Appends domain name entries in batches to a specified domain name list (<c>ListId</c>). Domain names must be second-level or higher domain names. Wildcard domain names (<c>*.example.com</c>) are supported, but overly broad patterns such as <c>*.com</c> or <c>*.com.cn</c> are prohibited.</para>
+        /// <para>Appends domain name entries to a specified domain name list (<c>ListId</c>) in batches. Domain names must be second-level or higher-level domain names. Wildcard domain names such as <c>*.example.com</c> are supported, but overly broad formats such as <c>*.com</c> and <c>*.com.cn</c> are prohibited.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -768,12 +771,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// <para>Deletes multiple domain name entries from a domain name list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// <para>Deletes multiple domain name entries from a specified domain name list based on entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> returned by ListDomainItems).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -829,12 +832,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// <para>Deletes multiple domain name entries from a domain name list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// <para>Deletes multiple domain name entries from a specified domain name list based on entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> returned by ListDomainItems).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -890,12 +893,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// <para>Deletes multiple domain name entries from a domain name list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// <para>Deletes multiple domain name entries from a specified domain name list based on entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> returned by ListDomainItems).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -913,12 +916,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes domain name entries from a domain name list.</para>
+        /// <para>Deletes multiple domain name entries from a domain name list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Batch deletes domain name entries from a specified domain name list by entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> field returned by ListDomainItems).</para>
+        /// <para>Deletes multiple domain name entries from a specified domain name list based on entry IDs (<c>ItemIds</c>, obtained from the <c>ItemId</c> returned by ListDomainItems).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -936,15 +939,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal-facing applications in batches.</para>
+        /// <para>Deletes multiple private access applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applications that are referenced by office network recognition or policies cannot be deleted. References:</para>
+        /// <para>Deletion is not allowed when office area identification or policy references exist. References:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</description></item>
-        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists private access policies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -993,15 +996,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal-facing applications in batches.</para>
+        /// <para>Deletes multiple private access applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applications that are referenced by office network recognition or policies cannot be deleted. References:</para>
+        /// <para>Deletion is not allowed when office area identification or policy references exist. References:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</description></item>
-        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists private access policies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1050,15 +1053,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal-facing applications in batches.</para>
+        /// <para>Deletes multiple private access applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applications that are referenced by office network recognition or policies cannot be deleted. References:</para>
+        /// <para>Deletion is not allowed when office area identification or policy references exist. References:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</description></item>
-        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists private access policies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1077,15 +1080,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal-facing applications in batches.</para>
+        /// <para>Deletes multiple private access applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applications that are referenced by office network recognition or policies cannot be deleted. References:</para>
+        /// <para>Deletion is not allowed when office area identification or policy references exist. References:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</description></item>
-        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists private access policies.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1104,7 +1107,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal network access policies in batches.</para>
+        /// <para>Deletes multiple internal network access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1152,7 +1155,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal network access policies in batches.</para>
+        /// <para>Deletes multiple internal network access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1200,7 +1203,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal network access policies in batches.</para>
+        /// <para>Deletes multiple internal network access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1218,7 +1221,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes internal network access policies in batches.</para>
+        /// <para>Deletes multiple internal network access policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1236,7 +1239,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates user labels.</para>
+        /// <para>Associates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1288,7 +1291,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates user labels.</para>
+        /// <para>Associates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1340,7 +1343,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates user labels.</para>
+        /// <para>Associates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1358,7 +1361,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates user labels.</para>
+        /// <para>Associates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1376,7 +1379,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// <para>Cancels multiple active instant virus scan tasks in batches. After cancellation, endpoints no longer pull or execute the tasks, and scans already running on the endpoints are not interrupted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1424,7 +1427,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// <para>Cancels multiple active instant virus scan tasks in batches. After cancellation, endpoints no longer pull or execute the tasks, and scans already running on the endpoints are not interrupted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1472,7 +1475,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// <para>Cancels multiple active instant virus scan tasks in batches. After cancellation, endpoints no longer pull or execute the tasks, and scans already running on the endpoints are not interrupted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1490,7 +1493,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// <para>Cancels multiple active instant virus scan tasks in batches. After cancellation, endpoints no longer pull or execute the tasks, and scans already running on the endpoints are not interrupted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1508,7 +1511,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// <para>Cancels multiple active on-demand vulnerability scanning nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1556,7 +1559,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// <para>Cancels multiple active on-demand vulnerability scanning nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1604,7 +1607,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// <para>Cancels multiple active on-demand vulnerability scanning nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1622,7 +1625,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// <para>Cancels multiple active on-demand vulnerability scanning nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1808,7 +1811,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backend filing.</para>
+        /// <para>Creates a backend report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1876,7 +1879,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backend filing.</para>
+        /// <para>Creates a backend report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1944,7 +1947,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backend filing.</para>
+        /// <para>Creates a backend report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1962,7 +1965,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backend filing.</para>
+        /// <para>Creates a backend report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2292,7 +2295,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a device label.</para>
+        /// <para>Creates a device tag.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2356,7 +2359,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a device label.</para>
+        /// <para>Creates a device tag.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2420,7 +2423,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a device label.</para>
+        /// <para>Creates a device tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2438,7 +2441,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a device label.</para>
+        /// <para>Creates a device tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2461,7 +2464,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2512,7 +2515,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2563,7 +2566,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2586,7 +2589,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3152,7 +3155,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic forwarding rule.</para>
+        /// <para>Creates a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3214,7 +3217,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic forwarding rule.</para>
+        /// <para>Creates a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3276,7 +3279,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic forwarding rule.</para>
+        /// <para>Creates a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3294,7 +3297,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a traffic forwarding rule.</para>
+        /// <para>Creates a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3440,7 +3443,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a diagnostic task for internal network access.</para>
+        /// <para>Creates an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3524,7 +3527,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a diagnostic task for internal network access.</para>
+        /// <para>Creates an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3608,7 +3611,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a diagnostic task for internal network access.</para>
+        /// <para>Creates an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3626,7 +3629,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a diagnostic task for internal network access.</para>
+        /// <para>Creates an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4396,7 +4399,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a software ban policy.</para>
+        /// <para>Creates a prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4524,7 +4527,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a software ban policy.</para>
+        /// <para>Creates a prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4652,7 +4655,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a software ban policy.</para>
+        /// <para>Creates a prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4670,7 +4673,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a software ban policy.</para>
+        /// <para>Creates a prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4688,7 +4691,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software entry.</para>
+        /// <para>Creates custom blocked software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4756,7 +4759,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software entry.</para>
+        /// <para>Creates custom blocked software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4824,7 +4827,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software entry.</para>
+        /// <para>Creates custom blocked software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4842,7 +4845,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software entry.</para>
+        /// <para>Creates custom blocked software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4860,7 +4863,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software tag.</para>
+        /// <para>Creates a custom prohibited software tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4906,7 +4909,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software tag.</para>
+        /// <para>Creates a custom prohibited software tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4952,7 +4955,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software tag.</para>
+        /// <para>Creates a custom prohibited software tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4970,7 +4973,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom disabled software tag.</para>
+        /// <para>Creates a custom prohibited software tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5355,8 +5358,8 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>After a task is created, its initial status is disabled.</description></item>
-        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
-        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// <item><description>MatchMode determines how target parameters are specified. If MatchMode is set to UserGroupNormal, you must specify only UserGroupIds. If MatchMode is set to DeviceGroupNormal, you must specify only DeviceGroupIds. If MatchMode is set to DevTagNormal, you must specify only DevTags. Requests with parameters that do not match the specified MatchMode are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5480,8 +5483,8 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>After a task is created, its initial status is disabled.</description></item>
-        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
-        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// <item><description>MatchMode determines how target parameters are specified. If MatchMode is set to UserGroupNormal, you must specify only UserGroupIds. If MatchMode is set to DeviceGroupNormal, you must specify only DeviceGroupIds. If MatchMode is set to DevTagNormal, you must specify only DevTags. Requests with parameters that do not match the specified MatchMode are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5605,8 +5608,8 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>After a task is created, its initial status is disabled.</description></item>
-        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
-        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// <item><description>MatchMode determines how target parameters are specified. If MatchMode is set to UserGroupNormal, you must specify only UserGroupIds. If MatchMode is set to DeviceGroupNormal, you must specify only DeviceGroupIds. If MatchMode is set to DevTagNormal, you must specify only DevTags. Requests with parameters that do not match the specified MatchMode are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5632,8 +5635,8 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>After a task is created, its initial status is disabled.</description></item>
-        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
-        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// <item><description>MatchMode determines how target parameters are specified. If MatchMode is set to UserGroupNormal, you must specify only UserGroupIds. If MatchMode is set to DeviceGroupNormal, you must specify only DeviceGroupIds. If MatchMode is set to DevTagNormal, you must specify only DevTags. Requests with parameters that do not match the specified MatchMode are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6040,7 +6043,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// <para>Creates a scheduled virus scan policy that automatically delivers scan tasks to user endpoints within the effective scope based on the configured schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6160,7 +6163,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// <para>Creates a scheduled virus scan policy that automatically delivers scan tasks to user endpoints within the effective scope based on the configured schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6280,7 +6283,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// <para>Creates a scheduled virus scan policy that automatically delivers scan tasks to user endpoints within the effective scope based on the configured schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6298,7 +6301,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// <para>Creates a scheduled virus scan policy that automatically delivers scan tasks to user endpoints within the effective scope based on the configured schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7312,12 +7315,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking embedding task.</para>
+        /// <para>Creates a digital watermarking embedding node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a maximum of 500 user groups by default.</para>
+        /// <para>By default, you can create up to 500 user groups.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7441,12 +7444,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking embedding task.</para>
+        /// <para>Creates a digital watermarking embedding node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a maximum of 500 user groups by default.</para>
+        /// <para>By default, you can create up to 500 user groups.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7570,12 +7573,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking embedding task.</para>
+        /// <para>Creates a digital watermarking embedding node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a maximum of 500 user groups by default.</para>
+        /// <para>By default, you can create up to 500 user groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7593,12 +7596,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking embedding task.</para>
+        /// <para>Creates a digital watermarking embedding node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a maximum of 500 user groups by default.</para>
+        /// <para>By default, you can create up to 500 user groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7616,7 +7619,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking extraction task.</para>
+        /// <para>Creates a digital watermarking fetch node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7706,7 +7709,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking extraction task.</para>
+        /// <para>Creates a digital watermarking fetch node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7796,7 +7799,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking extraction task.</para>
+        /// <para>Creates a digital watermarking fetch node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7814,7 +7817,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital watermarking extraction task.</para>
+        /// <para>Creates a digital watermarking fetch node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13308,7 +13311,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified device label.</para>
+        /// <para>Queries the details of a specified device group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13350,7 +13353,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified device label.</para>
+        /// <para>Queries the details of a specified device group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13392,7 +13395,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified device label.</para>
+        /// <para>Queries the details of a specified device group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13410,7 +13413,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified device label.</para>
+        /// <para>Queries the details of a specified device group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13681,7 +13684,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13724,7 +13727,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13767,7 +13770,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13790,7 +13793,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
+        /// <para>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13808,7 +13811,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a specified identity source configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13846,7 +13849,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a specified identity source configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13884,7 +13887,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a specified identity source configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13902,7 +13905,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the configuration details of a specified identity provider for your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a specified identity source configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14044,7 +14047,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a private access diagnostic task.</para>
+        /// <para>Queries the details of an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14082,7 +14085,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a private access diagnostic task.</para>
+        /// <para>Queries the details of an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14120,7 +14123,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a private access diagnostic task.</para>
+        /// <para>Queries the details of an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14138,7 +14141,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a private access diagnostic task.</para>
+        /// <para>Queries the details of an internal network access diagnostic task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14156,7 +14159,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private access application under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of a private access application within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14194,7 +14197,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private access application under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of a private access application within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14232,7 +14235,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private access application under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of a private access application within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14250,7 +14253,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private access application under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of a private access application within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14380,7 +14383,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// <para>Queries the details of a specified prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14418,7 +14421,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// <para>Queries the details of a specified prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14456,7 +14459,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// <para>Queries the details of a specified prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14474,7 +14477,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified software prohibition policy.</para>
+        /// <para>Queries the details of a specified prohibited software policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14492,7 +14495,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified prohibited software.</para>
+        /// <para>Queries the details of the specified prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14536,7 +14539,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified prohibited software.</para>
+        /// <para>Queries the details of the specified prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14580,7 +14583,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified prohibited software.</para>
+        /// <para>Queries the details of the specified prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14598,7 +14601,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified prohibited software.</para>
+        /// <para>Queries the details of the specified prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14848,7 +14851,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of user terminal devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of user terminal devices in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14886,7 +14889,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of user terminal devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of user terminal devices in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14924,7 +14927,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of user terminal devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of user terminal devices in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14942,7 +14945,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of user terminal devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the details of user terminal devices in the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15216,7 +15219,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// <para>Queries the global antivirus configuration for the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have a custom configuration record, the system default configurations are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15250,7 +15253,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// <para>Queries the global antivirus configuration for the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have a custom configuration record, the system default configurations are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15284,7 +15287,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// <para>Queries the global antivirus configuration for the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have a custom configuration record, the system default configurations are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15302,7 +15305,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// <para>Queries the global antivirus configuration for the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have a custom configuration record, the system default configurations are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15432,7 +15435,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// <para>Queries the global vulnerability scanning configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15466,7 +15469,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// <para>Queries the global vulnerability scanning configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15500,7 +15503,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// <para>Queries the global vulnerability scanning configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15518,7 +15521,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// <para>Queries the global vulnerability scanning configuration for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15536,7 +15539,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// <para>Queries the complete configuration of a specified scheduled vulnerability scanning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15574,7 +15577,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// <para>Queries the complete configuration of a specified scheduled vulnerability scanning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15612,7 +15615,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// <para>Queries the complete configuration of a specified scheduled vulnerability scanning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15630,7 +15633,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// <para>Queries the complete configuration of a specified scheduled vulnerability scanning policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16112,7 +16115,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately invalidates an approval.</para>
+        /// <para>Immediately invalidates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16154,7 +16157,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately invalidates an approval.</para>
+        /// <para>Immediately invalidates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16196,7 +16199,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately invalidates an approval.</para>
+        /// <para>Immediately invalidates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16214,7 +16217,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Immediately invalidates an approval.</para>
+        /// <para>Immediately invalidates a report.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17128,8 +17131,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connectors in batches.</para>
+        /// <para>Queries the details of connectors under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters connectors by name, connection status, instance status, and connector ID, and returns a paginated list of matched connectors along with the total count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -17166,8 +17174,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connectors in batches.</para>
+        /// <para>Queries the details of connectors under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters connectors by name, connection status, instance status, and connector ID, and returns a paginated list of matched connectors along with the total count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -17204,8 +17217,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connectors in batches.</para>
+        /// <para>Queries the details of connectors under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters connectors by name, connection status, instance status, and connector ID, and returns a paginated list of matched connectors along with the total count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -17222,8 +17240,13 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connectors in batches.</para>
+        /// <para>Queries the details of connectors under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters connectors by name, connection status, instance status, and connector ID, and returns a paginated list of matched connectors along with the total count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -17240,7 +17263,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17294,7 +17317,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17348,7 +17371,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17366,7 +17389,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17384,7 +17407,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// <para>Queries the user terminal devices affected by a specified vulnerability and their remediation statuses by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17422,7 +17445,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// <para>Queries the user terminal devices affected by a specified vulnerability and their remediation statuses by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17460,7 +17483,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// <para>Queries the user terminal devices affected by a specified vulnerability and their remediation statuses by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17478,7 +17501,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// <para>Queries the user terminal devices affected by a specified vulnerability and their remediation statuses by using paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18916,7 +18939,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries forwarding rules in batches.</para>
+        /// <para>Lists forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18954,7 +18977,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries forwarding rules in batches.</para>
+        /// <para>Lists forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18992,7 +19015,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries forwarding rules in batches.</para>
+        /// <para>Lists forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19010,7 +19033,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries forwarding rules in batches.</para>
+        /// <para>Lists forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19540,12 +19563,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// <para>Performs a paging query on the bandwidth configurations of VPC and Connector network instances connected to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// <para>Queries the bandwidth configurations of available network instances within the current account. You can filter the results by network type (NetType) and instance IDs (InstanceIds), and paginate the results by using CurrentPage and PageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19599,12 +19622,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// <para>Performs a paging query on the bandwidth configurations of VPC and Connector network instances connected to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// <para>Queries the bandwidth configurations of available network instances within the current account. You can filter the results by network type (NetType) and instance IDs (InstanceIds), and paginate the results by using CurrentPage and PageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19658,12 +19681,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// <para>Performs a paging query on the bandwidth configurations of VPC and Connector network instances connected to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// <para>Queries the bandwidth configurations of available network instances within the current account. You can filter the results by network type (NetType) and instance IDs (InstanceIds), and paginate the results by using CurrentPage and PageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19681,12 +19704,12 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// <para>Performs a paging query on the bandwidth configurations of VPC and Connector network instances connected to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// <para>Queries the bandwidth configurations of available network instances within the current account. You can filter the results by network type (NetType) and instance IDs (InstanceIds), and paginate the results by using CurrentPage and PageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19711,10 +19734,10 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
-        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
-        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>If OperationStatus is not specified, only records of successful operations are returned.</description></item>
+        /// <item><description>The returned results are sorted in descending order of operation time.</description></item>
         /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
-        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\). Otherwise, an InvalidParameter error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19796,10 +19819,10 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
-        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
-        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>If OperationStatus is not specified, only records of successful operations are returned.</description></item>
+        /// <item><description>The returned results are sorted in descending order of operation time.</description></item>
         /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
-        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\). Otherwise, an InvalidParameter error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19881,10 +19904,10 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
-        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
-        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>If OperationStatus is not specified, only records of successful operations are returned.</description></item>
+        /// <item><description>The returned results are sorted in descending order of operation time.</description></item>
         /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
-        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\). Otherwise, an InvalidParameter error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19910,10 +19933,10 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <description>
         /// <list type="bullet">
         /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
-        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
-        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>If OperationStatus is not specified, only records of successful operations are returned.</description></item>
+        /// <item><description>The returned results are sorted in descending order of operation time.</description></item>
         /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
-        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\). Otherwise, an InvalidParameter error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20492,7 +20515,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all private access applications in the current Alibaba Cloud account.</para>
+        /// <para>Queries the information about all private access applications under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20574,7 +20597,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all private access applications in the current Alibaba Cloud account.</para>
+        /// <para>Queries the information about all private access applications under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20656,7 +20679,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all private access applications in the current Alibaba Cloud account.</para>
+        /// <para>Queries the information about all private access applications under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20674,7 +20697,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all private access applications in the current Alibaba Cloud account.</para>
+        /// <para>Queries the information about all private access applications under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22296,15 +22319,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries software in the software library.</para>
+        /// <para>Queries software in the software library in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>Pagination is implemented by using CurrentPage and PageSize. NextToken and MaxResults do not take effect.</description></item>
         /// <item><description>SoftwareName supports fuzzy match.</description></item>
-        /// <item><description>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// <item><description>The Versions field (software version list) in the response is not returned. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22375,15 +22398,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries software in the software library.</para>
+        /// <para>Queries software in the software library in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>Pagination is implemented by using CurrentPage and PageSize. NextToken and MaxResults do not take effect.</description></item>
         /// <item><description>SoftwareName supports fuzzy match.</description></item>
-        /// <item><description>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// <item><description>The Versions field (software version list) in the response is not returned. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22454,15 +22477,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries software in the software library.</para>
+        /// <para>Queries software in the software library in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>Pagination is implemented by using CurrentPage and PageSize. NextToken and MaxResults do not take effect.</description></item>
         /// <item><description>SoftwareName supports fuzzy match.</description></item>
-        /// <item><description>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// <item><description>The Versions field (software version list) in the response is not returned. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22481,15 +22504,15 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries software in the software library.</para>
+        /// <para>Queries software in the software library in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>Pagination is implemented by using CurrentPage and PageSize. NextToken and MaxResults do not take effect.</description></item>
         /// <item><description>SoftwareName supports fuzzy match.</description></item>
-        /// <item><description>The Versions field (software version list) in the response is not returned. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// <item><description>The Versions field (software version list) in the response is not returned. For more information about how to view and manage software versions, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22956,7 +22979,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user endpoint devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the list of user terminal devices under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23012,6 +23035,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTypes))
             {
                 query["DeviceTypes"] = request.DeviceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskEncryptStatuses))
+            {
+                query["DiskEncryptStatuses"] = request.DiskEncryptStatuses;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlpStatuses))
             {
@@ -23094,7 +23121,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user endpoint devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the list of user terminal devices under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23150,6 +23177,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceTypes))
             {
                 query["DeviceTypes"] = request.DeviceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskEncryptStatuses))
+            {
+                query["DiskEncryptStatuses"] = request.DiskEncryptStatuses;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DlpStatuses))
             {
@@ -23232,7 +23263,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user endpoint devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the list of user terminal devices under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23250,7 +23281,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of user endpoint devices under the current Alibaba Cloud account.</para>
+        /// <para>Queries the list of user terminal devices under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23940,7 +23971,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</para>
+        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns them grouped by match dimension and list type. The blacklists and whitelists are global lists at the Alibaba Cloud account and operating system dimensions, and take effect for all instant scans, scheduled scans, and real-time protection under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23978,7 +24009,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</para>
+        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns them grouped by match dimension and list type. The blacklists and whitelists are global lists at the Alibaba Cloud account and operating system dimensions, and take effect for all instant scans, scheduled scans, and real-time protection under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24016,7 +24047,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</para>
+        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns them grouped by match dimension and list type. The blacklists and whitelists are global lists at the Alibaba Cloud account and operating system dimensions, and take effect for all instant scans, scheduled scans, and real-time protection under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24034,7 +24065,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns the results grouped by matching dimension and list type. The blacklists and whitelists are global lists scoped to the Alibaba Cloud account and operating system dimensions, and take effect for all on-demand scans, scheduled scans, and real-time protection under the account.</para>
+        /// <para>Queries the virus scan blacklists and whitelists for a specified operating system, and returns them grouped by match dimension and list type. The blacklists and whitelists are global lists at the Alibaba Cloud account and operating system dimensions, and take effect for all instant scans, scheduled scans, and real-time protection under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26016,7 +26047,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds user labels.</para>
+        /// <para>Disassociates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26068,7 +26099,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds user labels.</para>
+        /// <para>Disassociates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26120,7 +26151,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds user labels.</para>
+        /// <para>Disassociates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26138,7 +26169,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds user labels.</para>
+        /// <para>Disassociates user tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26355,6 +26386,11 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>Updates an approval process under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified approval process under the current Alibaba Cloud account. You can modify the name, description, approval nodes, associated approval templates, approval type, and integration configurations with external approval platforms such as DingTalk and Lark. The approval process ID is specified by ProcessId, and other fields are optional. Fields that are not passed retain their original values.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpdateApprovalProcessRequest
         /// </param>
@@ -26446,6 +26482,11 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <summary>
         /// <para>Updates an approval process under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified approval process under the current Alibaba Cloud account. You can modify the name, description, approval nodes, associated approval templates, approval type, and integration configurations with external approval platforms such as DingTalk and Lark. The approval process ID is specified by ProcessId, and other fields are optional. Fields that are not passed retain their original values.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateApprovalProcessRequest
@@ -26539,6 +26580,11 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>Updates an approval process under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified approval process under the current Alibaba Cloud account. You can modify the name, description, approval nodes, associated approval templates, approval type, and integration configurations with external approval platforms such as DingTalk and Lark. The approval process ID is specified by ProcessId, and other fields are optional. Fields that are not passed retain their original values.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateApprovalProcessRequest
         /// </param>
@@ -26556,6 +26602,11 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <summary>
         /// <para>Updates an approval process under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified approval process under the current Alibaba Cloud account. You can modify the name, description, approval nodes, associated approval templates, approval type, and integration configurations with external approval platforms such as DingTalk and Lark. The approval process ID is specified by ProcessId, and other fields are optional. Fields that are not passed retain their original values.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateApprovalProcessRequest
@@ -28976,7 +29027,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal-facing application.</para>
+        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29022,6 +29073,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["TimeoutSec"] = request.TimeoutSec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlAccessPaths))
+            {
+                bodyFlat["UrlAccessPaths"] = request.UrlAccessPaths;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMarkStatus))
             {
                 body["UserMarkStatus"] = request.UserMarkStatus;
@@ -29056,7 +29111,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal-facing application.</para>
+        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29102,6 +29157,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             {
                 body["TimeoutSec"] = request.TimeoutSec;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlAccessPaths))
+            {
+                bodyFlat["UrlAccessPaths"] = request.UrlAccessPaths;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMarkStatus))
             {
                 body["UserMarkStatus"] = request.UserMarkStatus;
@@ -29136,7 +29195,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal-facing application.</para>
+        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29154,7 +29213,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal-facing application.</para>
+        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29172,7 +29231,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an internal network access policy for your Alibaba Cloud account.</para>
+        /// <para>Modifies a private access policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29304,7 +29363,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an internal network access policy for your Alibaba Cloud account.</para>
+        /// <para>Modifies a private access policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29436,7 +29495,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an internal network access policy for your Alibaba Cloud account.</para>
+        /// <para>Modifies a private access policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29454,7 +29513,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an internal network access policy for your Alibaba Cloud account.</para>
+        /// <para>Modifies a private access policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29772,7 +29831,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom prohibited software entry.</para>
+        /// <para>Updates custom prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29844,7 +29903,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom prohibited software entry.</para>
+        /// <para>Updates custom prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29916,7 +29975,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom prohibited software entry.</para>
+        /// <para>Updates custom prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29934,7 +29993,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a custom prohibited software entry.</para>
+        /// <para>Updates custom prohibited software.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31368,7 +31427,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// <para>Quarantines or marks a virus file on a specified user terminal device as trusted. The DevTag, FilePath, and FileMd5 parameters are used together to locate a virus file record. If the record does not exist, the call fails. Quarantine is an asynchronous operation. The server creates a processing task, which is then pulled and executed by the user terminal device. You can process the same virus file record only once within 1 minute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31426,7 +31485,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// <para>Quarantines or marks a virus file on a specified user terminal device as trusted. The DevTag, FilePath, and FileMd5 parameters are used together to locate a virus file record. If the record does not exist, the call fails. Quarantine is an asynchronous operation. The server creates a processing task, which is then pulled and executed by the user terminal device. You can process the same virus file record only once within 1 minute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31484,7 +31543,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// <para>Quarantines or marks a virus file on a specified user terminal device as trusted. The DevTag, FilePath, and FileMd5 parameters are used together to locate a virus file record. If the record does not exist, the call fails. Quarantine is an asynchronous operation. The server creates a processing task, which is then pulled and executed by the user terminal device. You can process the same virus file record only once within 1 minute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31502,7 +31561,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// <para>Quarantines or marks a virus file on a specified user terminal device as trusted. The DevTag, FilePath, and FileMd5 parameters are used together to locate a virus file record. If the record does not exist, the call fails. Quarantine is an asynchronous operation. The server creates a processing task, which is then pulled and executed by the user terminal device. You can process the same virus file record only once within 1 minute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31676,7 +31735,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter fully overwrites the existing exception user list of the policy with the provided list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31800,7 +31859,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter fully overwrites the existing exception user list of the policy with the provided list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31924,7 +31983,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter fully overwrites the existing exception user list of the policy with the provided list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31942,7 +32001,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter fully overwrites the existing exception user list of the policy with the provided list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32100,7 +32159,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// <para>Modifies the configuration of a specified scheduled vulnerability scan policy and returns the updated full configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32192,7 +32251,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// <para>Modifies the configuration of a specified scheduled vulnerability scan policy and returns the updated full configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32284,7 +32343,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// <para>Modifies the configuration of a specified scheduled vulnerability scan policy and returns the updated full configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32302,7 +32361,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// <para>Modifies the configuration of a specified scheduled vulnerability scan policy and returns the updated full configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">

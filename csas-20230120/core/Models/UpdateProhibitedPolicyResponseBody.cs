@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public UpdateProhibitedPolicyResponseBodyPolicy Policy { get; set; }
         public class UpdateProhibitedPolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>Specifies whether endpoint users are allowed to submit a filing request for this policy. Valid values:</para>
+            /// <para>Specifies whether to allow endpoint users to submit exemption requests for the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Filing is allowed. A filing entry is provided in the pop-up notification on the endpoint.</description></item>
-            /// <item><description><b>false</b>: Filing is not allowed.</description></item>
+            /// <item><description><b>true</b>: Exemption requests are allowed. The endpoint pop-up window provides an entry for submitting requests.</description></item>
+            /// <item><description><b>false</b>: Exemption requests are not allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? AllowReport { get; set; }
 
             /// <summary>
-            /// <para>The time when the software prohibition policy was created, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</para>
+            /// <para>The time when the software prohibition policy was created. The time is in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-19 10:24:31</para>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>Specifies whether the policy is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled. The policy is delivered to endpoints and takes effect.</description></item>
-            /// <item><description><b>false</b>: Disabled. The policy configuration is retained but not delivered to endpoints.</description></item>
+            /// <item><description><b>true</b>: The policy is enabled and delivered to endpoints to take effect.</description></item>
+            /// <item><description><b>false</b>: The policy is disabled. The configuration is retained but not delivered to endpoints.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>Specifies whether to forcibly terminate running software processes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The endpoint immediately terminates the running processes of the software when the policy is triggered.</description></item>
-            /// <item><description><b>false</b>: Running processes are not terminated. Only subsequent launches are blocked.</description></item>
+            /// <item><description><b>true</b>: The endpoint immediately terminates the running processes of the software when the policy is matched.</description></item>
+            /// <item><description><b>false</b>: Running processes are not terminated. Only subsequent startups are blocked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,17 +79,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? ForceKill { get; set; }
 
             /// <summary>
-            /// <para>The Chinese text of the primary button in the pop-up notification on the endpoint.</para>
+            /// <para>The Chinese text of the primary button in the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Submit Filing</para>
+            /// <para>Submit request</para>
             /// </summary>
             [NameInMap("MainButtonTextCh")]
             [Validation(Required=false)]
             public string MainButtonTextCh { get; set; }
 
             /// <summary>
-            /// <para>The English text of the primary button in the pop-up notification on the endpoint.</para>
+            /// <para>The English text of the primary button in the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Report</para>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MainButtonTextEn { get; set; }
 
             /// <summary>
-            /// <para>The scope in which the policy takes effect. Valid values:</para>
+            /// <para>The effective scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UserGroupAll</b>: Takes effect for all users under the current Alibaba Cloud account. No user group needs to be specified.</description></item>
-            /// <item><description><b>UserGroupNormal</b>: Takes effect only for users in the user groups specified by UserGroupIds.</description></item>
+            /// <item><description><b>UserGroupAll</b>: applies to all users under the current Alibaba Cloud account. You do not need to specify user groups.</description></item>
+            /// <item><description><b>UserGroupNormal</b>: applies only to users in the user groups specified by UserGroupIds.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,17 +113,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MatchMode { get; set; }
 
             /// <summary>
-            /// <para>The Chinese text of the secondary button in the pop-up notification on the endpoint.</para>
+            /// <para>The Chinese text of the secondary button in the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Got It</para>
+            /// <para>Got it</para>
             /// </summary>
             [NameInMap("MinorButtonTextCh")]
             [Validation(Required=false)]
             public string MinorButtonTextCh { get; set; }
 
             /// <summary>
-            /// <para>The English text of the secondary button in the pop-up notification on the endpoint.</para>
+            /// <para>The English text of the secondary button in the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I know</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MinorButtonTextEn { get; set; }
 
             /// <summary>
-            /// <para>The name of the software prohibition policy.</para>
+            /// <para>The policy name of the software prohibition policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>autotest_c51af82d</para>
@@ -145,8 +145,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>App</b>: Controls by prohibited software. The controlled objects are specified by SoftwareIds.</description></item>
-            /// <item><description><b>Tag</b>: Controls by prohibited software tag. The controlled objects are specified by TagIds. All prohibited software under the specified tags is controlled.</description></item>
+            /// <item><description><b>App</b>: manages prohibited software. The managed objects are specified by SoftwareIds.</description></item>
+            /// <item><description><b>Tag</b>: manages prohibited software tags. The managed objects are specified by TagIds. All prohibited software under the tags are managed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -169,9 +169,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The action to take. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ban</b>: Blocks the software from running and displays a pop-up notification on the endpoint to alert the user.</description></item>
-            /// <item><description><b>BanSilent</b>: Blocks the software from running without notifying the user (silent blocking).</description></item>
-            /// <item><description><b>Warn</b>: Displays a pop-up notification on the endpoint to alert the user without blocking the software from running.</description></item>
+            /// <item><description><b>Ban</b>: blocks the software from running and displays a pop-up window on the endpoint to notify the user.</description></item>
+            /// <item><description><b>BanSilent</b>: blocks the software from running without notifying the user.</description></item>
+            /// <item><description><b>Warn</b>: displays a pop-up window on the endpoint to notify the user without blocking the software from running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The Chinese prompt content displayed in the pop-up notification on the endpoint.</para>
+            /// <para>The Chinese prompt content in the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PromptCh { get; set; }
 
             /// <summary>
-            /// <para>The English prompt content displayed in the pop-up notification on the endpoint.</para>
+            /// <para>The English prompt content in the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>After analysis and monitoring, the software has been disabled as a security risk.</para>
@@ -212,17 +212,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PromptEn { get; set; }
 
             /// <summary>
-            /// <para>The collection of prohibited software directly controlled by this policy.</para>
+            /// <para>The collection of prohibited software directly managed by the policy.</para>
             /// </summary>
             [NameInMap("SoftwareIds")]
             [Validation(Required=false)]
             public List<UpdateProhibitedPolicyResponseBodyPolicySoftwareIds> SoftwareIds { get; set; }
             public class UpdateProhibitedPolicyResponseBodyPolicySoftwareIds : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the prohibited software is a system built-in entry. Valid values:</para>
+                /// <para>Specifies whether the prohibited software is built-in. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: A system built-in prohibited software entry shared across all Alibaba Cloud accounts. It cannot be modified or deleted.</description></item>
-                /// <item><description><b>false</b>: A custom prohibited software entry under the current Alibaba Cloud account.</description></item>
+                /// <item><description><b>true</b>: The software is built-in, shared by all Alibaba Cloud accounts, and cannot be modified or deleted.</description></item>
+                /// <item><description><b>false</b>: The software is custom prohibited software under the current Alibaba Cloud account.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -245,24 +245,24 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The collection of prohibited software tag IDs controlled by this policy.</para>
+            /// <para>The collection of prohibited software tag IDs managed by the policy.</para>
             /// </summary>
             [NameInMap("TagIds")]
             [Validation(Required=false)]
             public List<string> TagIds { get; set; }
 
             /// <summary>
-            /// <para>The Chinese title of the pop-up notification on the endpoint.</para>
+            /// <para>The Chinese title of the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Software Prohibition Reminder</para>
+            /// <para>Software prohibition reminder</para>
             /// </summary>
             [NameInMap("TitleCh")]
             [Validation(Required=false)]
             public string TitleCh { get; set; }
 
             /// <summary>
-            /// <para>The English title of the pop-up notification on the endpoint.</para>
+            /// <para>The English title of the endpoint pop-up window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Software Blocked</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string TitleEn { get; set; }
 
             /// <summary>
-            /// <para>The collection of user group IDs for which the policy takes effect.</para>
+            /// <para>The collection of user group IDs to which the policy applies.</para>
             /// </summary>
             [NameInMap("UserGroupIds")]
             [Validation(Required=false)]

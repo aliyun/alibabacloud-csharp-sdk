@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The network type. If this parameter is left empty, both VPC and Connector instances are queried.</para>
+        /// <para>The network type. If this parameter is left empty, both VPC and Connector network instances are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The device tag mark switch. Valid values:</para>
+            /// <para>The device tag marking switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DevTagMarkStatus { get; set; }
 
             /// <summary>
-            /// <para>The download audit switch for sensitive applications. Valid values:</para>
+            /// <para>The sensitive application download audit switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DownloadAuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The port ranges.</para>
+            /// <para>The end port.</para>
             /// </summary>
             [NameInMap("PortRanges")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The source IP mark switch. Valid values:</para>
+            /// <para>The source IP marking switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -121,8 +121,22 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public int? TimeoutSec { get; set; }
 
+            [NameInMap("UrlAccessPaths")]
+            [Validation(Required=false)]
+            public List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths> UrlAccessPaths { get; set; }
+            public class ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths : TeaModel {
+                [NameInMap("AllowMethods")]
+                [Validation(Required=false)]
+                public List<string> AllowMethods { get; set; }
+
+                [NameInMap("Urls")]
+                [Validation(Required=false)]
+                public List<string> Urls { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>The user mark switch. Valid values:</para>
+            /// <para>The user marking switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -152,7 +166,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ED459CAD-8D3F-51B8-AEA5-CAABC0325022</para>

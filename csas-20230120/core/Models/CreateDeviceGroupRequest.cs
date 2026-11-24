@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateDeviceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the device label. The description can contain letters, digits, Chinese characters, spaces, periods (.), underscores (_), and hyphens (-). This parameter can be left empty.</para>
+        /// <para>The description of the device tag. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), underscores (_), and hyphens (-). This parameter can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test device group description</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The operator of the dynamic device group rule.</para>
+        /// <para>The operator for dynamic device group rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AND</para>
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DynamicOperator { get; set; }
 
         /// <summary>
-        /// <para>The matching rule of the dynamic device label.</para>
+        /// <para>The matching rule for the dynamic device tag.</para>
         /// </summary>
         [NameInMap("DynamicRule")]
         [Validation(Required=false)]
         public Rule DynamicRule { get; set; }
 
         /// <summary>
-        /// <para>The type of the device label. Valid values:</para>
+        /// <para>The type of the device tag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>static</b>: static device label. After creation, manually add terminal devices by calling <a href="~~AddDeviceGroupMatchDevices~~">AddDeviceGroupMatchDevices</a>.</description></item>
-        /// <item><description><b>dynamic</b>: dynamic device label. Members are automatically matched by the DynamicRule matching rule.</description></item>
+        /// <item><description><b>static</b>: static device tag. After the tag is created, you can manually add terminal devices by calling the <a href="~~AddDeviceGroupMatchDevices~~">AddDeviceGroupMatchDevices</a> operation.</description></item>
+        /// <item><description><b>dynamic</b>: dynamic device tag. Members are automatically matched based on the DynamicRule matching rule.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>The name of the device label. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</para>
+        /// <para>The name of the device tag. The name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not allowed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

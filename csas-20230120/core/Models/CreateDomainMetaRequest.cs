@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ListType { get; set; }
 
         /// <summary>
-        /// <para>The list name. Maximum length: 32 characters.</para>
+        /// <para>The name of the list. The name can be up to 32 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>office_domain</para>

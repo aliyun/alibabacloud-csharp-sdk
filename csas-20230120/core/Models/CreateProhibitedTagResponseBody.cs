@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The disabled software tag.</para>
+        /// <para>The prohibited software tag.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public CreateProhibitedTagResponseBodyTag Tag { get; set; }
         public class CreateProhibitedTagResponseBodyTag : TeaModel {
             /// <summary>
-            /// <para>The time when the disabled software tag was created, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</para>
+            /// <para>The time when the prohibited software tag was created. The time is in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-19 10:24:31</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the disabled software tag.</para>
+            /// <para>The description of the prohibited software tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test template create get delete</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the disabled software tag.</para>
+            /// <para>The name of the prohibited software tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>autotest_37bf6a18</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the disabled software tag.</para>
+            /// <para>The ID of the prohibited software tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-4a4046838f77****</para>

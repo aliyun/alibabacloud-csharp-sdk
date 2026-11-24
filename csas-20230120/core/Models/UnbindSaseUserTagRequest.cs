@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UnbindSaseUserTagRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of user IDs.</para>
+        /// <para>The IDs of the users.</para>
         /// </summary>
         [NameInMap("SaseUserIds")]
         [Validation(Required=false)]
         public List<string> SaseUserIds { get; set; }
 
         /// <summary>
-        /// <para>The collection of user label IDs.</para>
+        /// <para>The IDs of the user tags.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]

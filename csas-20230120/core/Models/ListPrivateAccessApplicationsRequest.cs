@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The access mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>app</b>: application access. Filters applications that support application access.</description></item>
-        /// <item><description><b>browser</b>: browser access. Filters applications that support browser access.</description></item>
+        /// <item><description><b>app</b>: Application access. Filters applications that support application access.</description></item>
+        /// <item><description><b>browser</b>: Browser access. Filters applications that support browser access.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the private access applications. You can specify up to 100 IDs.</para>
+        /// <para>The IDs of the private access applications. You can enter up to 100 private access application IDs.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the connector. You can obtain the ID from the following operation: <a href="~~ListConnectors~~">ListConnectors</a>: List connectors.</para>
+        /// <para>The ID of the connector. You can obtain the value from the following operation: <a href="~~ListConnectors~~">ListConnectors</a>: List connectors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>connector-94db94e06b98****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page in a paged query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Filters applications by health check status. Valid values:</para>
+        /// <para>Filters by health check status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>normal: The success rate of the last check is greater than or equal to 95%.</description></item>
         /// <item><description>partialError: The success rate of the last check is greater than 0 and less than 95%.</description></item>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page in a paging query. Valid values: 1 to 1000.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private access policy. You can obtain the ID from the following operations:</para>
+        /// <para>The ID of the private access policy. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: List private access policies.</description></item>
         /// <item><description><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create a private access policy.</description></item>
@@ -115,8 +115,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The status of the private access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: enabled.</description></item>
-        /// <item><description><b>Disabled</b>: disabled.</description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private access tag. You can obtain the ID from the following operations:</para>
+        /// <para>The ID of the private access tag. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: List private access tags.</description></item>
         /// <item><description><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Create a private access tag.</description></item>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetApprovalProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the approval process. You can obtain the value by calling the following operation:</para>
+        /// <para>The ID of the approval process. You can call the following operation to obtain the value:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Queries a list of approval processes.</description></item>
+        /// <item><description><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Queries a list of approval processes in batches.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

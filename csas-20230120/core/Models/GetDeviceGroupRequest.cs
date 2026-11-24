@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetDeviceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The device label ID. You can obtain this value from:</para>
+        /// <para>The device group ID. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListDeviceGroups~~">ListDeviceGroups</a>: Lists device labels.</description></item>
-        /// <item><description><a href="~~CreateDeviceGroup~~">CreateDeviceGroup</a>: Creates a device label.</description></item>
+        /// <item><description><a href="~~ListDeviceGroups~~">ListDeviceGroups</a>: Lists device groups.</description></item>
+        /// <item><description><a href="~~CreateDeviceGroup~~">CreateDeviceGroup</a>: Creates a device group.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

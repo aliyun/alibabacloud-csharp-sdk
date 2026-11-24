@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetIdpConfigRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the identity provider configuration.</para>
+        /// <para>The ID of the identity source configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

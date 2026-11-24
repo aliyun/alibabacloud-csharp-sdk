@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>Specifies whether global acceleration is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Enabled</b>: enabled.</description></item>
+            /// <item><description><b>Disabled</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The IP address of the cluster.</para>
+            /// <para>The cluster IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ClusterIP { get; set; }
 
             /// <summary>
-            /// <para>The port of the cluster.</para>
+            /// <para>The cluster port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8000</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The connector ID.</para>
+            /// <para>The unique ID of the connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connector-94db94e06b98****</para>
@@ -171,8 +171,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The connection status of the connector. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Online</b>: Online.</description></item>
-            /// <item><description><b>Offline</b>: Offline.</description></item>
+            /// <item><description><b>Online</b>: online.</description></item>
+            /// <item><description><b>Offline</b>: offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,10 +183,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The connector instance status. Valid values:</para>
+            /// <para>The instance status of the connector. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Shutdown.</description></item>
+            /// <item><description><b>Enabled</b>: enabled.</description></item>
+            /// <item><description><b>Disabled</b>: shutdown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,6 +225,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The CIDR block of the virtual IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.0.0.0/24</para>
+            /// </summary>
             [NameInMap("VipCidr")]
             [Validation(Required=false)]
             public string VipCidr { get; set; }

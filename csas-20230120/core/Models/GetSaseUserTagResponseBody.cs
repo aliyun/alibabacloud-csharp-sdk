@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Aliuid { get; set; }
 
             /// <summary>
-            /// <para>The user tag description.</para>
+            /// <para>The description of the user tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>These are the company\&quot;s employees</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The user tag name.</para>
+            /// <para>The name of the user tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>boss</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The user tag ID.</para>
+            /// <para>The ID of the user tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>su-tag-1ae52f66039fa0d4****</para>

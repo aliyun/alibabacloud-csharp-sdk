@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CancelVirusScanTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of virus scan task IDs to cancel. The collection must contain at least one ID, and duplicate IDs are not allowed.</para>
+        /// <para>The IDs of the virus scan tasks to cancel. Specify at least one ID. Duplicate IDs are not allowed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskIds")]

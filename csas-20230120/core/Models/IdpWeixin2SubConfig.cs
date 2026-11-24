@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class IdpWeixin2SubConfig : TeaModel {
         /// <summary>
+        /// <para>The agent ID of the WeCom application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000002</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The schema used to launch the application from the WeCom Android client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wwautha1b2c3****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string AppSchema { get; set; }
 
         /// <summary>
+        /// <para>The secret of the WeCom application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>s1e2c3r4e5****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string AppSecret { get; set; }
 
         /// <summary>
+        /// <para>The WeCom enterprise ID (CorpId).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wwa1b2c3d4****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string CorpId { get; set; }
 
         /// <summary>
+        /// <para>The AES encryption key for WeCom event callbacks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a1e2s3k4e5****</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EventAesKey { get; set; }
 
         /// <summary>
+        /// <para>The label (callback URL) for WeCom event callbacks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://auth.example.com/callback/wework/a1b2">https://auth.example.com/callback/wework/a1b2</a>****</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EventLabel { get; set; }
 
         /// <summary>
+        /// <para>The verification token for WeCom event callbacks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v1t2o3k4e5****</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EventVerifyToken { get; set; }
 
         /// <summary>
+        /// <para>The callback URL for WeCom logon authorization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://auth.example.com/callback">https://auth.example.com/callback</a></para>
         /// </summary>

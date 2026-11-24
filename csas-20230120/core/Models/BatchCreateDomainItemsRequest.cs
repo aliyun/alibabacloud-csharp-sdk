@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class BatchCreateDomainItemsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name list.</para>
+        /// <para>The list of domain names.</para>
         /// </summary>
         [NameInMap("DomainItems")]
         [Validation(Required=false)]
         public List<string> DomainItems { get; set; }
 
         /// <summary>
-        /// <para>The list ID. This is a unique business identifier used for policy references and add, delete, and modify operations.</para>
+        /// <para>The ID of the list. This is a unique business identifier used for policy reference and addition, deletion, and modification operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ladl-61aae0c0ba715e3b</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ListId { get; set; }
 
         /// <summary>
-        /// <para>The list type (Blacklist/Whitelist).</para>
+        /// <para>The type of the list (Blacklist/Whitelist).</para>
         /// 
         /// <b>Example:</b>
         /// <para>la_domain_white_list</para>

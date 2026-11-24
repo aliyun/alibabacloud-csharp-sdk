@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListVirusScanAdditionalListsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters by matching dimension. Duplicate values are not allowed. If this parameter is not specified, all matching dimensions are returned.</para>
+        /// <para>Filters by match dimension. Duplicate values are not allowed. If this parameter is not specified, all match dimensions are returned.</para>
         /// </summary>
         [NameInMap("AdditionalTypes")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DevType { get; set; }
 
         /// <summary>
-        /// <para>The content of the list entry, using exact match. This parameter is used to locate a specific list entry by content and does not support fuzzy match.</para>
+        /// <para>The content of the list entry. Exact match is used. This parameter is used to locate a specific list by content. Fuzzy match is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>.tmp</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ListDetail { get; set; }
 
         /// <summary>
-        /// <para>Filters by list entry ID. Duplicate values are not allowed. If this parameter is not specified, no filtering by list entry ID is applied.</para>
+        /// <para>Filters by list entry ID. Duplicate values are not allowed. If this parameter is not specified, no filtering by list entry ID is performed.</para>
         /// </summary>
         [NameInMap("ListIds")]
         [Validation(Required=false)]
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>Filters by list type. If this parameter is not specified, both blacklists and whitelists are returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Blacklist</b>: Blacklist. Files that match are directly identified as virus files.</description></item>
-        /// <item><description><b>Whitelist</b>: Whitelist. Files that match are excluded from virus detection.</description></item>
+        /// <item><description><b>Blacklist</b>: Blacklist. Matched files are directly identified as virus files.</description></item>
+        /// <item><description><b>Whitelist</b>: Whitelist. Matched files are excluded from virus detection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetUserDeviceWorkloadTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint device ID. You can obtain this value from the following operations:</para>
+        /// <para>The ID of the endpoint device. You can obtain the value by calling the following operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</description></item>
-        /// <item><description><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries user endpoint devices in batches.</description></item>
+        /// <item><description><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries multiple user endpoint devices.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DeviceTag { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query time range. This value is a UNIX timestamp in seconds. The value must be greater than or equal to 0 and less than the value of To.</para>
+        /// <para>The start time of the query time range, which is a UNIX timestamp in seconds. Valid values: greater than or equal to 0 and less than the value of To.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query time range. This value is a UNIX timestamp in seconds. The value must be greater than the value of From.</para>
+        /// <para>The end time of the query time range, which is a UNIX timestamp in seconds. Valid values: greater than the value of From.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The workload type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cpu</b>: CPU usage.</description></item>
-        /// <item><description><b>mem</b>: memory usage.</description></item>
+        /// <item><description><b>mem</b>: Memory usage.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public UpdateProhibitedSoftwareResponseBodySoftware Software { get; set; }
         public class UpdateProhibitedSoftwareResponseBodySoftware : TeaModel {
             /// <summary>
-            /// <para>The time when the prohibited software was created, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</para>
+            /// <para>The time when the prohibited software was created. The time is in the yyyy-MM-dd HH:mm:ss format and displayed in the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-17 09:49:03</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<UpdateProhibitedSoftwareResponseBodySoftwareLinuxProcesses> LinuxProcesses { get; set; }
             public class UpdateProhibitedSoftwareResponseBodySoftwareLinuxProcesses : TeaModel {
                 /// <summary>
-                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID of the application. This field is applicable only to macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.aliyun.security.sase</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command line parameters for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The process name.</para>
+                /// <para>The name of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kismain.exe</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<UpdateProhibitedSoftwareResponseBodySoftwareMacOSProcesses> MacOSProcesses { get; set; }
             public class UpdateProhibitedSoftwareResponseBodySoftwareMacOSProcesses : TeaModel {
                 /// <summary>
-                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID of the application. This field is applicable only to macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.autotest.app</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command line parameters for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The process name.</para>
+                /// <para>The name of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>QQPCTray.exe</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the software prohibition policies that directly reference this prohibited software.</para>
+            /// <para>The IDs of the software prohibition policies that directly reference the prohibited software.</para>
             /// </summary>
             [NameInMap("PolicyIds")]
             [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SoftwareId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the prohibited software tags associated with this prohibited software.</para>
+            /// <para>The IDs of the prohibited software tags associated with the prohibited software.</para>
             /// </summary>
             [NameInMap("TagIds")]
             [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<UpdateProhibitedSoftwareResponseBodySoftwareWindowsProcesses> WindowsProcesses { get; set; }
             public class UpdateProhibitedSoftwareResponseBodySoftwareWindowsProcesses : TeaModel {
                 /// <summary>
-                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID of the application. This field is applicable only to macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.aliyun.security.sase</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command line parameters for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The process name.</para>
+                /// <para>The name of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>QQPCTray.exe</para>

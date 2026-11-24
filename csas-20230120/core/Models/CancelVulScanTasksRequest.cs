@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CancelVulScanTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the vulnerability scanning tasks to cancel. The collection must contain at least 1 and at most 100 IDs. Duplicate IDs are not allowed.</para>
+        /// <para>The IDs of the vulnerability scanning nodes to cancel. You can specify 1 to 100 unique node IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskIds")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListSoftwarelibSoftwareRequest : TeaModel {
         /// <summary>
-        /// <para>The software category ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</para>
+        /// <para>The ID of the software category. For more information about how to configure software categories, see <a href="https://www.alibabacloud.com/help/en/sase/user-guide/software-management">Software management</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>softwarelib-classify-61b7ccc63cae****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ClassifyId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page displayed during paging in a paged query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page for a paged query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</para>
+        /// <para>The maximum number of entries to return on each page. This parameter is not supported by the current API operation. Use CurrentPage and PageSize for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. This parameter is not supported by the current operation. Use CurrentPage and PageSize for pagination.</para>
+        /// <para>The query token. This parameter is not supported by the current API operation. Use CurrentPage and PageSize for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh27/Jy4SXvlU9WgqeV7az+t</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <list type="bullet">
         /// <item><description><b>Windows</b>: Windows.</description></item>
         /// <item><description><b>Mac(Apple)</b>: macOS with Apple silicon.</description></item>
-        /// <item><description><b>Mac(Intel)</b>: macOS with Intel chips.</description></item>
+        /// <item><description><b>Mac(Intel)</b>: macOS with Intel processors.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Os { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 500.</para>
+        /// <para>The number of entries to return on each page for a paged query. Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The software name. Fuzzy match is supported.</para>
+        /// <para>The name of the software. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Thunder</para>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SoftwareName { get; set; }
 
         /// <summary>
-        /// <para>The software source. Valid values:</para>
+        /// <para>The source of the software. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>custom</b>: custom software.</description></item>
-        /// <item><description><b>builtin</b>: built-in software library.</description></item>
+        /// <item><description><b>custom</b>: Custom software.</description></item>
+        /// <item><description><b>builtin</b>: Built-in software library.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The API status code or POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: Success.</description></item>
-        /// <item><description><b>3xx</b>: Redirection.</description></item>
-        /// <item><description><b>4xx</b>: Request error.</description></item>
-        /// <item><description><b>5xx</b>: Server error.</description></item>
+        /// <item><description><b>2xx</b>: success</description></item>
+        /// <item><description><b>3xx</b>: redirection</description></item>
+        /// <item><description><b>4xx</b>: request error</description></item>
+        /// <item><description><b>5xx</b>: server error</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F4A9C844-1B0A-59E8-966F-4945DFF3C88D</para>

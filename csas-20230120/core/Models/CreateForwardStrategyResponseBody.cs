@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateForwardStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The traffic forwarding rule.</para>
+        /// <para>The forwarding rule.</para>
         /// </summary>
         [NameInMap("ForwardStrategy")]
         [Validation(Required=false)]
         public CreateForwardStrategyResponseBodyForwardStrategy ForwardStrategy { get; set; }
         public class CreateForwardStrategyResponseBodyForwardStrategy : TeaModel {
             /// <summary>
-            /// <para>The description of the traffic forwarding rule.</para>
+            /// <para>The description of the forwarding rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The target instance ID.</para>
+            /// <para>The instance ID of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connector-af9b4ee6fd15d82d</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DestinationType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the traffic forwarding rule.</para>
+            /// <para>The ID of the forwarding rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fs-345d6ab82b5a43a3</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public long? Priority { get; set; }
 
             /// <summary>
-            /// <para>The status of the internal-facing access application. Valid values:</para>
+            /// <para>The status of the internal network access application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
+            /// <item><description><b>Enabled</b>: The application is enabled.</description></item>
+            /// <item><description><b>Disabled</b>: The application is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

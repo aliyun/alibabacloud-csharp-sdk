@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateBackendReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of user-object combinations that failed to be created.</para>
+        /// <para>The number of failed combinations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The processing results for each user-object combination. If some combinations fail, the operation still returns results for all combinations.</para>
+        /// <para>The processing results of each combination of user and report object. If some combinations fail, the operation still returns the results of all combinations.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<CreateBackendReportResponseBodyItems> Items { get; set; }
         public class CreateBackendReportResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The approval instance ID generated after a successful creation. This parameter is not returned if the creation fails.</para>
+            /// <para>The ID of the approval instance generated after the combination is successfully created. This parameter is not returned if the creation fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approval-6b5188a28634****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApprovalId { get; set; }
 
             /// <summary>
-            /// <para>The error code returned when the current combination fails to be created. This parameter is not returned if the creation succeeds.</para>
+            /// <para>The error code returned when the current combination fails to be created. This parameter is not returned if the creation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TargetNotFound</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The filing effective status. Enabled is returned when the creation succeeds, which indicates that the filing is valid.</para>
+            /// <para>The effective status of the report. If the creation is successful, Enabled is returned, which indicates that the report is valid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string EffectStatus { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the current combination fails to be created. This parameter is not returned if the creation succeeds.</para>
+            /// <para>The error message returned when the current combination fails to be created. This parameter is not returned if the creation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>target user is not found</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The filing object corresponding to the current combination. The fields vary based on the PolicyType value.</para>
+            /// <para>The report object corresponding to the current combination. The fields vary based on the policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;ApplicationId&quot;:&quot;pa-application-92b60359213a****&quot;}]</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public object ReportObject { get; set; }
 
             /// <summary>
-            /// <para>The filing type. BackendReport is always returned when the creation succeeds, which indicates a backend filing.</para>
+            /// <para>The report type. If the creation is successful, BackendReport is returned, which indicates a backend report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BackendReport</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ReportType { get; set; }
 
             /// <summary>
-            /// <para>The approval status. Approved is returned when the creation succeeds, which indicates that the filing is approved.</para>
+            /// <para>The approval status. If the creation is successful, Approved is returned, which indicates that the request is approved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Approved</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current combination is created.</para>
+            /// <para>Indicates whether the current combination is successfully created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The filing user corresponding to the current combination.</para>
+            /// <para>The target user corresponding to the current combination.</para>
             /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The number of deduplicated filing objects.</para>
+        /// <para>The number of deduplicated report objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of user-object combinations that are created.</para>
+        /// <para>The number of successfully created combinations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The number of deduplicated filing users.</para>
+        /// <para>The number of deduplicated target users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? TargetCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of expanded user-object combinations.</para>
+        /// <para>The total number of combinations of users and report objects after expansion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

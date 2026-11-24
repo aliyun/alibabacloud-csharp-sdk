@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateSaseUserTagRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the employee tag.</para>
+        /// <para>The description of the user tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>These are the company\&quot;s employees</para>

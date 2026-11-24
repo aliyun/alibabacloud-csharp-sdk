@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateConnectorClientRequest : TeaModel {
         /// <summary>
-        /// <para>The connector ID. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connector IDs.</para>
+        /// <para>The connector ID. You can obtain the value by calling the <a href="~~ListConnectors~~">ListConnectors</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the ConnectorClient device. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connector information.</para>
+        /// <para>The unique identifier of the ConnectorClient device. You can obtain the value by calling the <a href="~~ListConnectors~~">ListConnectors</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The connection status of the ConnectorClient. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: connected.</description></item>
-        /// <item><description><b>Disabled</b>: disconnected.</description></item>
+        /// <item><description><b>Enabled</b>: Connected.</description></item>
+        /// <item><description><b>Disabled</b>: Disconnected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

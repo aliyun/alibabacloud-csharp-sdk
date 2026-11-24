@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The acceleration mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>whiltelist</b>: whitelist-based acceleration.</description></item>
-        /// <item><description><b>global</b>: global acceleration.</description></item>
-        /// <item><description><b>build-in-list</b>: built-in application acceleration.</description></item>
+        /// <item><description><b>whiltelist</b>: whitelist acceleration</description></item>
+        /// <item><description><b>global</b>: global acceleration</description></item>
+        /// <item><description><b>build-in-list</b>: built-in application acceleration</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>GlobalAccelerationPolicy</para>
+        /// <para>Global acceleration policy</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the policy in the client. Valid values:</para>
+        /// <para>Specifies whether the policy is displayed on the client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: not displayed.</description></item>
-        /// <item><description><b>1</b>: displayed.</description></item>
+        /// <item><description><b>0</b>: not displayed</description></item>
+        /// <item><description><b>1</b>: displayed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? ShowInClient { get; set; }
 
         /// <summary>
-        /// <para>The address (IP address or domain name) of the acceleration instance.</para>
+        /// <para>The address of the accelerated instance, which can be an IP address or a domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string UpstreamHost { get; set; }
 
         /// <summary>
-        /// <para>The port of the acceleration instance. Valid values: 1000 to 60000.</para>
+        /// <para>The port of the accelerated instance. Valid values: 1000 to 60000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? UpstreamPort { get; set; }
 
         /// <summary>
-        /// <para>The acceleration instance.</para>
+        /// <para>The accelerated instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,11 +102,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string UpstreamType { get; set; }
 
         /// <summary>
-        /// <para>The acceleration user group.</para>
+        /// <para>The accelerated user group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestUserGroup</para>
+        /// <para>Test user group</para>
         /// </summary>
         [NameInMap("UserAttributeGroup")]
         [Validation(Required=false)]

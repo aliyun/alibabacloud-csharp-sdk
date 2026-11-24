@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetProhibitedSoftwareRequest : TeaModel {
         /// <summary>
-        /// <para>The prohibited software ID.</para>
+        /// <para>The ID of the prohibited software.</para>
         /// </summary>
         [NameInMap("SoftwareId")]
         [Validation(Required=false)]
         public GetProhibitedSoftwareRequestSoftwareId SoftwareId { get; set; }
         public class GetProhibitedSoftwareRequestSoftwareId : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the prohibited software is a system built-in prohibited software. Valid values:</para>
+            /// <para>Specifies whether the prohibited software is a built-in prohibited software. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: A system built-in prohibited software that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</description></item>
-            /// <item><description><b>false</b>: A custom prohibited software under the current Alibaba Cloud account.</description></item>
+            /// <item><description><b>true</b>: The software is a built-in prohibited software. It is shared by all Alibaba Cloud accounts and cannot be modified or deleted.</description></item>
+            /// <item><description><b>false</b>: The software is a custom prohibited software within the current Alibaba Cloud account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The prohibited software ID. You can obtain the value from the following operations:</para>
+            /// <para>The ID of the prohibited software. You can obtain the value from the following operations:</para>
             /// <list type="bullet">
-            /// <item><description><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</description></item>
+            /// <item><description><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Queries prohibited software in batches.</description></item>
             /// <item><description><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</description></item>
             /// </list>
             /// 

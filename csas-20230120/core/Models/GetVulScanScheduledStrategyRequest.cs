@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetVulScanScheduledStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The vulnerability scheduled scan policy ID. You can obtain the value from the following operations:</para>
+        /// <para>The ID of the scheduled vulnerability scanning policy. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListVulScanScheduledStrategies~~">ListVulScanScheduledStrategies</a>: Lists vulnerability scheduled scan policies.</description></item>
-        /// <item><description><a href="~~CreateVulScanScheduledStrategy~~">CreateVulScanScheduledStrategy</a>: Creates a vulnerability scheduled scan policy.</description></item>
+        /// <item><description><a href="~~ListVulScanScheduledStrategies~~">ListVulScanScheduledStrategies</a>: Queries scheduled vulnerability scanning policies.</description></item>
+        /// <item><description><a href="~~CreateVulScanScheduledStrategy~~">CreateVulScanScheduledStrategy</a>: Creates a scheduled vulnerability scanning policy.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

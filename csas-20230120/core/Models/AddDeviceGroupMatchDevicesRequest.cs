@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class AddDeviceGroupMatchDevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of terminal device IDs to add. At least one ID must be specified, and duplicate values are not allowed.</para>
+        /// <para>The IDs of the terminal devices to add. You must specify at least one ID, and the IDs must be unique.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DevTags")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> DevTags { get; set; }
 
         /// <summary>
-        /// <para>The device label ID.</para>
+        /// <para>The ID of the device tag.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

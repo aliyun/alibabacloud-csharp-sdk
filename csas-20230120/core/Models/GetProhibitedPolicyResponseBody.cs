@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetProhibitedPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the software prohibition policy.</para>
+        /// <para>The details of the prohibited software policy.</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public GetProhibitedPolicyResponseBodyPolicy Policy { get; set; }
         public class GetProhibitedPolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>Indicates whether end users are allowed to submit a filing request for this policy. Valid values:</para>
+            /// <para>Indicates whether terminal users are allowed to submit applications for this policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Filing is allowed. The terminal pop-up window provides a filing entry.</description></item>
-            /// <item><description><b>false</b>: Filing is not allowed.</description></item>
+            /// <item><description><b>true</b>: Applications are allowed. The terminal pop-up window provides an entry for submitting applications.</description></item>
+            /// <item><description><b>false</b>: Applications are not allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? AllowReport { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the software prohibition policy, in the yyyy-MM-dd HH:mm:ss format using the UTC+8 time zone.</para>
+            /// <para>The time when the prohibited software policy was created. The time is displayed in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-29 11:26:02</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the software prohibition policy.</para>
+            /// <para>The description of the prohibited software policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>completed</para>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>Indicates whether the policy is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled. The policy is delivered to terminals and takes effect.</description></item>
-            /// <item><description><b>false</b>: Disabled. The policy configuration is retained but not delivered to terminals.</description></item>
+            /// <item><description><b>true</b>: The policy is enabled, delivered to terminals, and takes effect.</description></item>
+            /// <item><description><b>false</b>: The policy is disabled. The configuration is retained but not delivered to terminals.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>Indicates whether to forcibly terminate running software processes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The terminal immediately terminates the running processes of the software when the policy is triggered.</description></item>
-            /// <item><description><b>false</b>: Running processes are not terminated. Only subsequent launches are blocked.</description></item>
+            /// <item><description><b>true</b>: The terminal immediately terminates the running processes of the software when the policy is matched.</description></item>
+            /// <item><description><b>false</b>: The terminal does not terminate running processes but only prevents subsequent startups.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MainButtonTextEn { get; set; }
 
             /// <summary>
-            /// <para>The policy matching target type. Valid values:</para>
+            /// <para>The target matching mode of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UserGroupAll</b>: Associates with all users.</description></item>
-            /// <item><description><b>UserGroupNormal</b>: Associates with specific user groups.</description></item>
+            /// <item><description><b>UserGroupAll</b>: Applies to all users.</description></item>
+            /// <item><description><b>UserGroupNormal</b>: Applies to specific user groups.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MinorButtonTextEn { get; set; }
 
             /// <summary>
-            /// <para>The name of the software prohibition policy.</para>
+            /// <para>The name of the prohibited software policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PolicyC</para>
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The object type of the controlled target. Valid values:</para>
+            /// <para>The managed object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>App</b>: Controls by prohibited software. The controlled objects are specified by SoftwareIds.</description></item>
-            /// <item><description><b>Tag</b>: Controls by prohibited software labels. The controlled objects are specified by TagIds. All prohibited software under the labels is controlled.</description></item>
+            /// <item><description><b>App</b>: Managed by prohibited software. The managed objects are specified by SoftwareIds.</description></item>
+            /// <item><description><b>Tag</b>: Managed by prohibited software tag. The managed objects are specified by TagIds, and all prohibited software under the tag is managed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ObjectType { get; set; }
 
             /// <summary>
-            /// <para>The software prohibition policy ID.</para>
+            /// <para>The ID of the prohibited software policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pid-36ee4a5869f3****</para>
@@ -167,11 +167,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The action type. Valid values:</para>
+            /// <para>The enforcement action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ban</b>: Blocks the software from running and displays a pop-up notification to the end user.</description></item>
-            /// <item><description><b>BanSilent</b>: Blocks the software from running without notifying the end user (silent blocking).</description></item>
-            /// <item><description><b>Warn</b>: Displays a pop-up notification to the end user without blocking the software from running.</description></item>
+            /// <item><description><b>Ban</b>: Blocks the software from running and displays a pop-up window to notify the terminal user.</description></item>
+            /// <item><description><b>BanSilent</b>: Blocks the software from running silently without notifying the terminal user.</description></item>
+            /// <item><description><b>Warn</b>: Displays a pop-up window to notify the terminal user without blocking the software from running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,17 +192,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The Chinese prompt content displayed in the terminal pop-up window.</para>
+            /// <para>The Chinese prompt content in the terminal pop-up window.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This software has been blocked by the enterprise security policy. To use it, submit an approval request</para>
+            /// <para>该软件已被企业安全策略禁止运行，如需使用请提交报备申请</para>
             /// </summary>
             [NameInMap("PromptCh")]
             [Validation(Required=false)]
             public string PromptCh { get; set; }
 
             /// <summary>
-            /// <para>The English prompt content displayed in the terminal pop-up window.</para>
+            /// <para>The English prompt content in the terminal pop-up window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This software is blocked by your enterprise security policy.</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PromptEn { get; set; }
 
             /// <summary>
-            /// <para>The approval process ID bound to this policy. An empty string is returned if no approval process is bound. In this case, filing requests submitted by end users are approved by the IT administrator as a fallback. Approval processes are bound by using <a href="~~AttachPolicy2ApprovalProcess~~">AttachPolicy2ApprovalProcess</a> and unbound by using <a href="~~DetachPolicy2ApprovalProcess~~">DetachPolicy2ApprovalProcess</a>. You can obtain this value from the following operation:</para>
+            /// <para>The ID of the approval process bound to the policy. If no approval process is bound, an empty string is returned, and applications submitted by terminal users are approved by the IT administrator. You can bind an approval process by calling <a href="~~AttachPolicy2ApprovalProcess~~">AttachPolicy2ApprovalProcess</a> and unbind it by calling <a href="~~DetachPolicy2ApprovalProcess~~">DetachPolicy2ApprovalProcess</a>. You can obtain the value from the following operations:</para>
             /// <list type="bullet">
             /// <item><description><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Lists approval processes.</description></item>
             /// </list>
@@ -225,17 +225,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ReportProcessId { get; set; }
 
             /// <summary>
-            /// <para>The collection of prohibited software directly controlled by this policy.</para>
+            /// <para>The list of prohibited software directly managed by the policy.</para>
             /// </summary>
             [NameInMap("SoftwareIds")]
             [Validation(Required=false)]
             public List<GetProhibitedPolicyResponseBodyPolicySoftwareIds> SoftwareIds { get; set; }
             public class GetProhibitedPolicyResponseBodyPolicySoftwareIds : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the prohibited software is a system built-in entry. Valid values:</para>
+                /// <para>Indicates whether the prohibited software is a built-in prohibited software. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: A system built-in prohibited software entry shared by all Alibaba Cloud accounts. Modification and deletion are not supported.</description></item>
-                /// <item><description><b>false</b>: A custom prohibited software entry under the current Alibaba Cloud account.</description></item>
+                /// <item><description><b>true</b>: The software is a built-in prohibited software that is shared by all Alibaba Cloud accounts and cannot be modified or deleted.</description></item>
+                /// <item><description><b>false</b>: The software is a custom prohibited software under the current Alibaba Cloud account.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The prohibited software ID.</para>
+                /// <para>The ID of the prohibited software.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>swb-050216aafaae****</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The collection of prohibited software label IDs controlled by this policy.</para>
+            /// <para>The list of prohibited software tag IDs managed by the policy.</para>
             /// </summary>
             [NameInMap("TagIds")]
             [Validation(Required=false)]
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string TitleEn { get; set; }
 
             /// <summary>
-            /// <para>The collection of user group IDs to which this policy applies.</para>
+            /// <para>The list of user group IDs to which the policy applies.</para>
             /// </summary>
             [NameInMap("UserGroupIds")]
             [Validation(Required=false)]

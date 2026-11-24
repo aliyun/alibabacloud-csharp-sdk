@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateProhibitedPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether end users are allowed to submit a report request for this policy. Valid values:</para>
+        /// <para>Specifies whether to allow terminal users to submit an exception request for the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Reporting is allowed. The pop-up window on the endpoint provides a reporting entry.</description></item>
-        /// <item><description><b>false</b>: Reporting is not allowed.</description></item>
+        /// <item><description><b>true</b>: Exception requests are allowed. The terminal pop-up window provides an entry for the request.</description></item>
+        /// <item><description><b>false</b>: Exception requests are not allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string AllowReport { get; set; }
 
         /// <summary>
-        /// <para>The description of the software ban policy. The description can be up to 128 characters in length and can be left empty.</para>
+        /// <para>The description of the prohibited software policy. The description can be up to 128 characters in length and can be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project name pass the check</para>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>Specifies whether the policy is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled. The policy is delivered to the endpoint and takes effect.</description></item>
-        /// <item><description><b>false</b>: Disabled. The policy configuration is retained but not delivered to the endpoint.</description></item>
+        /// <item><description><b>true</b>: The policy is enabled, delivered to terminals, and takes effect.</description></item>
+        /// <item><description><b>false</b>: The policy is disabled. The configuration is retained but not delivered to terminals.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +49,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully terminate running software processes. Valid values:</para>
+        /// <para>Specifies whether to forcibly terminate running processes of the software. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The terminal immediately terminates the running processes of the software when the policy is matched.</description></item>
+        /// <item><description><b>false</b>: The terminal does not terminate running processes but only prevents subsequent startups.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -59,17 +63,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? ForceKill { get; set; }
 
         /// <summary>
-        /// <para>The Chinese text of the primary button in the pop-up window on the endpoint.</para>
+        /// <para>The Chinese text of the primary button in the terminal pop-up window.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Submit Filing</para>
+        /// <para>Apply for exemption</para>
         /// </summary>
         [NameInMap("MainButtonTextCh")]
         [Validation(Required=false)]
         public string MainButtonTextCh { get; set; }
 
         /// <summary>
-        /// <para>The English text of the primary button in the pop-up window on the endpoint.</para>
+        /// <para>The English text of the primary button in the terminal pop-up window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Report</para>
@@ -79,7 +83,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string MainButtonTextEn { get; set; }
 
         /// <summary>
-        /// <para>The scope in which the policy takes effect. Valid values:</para>
+        /// <para>The effective scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>UserGroupAll</b>: The policy takes effect for all users under the current Alibaba Cloud account. You do not need to specify user groups.</description></item>
+        /// <item><description><b>UserGroupNormal</b>: The policy takes effect only for users in the user groups specified by UserGroupIds.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,17 +98,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string MatchMode { get; set; }
 
         /// <summary>
-        /// <para>The Chinese text of the secondary button in the pop-up window on the endpoint.</para>
+        /// <para>The Chinese text of the secondary button in the terminal pop-up window.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Got It</para>
+        /// <para>Got it</para>
         /// </summary>
         [NameInMap("MinorButtonTextCh")]
         [Validation(Required=false)]
         public string MinorButtonTextCh { get; set; }
 
         /// <summary>
-        /// <para>The English text of the secondary button in the pop-up window on the endpoint.</para>
+        /// <para>The English text of the secondary button in the terminal pop-up window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>I know</para>
@@ -110,7 +118,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string MinorButtonTextEn { get; set; }
 
         /// <summary>
-        /// <para>Policy Name of the software ban policy. Policy Name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</para>
+        /// <para>Policy Name of the prohibited software policy. Policy Name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,6 +130,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         /// <summary>
         /// <para>The object type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>App</b>: controls disable software. The managed objects are specified by SoftwareIds.</description></item>
+        /// <item><description><b>Tag</b>: controls disable software labels. The managed objects are specified by TagIds. All disable software within the labels is managed.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,9 +146,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The action to take. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Ban</b>: Blocks the software from running and displays a pop-up notification to the end user.</description></item>
-        /// <item><description><b>BanSilent</b>: Blocks the software from running without notifying the end user (silent blocking).</description></item>
-        /// <item><description><b>Warn</b>: Displays a pop-up notification to the end user without blocking the software from running.</description></item>
+        /// <item><description><b>Ban</b>: blocks the software from running and displays a pop-up window on the terminal to notify the user.</description></item>
+        /// <item><description><b>BanSilent</b>: blocks the software from running without notifying the user.</description></item>
+        /// <item><description><b>Warn</b>: displays a pop-up window on the terminal to notify the user without blocking the software from running.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -159,7 +171,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The Chinese prompt content displayed in the pop-up window on the endpoint.</para>
+        /// <para>The Chinese prompt content in the terminal pop-up window.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -170,7 +182,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PromptCh { get; set; }
 
         /// <summary>
-        /// <para>The English prompt content displayed in the pop-up window on the endpoint.</para>
+        /// <para>The English prompt content in the terminal pop-up window.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -181,17 +193,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PromptEn { get; set; }
 
         /// <summary>
-        /// <para>The collection of banned software directly controlled by this policy.</para>
+        /// <para>The collection of prohibited software directly managed by the policy.</para>
         /// </summary>
         [NameInMap("SoftwareIds")]
         [Validation(Required=false)]
         public List<CreateProhibitedPolicyRequestSoftwareIds> SoftwareIds { get; set; }
         public class CreateProhibitedPolicyRequestSoftwareIds : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the blocked software is a built-in blocked software entry. Valid values:</para>
+            /// <para>Specifies whether the prohibited software is built-in. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: A built-in blocked software entry that is shared across all Alibaba Cloud accounts. Built-in entries cannot be modified or deleted.</description></item>
-            /// <item><description><b>false</b>: A custom blocked software entry under the current Alibaba Cloud account.</description></item>
+            /// <item><description><b>true</b>: The software is built-in, shared by all Alibaba Cloud accounts, and cannot be modified or deleted.</description></item>
+            /// <item><description><b>false</b>: The software is custom prohibited software under the current Alibaba Cloud account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,10 +214,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The ID of the prohibited software. You can obtain the value from the following operations:</para>
+            /// <para>The ID of the prohibited software. You can obtain the value from the following sources:</para>
             /// <list type="bullet">
-            /// <item><description><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</description></item>
-            /// <item><description><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</description></item>
+            /// <item><description><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: queries prohibited software in batches.</description></item>
+            /// <item><description><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: creates custom prohibited software.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -218,24 +230,24 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The collection of banned software tag IDs controlled by this policy.</para>
+        /// <para>The collection of prohibited software tag IDs managed by the policy.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
         public List<string> TagIds { get; set; }
 
         /// <summary>
-        /// <para>The Chinese title of the pop-up window on the endpoint.</para>
+        /// <para>The Chinese title of the terminal pop-up window.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Software Ban Reminder</para>
+        /// <para>Prohibited software reminder</para>
         /// </summary>
         [NameInMap("TitleCh")]
         [Validation(Required=false)]
         public string TitleCh { get; set; }
 
         /// <summary>
-        /// <para>The English title of the pop-up window on the endpoint.</para>
+        /// <para>The English title of the terminal pop-up window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Software Blocked</para>

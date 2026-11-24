@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListForwardStrategiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of forwarding rules.</para>
+        /// <para>The forwarding rules.</para>
         /// </summary>
         [NameInMap("ForwardStrategies")]
         [Validation(Required=false)]
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DestinationId { get; set; }
 
             /// <summary>
-            /// <para>The type of the access destination. Valid values:</para>
+            /// <para>The destination type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Connector</b>: connector.</description></item>
+            /// <item><description><b>Connector</b>: Connector.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the forwarding rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>白名单加速</para>
+            /// <para>Whitelist acceleration</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The status of the policy. Valid values:</para>
+            /// <para>The status of the forwarding rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of policies.</para>
+        /// <para>The total number of forwarding rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

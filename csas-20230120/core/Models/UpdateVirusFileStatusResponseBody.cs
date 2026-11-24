@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateVirusFileStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The disposal task ID. This parameter is returned when Operation is set to AdminQuarantine. An empty string is returned when Operation is set to AdminTrust. You can check the execution result on the user terminal device by using the TaskExecutionInfo field of ListVirusFileStatuses.</para>
+        /// <para>The ID of the processing task. This parameter is returned when Operation is set to AdminQuarantine. An empty string is returned when Operation is set to AdminTrust. You can view the execution result on the user terminal device by using the TaskExecutionInfo parameter in the ListVirusFileStatuses operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1:1024773</para>

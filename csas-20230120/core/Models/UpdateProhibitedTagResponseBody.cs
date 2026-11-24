@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public UpdateProhibitedTagResponseBodyTag Tag { get; set; }
         public class UpdateProhibitedTagResponseBodyTag : TeaModel {
             /// <summary>
-            /// <para>The creation time of the prohibited software tag, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</para>
+            /// <para>The time when the prohibited software tag was created. The time is in the yyyy-MM-dd HH:mm:ss format and is in the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-05 10:20:46</para>

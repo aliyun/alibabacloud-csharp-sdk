@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateConnectorRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth value in Mbit/s.</para>
+        /// <para>The bandwidth value (Mbps).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The name of the connector. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the connector. The name must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase English letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

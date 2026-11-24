@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The English name of the workload type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CPU Usage</b>: returned when WorkloadType is set to cpu.</description></item>
-        /// <item><description><b>Memory Usage</b>: returned when WorkloadType is set to mem.</description></item>
+        /// <item><description><b>CPU Usage</b>: Returned when WorkloadType is set to cpu.</description></item>
+        /// <item><description><b>Memory Usage</b>: Returned when WorkloadType is set to mem.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The Chinese name of the workload type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CPU使用率</b>: returned when WorkloadType is set to cpu.</description></item>
-        /// <item><description><b>内存使用率</b>: returned when WorkloadType is set to mem.</description></item>
+        /// <item><description><b>CPU使用率</b>: Returned when WorkloadType is set to cpu.</description></item>
+        /// <item><description><b>内存使用率</b>: Returned when WorkloadType is set to mem.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string TitleZh { get; set; }
 
         /// <summary>
-        /// <para>The list of workload trend data points, sorted by time in ascending order.</para>
+        /// <para>The list of workload trend data points, sorted in ascending order by time.</para>
         /// </summary>
         [NameInMap("WorkloadList")]
         [Validation(Required=false)]
         public List<GetUserDeviceWorkloadTrendResponseBodyWorkloadList> WorkloadList { get; set; }
         public class GetUserDeviceWorkloadTrendResponseBodyWorkloadList : TeaModel {
             /// <summary>
-            /// <para>The collection time of the data point. This value is a UNIX timestamp in seconds.</para>
+            /// <para>The collection time of the data point, which is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1755360600</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The workload usage percentage. Valid values: 0 to 100, with two decimal places.</para>
+            /// <para>The workload usage percentage. Valid values: 0 to 100, rounded to two decimal places.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35.27</para>

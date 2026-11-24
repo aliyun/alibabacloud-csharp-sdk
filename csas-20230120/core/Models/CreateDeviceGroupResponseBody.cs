@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateDeviceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The device label ID.</para>
+        /// <para>The ID of the device tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>device-group-5191cf830a5e****</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The description of the approval process. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is an approval process</para>
+        /// <para>Process for approving employees\&quot; temporary access to internal network applications</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_process</para>
+        /// <para>Internal network access approval process</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

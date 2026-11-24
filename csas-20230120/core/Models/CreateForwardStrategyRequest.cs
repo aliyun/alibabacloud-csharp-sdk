@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateForwardStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The description. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. The description can also contain Chinese characters.</para>
+        /// <para>The description. The description must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is an internal access policy</para>
+        /// <para>This is an internal network access policy</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The target instance ID.</para>
+        /// <para>The instance ID of the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// <para>The name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name can also contain Chinese characters.</para>
+        /// <para>The name. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The policy status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: enabled.</description></item>
-        /// <item><description><b>Disabled</b>: disabled.</description></item>
+        /// <item><description><b>Enabled</b>: The policy is enabled.</description></item>
+        /// <item><description><b>Disabled</b>: The policy is disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

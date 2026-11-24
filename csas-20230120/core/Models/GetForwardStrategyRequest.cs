@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetForwardStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The forwarding rule ID.</para>
+        /// <para>The ID of the forwarding rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

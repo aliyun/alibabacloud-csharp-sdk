@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The description of the approval process. The description must be 1 to 128 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is an approval process</para>
+        /// <para>Process for approving employees\&quot; temporary access to internal network applications</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -76,6 +76,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string DomainWhitelistSchemaId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the endpoint hardening approval template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>approval-schema-090134f1ebff****</para>
+            /// </summary>
             [NameInMap("EndpointHardeningSchemaId")]
             [Validation(Required=false)]
             public string EndpointHardeningSchemaId { get; set; }
@@ -90,6 +96,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string PeripheralBlockSchemaId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the internal network access control approval template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>approval-schema-090134f1ebff****</para>
+            /// </summary>
             [NameInMap("PrivateAccessBlockSchemaId")]
             [Validation(Required=false)]
             public string PrivateAccessBlockSchemaId { get; set; }
@@ -104,6 +116,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string SoftwareBlockSchemaId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the software hardening approval template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>approval-schema-090134f1ebff****</para>
+            /// </summary>
             [NameInMap("SoftwareHardeningSchemaId")]
             [Validation(Required=false)]
             public string SoftwareHardeningSchemaId { get; set; }
@@ -115,7 +133,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_process</para>
+        /// <para>Internal network access approval process</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

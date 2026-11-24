@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListApprovalProcessesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of approval processes.</para>
+        /// <para>The approval processes.</para>
         /// </summary>
         [NameInMap("Processes")]
         [Validation(Required=false)]
         public List<ListApprovalProcessesResponseBodyProcesses> Processes { get; set; }
         public class ListApprovalProcessesResponseBodyProcesses : TeaModel {
             /// <summary>
-            /// <para>The list of policies associated with endpoint uninstallation.</para>
+            /// <para>The policies associated with endpoint uninstallation.</para>
             /// </summary>
             [NameInMap("AppUninstallPolicies")]
             [Validation(Required=false)]
@@ -42,6 +42,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The type of the approval process. Valid values: 0 (built-in approval), 1 (DingTalk approval), 2 (WeCom approval), and 3 (Lark approval).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("ApprovalType")]
             [Validation(Required=false)]
             public int? ApprovalType { get; set; }
@@ -60,14 +66,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The description of the approval process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is an approval process</para>
+            /// <para>Approval process for file sending scenarios</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of policies associated with device registration.</para>
+            /// <para>The policies associated with device registration.</para>
             /// </summary>
             [NameInMap("DeviceRegistrationPolicies")]
             [Validation(Required=false)]
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of policies associated with file sending.</para>
+            /// <para>The policies associated with file sending.</para>
             /// </summary>
             [NameInMap("DlpSendPolicies")]
             [Validation(Required=false)]
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of policies associated with the domain name blacklist.</para>
+            /// <para>The policies associated with the domain name blacklist.</para>
             /// </summary>
             [NameInMap("DomainBlacklistPolicies")]
             [Validation(Required=false)]
@@ -145,7 +151,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of policies associated with the domain name whitelist.</para>
+            /// <para>The policies associated with the domain name whitelist.</para>
             /// </summary>
             [NameInMap("DomainWhitelistPolicies")]
             [Validation(Required=false)]
@@ -170,29 +176,15 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The policies associated with endpoint hardening. If the approval process is not configured with an approval template of this type, SchemaId and PolicyIds are empty.</para>
+            /// </summary>
             [NameInMap("EndpointHardeningPolicies")]
             [Validation(Required=false)]
             public ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies EndpointHardeningPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies : TeaModel {
-                [NameInMap("PolicyIds")]
-                [Validation(Required=false)]
-                public List<string> PolicyIds { get; set; }
-
-                [NameInMap("SchemaId")]
-                [Validation(Required=false)]
-                public string SchemaId { get; set; }
-
-            }
-
-            /// <summary>
-            /// <para>The list of policies associated with peripheral control.</para>
-            /// </summary>
-            [NameInMap("PeripheralBlockPolicies")]
-            [Validation(Required=false)]
-            public ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies PeripheralBlockPolicies { get; set; }
-            public class ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies : TeaModel {
                 /// <summary>
-                /// <para>The IDs of the peripheral control policy.</para>
+                /// <para>The IDs of the endpoint hardening policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -210,14 +202,52 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
-            [NameInMap("PrivateAccessBlockPolicies")]
+            /// <summary>
+            /// <para>The policies associated with peripheral control.</para>
+            /// </summary>
+            [NameInMap("PeripheralBlockPolicies")]
             [Validation(Required=false)]
-            public ListApprovalProcessesResponseBodyProcessesPrivateAccessBlockPolicies PrivateAccessBlockPolicies { get; set; }
-            public class ListApprovalProcessesResponseBodyProcessesPrivateAccessBlockPolicies : TeaModel {
+            public ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies PeripheralBlockPolicies { get; set; }
+            public class ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies : TeaModel {
+                /// <summary>
+                /// <para>The IDs of the peripheral control policies.</para>
+                /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the approval template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>approval-schema-090134f1ebff****</para>
+                /// </summary>
+                [NameInMap("SchemaId")]
+                [Validation(Required=false)]
+                public string SchemaId { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The policies associated with internal network access control. If the approval process is not configured with an approval template of this type, SchemaId and PolicyIds are empty.</para>
+            /// </summary>
+            [NameInMap("PrivateAccessBlockPolicies")]
+            [Validation(Required=false)]
+            public ListApprovalProcessesResponseBodyProcessesPrivateAccessBlockPolicies PrivateAccessBlockPolicies { get; set; }
+            public class ListApprovalProcessesResponseBodyProcessesPrivateAccessBlockPolicies : TeaModel {
+                /// <summary>
+                /// <para>The IDs of the internal network access control applications.</para>
+                /// </summary>
+                [NameInMap("PolicyIds")]
+                [Validation(Required=false)]
+                public List<string> PolicyIds { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the approval template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>approval-schema-090134f1ebff****</para>
+                /// </summary>
                 [NameInMap("SchemaId")]
                 [Validation(Required=false)]
                 public string SchemaId { get; set; }
@@ -238,14 +268,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the approval process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>File sending approval</para>
             /// </summary>
             [NameInMap("ProcessName")]
             [Validation(Required=false)]
             public string ProcessName { get; set; }
 
             /// <summary>
-            /// <para>The list of approval nodes.</para>
+            /// <para>The approval nodes.</para>
             /// </summary>
             [NameInMap("ProcessNodes")]
             [Validation(Required=false)]
@@ -274,14 +304,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of policies associated with software blocking.</para>
+            /// <para>The policies associated with the software block.</para>
             /// </summary>
             [NameInMap("SoftwareBlockPolicies")]
             [Validation(Required=false)]
             public ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies SoftwareBlockPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies : TeaModel {
                 /// <summary>
-                /// <para>The IDs of the software blocking policies.</para>
+                /// <para>The IDs of the software block policies.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -299,14 +329,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The policies associated with software hardening. If the approval process is not configured with an approval template of this type, SchemaId and PolicyIds are empty.</para>
+            /// </summary>
             [NameInMap("SoftwareHardeningPolicies")]
             [Validation(Required=false)]
             public ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies SoftwareHardeningPolicies { get; set; }
             public class ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies : TeaModel {
+                /// <summary>
+                /// <para>The IDs of the software hardening policies.</para>
+                /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the approval template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>approval-schema-090134f1ebff****</para>
+                /// </summary>
                 [NameInMap("SchemaId")]
                 [Validation(Required=false)]
                 public string SchemaId { get; set; }

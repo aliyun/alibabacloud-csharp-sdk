@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListApprovalsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the approval instances.</para>
+        /// <para>The instance IDs of the approval instances.</para>
         /// </summary>
         [NameInMap("ApprovalIds")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The department of the user who created the approval instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test Department</para>
+        /// <para>Testing Department</para>
         /// </summary>
         [NameInMap("CreatorDepartment")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string CreatorUsername { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page for a paging query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page for paging in a paged query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,11 +88,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of effective statuses of reports. The list uses the flat serialization format and cannot contain duplicate values. Only records with the Approved approval status are matched. Valid values:</para>
+        /// <para>The list of effect statuses for the report. The list uses the flat serialization format and cannot contain duplicate values. Only records with the Approved approval status are matched. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Enabled: Valid.</description></item>
         /// <item><description>Expired: Invalid or expired.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Enabled&quot;]</para>
         /// </summary>
         [NameInMap("EffectStatuses")]
         [Validation(Required=false)]
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string OperatorUsername { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paging query. Valid values: 1 to 500.</para>
+        /// <para>The Settings for the number of entries to return on each page for paging in a paged query. Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -174,6 +177,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <item><description>BackendReport: Backend report.
         /// If you do not specify this parameter, only ApprovalReport is queried by default.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;BackendReport&quot;]</para>
         /// </summary>
         [NameInMap("ReportTypes")]
         [Validation(Required=false)]
@@ -200,7 +206,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>The statuses of the approval instances.</para>
+        /// <para>The instance statuses of the approval instances.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

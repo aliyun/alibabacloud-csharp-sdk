@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The prohibited software details.</para>
+        /// <para>The details of the prohibited software.</para>
         /// </summary>
         [NameInMap("Software")]
         [Validation(Required=false)]
         public GetProhibitedSoftwareResponseBodySoftware Software { get; set; }
         public class GetProhibitedSoftwareResponseBodySoftware : TeaModel {
             /// <summary>
-            /// <para>The creation time of the prohibited software, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</para>
+            /// <para>The time when the prohibited software was created. The time is in the yyyy-MM-dd HH:mm:ss format and follows the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-05 10:20:46</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the prohibited software is a system built-in prohibited software. Valid values:</para>
+            /// <para>Specifies whether the prohibited software is a built-in prohibited software. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: A system built-in prohibited software that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</description></item>
-            /// <item><description><b>false</b>: A custom prohibited software under the current Alibaba Cloud account.</description></item>
+            /// <item><description><b>true</b>: The software is a built-in prohibited software. It is shared by all Alibaba Cloud accounts and cannot be modified or deleted.</description></item>
+            /// <item><description><b>false</b>: The software is a custom prohibited software within the current Alibaba Cloud account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The list of process configurations for the Linux operating system.</para>
+            /// <para>The list of process configurations in the Linux operating system.</para>
             /// </summary>
             [NameInMap("LinuxProcesses")]
             [Validation(Required=false)]
             public List<GetProhibitedSoftwareResponseBodySoftwareLinuxProcesses> LinuxProcesses { get; set; }
             public class GetProhibitedSoftwareResponseBodySoftwareLinuxProcesses : TeaModel {
                 /// <summary>
-                /// <para>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.xunlei.Thunder</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command-line arguments for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The process name.</para>
+                /// <para>The name of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>thuner.exe</para>
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The list of process configurations for the macOS operating system.</para>
+            /// <para>The list of process configurations in the macOS operating system.</para>
             /// </summary>
             [NameInMap("MacOSProcesses")]
             [Validation(Required=false)]
             public List<GetProhibitedSoftwareResponseBodySoftwareMacOSProcesses> MacOSProcesses { get; set; }
             public class GetProhibitedSoftwareResponseBodySoftwareMacOSProcesses : TeaModel {
                 /// <summary>
-                /// <para>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.xunlei.Thunder</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command-line arguments for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The process name.</para>
+                /// <para>The name of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>thuner.exe</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<string> PolicyIds { get; set; }
 
             /// <summary>
-            /// <para>The prohibited software ID.</para>
+            /// <para>The ID of the prohibited software.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swb-3e6a1f9c4b28****</para>
@@ -186,21 +186,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SoftwareId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the prohibited software tags associated with the prohibited software.</para>
+            /// <para>The IDs of the prohibited software tags that are associated with the prohibited software.</para>
             /// </summary>
             [NameInMap("TagIds")]
             [Validation(Required=false)]
             public List<string> TagIds { get; set; }
 
             /// <summary>
-            /// <para>The list of process configurations for the Windows operating system.</para>
+            /// <para>The list of process configurations in the Windows operating system.</para>
             /// </summary>
             [NameInMap("WindowsProcesses")]
             [Validation(Required=false)]
             public List<GetProhibitedSoftwareResponseBodySoftwareWindowsProcesses> WindowsProcesses { get; set; }
             public class GetProhibitedSoftwareResponseBodySoftwareWindowsProcesses : TeaModel {
                 /// <summary>
-                /// <para>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.xunlei.Thunder</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command-line arguments for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The process name.</para>
+                /// <para>The name of the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>thuner.exe</para>

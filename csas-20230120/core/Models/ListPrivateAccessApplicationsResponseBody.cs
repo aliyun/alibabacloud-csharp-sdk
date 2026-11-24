@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<ListPrivateAccessApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListPrivateAccessApplicationsResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>The application address groups. This parameter is returned when ConfigMode is set to Precise, and is empty when ConfigMode is an empty string.</para>
+            /// <para>The application address groups. This parameter is returned when ConfigMode is Precise, and is empty when ConfigMode is an empty string.</para>
             /// </summary>
             [NameInMap("AddressGroups")]
             [Validation(Required=false)]
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the application is created by automatic creation. Valid values:</para>
+            /// <para>Specifies whether the application is automatically created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: manual creation.</description></item>
-            /// <item><description>1: automatic creation.</description></item>
+            /// <item><description>0: Manually created.</description></item>
+            /// <item><description>1: Automatically created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The browser access mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The configuration mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Empty string: default mode.</description></item>
-            /// <item><description>Precise: precise mode.</description></item>
+            /// <item><description>Empty string: Default mode.</description></item>
+            /// <item><description>Precise: Precise mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,8 +119,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The health check mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OnAccess: checks upon access.</description></item>
-            /// <item><description>Continuous: continuous checks.</description></item>
+            /// <item><description>OnAccess: Check on access.</description></item>
+            /// <item><description>Continuous: Continuous check.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<string> PolicyIds { get; set; }
 
             /// <summary>
-            /// <para>The port ranges of the private access application. Multiple port ranges cannot be duplicate or overlap.</para>
+            /// <para>The port ranges of the private access application. Multiple port ranges cannot be duplicated or overlap.</para>
             /// </summary>
             [NameInMap("PortRanges")]
             [Validation(Required=false)]
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The protocol of the private access application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>All</b>: all protocols.</description></item>
+            /// <item><description><b>All</b>: All protocols.</description></item>
             /// <item><description><b>TCP</b></description></item>
             /// <item><description><b>UDP</b></description></item>
             /// </list>
@@ -214,8 +214,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The status of the private access application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: enabled.</description></item>
-            /// <item><description><b>Disabled</b>: disabled.</description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

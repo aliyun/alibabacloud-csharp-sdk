@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class BatchDeletePrivateAccessPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of internal network access policies. You can specify up to 100 internal network access policy IDs.</para>
+        /// <para>The IDs of the internal network access policies. You can specify up to 100 internal network access policy IDs.</para>
         /// </summary>
         [NameInMap("PolicyIds")]
         [Validation(Required=false)]

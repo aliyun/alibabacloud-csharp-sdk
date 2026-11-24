@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public ExecutePeriodEffectDay EffectDay { get; set; }
         public class ExecutePeriodEffectDay : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Friday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Monday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Saturday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Sunday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Thursday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Tuesday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. Valid values: true and false. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The execution cycle mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Once</b>: The single execution mode. Used in combination with ExecuteMode=Once.</description></item>
-        /// <item><description><b>Interval</b>: The periodic execution mode based on a specified frequency. Used in combination with ExecuteMode=Schedule.</description></item>
-        /// <item><description><b>Weekly</b>: The weekly execution mode where you can select effective days. Used in combination with ExecuteMode=Schedule and EffectDay.</description></item>
+        /// <item><description><b>Once</b>: Single execution mode. Used in combination with ExecuteMode=Once.</description></item>
+        /// <item><description><b>Interval</b>: Periodic execution at a specified frequency. Used in combination with ExecuteMode=Schedule.</description></item>
+        /// <item><description><b>Weekly</b>: Weekly execution on selected days. Used in combination with ExecuteMode=Schedule and EffectDay.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

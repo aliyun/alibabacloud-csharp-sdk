@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateSoftwarelibDistributeTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B608C6AE-623D-55C4-9454-601B88AE937E</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public CreateSoftwarelibDistributeTaskResponseBodyTask Task { get; set; }
         public class CreateSoftwarelibDistributeTaskResponseBodyTask : TeaModel {
             /// <summary>
-            /// <para>The task creation time as a second-level UNIX timestamp.</para>
+            /// <para>The time when the task was created. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782268092</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The task name.</para>
+            /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_task</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The software name.</para>
+            /// <para>The name of the software.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test software</para>
@@ -57,12 +57,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SoftwareName { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>enabled</b>: enabled.</description></item>
-            /// <item><description><b>disabled</b>: disabled.</description></item>
+            /// <item><description><b>enabled</b>: Enabled.</description></item>
+            /// <item><description><b>disabled</b>: Disabled.</description></item>
             /// </list>
-            /// <para>The initial status of a task after creation is disabled.</para>
+            /// <para>After a task is created, its initial status is disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The operating system to which the task applies. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Windows</b>: Windows.</description></item>
-            /// <item><description><b>Mac(Apple)</b>: macOS with Apple silicon.</description></item>
-            /// <item><description><b>Mac(Intel)</b>: macOS with Intel processors.</description></item>
+            /// <item><description><b>Mac(Apple)</b>: macOS on Apple silicon.</description></item>
+            /// <item><description><b>Mac(Intel)</b>: macOS on Intel processors.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SupportOs { get; set; }
 
             /// <summary>
-            /// <para>The task ID, which is used to query the task execution result.</para>
+            /// <para>The ID of the task. You can use the ID to query the task execution result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>softwarelib-distribute-task-911dd7898bc2****</para>

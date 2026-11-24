@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListForwardStrategiesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in paging query. Valid values: 1 to 10000.</para>
+        /// <para>The page number of the current page in a paged query. Valid values: 1 to 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of access destination instance IDs.</para>
+        /// <para>The IDs of the access destination instances.</para>
         /// </summary>
         [NameInMap("DestinationIds")]
         [Validation(Required=false)]
         public List<string> DestinationIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the access destination. Valid values:</para>
+        /// <para>The destination type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Connector</b>: connector.</description></item>
+        /// <item><description><b>Connector</b>: Connector.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// <para>The list of forwarding rule IDs.</para>
+        /// <para>The IDs of the forwarding rules.</para>
         /// </summary>
         [NameInMap("ForwardIds")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging query. Valid values: 1 to 1000.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<ListNetBandwidthResponseBodyNetBandwidthList> NetBandwidthList { get; set; }
         public class ListNetBandwidthResponseBodyNetBandwidthList : TeaModel {
             /// <summary>
-            /// <para>The bandwidth value, in Mbps.</para>
+            /// <para>The bandwidth value (Mbps).</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-01 10:20:30</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was last modified.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-02 15:00:00</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

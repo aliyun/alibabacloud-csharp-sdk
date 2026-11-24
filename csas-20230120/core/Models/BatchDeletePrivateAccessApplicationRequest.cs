@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class BatchDeletePrivateAccessApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of internal-facing access applications. You can specify up to 100 application IDs.</para>
+        /// <para>The IDs of the private access applications. You can specify up to 100 private access application IDs.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<UpdateProhibitedSoftwareRequestLinuxProcesses> LinuxProcesses { get; set; }
         public class UpdateProhibitedSoftwareRequestLinuxProcesses : TeaModel {
             /// <summary>
-            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</para>
+            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The bundle ID can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.aliyun.security.sase</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</para>
+            /// <para>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain this content are matched. If you leave this parameter empty, the command line is not verified. The arguments can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--start-minimized</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</para>
+            /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\\autotest</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The process name. The value can be up to 1024 characters in length.</para>
+            /// <para>The name of the process. The name can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Everything.exe</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<UpdateProhibitedSoftwareRequestMacOSProcesses> MacOSProcesses { get; set; }
         public class UpdateProhibitedSoftwareRequestMacOSProcesses : TeaModel {
             /// <summary>
-            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</para>
+            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The bundle ID can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.autotest.update</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</para>
+            /// <para>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain this content are matched. If you leave this parameter empty, the command line is not verified. The arguments can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--start-minimized</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</para>
+            /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\\autotest</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The process name. The value can be up to 1024 characters in length.</para>
+            /// <para>The name of the process. The name can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Everything.exe</para>
@@ -128,10 +128,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom prohibited software to update. Only custom prohibited software under the current Alibaba Cloud account can be updated. Built-in prohibited software cannot be updated. You can obtain the value from the following operations:</para>
+        /// <para>The ID of the custom prohibited software to update. You can update only custom prohibited software within the current Alibaba Cloud account. Built-in prohibited software cannot be updated. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: queries prohibited software entries in batches.</description></item>
-        /// <item><description><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: creates a custom prohibited software entry.</description></item>
+        /// <item><description><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: List prohibited software.</description></item>
+        /// <item><description><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Create custom prohibited software.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string SoftwareId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the custom prohibited software tags to associate. Duplicate values are not allowed.</para>
+        /// <para>The IDs of the custom prohibited software tags to associate. Duplicate IDs are not allowed.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<UpdateProhibitedSoftwareRequestWindowsProcesses> WindowsProcesses { get; set; }
         public class UpdateProhibitedSoftwareRequestWindowsProcesses : TeaModel {
             /// <summary>
-            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</para>
+            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The bundle ID can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn.apifox.app</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</para>
+            /// <para>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain this content are matched. If you leave this parameter empty, the command line is not verified. The arguments can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--start-minimized</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</para>
+            /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\\autotest</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The process name. The value can be up to 1024 characters in length.</para>
+            /// <para>The name of the process. The name can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Everything.exe</para>

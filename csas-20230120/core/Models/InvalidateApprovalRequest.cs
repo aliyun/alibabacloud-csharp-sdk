@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class InvalidateApprovalRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the approval instance to immediately invalidate. You can call ListApprovals to query approval instance IDs. Only one approval instance ID under the current Alibaba Cloud account can be specified per request.</para>
+        /// <para>The ID of the approval instance to be immediately invalidated. You can obtain the ID by calling the ListApprovals operation. You can specify only one approval instance ID under the current Alibaba Cloud account at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

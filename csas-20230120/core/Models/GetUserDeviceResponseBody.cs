@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public GetUserDeviceResponseBodyDevice Device { get; set; }
         public class GetUserDeviceResponseBodyDevice : TeaModel {
             /// <summary>
-            /// <para>The status of the client. Valid values:</para>
+            /// <para>The client status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Online</b>: Online.</description></item>
-            /// <item><description><b>Offline</b>: Offline.</description></item>
+            /// <item><description><b>Online</b>: online</description></item>
+            /// <item><description><b>Offline</b>: offline</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>The password-free logon status of the device. Valid values:</para>
+            /// <para>The passwordless login status of the device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Disabled.</description></item>
-            /// <item><description><b>Unprovisioned</b>: Unprovisioned.</description></item>
+            /// <item><description><b>Enabled</b>: enabled</description></item>
+            /// <item><description><b>Disabled</b>: disabled</description></item>
+            /// <item><description><b>Unprovisioned</b>: unprovisioned</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string AutoLoginStatus { get; set; }
 
             /// <summary>
-            /// <para>The battery health percentage.</para>
+            /// <para>The battery health.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CountryZh { get; set; }
 
             /// <summary>
-            /// <para>The registration time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The registration time of the endpoint device. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-16 17:18:46</para>
@@ -198,8 +198,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The ownership of the endpoint device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Personal</b>: Personal device.</description></item>
-            /// <item><description><b>Company</b>: Company device.</description></item>
+            /// <item><description><b>Personal</b>: personal device</description></item>
+            /// <item><description><b>Company</b>: company device</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -222,12 +222,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The status of the endpoint device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Online</b>: Online.</description></item>
-            /// <item><description><b>Offline</b>: Offline.</description></item>
-            /// <item><description><b>LongTermOffline</b>: Long-term offline.</description></item>
-            /// <item><description><b>Locked</b>: Locked.</description></item>
-            /// <item><description><b>Lost</b>: Reported as lost.</description></item>
-            /// <item><description><b>Unbound</b>: Unbound.</description></item>
+            /// <item><description><b>Online</b>: online</description></item>
+            /// <item><description><b>Offline</b>: offline</description></item>
+            /// <item><description><b>LongTermOffline</b>: long-term offline</description></item>
+            /// <item><description><b>Locked</b>: locked</description></item>
+            /// <item><description><b>Lost</b>: lost</description></item>
+            /// <item><description><b>Unbound</b>: unbound</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -250,12 +250,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The operating system type of the endpoint device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Windows</b>: Windows.</description></item>
-            /// <item><description><b>macOS</b>: macOS.</description></item>
-            /// <item><description><b>Linux</b>: Linux.</description></item>
-            /// <item><description><b>Android</b>: Android.</description></item>
-            /// <item><description><b>iOS</b>: iOS.</description></item>
-            /// <item><description><b>Windows_Wuying</b>: WUYING Workspace.</description></item>
+            /// <item><description><b>Windows</b>: Windows</description></item>
+            /// <item><description><b>macOS</b>: macOS</description></item>
+            /// <item><description><b>Linux</b>: Linux</description></item>
+            /// <item><description><b>Android</b>: Android</description></item>
+            /// <item><description><b>iOS</b>: iOS</description></item>
+            /// <item><description><b>Windows_Wuying</b>: WUYING Workspace</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Disk { get; set; }
 
             /// <summary>
-            /// <para>The available disk space, in GB.</para>
+            /// <para>The available disk space. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -296,7 +296,27 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? DiskAvailable { get; set; }
 
             /// <summary>
-            /// <para>The used disk space, in GB.</para>
+            /// <para>The disk encryption status of the user endpoint device. Valid values: Unsupported (encryption not supported), Unencrypted (not encrypted), Encrypting (encrypting), Encrypted (encrypted), and EncryptFailed (encryption failed). If the status is not reported, is null, or is unknown, Unencrypted is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unsupported</para>
+            /// </summary>
+            [NameInMap("DiskEncryptStatus")]
+            [Validation(Required=false)]
+            public string DiskEncryptStatus { get; set; }
+
+            /// <summary>
+            /// <para>The reason why disk encryption failed or is not supported on the user endpoint device. This reason is returned only when DiskEncryptStatus is Unsupported or EncryptFailed. For other statuses, an empty string is returned. Maximum length: 512 characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The current operating system version does not support BitLocker</para>
+            /// </summary>
+            [NameInMap("DiskEncryptStatusReason")]
+            [Validation(Required=false)]
+            public string DiskEncryptStatusReason { get; set; }
+
+            /// <summary>
+            /// <para>The used disk space. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>103</para>
@@ -308,10 +328,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The office data protection status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Disabled.</description></item>
-            /// <item><description><b>Unprovisioned</b>: Unprovisioned.</description></item>
-            /// <item><description><b>Unauthorized</b>: Unauthorized.</description></item>
+            /// <item><description><b>Enabled</b>: enabled</description></item>
+            /// <item><description><b>Disabled</b>: disabled</description></item>
+            /// <item><description><b>Unprovisioned</b>: unprovisioned</description></item>
+            /// <item><description><b>Unauthorized</b>: unauthorized</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -324,8 +344,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The anti-intrusion status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Enabled</b>: enabled</description></item>
+            /// <item><description><b>Disabled</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -343,7 +363,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<GetUserDeviceResponseBodyDeviceHistoryUsers> HistoryUsers { get; set; }
             public class GetUserDeviceResponseBodyDeviceHistoryUsers : TeaModel {
                 /// <summary>
-                /// <para>The ID of the user.</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -377,9 +397,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The Internet access status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Disabled.</description></item>
-            /// <item><description><b>Unprovisioned</b>: Unprovisioned.</description></item>
+            /// <item><description><b>Enabled</b>: enabled</description></item>
+            /// <item><description><b>Disabled</b>: disabled</description></item>
+            /// <item><description><b>Unprovisioned</b>: unprovisioned</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -400,7 +420,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string InnerIP { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the terminal is joined to an Active Directory (AD) domain.</para>
+            /// <para>Indicates whether the endpoint has joined an Active Directory (AD) domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -427,7 +447,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<string> MatchDeviceGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The memory capacity of the endpoint device. Unit: GB.</para>
+            /// <para>The memory capacity of the terminal device. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -452,7 +472,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string NacStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of network interface controllers (NICs) of the endpoint device.</para>
+            /// <para>The list of network interface controllers (NICs) of the terminal device.</para>
             /// </summary>
             [NameInMap("NetInterfaceInfo")]
             [Validation(Required=false)]
@@ -496,14 +516,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PaStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of running processes on the terminal.</para>
+            /// <para>The list of running processes on the terminal device.</para>
             /// </summary>
             [NameInMap("Processes")]
             [Validation(Required=false)]
             public List<GetUserDeviceResponseBodyDeviceProcesses> Processes { get; set; }
             public class GetUserDeviceResponseBodyDeviceProcesses : TeaModel {
                 /// <summary>
-                /// <para>The CPU usage percentage of the process.</para>
+                /// <para>The percentage of CPU usage by the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.05</para>
@@ -523,7 +543,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The memory usage of the process, in MB.</para>
+                /// <para>The memory usage of the process. Unit: MB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>233</para>
@@ -575,7 +595,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ProvinceZh { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -585,10 +605,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SaseUserId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether sharing is enabled for the device. Valid values:</para>
+            /// <para>Indicates whether sharing is enabled for the device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Enabled.</description></item>
-            /// <item><description><b>false</b>: Disabled.</description></item>
+            /// <item><description><b>true</b>: Sharing is enabled.</description></item>
+            /// <item><description><b>false</b>: Sharing is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -599,7 +619,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? SharingStatus { get; set; }
 
             /// <summary>
-            /// <para>The motherboard serial number.</para>
+            /// <para>The serial number of the baseboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PJGGU00WBD****</para>
@@ -619,7 +639,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnBios { get; set; }
 
             /// <summary>
-            /// <para>The hard disk serial number.</para>
+            /// <para>The serial number of the disk drive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WD-WXR1A99A****</para>
@@ -639,7 +659,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnProcessor { get; set; }
 
             /// <summary>
-            /// <para>The system serial number.</para>
+            /// <para>The serial number of the system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KVN9C9****</para>
@@ -649,7 +669,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnSystem { get; set; }
 
             /// <summary>
-            /// <para>The logon IP address of the endpoint device.</para>
+            /// <para>The logon IP address of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>106.14.XX.XX</para>
@@ -669,7 +689,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public long? TerminalInfoCollectTime { get; set; }
 
             /// <summary>
-            /// <para>The last online time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The last online time of the terminal device. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-24 19:04:42</para>
@@ -692,7 +712,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the office area.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test Office Area</para>
+            /// <para>Test office area</para>
             /// </summary>
             [NameInMap("Workshop")]
             [Validation(Required=false)]

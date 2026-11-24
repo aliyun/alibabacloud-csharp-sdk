@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DevTag { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic task ID.</para>
+            /// <para>The ID of the diagnostic task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>diag-3e0d36d6c15a0502</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The diagnosis type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FullLink: full-link diagnosis.</description></item>
-            /// <item><description>Application: application diagnosis.</description></item>
+            /// <item><description>FullLink: End-to-end diagnosis.</description></item>
+            /// <item><description>Application: Application diagnosis.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>The POP point ID. This parameter is required when manual selection is used.</para>
+            /// <para>The ID of the PoP. This parameter is required when manual selection is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pop-8ded63ce9d3d317e</para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PopId { get; set; }
 
             /// <summary>
-            /// <para>The POP point selection mode. Valid values:</para>
+            /// <para>The PoP selection mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AutoSelect</b>: automatic selection.</description></item>
-            /// <item><description><b>ManualSelect</b>: manual selection.</description></item>
+            /// <item><description><b>AutoSelect</b>: Automatic selection.</description></item>
+            /// <item><description><b>ManualSelect</b>: Manual selection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,10 +95,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The protocol used by the internal network access application. Valid values:</para>
+            /// <para>The application protocol for internal network access. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>TCP</b></description></item>
-            /// <item><description><b>UDP</b>.</description></item>
+            /// <item><description><b>UDP</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The task running status. Valid values:</para>
+            /// <para>The running status of the task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Running</b>: The task is running.</description></item>
-            /// <item><description><b>Finished</b>: The task is complete.</description></item>
+            /// <item><description><b>Finished</b>: The task is completed.</description></item>
             /// <item><description><b>Failed</b>: The task failed.</description></item>
             /// </list>
             /// 
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The extra information for UDP diagnosis.</para>
+            /// <para>The additional information for UDP diagnosis.</para>
             /// </summary>
             [NameInMap("UdpExtraConfigs")]
             [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public CreatePADiagnosisTaskResponseBodyDiagnosisTaskUserGroup UserGroup { get; set; }
             public class CreatePADiagnosisTaskResponseBodyDiagnosisTaskUserGroup : TeaModel {
                 /// <summary>
-                /// <para>The user group ID.</para>
+                /// <para>The ID of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ug-xxxxxxxx</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string UserGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The user group name.</para>
+                /// <para>The name of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IT</para>

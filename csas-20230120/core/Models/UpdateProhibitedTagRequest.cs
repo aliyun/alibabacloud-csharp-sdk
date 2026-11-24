@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateProhibitedTagRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the prohibited software tag. The description can contain letters, digits, Chinese characters, spaces, periods (.), underscores (_), and hyphens (-), and cannot exceed 128 characters in length.</para>
+        /// <para>The description of the prohibited software tag. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), underscores (_), and hyphens (-), and can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No description</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the prohibited software tag. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</para>
+        /// <para>The name of the prohibited software tag. The name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Edge</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The ID of the custom prohibited software tag. Only custom tags under the current Alibaba Cloud account can be modified. Built-in system tags cannot be modified. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListProhibitedTags~~">ListProhibitedTags</a>: Lists prohibited software tags.</description></item>
+        /// <item><description><a href="~~ListProhibitedTags~~">ListProhibitedTags</a>: Queries prohibited software tags.</description></item>
         /// <item><description><a href="~~CreateProhibitedTag~~">CreateProhibitedTag</a>: Creates a custom prohibited software tag.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

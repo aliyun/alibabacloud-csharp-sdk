@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DocumentControlShrink { get; set; }
 
         /// <summary>
-        /// <para>The URL for downloading the file to be embedded. The URL must be active for public network access.</para>
+        /// <para>The active URL for downloading the file to be embedded. The URL must support public network access.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the file to be embedded. The backend validates the file type based on the file name extension.</para>
+        /// <para>The file name of the file to be embedded. The backend determines and verifies the file type based on the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? ImageEmbedJpegQuality { get; set; }
 
         /// <summary>
-        /// <para>The image watermark parameter. A larger value indicates higher robustness but lower visual quality. Default value: 2. Valid values: 0 to 4.</para>
+        /// <para>The image watermark parameter that specifies the embedding level. A larger value indicates higher robustness but lower visual quality. Default value: 2. Valid values: 0 to 4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -80,14 +80,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? ImageEmbedLevel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable invisible watermark embedding. Default value: true.</para>
+        /// <para>Specifies whether to enable invisible watermark embedding. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("InvisibleEnable")]
         [Validation(Required=false)]
         public bool? InvisibleEnable { get; set; }
 
         /// <summary>
-        /// <para>The short video watermark parameter that specifies the video bitrate. By default, the video bitrate is automatically obtained. You can use this parameter to forcibly specify the bitrate used during extraction. Typically, you do not need to set this parameter.</para>
+        /// <para>The short video watermark parameter that specifies the video bitrate. By default, the system automatically obtains the video bitrate. You can use this parameter to force the bitrate used during extraction. Typically, you do not need to set this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000k</para>
@@ -104,12 +108,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string VideoControlShrink { get; set; }
 
         /// <summary>
-        /// <para>Video watermark parameter. Specifies whether to use the long video watermark SDK. Valid values:</para>
+        /// <para>The video watermark parameter that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The long video watermark SDK is used.</description></item>
-        /// <item><description><b>false</b>: The long video watermark SDK is not used.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? VideoIsLong { get; set; }
 
         /// <summary>
-        /// <para>The watermark information in Base64-encoded string format. If this parameter is set, WmInfoUint cannot be set.</para>
+        /// <para>The watermark information in Base64-encoded string format. If you set this parameter, you cannot set WmInfoUint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aGVsbG8gc2F*****</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string WmInfoBytesB64 { get; set; }
 
         /// <summary>
-        /// <para>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent between embedding and extraction. For example, if the 40-bit SDK is used for embedding, set this parameter to 40 during extraction as well.</para>
+        /// <para>The capacity bit width of the watermark information. Default value: 32. This parameter must be consistent during embedding and extraction. For example, if a 40-bit SDK is used for embedding, you must also set this value to 40 for extraction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -139,7 +142,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? WmInfoSize { get; set; }
 
         /// <summary>
-        /// <para>The watermark information in decimal number format. If this parameter is set, WmInfoBytesB64 cannot be set.</para>
+        /// <para>The watermark information in decimal numeric format. If you set this parameter, you cannot set WmInfoBytesB64.</para>
+        /// <para>The valid value range depends on the WmInfoSize parameter:</para>
+        /// <list type="bullet">
+        /// <item><description><para>When WmInfoSize is 32, the valid values are 1 to 4294967295.</para>
+        /// </description></item>
+        /// <item><description><para>When WmInfoSize is 40, the valid values are 1 to 1099511627775.</para>
+        /// </description></item>
+        /// <item><description><para>When WmInfoSize is 64, the valid values are 1 to 18446744073709551615.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>123***</para>
@@ -151,10 +163,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The watermark type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PureDocument</b>: document watermark.</description></item>
-        /// <item><description><b>PureImage</b>: image watermark.</description></item>
-        /// <item><description><b>PureAudio</b>: audio watermark.</description></item>
-        /// <item><description><b>PureVideo</b>: video watermark.</description></item>
+        /// <item><description><b>PureDocument</b>: Document watermark.</description></item>
+        /// <item><description><b>PureImage</b>: Image watermark.</description></item>
+        /// <item><description><b>PureAudio</b>: Audio watermark.</description></item>
+        /// <item><description><b>PureVideo</b>: Video watermark.</description></item>
         /// <item><description><b>AigcDocument</b>: AIGC document watermark.</description></item>
         /// <item><description><b>AigcImage</b>: AIGC image watermark.</description></item>
         /// <item><description><b>AigcAudio</b>: AIGC audio watermark.</description></item>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetProhibitedSoftwareShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The prohibited software ID.</para>
+        /// <para>The ID of the prohibited software.</para>
         /// </summary>
         [NameInMap("SoftwareId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdatePrivateAccessApplicationL7SwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Layer 7 access switch configuration of the internal-facing application after this update.</para>
+        /// <para>The Layer 7 access switch configurations of the internal access application after the update.</para>
         /// </summary>
         [NameInMap("L7Switch")]
         [Validation(Required=false)]
         public UpdatePrivateAccessApplicationL7SwitchResponseBodyL7Switch L7Switch { get; set; }
         public class UpdatePrivateAccessApplicationL7SwitchResponseBodyL7Switch : TeaModel {
             /// <summary>
-            /// <para>The ID of the internal-facing application.</para>
+            /// <para>The ID of the internal access application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-application-e12860ef6c48****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The device tag mark switch. Valid values:</para>
+            /// <para>The device tag marking switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DevTagMarkStatus { get; set; }
 
             /// <summary>
-            /// <para>The sensitive application download audit switch. Valid values:</para>
+            /// <para>The download audit switch for sensitive applications. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DownloadAuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The collection of port ranges that are effective for Layer 7 access. This is the intersection of the ports specified in this request and the port ranges already configured for the internal-facing application. An empty collection is returned when Status is set to <b>Disabled</b>.</para>
+            /// <para>The effective port ranges for Layer 7 access, which are the intersection of the ports specified in this request and the configured port ranges of the internal access application. If Status is set to <b>Disabled</b>, an empty set is returned.</para>
             /// </summary>
             [NameInMap("PortRanges")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The source IP mark switch. Valid values:</para>
+            /// <para>The source IP marking switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SrcIpMarkStatus { get; set; }
 
             /// <summary>
-            /// <para>The master switch for Layer 7 access of the internal-facing application. Valid values:</para>
+            /// <para>The master switch for the Layer 7 access switch of the internal access application. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -121,8 +121,22 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public int? TimeoutSec { get; set; }
 
+            [NameInMap("UrlAccessPaths")]
+            [Validation(Required=false)]
+            public List<UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths> UrlAccessPaths { get; set; }
+            public class UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths : TeaModel {
+                [NameInMap("AllowMethods")]
+                [Validation(Required=false)]
+                public List<string> AllowMethods { get; set; }
+
+                [NameInMap("Urls")]
+                [Validation(Required=false)]
+                public List<string> Urls { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>The user mark switch. Valid values:</para>
+            /// <para>The user marking switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -136,7 +150,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string UserMarkStatus { get; set; }
 
             /// <summary>
-            /// <para>The host bypass prevention switch. Valid values:</para>
+            /// <para>The Host bypass prevention switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -152,7 +166,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE4FB974-11BC-5453-9BE1-1606A73EACA6</para>

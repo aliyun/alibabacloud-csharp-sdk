@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>The auto-logon status of the client.</para>
+            /// <para>The auto-login status of the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CPU { get; set; }
 
             /// <summary>
-            /// <para>The city of the public IP address.</para>
+            /// <para>The city to which the public IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hangzhou City</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CityZh { get; set; }
 
             /// <summary>
-            /// <para>The continent of the public IP address.</para>
+            /// <para>The continent to which the public IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ContinentZh { get; set; }
 
             /// <summary>
-            /// <para>The country of the public IP address.</para>
+            /// <para>The country to which the public IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CountryZh { get; set; }
 
             /// <summary>
-            /// <para>The registration time of the endpoint device.</para>
+            /// <para>The registration time of the endpoint device. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-17 18:46:55</para>
@@ -171,10 +171,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Department { get; set; }
 
             /// <summary>
-            /// <para>The ownership of the endpoint device. Valid values:</para>
+            /// <para>The ownership of the terminal device. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Personal</b>: Personal device.</description></item>
-            /// <item><description><b>Company</b>: Company device.</description></item>
+            /// <item><description><b>Company</b>: Corporate device.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <item><description><b>Offline</b>: Offline.</description></item>
             /// <item><description><b>LongTermOffline</b>: Long-term offline.</description></item>
             /// <item><description><b>Locked</b>: Locked.</description></item>
-            /// <item><description><b>Lost</b>: Reported lost.</description></item>
+            /// <item><description><b>Lost</b>: Reported as lost.</description></item>
             /// <item><description><b>Unbound</b>: Unbound.</description></item>
             /// </list>
             /// 
@@ -223,14 +223,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DeviceTag { get; set; }
 
             /// <summary>
-            /// <para>The operating system type of the endpoint device. Valid values:</para>
+            /// <para>The terminal device operating system type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Windows</b>: Windows.</description></item>
             /// <item><description><b>macOS</b>: macOS.</description></item>
             /// <item><description><b>Linux</b>: Linux.</description></item>
             /// <item><description><b>Android</b>: Android.</description></item>
             /// <item><description><b>iOS</b>: iOS.</description></item>
-            /// <item><description><b>Windows_Wuying</b>: WUYING Workspace.</description></item>
+            /// <item><description><b>Windows_Wuying</b>: Wuying cloud desktop.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -259,6 +259,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("Disk")]
             [Validation(Required=false)]
             public string Disk { get; set; }
+
+            /// <summary>
+            /// <para>The disk encryption status of the user endpoint device. Valid values: Unsupported (encryption is not supported), Unencrypted (not encrypted), Encrypting (encrypting), Encrypted (encrypted), and EncryptFailed (encryption failed). If the status is not reported, null, or unknown, Unencrypted is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unsupported</para>
+            /// </summary>
+            [NameInMap("DiskEncryptStatus")]
+            [Validation(Required=false)]
+            public string DiskEncryptStatus { get; set; }
+
+            /// <summary>
+            /// <para>The reason why disk encryption failed or is not supported on the user endpoint device. This reason is returned only when DiskEncryptStatus is Unsupported or EncryptFailed. For other statuses, an empty string is returned. Maximum length: 512 characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The current operating system version does not support BitLocker.</para>
+            /// </summary>
+            [NameInMap("DiskEncryptStatusReason")]
+            [Validation(Required=false)]
+            public string DiskEncryptStatusReason { get; set; }
 
             /// <summary>
             /// <para>The office data protection status. Valid values:</para>
@@ -323,7 +343,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string IaStatus { get; set; }
 
             /// <summary>
-            /// <para>The internal IP address of the endpoint device.</para>
+            /// <para>The internal IP address of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -333,7 +353,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string InnerIP { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the endpoint device is added to an Active Directory (AD) domain.</para>
+            /// <para>Indicates whether the device is joined to an AD domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -343,7 +363,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? JoinAdDomain { get; set; }
 
             /// <summary>
-            /// <para>The MAC address of the endpoint device.</para>
+            /// <para>The MAC address of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:16:XX:XX:7c:46</para>
@@ -385,14 +405,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string NacStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of network interface controllers (NICs) of the endpoint device.</para>
+            /// <para>The list of network interfaces.</para>
             /// </summary>
             [NameInMap("NetInterfaceInfo")]
             [Validation(Required=false)]
             public List<ListUserDevicesResponseBodyDevicesNetInterfaceInfo> NetInterfaceInfo { get; set; }
             public class ListUserDevicesResponseBodyDevicesNetInterfaceInfo : TeaModel {
                 /// <summary>
-                /// <para>The MAC address of the NIC.</para>
+                /// <para>The MAC address of the network interface.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>00:16:XX:XX:7c:46</para>
@@ -402,7 +422,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Mac { get; set; }
 
                 /// <summary>
-                /// <para>The name of the NIC.</para>
+                /// <para>The name of the network interface.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eth0</para>
@@ -429,7 +449,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PaStatus { get; set; }
 
             /// <summary>
-            /// <para>The province of the public IP address.</para>
+            /// <para>The province to which the public IP address belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhejiang</para>
@@ -459,7 +479,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ProvinceZh { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -503,7 +523,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnBios { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the hard disk.</para>
+            /// <para>The serial number of the disk drive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WD-WXR1A99A****</para>
@@ -523,7 +543,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnProcessor { get; set; }
 
             /// <summary>
-            /// <para>The system serial number (SN).</para>
+            /// <para>The system serial number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KVN9C9****</para>
@@ -533,7 +553,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SnSystem { get; set; }
 
             /// <summary>
-            /// <para>The logon IP address of the endpoint device.</para>
+            /// <para>The logon IP address of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11.49.XX.XX</para>
@@ -543,7 +563,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SrcIP { get; set; }
 
             /// <summary>
-            /// <para>The last online time of the endpoint device.</para>
+            /// <para>The last online time of the terminal device, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-24 19:04:42</para>
@@ -585,7 +605,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of endpoint devices.</para>
+        /// <para>The total number of terminal devices.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

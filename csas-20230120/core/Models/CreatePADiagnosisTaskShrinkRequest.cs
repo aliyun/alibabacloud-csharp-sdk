@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The diagnosis type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FullLink</b>: full-link diagnosis.</description></item>
-        /// <item><description><b>Application</b>: application diagnosis.</description></item>
+        /// <item><description><b>FullLink</b>: End-to-end diagnosis.</description></item>
+        /// <item><description><b>Application</b>: Application diagnosis.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The POP point ID.</para>
+        /// <para>The ID of the PoP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pop-3e244b62357dcafc</para>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PopId { get; set; }
 
         /// <summary>
-        /// <para>The POP point selection mode. Valid values:</para>
+        /// <para>The PoP selection mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AutoSelect</b>: automatic selection.</description></item>
-        /// <item><description><b>ManualSelect</b>: manual selection.</description></item>
+        /// <item><description><b>AutoSelect</b>: Automatic selection.</description></item>
+        /// <item><description><b>ManualSelect</b>: Manual selection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The protocol used by the internal network access application. Valid values:</para>
+        /// <para>The application protocol for internal network access. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>TCP</b></description></item>
-        /// <item><description><b>UDP</b>.</description></item>
+        /// <item><description><b>UDP</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,17 +97,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The extra configurations for UDP diagnosis. If this parameter is not specified, any response received is considered a success.</para>
+        /// <para>The additional configurations for UDP diagnosis. If this parameter is not configured, receiving any response content is considered a success.</para>
         /// </summary>
         [NameInMap("UdpExtraConfigs")]
         [Validation(Required=false)]
         public string UdpExtraConfigsShrink { get; set; }
 
         /// <summary>
-        /// <para>The user group ID.</para>
+        /// <para>The ID of the user group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户组ID。</para>
+        /// <para>User group ID</para>
         /// </summary>
         [NameInMap("UserGroupId")]
         [Validation(Required=false)]

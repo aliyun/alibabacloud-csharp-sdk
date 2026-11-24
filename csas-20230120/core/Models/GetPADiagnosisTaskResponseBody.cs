@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public GetPADiagnosisTaskResponseBodyDiagnosisTask DiagnosisTask { get; set; }
         public class GetPADiagnosisTaskResponseBodyDiagnosisTask : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The task creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-17 09:49:03</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the device.</para>
+            /// <para>The ID of the terminal device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>76C08B0F-CEFD-8F01-C1D3-0D5B493B5EAF</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DiagnoseId { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic type. Valid values:</para>
+            /// <para>The diagnosis type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>FullLink</b>: full-link diagnostics</para>
-            /// </description></item>
-            /// <item><description><para><b>Application</b>: application diagnostics</para>
-            /// </description></item>
+            /// <item><description><b>FullLink</b>: end-to-end diagnosis.</description></item>
+            /// <item><description><b>Application</b>: application diagnosis.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>The ID of the POP.</para>
+            /// <para>The ID of the PoP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pop-2504cd067e094750</para>
@@ -83,12 +81,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PopId { get; set; }
 
             /// <summary>
-            /// <para>The point of presence (POP) selection mode:</para>
+            /// <para>The PoP selection mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>AutoSelect</b>: automatic selection</para>
-            /// </description></item>
-            /// <item><description><para><b>ManualSelect</b>: manual selection</para>
-            /// </description></item>
+            /// <item><description><b>AutoSelect</b>: automatic selection.</description></item>
+            /// <item><description><b>ManualSelect</b>: manual selection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,12 +105,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The private access application protocol. Valid values:</para>
+            /// <para>The protocol used to access the application over the internal network. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>TCP</b></para>
-            /// </description></item>
-            /// <item><description><para><b>UDP</b></para>
-            /// </description></item>
+            /// <item><description><b>TCP</b></description></item>
+            /// <item><description><b>UDP</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +119,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic result.</para>
+            /// <para>The diagnosis result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -142,7 +136,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the request stream.</para>
+                /// <para>The ID of the request flow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>flow-d918b12f9b974f6489fc</para>
@@ -159,7 +153,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfo NetworkLinkInfo { get; set; }
                 public class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfo : TeaModel {
                     /// <summary>
-                    /// <para>The Domain Name System (DNS) information.</para>
+                    /// <para>The DNS information.</para>
                     /// </summary>
                     [NameInMap("Dns")]
                     [Validation(Required=false)]
@@ -213,17 +207,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public List<List<GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDnsHops>> Hops { get; set; }
                         public class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoDnsHops : TeaModel {
                             /// <summary>
-                            /// <para>The private access application address. The address can be 1 to 128 characters long and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</para>
+                            /// <para>The application address for internal network access. The value must be 1 to 128 characters in length and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <hr>
+                            /// <para>198.51.100.1</para>
                             /// </summary>
                             [NameInMap("Address")]
                             [Validation(Required=false)]
                             public string Address { get; set; }
 
                             /// <summary>
-                            /// <para>The TTL.</para>
+                            /// <para>The time to live (TTL).</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>10</para>
@@ -280,7 +274,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                                 public string City { get; set; }
 
                                 /// <summary>
-                                /// <para>The ISP.</para>
+                                /// <para>The Internet service provider (ISP).</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>telecom</para>
@@ -314,7 +308,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string Result { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the operation was successful.</para>
+                        /// <para>Indicates whether the request is successful.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>True</para>
@@ -383,14 +377,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                             /// <para>The address.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <hr>
+                            /// <para>192.0.2.1</para>
                             /// </summary>
                             [NameInMap("Address")]
                             [Validation(Required=false)]
                             public string Address { get; set; }
 
                             /// <summary>
-                            /// <para>The geographic location.</para>
+                            /// <para>The geographical location.</para>
                             /// </summary>
                             [NameInMap("GeoData")]
                             [Validation(Required=false)]
@@ -449,7 +443,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                             public string Latency { get; set; }
 
                             /// <summary>
-                            /// <para>The Time to Live (TTL).</para>
+                            /// <para>The time to live (TTL).</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>10</para>
@@ -471,7 +465,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string Latency { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the operation was successful.</para>
+                        /// <para>Indicates whether the request is successful.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>True</para>
@@ -500,7 +494,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     public List<GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoNodes> Nodes { get; set; }
                     public class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultNetworkLinkInfoNodes : TeaModel {
                         /// <summary>
-                        /// <para>The private access application address. The address can be 1 to 128 characters long and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</para>
+                        /// <para>The address used to access the application over the internal network. The address must be 1 to 128 characters in length and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>172.27.228.132</para>
@@ -510,7 +504,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string Address { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the cloud network instance.</para>
+                        /// <para>The instance ID of the cloud network.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>vpc-xxxxxx</para>
@@ -530,7 +524,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string Error { get; set; }
 
                         /// <summary>
-                        /// <para>The geographic location information.</para>
+                        /// <para>The geographical location information.</para>
                         /// </summary>
                         [NameInMap("GeoData")]
                         [Validation(Required=false)]
@@ -557,7 +551,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                             public string Country { get; set; }
 
                             /// <summary>
-                            /// <para>The Internet Service Provider (ISP).</para>
+                            /// <para>The ISP.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ChinaTelecom_L2</para>
@@ -579,7 +573,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         }
 
                         /// <summary>
-                        /// <para>The node ID.</para>
+                        /// <para>The ID of the node.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1237</para>
@@ -589,17 +583,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public long? Id { get; set; }
 
                         /// <summary>
-                        /// <para>The node name.</para>
+                        /// <para>The name of the node.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>全局加速</para>
+                        /// <para>Global acceleration</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The English name of the node.</para>
+                        /// <para>The name of the node in English.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Japan Private POP</para>
@@ -619,7 +613,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string NodeType { get; set; }
 
                         /// <summary>
-                        /// <para>The resource ID.</para>
+                        /// <para>The ID of the resource.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>pop-xxxxxx</para>
@@ -629,7 +623,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string ResourceId { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the operation was successful.</para>
+                        /// <para>Indicates whether the request is successful.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>True</para>
@@ -657,7 +651,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoDeviceAttributeInfo DeviceAttributeInfo { get; set; }
                     public class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoDeviceAttributeInfo : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the device.</para>
+                        /// <para>The ID of the terminal device.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>E9EE1CE7-4AA0-521D-B8E1-E13E47F05E94</para>
@@ -667,20 +661,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string DevTag { get; set; }
 
                         /// <summary>
-                        /// <para>The operating system of the device. Valid values:</para>
+                        /// <para>The operating system type of the terminal device. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>Windows</b>: Windows</para>
-                        /// </description></item>
-                        /// <item><description><para><b>macOS</b>: macOS</para>
-                        /// </description></item>
-                        /// <item><description><para><b>Linux</b>: Linux</para>
-                        /// </description></item>
-                        /// <item><description><para><b>Android</b>: Android</para>
-                        /// </description></item>
-                        /// <item><description><para><b>iOS</b>: iOS</para>
-                        /// </description></item>
-                        /// <item><description><para><b>Windows_Wuying</b>: Cloud Desktop</para>
-                        /// </description></item>
+                        /// <item><description><b>Windows</b>: Windows.</description></item>
+                        /// <item><description><b>macOS</b>: macOS.</description></item>
+                        /// <item><description><b>Linux</b>: Linux.</description></item>
+                        /// <item><description><b>Android</b>: Android.</description></item>
+                        /// <item><description><b>iOS</b>: iOS.</description></item>
+                        /// <item><description><b>Windows_Wuying</b>: WUYING Workspace.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -691,7 +679,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string DeviceType { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the file.</para>
+                        /// <para>The file name.</para>
                         /// </summary>
                         [NameInMap("File")]
                         [Validation(Required=false)]
@@ -708,7 +696,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string Firewall { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the device. The name can be 1 to 128 characters long and can include letters, numbers, and the following special characters: . , ; - _ / @ and spaces. To query for all devices with names containing 4-byte UTF-8 characters, enter only an underscore (_).</para>
+                        /// <para>The name of the terminal device. The name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system additionally queries all terminal devices whose names contain 4-byte UTF-8 characters.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>DESKTOP-CVTB5KT.CXISHD01.CATHAY_INS.CHN</para>
@@ -718,7 +706,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string Hostname { get; set; }
 
                         /// <summary>
-                        /// <para>The private IP address of the device.</para>
+                        /// <para>The internal IP address of the terminal device.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10.5.208.122</para>
@@ -738,7 +726,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string InternetIp { get; set; }
 
                         /// <summary>
-                        /// <para>The MAC address of the device.</para>
+                        /// <para>The MAC address of the terminal device.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><c>curl Rj0F9uvI.popscan.xaliyun.com</c></para>
@@ -765,7 +753,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public List<string> Process { get; set; }
 
                         /// <summary>
-                        /// <para>The SSID.</para>
+                        /// <para>The service set identifier (SSID) of the wireless network.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>abcd</para>
@@ -787,7 +775,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     public long? ProcessTime { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the routing policy.</para>
+                    /// <para>The routing policy name.</para>
                     /// </summary>
                     [NameInMap("RouteStrategyInfo")]
                     [Validation(Required=false)]
@@ -804,7 +792,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string RouteType { get; set; }
 
                         /// <summary>
-                        /// <para>The policy ID.</para>
+                        /// <para>The ID of the policy.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>av-rtd-091c2d6e3f24aae4</para>
@@ -850,7 +838,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public List<string> Group { get; set; }
 
                         /// <summary>
-                        /// <para>The matched user group.</para>
+                        /// <para>The matched user groups.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>IT</para>
@@ -882,21 +870,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     }
 
                     /// <summary>
-                    /// <para>The zero-trust policy information.</para>
+                    /// <para>The zero trust policy information.</para>
                     /// </summary>
                     [NameInMap("ZeroTrustPolicyInfo")]
                     [Validation(Required=false)]
                     public GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoZeroTrustPolicyInfo ZeroTrustPolicyInfo { get; set; }
                     public class GetPADiagnosisTaskResponseBodyDiagnosisTaskResultPolicyInfoZeroTrustPolicyInfo : TeaModel {
                         /// <summary>
-                        /// <para>The policy action:</para>
+                        /// <para>The policy action. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>Allow</b>: allow</para>
-                        /// </description></item>
-                        /// <item><description><para><b>Block</b>: block</para>
-                        /// </description></item>
-                        /// <item><description><para><b>Observe</b>: monitor mode</para>
-                        /// </description></item>
+                        /// <item><description><b>Allow</b>: allows the traffic.</description></item>
+                        /// <item><description><b>Block</b>: blocks the traffic.</description></item>
+                        /// <item><description><b>Observe</b>: monitor mode.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -917,7 +902,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string AppName { get; set; }
 
                         /// <summary>
-                        /// <para>The block information.</para>
+                        /// <para>The blocking information.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>access denied</para>
@@ -927,10 +912,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         public string BlockInfo { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the zero-trust policy.</para>
+                        /// <para>The name of the zero trust policy.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>保密测试</para>
+                        /// <para>Confidentiality test</para>
                         /// </summary>
                         [NameInMap("PolicyName")]
                         [Validation(Required=false)]
@@ -941,7 +926,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the operation was successful.</para>
+                /// <para>Indicates whether the request is successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -953,14 +938,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The running status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Running</b>: The task is running.</para>
-            /// </description></item>
-            /// <item><description><para><b>Finished</b>: The task is complete.</para>
-            /// </description></item>
-            /// <item><description><para><b>Failed</b>: The task failed.</para>
-            /// </description></item>
+            /// <item><description><b>Running</b>: The task is running.</description></item>
+            /// <item><description><b>Finished</b>: The task is completed.</description></item>
+            /// <item><description><b>Failed</b>: The task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -971,7 +953,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Additional UDP configurations.</para>
+            /// <para>The additional UDP configurations.</para>
             /// </summary>
             [NameInMap("UdpExtraConfigs")]
             [Validation(Required=false)]
@@ -988,7 +970,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string ExpectedResponse { get; set; }
 
                 /// <summary>
-                /// <para>The content of the UDP request.</para>
+                /// <para>The UDP request content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hello</para>

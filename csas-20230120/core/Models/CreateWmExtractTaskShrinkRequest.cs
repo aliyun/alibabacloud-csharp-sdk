@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmExtractTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The CSV watermark control parameters. These must be consistent with the parameters used during embedding. Otherwise, extraction fails.</para>
+        /// <para>CSV watermark control parameters. These parameters must be consistent with those used during embedding. Otherwise, the extraction fails.</para>
         /// </summary>
         [NameInMap("CsvControl")]
         [Validation(Required=false)]
         public string CsvControlShrink { get; set; }
 
         /// <summary>
-        /// <para>The document watermark parameter that specifies whether the file to be extracted is a screenshot of a document with a background watermark. The service determines whether to use the document background watermark extraction logic based on whether the file is an image file. Therefore, this parameter does not need to be set by default. Valid values:</para>
+        /// <para>Document watermark parameter. Specifies whether the file from which the watermark is to be extracted is a screenshot of a document with a background watermark. The service determines whether to use the document background watermark extraction logic based on whether the file is an image file. Therefore, you do not need to set this parameter by default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.</description></item>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? DocumentIsCapture { get; set; }
 
         /// <summary>
-        /// <para>The URL used to download the file from which the watermark is to be fetched. The URL must be accessible over the public network access.</para>
+        /// <para>The URL used to download the file to be fetched. The URL must support public network access.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the file from which the watermark is to be extracted. The backend determines and validates the file type based on the file name extension.</para>
+        /// <para>The name of the file from which the watermark is to be extracted. The backend determines and verifies the file type based on the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Filename { get; set; }
 
         /// <summary>
-        /// <para>The image extraction parameters.</para>
+        /// <para>Image extraction parameters.</para>
         /// </summary>
         [NameInMap("ImageExtractParamsOpenApi")]
         [Validation(Required=false)]
         public string ImageExtractParamsOpenApiShrink { get; set; }
 
         /// <summary>
-        /// <para>The audio watermark parameter that specifies whether the watermark was embedded by the client SDK. Default value: false. Valid values:</para>
+        /// <para>Audio watermark parameter. Specifies whether the watermark is embedded by using the client SDK. Default value: false. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.</description></item>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? IsClientEmbed { get; set; }
 
         /// <summary>
-        /// <para>The video watermark parameter that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</para>
+        /// <para>Video watermark parameter. Specifies whether to use the long video watermark SDK. Default value: false. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.</description></item>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? VideoIsLong { get; set; }
 
         /// <summary>
-        /// <para>The long video watermark parameter that specifies the video playback speed as a floating-point string. Default value: 1, which indicates the playback speed used when the watermark was added, or the speed at which the video timeline was stretched after the watermark was added.</para>
+        /// <para>Long video watermark parameter. The video playback speed, represented as a floating-point string. Default value: 1. This value represents the playback speed used when adding the watermark, or the timeline stretching speed after the watermark is added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string VideoSpeed { get; set; }
 
         /// <summary>
-        /// <para>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent between embedding and extraction. For example, if the 40-bit SDK was used for embedding, set this value to 40 for extraction.</para>
+        /// <para>The bit width of the watermark information capacity. Default value: 32. This parameter must be consistent during embedding and extraction. For example, if a 40-bit SDK is used for embedding, you must also set this value to 40 for extraction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -110,13 +110,13 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The watermark type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PureWebappInvisible</b>: web page watermark.</description></item>
-        /// <item><description><b>PureAppInvisible</b>: app watermark.</description></item>
-        /// <item><description><b>PureScreenInvisible</b>: screen watermark.</description></item>
-        /// <item><description><b>PureDocument</b>: document watermark.</description></item>
-        /// <item><description><b>PureImage</b>: image watermark.</description></item>
-        /// <item><description><b>PureAudio</b>: audio watermark.</description></item>
-        /// <item><description><b>PureVideo</b>: video watermark.</description></item>
+        /// <item><description><b>PureWebappInvisible</b>: Web page watermark.</description></item>
+        /// <item><description><b>PureAppInvisible</b>: App watermark.</description></item>
+        /// <item><description><b>PureScreenInvisible</b>: Screen watermark.</description></item>
+        /// <item><description><b>PureDocument</b>: Document watermark.</description></item>
+        /// <item><description><b>PureImage</b>: Image watermark.</description></item>
+        /// <item><description><b>PureAudio</b>: Audio watermark.</description></item>
+        /// <item><description><b>PureVideo</b>: Video watermark.</description></item>
         /// <item><description><b>AigcWebappInvisible</b>: AIGC web page watermark.</description></item>
         /// <item><description><b>AigcAppInvisible</b>: AIGC app watermark.</description></item>
         /// <item><description><b>AigcScreenInvisible</b>: AIGC screen watermark.</description></item>

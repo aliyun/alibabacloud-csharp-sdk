@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the disabled software.</para>
+        /// <para>The details of the blocked software.</para>
         /// </summary>
         [NameInMap("Software")]
         [Validation(Required=false)]
         public CreateProhibitedSoftwareResponseBodySoftware Software { get; set; }
         public class CreateProhibitedSoftwareResponseBodySoftware : TeaModel {
             /// <summary>
-            /// <para>The creation time of the disabled software, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</para>
+            /// <para>The time when the blocked software was created. The time is displayed in the yyyy-MM-dd HH:mm:ss format and uses the UTC+8 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-05 10:20:46</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the disabled software.</para>
+            /// <para>The description of the blocked software.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Endpoint group targeting github</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<CreateProhibitedSoftwareResponseBodySoftwareLinuxProcesses> LinuxProcesses { get; set; }
             public class CreateProhibitedSoftwareResponseBodySoftwareLinuxProcesses : TeaModel {
                 /// <summary>
-                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID. This field is applicable only to macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.aliyun.security.sase</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command line parameters for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<CreateProhibitedSoftwareResponseBodySoftwareMacOSProcesses> MacOSProcesses { get; set; }
             public class CreateProhibitedSoftwareResponseBodySoftwareMacOSProcesses : TeaModel {
                 /// <summary>
-                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID. This field is applicable only to macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.aliyun.security.sase</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command line parameters for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>The software name.</para>
+            /// <para>The name of the software.</para>
             /// 
             /// <b>Example:</b>
             /// <para>shell</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the disabled software.</para>
+            /// <para>The ID of the blocked software.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swb-83995ff2ae38****</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SoftwareId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of disabled software tags associated with this disabled software.</para>
+            /// <para>The IDs of the blocked software tags associated with the blocked software.</para>
             /// </summary>
             [NameInMap("TagIds")]
             [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<CreateProhibitedSoftwareResponseBodySoftwareWindowsProcesses> WindowsProcesses { get; set; }
             public class CreateProhibitedSoftwareResponseBodySoftwareWindowsProcesses : TeaModel {
                 /// <summary>
-                /// <para>The bundle ID of the application. This parameter is required only for macOS processes.</para>
+                /// <para>The bundle ID. This field is applicable only to macOS processes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.aliyun.security.sase</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BundleId { get; set; }
 
                 /// <summary>
-                /// <para>The command line parameters for starting the process.</para>
+                /// <para>The command-line arguments used to start the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>--start-minimized</para>

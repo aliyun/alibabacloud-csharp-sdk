@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApprovalDetail { get; set; }
 
             /// <summary>
-            /// <para>The ID of the approval instance.</para>
+            /// <para>The approval instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approval-872b5e911b35****</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <summary>
                 /// <para>The status of the approval progress node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Pending</b>: Pending approval.</description></item>
+                /// <item><description><b>Pending</b>: Pending.</description></item>
                 /// <item><description><b>Approved</b>: Approved.</description></item>
                 /// <item><description><b>Rejected</b>: Rejected.</description></item>
                 /// <item><description><b>Revoked</b>: Revoked.</description></item>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreatorUsername { get; set; }
 
             /// <summary>
-            /// <para>The effective status of the report. If the approval status is not Approved, an empty string is returned. Valid values:</para>
+            /// <para>The validity status of the report. If the approval status is not Approved, an empty string is returned. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Enabled: Valid.</description></item>
             /// <item><description>Expired: Invalid or expired.</description></item>
@@ -229,8 +229,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The type of the policy associated with the approval instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>DomainBlacklist</b>: Domain name blacklist.</description></item>
-            /// <item><description><b>DomainWhitelist</b>: Domain name whitelist.</description></item>
+            /// <item><description><b>DomainBlacklist</b>: Domain blacklist.</description></item>
+            /// <item><description><b>DomainWhitelist</b>: Domain whitelist.</description></item>
             /// <item><description><b>SoftwareBlock</b>: Software blocking.</description></item>
             /// <item><description><b>DeviceRegistration</b>: Excess registration.</description></item>
             /// <item><description><b>AppUninstall</b>: Endpoint uninstallation.</description></item>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ReportType { get; set; }
 
             /// <summary>
-            /// <para>The content of the template associated with the approval instance.</para>
+            /// <para>The content of the schema associated with the approval instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SchemaContent { get; set; }
 
             /// <summary>
-            /// <para>The ID of the template associated with the approval instance.</para>
+            /// <para>The ID of the schema associated with the approval instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SchemaId { get; set; }
 
             /// <summary>
-            /// <para>The name of the template associated with the approval instance.</para>
+            /// <para>The name of the schema associated with the approval instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Template***</para>
@@ -324,11 +324,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// <para>The status of the approval instance. Valid values:</para>
+            /// <para>The approval instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: Pending approval.</description></item>
+            /// <item><description><b>Pending</b>: Pending.</description></item>
             /// <item><description><b>Approved</b>: Approved.</description></item>
-            /// <item><description><b>Rejected</b>: Denied.</description></item>
+            /// <item><description><b>Rejected</b>: Deny.</description></item>
             /// <item><description><b>Revoked</b>: Revoked.</description></item>
             /// <item><description><b>Expired</b>: Expired.</description></item>
             /// <item><description><b>Deleted</b>: Deleted.</description></item>

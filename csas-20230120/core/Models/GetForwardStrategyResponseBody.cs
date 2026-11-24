@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public GetForwardStrategyResponseBodyForwardStrategy ForwardStrategy { get; set; }
         public class GetForwardStrategyResponseBodyForwardStrategy : TeaModel {
             /// <summary>
-            /// <para>The policy description.</para>
+            /// <para>The description of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>solemn_index</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The destination type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Connector</b>: connector.</description></item>
+            /// <item><description><b>Connector</b>: Connector.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DestinationType { get; set; }
 
             /// <summary>
-            /// <para>The forwarding rule ID.</para>
+            /// <para>The ID of the forwarding rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fs-b87a2f8e863bf02c</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The policy priority. The value 1 indicates the highest priority, and the value 100 indicates the lowest priority.</para>
+            /// <para>The policy priority. A value of 1 indicates the highest priority, and a value of 100 indicates the lowest priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public long? Priority { get; set; }
 
             /// <summary>
-            /// <para>The policy status. Valid values:</para>
+            /// <para>The status of the policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>

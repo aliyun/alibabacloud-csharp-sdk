@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? AllowReport { get; set; }
 
         /// <summary>
-        /// <para>The content displayed in the client interception pop-up window.</para>
+        /// <para>The content displayed in the client block pop-up window.</para>
         /// </summary>
         [NameInMap("BlockContent")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public PAApplicationUnauthorizedAccessConfigBlockContentBlockTextEn BlockTextEn { get; set; }
             public class PAApplicationUnauthorizedAccessConfigBlockContentBlockTextEn : TeaModel {
                 /// <summary>
-                /// <para>The prompt content of the English block page.</para>
+                /// <para>The English prompt message on the block page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>You do not have permission to access this system. If you need to do so, please submit a permission request.</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BrowserAlertContent { get; set; }
 
                 /// <summary>
-                /// <para>The background pattern of the English block page.</para>
+                /// <para>The English background pattern of the block page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://img.alicdn.com/xxx.png">https://img.alicdn.com/xxx.png</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BrowserAlertStyle { get; set; }
 
                 /// <summary>
-                /// <para>The title of the English block page.</para>
+                /// <para>The English title of the block page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>No Permission Access</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string BrowserAlertTitle { get; set; }
 
                 /// <summary>
-                /// <para>The text of the English report approval button.</para>
+                /// <para>The English text on the approval request button.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Report</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public PAApplicationUnauthorizedAccessConfigBlockContentBlockTextZh BlockTextZh { get; set; }
             public class PAApplicationUnauthorizedAccessConfigBlockContentBlockTextZh : TeaModel {
                 /// <summary>
-                /// <para>The prompt content of the block page.</para>
+                /// <para>The prompt message on the block page.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>您暂无权限访问该系统。如有工作需要，请提交权限申请。</para>
+                /// <para>You do not have permission to access this system. If you need access for work purposes, submit an access request</para>
                 /// </summary>
                 [NameInMap("BrowserAlertContent")]
                 [Validation(Required=false)]
@@ -106,17 +106,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>The title of the block page.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>无权限访问</para>
+                /// <para>Access Denied</para>
                 /// </summary>
                 [NameInMap("BrowserAlertTitle")]
                 [Validation(Required=false)]
                 public string BrowserAlertTitle { get; set; }
 
                 /// <summary>
-                /// <para>The text of the report approval button.</para>
+                /// <para>The text on the approval request button.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>前往报备</para>
+                /// <para>Request Access</para>
                 /// </summary>
                 [NameInMap("ReportButtonText")]
                 [Validation(Required=false)]
@@ -129,8 +129,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>Specifies whether the feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled. Users are redirected to an interception page when they access an unauthorized application.</description></item>
-        /// <item><description><b>false</b>: Disabled. An error message is returned by default when users access an unauthorized application.</description></item>
+        /// <item><description><b>true</b>: Enabled. If an application is unauthorized, the user is redirected to the block page.</description></item>
+        /// <item><description><b>false</b>: Disabled. If an application is unauthorized, an error message is returned by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the approval flow associated with the policy.</para>
+        /// <para>The ID of the approval process associated with the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>approval-process-0ee84ac4f9c31bc5</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetSaseUserTagRequest : TeaModel {
         /// <summary>
-        /// <para>The user tag ID. You can obtain this value from the following operations:</para>
+        /// <para>The ID of the user tag. Related operations:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~ListSaseUserTags~~">ListSaseUserTags</a>: Lists user tags.</description></item>
         /// <item><description><a href="~~CreateSaseUserTag~~">CreateSaseUserTag</a>: Creates a user tag.</description></item>

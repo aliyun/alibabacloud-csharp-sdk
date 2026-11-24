@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class RemoveDeviceGroupMatchDevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of terminal device IDs to be removed. At least one ID must be specified, and duplicate values are not allowed.</para>
+        /// <para>The IDs of the terminal devices to remove. Specify at least one ID. Duplicate IDs are not allowed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DevTags")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> DevTags { get; set; }
 
         /// <summary>
-        /// <para>The device label ID.</para>
+        /// <para>The ID of the device label.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

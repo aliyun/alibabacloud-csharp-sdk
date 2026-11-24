@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// <para>The browser access status of the private access application. After you enable this feature, you can access private access applications without a client. Default value: <b>Disabled</b>. Valid values:</para>
+        /// <para>The browser access status of the private access application. After you enable this feature, you can access private access applications in clientless mode. Default value: <b>Disabled</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: Enabled.</description></item>
-        /// <item><description><b>Disabled</b>: Disabled.</description></item>
+        /// <item><description><b>Enabled</b>: enabled.</description></item>
+        /// <item><description><b>Disabled</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The configuration mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Empty string: Default mode.</description></item>
-        /// <item><description>Precise: Precise mode.</description></item>
+        /// <item><description>Empty string: default mode.</description></item>
+        /// <item><description>Precise: precise mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The health check mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OnAccess: Checks upon access without proactive probing.</description></item>
-        /// <item><description>Continuous: Performs continuous checks and proactive probing based on the configurations in HealthCheckConfig.
+        /// <item><description>OnAccess: checks upon access without proactive probing.</description></item>
+        /// <item><description>Continuous: performs continuous checks and proactive probing based on the configurations in HealthCheckConfig.
         /// If this parameter is not specified, the default value is OnAccess. When the application addresses include wildcard domain names or CIDR blocks, or when the number of application addresses exceeds 10, only OnAccess is supported.</description></item>
         /// </list>
         /// 
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The protocol of the private access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: All protocols.</description></item>
+        /// <item><description><b>All</b>: all protocols.</description></item>
         /// <item><description><b>TCP</b></description></item>
         /// <item><description><b>UDP</b></description></item>
         /// </list>
@@ -171,8 +171,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The status of the private access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: Enabled.</description></item>
-        /// <item><description><b>Disabled</b>: Disabled.</description></item>
+        /// <item><description><b>Enabled</b>: enabled.</description></item>
+        /// <item><description><b>Disabled</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateProhibitedSoftwareRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the disabled software.</para>
+        /// <para>The description of the blocked software.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<CreateProhibitedSoftwareRequestLinuxProcesses> LinuxProcesses { get; set; }
         public class CreateProhibitedSoftwareRequestLinuxProcesses : TeaModel {
             /// <summary>
-            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of BundleId and Process. Maximum length: 1024 characters.</para>
+            /// <para>The bundle ID. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.autotest.app</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. Maximum length: 1024 characters.</para>
+            /// <para>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain the specified content are matched. If you leave this parameter empty, the command line is not verified. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--start-minimized</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. Maximum length: 1024 characters.</para>
+            /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\\autotest</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The process name. Maximum length: 1024 characters.</para>
+            /// <para>The process name. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>autotest.exe</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<CreateProhibitedSoftwareRequestMacOSProcesses> MacOSProcesses { get; set; }
         public class CreateProhibitedSoftwareRequestMacOSProcesses : TeaModel {
             /// <summary>
-            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of BundleId and Process. Maximum length: 1024 characters.</para>
+            /// <para>The bundle ID. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.autotest.app</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. Maximum length: 1024 characters.</para>
+            /// <para>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain the specified content are matched. If you leave this parameter empty, the command line is not verified. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--start-minimized</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. Maximum length: 1024 characters.</para>
+            /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\\autotest</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The process name. Maximum length: 1024 characters.</para>
+            /// <para>The process name. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WeChat</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The name of the disabled software.</para>
+        /// <para>The name of the blocked software.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The IDs of custom disabled software tags to associate. Duplicate values are not allowed.</para>
+        /// <para>The IDs of the custom blocked software tags to associate. Duplicate IDs are not allowed.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<CreateProhibitedSoftwareRequestWindowsProcesses> WindowsProcesses { get; set; }
         public class CreateProhibitedSoftwareRequestWindowsProcesses : TeaModel {
             /// <summary>
-            /// <para>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of BundleId and Process. Maximum length: 1024 characters.</para>
+            /// <para>The bundle ID. This parameter is required only for macOS processes. You must specify at least one of the BundleId and Process parameters. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.autotest.update</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. Maximum length: 1024 characters.</para>
+            /// <para>The command-line arguments used to start the process. If you specify this parameter, only processes whose command lines contain the specified content are matched. If you leave this parameter empty, the command line is not verified. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>--start-minimized</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. Maximum length: 1024 characters.</para>
+            /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\\autotest</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The process name. Maximum length: 1024 characters.</para>
+            /// <para>The process name. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>autotest.exe</para>

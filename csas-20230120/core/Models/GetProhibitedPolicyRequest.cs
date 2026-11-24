@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetProhibitedPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The software prohibition policy ID. You can obtain this value from the following operations:</para>
+        /// <para>The ID of the prohibited software policy. You can obtain the value from the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListProhibitedPolicies~~">ListProhibitedPolicies</a>: Lists software prohibition policies.</description></item>
-        /// <item><description><a href="~~CreateProhibitedPolicy~~">CreateProhibitedPolicy</a>: Creates a software prohibition policy.</description></item>
+        /// <item><description><a href="~~ListProhibitedPolicies~~">ListProhibitedPolicies</a>: Lists prohibited software policies.</description></item>
+        /// <item><description><a href="~~CreateProhibitedPolicy~~">CreateProhibitedPolicy</a>: Creates a prohibited software policy.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

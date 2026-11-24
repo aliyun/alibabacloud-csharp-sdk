@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The ID of the terminal device. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user terminal device.</description></item>
+        /// <item><description><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of user terminal devices.</description></item>
         /// <item><description><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries multiple user terminal devices.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

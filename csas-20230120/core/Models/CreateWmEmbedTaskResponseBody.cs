@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public CreateWmEmbedTaskResponseBodyData Data { get; set; }
         public class CreateWmEmbedTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task ID, which is used to query the task execution result.</para>
+            /// <para>The ID of the task. You can use the task ID to query the task execution result later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job:5GfrJYsoaffmCE7Z5bZtjUefzxfd****</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE4FB974-11BC-5453-9BE1-1606A73EACA6</para>

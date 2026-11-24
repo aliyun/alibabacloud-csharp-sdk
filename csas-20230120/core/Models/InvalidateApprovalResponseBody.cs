@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ApprovalId { get; set; }
 
         /// <summary>
-        /// <para>The effective status of the approval. When the invalidation succeeds, the value is fixed as Expired, which indicates that the approval has been invalidated.</para>
+        /// <para>The effective status of the report. If the invalidation succeeds, Expired is returned to indicate that the report is invalidated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Expired</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EffectStatus { get; set; }
 
         /// <summary>
-        /// <para>The approval type. Valid values:</para>
+        /// <para>The report type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ApprovalReport: approval.</description></item>
-        /// <item><description>BackendReport: backend approval.</description></item>
+        /// <item><description>ApprovalReport: approval report.</description></item>
+        /// <item><description>BackendReport: backend report.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

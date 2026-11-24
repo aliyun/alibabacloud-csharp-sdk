@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The user tag ID.</para>
+        /// <para>The ID of the user tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>su-tag-1ae52f66039fa0d4****</para>

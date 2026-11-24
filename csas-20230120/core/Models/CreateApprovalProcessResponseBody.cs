@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public CreateApprovalProcessResponseBodyProcess Process { get; set; }
         public class CreateApprovalProcessResponseBodyProcess : TeaModel {
             /// <summary>
-            /// <para>The list of policies associated with endpoint uninstallation.</para>
+            /// <para>The list of policies associated with application uninstallation.</para>
             /// </summary>
             [NameInMap("AppUninstallPolicies")]
             [Validation(Required=false)]
             public CreateApprovalProcessResponseBodyProcessAppUninstallPolicies AppUninstallPolicies { get; set; }
             public class CreateApprovalProcessResponseBodyProcessAppUninstallPolicies : TeaModel {
                 /// <summary>
-                /// <para>The list of endpoint uninstallation policy IDs.</para>
+                /// <para>The list of application uninstallation policy IDs.</para>
                 /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The description of the approval process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is an approval process</para>
+            /// <para>Process for approving employees\&quot; temporary access to internal network applications</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -166,14 +166,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of policies associated with endpoint hardening.</para>
+            /// </summary>
             [NameInMap("EndpointHardeningPolicies")]
             [Validation(Required=false)]
             public CreateApprovalProcessResponseBodyProcessEndpointHardeningPolicies EndpointHardeningPolicies { get; set; }
             public class CreateApprovalProcessResponseBodyProcessEndpointHardeningPolicies : TeaModel {
+                /// <summary>
+                /// <para>The list of endpoint hardening policy IDs.</para>
+                /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the approval template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>approval-schema-090134f1ebff****</para>
+                /// </summary>
                 [NameInMap("SchemaId")]
                 [Validation(Required=false)]
                 public string SchemaId { get; set; }
@@ -206,14 +218,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of policies associated with internal network access control.</para>
+            /// </summary>
             [NameInMap("PrivateAccessBlockPolicies")]
             [Validation(Required=false)]
             public CreateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies PrivateAccessBlockPolicies { get; set; }
             public class CreateApprovalProcessResponseBodyProcessPrivateAccessBlockPolicies : TeaModel {
+                /// <summary>
+                /// <para>The list of internal network access application IDs.</para>
+                /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the approval template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>approval-schema-090134f1ebff****</para>
+                /// </summary>
                 [NameInMap("SchemaId")]
                 [Validation(Required=false)]
                 public string SchemaId { get; set; }
@@ -234,7 +258,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the approval process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>Internal network access approval process</para>
             /// </summary>
             [NameInMap("ProcessName")]
             [Validation(Required=false)]
@@ -248,7 +272,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public List<List<CreateApprovalProcessResponseBodyProcessProcessNodes>> ProcessNodes { get; set; }
             public class CreateApprovalProcessResponseBodyProcessProcessNodes : TeaModel {
                 /// <summary>
-                /// <para>The approver ID.</para>
+                /// <para>The ID of the approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</para>
@@ -295,14 +319,26 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of policies associated with software hardening.</para>
+            /// </summary>
             [NameInMap("SoftwareHardeningPolicies")]
             [Validation(Required=false)]
             public CreateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies SoftwareHardeningPolicies { get; set; }
             public class CreateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies : TeaModel {
+                /// <summary>
+                /// <para>The list of software hardening policy IDs.</para>
+                /// </summary>
                 [NameInMap("PolicyIds")]
                 [Validation(Required=false)]
                 public List<string> PolicyIds { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the approval template.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>approval-schema-090134f1ebff****</para>
+                /// </summary>
                 [NameInMap("SchemaId")]
                 [Validation(Required=false)]
                 public string SchemaId { get; set; }
