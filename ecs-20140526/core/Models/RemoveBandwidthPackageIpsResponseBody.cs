@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RemoveBandwidthPackageIpsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-42d3-a456-426614174000</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

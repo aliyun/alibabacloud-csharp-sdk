@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateActivationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The value of the activation code. The value is returned only once when you call this operation and cannot be queried afterward. Make sure that you properly save the returned value.</para>
+        /// <para>The activation code. The code is returned only once when the operation is called and cannot be queried later. Therefore, make sure to securely save the return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a-hz0ch3SwhOlE1234+Xo32lAZC****</para>

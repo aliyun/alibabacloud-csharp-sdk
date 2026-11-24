@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>If you set this parameter to <c>Bootable=true</c>, the destination ECS instance must not have a system disk attached.</para>
+        /// <para>If you set Bootable to true, the destination ECS instance must not have a system disk attached.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Default value: false.</para>
         /// <para>When you configure this parameter, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>DeleteWithInstance</c> to <c>false</c> and the ECS instance is locked for security reasons (that is, <c>&quot;LockReason&quot; : &quot;security&quot;</c> is marked in <c>OperationLocks</c>), this property of the disk is ignored and the disk is released when the ECS instance is released.</para>
+        /// <item><description><para>If you set DeleteWithInstance to false and the ECS instance is locked for security reasons (that is, <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c> is returned), this property of the disk is ignored and the disk is released along with the instance when the instance is released.</para>
         /// </description></item>
-        /// <item><description><para>If the destination disk that you want to attach is an <c>elastic ephemeral disk</c>, you must set the <c>DeleteWithInstance</c> parameter to <c>true</c>.</para>
+        /// <item><description><para>If the destination disk you want to attach is an elastic ephemeral disk, you must set DeleteWithInstance to true.</para>
         /// </description></item>
         /// <item><description><para>This parameter cannot be configured for disks with the multi-attach feature enabled.</para>
         /// </description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The device name of the disk.</para>
         /// <remarks>
-        /// <para>This parameter is being deprecated. To improve compatibility, we recommend that you use other parameters to identify the disk.</para>
+        /// <para>This parameter will be deprecated. To improve compatibility, use other parameters to identify the disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Device { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk that you want to attach. The disk (<c>DiskId</c>) and the instance (<c>InstanceId</c>) must be in the same zone.</para>
+        /// <para>The ID of the disk that you want to attach. The disk (DiskId) and the instance (InstanceId) must reside in the same zone.</para>
         /// <remarks>
-        /// <para>You can attach data disks and system disks. For the related constraints, see the operation description section above.</para>
+        /// <para>You can attach both data disks and system disks. For the related constraints, see the operation description section above.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>Currently, only regional Enterprise SSDs (ESSDs) (<c>cloud_regional_disk_auto</c>) support setting this parameter to true.</para>
+        /// <para>Currently, only regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto) support setting this parameter to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,9 +112,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the SSH key pair to bind to a Linux ECS instance when you attach a system disk.</para>
         /// <list type="bullet">
-        /// <item><description><para>Windows Server: SSH key pairs are not supported. Even if you specify this parameter, only the <c>Password</c> configuration is applied.</para>
+        /// <item><description><para>Windows Server: SSH key pairs are not supported. Even if you specify this parameter, only the Password configuration takes effect.</para>
         /// </description></item>
-        /// <item><description><para>Linux: Password-based logon is disabled by default.</para>
+        /// <item><description><para>Linux: Password logon is disabled by default.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -134,12 +134,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The logon password of the instance, which is configured when you attach a system disk. This parameter takes effect only for the administrator and root usernames and does not take effect for other usernames. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The special characters can be:</para>
+        /// <para>The logon password for the instance, which is configured when you attach a system disk. This parameter takes effect only for the administrator and root usernames. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
         /// <pre><c>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
         /// </c></pre>
         /// <para>For Windows instances, the password cannot start with a forward slash (/).</para>
         /// <remarks>
-        /// <para>If you specify the <c>Password</c> parameter, send the request over HTTPS to prevent password leaks.</para>
+        /// <para>If you specify the Password parameter, use HTTPS to send the request to prevent password leaks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

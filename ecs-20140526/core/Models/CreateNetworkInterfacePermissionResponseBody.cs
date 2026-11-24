@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of information composed of the Elastic network interface controller (NIC) permission list.</para>
+        /// <para>The collection of elastic network interface controller (NIC) permissions.</para>
         /// </summary>
         [NameInMap("NetworkInterfacePermission")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Elastic network interface controller (NIC).</para>
+            /// <para>The ID of the Elastic Network Interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp14v2sdd3v8htln****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Elastic network interface controller (NIC) permission.</para>
+            /// <para>The ID of the elastic network interface controller (NIC) permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-perm-bp1cs4lwn56lfb****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfacePermissionId { get; set; }
 
             /// <summary>
-            /// <para>The Elastic network interface controller (NIC) permission.</para>
+            /// <para>The elastic network interface controller (NIC) permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InstanceAttach</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The state of the Elastic network interface controller (NIC) permission. Valid values:</para>
+            /// <para>The state of the elastic network interface controller (NIC) permission. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Pending: The authorization is in progress.</description></item>
             /// <item><description>Granted: The authorization is granted.</description></item>

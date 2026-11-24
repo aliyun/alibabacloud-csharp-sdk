@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignIpv6AddressesRequest : TeaModel {
         /// <summary>
-        /// <para>One or more IPv6 addresses to delete. Valid values of N: 1 to 10.</para>
+        /// <para>The IPv6 addresses to be revoked. Valid values of N: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2001:db8:1234:1a00::***</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv6 prefixes to revoke. Valid values of N: 1 to 10.</para>
+        /// <para>The IPv6 prefixes to be revoked. Valid values of N: 1 to 10.</para>
         /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// <para>The network interface controller (NIC) ID.</para>
+        /// <para>The ID of the elastic network interface controller (NIC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the elastic network interface controller (NIC). You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

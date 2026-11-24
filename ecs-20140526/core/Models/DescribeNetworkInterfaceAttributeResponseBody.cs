@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfaceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Elastic IP Address (EIP) associated with the secondary private IP address of the network interface controller (NIC).</para>
+        /// <para>The Elastic IP Address (EIP) associated with the secondary private IP address of the Elastic Network Interface (ENI).</para>
         /// </summary>
         [NameInMap("AssociatedPublicIp")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The EIP address.</para>
+            /// <para>The EIP.</para>
             /// 
             /// <b>Example:</b>
             /// <para><c>116.62.**.**</c></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not available for public use.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Attachment")]
@@ -49,11 +49,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeNetworkInterfaceAttributeResponseBodyAttachment : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>hide</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("DeviceIndex")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The index of the network card to which the ENI is attached.</para>
+            /// <para>The index of the physical network card to which the ENI is attached.</para>
             /// <list type="bullet">
-            /// <item><description>If the ENI is in the Available state or the index was not specified during attachment, this value is not returned.</description></item>
-            /// <item><description>If the ENI is in the InUse state and the index was specified during attachment, this value indicates the index of the network card to which the ENI is attached.</description></item>
+            /// <item><description>If the ENI is in the Available state or no index was specified during attachment, this value is not returned.</description></item>
+            /// <item><description>If the ENI is in the InUse state and an index was specified during attachment, this value indicates the index of the physical network card to which the ENI is attached.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not available for public use.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("BondInterfaceSpecification")]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeNetworkInterfaceAttributeResponseBodyBondInterfaceSpecification : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -157,10 +157,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The collection of network connectivity tracking configuration information.</para>
-        /// <para>Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</para>
+        /// <para>The network connection tracking configuration information set.</para>
+        /// <para>Read <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a> before using this parameter.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the Attribute input parameter is set to connectionTrackingConfiguration.</para>
+        /// <para>This parameter is returned only when the input parameter <c>Attribute</c> is set to <c>connectionTrackingConfiguration</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
@@ -168,9 +168,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration : TeaModel {
             /// <summary>
-            /// <para>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: an integer from 3 to 15.</para>
+            /// <para>The timeout period for closed and TIME_WAIT TCP connections. Unit: seconds. Valid values: integers from 3 to 15.</para>
             /// <remarks>
-            /// <para>If your ECS instance is used with NLB or CLB, the default timeout period for connections in the <c>TIME_WAIT</c> state is 15 seconds.</para>
+            /// <para>If your ECS instance is used together with NLB or CLB, the default timeout period for connections in the <c>TIME_WAIT</c> state is 15 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for TCP connections in the ESTABLISHED state. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</para>
+            /// <para>The timeout period for established TCP connections. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</para>
             /// 
             /// <b>Example:</b>
             /// <para>910</para>
@@ -191,9 +191,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</para>
+            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</para>
             /// <remarks>
-            /// <para>If your ECS instance is used with NLB or CLB, the default value is 100 seconds.</para>
+            /// <para>If your ECS instance is used together with NLB or CLB, the default value is 100 seconds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The time when the network interface controller (NIC) was created. The time is in ISO 8601 format and displayed in UTC.</para>
+        /// <para>The creation time of the elastic network interface (ENI). The time is displayed in ISO 8601 format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-12-25T12:31:31Z</para>
@@ -216,11 +216,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the ENI is retained when the associated instance is released. Valid values:</para>
+        /// <para>Indicates whether the ENI is retained when the instance is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The ENI is not retained.</para>
+        /// <item><description><para>true: not retained</para>
         /// </description></item>
-        /// <item><description><para>false: The ENI is retained.</para>
+        /// <item><description><para>false: retained</para>
         /// </description></item>
         /// </list>
         /// 
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeleteOnRelease { get; set; }
 
         /// <summary>
-        /// <para>The description of the network interface controller (NIC).</para>
+        /// <para>The description of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -242,19 +242,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available for public use.</para>
         /// </summary>
         [NameInMap("EnhancedNetwork")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork EnhancedNetwork { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the network enhancement feature for the elastic network interface controller (NIC) is enabled.</para>
+            /// </summary>
             [NameInMap("EnableExpress")]
             [Validation(Required=false)]
             public bool? EnableExpress { get; set; }
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not available for use.</para>
+            /// <para>This parameter is not available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -265,7 +268,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableRss { get; set; }
 
             /// <summary>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not available for public use.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -274,10 +277,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public bool? EnableSriov { get; set; }
 
+            /// <summary>
+            /// <para>The number of virtual function features of the Elastic Network Interface (ENI).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("VirtualFunctionQuantity")]
             [Validation(Required=false)]
             public int? VirtualFunctionQuantity { get; set; }
 
+            /// <summary>
+            /// <para>The total number of queues for the virtual function feature of the Elastic Network Interface (ENI).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
             [NameInMap("VirtualFunctionTotalQueueNumber")]
             [Validation(Required=false)]
             public int? VirtualFunctionTotalQueueNumber { get; set; }
@@ -285,9 +300,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance to which the network interface controller (NIC) is attached.</para>
+        /// <para>The ID of the instance to which the Elastic Network Interface (ENI) is attached.</para>
         /// <remarks>
-        /// <para>Network interface controllers (NICs) that are managed and controlled by other Alibaba Cloud services do not return instance IDs.</para>
+        /// <para>The instance ID is not returned for Elastic Network Interfaces (ENIs) that are managed and controlled by other Alibaba Cloud services.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -350,7 +365,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The MAC address of the network interface controller (NIC).</para>
+        /// <para>The MAC address of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:16:3e:12:<b>:</b></para>
@@ -360,7 +375,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MacAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network interface controller (NIC).</para>
+        /// <para>The ID of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp125p95hhdhn3ot****</para>
@@ -370,7 +385,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the network interface controller (NIC).</para>
+        /// <para>The name of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-eni-name</para>
@@ -380,14 +395,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The traffic parameters of the network interface controller (NIC).</para>
+        /// <para>The communication parameters of the Elastic Network Interface (ENI).</para>
         /// </summary>
         [NameInMap("NetworkInterfaceTrafficConfig")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig NetworkInterfaceTrafficConfig { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig : TeaModel {
             /// <summary>
-            /// <para>The communication mode of the network interface controller (NIC).</para>
+            /// <para>The communication mode of the Elastic Network Interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>HighPerformance</para>
@@ -397,7 +412,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceTrafficMode { get; set; }
 
             /// <summary>
-            /// <para>The number of queues for the network interface controller (NIC).</para>
+            /// <para>The number of queues of the Elastic Network Interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -407,7 +422,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueueNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of RDMA queue pairs.</para>
+            /// <para>The number of queues of the RDMA network interface.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -419,13 +434,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The communication mode of the network interface controller (NIC). Valid values:</para>
+        /// <para>The communication mode of the Elastic Network Interface (ENI). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: TCP communication mode is used.</description></item>
-        /// <item><description>HighPerformance: Elastic RDMA Interface (ERI) is enabled and RDMA communication mode is used.</description></item>
+        /// <item><description>Standard: TCP communication mode.</description></item>
+        /// <item><description>HighPerformance: Remote Direct Memory Access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The HighPerformance parameter value is supported only by the c7re RDMA enhanced instance family.</para>
+        /// <para>The HighPerformance parameter value is supported only by the c7re RDMA-enhanced instance family.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -436,7 +451,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceTrafficMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that owns the network interface controller (NIC).</para>
+        /// <para>The ID of the account to which the Elastic Network Interface (ENI) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -446,7 +461,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the network interface controller (NIC).</para>
+        /// <para>The private IP address of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>10.1.**.**</c></para>
@@ -490,21 +505,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The QoS rate limit settings.</para>
+        /// <para>The QoS throttling settings.</para>
         /// </summary>
         [NameInMap("QoSConfig")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig QoSConfig { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyQoSConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether QoS rate limiting is enabled.</para>
+            /// <para>Indicates whether QoS throttling is enabled.</para>
             /// </summary>
             [NameInMap("EnableQoS")]
             [Validation(Required=false)]
             public bool? EnableQoS { get; set; }
 
             /// <summary>
-            /// <para>The QoS rate limit settings.</para>
+            /// <para>The QoS throttling settings.</para>
             /// </summary>
             [NameInMap("QoS")]
             [Validation(Required=false)]
@@ -541,7 +556,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? ConcurrentConnections { get; set; }
 
                 /// <summary>
-                /// <para>The inbound internal network packet forwarding rate.</para>
+                /// <para>The inbound internal packet forwarding rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
@@ -551,7 +566,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? PpsRx { get; set; }
 
                 /// <summary>
-                /// <para>The outbound internal network packet forwarding rate.</para>
+                /// <para>The outbound internal packet forwarding rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
@@ -565,20 +580,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of queues for the Elastic Network Interface (ENI).</para>
+        /// <para>The number of queues of the Elastic Network Interface (ENI).</para>
         /// <list type="bullet">
-        /// <item><description><para>If the ENI is a primary network interface controller (NIC): the default number of queues for the primary NIC that the instance type allows is returned.</para>
+        /// <item><description><para>If the Elastic Network Interface (ENI) is a primary ENI: returns the default number of queues for the primary ENI of the instance type.</para>
         /// </description></item>
-        /// <item><description><para>If the ENI is a secondary ENI:</para>
+        /// <item><description><para>If the Elastic Network Interface (ENI) is a secondary ENI:</para>
         /// <list type="bullet">
         /// <item><description>If the secondary ENI is in the InUse state:<list type="bullet">
-        /// <item><description>If the number of queues for the secondary ENI has not been modified, the default number of queues for the secondary ENI that the instance type allows is returned.</description></item>
-        /// <item><description>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</description></item>
+        /// <item><description>If the number of queues of the secondary ENI has not been modified, the default number of queues for the secondary ENI of the instance type is returned.</description></item>
+        /// <item><description>If the number of queues of the secondary ENI has been modified, the modified number of queues is returned.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>If the secondary ENI is in the active (Available) state:<list type="bullet">
-        /// <item><description>If the number of queues for the secondary ENI has not been modified, an empty value is returned.</description></item>
-        /// <item><description>If the number of queues for the secondary ENI has been modified, the modified number of queues is returned.</description></item>
+        /// <item><description>If the secondary ENI is in the Available state:<list type="bullet">
+        /// <item><description>If the number of queues of the secondary ENI has not been modified, an empty value is returned.</description></item>
+        /// <item><description>If the number of queues of the secondary ENI has been modified, the modified number of queues is returned.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -594,7 +609,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -615,7 +630,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -638,7 +653,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The Virtual Network Operator (VNO) ID associated with the network interface controller (NIC).</para>
+        /// <para>The ID of the Virtual Network Operator (VNO) corresponding to the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678910</para>
@@ -648,7 +663,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ServiceID { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</para>
+        /// <para>Indicates whether the user of the Elastic Network Interface (ENI) is a cloud service or a VNO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -659,7 +674,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not available for public use.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SlaveInterfaceSpecification")]
@@ -668,7 +683,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeNetworkInterfaceAttributeResponseBodySlaveInterfaceSpecification : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -680,7 +695,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -692,7 +707,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in invitational preview and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -705,7 +720,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available for public use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -715,15 +730,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? SourceDestCheck { get; set; }
 
         /// <summary>
-        /// <para>The status of the network interface controller (NIC). Valid values:</para>
+        /// <para>The status of the Elastic Network Interface (ENI). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Available: active.</description></item>
-        /// <item><description>Attaching: being attached.</description></item>
+        /// <item><description>Attaching: attaching.</description></item>
         /// <item><description>InUse: in use.</description></item>
-        /// <item><description>Detaching: being detached.</description></item>
-        /// <item><description>Deleting: being deleted.</description></item>
+        /// <item><description>Detaching: detaching.</description></item>
+        /// <item><description>Deleting: deleting.</description></item>
         /// </list>
-        /// <para>Default value: empty, which indicates that network interface controllers (NICs) in all states are queried.</para>
+        /// <para>Default value: null, which indicates that all states are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -754,7 +769,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -765,10 +780,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TcpOptionAddressEnabled { get; set; }
 
         /// <summary>
-        /// <para>The type of the Elastic Network Interface (ENI). Valid values:</para>
+        /// <para>The Elastic Network Interface (ENI) type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Primary: primary network interface controller (NIC).</description></item>
-        /// <item><description>Secondary: secondary Elastic Network Interface (ENI).</description></item>
+        /// <item><description>Primary: primary ENI.</description></item>
+        /// <item><description>Secondary: secondary ENI.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -779,7 +794,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which the network interface controller (NIC) belongs.</para>
+        /// <para>The ID of the vSwitch to which the Elastic Network Interface (ENI) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1s5fnvk4gn2tws0****</para>
@@ -789,7 +804,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the network interface controller (NIC) belongs.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the Elastic Network Interface (ENI) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp67acfmxazb4p****</para>

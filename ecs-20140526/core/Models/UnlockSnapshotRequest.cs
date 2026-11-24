@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnlockSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5EC38E7D-389F-1925-ABE2-D7925A8F****</para>
@@ -20,11 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run without executing the actual request. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the check fails, an error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false: performs no dry run and directly executes the request if the check succeeds.
-        /// Default value: false.</description></item>
+        /// <item><description>true: performs only a dry run. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the check fails, the system returns an error. If the check succeeds, the system returns the error code DryRunOperation. </description></item>
+        /// <item><description>false: sends a normal request and executes it after the check succeeds. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

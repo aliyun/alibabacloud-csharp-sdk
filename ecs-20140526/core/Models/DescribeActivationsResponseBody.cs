@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeActivationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The activation codes and their usage information.</para>
+        /// <para>The collection of activation codes and their usage information.</para>
         /// </summary>
         [NameInMap("ActivationList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time follows the ISO 8601 standard and is displayed in UTC.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T06:00:00Z</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tag information of the managed instance activation code.</para>
+            /// <para>The tag information of the activation code for the managed instance.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeActivationsResponseBodyActivationListTags> Tags { get; set; }
             public class DescribeActivationsResponseBodyActivationListTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the managed instance activation code.</para>
+                /// <para>The tag key of the activation code for the managed instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>owner</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the managed instance activation code.</para>
+                /// <para>The tag value of the activation code for the managed instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The query token returned in the current response.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries returned per page during paging in a paged query.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -198,9 +198,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that meet the conditional query criteria.</para>
+        /// <para>The total number of records that meet the query conditions.</para>
         /// <remarks>
-        /// <para>When you perform paging in a paged query by using the MaxResults and NextToken parameters, the returned TotalCount value is meaningless.</para>
+        /// <para>When you use the MaxResults and NextToken parameters for pagination, the returned TotalCount value is meaningless.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

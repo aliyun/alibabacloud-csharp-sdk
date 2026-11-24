@@ -20,9 +20,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ActivationId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the managed instance is connected. Valid values:</para>
-        /// <para>true: The managed instance is connected. You can use Cloud Assistant to manage the managed instance.</para>
-        /// <para>false: The managed instance is not connected. The server may be stopped or the Cloud Assistant Agent is not properly installed.</para>
+        /// <para>Indicates whether the managed instance is connected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The managed instance is connected. You can use Cloud Assistant to manage the managed instance.</para>
+        /// </description></item>
+        /// <item><description><para>false: The managed instance is not connected. The server may be stopped or the Cloud Assistant Agent is not properly installed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The ID of the managed instance. Valid values of N: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mi-hz018jrc1o0****</para>
+        /// <para>[&quot;mi-hz018jrc1o0****&quot;]</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -74,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description>If the MachineId and ForceResult parameters are specified during registration, Cloud Assistant generates a fixed managed instance ID for the MachineId.</description></item>
         /// <item><description>If the MachineId parameter is not explicitly specified, Cloud Assistant automatically generates a MachineId value based on the hardware information of the machine.</description></item>
-        /// <item><description>Recommended: Explicitly specify the MachineId and ForceResult parameters to mark the mapping between the managed instance and the on-premises machine.</description></item>
+        /// <item><description>Recommendation: Explicitly specify the MachineId and ForceResult parameters to mark the mapping between the managed instance and the on-premises machine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MachineId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page during paging.</para>
+        /// <para>The maximum number of entries per page during paging.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -131,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults to perform a paged query.</para>
+        /// <para>This parameter will be deprecated. Use NextToken and MaxResults to perform paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults to perform a paged query.</para>
+        /// <para>This parameter will be deprecated. Use NextToken and MaxResults to perform paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), Hong Kong (China), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</para>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query region IDs and other information.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view region IDs and other information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -192,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeManagedInstancesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count for that tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count for resources attached to multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
+            /// <para>If you use a single tag to filter resources, the number of returned resources cannot exceed 1,000. If you use multiple tags to filter resources, the number of returned resources that have multiple tags attached cannot exceed 1,000. If the number of resources exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>

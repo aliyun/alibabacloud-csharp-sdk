@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of rows per page for paging.</para>
+            /// <para>The number of rows per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The total number of commands.</para>
             /// <remarks>
-            /// <para>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</para>
+            /// <para>If you use the MaxResults and NextToken parameters for a paging query, the returned TotalCount value is meaningless.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

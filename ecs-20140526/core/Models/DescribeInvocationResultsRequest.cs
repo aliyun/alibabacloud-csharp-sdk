@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The encoding method for the <c>CommandContent</c> and <c>Output</c> fields in the response. Valid values:</para>
+        /// <para>The encoding format of the <c>CommandContent</c> and <c>Output</c> fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: Returns the original command content and output information.</description></item>
-        /// <item><description>Base64: Returns the Base64-encoded command content and output information.
-        /// Default value: Base64.</description></item>
+        /// <item><description>PlainText: Returns the original command content and output.</description></item>
+        /// <item><description>Base64: Returns the Base64-encoded command content and output.</description></item>
         /// </list>
+        /// <para>Default value: Base64.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PlainText</para>
@@ -35,12 +35,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the history records of commands that execute on a schedule. Valid values:</para>
+        /// <para>Specifies whether to return the historical records of scheduled command executions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Returns the results of commands that execute on a schedule. If this parameter is set to true, the InvokeId parameter cannot be empty and must be the execution ID of a scheduled command (RepeatMode is Period) or a command that runs after each system startup (RepeatMode is EveryReboot).</description></item>
-        /// <item><description>false: Does not return the history records.
-        /// Default value: false.</description></item>
+        /// <item><description>true: Returns the results of scheduled command executions. If this parameter is set to true, the InvokeId parameter cannot be empty and must be the execution ID of a scheduled command (RepeatMode is Period) or a command that runs on every system startup (RepeatMode is EveryReboot).</description></item>
+        /// <item><description>false: Does not return the historical records.</description></item>
         /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The execution ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the InvokeId value.</para>
+        /// <para>The execution ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-hz0jdfwd9f****</para>
@@ -79,12 +79,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description>Finished: The command is completed.<list type="bullet">
         /// <item><description>Scheduled execution: The command process cannot be in the Finished state.</description></item>
-        /// <item><description>One-time execution: The command is completed on all instances, or the command process is manually stopped on some instances and completed on the remaining instances.</description></item>
+        /// <item><description>One-time execution: The command is completed on all instances, or the command process is manually stopped on some instances and completed on all other instances.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Success:<list type="bullet">
         /// <item><description>One-time execution: The command is completed and the exit code is 0.</description></item>
-        /// <item><description>Scheduled execution: The last execution was successful with an exit code of 0, and the specified execution time has ended.</description></item>
+        /// <item><description>Scheduled execution: The last execution was successful, the exit code was 0, and the specified execution time has ended.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Failed: The execution failed.<list type="bullet">
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description>PartialFailed: The execution partially failed.<list type="bullet">
         /// <item><description>Scheduled execution: The command process cannot be in the PartialFailed state.</description></item>
-        /// <item><description>One-time execution: The command process failed on some instances, so the overall execution status is PartialFailed.</description></item>
+        /// <item><description>One-time execution: The command process failed on some instances. The overall execution status is PartialFailed.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Stopped: The command execution is stopped.</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeRecordStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults to perform paging queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will soon be deprecated. We recommend that you use NextToken and MaxResults to perform paging queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the command execution belongs. If you specify this parameter, you must specify ResourceGroupId when you run the command. This allows you to filter the corresponding command execution results.</para>
+        /// <para>The ID of the resource group to which the command execution belongs. If you specify this parameter, you must also specify ResourceGroupId when you run the command. This allows you to filter the corresponding command execution results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -199,9 +199,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeInvocationResultsRequestTag> Tag { get; set; }
         public class DescribeInvocationResultsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the command that you execute. Valid values of N: 1 to 20. This parameter cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count under the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
-            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the command to execute. Valid values of N: 1 to 20. The value cannot be an empty string.</para>
+            /// <para>If you use a single tag to filter resources, the resource count under this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have multiple tags attached cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -211,8 +211,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the command execution. Valid values of N: 1 to 20. This parameter can be an empty string.
-            /// The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the command execution. Valid values of N: 1 to 20. The value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the automatic snapshot policy.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify only one of AutoSnapshotPolicyId and DiskId.</description></item>
+        /// <item><description>You can specify only one of the AutoSnapshotPolicyId and DiskId parameters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The cloud disk ID.</para>
+        /// <para>The ID of the cloud disk.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify only one of AutoSnapshotPolicyId and DiskId.</description></item>
+        /// <item><description>You can specify only one of the AutoSnapshotPolicyId and DiskId parameters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging queries. Maximum value: 100.</para>
+        /// <para>The number of entries per page for a paged query. The maximum paging value is 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>When no value is set or the value is set to less than 10, the default value is 10.</description></item>
-        /// <item><description>When the value is set to greater than 100, the default value is 100.</description></item>
+        /// <item><description>If you do not specify Settings or the Settings value is less than 10, the default value is 10.</description></item>
+        /// <item><description>If the Settings value is greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</para>
+        /// <para>The query token. The value is the <c>NextToken</c> parameter value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the automatic snapshot policy. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the automatic snapshot policy. You can call the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describeregions">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

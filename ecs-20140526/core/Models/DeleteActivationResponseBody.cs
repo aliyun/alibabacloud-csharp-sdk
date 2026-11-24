@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteActivationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the activation code and its usage.</para>
+        /// <para>The activation code and its usage information.</para>
         /// </summary>
         [NameInMap("Activation")]
         [Validation(Required=false)]
         public DeleteActivationResponseBodyActivation Activation { get; set; }
         public class DeleteActivationResponseBodyActivation : TeaModel {
             /// <summary>
-            /// <para>The activation code ID.</para>
+            /// <para>The ID of the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ECEEE12-56F1-4FBC-9AB1-890F1234****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// <para>The time when the activation code was created. The time is displayed in ISO 8601 format in UTC.</para>
+            /// <para>The time when the activation code was created. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T06:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of times that the activation code can be used to register managed instances.</para>
+            /// <para>The maximum number of managed instances that can be registered by using the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of hosts that are allowed to use the activation code.</para>
+            /// <para>The IP address range of the hosts that are allowed to use the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0/0</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? CoolOffPeriod { get; set; }
 
             /// <summary>
-            /// <para>The time when the cool-off period in compliance mode ends. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The end time of the cool-off period in compliance mode. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format based on the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-15T13:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CoolOffPeriodExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the snapshot was locked. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The lock time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format based on the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-15T10:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? LockDuration { get; set; }
 
             /// <summary>
-            /// <para>The time when the lock duration starts. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. </para>
+            /// <para>The start time of the lock duration. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format based on the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used. </para>
             /// <para>If you lock a snapshot that is in the progressing state, the lock duration is calculated only after the snapshot enters the accomplished state.</para>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LockDurationStartTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the lock expires. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The lock expiration time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format based on the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard. UTC+0 is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16T10:00:00Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The lock mode. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>compliance: the snapshot is locked in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When you lock a snapshot in compliance mode, you can optionally specify a cool-off period.</description></item>
+            /// <item><description>compliance: Locks the snapshot in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When you lock a snapshot in compliance mode, you can optionally specify a cool-off period.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The lock status. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>compliance-cooloff: the snapshot is locked in compliance mode and is still in the cool-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. </description></item>
-            /// <item><description>compliance: the snapshot is locked in compliance mode and the cool-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </description></item>
-            /// <item><description>expired: the snapshot was locked, but the lock duration has ended and the lock has expired. The snapshot is not locked and can be deleted.</description></item>
+            /// <item><description>compliance-cooloff: The snapshot is locked in compliance mode and is still in the cool-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. </description></item>
+            /// <item><description>compliance: The snapshot is locked in compliance mode and the cool-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </description></item>
+            /// <item><description>expired: The snapshot was locked, but the lock duration has ended and the lock has expired. The snapshot is not locked and can be deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

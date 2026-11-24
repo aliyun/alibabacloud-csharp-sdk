@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable performance bursting for the new cloud disk. Valid values:</para>
+        /// <para>Specifies whether to enable the performance burst feature for the new disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables performance bursting.</description></item>
-        /// <item><description>false: disables performance bursting.<remarks>
-        /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPLs</a>.</para>
+        /// <item><description>true: enables the feature.</description></item>
+        /// <item><description>false: disables the feature.<remarks>
+        /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter only supports ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter only supports ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -84,18 +84,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The category of the new cloud disk. Valid values:</para>
+        /// <para>The destination zone of the new disk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-a</para>
+        /// </summary>
+        [NameInMap("DestinationZoneId")]
+        [Validation(Required=false)]
+        public string DestinationZoneId { get; set; }
+
+        /// <summary>
+        /// <para>The type of the new disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_essd: ESSD.</description></item>
-        /// <item><description>cloud_auto: ESSD AutoPL.</description></item>
-        /// <item><description>cloud_essd_entry: ESSD Entry.</description></item>
-        /// <item><description>cloud_regional_disk_auto: zone-redundant ESSD.</description></item>
+        /// <item><description>cloud_essd: standard SSD.</description></item>
+        /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
+        /// <item><description>cloud_essd_entry: ESSD Entry disk.</description></item>
+        /// <item><description>cloud_regional_disk_auto: zone-redundant enterprise SSD.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Limits on cloud disk categories for cloning</para>
+        /// <para>Disk type restrictions for cloud disk cloning:</para>
         /// <list type="bullet">
-        /// <item><description>Non-zone-redundant cloud disks can only be cloned to non-zone-redundant types.</description></item>
-        /// <item><description>Zone-redundant cloud disks can only be cloned to zone-redundant types.</description></item>
+        /// <item><description>A non-zone-redundant cloud disk can only be cloned to a non-zone-redundant type.</description></item>
+        /// <item><description>A zone-redundant cloud disk can only be cloned to a zone-redundant type.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -108,8 +118,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud disk. The name must be 2 to 128 characters in length and can contain letters in the Unicode letter category (including English and Chinese characters) and ASCII digits (0-9). It can contain colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter in the Unicode letter category.</para>
-        /// <para>Default value: empty.</para>
+        /// <para>The name of the disk. The name must be 2 to 128 characters in length. It can contain letters in the Unicode Letter category (including English and Chinese characters) and ASCII digits (0 to 9). It can also contain colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter in the Unicode Letter category.</para>
+        /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyDiskName</para>
@@ -119,10 +129,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only perform a dry run for this request. Valid values:</para>
+        /// <para>Specifies whether to only perform a dry run for the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: sends a check request and does not perform the actual operation. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false (default): sends a Normal request. If the check succeeds, a 2XX HTTP status code is returned and the actual operation is performed.</description></item>
+        /// <item><description>true: sends a check request and does not perform the actual operation. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false (default): sends a normal request. After the check succeeds, the 2XX HTTP status code is returned and the actual operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,10 +143,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the new cloud disk is encrypted. Valid values:</para>
+        /// <para>Specifies whether the new disk is an encrypted cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The cloud disk is encrypted.</description></item>
-        /// <item><description>false: The cloud disk is not encrypted.</description></item>
+        /// <item><description>true: yes.</description></item>
+        /// <item><description>false: no.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -148,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The KMS key ID used by the new cloud disk.</para>
+        /// <para>The KMS key ID used by the new disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key-szz67b2f696f4wh9yeg5d</para>
@@ -158,10 +168,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the multi-attach feature for the new cloud disk. Valid values:</para>
+        /// <para>Specifies whether to enable the multi-attach attribute for the new disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Disabled: disables the feature.</description></item>
-        /// <item><description>Enabled: enables the feature. Only ESSDs support this value.</description></item>
+        /// <item><description>Disabled: disables the attribute.</description></item>
+        /// <item><description>Enabled: enables the attribute. Currently, only standard SSDs support the Settings of <c>Enabled</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -177,17 +187,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The performance level settings of the cloud disk when you create an ESSD. Valid values:</para>
+        /// <para>The Settings of the performance level for a standard SSD. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-        /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-        /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-        /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+        /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+        /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
+        /// <item><description>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</description></item>
+        /// <item><description>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</description></item>
         /// </list>
         /// <remarks>
         /// <para>If DiskCategory is set to cloud_essd, the PerformanceLevel parameter is required.</para>
         /// </remarks>
-        /// <para>For more information about how to select the performance level of an ESSD, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD standard SSDs</a>.</para>
+        /// <para>For more information about how to select the performance level of an enterprise SSD, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSDs</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -197,14 +207,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The provisioned read and write IOPS for a single ESSD AutoPL. Valid values:</para>
+        /// <para>The provisioned read and write IOPS of the ESSD AutoPL disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>If the capacity is less than or equal to 3 GiB, provisioned performance is not supported.</description></item>
-        /// <item><description>If the capacity is greater than or equal to 4 GiB, the valid values are 0 to the minimum of (1,000 IOPS/GiB × Capacity - Baseline IOPS) and 50,000.</description></item>
+        /// <item><description>If the capacity is greater than or equal to 4 GiB, the valid values are 0 to min{(1,000 IOPS/GiB × Capacity - Baseline IOPS), 50,000}.</description></item>
         /// </list>
-        /// <para>Baseline performance = the maximum of the minimum of (1,800 + 50 × Capacity) and 50,000, and 3,000.</para>
+        /// <para>Baseline performance = max{min{1,800 + 50 × Capacity, 50,000}, 3,000}.</para>
         /// <remarks>
-        /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPLs</a>.</para>
+        /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -213,6 +223,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ProvisionedIops")]
         [Validation(Required=false)]
         public long? ProvisionedIops { get; set; }
+
+        /// <summary>
+        /// <para>The access mode of the cloud disk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ReadOnly</para>
+        /// </summary>
+        [NameInMap("ReadWriteMode")]
+        [Validation(Required=false)]
+        public string ReadWriteMode { get; set; }
 
         /// <summary>
         /// <para>The region ID. You can call the <a href="https://www.alibabacloud.com/help/en/ecs/api-regions-describeregions">DescribeRegions</a> operation to query the most recent region list.</para>
@@ -226,7 +246,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the cloud disk belongs.</para>
+        /// <para>The ID of the resource group to which the disk belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp199lyny9b3****</para>
@@ -240,9 +260,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the new cloud disk. Unit: GiB. You must specify a value for this parameter. Valid values:</para>
+        /// <para>The capacity of the new disk. Unit: GiB. You must specify this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_essd: The valid values vary based on the performance level.<list type="bullet">
+        /// <item><description>cloud_essd: The valid values vary by performance level.<list type="bullet">
         /// <item><description>PL0: 1 to 65,536.</description></item>
         /// <item><description>PL1: 20 to 65,536.</description></item>
         /// <item><description>PL2: 461 to 65,536.</description></item>
@@ -263,7 +283,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source cloud disk.</para>
+        /// <para>The ID of the source disk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -274,14 +294,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SourceDiskId { get; set; }
 
         /// <summary>
-        /// <para>The list of tag information for the cloud disk.</para>
+        /// <para>The list of tag information for the disk.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CloneDisksRequestTag> Tag { get; set; }
         public class CloneDisksRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the cloud disk. Valid values of N: 1 to 20. If you specify Tag.N.Key, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag key of the disk. Valid values of N: 1 to 20. If you specify Tag.N.Key, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -291,7 +311,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the cloud disk. Valid values of N: 1 to 20. If you specify Tag.N.Value, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value of the disk. Valid values of N: 1 to 20. If you specify Tag.N.Value, it can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

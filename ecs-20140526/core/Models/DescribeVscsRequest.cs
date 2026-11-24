@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token returned for the current request.</para>
+        /// <para>The query token returned by this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000. Note: Filtering by the default resource group is not supported.</para>
+        /// <para>The ID of the resource group to which the instance belongs. If you use this parameter to filter resources, the resource count cannot exceed 1,000. Note: You cannot filter resources by the default resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -77,16 +77,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the VSCs to be queried. If you do not specify this parameter, VSCs in all states are returned. Valid values:</para>
+        /// <para>The status of the VSCs to query. If you do not specify this parameter, VSCs in all states are returned. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>In_use: In use.</description></item>
-        /// <item><description>Attaching: Attaching.</description></item>
-        /// <item><description>Detaching: Detaching.</description></item>
+        /// <item><description>Attaching: Being attached.</description></item>
+        /// <item><description>Detaching: Being detached.</description></item>
         /// <item><description>AttachFailed: Attachment failed.</description></item>
         /// <item><description>DetachFailed: Detachment failed.</description></item>
-        /// <item><description>All (default): All states.</description></item>
+        /// <item><description>All: All states.
+        /// Default value: All.</description></item>
         /// </list>
-        /// <para>Default value: All.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -96,16 +96,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVscsRequestTag> Tag { get; set; }
         public class DescribeVscsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the command. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources to which you attach multiple tags at the same time cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
-            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the command. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. If you use a single tag to filter resources, the resource count cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources. The tag key can be up to 64 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Environment</para>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. Valid values of N: 1 to 20. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -127,8 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The IDs of the VSCs to be queried.</para>
-        /// <para>We recommend that you specify no more than 100 VSC IDs.</para>
+        /// <para>The IDs of the VSCs to query. Specify up to 100 VSC IDs.</para>
         /// </summary>
         [NameInMap("VscIds")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticReportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query token returned for the current call.</para>
+        /// <para>The query token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

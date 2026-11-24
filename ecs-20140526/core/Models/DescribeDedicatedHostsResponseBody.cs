@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The paging token returned by this invoke. When you use MaxResults and NextToken for paged query, and this return value is empty, it indicates that no more data is returned.</para>
+        /// <para>The pagination token returned by the current call. If you use MaxResults and NextToken for pagination and this value is empty, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

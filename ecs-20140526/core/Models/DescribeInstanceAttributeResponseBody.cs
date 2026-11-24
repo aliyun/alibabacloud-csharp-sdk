@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the cluster to which the instance belongs.</para>
         /// <remarks>
-        /// <para><b>[Deprecated]</b> This parameter is about to be deprecated. To ensure compatibility, use other parameters instead.</para>
+        /// <para>This parameter will be deprecated. To improve compatibility, use other parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The binding information of the elastic IP address (EIP).</para>
+        /// <para>The Elastic IP Address (EIP) information.</para>
         /// </summary>
         [NameInMap("EipAddress")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The public bandwidth limit of the EIP. Unit: Mbit/s.</para>
+            /// <para>The Internet bandwidth limit of the EIP. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>In the <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidth values are the maximum bandwidth values and are not guaranteed. When resource contention occurs, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+            /// <para>In the <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidth values are upper limits and are not guaranteed. During resource contention, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the jumbo frame feature is enabled for the ECS instance. Valid values:</para>
+        /// <para>Indicates whether the jumbo frame feature is enabled for the ECS instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: The feature is enabled.</para>
         /// </description></item>
@@ -169,11 +169,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? EnableJumboFrame { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether VPC network traffic encryption is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether VPC network traffic encryption is enabled for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.<remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <item><description>true: The feature is enabled.</description></item>
+        /// <item><description>false: The feature is disabled.<remarks>
+        /// <para>This parameter is in invitational preview and is not available for public use.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>vpc: VPC.</description></item>
+        /// <item><description>vpc: Virtual Private Cloud (VPC).</description></item>
         /// <item><description>classic: classic network. The classic network is retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</description></item>
         /// </list>
         /// 
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>In the <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidth values are the maximum bandwidth values and are not guaranteed. When resource contention occurs, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// <para>In the <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidth values are upper limits and are not guaranteed. During resource contention, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance is I/O optimized. Valid values:</para>
+        /// <para>Indicates whether the instance is I/O optimized. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>optimized: The instance is I/O optimized.</para>
         /// </description></item>
@@ -348,9 +348,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The network-related attributes.</para>
-        /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
-        /// </remarks>
         /// </summary>
         [NameInMap("NetworkOptions")]
         [Validation(Required=false)]
@@ -358,7 +355,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeInstanceAttributeResponseBodyNetworkOptions : TeaModel {
             /// <summary>
             /// <para>The bandwidth weight.</para>
-            /// <para>The supported values vary based on the instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to query the bandwidth weight values supported by the current instance type.</para>
+            /// <para>The supported values vary by instance type. You can call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation to query the supported bandwidth weight values for the current instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Vpc-L1</para>
@@ -368,7 +365,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string BandwidthWeighting { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the jumbo frame feature is enabled for the instance. Valid values:</para>
+            /// <para>Indicates whether the jumbo frame feature is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: The feature is enabled.</para>
             /// </description></item>
@@ -376,9 +373,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </description></item>
             /// </list>
             /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</para>
-            /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -388,13 +382,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableJumboFrame { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether VPC network traffic encryption is enabled for the instance. Valid values:</para>
+            /// <para>Indicates whether VPC network traffic encryption is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Disabled.<remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
-            /// </remarks>
-            /// </description></item>
+            /// <item><description>true: The feature is enabled.</description></item>
+            /// <item><description>false: The feature is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -467,7 +458,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceAttributeResponseBodySecurityOptions SecurityOptions { get; set; }
         public class DescribeInstanceAttributeResponseBodySecurityOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether UEFI Secure Boot is enabled.</para>
+            /// <para>Indicates whether UEFI Secure Boot is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableSecureBoot")]
             [Validation(Required=false)]
@@ -491,7 +485,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Pending: The instance is being created.</description></item>
         /// <item><description>Running: The instance is running.</description></item>
         /// <item><description>Starting: The instance is starting.</description></item>
-        /// <item><description>Stopping: The instance is stopping.</description></item>
+        /// <item><description>Stopping: The instance is being stopped.</description></item>
         /// <item><description>Stopped: The instance is stopped.</description></item>
         /// </list>
         /// 
@@ -503,10 +497,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance continues to be billed after it is stopped. Valid values:</para>
+        /// <para>Indicates whether the instance continues to be billed after it is stopped. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>KeepCharging: The instance continues to be billed after it is stopped, and inventory resources are reserved.</description></item>
-        /// <item><description>StopCharging: The instance is not billed after it is stopped. After the instance is stopped, resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on the resource inventory in the current region.</description></item>
+        /// <item><description>StopCharging: The instance is not billed after it is stopped. After the instance is stopped, resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on the availability of resources in the current region.</description></item>
         /// <item><description>Not-applicable: The instance does not support the economical mode.</description></item>
         /// </list>
         /// 
@@ -520,7 +514,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The VLAN ID of the instance.</para>
         /// <remarks>
-        /// <para><b>[Deprecated]</b> This parameter is about to be deprecated. To ensure compatibility, use other parameters instead.</para>
+        /// <para>This parameter will be deprecated. To improve compatibility, use other parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -538,7 +532,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceAttributeResponseBodyVpcAttributes VpcAttributes { get; set; }
         public class DescribeInstanceAttributeResponseBodyVpcAttributes : TeaModel {
             /// <summary>
-            /// <para>The IP address of the cloud service, which is used for network connectivity between cloud services in the VPC.</para>
+            /// <para>The IP address of the cloud service, which is used for network communication between cloud services in the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para><c>172.17.**.**</c></para>

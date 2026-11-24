@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The query token returned by the current call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -178,9 +178,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of scripts.</para>
+        /// <para>The total number of files.</para>
         /// <remarks>
-        /// <para>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount parameter value is meaningless.</para>
+        /// <para>If you use the MaxResults and NextToken parameters for paging in a paged query, the returned TotalCount value is meaningless.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

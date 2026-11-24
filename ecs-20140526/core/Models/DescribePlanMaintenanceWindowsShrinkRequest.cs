@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 100. Default value: 10. If no value is specified or the specified value is less than 10, the default value 10 is used. If the specified value is greater than 100, the default value 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set the value to the NextToken value returned in the last API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required by the Alibaba Cloud SDK for routing purposes. However, setting any region ID for this operation makes no difference. The response returns all O&amp;M windows that meet the specified conditions across all regions.</para>
+        /// <para>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference, and the operation returns O&amp;M windows that meet the conditions across the entire network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

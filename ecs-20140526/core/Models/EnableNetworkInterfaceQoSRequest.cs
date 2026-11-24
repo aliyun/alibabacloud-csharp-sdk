@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class EnableNetworkInterfaceQoSRequestQoS : TeaModel {
             /// <summary>
             /// <para>The maximum inbound internal bandwidth limit.</para>
-            /// <para>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</para>
+            /// <para>Unit: Kbit/s. Step: 1000 (1 Mbit/s). Valid values: [50000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The maximum outbound internal bandwidth limit.</para>
-            /// <para>Unit: Kbit/s. Step size: 1000 (1 Mbit/s). Valid values: [50000, +∞).</para>
+            /// <para>Unit: Kbit/s. Step: 1000 (1 Mbit/s). Valid values: [50000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? BandwidthTx { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of sessions.</para>
-            /// <para>Step size: 10000. Valid values: [10000, +∞).</para>
+            /// <para>The maximum number of concurrent connections.</para>
+            /// <para>Step: 10000. Valid values: [10000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The inbound internal packet forwarding rate.</para>
-            /// <para>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</para>
+            /// <para>Unit: PPS. Step: 10000. Valid values: [10000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The outbound internal packet forwarding rate.</para>
-            /// <para>Unit: PPS. Step size: 10000. Valid values: [10000, +∞).</para>
+            /// <para>Unit: PPS. Step: 10000. Valid values: [10000, +∞).</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>

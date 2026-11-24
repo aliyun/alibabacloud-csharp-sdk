@@ -229,6 +229,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public long? ProvisionedIops { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ReadWrite</para>
+                /// </summary>
+                [NameInMap("ReadWriteMode")]
+                [Validation(Required=false)]
+                public string ReadWriteMode { get; set; }
+
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
@@ -318,7 +326,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned by this request.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -329,7 +337,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para><b>[Deprecated]</b> This parameter will soon go offline. We recommend that you use the NextToken and MaxResults parameters for paging to complete the paged query.</para>
+        /// <para>This parameter will be deprecated soon. Use the <c>NextToken</c> and <c>MaxResults</c> parameters for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -341,7 +349,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para><b>[Deprecated]</b> This parameter will soon go offline. We recommend that you use the NextToken and MaxResults parameters for paging to complete the paged query.</para>
+        /// <para>This parameter will be deprecated soon. Use the <c>NextToken</c> and <c>MaxResults</c> parameters for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -362,9 +370,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of queried results.</para>
+        /// <para>The total number of queried entries.</para>
         /// <remarks>
-        /// <para>When you use the MaxResults and NextToken parameters for paging to perform a paged query, the returned value of TotalCount is invalid.</para>
+        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for pagination, the returned value of the <c>TotalCount</c> parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

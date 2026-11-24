@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeInstancesRequestFilter> Filter { get; set; }
         public class DescribeInstancesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The key of filter 1 used to query resources. Set the value to <c>CreationStartTime</c>. You can specify both Filter.1.Key and Filter.1.Value to query resources that were created after the specified point in time.</para>
+            /// <para>The filter key used when querying resources. The value must be <c>CreationStartTime</c>. If you specify both <c>Filter.1.Key</c> and <c>Filter.1.Value</c>, you can query resources created after a specified point in time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreationStartTime</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of filter 1 used to query resources. When you specify this parameter, you must also specify <c>Filter.1.Key</c>. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format in UTC.</para>
+            /// <para>The filter value used when querying resources. If you specify this parameter, you must also specify the <c>Filter.1.Key</c> parameter. The value must be in the <c>yyyy-MM-ddTHH:mmZ</c> format and use the UTC+0 time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-05T22:40Z</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The list of additional properties of the instance.</para>
+        /// <para>The list of additional attributes of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>META_OPTIONS</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeviceAvailable { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.  </description></item>
-        /// <item><description>false: performs a dry run and sends the request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description>true: performs a dry run and does not query resources. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.  </description></item>
+        /// <item><description>false: sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and resources are queried.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The elastic IP addresses (EIPs) of instances. This parameter takes effect when InstanceNetworkType is set to vpc. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</para>
+        /// <para>The elastic IP addresses (EIPs) of the instance. This parameter takes effect only when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;42.1.1.<b>&quot;, &quot;42.1.2.</b>&quot;, … &quot;42.1.10.**&quot;]</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EipAddresses { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HPC cluster to which the instance belongs.</para>
+        /// <para>The ID of the High Performance Computing (HPC) cluster to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hpc-bp67acfmxazb4p****</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HpcClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the access channel for instance metadata is enabled. Valid values:</para>
+        /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled: enabled.</description></item>
-        /// <item><description>disabled: disabled.</description></item>
+        /// <item><description>enabled: enables the access channel.</description></item>
+        /// <item><description>disabled: disables the access channel.</description></item>
         /// </list>
         /// <para>Default value: enabled.</para>
         /// <remarks>
-        /// <para>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of ECS instance metadata</a>.</para>
+        /// <para>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of instance metadata</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -123,14 +123,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? HttpPutResponseHopLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully use the hardened mode (IMDSv2) when accessing instance metadata. Valid values:</para>
+        /// <para>Specifies whether to forcibly use the security access mode (IMDSv2) to access instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optional: The hardened mode is not forcefully used.</description></item>
-        /// <item><description>required: The hardened mode is forcefully used. After you set this parameter to required, you cannot access instance metadata in the normal pattern.</description></item>
+        /// <item><description>optional: does not forcibly use the security access mode.</description></item>
+        /// <item><description>required: forcibly uses the security access mode. After you set this value, you cannot access instance metadata in normal mode.</description></item>
         /// </list>
         /// <para>Default value: optional.</para>
         /// <remarks>
-        /// <para>For more information about instance metadata access patterns, see <a href="https://help.aliyun.com/document_detail/150575.html">Instance metadata access modes</a>.</para>
+        /// <para>For more information about the modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Modes of accessing instance metadata</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,10 +151,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The internal network IP addresses of instances with the classic network type. This parameter takes effect when InstanceNetworkType is set to classic. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,). </para>
+        /// <para>The internal IP addresses of instances in the classic network. This parameter takes effect only when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,). </para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The classic network feature has been retired. For details, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</description></item>
+        /// <item><description>The classic network feature is retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">retirement announcement</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. The value is a JSON array that consists of up to 100 instance IDs. Separate the instance IDs with commas (,).</para>
+        /// <para>The instance IDs. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-bp67acfmxazb4p****&quot;, &quot;i-bp67acfmxazb4p****&quot;, … &quot;i-bp67acfmxazb4p****&quot;]</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. Fuzzy search with the asterisk (\*) wildcard is supported.</para>
+        /// <para>The instance name. Wildcard characters (*) are supported for fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>vpc: VPC.</description></item>
-        /// <item><description>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</description></item>
+        /// <item><description>classic: classic network. The classic network feature is retired. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">retirement announcement</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth for your workloads, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// <para>In the <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidth values are upper limits and are not guaranteed service level indicators. When resource contention occurs, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -253,8 +253,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the instance is I/O optimized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The instance is I/O optimized.</description></item>
-        /// <item><description>false: The instance is not I/O optimized.</description></item>
+        /// <item><description>true: yes.</description></item>
+        /// <item><description>false: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IoOptimized { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 addresses assigned to Elastic Network Interfaces (ENIs).</para>
+        /// <para>The IPv6 address specified for the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSH key pair bound to the instance.</para>
+        /// <para>The name of the SSH key pair used by the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KeyPairNameTest</para>
@@ -287,15 +287,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The reason why the resource is locked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>financial: The resource is locked due to overdue payment.</para>
+        /// <item><description><para>financial: The resource is locked due to overdue payments.</para>
         /// </description></item>
         /// <item><description><para>security: The resource is locked due to security reasons.</para>
         /// </description></item>
         /// <item><description><para>Recycling: The spot instance is locked and pending release.</para>
         /// </description></item>
-        /// <item><description><para>dedicatedhostfinancial: The ECS instance is locked because the dedicated host has an overdue payment.</para>
+        /// <item><description><para>dedicatedhostfinancial: The ECS instance is locked due to overdue payments for the dedicated host.</para>
         /// </description></item>
-        /// <item><description><para>refunded: The resource is locked because a refund is made.</para>
+        /// <item><description><para>refunded: The resource is locked due to a refund.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -307,11 +307,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query. Maximum value: 100.</para>
-        /// <para>Default value:</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100.</para>
+        /// <para>Default values:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not set this parameter or set it to a value less than 10, the default value is 10.</description></item>
-        /// <item><description>If you set this parameter to a value greater than 100, the default value is 100.</description></item>
+        /// <item><description>If this parameter is not specified or the specified value is less than 10, the default value is 10.</description></item>
+        /// <item><description>If the specified value is greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? NeedSaleCycle { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. The value is the <c>NextToken</c> parameter value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
+        /// <para>This parameter will be retired soon. We recommend that you use NextToken and MaxResults to perform paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
+        /// <para>This parameter will be retired soon. We recommend that you use NextToken and MaxResults to perform paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The private IP addresses of instances with the VPC network type. This parameter takes effect when InstanceNetworkType is set to vpc. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</para>
+        /// <para>The private IP addresses of instances in a VPC. This parameter takes effect only when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;172.16.1.1&quot;, &quot;172.16.2.1&quot;, … &quot;172.16.10.1&quot;]</para>
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrivateIpAddresses { get; set; }
 
         /// <summary>
-        /// <para>The public IP addresses of instances. The value is a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</para>
+        /// <para>The public IP addresses of the instance. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;42.1.1.<b>&quot;, &quot;42.1.2.</b>&quot;, … &quot;42.1.10.**&quot;]</para>
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PublicIpAddresses { get; set; }
 
         /// <summary>
-        /// <para>The RDMA IP addresses of the HPC instance.</para>
+        /// <para>The Remote Direct Memory Access (RDMA) IP addresses of the HPC instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.10.102</para>
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
+        /// <para>The ID of the enterprise resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group to which the instance belongs.</para>
+        /// <para>The security group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp67acfmxazb4p****</para>
@@ -450,10 +450,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance status. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>Pending: being created.</description></item>
+        /// <item><description>Pending: creating.</description></item>
         /// <item><description>Running: running.</description></item>
-        /// <item><description>Starting: being started.</description></item>
-        /// <item><description>Stopping: being stopped.</description></item>
+        /// <item><description>Starting: starting.</description></item>
+        /// <item><description>Stopping: stopping.</description></item>
         /// <item><description>Stopped: stopped.</description></item>
         /// </list>
         /// 
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeInstancesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the instance. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>When you use a single tag to filter resources, the resource count under the tag cannot exceed 1,000. When you use multiple tags to filter resources, the resource count of queried resources that are attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp67acfmxazb4p****</para>
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v-bp67acfmxazb4p****</para>

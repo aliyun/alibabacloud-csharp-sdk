@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteDiagnosticMetricSetsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the diagnostic metric sets. You can specify up to 10 IDs.</para>
+        /// <para>The IDs of the diagnostic metric sets. A maximum of 10 IDs are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetricSetIds")]

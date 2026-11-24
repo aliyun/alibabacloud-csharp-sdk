@@ -662,7 +662,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -682,7 +682,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page that was specified in the request.</para>
+        /// <para>The number of entries per page specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -702,9 +702,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of queried instances.</para>
+        /// <para>The total number of instances returned.</para>
         /// <remarks>
-        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for paging query, the returned <c>TotalCount</c> parameter value is meaningless.</para>
+        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for paging in a paged query, the returned value of the <c>TotalCount</c> parameter is meaningless.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

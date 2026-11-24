@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeregisterManagedInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the managed instance.</para>
+        /// <para>The details of the managed instances.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public DeregisterManagedInstanceResponseBodyInstance Instance { get; set; }
         public class DeregisterManagedInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The activation code ID.</para>
+            /// <para>The ID of the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ECEEE12-56F1-4FBC-9AB1-890F7494****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// <para>The version number of the Cloud Assistant Agent.</para>
+            /// <para>The version number of the Cloud Assistant agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.2.0.102</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The number of times that Cloud Assistant tasks were executed on the managed instance.</para>
+            /// <para>The number of Cloud Assistant tasks executed on the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? InvocationCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the last Cloud Assistant task was executed. The time is displayed in ISO 8601 format in UTC.</para>
+            /// <para>The time when the last Cloud Assistant task was executed. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T09:00:40Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LastInvokedTime { get; set; }
 
             /// <summary>
-            /// <para>The machine code of the managed instance.</para>
+            /// <para>The machine ID of the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e03231b37ab14e53b5795ad625fc****</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OsVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the managed instance was registered. The time is displayed in ISO 8601 format in UTC.</para>
+            /// <para>The time when the managed instance was registered. The time follows the ISO 8601 standard and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T08:57:56Z</para>

@@ -1,3 +1,10 @@
+2026-11-24 Version: 7.12.0
+- Support API DescribeDiskAttachments.
+- Update API CloneDisks: add request parameters ReadWriteMode.
+- Update API CreateDisk: add request parameters ReadWriteMode.
+- Update API DescribeDisks: add response parameters Body.Disks.$.ReadWriteMode.
+
+
 2026-10-26 Version: 7.11.8
 - Update API CreateImagePipeline: add request parameters ImageSecurityOptions.
 - Update API DescribeImagePipelines: add response parameters Body.ImagePipeline.$.ImageSecurityOptions.

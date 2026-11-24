@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyEipAddressAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the EIP.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eip-2zeerraiwb7uj6i0d****</para>
         /// </summary>
         [NameInMap("AllocationId")]
         [Validation(Required=false)]
         public string AllocationId { get; set; }
 
         /// <summary>
+        /// <para>The maximum bandwidth of the EIP. Unit: Mbit/s.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -31,6 +39,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the EIP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

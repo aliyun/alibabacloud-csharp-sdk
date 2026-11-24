@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the network interface controller (NIC).</para>
+        /// <para>The description of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The MAC address of the network interface controller (NIC).</para>
+        /// <para>The MAC address of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:16:3e:12:<b>:</b></para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MacAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network interface controller (NIC).</para>
+        /// <para>The ID of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp14v2sdd3v8htln****</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the network interface controller (NIC).</para>
+        /// <para>The name of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-eni-name</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account to which the network interface controller (NIC) belongs.</para>
+        /// <para>The ID of the account to which the Elastic Network Interface (ENI) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the network interface controller (NIC).</para>
+        /// <para>The private IP address of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>172.17.**.**</c></para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Virtual Network Operator (VNO) associated with the network interface controller (NIC).</para>
+        /// <para>The ID of the Virtual Network Operator (VNO) corresponding to the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678910</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ServiceID { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the user of the network interface controller (NIC) is a cloud service or a VNO.</para>
+        /// <para>Indicates whether the user of the Elastic Network Interface (ENI) is a cloud service or a VNO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The type of the network interface controller (NIC).</para>
+        /// <para>The type of the Elastic Network Interface (ENI).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Secondary</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the ENI belongs.</para>
+        /// <para>The ID of the VPC to which the ENI belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1j7w3gc1cexjqd****</para>

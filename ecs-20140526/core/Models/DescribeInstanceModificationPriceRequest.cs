@@ -53,16 +53,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeInstanceModificationPriceRequestDataDisk> DataDisk { get; set; }
         public class DescribeInstanceModificationPriceRequestDataDisk : TeaModel {
             /// <summary>
-            /// <para>The data disk category. You can specify this parameter when you need to query the price of a new subscription data disk attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</para>
+            /// <para>The data disk category. Specify this parameter when you need to query the price of a new subscription data disk attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cloud_efficiency: ultra disk.</description></item>
             /// <item><description>cloud_ssd: standard SSD.</description></item>
             /// <item><description>cloud_essd: enterprise SSD.</description></item>
             /// <item><description>cloud: basic disk.</description></item>
             /// </list>
-            /// <para>Default value: None.</para>
+            /// <para>Default value: none.</para>
             /// <remarks>
-            /// <para>When you query the price, the instance type parameter (<c>InstanceType</c>) and the data disk parameter (<c>DataDisk.N.*</c>) cannot be both empty. You must specify at least one of them.</para>
+            /// <para>When you query the price, the instance type parameter (<c>InstanceType</c>) and the data disk parameter (<c>DataDisk.N.*</c>) cannot be empty at the same time. You must specify at least one of them.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The data disk ID.
-            /// If DiskId is empty, a new data disk is added.
-            /// If DiskId is not empty, the data disk is modified.</para>
+            /// If this parameter is left empty, a new data disk is added.
+            /// If this parameter is specified, an existing data disk is modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-bf4rupt9****</para>
@@ -85,15 +85,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the data disk when the data disk category is enterprise SSD. The value of N must be the same as the value of N in <c>DataDisk.N.Category=cloud_essd</c>. Valid values:</para>
+            /// <para>The performance level of the data disk. This parameter is valid only when the data disk category is enterprise SSD. The value of N must be the same as the value of N in <c>DataDisk.N.Category=cloud_essd</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description>PL0: Up to 10,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>PL1: Up to 50,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>PL2: Up to 100,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>PL3: Up to 1,000,000 random read/write IOPS per disk.</description></item>
             /// </list>
             /// <para>Default value: PL1.</para>
-            /// <para>For more information about how to select an enterprise SSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSD</a>.</para>
+            /// <para>For more information about how to select the performance level of an enterprise SSD, see <a href="https://help.aliyun.com/document_detail/122389.html">enterprise SSD</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </description></item>
             /// <item><description>cloud: 5 to 2000.</description></item>
             /// </list>
-            /// <para>Default value: the minimum size allowed for the specified data disk category.</para>
+            /// <para>Default value: The minimum size allowed for the specified data disk category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -128,8 +128,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The end time of the temporary bandwidth change. The time is in ISO 8601 format and UTC time zone.
-        /// This parameter takes effect only when InternetMaxBandwidthOut is not empty.</para>
+        /// <para>The end time of the temporary bandwidth change. The time is in the ISO 8601 standard and UTC time zone.
+        /// This parameter takes effect only when InternetMaxBandwidthOut is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-06T22Z</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The Internet service provider (ISP).</para>
+        /// <para>The Internet Service Provider (ISP).</para>
         /// 
         /// <b>Example:</b>
         /// <para>BGP</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to query the upgrade price.</para>
+        /// <para>The instance ID for which you want to query the upgrade price.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The target instance type for the instance upgrade. Before upgrading, call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in the specified zone.</para>
         /// <remarks>
-        /// <para>When you query the price, the instance type parameter (<c>InstanceType</c>) and the data disk parameter (<c>DataDisk.N.*</c>) cannot be both empty. You must specify at least one of them.</para>
+        /// <para>When you query the price, the instance type parameter (<c>InstanceType</c>) and the data disk parameter (<c>DataDisk.N.*</c>) cannot be empty at the same time. You must specify at least one of them.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -234,8 +234,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the temporary bandwidth change. The time is in ISO 8601 format and UTC time zone.
-        /// This parameter takes effect only when InternetMaxBandwidthOut is not empty.</para>
+        /// <para>The start time of the temporary bandwidth change. The time is in the ISO 8601 standard and UTC time zone.
+        /// This parameter takes effect only when InternetMaxBandwidthOut is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-05T22:40Z</para>

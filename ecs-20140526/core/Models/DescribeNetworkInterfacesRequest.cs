@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfacesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID to which the Elastic Network Interface (ENI) is currently attached.</para>
+        /// <para>The ID of the instance to which the ENI is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1e2l6djkndyuli****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address of the Elastic Network Interface (ENI). N indicates that multiple IPv6 addresses can be configured. Valid values of N: 1 to 100.</para>
+        /// <para>The IPv6 address of the ENI. N indicates that you can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2408:4321:180:1701:94c7:bc38:3bfa:****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query. Valid values: 10 to 500.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 10 to 500.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is not specified or the specified value is less than 10, the default value is 10.</description></item>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The Elastic Network Interface (ENI) ID. Valid values of N: 1 to 100.</para>
+        /// <para>The ENI ID. Valid values of N: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp125p95hhdhn3ot****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Elastic Network Interface (ENI). The name must be 2 to 128 characters in length, and can contain characters in the letter categorization of Unicode (including English, Chinese, and digits). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the ENI. The name must be 2 to 128 characters in length and can contain Unicode letters, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-eni-name</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The pagination token. Set the value to the <c>NextToken</c> value returned from the previous API call.</para>
-        /// <para>For more information about how to configure the pagination parameters, see the &quot;Operation description&quot; section.</para>
+        /// <para>For more information about how to configure the pagination parameters for this operation, see the &quot;Operation description&quot; section above.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// <summary>
         /// <remarks>
-        /// <para><b>[Deprecated]</b> We recommend that you use the <c>MaxResults</c> and <c>NextToken</c> parameters for pagination.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>MaxResults</c> or <c>NextToken</c> parameter for paged queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// <summary>
         /// <remarks>
-        /// <para><b>[Deprecated]</b> We recommend that you use the <c>MaxResults</c> and <c>NextToken</c> parameters for pagination.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>MaxResults</c> or <c>NextToken</c> parameter for paged queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The primary private network IPv4 address of the Elastic Network Interface (ENI).</para>
+        /// <para>The primary private IPv4 address of the ENI.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>192.168.**.**</c></para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrimaryIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The secondary private IP IPv4 address of the Elastic Network Interface (ENI). Valid values of N: 1 to 100.</para>
+        /// <para>The secondary private IPv4 address of the ENI. Valid values of N: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>192.168.**.**</c></para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. When you use this parameter to filter resources, the number of resources cannot exceed 1,000.</para>
+        /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the Elastic Network Interface (ENI) is used by an Alibaba Cloud service or a Virtual Network Operator (VNO).</para>
+        /// <para>Specifies whether the ENI is managed by an Alibaba Cloud service or a Virtual Network Operator (VNO).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -190,15 +190,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The status of the Elastic Network Interface (ENI). Valid values:</para>
+        /// <para>The status of the ENI. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Available: active.</description></item>
-        /// <item><description>Attaching: being attached.</description></item>
-        /// <item><description>InUse: attached.</description></item>
-        /// <item><description>Detaching: being detached.</description></item>
-        /// <item><description>Deleting: being deleted.</description></item>
+        /// <item><description>Available: available.</description></item>
+        /// <item><description>Attaching: attaching.</description></item>
+        /// <item><description>InUse: in use.</description></item>
+        /// <item><description>Detaching: detaching.</description></item>
+        /// <item><description>Deleting: deleting.</description></item>
         /// </list>
-        /// <para>Default value: empty, which indicates that Elastic Network Interfaces (ENIs) in all states are queried.</para>
+        /// <para>Default value: empty. An empty value indicates that all statuses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeNetworkInterfacesRequestTag> Tag { get; set; }
         public class DescribeNetworkInterfacesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the Elastic Network Interface (ENI). Valid values of N: 1 to 20.</para>
+            /// <para>The tag key of the ENI. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -225,8 +225,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the Elastic Network Interface (ENI). Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the number of resources that match the tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached with multiple tags cannot exceed 1,000. If the number of resources exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
+            /// <para>The tag value of the ENI. Valid values of N: 1 to 20.</para>
+            /// <para>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources to which you attach multiple tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -238,12 +238,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The Elastic Network Interface (ENI) type. Valid values:</para>
+        /// <para>The ENI type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Primary: primary network interface controller (NIC).</description></item>
+        /// <item><description>Primary: primary ENI.</description></item>
         /// <item><description>Secondary: secondary ENI.</description></item>
         /// </list>
-        /// <para>Default value: empty, which indicates that Elastic Network Interfaces (ENIs) of all types are queried.</para>
+        /// <para>Default value: empty. An empty value indicates that all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Secondary</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the Elastic Network Interface (ENI).</para>
+        /// <para>The vSwitch ID of the ENI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp16usj2p27htro3****</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the Elastic Network Interface (ENI).</para>
+        /// <para>The VPC ID of the ENI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1j7w3gc1cexjqd****</para>

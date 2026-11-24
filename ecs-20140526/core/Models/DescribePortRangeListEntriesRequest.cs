@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the port list.</para>
+        /// <para>The port list ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

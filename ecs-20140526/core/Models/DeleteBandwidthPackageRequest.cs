@@ -12,6 +12,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the bandwidth package to delete.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bwp-bp1xea10o8qxwaswq****</para>
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
@@ -26,8 +29,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bandwidth package. You can call the DescribeRegions operation to query the latest region list.</para>
+        /// <para>The ID of the region where the bandwidth package is located. You can call the DescribeRegions operation to query the latest region list.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

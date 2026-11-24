@@ -11,13 +11,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeBandwidthPackagesRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the bandwidth package.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>bwp-bp1xea10o8qxwaswq****</para>
         /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway. If specified, only bandwidth packages associated with the NAT gateway are returned.</para>
+        /// <para>The ID of the NAT gateway. If you specify this parameter, only bandwidth packages associated with the NAT gateway are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ngw-bp1uewa15k4iyaszaasza****</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The page number. Starting value: 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -40,6 +49,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -48,6 +60,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The region ID of the bandwidth package.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

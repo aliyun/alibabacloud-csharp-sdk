@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when the automatic snapshot policies are displayed in paging mode.</para>
+        /// <para>The number of entries per page when the returned automatic snapshot policy list is displayed in a paging manner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of automatic snapshot policies.</para>
+        /// <para>The total number of automatic snapshot policy records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to shutdown the instant access feature for the snapshot. Valid values:</para>
+        /// <para>Specifies whether to trigger a shutdown of the snapshot instant access (active) feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: shutdown the instant access feature.</description></item>
-        /// <item><description>false: do not shutdown the instant access feature.
-        /// Default value: false.</description></item>
+        /// <item><description>true: Triggers a shutdown of the snapshot instant access (active) feature.</description></item>
+        /// <item><description>false: Does not trigger a shutdown of the snapshot instant access (active) feature.</description></item>
         /// </list>
+        /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated. Standard snapshots of ESSD cloud disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to perform additional configurations, and no additional fees are incurred.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. Standard snapshots of an ESSD disk (enterprise SSD, not standard SSD) are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to perform additional configurations, and no additional fees are incurred.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of the snapshot in days. When you specify this parameter, the retention period is calculated from the <b>creation time</b> of the snapshot. The creation time is represented in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC. Valid values: 1 to 65536.</para>
         /// <remarks>
-        /// <para>You can only extend the retention period of a snapshot. You cannot shorten the existing retention period.</para>
+        /// <para>The retention period of a snapshot can only be extended. You cannot shorten the existing retention period of a snapshot.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

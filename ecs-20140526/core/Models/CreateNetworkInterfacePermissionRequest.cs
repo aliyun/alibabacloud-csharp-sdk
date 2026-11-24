@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? AccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Elastic network interface controller (NIC).</para>
+        /// <para>The ID of the Elastic Network Interface (ENI).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Elastic network interface controller (NIC) permission action. Only InstanceAttach is supported.</para>
-        /// <para>InstanceAttach: allows the authorized user to attach your Elastic network interface controller (NIC) to their ECS instance. The ECS instance and the Elastic network interface controller (NIC) must reside in the same active zone.</para>
+        /// <para>The action permitted by the elastic network interface controller (NIC) permission. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>InstanceAttach: Allows the authorized user to attach your elastic network interface controller (NIC) to their ECS instance. The ECS instance and the elastic network interface controller (NIC) must reside in the same active zone.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The region of the Elastic network interface controller (NIC) permission. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region of the elastic network interface controller (NIC) permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the output of the command execution in the response. Valid values:</para>
+        /// <para>Specifies whether to return the output of the command execution in the response.</para>
         /// <list type="bullet">
         /// <item><description>true: The output is returned. In this case, you must specify at least the InvokeId or InstanceId parameter.</description></item>
         /// <item><description>false: The output is not returned.</description></item>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IncludeOutput { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. If you specify this parameter, the system queries all command execution records of the instance.</para>
+        /// <para>The instance ID. If you specify this parameter, all command execution records of the instance are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1i7gg30r52z2em****</para>
@@ -108,8 +108,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// </description></item>
         /// <item><description>Success: The command execution status on each instance is Stopped or Success, and the command execution status on at least one instance is Success.<list type="bullet">
-        /// <item><description>Immediately run tasks: The command execution is completed, and the exit code is 0.</description></item>
-        /// <item><description>Scheduled tasks: The most recent execution is successful, the exit code is 0, and the specified schedule has ended.</description></item>
+        /// <item><description>Tasks that run immediately: The command execution is completed, and the exit code is 0.</description></item>
+        /// <item><description>Scheduled tasks: The most recent execution is successful, the exit code is 0, and the specified time has elapsed.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Failed:<list type="bullet">
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Stopping: The command is being stopped.</description></item>
         /// <item><description>PartialFailed: The execution partially fails. This value does not take effect if the InstanceId parameter is also specified.</description></item>
         /// <item><description>Pending: The system is verifying or sending the command. The overall execution status is Pending if the command execution status on at least one instance is Pending.</description></item>
-        /// <item><description>Scheduled: The scheduled command has been sent and is waiting to be run. The overall execution status is Scheduled if the command execution status on at least one instance is Scheduled.</description></item>
+        /// <item><description>Scheduled: The scheduled command has been sent and is waiting to run. The overall execution status is Scheduled if the command execution status on at least one instance is Scheduled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging.</para>
+        /// <para>The maximum number of entries per page during paging for a paged query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will soon be taken offline. We recommend that you use NextToken and MaxResults for paging and paged query operations.</para>
+        /// <para>This parameter will soon be taken offline. We recommend that you use NextToken and MaxResults for paging to complete paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will soon be taken offline. We recommend that you use NextToken and MaxResults for paging and paged query operations.</para>
+        /// <para>This parameter will soon be taken offline. We recommend that you use NextToken and MaxResults for paging to complete paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>NextRebootOnly: automatically runs the command the next time the instance starts.</description></item>
         /// <item><description>EveryReboot: automatically runs the command every time the instance starts.</description></item>
         /// </list>
-        /// <para>Default value: empty. An empty value indicates that all execution modes are queried.</para>
+        /// <para>Default value: empty, which indicates that all execution modes are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Once</para>
@@ -239,9 +239,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeInvocationsRequestTag> Tag { get; set; }
         public class DescribeInvocationsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the command to execute. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
-            /// <para>The tag key can be up to 64 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag key of the command execute. Valid values of N: 1 to 20. The value cannot be an empty string.</para>
+            /// <para>If you use a single tag to filter resources, the resource count under this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, you must call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
+            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -251,8 +251,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the command execution. Valid values of N: 1 to 20. The tag value can be an empty string.
-            /// The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value of the command execution. Valid values of N: 1 to 20. The value can be an empty string.
+            /// The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether the queried command will be automatically run in the future. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Queries commands for which the RepeatMode parameter is set to Period, NextRebootOnly, or EveryReboot when you call RunCommand or InvokeCommand to run the commands.</description></item>
-        /// <item><description>false: Queries commands in the following states:<list type="bullet">
+        /// <item><description>false: Queries commands in the following two states:<list type="bullet">
         /// <item><description>Commands for which the RepeatMode parameter is set to Once when you call RunCommand or InvokeCommand to run the commands.</description></item>
         /// <item><description>Commands that have been canceled, stopped, or completed.</description></item>
         /// </list>

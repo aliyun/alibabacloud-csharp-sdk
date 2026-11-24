@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class SendDiagnosticInterruptRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Sends a check request without sending the NMI command.</description></item>
-        /// <item><description>false: Sends a normal NMI request to trigger a crash dump. Default value: false.</description></item>
-        /// </list>
+        /// <para>Specifies whether to only precheck this request. Valid values: ● true: sends a precheck request without sending the NMI command. ● false (default): sends a normal NMI request to trigger a crash dump.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The instance ID to which you want to send a diagnostic break.</para>
+        /// <para>The instance ID to send the diagnostic break.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

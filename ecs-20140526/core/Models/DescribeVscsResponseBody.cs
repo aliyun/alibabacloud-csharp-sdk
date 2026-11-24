@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeVscsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query token. The value is the NextToken value returned by the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
+            /// <para>The ID of the resource group. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
             /// <remarks>
-            /// <para>Filtering by the default resource group is not supported.</para>
+            /// <para>You cannot filter resources by the default resource group.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The status of the VSC. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>In_use: In use.</description></item>
-            /// <item><description>Attaching: Attaching.</description></item>
-            /// <item><description>Detaching: Detaching.</description></item>
+            /// <item><description>Attaching: Being attached.</description></item>
+            /// <item><description>Detaching: Being detached.</description></item>
             /// <item><description>AttachFailed: Attachment failed.</description></item>
             /// <item><description>DetachFailed: Detachment failed.</description></item>
             /// </list>

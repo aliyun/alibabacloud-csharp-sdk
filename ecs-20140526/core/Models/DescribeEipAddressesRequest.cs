@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeEipAddressesRequestFilter> Filter { get; set; }
         public class DescribeEipAddressesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The first filter key. Set the value to CreationStartTime, which specifies the start time of resource creation.</para>
+            /// <para>The first filter key. Valid value: CreationStartTime, which specifies the start time of resource creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreationStartTime</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AssociatedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the associated cloud service instance. Valid values: EcsInstance, SlbInstance, Nat, HaVip, NetworkInterface, and IpAddress.</para>
+        /// <para>The type of the associated cloud service instance, such as EcsInstance, SlbInstance, Nat, HaVip, NetworkInterface, or IpAddress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EcsInstance</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AssociatedInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the EIP. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).</para>
+        /// <para>The billing method of the EIP. A value of PostPaid indicates pay-as-you-go, and a value of PrePaid indicates subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ISP { get; set; }
 
         /// <summary>
-        /// <para>The lock type. Valid values: financial (locked due to overdue payment) and security (locked due to security reasons).</para>
+        /// <para>The lock type. A value of financial indicates a lock due to an overdue payment, and a value of security indicates a lock due to security reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>financial</para>
@@ -114,21 +114,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number for the paging query. Starting value: 1. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page for the paging query. Valid values: 1 to 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the EIP resides. You can call the DescribeRegions operation to query region IDs.</para>
+        /// <para>The ID of the region where the elastic IP address (EIP) resides. You can call the DescribeRegions operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

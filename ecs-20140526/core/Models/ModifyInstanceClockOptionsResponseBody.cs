@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The modification task ID.</para>
+        /// <para>The ID of the modification task.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the modification result.</para>
         /// 
         /// <b>Example:</b>

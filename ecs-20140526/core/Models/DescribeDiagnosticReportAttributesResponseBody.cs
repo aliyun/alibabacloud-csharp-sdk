@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Attributes { get; set; }
 
         /// <summary>
-        /// <para>The time when the diagnostic report was created. The time is in ISO 8601 format in UTC.</para>
+        /// <para>The time when the diagnostic report was created. The time follows the ISO 8601 standard and is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T12:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The end time. This is the parameter passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report. The time is in ISO 8601 format in UTC.</para>
+        /// <para>The end time. This is the parameter passed when you call the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create a diagnostic report. The time follows the ISO 8601 standard and is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T14:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the diagnostic report was completed. The time is in ISO 8601 format in UTC.</para>
+        /// <para>The time when the diagnostic report was completed. The time follows the ISO 8601 standard and is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T14:00:00Z</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the diagnostic report. This is the unique identifier of the resource diagnostic report.</para>
+        /// <para>The ID of the diagnostic report, which uniquely identifies the resource diagnostic report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dr-uf6i0tv2refv8wz*****</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-uf6i0tv2refv8wz*****</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. The supported type is instance.</para>
+        /// <para>The resource type. Valid value: instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -164,12 +164,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the report. This is the most severe level among all metrics. The severity levels in ascending order are:</para>
+        /// <para>The severity level of the report. This is the highest severity level among all metrics. The severity levels in ascending order are:</para>
         /// <list type="bullet">
-        /// <item><description>Unknown: The initial state. The diagnosis has not started, or the diagnostic process exited abnormally. No diagnostic conclusion is available.</description></item>
-        /// <item><description>Normal: The diagnosis is normal. No issues were found.</description></item>
-        /// <item><description>Info: Related information is available and may be associated with an exception.</description></item>
-        /// <item><description>Warn: Related information is available and may cause an exception.</description></item>
+        /// <item><description>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnostic program exited abnormally, and no diagnostic conclusion is available.</description></item>
+        /// <item><description>Normal: The diagnosis is normal and no issues are found.</description></item>
+        /// <item><description>Info: Associated information is available, which may be related to an exception.</description></item>
+        /// <item><description>Warn: Associated information is available, which may cause an exception.</description></item>
         /// <item><description>Critical: A critical exception exists.</description></item>
         /// </list>
         /// 
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The start time. This is the parameter passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report. The time is in ISO 8601 format in UTC.</para>
+        /// <para>The start time. This is the parameter passed when you call the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create a diagnostic report. The time follows the ISO 8601 standard and is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T12:00:00Z</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The status of the diagnostic report. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InProgress: The diagnosis is in progress.</description></item>
-        /// <item><description>Finished: The diagnosis is complete.</description></item>
+        /// <item><description>Finished: The diagnosis is completed.</description></item>
         /// <item><description>Failed: The diagnosis failed.</description></item>
         /// </list>
         /// 

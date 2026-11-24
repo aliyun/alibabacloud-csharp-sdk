@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class UnassignPrivateIpAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>One or more IPv4 prefixes to remove.</para>
+        /// <para>The IPv4 prefixes to delete.</para>
         /// </summary>
         [NameInMap("Ipv4Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Elastic Network Interface (ENI).</para>
+        /// <para>The ID of the Elastic Network Interface (ENI) (network interface controller (NIC)).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>One or more secondary private IP addresses to remove.</para>
+        /// <para>The secondary private IP addresses to delete.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>192.168.**.**</c></para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

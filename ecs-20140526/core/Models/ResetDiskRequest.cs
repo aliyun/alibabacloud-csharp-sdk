@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk to be rolled back.</para>
+        /// <para>The ID of the disk to be rolled back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Performs a dry run. The system checks the required parameters, request format, and resource status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false: Performs a normal request. If the request passes the dry run, the cloud disk is rolled back.</description></item>
+        /// <item><description>true: performs a dry run without rolling back the disk. The system checks the required parameters, request format, and resource status. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false: performs a normal request. If the request passes the check, the disk is rolled back.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the historical snapshot used to roll back the cloud disk.</para>
+        /// <para>The ID of the historical snapshot to which the disk is rolled back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

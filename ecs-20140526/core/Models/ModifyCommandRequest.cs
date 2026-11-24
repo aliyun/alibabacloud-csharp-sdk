@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyCommandRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated and does not take effect even if specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. Specifying this parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs.</para>
+        /// <para>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The command description. The description supports all character sets and can be up to 512 characters in length.</para>
+        /// <para>The command description. It supports all character sets and can be up to 512 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is description.</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The bootstrap program for script execution. The value can be up to 1 KB in length.</para>
+        /// <para>The bootstrap program for script execution. It can be up to 1 KB in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Launcher { get; set; }
 
         /// <summary>
-        /// <para>The command name. The name supports all character sets and can be up to 128 characters in length.</para>
+        /// <para>The command name. It supports all character sets and can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-CommandName</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The maximum timeout period for the command to run on ECS instances. Unit: seconds. If the command cannot be completed within the specified timeout period, the command times out. When a timeout occurs, the command process is forcefully terminated by canceling the PID of the command.</para>
+        /// <para>The maximum timeout period for executing the command on an ECS instance, in seconds. If the command cannot be run and completed within the specified period, a timeout occurs. After a timeout occurs, the command process is forcibly terminated and the PID of the command is canceled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The execution path. The path can be up to 200 characters in length.</para>
+        /// <para>The execution path. It can be up to 200 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home/</para>

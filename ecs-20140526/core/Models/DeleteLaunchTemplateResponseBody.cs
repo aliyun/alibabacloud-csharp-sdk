@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string LaunchTemplateId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[3,2,1]</para>
+        /// </summary>
         [NameInMap("LaunchTemplateVersionNumbers")]
         [Validation(Required=false)]
         public DeleteLaunchTemplateResponseBodyLaunchTemplateVersionNumbers LaunchTemplateVersionNumbers { get; set; }

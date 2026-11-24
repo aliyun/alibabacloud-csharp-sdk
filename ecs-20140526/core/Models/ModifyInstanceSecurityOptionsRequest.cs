@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceSecurityOptionsRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures the idempotence of the request. You can generate the value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate the value on the client side and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The secure boot option of the instance is not modified.</description></item>
-        /// <item><description>false: performs a dry run and sends the request. If the request passes the dry run, the secure boot option of the instance is modified.</description></item>
+        /// <item><description>true: performs a dry run only. The secure boot options of the instance are not modified.</description></item>
+        /// <item><description>false: performs a dry run and modifies the secure boot options of the instance if the dry run succeeds.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable or disable UEFI secure boot. If this parameter is set to true, the instance type must support secure boot. You can call the DescribeInstanceTypes operation and check whether the value of SecurityOptions.SecureBootSupport is supported. Valid values:</para>
+        /// <para>Specifies whether to enable or disable Unified Extensible Firmware Interface (UEFI) secure boot. If you set this parameter to true, the instance type must support secure boot. You can call the DescribeInstanceTypes operation and check whether the value of SecurityOptions.SecureBootSupport is supported. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: enables UEFI secure boot.</description></item>
         /// <item><description>false: disables UEFI secure boot.</description></item>

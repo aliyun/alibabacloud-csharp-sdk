@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The retention period of cross-region replicated snapshots. Unit: days. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>-1: The snapshots are permanently retained.</description></item>
-        /// <item><description>1 to 65535: The snapshots are retained for the specified number of days.</description></item>
+        /// <item><description>1 to 65535: The specified number of days for which the snapshots are retained.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable encrypted cross-region snapshot replication. Valid values:</para>
+            /// <para>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Yes. </description></item>
             /// <item><description>false: No.</description></item>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic cross-region replication. Valid values:</para>
+        /// <para>Specifies whether to enable cross-region replication for automatic snapshots. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Yes.</description></item>
-        /// <item><description>false: No.</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,17 +141,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<ModifyAutoSnapshotPolicyExRequestTargetTags> TargetTags { get; set; }
         public class ModifyAutoSnapshotPolicyExRequestTargetTags : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of N: 1 to 5. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with aliyun or acs: or contain http:// or https://.</para>
+            /// <para>The tag key.</para>
+            /// <para>Valid values of N: 1 to 5.</para>
+            /// <para>The value cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Environment</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Valid values of N: 1 to 5. It can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value.</para>
+            /// <para>Valid values of N: 1 to 5.</para>
+            /// <para>It can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <remarks>
-            /// <para>If this parameter is left empty or set to an empty string, it indicates any value.</para>
+            /// <para>If you leave this parameter empty or specify an empty string, it indicates any value.</para>
             /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Production</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -193,10 +203,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The days of the week on which automatic snapshots are created. Valid values: 1 to 7, which represent Monday to Sunday. For example, 1 indicates Monday.</para>
-        /// <para>If you want to create automatic snapshots on multiple days within a week, you can specify multiple days:</para>
+        /// <para>If you want to create automatic snapshots multiple times a week, you can specify multiple days:</para>
         /// <list type="bullet">
         /// <item><description>You can specify up to 7 days.</description></item>
-        /// <item><description>Specify multiple days in a JSON array, such as <c>[&quot;1&quot;, &quot;2&quot;, ... &quot;7&quot;]</c>. Separate the days with commas (,).</description></item>
+        /// <item><description>Specify multiple days in a JSON array format such as <c>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</c>. Separate the days with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -210,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The retention period of automatic snapshots. Unit: days. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>-1: The snapshots are permanently retained.</description></item>
-        /// <item><description>1 to 65536: The snapshots are retained for the specified number of days.</description></item>
+        /// <item><description>1 to 65536: The specified number of days for which the snapshots are retained.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -226,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>If you want to create multiple automatic snapshots within a day, you can specify multiple points in time:</para>
         /// <list type="bullet">
         /// <item><description>You can specify up to 24 points in time.</description></item>
-        /// <item><description>Specify multiple points in time in a JSON array, such as <c>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</c>. Separate the points in time with commas (,).</description></item>
+        /// <item><description>Specify multiple points in time in a JSON array format such as <c>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</c>. Separate the points in time with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

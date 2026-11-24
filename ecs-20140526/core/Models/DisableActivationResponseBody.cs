@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DisableActivationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the activation code and its usage.</para>
+        /// <para>The activation code and its usage information.</para>
         /// </summary>
         [NameInMap("Activation")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// <para>The time when the activation code was created. The time is displayed in ISO 8601 format in UTC.</para>
+            /// <para>The creation time. The time is formatted in ISO 8601 and displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T06:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The number of deregistered instances.</para>
+            /// <para>The number of unregistered instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of hosts that are allowed to use the activation code.</para>
+            /// <para>The IP addresses of the hosts that are allowed to use the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0/0</para>

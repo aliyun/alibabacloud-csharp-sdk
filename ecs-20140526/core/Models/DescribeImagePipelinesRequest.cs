@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</para>
+        /// <para>The query token. The value is the <c>NextToken</c> parameter value returned by the previous call to this operation. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
+        /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>

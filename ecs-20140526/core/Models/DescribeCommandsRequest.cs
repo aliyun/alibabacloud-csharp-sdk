@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The encoding mode of the CommandContent and Output fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: Returns the original script content and output information.</description></item>
-        /// <item><description>Base64: Returns the Base64-encoded script content and output information.</description></item>
+        /// <item><description>PlainText: returns the original script content and output information.</description></item>
+        /// <item><description>Base64: returns the Base64-encoded script content and output information.</description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The description of the command.</para>
         /// <list type="bullet">
-        /// <item><description><para>When you specify the Provider parameter parameter query public commands, fuzzy search is supported by default.</para>
+        /// <item><description><para>When you specify the Provider parameter parameter query public commands, fuzzy match is supported by default.</para>
         /// </description></item>
-        /// <item><description><para>When you do not specify the Provider parameter parameter query private commands, fuzzy search is supported. For example, if you enter test*, the system searches for all commands whose descriptions start with test. If you enter *test, the system searches for all commands whose descriptions end with test. If you enter <em>test</em>, the system searches for all commands whose descriptions contain test.</para>
+        /// <item><description><para>When you do not specify the Provider parameter parameter query private commands, fuzzy match is supported. For example, if you enter test*, the system searches for all commands whose descriptions start with test. If you enter *test, the system searches for all commands whose descriptions end with test. If you enter <em>test</em>, the system searches for all commands whose descriptions contain test.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only the latest version of public commands if the query result includes public commands. This parameter does not affect the query of private commands. Valid values:</para>
+        /// <para>Specifies whether to query only the latest version of public commands if the query result includes public commands. This parameter does not affect the query of private commands.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Queries only the latest version of public commands.</para>
+        /// <item><description><para>true: queries only the latest version of public commands.</para>
         /// </description></item>
-        /// <item><description><para>false: Queries all versions of public commands.</para>
+        /// <item><description><para>false: queries all versions of public commands.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Latest { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging.</para>
+        /// <para>The maximum number of entries per page for a paging query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the command.</para>
         /// <list type="bullet">
-        /// <item><description><para>When you specify the Provider parameter parameter query public commands, fuzzy search is supported by default.</para>
+        /// <item><description><para>When you specify the Provider parameter parameter query public commands, fuzzy match is supported by default.</para>
         /// </description></item>
-        /// <item><description><para>When you do not specify the Provider parameter parameter query private commands, fuzzy search is supported. For example, if you enter command*, the system searches for all commands whose names start with command. If you enter *command, the system searches for all commands whose names end with command. If you enter <em>command</em>, the system searches for all commands whose names contain command.</para>
+        /// <item><description><para>When you do not specify the Provider parameter parameter query private commands, fuzzy match is supported. For example, if you enter command*, the system searches for all commands whose names start with command. If you enter *command, the system searches for all commands whose names end with command. If you enter <em>command</em>, the system searches for all commands whose names contain command.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated soon. Use the NextToken and MaxResults parameters for paging.</para>
+        /// <para>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated soon. Use the NextToken and MaxResults parameters for paging.</para>
+        /// <para>This parameter will be deprecated soon. We recommend that you use NextToken and MaxResults for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,8 +143,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>If you do not specify this parameter, the system queries all Cloud Assistant commands that you manually created by default.</description></item>
         /// <item><description>If you set this parameter to AlibabaCloud, the system queries all public commands provided by Alibaba Cloud.</description></item>
         /// <item><description>If you set this parameter to a specific public command provider, the system queries all public commands provided by the provider. Examples:<list type="bullet">
-        /// <item><description>If you set this parameter to AlibabaCloud.ECS.GuestOS, the system queries the public commands provided by AlibabaCloud.ECS.GuestOS.</description></item>
-        /// <item><description>If you set this parameter to AlibabaCloud.ECS.GuestOSDiagnose, the system queries the public commands provided by AlibabaCloud.ECS.GuestOSDiagnose.</description></item>
+        /// <item><description>If you set Provider to AlibabaCloud.ECS.GuestOS, the system queries the public commands provided by AlibabaCloud.ECS.GuestOS.</description></item>
+        /// <item><description>If you set Provider to AlibabaCloud.ECS.GuestOSDiagnose, the system queries the public commands provided by AlibabaCloud.ECS.GuestOSDiagnose.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -194,8 +194,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeCommandsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the command. Valid values of N: 1 to 20. The value cannot be an empty string.</para>
-            /// <para>When you use a single tag to filter resources, the resource count for that tag cannot exceed 1,000. When you use multiple tags to filter resources, the resource count for resources attached to all the specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
-            /// <para>The tag key can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+            /// <para>If you use a single tag to filter resources, the resource count returned for this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to multiple tags at the same time cannot exceed 1,000. If the resource count exceeds 1,000, you must use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
+            /// <para>The tag key can be up to 64 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -220,9 +220,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the command. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>RunBatScript: a Bat script that runs on a Windows instance.</description></item>
-        /// <item><description>RunPowerShellScript: a PowerShell script that runs on a Windows instance.</description></item>
-        /// <item><description>RunShellScript: a shell script that runs on a Linux instance.</description></item>
+        /// <item><description>RunBatScript: The command is a batch script that runs on a Windows instance.</description></item>
+        /// <item><description>RunPowerShellScript: The command is a PowerShell script that runs on a Windows instance.</description></item>
+        /// <item><description>RunShellScript: The command is a shell script that runs on a Linux instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

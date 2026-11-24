@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the generated order.</para>
         /// <remarks>
-        /// <para>The order ID is returned only when you resize a subscription cloud disk.</para>
+        /// <para>The order ID is returned only when you resize a subscription disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

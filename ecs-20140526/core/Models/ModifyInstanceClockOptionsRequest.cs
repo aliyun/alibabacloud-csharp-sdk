@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: sends a check request without querying resource status. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para>true: Sends a check request and does not query the resource status. The check items include whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the check, a corresponding error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>false: sends a Normal request. If the request passes the check, a 2xx HTTP status code is returned and the resource status is directly queried.</para>
+        /// <item><description><para>false: Sends a normal request. If the request passes the check, a 2XX HTTP status code is returned and the resource status is directly queried.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>

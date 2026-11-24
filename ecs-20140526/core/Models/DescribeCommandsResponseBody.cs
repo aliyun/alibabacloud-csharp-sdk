@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of commands.</para>
         /// <remarks>
-        /// <para>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount value is meaningless.</para>
+        /// <para>When you use the MaxResults and NextToken parameters for paging, the returned TotalCount parameter value is meaningless.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

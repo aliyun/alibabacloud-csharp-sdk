@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyManagedInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the managed instance.</para>
+        /// <para>The collection of managed instance information.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]

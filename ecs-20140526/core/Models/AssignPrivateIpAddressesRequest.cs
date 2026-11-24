@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignPrivateIpAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv4 prefixes to specify for the elastic network interfaces (ENIs). Valid values of N: 1 to 10.</para>
+        /// <para>The IPv4 prefixes to be allocated to the Elastic Network Interface (ENI). Valid values of N: 1 to 10.</para>
         /// <remarks>
-        /// <para>To set IPv4 prefixes for the elastic network interfaces (ENIs), you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</para>
+        /// <para>If you need to configure IPv4 prefix settings for the Elastic Network Interface (ENI), you must specify the settings for either Ipv4Prefix.N or Ipv4PrefixCount, but you cannot specify both parameters.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Ipv4Prefix")]
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// <para>The number of randomly generated IPv4 prefixes to specify for the elastic network interfaces (ENIs). Valid values: 1 to 10.</para>
+        /// <para>The number of randomly generated IPv4 prefixes to be allocated to the Elastic Network Interface (ENI). Valid values: 1 to 10.</para>
         /// <remarks>
-        /// <para>To set IPv4 prefixes for the elastic network interfaces (ENIs), you must set either the Ipv4Prefix.N parameter or the Ipv4PrefixCount parameter, but not both.</para>
+        /// <para>If you need to configure IPv4 prefix settings for the Elastic Network Interface (ENI), you must specify the settings for either Ipv4Prefix.N or Ipv4PrefixCount, but you cannot specify both parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Ipv4PrefixCount { get; set; }
 
         /// <summary>
-        /// <para>The elastic network interfaces (ENIs) ID.</para>
+        /// <para>The ID of the Elastic Network Interface (ENI).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,22 +62,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>One or more secondary private IP addresses selected from the idle private IP addresses of the vSwitch to which the elastic network interfaces (ENIs) belongs. Valid values of N:</para>
+        /// <para>The secondary private IP addresses (private IP addresses or private IPs) to be allocated from the available IP addresses of the vSwitch to which the Elastic Network Interface (ENI) belongs. Valid values of N:</para>
         /// <list type="bullet">
-        /// <item><description>When the elastic network interfaces (ENIs) is in the Available (<c>Available</c>) state: 1 to 32.</description></item>
-        /// <item><description>When the elastic network interfaces (ENIs) is in the <c>InUse</c> state: subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>If the Elastic Network Interface (ENI) is in the <c>Available</c> state: 1 to 32.</description></item>
+        /// <item><description>If the Elastic Network Interface (ENI) is in the <c>InUse</c> state: The value is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
         /// </list>
-        /// <para>When you allocate secondary private IP addresses, you cannot specify both <c>PrivateIpAddress.N</c> and <c>SecondaryPrivateIpAddressCount</c>.</para>
+        /// <para>When you allocate secondary private IP addresses (private IP addresses or private IPs), you cannot specify both <c>PrivateIpAddress.N</c> and <c>SecondaryPrivateIpAddressCount</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><c>10.1.**.**</c></para>
+        /// <para>[&quot;<c>10.1.**.**</c>&quot;]</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public List<string> PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the elastic network interfaces (ENIs). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the Elastic Network Interface (ENI). You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of private IP addresses to automatically assign from the idle IP addresses of the vSwitch.</para>
+        /// <para>The number of private IP addresses to be automatically assigned from the available IP addresses of the vSwitch.</para>
         /// <para>When you assign secondary private IP addresses, you cannot specify both <c>PrivateIpAddress.N</c> and <c>SecondaryPrivateIpAddressCount</c>.</para>
         /// 
         /// <b>Example:</b>

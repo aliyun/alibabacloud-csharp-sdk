@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the Cloud Assistant Agent checks for and performs updates immediately upon startup.</para>
+            /// <para>Specifies whether to immediately check for and perform updates when the Cloud Assistant Agent starts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? BootstrapUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Cloud Assistant Agent is prohibited from checking for and performing updates.</para>
+            /// <para>Specifies whether to prohibit the Cloud Assistant Agent from checking for and performing updates.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? DisableUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the custom Agent upgrade configuration is enabled. If the query result is false or empty, the default behavior of attempting an upgrade every 30 minutes is retained.</para>
+            /// <para>Specifies whether custom Agent upgrade configurations are enabled. If the query result is false or empty, the system attempts to upgrade the agent every 30 minutes by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The time zone of the allowed upgrade time windows.</para>
+            /// <para>The time zone for the allowed upgrade time windows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig ResourceUsageConfig { get; set; }
         public class DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig : TeaModel {
             /// <summary>
-            /// <para>The maximum CPU usage allowed for the Cloud Assistant Agent main process.</para>
+            /// <para>The maximum allowed CPU usage limit for the main process of the Cloud Assistant Agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? CpuLimit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the script file is retained in the Cloud Assistant directory after command execution is complete.</para>
+            /// <para>Specifies whether to retain script files in the Cloud Assistant directory after command execution is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? LogFileCountLimit { get; set; }
 
             /// <summary>
-            /// <para>The size limit of Cloud Assistant log files.</para>
+            /// <para>The size limit for Cloud Assistant log files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100MB</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LogSizeLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum memory usage allowed for the Cloud Assistant Agent main process.</para>
+            /// <para>The maximum allowed memory usage limit for the main process of the Cloud Assistant Agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35MB</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MemoryLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit. After this limit is reached, the Cloud Assistant Agent automatically stops running.</para>
+            /// <para>The maximum number of consecutive times that CPU or memory resources exceed the limit. After reaching this limit, the Cloud Assistant Agent automatically stops.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig SessionManagerConfig { get; set; }
         public class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig : TeaModel {
             /// <summary>
-            /// <para>The toggle for the Cloud Assistant session feature. Valid values:</para>
+            /// <para>The switch for the Cloud Assistant session feature. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>

@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation makes no difference. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</para>
+        /// <para>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of resources to which the O&amp;M window is configured to apply.</para>
+            /// <para>The resource type configured for the O&amp;M window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tag</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyPlanMaintenanceWindowRequestTimePeriod TimePeriod { get; set; }
         public class ModifyPlanMaintenanceWindowRequestTimePeriod : TeaModel {
             /// <summary>
-            /// <para>The type of the recurrence cycle. Valid values: Daily and Weekly.</para>
+            /// <para>The type of the cycle. Valid values: Daily and Weekly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Year</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The time ranges of the O&amp;M window recurrence cycle in the UTC time zone.</para>
+            /// <para>The time ranges of the O&amp;M window recurrence cycle in UTC.</para>
             /// </summary>
             [NameInMap("RangeList")]
             [Validation(Required=false)]
@@ -156,9 +156,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The end time of the O&amp;M window.</para>
                 /// <list type="bullet">
-                /// <item><description>If PeriodUnit is set to Weekly, the time range is in the format of Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
-                /// <item><description>If PeriodUnit is set to Daily, the time range is in the format of 22:00.</description></item>
-                /// <item><description>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</description></item>
+                /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
+                /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
+                /// <item><description>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, and only 00 is supported.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -171,9 +171,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 /// <summary>
                 /// <para>The start time of the O&amp;M window.</para>
                 /// <list type="bullet">
-                /// <item><description>If PeriodUnit is set to Weekly, the time range is in the format of Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
-                /// <item><description>If PeriodUnit is set to Daily, the time range is in the format of 22:00.</description></item>
-                /// <item><description>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute. Currently, only 00 is supported.</description></item>
+                /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
+                /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
+                /// <item><description>The comma (,) is used as a delimiter. The first part represents the hour, with valid values from 00 to 23. The second part represents the minute, and only 00 is supported.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

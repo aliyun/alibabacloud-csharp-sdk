@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Cloud Assistant resource usage configuration. This setting takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</para>
+        /// <para>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description><para>Windows: 2.1.4.1065</para>
         /// </description></item>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The service configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SessionManagerDelivery: session operation log delivery.</description></item>
-        /// <item><description>InvocationDelivery: task execution log delivery.</description></item>
-        /// <item><description>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration.</description></item>
-        /// <item><description>SessionManagerConfig: Cloud Assistant SessionManager configuration.</description></item>
+        /// <item><description>SessionManagerDelivery: session operation record delivery</description></item>
+        /// <item><description>InvocationDelivery: task execution record delivery</description></item>
+        /// <item><description>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration</description></item>
+        /// <item><description>SessionManagerConfig: Cloud Assistant SessionManager configuration</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SettingType { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service (SLS) delivery configuration.</para>
+        /// <para>The SLS delivery configuration.</para>
         /// </summary>
         [NameInMap("SlsDeliveryConfig")]
         [Validation(Required=false)]

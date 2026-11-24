@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteImageRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Performs a dry run and does not delete the image. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: Performs a normal request and deletes the image if the request passes the check.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to force delete the custom image. Valid values:</para>
+        /// <para>Specifies whether to execute a force delete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Forces the deletion of the custom image, regardless of whether the image is in use by other instances.</description></item>
-        /// <item><description>false: Deletes the custom image normally and checks whether the image is in use by other instances before deletion.</description></item>
+        /// <item><description>true: Executes a force delete of the custom image, regardless of whether the image is in use by other instances.</description></item>
+        /// <item><description>false: Deletes the custom image normally. The system checks whether the image is in use by other instances before the deletion.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

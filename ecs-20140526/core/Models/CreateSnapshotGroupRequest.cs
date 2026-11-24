@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk for which you want to create a snapshot-consistent group. You can specify multiple disk IDs across instances in the same zone. Valid values of N: 1 to 128. A single snapshot-consistent group can contain up to 128 disks with a total capacity of up to 256 TiB.</para>
+        /// <para>The ID of the disk for which you want to create a snapshot-consistent group. You can specify multiple disk IDs across instances in the same zone. Valid values of N: 1 to 128. A single snapshot-consistent group can contain up to 128 disks, and the total capacity cannot exceed 256 TiB.</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>This parameter and <c>ExcludeDiskId.N</c> cannot be set at the same time.</description></item>
-        /// <item><description>If you set <c>InstanceId</c>, you can set this parameter only to the IDs of disks attached to the specified instance. Setting multiple cross-instance disk IDs is no longer supported.</description></item>
+        /// <item><description>This parameter and ExcludeDiskId.N cannot be set at the same time.</description></item>
+        /// <item><description>If you set InstanceId, you can set this parameter only to the IDs of disks attached to the specified instance. Setting multiple cross-instance disk IDs is no longer supported.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DiskId")]
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The ID of the disk for which you do not want to create a snapshot in the instance. After you specify a disk ID, the created snapshot-consistent group does not contain the snapshot of the disk. Valid values of N: 1 to 128.</para>
         /// <para>Default value: empty, which indicates that snapshots are created for all disks in the instance.</para>
         /// <remarks>
-        /// <para>This parameter and <c>DiskId.N</c> cannot be set at the same time.</para>
+        /// <para>This parameter and DiskId.N cannot be set at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>d-j6cf7l0ewidb78lq****</para>
+        /// <para>[&quot;d-j6cf7l0ewidb78lq****&quot;]</para>
         /// </summary>
         [NameInMap("ExcludeDiskId")]
         [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the snapshot instant access feature. Valid values:</para>
+        /// <para>Specifies whether to enable snapshot instant access. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the feature.</description></item>
-        /// <item><description>false: disables the feature.</description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of ESSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to configure this parameter, and no additional fees are incurred.</para>
+        /// <para>This parameter is deprecated. Standard snapshots of ESSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to perform additional configurations, and no additional fees are incurred.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? InstantAccess { get; set; }
 
         /// <summary>
-        /// <para>Sets the retention period for the snapshot instant access feature. Unit: days. Valid values: 1 to 65535.</para>
+        /// <para>The retention period of snapshot instant access. Unit: days. Valid values: 1 to 65535.</para>
         /// <para>This parameter takes effect only when <c>InstantAccess</c> is set to true. The snapshot instant access feature is automatically disabled when the specified period expires.</para>
         /// <para>Default value: empty, which indicates that the retention period is the same as the snapshot release time.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of ESSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to configure this parameter, and no additional fees are incurred.</para>
+        /// <para>This parameter is deprecated. Standard snapshots of ESSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. You do not need to perform additional configurations, and no additional fees are incurred.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InstantAccessRetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot-consistent group. The name must be 2 to 128 characters in length and can contain letters and Chinese characters. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, periods (.), underscores (_), hyphens (-), and colons (:).</para>
+        /// <para>The name of the snapshot consistency group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, periods (.), underscores (_), hyphens (-), and colons (:).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateSnapshotGroupRequestTag> Tag { get; set; }
         public class CreateSnapshotGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

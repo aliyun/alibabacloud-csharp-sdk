@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLockedSnapshotsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values: </para>
+        /// <para>Specifies whether to perform only a dry run on the request. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>true: The request is prechecked but not executed. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, an error is returned. If the request passes the precheck, the DryRunOperation error code is returned. </description></item>
-        /// <item><description>false: The request is prechecked and executed if it passes the precheck. This is the default value.</description></item>
+        /// <item><description>true: Performs a dry run only. The request is not actually executed. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned. </description></item>
+        /// <item><description>false (default): Sends a normal request and executes the request after it passes the dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The lock status. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>compliance-cooloff: The snapshot is locked in compliance mode but is still in the cooling-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cooling-off period, and extend or shorten the lock duration. </description></item>
-        /// <item><description>compliance: The snapshot is locked in compliance mode and the cooling-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </description></item>
+        /// <item><description>compliance-cooloff: The snapshot is locked in compliance mode but is still in the cool-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cool-off period, and extend or shorten the lock duration. </description></item>
+        /// <item><description>compliance: The snapshot is locked in compliance mode and the cool-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </description></item>
         /// <item><description>expired: The snapshot was locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</description></item>
         /// </list>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page during paging for a paged query. Maximum value: 100. </para>
+        /// <para>The number of entries per page for paging in a paged query. Maximum value: 100. </para>
         /// <para>Default value: </para>
         /// <list type="bullet">
         /// <item><description>If no Settings are specified or the Settings value is less than 10, the default value is 10. </description></item>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken parameter value returned by the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken parameter value returned from the previous API call to invoke the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>

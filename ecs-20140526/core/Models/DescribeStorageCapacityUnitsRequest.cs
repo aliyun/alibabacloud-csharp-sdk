@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeStorageCapacityUnitsRequest : TeaModel {
         /// <summary>
-        /// <para>The allocate type. Valid values:</para>
+        /// <para>The type used to allocate SCUs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal: queries SCUs that belong to the current Alibaba Cloud account.</description></item>
-        /// <item><description>Shared: queries SCUs that are shared between the Alibaba Cloud account and a Resource Access Management (RAM) user.</description></item>
+        /// <item><description>Normal: Queries the SCUs under the current Alibaba Cloud account.</description></item>
+        /// <item><description>Shared: Queries the SCUs shared between the Alibaba Cloud account and a Resource Access Management (RAM) user.</description></item>
         /// </list>
         /// <para>Default value: Normal.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AllocationType { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the SCU. Unit: GiB. Valid values: {20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, 51200}.</para>
+        /// <para>The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5120, 10240, 20480, and 51200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The name of the SCU. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the SCU. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testScuName</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The page number of the SCU list.</para>
-        /// <para>Minimum value: 1.</para>
+        /// <para>Starting value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page for paging in a paged query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SCU. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the SCU. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The statuses of SCUs. Array length: 1 to 4.</para>
+        /// <para>The statuses of the SCUs. Array length: 1 to 4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The IDs of SCUs. Array length: 1 to 100.</para>
+        /// <para>The IDs of the SCUs. Array length: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scu-bp67acfmxazb4p****</para>

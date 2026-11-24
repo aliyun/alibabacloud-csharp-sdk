@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return per page for paging.</para>
+        /// <para>The number of entries to return per page for a paging query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the query. You can obtain the token from the response of the previous request.</para>
+        /// <para>The pagination token for the elasticity assurance query. You can obtain the token from the response of the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

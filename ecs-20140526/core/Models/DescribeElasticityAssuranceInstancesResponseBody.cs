@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page for paging.</para>
+        /// <para>The number of entries returned per page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

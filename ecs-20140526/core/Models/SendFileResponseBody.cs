@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class SendFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution ID.</para>
+        /// <para>The invocation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f-7d2a745b412b46****</para>

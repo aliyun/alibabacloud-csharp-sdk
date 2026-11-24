@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The list of instance IDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp1iudwa5b1tqa****</para>
+        /// <para>[&quot;i-bp1iudwa5b1tqa****&quot;]</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page during a paged query. This parameter is invalid if the <b>InstanceId</b> parameter Settings are configured.</para>
+        /// <para>The maximum number of entries to return on each page during paging in a paged query. This parameter is invalid if the Settings of the <b>InstanceId</b> parameter are specified.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to perform paged queries.</para>
+        /// <para>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to complete paging for paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to perform paged queries.</para>
+        /// <para>This parameter will be taken offline soon. We recommend that you use NextToken and MaxResults to complete paging for paged query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

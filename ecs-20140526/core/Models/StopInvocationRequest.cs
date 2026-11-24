@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StopInvocationRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances on which to stop the command execution. You can specify up to 50 instance IDs. Valid values of N: 1 to 50.</para>
+        /// <para>The IDs of the instances on which you want to stop the command. You can specify up to 50 instance IDs. Valid values of N: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp67acfmxazb4p****</para>
+        /// <para>[&quot;i-bp67acfmxazb4p****&quot;]</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The command execution ID. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query all execution IDs.</para>
+        /// <para>The invocation ID. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query all invocation IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiagnosticReportShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The extension in JSON format.</para>
+        /// <para>The extended parameters in JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("AdditionalOptions")]
         [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic metric set ID. If this parameter is left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</para>
+        /// <para>The metric set ID. If this parameter is left empty, the default metric set dms-instancedefault for ECS instances is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dms-uf6i0tv2refv8wz*****</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

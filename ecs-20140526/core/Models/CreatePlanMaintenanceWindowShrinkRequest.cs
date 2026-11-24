@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreatePlanMaintenanceWindowShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the window. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the window. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>
         /// <item><description><b>false</b>: Disabled.</description></item>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, specifying any region ID for this operation yields the same result. The O&amp;M window applies to all ECS instances across the network that meet the resource filtering conditions.</para>
+        /// <para>The region ID. This parameter is required for Alibaba Cloud SDK routing. However, setting any region ID for this operation makes no difference. The O&amp;M window takes effect on all ECS instances across the network that meet the resource filtering conditions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

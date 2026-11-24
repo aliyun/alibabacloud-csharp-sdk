@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationSnapshotDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the new snapshot. The name must be 2 to 128 characters in length, must start with a letter or a Chinese character, and cannot start with http:// or https://. It supports characters in the Letter category of Unicode, including English letters, Chinese characters, and digits. It can contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain letters, digits, and Chinese characters. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>Default value: empty.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -194,14 +194,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The tag information of the new snapshot.</para>
+        /// <para>The tags of the new snapshot.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CopySnapshotRequestTag> Tag { get; set; }
         public class CopySnapshotRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the new snapshot. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag key of the new snapshot. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the new snapshot. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag value of the new snapshot. If you specify this parameter, it can be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

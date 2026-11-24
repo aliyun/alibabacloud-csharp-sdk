@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The allocation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal: queries the reserved instances under the current account.</description></item>
-        /// <item><description>Shared: queries the reserved instances that are shared between the main account and linked accounts under the current account.</description></item>
+        /// <item><description>Normal: Queries the reserved instances within the current account.</description></item>
+        /// <item><description>Shared: Queries the reserved instances that are shared between the main account and linked accounts within the current account.</description></item>
         /// </list>
         /// <para>Default value: Normal.</para>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance type that matches the reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. </para>
         /// <remarks>
-        /// <para>This is the instance type selected when you purchase the reserved instance. When the reserved instance is applied, a regional reserved instance can be applied to different instance types within the same instance family based on the equivalence calculation.</para>
+        /// <para>This is the instance type that you selected when you purchased the reserved instance. When the reserved instance is applied to offset the bills of pay-as-you-go instances, regional reserved instances support size flexibility within the same instance family.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The instance family that matches the reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The instance type family that matches the reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g5</para>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The payment type of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>No Upfront: no upfront.</description></item>
-        /// <item><description>Partial Upfront: partial upfront.</description></item>
-        /// <item><description>All Upfront: all upfront.</description></item>
+        /// <item><description>No Upfront: no upfront</description></item>
+        /// <item><description>Partial Upfront: partial upfront</description></item>
+        /// <item><description>All Upfront: all upfront</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paging query. Maximum value: 100.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The reserved instance IDs. Array length: 1 to 100.</para>
+        /// <para>The IDs of the reserved instances. Array length: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ri-bpzhex2ulpzf53****</para>
@@ -151,8 +151,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scope of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Region: regional.</description></item>
-        /// <item><description>Zone: zonal.</description></item>
+        /// <item><description>Region: regional</description></item>
+        /// <item><description>Zone: zonal</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,9 +180,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
         public class DescribeReservedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the reserved instance. The tag key cannot be an empty string and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+            /// <para>The tag key of the reserved instance. The tag key cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// <remarks>
-            /// <para>If you use a single tag to filter resources, the resource count returned cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have multiple tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
+            /// <para>If you use a single tag to filter resources, the resource count of resources under this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have multiple tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the reserved instance. The tag value cannot be an empty string and can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the reserved instance. The tag value cannot be an empty string. It can be up to 128 characters in length, and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
