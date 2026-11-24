@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The number of log lines. A value of 0 indicates that no valid logs exist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3517972480</para>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("LogSize")]
             [Validation(Required=false)]
             public int? LogSize { get; set; }
 
             /// <summary>
-            /// <para>The alert information, such as task execution failure or insufficient resources. If no alerts are triggered, an empty value is returned.</para>
+            /// <para>The alert information, such as task execution failure or insufficient resources. This parameter is empty if no alerts are generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WARNING:  log file maybe deleted, please check oss path: oss://TestBucketName/applog/</para>

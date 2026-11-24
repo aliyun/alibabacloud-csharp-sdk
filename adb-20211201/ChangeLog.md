@@ -1,3 +1,11 @@
+2026-11-24 Version: 5.6.0
+- Support API ForkKnowledgeFile.
+- Support API TriggerKnowledgeFileParse.
+- Update API AddKnowledgeFile: add response parameters Body.Id.
+- Update API AddKnowledgeFile: add response parameters Body.Location.
+- Update API ListKnowledgeFiles: add request parameters FileLocation.
+
+
 2026-10-28 Version: 5.5.2
 - Update API AddKnowledgeTags: add request parameters FileId.
 - Update API AddKnowledgeUploadUser: add request parameters FileId.

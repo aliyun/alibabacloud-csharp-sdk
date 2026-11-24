@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateLakeStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status or POP error code.</para>
+        /// <para>The API status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidInput</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The resource usage details of the cluster.</para>
+        /// <para>The details of cluster resource usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned. 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>If the creation operation is implemented asynchronously, a specific JobId is returned.</para>
+        /// <para>The explicit job ID returned if the creation operation is asynchronous.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>12345678-1234-4ABC-8DEF-123456789012</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

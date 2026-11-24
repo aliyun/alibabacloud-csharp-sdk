@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class UpdateLakeStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,19 +20,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Description&quot;:&quot;Sample lake storage&quot;,&quot;RowCount&quot;:1000,&quot;TableCount&quot;:1}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateLakeStorageResponseBodyData Data { get; set; }
         public class UpdateLakeStorageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the lake storage was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-15T07:24:58Z</para>
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The creator UID.</para>
+            /// <para>The UID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -52,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreatorUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AnalyticDB for MySQL cluster that is associated with the lake storage.</para>
+            /// <para>The ADB instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-23xxxx</para>
@@ -85,16 +83,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The unique identifier of the lake storage.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>adb-lake-cn-hangzhou-1a1aaaa11a</para>
             /// </summary>
             [NameInMap("LakeStorageId")]
             [Validation(Required=false)]
             public string LakeStorageId { get; set; }
 
             /// <summary>
-            /// <para>The operator UID.</para>
+            /// <para>The UID of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -104,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OperatorUid { get; set; }
 
             /// <summary>
-            /// <para>The owner UID.</para>
+            /// <para>The UID of the owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -124,12 +120,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionCount { get; set; }
 
             /// <summary>
-            /// <para>The permissions on the lake storage.</para>
+            /// <para>The permissions of the lake storage.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Write&quot;:true}]</para>
             /// </summary>
             [NameInMap("Permissions")]
             [Validation(Required=false)]
@@ -139,14 +133,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>The account ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>1234567890123456</para>
                 /// </summary>
                 [NameInMap("Account")]
                 [Validation(Required=false)]
                 public string Account { get; set; }
 
                 /// <summary>
-                /// <para>The read permissions.</para>
+                /// <para>The read permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -166,7 +160,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The write permissions.</para>
+                /// <para>The write permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -188,19 +182,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of data rows.</para>
             /// 
             /// <b>Example:</b>
-            /// <remarks>
-            /// <para>=</para>
-            /// </remarks>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("RowCount")]
             [Validation(Required=false)]
             public long? RowCount { get; set; }
 
             /// <summary>
-            /// <para>The number of tables.</para>
+            /// <para>The number of databases and tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -210,7 +202,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? TableCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the lake storage was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-01T09:22:17Z</para>
@@ -222,7 +214,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -232,10 +224,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Description:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, an OK message is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description>If the request is successful, OK is returned.</description></item>
+        /// <item><description>If the request fails, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -256,10 +248,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

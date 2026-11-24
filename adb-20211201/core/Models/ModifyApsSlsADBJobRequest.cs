@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyApsSlsADBJobRequest : TeaModel {
         /// <summary>
-        /// <para>The information about columns.</para>
+        /// <para>The column information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;MapName&quot;:&quot;map_name&quot;,&quot;MapType&quot;:&quot;bigint&quot;,&quot;Name&quot;:&quot;test_name&quot;,&quot;Type&quot;:&quot;bigint&quot;}]</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<ModifyApsSlsADBJobRequestColumns> Columns { get; set; }
         public class ModifyApsSlsADBJobRequestColumns : TeaModel {
             /// <summary>
-            /// <para>The name of the mapping.</para>
+            /// <para>The mapped name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>map_name</para>
@@ -32,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MapName { get; set; }
 
             /// <summary>
-            /// <para>The type of the mapping.</para>
+            /// <para>The mapping type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bigint</para>
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MapType { get; set; }
 
             /// <summary>
-            /// <para>The name of the column.</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_name</para>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DirtyDataProcessPattern { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the consistency check.</para>
+        /// <para>Specifies whether exactly-once processing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ExactlyOnce { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account.</para>
+        /// <para>The password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_123</para>
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start offset.</para>
+        /// <para>The starting offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>end_cursor</para>
@@ -149,16 +147,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The timestamp conversion.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Transform&quot;:false}</para>
         /// </summary>
         [NameInMap("UnixTimestampConvert")]
         [Validation(Required=false)]
         public string UnixTimestampConvert { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-name</para>
@@ -168,7 +164,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The ID of the data link task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

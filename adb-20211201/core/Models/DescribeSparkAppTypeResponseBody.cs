@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSparkAppTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why the access was denied.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The type of the Spark application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BATCH</description></item>
-        /// <item><description>SQLENGINE</description></item>
+        /// <item><description>BATCH: batch application.</description></item>
+        /// <item><description>SQLENGINE: SQL engine application.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsSlsADBJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status or POP error code.</para>
+        /// <para>The operation status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidInput</para>
@@ -23,16 +23,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>aps-aa11111aa1aa1a1a</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned by the request. A status code of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -42,10 +40,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the call. Valid values:</para>
+        /// <para>The message returned for the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>Success</b> is returned. </description></item>
-        /// <item><description>If the request failed, the specific error message is returned.</description></item>
+        /// <item><description>If the request is normal, <b>Success</b> is returned. </description></item>
+        /// <item><description>If the request is abnormal, the specific error message is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the precheck. Valid values:</para>
+        /// <para>The precheck result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>success</b>: The check passed.</description></item>
         /// <item><description><b>false</b>: The check failed.</description></item>

@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkAppInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried Spark application. Fields in the response parameter:</para>
+        /// <para>The information about the Spark application. Response parameter description:</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: the data of the Spark application template.</description></item>
-        /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: the amount of time that is required to consume CPU resources for running the Spark application. Unit: milliseconds.</description></item>
-        /// <item><description><b>LogRootPath</b>: the storage path of log files.</description></item>
-        /// <item><description><b>LastAttemptId</b>: the most recent attempt ID.</description></item>
-        /// <item><description><b>WebUiAddress</b>: the web UI URL.</description></item>
-        /// <item><description><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</description></item>
-        /// <item><description><b>StartedTimeInMillis</b>: the time when the Spark application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</description></item>
-        /// <item><description><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</description></item>
-        /// <item><description><b>TerminatedTimeInMillis</b>: the time when the Spark application was terminated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</description></item>
-        /// <item><description><b>DBClusterId</b>: the ID of the cluster on which the Spark application runs.</description></item>
+        /// <item><description><b>Data</b>: the Spark application template data.</description></item>
+        /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: the CPU time consumed to execute the Spark application, in milliseconds.</description></item>
+        /// <item><description><b>LogRootPath</b>: the storage path of the log file.</description></item>
+        /// <item><description><b>LastAttemptId</b>: the retry ID.</description></item>
+        /// <item><description><b>WebUiAddress</b>: the web UI address.</description></item>
+        /// <item><description><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted. The value is a UNIX timestamp in milliseconds.</description></item>
+        /// <item><description><b>StartedTimeInMillis</b>: the time when the Spark application was created. The value is a UNIX timestamp in milliseconds.</description></item>
+        /// <item><description><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated. The value is a UNIX timestamp in milliseconds.</description></item>
+        /// <item><description><b>TerminatedTimeInMillis</b>: the time when the execution of the Spark application was terminated. The value is a UNIX timestamp in milliseconds.</description></item>
+        /// <item><description><b>DBClusterId</b>: the ID of the cluster where the Spark application is executed.</description></item>
         /// <item><description><b>ResourceGroupName</b>: the name of the job resource group.</description></item>
-        /// <item><description><b>DurationInMillis</b>: the amount of time that is required to run the Spark application. Unit: milliseconds.</description></item>
+        /// <item><description><b>DurationInMillis</b>: the execution duration of the Spark application, in milliseconds.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

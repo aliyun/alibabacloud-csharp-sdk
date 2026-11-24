@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListResultExportJobHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The operation status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidInput</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned. A status code of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The queried result set export jobs.</para>
+        /// <para>The list details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListResultExportJobHistoryResponseBodyItems> Items { get; set; }
         public class ListResultExportJobHistoryResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The RAM user ID.</para>
+            /// <para>The ID of the Resource Access Management (RAM) user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120010511678****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The time when the result set export job was created. The time follows the ISO 8601 standard in the <em>yyyy-mm-ddThh:mm:ssZ</em> format. The time is displayed in UTC.</para>
+            /// <para>The time when the result set export task was created. Specify the time in the <i>yyyy-mm-ddThh:mm:ssZ</i> format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-01T09:50:18Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-7xv5ty5m9o4v****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the database account that is associated with the RAM user.</para>
+            /// <para>The name of the database account associated with the Resource Access Management (RAM) user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ram_user</para>
@@ -77,9 +77,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DatabaseUser { get; set; }
 
             /// <summary>
-            /// <para>The end time of the result set export job. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+            /// <para>The end time of the query. Specify the time in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format. The time must be in UTC.</para>
             /// <remarks>
-            /// <para> The end time must be later than the start time.</para>
+            /// <para>The end time must be later than the start time.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The engine that is used to execute the result set export job. Only XIHE is returned.</para>
+            /// <para>The engine used to execute the task. Only XIHE is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>XIHE</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the result set export job.</para>
+            /// <para>The unique identifier of the result set export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>export_2024051319271219802100800401300****</para>
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExportJobId { get; set; }
 
             /// <summary>
-            /// <para>The complete URL of the path to store the exported result set.</para>
+            /// <para>The complete address of the result set.</para>
             /// </summary>
             [NameInMap("ExportPath")]
             [Validation(Required=false)]
             public string ExportPath { get; set; }
 
             /// <summary>
-            /// <para>The number of exported rows. This parameter is returned only when the request was successful.</para>
+            /// <para>The number of exported rows. This parameter is returned only when the operation call is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -127,22 +127,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExportRows { get; set; }
 
             /// <summary>
-            /// <para>The type of the result set export job.</para>
+            /// <para>The export type.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>OSS</para>
             /// </summary>
             [NameInMap("ExportType")]
             [Validation(Required=false)]
             public string ExportType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the result set export job has expired. Valid values:</para>
+            /// <para>Indicates whether the task has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b></description></item>
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>: The task has not expired.</description></item>
+            /// <item><description><b>true</b>: The task has expired.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("IsExpired")]
@@ -150,7 +148,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsExpired { get; set; }
 
             /// <summary>
-            /// <para>The returned message. This parameter is returned only when the request failed.</para>
+            /// <para>The error message of the SQL execution for the result set export. This message is returned only when the task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Failed to execute SQL</para>
@@ -160,9 +158,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The query ID that can be used for diagnostics.</para>
+            /// <para>The SQL query ID returned for diagnostics.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612337.html">DescribeDiagnosisSQLInfo</a> operation to query the execution information about a query.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612495.html">DescribeDiagnosisSQLInfo</a> operation to diagnose the query.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -173,7 +171,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// <para>The progress of the result set export job. Unit: %. Valid values: 0 to 100.</para>
+            /// <para>The export progress. Unit: percentage (%). Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -183,7 +181,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group that runs the result set export job.</para>
+            /// <para>The resource group in which the task is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -203,7 +201,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Schema { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement that is used in the result set export job.</para>
+            /// <para>The details of the SQL statement used in the result set export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM <c>ADB_SampleData_TPCH</c>.<c>supplier</c> LIMIT 20</para>
@@ -213,7 +211,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Sql { get; set; }
 
             /// <summary>
-            /// <para>The start time of the result set export job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-03T04:00:00Z</para>
@@ -223,12 +221,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution status of the result set export job. Valid values:</para>
+            /// <para>The execution status of the export task. Valid values:</para>
             /// <ol>
-            /// <item><description><b>SUBMITTED</b></description></item>
-            /// <item><description><b>RUNNING</b></description></item>
-            /// <item><description><b>SUCCEEDED</b></description></item>
-            /// <item><description><b>FAILED</b></description></item>
+            /// <item><description><b>SUBMITTED</b>: The task is submitted.</description></item>
+            /// <item><description><b>RUNNING</b>: The task is running.</description></item>
+            /// <item><description><b>SUCCEEDED</b>: The task succeeded.</description></item>
+            /// <item><description><b>FAILED</b>: The task failed.</description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -239,9 +237,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The amount of time consumed to export execution records. Unit: milliseconds.</para>
+            /// <para>The time consumed for data export, in milliseconds.</para>
             /// <remarks>
-            /// <para> The value is the duration between the time when the result set export job starts and the time when the result set export job ends.</para>
+            /// <para>The time is calculated from the start of the data export task to the end of the export.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -254,10 +252,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, an <b>OK</b> message is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description><b>Ok</b>: The request is normal.                                </description></item>
+        /// <item><description>Specific error code: An exception occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -268,7 +266,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number, which is the same as the value passed in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -278,7 +276,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -298,10 +296,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -312,7 +310,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>174</para>

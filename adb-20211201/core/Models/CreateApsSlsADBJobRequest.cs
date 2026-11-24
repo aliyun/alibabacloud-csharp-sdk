@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsSlsADBJobRequest : TeaModel {
         /// <summary>
-        /// <para>The role name for cross-account access.</para>
+        /// <para>The cross-account role name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-role</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AcrossRole { get; set; }
 
         /// <summary>
-        /// <para>The UID for cross-account access.</para>
+        /// <para>The cross-account UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -46,9 +46,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;MapName&quot;:&quot;test&quot;,&quot;MapType&quot;:&quot;int&quot;,&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;}]</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The column data type.</para>
+            /// <para>The data type of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bigint</para>
@@ -133,9 +131,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>STOP</para>
         /// </summary>
         [NameInMap("DirtyDataHandleMode")]
         [Validation(Required=false)]
@@ -152,7 +148,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DirtyDataProcessPattern { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable exactly-once semantics.</para>
+        /// <para>Specifies whether exactly-once semantics is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -162,7 +158,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ExactlyOnce { get; set; }
 
         /// <summary>
-        /// <para>The number of AnalyticDB compute units (ACUs) for full data synchronization.</para>
+        /// <para>The full ACUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -184,7 +180,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string HudiAdvancedConfig { get; set; }
 
         /// <summary>
-        /// <para>The number of AnalyticDB compute units (ACUs) for incremental data synchronization.</para>
+        /// <para>The incremental ACUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>168</para>
@@ -194,7 +190,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string IncrementalComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>lakehosue ID。</para>
+        /// <para>The lakehouse ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -204,19 +200,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? LakehouseId { get; set; }
 
         /// <summary>
-        /// <para>The maximum offset.</para>
+        /// <para>The maximum number of offsets per trigger.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>20000</para>
         /// </summary>
         [NameInMap("MaxOffsetsPerTrigger")]
         [Validation(Required=false)]
         public long? MaxOffsetsPerTrigger { get; set; }
 
         /// <summary>
-        /// <para>The OSS address.</para>
+        /// <para>The OSS location.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test*</para>
@@ -241,9 +235,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The partition information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("PartitionSpecs")]
         [Validation(Required=false)]
@@ -314,7 +306,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The starting offset for delivery.</para>
+        /// <para>The starting offset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -325,7 +317,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartingOffsets { get; set; }
 
         /// <summary>
-        /// <para>sls Store。</para>
+        /// <para>The SLS store.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -346,7 +338,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The generation rule for the destination.</para>
+        /// <para>The destination generation rule.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -368,19 +360,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp conversion configuration.</para>
+        /// <para>The UNIX timestamp conversion.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Transform&quot;:false}</para>
         /// </summary>
         [NameInMap("UnixTimestampConvert")]
         [Validation(Required=false)]
         public CreateApsSlsADBJobRequestUnixTimestampConvert UnixTimestampConvert { get; set; }
         public class CreateApsSlsADBJobRequestUnixTimestampConvert : TeaModel {
             /// <summary>
-            /// <para>The conversion method.</para>
+            /// <para>The conversion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false。</para>
@@ -400,7 +390,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable conversion.</para>
+            /// <para>Specifies whether to enable the conversion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

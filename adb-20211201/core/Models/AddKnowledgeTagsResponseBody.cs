@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The number of tags that were successfully updated.</para>
+            /// <para>The number of tags that were successfully modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <para>Specifies whether the request was successful. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: The request was successful.</description></item>
             /// <item><description><b>false</b>: The request failed.</description></item>

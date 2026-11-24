@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The client IP address.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the Type parameter is set to accessip.</para>
+            /// <para>This parameter is returned only when the <b>Type</b> parameter is set to <b>accessip</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AvgCpuTime { get; set; }
 
             /// <summary>
-            /// <para>The average peak memory. Unit: KB.</para>
+            /// <para>The average peak memory usage. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>240048</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AvgPeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The average scan size. Unit: KB.</para>
+            /// <para>The average scanned data size. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>244</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxPeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum scan size. Unit: KB.</para>
+            /// <para>The maximum scanned data size. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The username.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the Type parameter is left empty or set to user.</para>
+            /// <para>This parameter is returned only when the <b>Type</b> parameter is left empty or set to <b>user</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

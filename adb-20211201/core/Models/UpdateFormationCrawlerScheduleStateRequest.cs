@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling state. Valid values:</para>
+        /// <para>The schedule state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>NORMAL: resume.</para>
+        /// <item><description><para>NORMAL: resumes the schedule.</para>
         /// </description></item>
-        /// <item><description><para>DISABLED: pause.</para>
+        /// <item><description><para>DISABLED: pauses the schedule.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

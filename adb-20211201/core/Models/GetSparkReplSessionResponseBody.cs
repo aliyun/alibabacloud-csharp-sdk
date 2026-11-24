@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>Indicates whether the session is active. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: Active.</description></item>
+            /// <item><description>false: Inactive.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Active { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the cluster.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>178157466101****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AliyunUid { get; set; }
 
             /// <summary>
-            /// <para>The attempt ID of the Spark application.</para>
+            /// <para>The retry ID of the Spark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s202301061000hz57d797b00002****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The ID of the session that executes the code.</para>
+            /// <para>The ID of the session for code execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -71,11 +71,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? SessionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the session. Valid values:</para>
+            /// <para>The current session status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>IDLE</description></item>
-            /// <item><description>BUSY</description></item>
-            /// <item><description>DEAD</description></item>
+            /// <item><description>IDLE: The session is idle.</description></item>
+            /// <item><description>BUSY: The session is busy and executing a task.</description></item>
+            /// <item><description>DEAD: The session is closed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The URL of the web UI for the Spark application.</para>
+            /// <para>The Web UI address of the Spark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</para>

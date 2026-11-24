@@ -12,8 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the DescribeDBClusters operation to query the IDs of all clusters in a specified region.
-        /// <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a></para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,40 +24,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the sorting of query results by a specified field. The format is a JSON character string, such as <c>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Parameters:</para>
+        /// <para>Sorts the query results by a specified field. The format is a JSON character string, such as <c>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Parameters:</para>
         /// <list type="bullet">
-        /// <item><description><para>Field: the sorting field. Valid values:</para>
+        /// <item><description><para><c>Field</c>: the sorting field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pattern: SQL pattern.</description></item>
-        /// <item><description>AccessIP: client IP address.</description></item>
-        /// <item><description>User: username.</description></item>
-        /// <item><description>QueryCount: total number of queries.</description></item>
-        /// <item><description>AvgPeakMemory: average peak memory. Unit: KB.</description></item>
-        /// <item><description>MaxPeakMemory: Peak Volume memory. Unit: KB.</description></item>
-        /// <item><description>AvgCpuTime: average computing duration. Unit: milliseconds.</description></item>
-        /// <item><description>MaxCpuTime: maximum computing duration. Unit: milliseconds.</description></item>
-        /// <item><description>AvgStageCount: average number of stages.</description></item>
-        /// <item><description>MaxStageCount: maximum number of stages.</description></item>
-        /// <item><description>AvgTaskCount: average number of tasks.</description></item>
-        /// <item><description>MaxTaskCount: maximum number of tasks.</description></item>
-        /// <item><description>AvgScanSize: average scan size. Unit: KB.</description></item>
-        /// <item><description>MaxScanSize: maximum scan size. Unit: KB.</description></item>
+        /// <item><description><c>Pattern</c>: SQL pattern.</description></item>
+        /// <item><description><c>AccessIP</c>: client IP address.</description></item>
+        /// <item><description><c>User</c>: username.</description></item>
+        /// <item><description><c>QueryCount</c>: total number of queries.</description></item>
+        /// <item><description><c>AvgPeakMemory</c>: average peak memory usage. Unit: KB.</description></item>
+        /// <item><description><c>MaxPeakMemory</c>: Peak Volume memory. Unit: KB.</description></item>
+        /// <item><description><c>AvgCpuTime</c>: average computing duration. Unit: milliseconds.</description></item>
+        /// <item><description><c>MaxCpuTime</c>: maximum computing duration. Unit: milliseconds.</description></item>
+        /// <item><description><c>AvgStageCount</c>: average number of stages.</description></item>
+        /// <item><description><c>MaxStageCount</c>: maximum number of stages.</description></item>
+        /// <item><description><c>AvgTaskCount</c>: average number of tasks.</description></item>
+        /// <item><description><c>MaxTaskCount</c>: maximum number of tasks.</description></item>
+        /// <item><description><c>AvgScanSize</c>: average scanned data size. Unit: KB.</description></item>
+        /// <item><description><c>MaxScanSize</c>: maximum scanned data size. Unit: KB.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Type: the sorting method. Valid values:</para>
+        /// <item><description><para><c>Type</c>: the sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending sorting.</description></item>
-        /// <item><description>Desc: descending sorting.</description></item>
+        /// <item><description><c>Asc</c>: ascending sorting.</description></item>
+        /// <item><description><c>Desc</c>: descending sorting.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If no Settings are specified for this parameter, the results are sorted in ascending order by the Pattern field by default.</description></item>
+        /// <item><description>If the Settings are not specified, the results are sorted in ascending order by the <c>Pattern</c> field by default.</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>To perform sorting by the AccessIP field, you must set the Type parameter to accessip. To perform sorting by the User field, you must leave the Type parameter empty or set it to user.</description></item>
+        /// <item><description>To sort by the <c>AccessIP</c> field, you must set the <c>Type</c> parameter to <c>accessip</c>. To sort by the <c>User</c> field, you must leave the <c>Type</c> parameter empty or set it to <c>user</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: integers greater than 0 and no greater than the maximum value of the Integer type.
+        /// <para>The page number. Valid values: integers greater than 0 and less than or equal to the maximum value of the Integer type.
         /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The keyword that the SQL pattern must contain.</para>
         /// <remarks>
-        /// <para>If this parameter is not specified, the details of all SQL patterns for the cluster on the date specified by the StartTime parameter are returned by default.</para>
+        /// <para>If this parameter is not specified, the details of all SQL patterns for the cluster on the date specified by the <c>StartTime</c> parameter are returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,9 +119,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SqlPattern { get; set; }
 
         /// <summary>
-        /// <para>The start date of the query. The time is in UTC and formatted as yyyy-MM-dd.</para>
+        /// <para>The start date for the query. The time is in UTC and formatted as yyyy-MM-dd.</para>
         /// <remarks>
-        /// <para>You can only query data within the last 30 days.</para>
+        /// <para>Only data from the last 30 days can be queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,13 +132,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Aggregates SQL patterns by a specified dimension. Valid values:</para>
+        /// <para>The dimension by which to aggregate SQL patterns. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>user: aggregates by user.</description></item>
-        /// <item><description>accessip: aggregates by access IP address.</description></item>
+        /// <item><description><c>user</c>: aggregates by user.</description></item>
+        /// <item><description><c>accessip</c>: aggregates by access IP address.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not specified, SQL patterns are aggregated by user by default.</para>
+        /// <para>If this parameter is not specified, SQL patterns are aggregated by the <c>user</c> dimension by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

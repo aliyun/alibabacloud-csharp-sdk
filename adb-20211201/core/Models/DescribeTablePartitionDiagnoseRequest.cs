@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: simplified Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
-        /// <item><description><b>ja</b>: Japanese.</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>ja</b>: Japanese</description></item>
+        /// <item><description><b>zh-tw</b>: Traditional Chinese</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,25 +37,23 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <c>[{&quot;Field&quot;:&quot;TotalSize&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</c>.</para>
+        /// <para>Sorts the query results by a specified field. The value must be a JSON string. Example: <c>[{&quot;Field&quot;:&quot;TotalSize&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</c>. The JSON string contains the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field by which to sort the query results. Valid values:</para>
-        /// <list type="bullet">
+        /// <item><description><c>Field</c>: the field by which to sort the results. Valid values:<list type="bullet">
         /// <item><description><c>SchemaName</c>: the name of the database to which the table belongs.</description></item>
-        /// <item><description><c>TableName</c>: the name of the table.</description></item>
-        /// <item><description><c>TotalSize</c>: the total data size of the table.</description></item>
-        /// <item><description><c>SpaceRatio</c>: the storage percentage of the table.</description></item>
+        /// <item><description><c>TableName</c>: the table name.</description></item>
+        /// <item><description><c>TotalSize</c>: the total data volume.</description></item>
+        /// <item><description><c>SpaceRatio</c>: the storage space proportion.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values:</para>
-        /// <list type="bullet">
+        /// <item><description><c>Type</c>: the sort order. Valid values:<list type="bullet">
         /// <item><description><c>Asc</c>: ascending order.</description></item>
         /// <item><description><c>Desc</c>: descending order.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the query results are sorted by the TotalSize field in descending order.</para>
+        /// <para>If this parameter is not specified, the results are sorted in descending order of the total data volume of the target table by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

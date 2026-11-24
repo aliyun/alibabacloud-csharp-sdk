@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string AuthNodeSpec { get; set; }
 
                 /// <summary>
-                /// <para>The number of insert nodes.</para>
+                /// <para>The number of write nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string InsertNodeNum { get; set; }
 
                 /// <summary>
-                /// <para>The insert node specifications.</para>
+                /// <para>The write node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8ACU</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string InsertNodeSpec { get; set; }
 
                 /// <summary>
-                /// <para>The cache size of the query node.</para>
+                /// <para>The cache size of query nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string SelectNodeSpec { get; set; }
 
                 /// <summary>
-                /// <para>The disk size of the storage node.</para>
+                /// <para>The disk size of storage nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string StorageNodeDiskSize { get; set; }
 
                 /// <summary>
-                /// <para>The disk type of the storage node.</para>
+                /// <para>The disk type of storage nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>essd_pl1</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The minimum elastic compute resources. Unit: ACU.</para>
+            /// <para>The minimum elastic computing resources, in ACUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16ACU</para>
@@ -204,8 +204,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>Specifies whether to enable the spot instance feature for the resource group. After you enable this feature, the unit price of resources decreases, but the instances may be released. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>True</b>: enables the spot instance feature.</description></item>
-            /// <item><description><b>False</b>: disables the spot instance feature.</description></item>
+            /// <item><description><b>True</b>: Enables the spot instance feature.</description></item>
+            /// <item><description><b>False</b>: Disables the spot instance feature.</description></item>
             /// </list>
             /// <para>This parameter can be set to True only for Job resource groups.</para>
             /// 
@@ -228,6 +228,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The engine parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;spark.adb.version&quot;:&quot;3.5&quot;}</para>
             /// </summary>
             [NameInMap("EngineParams")]
             [Validation(Required=false)]
@@ -241,7 +244,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan GpuElasticPlan { get; set; }
             public class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the GPU time-based elastic plan is enabled.</para>
+                /// <para>Specifies whether the plan is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -258,7 +261,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public List<DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules> Rules { get; set; }
                 public class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules : TeaModel {
                     /// <summary>
-                    /// <para>The end time in cron expression format. The interval must be no less than 1 hour.</para>
+                    /// <para>The end time specified by a cron expression. The interval must be at least 1 hour.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 3 * * ?</para>
@@ -268,7 +271,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string EndCronExpression { get; set; }
 
                     /// <summary>
-                    /// <para>The start time in cron expression format. The interval must be no less than 1 hour.</para>
+                    /// <para>The start time specified by a cron expression. The interval must be at least 1 hour.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 2 * * ?</para>
@@ -296,7 +299,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <list type="bullet">
             /// <item><description><b>Interactive</b></description></item>
             /// <item><description><b>Job</b><remarks>
-            /// <para>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
+            /// <para>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups in Data Lakehouse Edition</a>.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -322,14 +325,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The reserved parameter. This parameter is not applicable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Reserved parameter</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MaxClusterCount")]
             [Validation(Required=false)]
             public int? MaxClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum reserved compute resources. Unit: ACU.</para>
+            /// <para>The maximum reserved computing resources, in ACUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>512ACU</para>
@@ -349,7 +352,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? MaxGpuQuantity { get; set; }
 
             /// <summary>
-            /// <para>The message of the job delivery rule.</para>
+            /// <para>The message of the job routing rule.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -363,14 +366,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The reserved parameter. This parameter is not applicable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Reserved parameter</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("MinClusterCount")]
             [Validation(Required=false)]
             public int? MinClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The minimum reserved compute resources. Unit: ACU.</para>
+            /// <para>The minimum reserved computing resources, in ACUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0ACU</para>
@@ -457,7 +460,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string InferenceEngine { get; set; }
 
                         /// <summary>
-                        /// <para>The large language model (LLM).</para>
+                        /// <para>The LLM model.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Deepseek-R1</para>
@@ -471,11 +474,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The Ray cluster type. Valid values:</para>
+                /// <para>The type of the Ray cluster. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>BASIC</b>: the basic type, which is not highly available.</para>
+                /// <item><description><para>BASIC: The basic type. High availability is not supported.</para>
                 /// </description></item>
-                /// <item><description><para><b>HIGH_AVAILABILITY</b>: the high-availability type.</para>
+                /// <item><description><para>HIGH_AVAILABILITY: The high-availability type.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -487,7 +490,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the elastic network interface (ENI).</para>
+                /// <para>Specifies whether to enable ENIs.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>false</c>
@@ -616,7 +619,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The custom Python dependencies for RayCluster. Specify the content in the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are allowed, and each line cannot exceed 512 characters. Version constraints, extras, PEP 440 direct URLs, and # comments are supported, but shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</para>
+                /// <para>The custom Python dependencies for RayCluster. Specify the content in the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are supported, and each line cannot exceed 512 characters. Version constraints, extras, PEP 440 direct URLs, and # comments are supported. Shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>numpy==1.24.0</para>
@@ -683,7 +686,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string WorkerDiskCapacity { get; set; }
 
                     /// <summary>
-                    /// <para>The specification of the worker.</para>
+                    /// <para>The resource specification of the worker.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>large</para>
@@ -707,7 +710,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The job delivery rules.</para>
+            /// <para>The job routing rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -724,7 +727,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for query execution time. Unit: milliseconds.</para>
+                /// <para>The threshold for query execution time, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>180000</para>
@@ -749,7 +752,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The reserved parameter. This parameter is not applicable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Reserved parameter</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("RunningClusterCount")]
             [Validation(Required=false)]

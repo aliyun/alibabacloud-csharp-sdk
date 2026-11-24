@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed.</para>
+        /// <para>Indicates whether the request was processed successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. A value of OK indicates success.</para>
+        /// <para>The returned message. The value is OK if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019F3BE7-E8FA-3DC5-8EE7-501A90B5A54D</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The operation result. A value of true indicates that the task is created.</para>
+        /// <para>The operation result. A value of true indicates that the task was created successfully.</para>
         /// 
         /// <b>Example:</b>
         /// <para>241</para>

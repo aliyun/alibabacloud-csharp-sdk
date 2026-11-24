@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster can be of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
-        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster runs Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the cluster. The cluster runs Data Lakehouse Edition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>AnalyticDB</b> (default): AnalyticDB for MySQL engine</description></item>
-        /// <item><description><b>Clickhouse</b>: wide-table engine</description></item>
+        /// <item><description><b>Clickhouse</b>: wide table engine</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

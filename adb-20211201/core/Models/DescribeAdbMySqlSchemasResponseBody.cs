@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlSchemasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The additional information about the call result. Valid values:</para>
+        /// <para>The additional information about the call result.</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b>: The request is successful. </description></item>
-        /// <item><description>Specific error code: An exception occurred.</description></item>
+        /// <item><description>If the request is successful, <b>Success</b> is returned. </description></item>
+        /// <item><description>If an exception occurs, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

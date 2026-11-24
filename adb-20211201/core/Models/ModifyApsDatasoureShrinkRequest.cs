@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The description of the data source.</para>
+        /// <para>The data source description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the data source.</para>
+        /// <para>The data source name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sls-******</para>
@@ -52,29 +52,27 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// <para>The information about the Kafka instance.</para>
+        /// <para>The Kafka data source information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;KafkaTopic&quot;:&quot;test-topic&quot;}</para>
         /// </summary>
         [NameInMap("KafkaInfo")]
         [Validation(Required=false)]
         public string KafkaInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The lakehouse ID.</para>
+        /// <para>The Lakehouse ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>{&quot;VpcId&quot;:&quot;vpc-******&quot;}</para>
         /// </summary>
         [NameInMap("LakehouseId")]
         [Validation(Required=false)]
         public string LakehouseIdShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameter is no longer supported.</para>
+        /// <para>The deprecated data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PolarDBMysqlInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameter is no longer supported.</para>
+        /// <para>The deprecated data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -109,12 +107,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about Simple Log Service (SLS).</para>
+        /// <para>The Simple Log Service (SLS) information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</para>
         /// </summary>
         [NameInMap("SlsInfo")]
         [Validation(Required=false)]

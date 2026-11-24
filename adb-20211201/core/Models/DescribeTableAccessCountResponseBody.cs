@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AccessCount { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID of the cluster to which the table belongs.</para>
+            /// <para>The ID of the cluster to which the table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-2ze627uzpkh8a8****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The date on which the table was used.</para>
+            /// <para>The date when the table was used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-26</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ReportDate { get; set; }
 
             /// <summary>
-            /// <para>The table name.</para>
+            /// <para>The name of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOMER</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

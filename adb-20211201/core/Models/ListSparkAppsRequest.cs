@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions defined as a JSON-formatted string. The following valid KEY values and their meanings are supported in the JSON string:</para>
+        /// <para>The filter conditions defined as a JSON string. The valid keys and their descriptions are as follows:</para>
         /// <list type="bullet">
         /// <item><description>SubmittedTimeRange: the start time.</description></item>
         /// <item><description>TerminatedTimeRange: the end time.</description></item>
-        /// <item><description>AppStates: the status of the Spark job.</description></item>
+        /// <item><description>AppStates: the state of the Spark job.</description></item>
         /// <item><description>AppId: the ID of the Spark job.</description></item>
         /// <item><description>AppNameRegex: the regular expression for the name of the Spark job.</description></item>
         /// <item><description>Tag: the tag information.</description></item>
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </list>
         /// <para>For the start time and end time filter conditions, specify the range by using the following substructure:</para>
         /// <list type="bullet">
-        /// <item><description>Min: the lower bound of the time range. A value of null indicates no limit.</description></item>
-        /// <item><description>Max: the upper bound of the time range. A value of null indicates no limit.</description></item>
+        /// <item><description>Min: the lower limit of the time range. A value of null indicates no limit.</description></item>
+        /// <item><description>Max: the upper limit of the time range. A value of null indicates no limit.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

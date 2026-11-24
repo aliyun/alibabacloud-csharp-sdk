@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeAdbMySqlColumnsResponseBodyColumns> Columns { get; set; }
         public class DescribeAdbMySqlColumnsResponseBodyColumns : TeaModel {
             /// <summary>
-            /// <para>The column comment.</para>
+            /// <para>The comment of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The additional information about the call result. Valid values:</para>
+        /// <para>The additional information about the call result.</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, <b>Success</b> is returned.</description></item>
+        /// <item><description>If the request is successful, <b>Success</b> is returned. </description></item>
         /// <item><description>If the request fails, a specific error code is returned.</description></item>
         /// </list>
         /// 

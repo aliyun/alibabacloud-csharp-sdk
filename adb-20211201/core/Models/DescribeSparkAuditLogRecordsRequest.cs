@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query cluster IDs.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Query end time. The end time must be later than the start time, and the interval between them must be less than 1 day. Format: yyyy-MM-ddTHH:mmZ (UTC time).</para>
+        /// <para>The end time of the query. The end time must be later than the start time, and the interval between the start time and the end time must be less than one day.
+        /// Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-09-25T01:00Z</para>
@@ -46,24 +47,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Sort the SQL statements based on specified fields. The format is a JSON array that preserves order, and composite sorting is performed according to the sequence of objects in the array. Each object contains two fields: <c>Field</c> and <c>Type</c>. For example:<c>[{&quot;Field&quot;:&quot;CreateTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</c>. Where:</para>
+        /// <para>The sorting rule for SQL statements based on specified fields. The value is a JSON array that specifies composite sorting in the order of the input array. The array contains the <c>Field</c> and <c>Type</c> fields. Example: <c>[{&quot;Field&quot;:&quot;TotalTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field that is used to sort the SQL statements. Valid values:</para>
+        /// <item><description><para><c>Field</c>: the name of the field to sort by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ResourceGroupName</c>: The name of the resource group.</description></item>
-        /// <item><description><c>Status</c> :SQL execution status.</description></item>
-        /// <item><description><c>User</c>: The username that is used to execute the SQL statement.</description></item>
-        /// <item><description><c>ExecuteTime</c>: The start time of SQL execution.</description></item>
-        /// <item><description><c>TotalTime</c>: The amount of time consumed to execute the SQL statement.</description></item>
-        /// <item><description><c>ProcessId</c>: Query ID.</description></item>
-        /// <item><description><c>ClientIp</c>: The source IP address.</description></item>
-        /// <item><description><c>StatementSource</c>: The source from which the query was initiated.</description></item>
+        /// <item><description><c>ResourceGroupName</c>: the name of the resource group.</description></item>
+        /// <item><description><c>Status</c>: the execution status of the SQL statement.</description></item>
+        /// <item><description><c>User</c>: the username that executed the SQL statement.</description></item>
+        /// <item><description><c>ExecuteTime</c>: the start time of the SQL execution.</description></item>
+        /// <item><description><c>TotalTime</c>: the execution duration of the SQL statement.</description></item>
+        /// <item><description><c>ProcessId</c>: the query ID.</description></item>
+        /// <item><description><c>ClientIp</c>: the source IP address.</description></item>
+        /// <item><description><c>StatementSource</c>: the source from which the query is initiated.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values (case-insensitive):</para>
+        /// <item><description><para><c>Type</c>: the sorting type. Valid values (case-insensitive):</para>
         /// <list type="bullet">
-        /// <item><description><c>Desc</c>: Descending order.</description></item>
-        /// <item><description><c>Asc</c>: Ascending order.</description></item>
+        /// <item><description><c>Desc</c>: descending order.</description></item>
+        /// <item><description><c>Asc</c>: ascending order.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProcessId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -126,7 +127,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to query the available regions and zones, including region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612293.html">DescribeRegions</a> operation to view the regions and zones supported by AnalyticDB for MySQL, including region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -138,9 +139,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group name.</para>
+        /// <para>The name of the resource group.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the resource group ID within a cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to view the resource group ID of the cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -169,9 +170,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SQLText { get; set; }
 
         /// <summary>
-        /// <para>Query start time. Format: <em>yyyy-MM-ddTHH:mmZ</em> (UTC time).</para>
+        /// <para>The start time of the query. Format: <i>yyyy-MM-ddTHH:mmZ</i> (UTC).</para>
         /// <remarks>
-        /// <para> We recommend that you set the query start time to any point in time within 30 days.</para>
+        /// <para>Set the start time to a point in time within the last 30 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -182,7 +183,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the statement.</para>
+        /// <para>The statement ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fbd22066-1c03-xxxx-aa16-6ae28288****</para>
@@ -192,12 +193,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StatementId { get; set; }
 
         /// <summary>
-        /// <para>The source from which the query was initiated.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SQL_EDITOR: SQL_EDITOR.</description></item>
-        /// <item><description>JDBC: JDBC.</description></item>
-        /// </list>
+        /// <para>The source from which the query is initiated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL_EDITOR</para>
@@ -208,13 +204,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The execution status of the SQL statement.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cancel: The task is canceled .</description></item>
-        /// <item><description>finished: The execution succeeds .</description></item>
-        /// <item><description>error:The execution fails .</description></item>
-        /// <item><description>timeout: The execution timed out .</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>finish</para>
@@ -224,7 +213,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The duration of the SQL statement. Unit: milliseconds.</para>
+        /// <para>The execution duration of the SQL statement. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -234,7 +223,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TotalTime { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to execute SQL statements.</para>
+        /// <para>The username that executed the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_user</para>

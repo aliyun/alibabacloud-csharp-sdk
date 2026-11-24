@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>指标检测</para>
+            /// <para>Metric detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -54,24 +54,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public DescribeWorkerDetectionResponseBodyDetectionItemsResults Results { get; set; }
             public class DescribeWorkerDetectionResponseBodyDetectionItemsResults : TeaModel {
                 /// <summary>
-                /// <para>The aggregated operator metric detection results.</para>
+                /// <para>The aggregation detection result of operator metrics.</para>
                 /// </summary>
                 [NameInMap("OperatorAgg")]
                 [Validation(Required=false)]
                 public List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorAgg> OperatorAgg { get; set; }
                 public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorAgg : TeaModel {
                     /// <summary>
-                    /// <para>The name of the aggregated operator metric detection item.</para>
+                    /// <para>The name of the aggregation detection item for operator metrics.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>峰值内存</para>
+                    /// <para>Peak memory</para>
                     /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]
                     public string MetricName { get; set; }
 
                     /// <summary>
-                    /// <para>The collection of aggregated operator metric search results.</para>
+                    /// <para>The collection of search results for aggregated operator metrics.</para>
                     /// </summary>
                     [NameInMap("SearchResults")]
                     [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? OperatorCount { get; set; }
 
                         /// <summary>
-                        /// <para>The operator name.</para>
+                        /// <para>The name of the operator.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Aggregation</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string OperatorName { get; set; }
 
                         /// <summary>
-                        /// <para>The cumulative value of the operator metric.</para>
+                        /// <para>The accumulated value of the operator metric.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetails> OperatorDetails { get; set; }
                 public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetails : TeaModel {
                     /// <summary>
-                    /// <para>The metric name.</para>
+                    /// <para>The name of the metric.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PeakMemory</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults> SearchResults { get; set; }
                     public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorDetailsSearchResults : TeaModel {
                         /// <summary>
-                        /// <para>The number of input rows of the operator.</para>
+                        /// <para>The number of input rows for the operator.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? InputRows { get; set; }
 
                         /// <summary>
-                        /// <para>The input data size of the operator. Unit: bytes.</para>
+                        /// <para>The amount of input data for the operator. Unit: bytes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? InputSize { get; set; }
 
                         /// <summary>
-                        /// <para>The total operator duration within the stage, which is equivalent to the CPU time of the stage. You can use this value to determine which parts of the query consume more compute resources. Unit: ms.</para>
+                        /// <para>The total operator duration within the stage, which is equivalent to the CPU time of the stage. This metric can be actively used to determine which parts of the query consume the most compute resources. Unit: milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>23</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? OperatorCost { get; set; }
 
                         /// <summary>
-                        /// <para>The operator property information.</para>
+                        /// <para>The property information of the operator.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Group By field: id</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string OperatorInfo { get; set; }
 
                         /// <summary>
-                        /// <para>The operator name.</para>
+                        /// <para>The name of the operator.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TableScan</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string OperatorName { get; set; }
 
                         /// <summary>
-                        /// <para>The number of output rows of the operator.</para>
+                        /// <para>The number of output rows for the operator.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? OutputRows { get; set; }
 
                         /// <summary>
-                        /// <para>The output data size of the operator. Unit: bytes.</para>
+                        /// <para>The amount of output data for the operator. Unit: bytes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? PeakMemory { get; set; }
 
                         /// <summary>
-                        /// <para>The SQL query ID, which can be used for diagnostics.</para>
+                        /// <para>The SQL query ID returned for diagnostics.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2024041909301402103302422803151411141</para>
@@ -260,14 +260,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The collection of tables with unreasonable partitions.</para>
+                /// <para>The list of tables with improper partitions.</para>
                 /// </summary>
                 [NameInMap("PartitionedTables")]
                 [Validation(Required=false)]
                 public List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsPartitionedTables> PartitionedTables { get; set; }
                 public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsPartitionedTables : TeaModel {
                     /// <summary>
-                    /// <para>The CREATE TABLE statement.</para>
+                    /// <para>The table creation statement.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>create table test(id varchar)</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string PartitionCount { get; set; }
 
                     /// <summary>
-                    /// <para>The IDs of unreasonable partitions.</para>
+                    /// <para>The IDs of the improper partitions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[2024,2025]</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string PartitionIds { get; set; }
 
                     /// <summary>
-                    /// <para>The database name.</para>
+                    /// <para>The name of the database.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nxg</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string SchemaName { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>zhw_place_order</para>
@@ -329,14 +329,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The table skew detection results.</para>
+                /// <para>The table skew detection.</para>
                 /// </summary>
                 [NameInMap("SkewedTables")]
                 [Validation(Required=false)]
                 public List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsSkewedTables> SkewedTables { get; set; }
                 public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsSkewedTables : TeaModel {
                     /// <summary>
-                    /// <para>The CREATE TABLE statement.</para>
+                    /// <para>The table creation statement.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>create table test(id varchar)</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public int? PartitionCount { get; set; }
 
                     /// <summary>
-                    /// <para>The database name.</para>
+                    /// <para>The name of the database.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>platfunc</para>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string ShardSkewedRows { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sls_log_cheat_action</para>
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public long? TotalDataSize { get; set; }
 
                     /// <summary>
-                    /// <para>The local data size. Unit: bytes.</para>
+                    /// <para>The size of local data. Unit: bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2345</para>
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string TotalLocalDataSize { get; set; }
 
                     /// <summary>
-                    /// <para>The total primary key data size of the table. Unit: bytes.</para>
+                    /// <para>The data size of the primary key in the table. Unit: bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>234</para>
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public long? TotalPkSize { get; set; }
 
                     /// <summary>
-                    /// <para>The cold data size. Unit: bytes.</para>
+                    /// <para>The size of cold data. Unit: bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>234</para>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public List<DescribeWorkerDetectionResponseBodyDetectionItemsResultsTopAccessTablesSearchResults> SearchResults { get; set; }
                     public class DescribeWorkerDetectionResponseBodyDetectionItemsResultsTopAccessTablesSearchResults : TeaModel {
                         /// <summary>
-                        /// <para>The number of times the table was accessed.</para>
+                        /// <para>The number of times the table is accessed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1111</para>
@@ -472,7 +472,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? AccessCount { get; set; }
 
                         /// <summary>
-                        /// <para>The average scan duration. Unit: ms.</para>
+                        /// <para>The average scan duration. Unit: milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>234</para>
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public double? AvgScanCost { get; set; }
 
                         /// <summary>
-                        /// <para>The average table read size. Unit: bytes.</para>
+                        /// <para>The average amount of data read from the table. Unit: bytes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>234</para>
@@ -492,7 +492,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public double? AvgScanSize { get; set; }
 
                         /// <summary>
-                        /// <para>The maximum scan duration. Unit: ms.</para>
+                        /// <para>The maximum scan duration. Unit: milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>345</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? MaxScanCost { get; set; }
 
                         /// <summary>
-                        /// <para>The maximum data read size. Unit: bytes.</para>
+                        /// <para>The maximum amount of data read. Unit: bytes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2345</para>
@@ -512,7 +512,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public long? MaxScanSize { get; set; }
 
                         /// <summary>
-                        /// <para>The table name.</para>
+                        /// <para>The name of the table.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>tiberias_2copt_origin_order_goods_info</para>
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The detection result status. Valid values:</para>
+            /// <para>The status of the detection result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NORMAL</description></item>
             /// <item><description>WARNING</description></item>

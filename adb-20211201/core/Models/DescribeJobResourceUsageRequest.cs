@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</para>
+        /// <para>The end time of the query, which must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

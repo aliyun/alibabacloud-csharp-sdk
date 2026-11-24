@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of AnalyticDB for MySQL clusters in a specific region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the ID of an AnalyticDB for MySQL cluster in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,12 +24,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The language of the file title and error messages in the downloaded file. Valid values:</para>
+        /// <para>The language of the downloaded file title and some error messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: simplified Chinese.</description></item>
+        /// <item><description><b>zh</b>: Simplified Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// <item><description><b>ja</b>: Japanese.</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// <item><description><b>zh-tw</b>: Traditional Chinese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProcessId { get; set; }
 
         /// <summary>
-        /// <para>The IP address and port number of the AnalyticDB for MySQL frontend node that executes the SQL statement.</para>
+        /// <para>The IP address and port of the AnalyticDB for MySQL frontend node that executes the SQL statement.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the IP address and port number of the frontend node.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the IP address and port of the frontend node.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProcessRcHost { get; set; }
 
         /// <summary>
-        /// <para>The start time of the SQL statement execution. Specify the value as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the SQL statement execution. The time is a UNIX timestamp in milliseconds.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the start time of the SQL statement execution.</para>
         /// </remarks>
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The status of the SQL statement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>running</b>: The SQL statement is being executed.</description></item>
-        /// <item><description><b>finished</b>: The SQL statement has been executed.</description></item>
-        /// <item><description><b>failed</b>: The SQL statement failed to be executed.<remarks>
+        /// <item><description><b>running</b>: Running.</description></item>
+        /// <item><description><b>finished</b>: Finished.</description></item>
+        /// <item><description><b>failed</b>: Failed.<remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/308207.html">DescribeDiagnosisRecords</a> operation to query the SQL summary information of a specific AnalyticDB for MySQL cluster, including the status of the SQL statement.</para>
         /// </remarks>
         /// </description></item>

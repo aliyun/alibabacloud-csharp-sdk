@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom-All metrics-2 columns-Linked</para>
+        /// <para>自定义-全部指标-2列-联动</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

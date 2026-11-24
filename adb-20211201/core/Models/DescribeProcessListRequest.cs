@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeProcessListRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID of the AnalyticDB for MySQL Data Lakehouse Edition.</para>
+        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view details of all AnalyticDB for MySQL Data Lakehouse Edition clusters in the destination region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL Data Lakehouse Edition clusters in a specified region, including cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Filter keyword. Currently, only <b>SELECT</b> is supported.</para>
+        /// <para>The filter keyword. Only <b>SELECT</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT</para>
@@ -34,12 +34,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Sort by the specified field in JSON format, <c>[{&quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },{ &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</c>. Values:</para>
+        /// <para>The sorting rule in JSON format. Example: <c>[{&quot;Field&quot;:&quot;Time&quot;,&quot;Type&quot;:&quot;Desc&quot; },{ &quot;Field&quot;:&quot;User&quot;, &quot;Type&quot;:&quot;Asc&quot; }]</c>. Parameters:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Field</b>: The name of the field to sort by. Supports Time, User, Host, and DB fields.</para>
-        /// </description></item>
-        /// <item><description><para><b>Type</b>: Sort type. <b>Desc</b> for descending order, <b>Asc</b> for ascending order.</para>
-        /// </description></item>
+        /// <item><description><b>Field</b>: The field name used for sorting. Valid values: Time, User, Host, and DB.</description></item>
+        /// <item><description><b>Type</b>: The sort order. Valid values: <b>Desc</b> (descending) and <b>Asc</b> (ascending).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Page number. Must be a positive integer. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,14 +66,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page. Values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default value)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +89,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Filter by running time. Displays queries that have run longer than the specified time. Unit: seconds.</para>
+        /// <para>Filters queries by runtime and displays only queries whose runtime exceeds the specified value. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -104,12 +99,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? RunningTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the full SQL statement. Values:</para>
+        /// <para>Specifies whether to display the full SQL statement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>True</b>: Displays the full SQL statement.</para>
-        /// </description></item>
-        /// <item><description><para><b>False</b>: Displays only the first 100 characters of the SQL statement.</para>
-        /// </description></item>
+        /// <item><description><b>True</b>: Displays the full SQL statement.</description></item>
+        /// <item><description><b>False</b>: Displays only the first 100 characters of the SQL statement.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: False.</para>

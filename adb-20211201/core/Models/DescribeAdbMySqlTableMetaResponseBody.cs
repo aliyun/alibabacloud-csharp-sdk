@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlTableMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a success message is returned.****</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description><b>Success</b>: The request is successful. </description></item>
+        /// <item><description>Specific error code: The request is abnormal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The queried table metadata.</para>
+        /// <para>The table metadata.</para>
         /// </summary>
         [NameInMap("TableMeta")]
         [Validation(Required=false)]
         public DescribeAdbMySqlTableMetaResponseBodyTableMeta TableMeta { get; set; }
         public class DescribeAdbMySqlTableMetaResponseBodyTableMeta : TeaModel {
             /// <summary>
-            /// <para>The time when the table was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-14 02:18:08.0</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DistributeType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether full-column indexes are used.</para>
+            /// <para>Indicates whether full indexing is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsAllIndex { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether dictionary encoding is used.</para>
+            /// <para>Indicates whether dictionary encoding is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsDictEncode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether full-text indexes are used.</para>
+            /// <para>Indicates whether full-text indexing is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsFullTextDict { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether pages are hidden.</para>
+            /// <para>Indicates whether the page is hidden. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b></description></item>
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>: The page is not hidden.</description></item>
+            /// <item><description><b>true</b>: The page is hidden.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? IsHidden { get; set; }
 
             /// <summary>
-            /// <para>The partition key column.</para>
+            /// <para>The partition column information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DATE_FORMAT(login_time, \&quot;%Y%m%d\&quot;)</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionColumn { get; set; }
 
             /// <summary>
-            /// <para>The type of the partition.</para>
+            /// <para>The partition type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -170,8 +170,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The name of the table.</para>
-            /// <para>**</para>
-            /// <hr>
+            /// <remarks>
+            /// <para>If this parameter is left empty, the usage frequency data of all tables in the specified cluster on the current day is returned.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>external_supplier</para>
@@ -201,7 +202,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableType { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-25 02:07:23.0</para>

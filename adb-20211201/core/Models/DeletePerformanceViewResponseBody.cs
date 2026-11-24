@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>SUCCESS</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("DeleteStatus")]
         [Validation(Required=false)]

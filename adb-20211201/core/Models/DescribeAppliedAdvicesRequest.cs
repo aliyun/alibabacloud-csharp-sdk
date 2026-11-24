@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAppliedAdvicesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the advice. Valid values:</para>
+        /// <para>The type of the suggestion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>INDEX</b>: index optimization</para>
-        /// </description></item>
-        /// <item><description><para><b>TIERING</b>: hot/cold data optimization</para>
-        /// </description></item>
+        /// <item><description><b>INDEX</b>: Index optimization.</description></item>
+        /// <item><description><b>TIERING</b>: Hot and cold data optimization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end date of the query. The date is in the <c>yyyyMMdd</c> format.</para>
+        /// <para>The end date for querying suggestions, in the yyyyMMdd format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20220824</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the query. Fuzzy match by table name is supported.</para>
+        /// <para>The query keyword. Fuzzy search by table name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>you_table_name</para>
@@ -57,16 +55,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language of the query results. Valid values:</para>
+        /// <para>The display language for the suggestions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
-        /// <item><description><para><b>ja</b>: Japanese</para>
-        /// </description></item>
-        /// <item><description><para><b>zh-tw</b>: Traditional Chinese</para>
-        /// </description></item>
+        /// <item><description><b>zh</b>: Simplified Chinese (default).</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>ja</b>: Japanese.</description></item>
+        /// <item><description><b>zh-tw</b>: Traditional Chinese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,33 +71,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort the query results. The value is a JSON string. Example: <c>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Fields:</para>
+        /// <para>The field by which to sort the query results. The value is a JSON string, such as [{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}].</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c>: The field by which to sort the results. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>SchemaName</c>: the database name</para>
-        /// </description></item>
-        /// <item><description><para><c>TableName</c>: the table name</para>
-        /// </description></item>
-        /// <item><description><para><c>JobStatus</c>: the status of the build job for the table</para>
-        /// </description></item>
-        /// <item><description><para><c>SubmitTime</c>: the time when the advice was submitted</para>
-        /// </description></item>
-        /// <item><description><para><c>Benefit</c>: the estimated benefit</para>
-        /// </description></item>
+        /// <item><description><c>Field</c>: the sort field. Valid values:<list type="bullet">
+        /// <item><description><c>SchemaName</c>: the database name.</description></item>
+        /// <item><description><c>TableName</c>: the table name.</description></item>
+        /// <item><description><c>JobStatus</c>: the status of the table build task.</description></item>
+        /// <item><description><c>SubmitTime</c>: the time when the suggestion was issued.</description></item>
+        /// <item><description><c>Benefit</c>: the expected optimization benefit.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c>: The sort order. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>Asc</c>: ascending</para>
-        /// </description></item>
-        /// <item><description><para><c>Desc</c>: descending</para>
-        /// </description></item>
+        /// <item><description><c>Type</c>: the sort order. Valid values:<list type="bullet">
+        /// <item><description><c>Asc</c>: ascending order.</description></item>
+        /// <item><description><c>Desc</c>: descending order.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not set this parameter, the query results are sorted by advice submission time in descending order.</para>
+        /// <para>If this parameter is not specified, the results are sorted in descending order by the time when the optimization suggestions were issued.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,7 +99,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than 0. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and no more than the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -124,14 +109,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +135,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database and table. Format: <b>database.table</b>.</para>
+        /// <para>The database name and table name. Format: <b>database.table</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tpch.lineitem</para>
@@ -163,7 +145,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaTableName { get; set; }
 
         /// <summary>
-        /// <para>The start date of the query. The date is in the <c>yyyyMMdd</c> format.</para>
+        /// <para>The start date for querying suggestions, in the yyyyMMdd format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20220811</para>

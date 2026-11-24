@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The application ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query the ID of the Spark application.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query the Spark application ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

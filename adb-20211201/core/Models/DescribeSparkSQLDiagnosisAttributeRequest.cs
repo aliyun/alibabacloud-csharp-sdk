@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The cluster ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the information of all clusters in the specified region, including cluster IDs.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the information of all clusters in the specified region, including the cluster ID.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? InnerQueryId { get; set; }
 
         /// <summary>
-        /// <para>The language type. The description of the system access policy is returned in this language.</para>
+        /// <para>The language type. The description of the system access policy is returned in this language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>en: English.</description></item>
         /// <item><description>zh: Chinese.</description></item>

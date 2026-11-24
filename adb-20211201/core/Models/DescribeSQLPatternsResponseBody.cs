@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSQLPatternsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial. This field is returned only when RAM authentication fails.</para>
+        /// <para>The details of the access denial. This field is returned only when the RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of patterns.</para>
+        /// <para>The list.</para>
         /// </summary>
         [NameInMap("PatternDetails")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AccessIp { get; set; }
 
             /// <summary>
-            /// <para>The average execution time of the pattern within the specified time range. Unit: milliseconds.</para>
+            /// <para>The average execution duration of the pattern within the specified time range. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234.78</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? AveragePeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The average total time consumed by the pattern within the specified time range. Unit: milliseconds.</para>
+            /// <para>The average total duration of the pattern within the specified time range. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? AverageQueryTime { get; set; }
 
             /// <summary>
-            /// <para>The average scan time.</para>
+            /// <para>The average scan duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Blockable { get; set; }
 
             /// <summary>
-            /// <para>The number of failed executions of the pattern within the specified time range.</para>
+            /// <para>The number of failures of the pattern within the specified time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum execution time of the pattern within the specified time range. Unit: milliseconds.</para>
+            /// <para>The maximum execution duration of the pattern within the specified time range. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2142</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? MaxOperatorCost { get; set; }
 
             /// <summary>
-            /// <para>The maximum peak memory usage for the SQL statement related to the pattern. Unit: bytes.</para>
+            /// <para>The maximum peak memory for the SQL statement related to the pattern. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234149</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? MaxPeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum total time consumed by the pattern within the specified time range. Unit: milliseconds.</para>
+            /// <para>The maximum total duration of the pattern within the specified time range. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? MaxQueryTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum scan time.</para>
+            /// <para>The maximum scan duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PatternCreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SQL pattern.</para>
+            /// <para>The ID of the SQL pattern statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5575924945138******</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? QueryCount { get; set; }
 
             /// <summary>
-            /// <para>The percentage of the time consumed by a single pattern within the query time range out of the total time consumed by all patterns. Unit: %.</para>
+            /// <para>The percentage of the total duration of a single pattern within the query time range out of the total duration of all patterns. Unit: %.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? QueryTimePercentage { get; set; }
 
             /// <summary>
-            /// <para>The total time consumed. Unit: milliseconds.</para>
+            /// <para>The total duration. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? QueryTimeSum { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement of the pattern.</para>
+            /// <para>The SQL pattern statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM KEPLER_META_NODE_STATIC_INFO WHERE elastic_node = ? OR (elastic_node = ? AND enable = ?)</para>

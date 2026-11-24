@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The application ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the session that executes the code.</para>
+        /// <para>The ID of the session for code execution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

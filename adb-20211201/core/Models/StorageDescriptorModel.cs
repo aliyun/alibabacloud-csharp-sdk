@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class StorageDescriptorModel : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the storage description is compressed.</para>
+        /// <para>Specifies whether the data is compressed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Compressed { get; set; }
 
         /// <summary>
-        /// <para>The input format of the storage description.</para>
+        /// <para>The input format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string InputFormat { get; set; }
 
         /// <summary>
-        /// <para>The location of the storage description.</para>
+        /// <para>The storage location.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://**************</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? NumBuckets { get; set; }
 
         /// <summary>
-        /// <para>The output format of the storage description.</para>
+        /// <para>The output format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</para>
@@ -60,14 +60,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OutputFormat { get; set; }
 
         /// <summary>
-        /// <para>The storage configuration parameter.</para>
+        /// <para>The storage configuration parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, string> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The ID of the storage description.</para>
+        /// <para>The storage ID of the description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,14 +80,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? SdId { get; set; }
 
         /// <summary>
-        /// <para>The information about serialization or deserialization.</para>
+        /// <para>The serialization and deserialization sequence information.</para>
         /// </summary>
         [NameInMap("SerDeInfo")]
         [Validation(Required=false)]
         public SerDeInfoModel SerDeInfo { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the storage description is stored in subdirectories.</para>
+        /// <para>Specifies whether the data is stored in subdirectories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

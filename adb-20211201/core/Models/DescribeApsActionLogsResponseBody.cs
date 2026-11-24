@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsActionLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the request denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The queried logs.</para>
+        /// <para>The list of logs.</para>
         /// </summary>
         [NameInMap("ActionLogs")]
         [Validation(Required=false)]
         public List<DescribeApsActionLogsResponseBodyActionLogs> ActionLogs { get; set; }
         public class DescribeApsActionLogsResponseBodyActionLogs : TeaModel {
             /// <summary>
-            /// <para>The content of the log.</para>
+            /// <para>The log content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DDL migration job finished</para>
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Context { get; set; }
 
             /// <summary>
-            /// <para>The phase during which the log was generated. Valid values:</para>
+            /// <para>The task stage. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>StructureMigrate</b>: schema migration.</description></item>
-            /// <item><description><b>FullDataSync</b>: full data synchronization.</description></item>
-            /// <item><description><b>IncrementalSync</b>: incremental data synchronization.</description></item>
+            /// <item><description><b>StructureMigrate</b>: Schema migration.</description></item>
+            /// <item><description><b>FullDataSync</b>: Full data synchronization.</description></item>
+            /// <item><description><b>IncrementalSync</b>: Incremental data synchronization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Stage { get; set; }
 
             /// <summary>
-            /// <para>The type of the log. Multiple log types are separated by commas (,). Valid values:</para>
+            /// <para>The log type. Separate multiple log types with commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INFO</b></description></item>
-            /// <item><description><b>WARN</b></description></item>
-            /// <item><description><b>ERROR</b></description></item>
+            /// <item><description><b>INFO</b>: Information.</description></item>
+            /// <item><description><b>WARN</b>: Warning.</description></item>
+            /// <item><description><b>ERROR</b>: Error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was generated. The time follows the ISO 8601 standard in the <b>yyyy-MM-ddTHH:mm:ssZ</b> format. The time is displayed in UTC.</para>
+            /// <para>The log time. The time is in the <b>yyyy-MM-ddTHH:mm:ssZ</b> format and must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-01T05:46:30Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-bp1r053byu48p****</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the real-time data ingestion job.</para>
+        /// <para>The ID of the data link task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aps-hz109vpvt4fg8528d****</para>

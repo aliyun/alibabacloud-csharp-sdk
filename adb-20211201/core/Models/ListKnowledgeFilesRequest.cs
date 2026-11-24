@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListKnowledgeFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The ADB instance ID.</para>
+        /// <para>The ID of the ADB instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileIds { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. If this parameter is not specified, the default value is 1.</para>
+        /// <para>The URL of the knowledge base file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://bucket_name/path/to/file</para>
+        /// </summary>
+        [NameInMap("FileLocation")]
+        [Validation(Required=false)]
+        public string FileLocation { get; set; }
+
+        /// <summary>
+        /// <para>The page number. Pages start from 1. If you do not specify this parameter, the default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +51,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. If this parameter is not specified, the default value is 20.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. If you do not specify this parameter, the default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The stable ID of the authorized user. If this parameter is not specified, all files in the knowledge base can be queried.</para>
+        /// <para>The stable ID of the authorized user. If you do not specify this parameter, all files in the knowledge base can be queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>u123</para>

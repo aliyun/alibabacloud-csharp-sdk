@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class UpdateLakeStorageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster that is associated with the lake storage.</para>
+        /// <para>The ADB instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-*******</para>
@@ -33,21 +33,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The unique identifier of the lake storage.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>adb-lake-cn-hangzhou-1a1aaaa11a</para>
         /// </summary>
         [NameInMap("LakeStorageId")]
         [Validation(Required=false)]
         public string LakeStorageId { get; set; }
 
         /// <summary>
-        /// <para>The permissions on the lake storage.</para>
+        /// <para>The permissions of the lake storage.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Type&quot;:&quot;User&quot;,&quot;Write&quot;:true}]</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -58,14 +54,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>1234567890123456</para>
             /// </summary>
             [NameInMap("Account")]
             [Validation(Required=false)]
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>The read permissions.</para>
+            /// <para>The read permission.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -80,14 +76,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SUB</para>
+            /// <para>User</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The write permissions.</para>
+            /// <para>The write permission.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

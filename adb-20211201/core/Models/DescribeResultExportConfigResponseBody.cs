@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeResultExportConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>API status or POP error code.</para>
+        /// <para>The operation status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidInput</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The export type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SLS: Indicates that the export destination is SLS.</description></item>
-            /// <item><description>OSS: Indicates that the export destination is OSS.</description></item>
+            /// <item><description>SLS: The export destination is SLS.</description></item>
+            /// <item><description>OSS: The export destination is OSS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExportType { get; set; }
 
             /// <summary>
-            /// <para>The configured OSS export settings, returned when the export destination is OSS.</para>
+            /// <para>The OSS information when the export type is OSS.</para>
             /// </summary>
             [NameInMap("OssInfo")]
             [Validation(Required=false)]
             public DescribeResultExportConfigResponseBodyDataOssInfo OssInfo { get; set; }
             public class DescribeResultExportConfigResponseBodyDataOssInfo : TeaModel {
                 /// <summary>
-                /// <para>The path of the OSS bucket to which the result sets are exported.</para>
+                /// <para>The OSS path where the export results are stored.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss://testBucketName/data_result</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ExportBasePath { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group that runs the export SQL.</para>
+                /// <para>The name of the resource group in which the export SQL statement is executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aps</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ResourceGroup { get; set; }
 
                 /// <summary>
-                /// <para>The expiration period (in days) for the OSS file. The returned value is between 1 and 30 days (inclusive).</para>
+                /// <para>The expiration time of the OSS files. Unit: days. Minimum value: 1. Maximum value: 30.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The configured SLS export settings, returned when the export destination is SLS.</para>
+            /// <para>The SLS configurations when the export type is SLS.</para>
             /// </summary>
             [NameInMap("SlsInfo")]
             [Validation(Required=false)]
             public DescribeResultExportConfigResponseBodyDataSlsInfo SlsInfo { get; set; }
             public class DescribeResultExportConfigResponseBodyDataSlsInfo : TeaModel {
                 /// <summary>
-                /// <para>The expiration period (in days) for the temporary Logstore automatically created during result set export. The Logstore is automatically deleted after expiration. The returned value is between 1 and 30 days (inclusive).</para>
+                /// <para>The expiration time of the temporarily generated Logstore for result set export. Unit: days. The Logstore is automatically deleted after it expires. Minimum value: 1. Maximum value: 30.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? LogstoreTtl { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group that runs the export SQL.</para>
+                /// <para>The name of the resource group in which the export SQL statement is executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aps</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The HTTP response status code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned. A status code of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -131,10 +131,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The message returned for the call result.</para>
         /// <list type="bullet">
-        /// <item><description>The request succeeded, and the server returns <b>OK</b>.</description></item>
-        /// <item><description>The request failed, and the server returns an error message.</description></item>
+        /// <item><description>If the request is successful, <b>OK</b> is returned. </description></item>
+        /// <item><description>If an exception occurs, the specific error message is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -155,10 +155,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values: Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True: Succeeded.</b></description></item>
-        /// <item><description>**False: Failed.</description></item>
+        /// <item><description><b>True</b>: The request is successful.</description></item>
+        /// <item><description><b>False</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

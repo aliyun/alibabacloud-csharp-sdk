@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information about the call result.</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>If the request is normal, OK is returned.</description></item>
         /// <item><description>If an exception occurs, a specific error code is returned.</description></item>
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

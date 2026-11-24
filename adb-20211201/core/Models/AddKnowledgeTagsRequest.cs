@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class AddKnowledgeTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The database cluster ID.</para>
+        /// <para>The ID of the database cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21321</para>
         /// </summary>

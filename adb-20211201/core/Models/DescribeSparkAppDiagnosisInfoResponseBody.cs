@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSparkAppDiagnosisInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the request denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The application ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query all application IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The CPU utilization. Unit: %.</para>
+        /// <para>The CPU utilization. Unit: percentage (%).</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public double? CpuUtilization { get; set; }
 
         /// <summary>
-        /// <para>The queried diagnostic information.</para>
+        /// <para>The list of Spark analysis information.</para>
         /// </summary>
         [NameInMap("DiagnosisInfoList")]
         [Validation(Required=false)]
         public List<Adb4MysqlSparkDiagnosisInfo> DiagnosisInfoList { get; set; }
 
         /// <summary>
-        /// <para>The execution duration of the application. Unit: milliseconds.</para>
+        /// <para>The execution duration of the Spark application. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>281063</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DurationInMillis { get; set; }
 
         /// <summary>
-        /// <para>The amount of time consumed by the Java virtual machine to perform garbage collection operations. Unit: milliseconds.</para>
+        /// <para>The time consumed by the Java Virtual Machine (JVM) to perform garbage collection. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81055</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The amount of data used for shuffle reads. Unit: bytes.</para>
+        /// <para>The amount of data read during the shuffle process. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4096000</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ShuffleReadInByte { get; set; }
 
         /// <summary>
-        /// <para>The amount of data used for shuffle writes. Unit: bytes.</para>
+        /// <para>The amount of data written during the shuffle process. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4096000</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ShuffleWriteInByte { get; set; }
 
         /// <summary>
-        /// <para>The amount of data spilled to disks when the memory is insufficient. Unit: bytes.</para>
+        /// <para>The data volume spilled to disk when out of memory. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? SpillInByte { get; set; }
 
         /// <summary>
-        /// <para>The time when the application started to be executed.</para>
+        /// <para>The start time of the execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1718329831000</para>
@@ -138,11 +138,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? StartedTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the asynchronous import or export job. Valid values:</para>
+        /// <para>The status of the asynchronous import or export task to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RUNNING</b></description></item>
-        /// <item><description><b>FINISHED</b></description></item>
-        /// <item><description><b>FAILED</b></description></item>
+        /// <item><description><b>RUNNING</b>: The task is in progress.</description></item>
+        /// <item><description><b>FINISHED</b>: The task succeeded.</description></item>
+        /// <item><description><b>FAILED</b>: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

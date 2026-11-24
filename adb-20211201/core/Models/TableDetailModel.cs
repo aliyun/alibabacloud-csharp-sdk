@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The creation source of the table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>APS</para>
         /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
@@ -45,6 +48,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The user who created the table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example_user</para>
         /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]
@@ -82,6 +88,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The table property parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;escape.delim&quot;:&quot;\\&quot;,&quot;field.delim&quot;:&quot; &quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

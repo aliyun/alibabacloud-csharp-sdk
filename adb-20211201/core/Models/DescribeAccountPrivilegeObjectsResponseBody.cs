@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountPrivilegeObjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The permissions.</para>
+        /// <para>The list of privileges.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeAccountPrivilegeObjectsResponseBodyData> Data { get; set; }
         public class DescribeAccountPrivilegeObjectsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the column. This parameter is returned when PrivilegeType is set to Column.</para>
+            /// <para>The column name. This field is returned when the privilege level is Column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>column1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Column { get; set; }
 
             /// <summary>
-            /// <para>The name of the database. This parameter is returned when PrivilegeType is set to Database, Table, or Column.</para>
+            /// <para>The database name. This field is returned when the privilege level is Database, Table, or Column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tdb1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The description that is specified when you create a table or column. This parameter is returned only when PrivilegeType is set to Database or Table, indicating the database description or table description.</para>
+            /// <para>The description specified when the table or column is created. This field has a value only when the privilege level is Database or Table, representing the description of the database or table, respectively.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a test db</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the table. This parameter is returned when PrivilegeType is set to Table or Column.</para>
+            /// <para>The table name. This field is returned when the privilege level is Table or Column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>table1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number, which is the same as the value passed in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size, which is the same as the value passed in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

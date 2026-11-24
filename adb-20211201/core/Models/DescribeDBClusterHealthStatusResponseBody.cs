@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterHealthStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the authentication failure.</para>
+        /// <para>The details of the authentication failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Authentication failed.</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The health status of the instance access nodes.</para>
+        /// <para>The list of instance access node statuses.</para>
         /// </summary>
         [NameInMap("CS")]
         [Validation(Required=false)]
         public DescribeDBClusterHealthStatusResponseBodyCS CS { get; set; }
         public class DescribeDBClusterHealthStatusResponseBodyCS : TeaModel {
             /// <summary>
-            /// <para>The number of healthy instance access nodes.</para>
+            /// <para>The number of healthy nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ActiveCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of instance access nodes.</para>
+            /// <para>The total number of access nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ExpectedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of instance access nodes at risk.</para>
+            /// <para>The number of nodes at risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,14 +57,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? RiskCount { get; set; }
 
             /// <summary>
-            /// <para>The health status of the instance access nodes. Valid values:</para>
+            /// <para>The status of instance access nodes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>RISK</b>: The instance access nodes are at risk.</para>
-            /// </description></item>
-            /// <item><description><para><b>NORMAL</b>: The instance access nodes are healthy.</para>
-            /// </description></item>
-            /// <item><description><para><b>UNAVAILABLE</b>: The instance access nodes are unavailable.</para>
-            /// </description></item>
+            /// <item><description><b>RISK</b>: At risk.</description></item>
+            /// <item><description><b>NORMAL</b>: Healthy.</description></item>
+            /// <item><description><b>UNAVAILABLE</b>: Unavailable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of unavailable instance access nodes.</para>
+            /// <para>The number of unavailable nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,14 +84,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The health status of the executor groups.</para>
+        /// <para>The list of health statuses for compute node groups.</para>
         /// </summary>
         [NameInMap("Executor")]
         [Validation(Required=false)]
         public DescribeDBClusterHealthStatusResponseBodyExecutor Executor { get; set; }
         public class DescribeDBClusterHealthStatusResponseBodyExecutor : TeaModel {
             /// <summary>
-            /// <para>The number of healthy executor nodes.</para>
+            /// <para>The number of healthy nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -104,7 +101,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ActiveCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of executor nodes.</para>
+            /// <para>The total number of compute nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,7 +111,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ExpectedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of executor nodes at risk.</para>
+            /// <para>The number of nodes at risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -124,14 +121,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? RiskCount { get; set; }
 
             /// <summary>
-            /// <para>The health status of the executor groups. Valid values:</para>
+            /// <para>The health status of compute node groups. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>RISK</b>: The executor groups are at risk.</para>
-            /// </description></item>
-            /// <item><description><para><b>NORMAL</b>: The executor groups are healthy.</para>
-            /// </description></item>
-            /// <item><description><para><b>UNAVAILABLE</b>: The executor groups are unavailable.</para>
-            /// </description></item>
+            /// <item><description><b>RISK</b>: At risk.</description></item>
+            /// <item><description><b>NORMAL</b>: Healthy.</description></item>
+            /// <item><description><b>UNAVAILABLE</b>: Unavailable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,7 +136,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of unavailable executor nodes.</para>
+            /// <para>The number of unavailable nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -156,16 +150,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The health status of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RISK</b>: The cluster is at risk.</para>
-        /// </description></item>
-        /// <item><description><para><b>NORMAL</b>: The cluster is healthy.</para>
-        /// </description></item>
-        /// <item><description><para><b>UNAVAILABLE</b>: The cluster is unavailable.</para>
+        /// <item><description><b>RISK</b>: At risk.</description></item>
+        /// <item><description><b>NORMAL</b>: Healthy.</description></item>
+        /// <item><description><b>UNAVAILABLE</b>: Unavailable.<remarks>
+        /// <para>If the instance access node status, compute node group health status, and storage node group health status are all <b>Healthy</b> and the instance health check succeeds, the cluster health status is <b>Healthy</b>. If any of the three statuses is <b>At risk</b>, the cluster health status is <b>At risk</b>. If any of the three statuses is <b>Unavailable</b>, the cluster health status is <b>Unavailable</b>.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>The cluster health status is considered <b>NORMAL</b> only if the instance access nodes, executor groups, and worker node groups are all <b>NORMAL</b>, and the instance is responsive. If any of these components has a <b>RISK</b> status, the cluster status is <b>RISK</b>. If any component has an <b>UNAVAILABLE</b> status, the cluster status is <b>UNAVAILABLE</b>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -185,14 +176,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The health status of the worker node groups.</para>
+        /// <para>The list of health statuses for storage node groups.</para>
         /// </summary>
         [NameInMap("Worker")]
         [Validation(Required=false)]
         public DescribeDBClusterHealthStatusResponseBodyWorker Worker { get; set; }
         public class DescribeDBClusterHealthStatusResponseBodyWorker : TeaModel {
             /// <summary>
-            /// <para>The number of healthy worker node groups.</para>
+            /// <para>The number of healthy storage node groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -202,7 +193,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ActiveCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of worker node groups.</para>
+            /// <para>The total number of storage node groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -212,7 +203,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ExpectedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of worker node groups at risk.</para>
+            /// <para>The number of storage node groups at risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -222,14 +213,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? RiskCount { get; set; }
 
             /// <summary>
-            /// <para>The health status of the worker node groups. Valid values:</para>
+            /// <para>The health status of storage node groups. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>RISK</b>: The worker node groups are at risk.</para>
-            /// </description></item>
-            /// <item><description><para><b>NORMAL</b>: The worker node groups are healthy.</para>
-            /// </description></item>
-            /// <item><description><para><b>UNAVAILABLE</b>: The worker node groups are unavailable.</para>
-            /// </description></item>
+            /// <item><description><b>RISK</b>: At risk.</description></item>
+            /// <item><description><b>NORMAL</b>: Healthy.</description></item>
+            /// <item><description><b>UNAVAILABLE</b>: Unavailable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -240,7 +228,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of unavailable worker node groups.</para>
+            /// <para>The number of unavailable storage node groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

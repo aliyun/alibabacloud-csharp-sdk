@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAPSADBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code or the error code.</para>
+        /// <para>The status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,19 +30,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The queried clusters.</para>
+        /// <para>The list of items.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;DBClusterId&quot;:&quot;amv-example&quot;,&quot;DBClusterDescription&quot;:&quot;Example cluster&quot;}]</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAPSADBInstancesResponseBodyItems> Items { get; set; }
         public class DescribeAPSADBInstancesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The specifications of the reserved computing resources.</para>
+            /// <para>The specifications of reserved compute resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16ACU</para>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>am-bp1********</para>
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterStatus { get; set; }
 
             /// <summary>
-            /// <para>The amount of remaining reserved computing resources that are available in the cluster.</para>
+            /// <para>The remaining allocatable reserved compute resources of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24ACU</para>
@@ -92,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ReservedACU { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the reserved storage resources.</para>
+            /// <para>The specifications of reserved storage resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24ACU</para>
@@ -114,10 +112,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a success message is returned.****</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description>If the request is normal, <b>Success</b> is returned. </description></item>
+        /// <item><description>If the request is abnormal, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,17 +149,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>12345678-1234-4ABC-8DEF-123456789012</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,7 +170,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

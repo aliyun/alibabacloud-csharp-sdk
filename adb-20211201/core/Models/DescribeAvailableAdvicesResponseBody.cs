@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeAvailableAdvicesResponseBodyItems> Items { get; set; }
         public class DescribeAvailableAdvicesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the suggestion was generated, in the yyyyMMdd format.</para>
+            /// <para>The generation time of the suggestion, in the yyyyMMdd format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20221124</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The type of the suggestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INDEX</b>: Index optimization.</description></item>
-            /// <item><description><b>TIERING</b>: Hot and cold data optimization.</description></item>
+            /// <item><description><b>INDEX</b>: index optimization.</description></item>
+            /// <item><description><b>TIERING</b>: hot and cold data optimization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,17 +96,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The reason for generating optimization suggestions.</para>
+            /// <para>The reason for generating the optimization suggestions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Not used for 15 days, and the historical usage probability is less than 1%</para>
+            /// <para>Unused for 15 days, with a historical usage probability of less than 1%</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement to apply the suggestion.</para>
+            /// <para>The SQL statement used to apply the suggestion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alter table <c>schema1</c>.<c>table1</c> drop key col1_1_idx</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned results. Valid values: greater than or equal to 0 and up to the maximum value of the Integer data type. Default value: 0.</para>
+            /// <para>The total number of returned results. Valid values: 0 to the maximum value of the Integer data type. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10192</para>
@@ -183,14 +183,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The concatenated string of the database name and table name.</para>
+        /// <para>The concatenated string of the database name and the table name.</para>
         /// </summary>
         [NameInMap("SchemaTableNames")]
         [Validation(Required=false)]
         public List<string> SchemaTableNames { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned results. Valid values: greater than or equal to 0 and up to the maximum value of the Integer data type. Default value: 0.</para>
+        /// <para>The total number of returned results. Valid values: 0 to the maximum value of the Integer data type. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10192</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetTableColumnsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the column.</para>
+        /// <para>The column name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>assist_user_phone</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

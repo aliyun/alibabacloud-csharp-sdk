@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsDatasourceResponseBody : TeaModel {
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The APS data source information.</para>
         /// </summary>
         [NameInMap("ApsDatasource")]
         [Validation(Required=false)]
@@ -42,9 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The Databricks information.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>{&quot;workspaceURL&quot;:&quot;<a href="https://workspace.example.com%22%7D">https://workspace.example.com&quot;}</a></para>
             /// </summary>
             [NameInMap("DatabricksInfo")]
             [Validation(Required=false)]
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>The token used to access Databricks.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>example****token</para>
                 /// </summary>
                 [NameInMap("accessToken")]
                 [Validation(Required=false)]
@@ -64,9 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>The URL of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para><a href="https://workspace.example.com">https://workspace.example.com</a></para>
                 /// </summary>
                 [NameInMap("workspaceURL")]
                 [Validation(Required=false)]
@@ -108,21 +102,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The Hive data source information.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>{&quot;Vswitch&quot;:&quot;vsw-<b><b><b>&quot;,&quot;SecurityGroup&quot;:&quot;sg-</b></b></b>&quot;}</para>
             /// </summary>
             [NameInMap("HiveInfo")]
             [Validation(Required=false)]
             public DescribeApsDatasourceResponseBodyApsDatasourceHiveInfo HiveInfo { get; set; }
             public class DescribeApsDatasourceResponseBodyApsDatasourceHiveInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the E-MapReduce (EMR) cluster.</para>
+                /// <para>The ID of the EMR cluster.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para>c-b933c5aac8fe****</para>
                 /// </summary>
                 [NameInMap("EmrClusterId")]
                 [Validation(Required=false)]
@@ -141,7 +131,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string MetaStoreUri { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the security group.</para>
+                /// <para>The security group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-******</para>
@@ -151,7 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string SecurityGroup { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-******</para>
@@ -166,9 +156,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The Kafka instance information.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>{&quot;KafkaClusterId&quot;:&quot;alikafka_pre-cn-aaa1a1aaa111&quot;,&quot;KafkaTopic&quot;:&quot;example-topic&quot;}</para>
             /// </summary>
             [NameInMap("KafkaInfo")]
             [Validation(Required=false)]
@@ -178,9 +166,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>The Kafka instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para>alikafka_pre-cn-aaa1a1aaa111</para>
                 /// </summary>
                 [NameInMap("KafkaClusterId")]
                 [Validation(Required=false)]
@@ -412,16 +398,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The Simple Log Service (SLS) project.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;}</para>
             /// </summary>
             [NameInMap("SlsInfo")]
             [Validation(Required=false)]
             public DescribeApsDatasourceResponseBodyApsDatasourceSlsInfo SlsInfo { get; set; }
             public class DescribeApsDatasourceResponseBodyApsDatasourceSlsInfo : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether the resource is cross-account. Valid values:</para>
+                /// <para>Specifies whether the resource belongs to a different account. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b>: The current network instance is a cross-account resource.</description></item>
                 /// <item><description><b>false</b>: The current network instance belongs to the current account.</description></item>
@@ -458,7 +442,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>The name of the SLS project.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>example-project</para>
                 /// </summary>
                 [NameInMap("Project")]
                 [Validation(Required=false)]
@@ -478,7 +462,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>The name of the SLS Logstore.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>example-logstore</para>
                 /// </summary>
                 [NameInMap("Store")]
                 [Validation(Required=false)]

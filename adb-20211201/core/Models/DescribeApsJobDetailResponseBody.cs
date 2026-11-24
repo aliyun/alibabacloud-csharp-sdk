@@ -13,9 +13,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The job details.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;SourceEndpointRegion&quot;:&quot;cn-beijing&quot;,&quot;DestinationEndpointRegion&quot;:&quot;cn-beijing&quot;,&quot;Status&quot;:&quot;Running&quot;,&quot;TargetTableMode&quot;:&quot;0&quot;}</para>
         /// </summary>
         [NameInMap("APSJobDetail")]
         [Validation(Required=false)]
@@ -32,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DbList { get; set; }
 
             /// <summary>
-            /// <para>The target database instance ID.</para>
+            /// <para>The instance ID of the destination database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-******</para>
@@ -52,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DestinationEndpointRegion { get; set; }
 
             /// <summary>
-            /// <para>The list of partitions.</para>
+            /// <para>The partition list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PartitionList { get; set; }
 
             /// <summary>
-            /// <para>The source database instance ID.</para>
+            /// <para>The instance ID of the source database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-*******</para>

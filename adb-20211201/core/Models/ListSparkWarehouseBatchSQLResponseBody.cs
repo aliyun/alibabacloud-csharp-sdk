@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The queried Spark SQL statements.</para>
+            /// <para>The list of executed Spark SQL statements.</para>
             /// </summary>
             [NameInMap("Queries")]
             [Validation(Required=false)]

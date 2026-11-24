@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public DescribeDBClusterSpaceSummaryResponseBodyDataColdData ColdData { get; set; }
             public class DescribeDBClusterSpaceSummaryResponseBodyDataColdData : TeaModel {
                 /// <summary>
-                /// <para>The data volume of table records. Unit: bytes.</para>
+                /// <para>The table record data size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? DataSize { get; set; }
 
                 /// <summary>
-                /// <para>The data volume of regular indexes. Unit: bytes.</para>
+                /// <para>The secondary index data size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? IndexSize { get; set; }
 
                 /// <summary>
-                /// <para>The volume of other data. Unit: bytes.</para>
+                /// <para>The size of other data. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? OtherSize { get; set; }
 
                 /// <summary>
-                /// <para>The data volume of primary key indexes. Unit: bytes.</para>
+                /// <para>The primary key index data size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? PrimaryKeyIndexSize { get; set; }
 
                 /// <summary>
-                /// <para>The total cold data volume. Unit: bytes.</para>
+                /// <para>The total cold data size. Unit: bytes.</para>
                 /// <remarks>
-                /// <para>Calculation formula: Total cold data volume = Table record data volume + Regular index data volume + Primary key index data volume + Others.</para>
+                /// <para>Calculation formula: Total cold data size = Table record data size + Secondary index data size + Primary key index data size + Others.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public DescribeDBClusterSpaceSummaryResponseBodyDataDataGrowth DataGrowth { get; set; }
             public class DescribeDBClusterSpaceSummaryResponseBodyDataDataGrowth : TeaModel {
                 /// <summary>
-                /// <para>The data growth in the past day. Unit: bytes.</para>
+                /// <para>The data growth over the past day. Unit: bytes.</para>
                 /// <remarks>
-                /// <para>Calculation formula: Data growth in the past day = Current total data volume - Total data volume 1 day ago.</para>
+                /// <para>Calculation formula: Data growth over the past day = Current total data size - Total data size one day ago.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>The average daily data growth over the past 7 days. Unit: bytes.</para>
                 /// <remarks>
-                /// <para>Calculation formula: Average daily data growth over the past 7 days = (Current total data volume - Total data volume 7 days ago) / 7.</para>
+                /// <para>Calculation formula: Average daily data growth over the past 7 days = (Current total data size - Total data size 7 days ago) / 7.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public DescribeDBClusterSpaceSummaryResponseBodyDataHotData HotData { get; set; }
             public class DescribeDBClusterSpaceSummaryResponseBodyDataHotData : TeaModel {
                 /// <summary>
-                /// <para>The data volume of table records. Unit: bytes.</para>
+                /// <para>The table record data size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? DataSize { get; set; }
 
                 /// <summary>
-                /// <para>The data volume of regular indexes. Unit: bytes.</para>
+                /// <para>The secondary index data size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? IndexSize { get; set; }
 
                 /// <summary>
-                /// <para>The volume of other data. Unit: bytes.</para>
+                /// <para>The size of other data. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? OtherSize { get; set; }
 
                 /// <summary>
-                /// <para>The data volume of primary key indexes. Unit: bytes.</para>
+                /// <para>The primary key index data size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1048576</para>
@@ -161,9 +161,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public long? PrimaryKeyIndexSize { get; set; }
 
                 /// <summary>
-                /// <para>The total hot data volume. Unit: bytes.</para>
+                /// <para>The total hot data size. Unit: bytes.</para>
                 /// <remarks>
-                /// <para>Calculation formula: Total hot data volume = Table record data volume + Regular index data volume + Primary key index data volume + Others.</para>
+                /// <para>Calculation formula: Total hot data size = Table record data size + Secondary index data size + Primary key index data size + Others.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -176,9 +176,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The total data volume. Unit: bytes.</para>
+            /// <para>The total data size. Unit: bytes.</para>
             /// <remarks>
-            /// <para>Calculation formula: Total data volume = Total hot data volume + Total cold data volume.</para>
+            /// <para>Calculation formula: Total data size = Total hot data size + Total cold data size.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

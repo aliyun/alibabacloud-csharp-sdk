@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDiagnosisRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. The value is an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,12 +22,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of SQL statement details.</para>
+        /// <para>The details of the SQL statements.</para>
         /// </summary>
         [NameInMap("Querys")]
         [Validation(Required=false)]
@@ -57,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The total execution duration of the query. Unit: milliseconds.</para>
             /// <remarks>
-            /// <para>This duration is the sum of <c>QueuedTime</c>, <c>TotalPlanningTime</c>, and <c>ExecutionTime</c>.</para>
+            /// <para>This metric is the sum of QueuedTime, TotalPlanningTime, and ExecutionTime.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? Cost { get; set; }
 
             /// <summary>
-            /// <para>The name of the database where the SQL statement is executed.</para>
+            /// <para>The name of the database in which the SQL statement is executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adb_demo</para>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The number of rows written to a table in an ETL task.</para>
+            /// <para>The number of rows written to the table by the ETL task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -88,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? EtlWriteRows { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the query. Unit: milliseconds (ms).</para>
+            /// <para>The execution duration of the query. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -98,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ExecutionTime { get; set; }
 
             /// <summary>
-            /// <para>The amount of returned data. Unit: bytes.</para>
+            /// <para>The size of the returned data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -120,7 +117,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The ID of the SQL pattern.</para>
             /// <remarks>
-            /// <para>Call the <a href="https://help.aliyun.com/document_detail/612503.html">DescribePatternPerformance</a> operation to view the detailed execution metrics of the SQL pattern within a specified time range.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612503.html">DescribePatternPerformance</a> operation to query the detailed metrics of the SQL pattern executed within a specified time period.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -141,7 +138,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The query ID.</para>
+            /// <para>The ID of the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021093000414401000000023503151******</para>
@@ -151,9 +148,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// <para>The list of properties that are in effect for the current query.</para>
+            /// <para>The list of properties that ultimately take effect for the current query.</para>
             /// <remarks>
-            /// <para>For a list of common properties, see <a href="https://help.aliyun.com/document_detail/408955.html">Config and Hint configuration parameters</a>.</para>
+            /// <para>For a list of common properties, see the official documentation: <a href="https://help.aliyun.com/document_detail/408955.html">Config and Hint parameters</a>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("QueryProperties")]
@@ -161,7 +158,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> QueryProperties { get; set; }
             public class DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties : TeaModel {
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The name of the property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>max_select_items_count</para>
@@ -171,7 +168,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The property value.</para>
+                /// <para>The value of the property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>
@@ -183,7 +180,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The amount of time that the query waited in a queue before execution. Unit: milliseconds (ms).</para>
+            /// <para>The queue time before the query is executed. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -193,7 +190,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? QueueTime { get; set; }
 
             /// <summary>
-            /// <para>The IP address and port number of the AnalyticDB for MySQL frontend node that is used to execute the SQL statement.</para>
+            /// <para>The IP address and port of the AnalyticDB for MySQL frontend node that executes the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX:3004</para>
@@ -203,9 +200,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RcHost { get; set; }
 
             /// <summary>
-            /// <para>The ranking of the execution duration of an operator in the SQL statement.</para>
+            /// <para>The ranking of the execution duration of internal operators in the SQL statement.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for SQL statements that are in the <c>running</c> state.</para>
+            /// <para>This field is returned only for SQL statements that are running, which means the Status field is set to running.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -228,7 +225,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The details of the SQL statement.</para>
             /// <remarks>
-            /// <para>For performance, an SQL statement can be up to 5,120 characters long. Longer statements are truncated. Call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the summary information of SQL statements that meet the specified conditions, including the complete SQL statements.</para>
+            /// <para>For performance reasons, a maximum of 5,120 characters can be displayed for an SQL statement. SQL statements that exceed this limit are truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the summary information of the SQL statements that meet the specified conditions, including the complete SQL statements.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -239,12 +236,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SQL { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the length of the query result exceeds the threshold. If the length exceeds the threshold, the query result is truncated. Valid values:</para>
+            /// <para>Indicates whether the length of the query result exceeds the threshold and is truncated. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The length of the query result exceeds the threshold.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The length of the query result does not exceed the threshold.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The length of the query result exceeds the threshold.</description></item>
+            /// <item><description><b>false</b>: The length of the query result does not exceed the threshold.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,7 +250,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? SQLTruncated { get; set; }
 
             /// <summary>
-            /// <para>The truncation threshold for the SQL statement. The value is fixed at 5,120 characters. SQL statements that exceed this limit are truncated.</para>
+            /// <para>The truncation threshold for the SQL statement. The value is fixed to 5,120 characters. SQL statements that exceed this length are truncated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5120</para>
@@ -275,7 +270,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ScanRows { get; set; }
 
             /// <summary>
-            /// <para>The amount of scanned data. Unit: bytes.</para>
+            /// <para>The scan size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -285,7 +280,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ScanSize { get; set; }
 
             /// <summary>
-            /// <para>The start time of the SQL execution. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The start time of the SQL statement execution. The time is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1632933704000</para>
@@ -295,14 +290,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the SQL statement. Valid values:</para>
+            /// <para>The status of the SQL statement. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>running</b>: The statement is running.</para>
-            /// </description></item>
-            /// <item><description><para><b>finished</b>: The statement is complete.</para>
-            /// </description></item>
-            /// <item><description><para><b>failed</b>: The statement failed to be executed.</para>
-            /// </description></item>
+            /// <item><description><b>running</b>: The SQL statement is running.</description></item>
+            /// <item><description><b>finished</b>: The SQL statement is completed.</description></item>
+            /// <item><description><b>failed</b>: The SQL statement failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -313,7 +305,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The amount of time that was required to generate the execution plan. Unit: milliseconds (ms).</para>
+            /// <para>The time taken to generate the execution plan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -323,7 +315,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? TotalPlanningTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of stages generated for the query.</para>
+            /// <para>The total number of stages generated by the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -333,7 +325,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? TotalStages { get; set; }
 
             /// <summary>
-            /// <para>The username used to execute the SQL statement.</para>
+            /// <para>The username that executes the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_user</para>
@@ -345,7 +337,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F88BEFA-CF0B-5C95-8BB1-92EC9F09E40D</para>

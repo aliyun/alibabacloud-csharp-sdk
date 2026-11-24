@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ApsJobName { get; set; }
 
         /// <summary>
-        /// <para>The end time of creation.</para>
+        /// <para>The end of the creation time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-23T01:10Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of creation.</para>
+        /// <para>The start of the creation time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-23T01:10Z</para>

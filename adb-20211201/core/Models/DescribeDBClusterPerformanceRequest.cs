@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster in Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
         /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</para>
+        /// <para>The end time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mmZ</i> format.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time, and the interval between the start time and end time cannot exceed two days.</para>
+        /// <para>The end time must be later than the start time, and the time span between the start time and the end time cannot exceed two days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the performance metric (metric key) to query. Separate multiple values with commas (,). For more information about supported metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Monitoring metrics overview</a>.</para>
+        /// <para>The names of the performance metrics to query, which are the keys of the monitored items. Separate multiple values with commas (,). For more information about the supported metrics, refer to <a href="https://help.aliyun.com/document_detail/2863211.html">Overview of monitoring metrics</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AnalyticDB_CPU_Usage_Percentage</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourcePools { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</para>
+        /// <para>The start time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mmZ</i> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-10T23:56Z</para>

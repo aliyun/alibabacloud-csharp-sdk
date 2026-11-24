@@ -68,9 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The Hive data source information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Vswitch&quot;:&quot;vsw-bp1*<b><b>k&quot;,&quot;SecurityGroup&quot;:&quot;sg-uf</b></b>***h&quot;}</para>
         /// </summary>
         [NameInMap("HiveInfo")]
         [Validation(Required=false)]
@@ -80,9 +78,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The Kafka information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;KafkaClusterId&quot;:&quot;alikafka_pre-cn-aaa1a1aaa111&quot;,&quot;KafkaTopic&quot;:&quot;example-topic&quot;}</para>
         /// </summary>
         [NameInMap("KafkaInfo")]
         [Validation(Required=false)]
@@ -102,9 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The PolarDB for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</para>
         /// </summary>
         [NameInMap("PolarDBMysqlInfo")]
         [Validation(Required=false)]
@@ -126,9 +120,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The ApsaraDB RDS for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</para>
         /// </summary>
         [NameInMap("RdsMysqlInfo")]
         [Validation(Required=false)]
@@ -149,9 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The Simple Log Service (SLS) information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</para>
         /// </summary>
         [NameInMap("SlsInfo")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountPrivilegesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of privilege details.</para>
+        /// <para>The list of permission details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeAccountPrivilegesResponseBodyData> Data { get; set; }
         public class DescribeAccountPrivilegesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The privilege object, which specifies the database, table, column, and description.</para>
+            /// <para>The privilege object, which is a triplet of database, table, and column, along with additional description information.</para>
             /// </summary>
             [NameInMap("PrivilegeObject")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The privilege level. Valid values: <c>Global</c>, <c>Database</c>, <c>Table</c>, and <c>Column</c>. The <c>DescribeEnabledPrivileges</c> API returns this value.</para>
+            /// <para>The privilege level, which can be Global, Databae, Table, or Column. This value is returned by the DescribeEnabledPrivileges operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Column</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PrivilegeType { get; set; }
 
             /// <summary>
-            /// <para>A list of privileges.</para>
+            /// <para>The list of permissions.</para>
             /// </summary>
             [NameInMap("Privileges")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The page number. This value matches the <c>PageNumber</c> input parameter.</para>
+        /// <para>The page number, which is the same as the page number in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. This value matches the <c>PageSize</c> input parameter.</para>
+        /// <para>The number of entries per page, which is the same as the page size in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of privileges at the specified privilege level.</para>
+        /// <para>The total number of permissions that the user has at the privilege level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

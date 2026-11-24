@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The creation source of the table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XIHE</para>
         /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
@@ -95,6 +98,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The user who created the table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example_user</para>
         /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether encryption is enabled.</para>
+        /// <para>Specifies whether encryption is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -148,7 +154,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DistributeType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether DFS is enabled.</para>
+        /// <para>Specifies whether DFS is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -175,7 +181,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<CstoreIndexModel> Indexes { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether full indexing is enabled.</para>
+        /// <para>Specifies whether full indexing is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -185,7 +191,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? IsAllIndex { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether it is a full-text index dictionary.</para>
+        /// <para>Specifies whether it is a full-text index dictionary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -198,7 +204,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The maximum column ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MaxColumnId</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MaxColumnId")]
         [Validation(Required=false)]
@@ -206,6 +212,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;format&quot;:&quot;columnstore&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -323,7 +332,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RtEngineType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether all indexes are routed.</para>
+        /// <para>Specifies whether all indexes are routed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -343,7 +352,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RtModeType { get; set; }
 
         /// <summary>
-        /// <para>The storage description.</para>
+        /// <para>The storage descriptor information.</para>
         /// </summary>
         [NameInMap("Sd")]
         [Validation(Required=false)]
@@ -430,7 +439,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? TblId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the table is a temporary table.</para>
+        /// <para>Specifies whether the table is a temporary table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -470,7 +479,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ViewOriginalText { get; set; }
 
         /// <summary>
-        /// <para>The view safe mode pattern.</para>
+        /// <para>The view security pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ViewSecurityMode</para>

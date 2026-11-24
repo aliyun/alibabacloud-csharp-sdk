@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateSqlPatternCompareReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the created report. This value only indicates that the request has been accepted.</para>
+        /// <para>The ID of the newly created report. The returned value only indicates that the request is accepted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1001</para>

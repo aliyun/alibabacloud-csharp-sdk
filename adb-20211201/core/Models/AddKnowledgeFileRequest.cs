@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class AddKnowledgeFileRequest : TeaModel {
         /// <summary>
-        /// <para>The AnalyticDB for MySQL cluster ID.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the path is a folder.</para>
+        /// <para>Specifies whether the object is a directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The file tags in JSON format.</para>
+        /// <para>The tags of the file, in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;game&quot;}</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The user who uploads the knowledge base file.</para>
+        /// <para>The user who uploads the file to the knowledge base.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1</para>

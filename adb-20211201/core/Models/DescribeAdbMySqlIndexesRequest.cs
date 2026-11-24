@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster ID of the Data Warehouse Edition cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the region ID of the cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The name of the target table.</para>
         /// <remarks>
-        /// <para> If you leave this parameter empty, the information about all the current tables in the cluster is returned.</para>
+        /// <para>If this parameter is left empty, the usage frequency data of all tables in the target cluster on the current day is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

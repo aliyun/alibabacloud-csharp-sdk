@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<ListKnowledgeFilesResponseBodyDataFiles> Files { get; set; }
             public class ListKnowledgeFilesResponseBodyDataFiles : TeaModel {
                 /// <summary>
-                /// <para>The time when the file was added to the knowledge base. The format is yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The time when the file was added to the knowledge base. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-09 10:27:35</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public bool? IsDirectory { get; set; }
 
                 /// <summary>
-                /// <para>The file_id of the content host.</para>
+                /// <para>The <c>file_id</c> of the content host.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>122</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? PageCount { get; set; }
 
                 /// <summary>
-                /// <para>The processing information of the knowledge base file.</para>
+                /// <para>The processing message of the knowledge base file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>successful</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string ProcessStatus { get; set; }
 
                 /// <summary>
-                /// <para>The update time. The format is yyyy-MM-dd HH:mm:ss.</para>
+                /// <para>The time when the file was updated. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-10 10:23:46</para>
@@ -172,10 +172,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <para>Indicates whether the request is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The request was successful.</description></item>
-            /// <item><description><b>false</b>: The request failed.</description></item>
+            /// <item><description><b>true</b>: The request is successful.</description></item>
+            /// <item><description><b>false</b>: The request fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

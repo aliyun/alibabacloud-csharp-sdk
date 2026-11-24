@@ -90,9 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The Hive data source information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Vswitch&quot;:&quot;vsw-bp1*<b><b>k&quot;,&quot;SecurityGroup&quot;:&quot;sg-uf</b></b>***h&quot;}</para>
         /// </summary>
         [NameInMap("HiveInfo")]
         [Validation(Required=false)]
@@ -154,9 +152,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The Kafka information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;KafkaClusterId&quot;:&quot;alikafka_pre-cn-aaa1a1aaa111&quot;,&quot;KafkaTopic&quot;:&quot;example-topic&quot;}</para>
         /// </summary>
         [NameInMap("KafkaInfo")]
         [Validation(Required=false)]
@@ -166,14 +162,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The Kafka instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>alikafka_pre-cn-aaa1a1aaa111</para>
             /// </summary>
             [NameInMap("KafkaClusterId")]
             [Validation(Required=false)]
             public string KafkaClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the allocated Kafka topic.</para>
+            /// <para>The assigned Kafka topic name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -198,9 +194,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The PolarDB for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</para>
         /// </summary>
         [NameInMap("PolarDBMysqlInfo")]
         [Validation(Required=false)]
@@ -241,7 +235,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AcrossUid { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the private custom RDS instance.</para>
+            /// <para>The private custom RDS endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -264,7 +258,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The password.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>Example****123!</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
@@ -332,9 +326,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The ApsaraDB RDS for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;RegionId&quot;:&quot;cn-shanghai&quot;}</para>
         /// </summary>
         [NameInMap("RdsMysqlInfo")]
         [Validation(Required=false)]
@@ -364,7 +356,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The password.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>Example****123!</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
@@ -394,7 +386,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Username.</para>
+            /// <para>username</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -417,9 +409,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The Simple Log Service (SLS) information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;Project&quot;:&quot;example-project&quot;,&quot;Store&quot;:&quot;example-logstore&quot;,&quot;Across&quot;:false}</para>
         /// </summary>
         [NameInMap("SlsInfo")]
         [Validation(Required=false)]
@@ -436,7 +426,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Across { get; set; }
 
             /// <summary>
-            /// <para>The name of the cross-account role.</para>
+            /// <para>The cross-account role name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yyy</para>
@@ -476,7 +466,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service Logstore.</para>
+            /// <para>The Simple Log Service (SLS) Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-store</para>

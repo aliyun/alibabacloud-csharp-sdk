@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The collection of diagnostic suggestions.</para>
+        /// <para>The diagnostic suggestions.</para>
         /// </summary>
         [NameInMap("DiagnosisInfos")]
         [Validation(Required=false)]
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? InnerQueryId { get; set; }
 
         /// <summary>
-        /// <para>The operator queue sorted by metrics.</para>
+        /// <para>The list of operators sorted by metrics.</para>
         /// </summary>
         [NameInMap("OperatorListSortedByMetrics")]
         [Validation(Required=false)]
         public DescribeSparkSQLDiagnosisAttributeResponseBodyOperatorListSortedByMetrics OperatorListSortedByMetrics { get; set; }
         public class DescribeSparkSQLDiagnosisAttributeResponseBodyOperatorListSortedByMetrics : TeaModel {
             /// <summary>
-            /// <para>The operator queue sorted by execution time.</para>
+            /// <para>The list of operators sorted by execution time.</para>
             /// </summary>
             [NameInMap("OperatorListSortedByExclusiveTime")]
             [Validation(Required=false)]
             public List<SparkOperatorInfo> OperatorListSortedByExclusiveTime { get; set; }
 
             /// <summary>
-            /// <para>The operator queue sorted by maximum memory consumption.</para>
+            /// <para>The list of operators sorted by maximum memory consumption.</para>
             /// </summary>
             [NameInMap("OperatorListSortedByMaxMemory")]
             [Validation(Required=false)]

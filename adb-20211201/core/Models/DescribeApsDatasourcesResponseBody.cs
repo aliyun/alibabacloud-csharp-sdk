@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsDatasourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data sources.</para>
+        /// <para>The array of data sources.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;CreateTime&quot;:&quot;2024-01-10 14:44:33&quot;,&quot;DatasourceDescription&quot;:&quot;Sample data source&quot;,&quot;DatasourceId&quot;:1,&quot;DatasourceName&quot;:&quot;example-source&quot;,&quot;DatasourceType&quot;:&quot;SLS&quot;,&quot;HasJob&quot;:false}]</para>
         /// </summary>
         [NameInMap("ApsDatasources")]
         [Validation(Required=false)]
@@ -52,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? DatasourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data source.</para>
+            /// <para>The name of the target data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DatasourceType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a job is using the data source.</para>
+            /// <para>Indicates whether a task is using the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -114,7 +112,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

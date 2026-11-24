@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetSparkSQLEngineStateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The state information about the Spark SQL engine.</para>
+        /// <para>The status details of the Spark SQL engine.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSparkSQLEngineStateResponseBodyData Data { get; set; }
         public class GetSparkSQLEngineStateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Spark application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s202207151211hz0c****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The third-party JAR package.</para>
+            /// <para>The third-party JAR packages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://test-bucket/test.jar</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Jars { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of started Spark executors.</para>
+            /// <para>The maximum number of Spark executors to start.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxExecutor { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of started Spark executors.</para>
+            /// <para>The minimum number of Spark executors to start.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MinExecutor { get; set; }
 
             /// <summary>
-            /// <para>The slot number of the Spark application.</para>
+            /// <para>The slot value of the Spark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -77,19 +77,19 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SlotNum { get; set; }
 
             /// <summary>
-            /// <para>The execution state of the application. Valid values:</para>
+            /// <para>The execution status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SUBMITTED</description></item>
-            /// <item><description>STARTING</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>FAILING</description></item>
-            /// <item><description>FAILED</description></item>
-            /// <item><description>KILLING</description></item>
-            /// <item><description>KILLED</description></item>
-            /// <item><description>SUCCEEDING</description></item>
-            /// <item><description>COMPLETED</description></item>
-            /// <item><description>FATAL</description></item>
-            /// <item><description>UNKNOWN</description></item>
+            /// <item><description>SUBMITTED: Submitted.</description></item>
+            /// <item><description>STARTING: Starting.</description></item>
+            /// <item><description>RUNNING: Running.</description></item>
+            /// <item><description>FAILING: The task failed and the environment is being cleaned up.</description></item>
+            /// <item><description>FAILED: Failed.</description></item>
+            /// <item><description>KILLING: The task is being terminated and the environment is being cleaned up.</description></item>
+            /// <item><description>KILLED: Terminated.</description></item>
+            /// <item><description>SUCCEEDING: The task execution is complete and the environment is being cleaned up.</description></item>
+            /// <item><description>COMPLETED: Completed.</description></item>
+            /// <item><description>FATAL: Unexpected failure.</description></item>
+            /// <item><description>UNKNOWN: Unknown error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the Spark SQL application was submitted. Unit: milliseconds.</para>
+            /// <para>The submission time of the Spark SQL application. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1651213645000</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xx</para>

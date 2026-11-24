@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateLakeStorageRequest : TeaModel {
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The client token that is used to ensure request idempotence. If you use the same token for requests with different parameters, the IdempotentParameterMismatch error is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>b2cd****3efg</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the ADB instance attached to the lake storage.</para>
+        /// <para>The instance ID of the ADB instance to which the lake storage is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-******</para>
@@ -42,12 +40,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>When lake storage is created, permissions are automatically granted to the Resource Access Management (RAM) users performing the operation and the Alibaba Cloud account. You can increase additional Alibaba Cloud account authorizations here.</para>
+        /// <para>When you create a lake storage, permissions are automatically granted to the Resource Access Management (RAM) users and the primary account used for the operation. You can increase additional authorizations for the primary account here.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;Account&quot;:&quot;1234567890123456&quot;,&quot;Read&quot;:true,&quot;Type&quot;:&quot;CUSTOMER&quot;,&quot;Write&quot;:true}]</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -57,9 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>1234567890123456</para>
             /// </summary>
             [NameInMap("Account")]
             [Validation(Required=false)]
@@ -69,9 +63,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The read permission.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Read")]
             [Validation(Required=false)]
@@ -81,9 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The account type.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>CUSTOMER</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -93,9 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The write permission.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Write")]
             [Validation(Required=false)]

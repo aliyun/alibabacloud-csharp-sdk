@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the most recent task.</para>
+            /// <para>The execution time of the most recent task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The error message of the most recent task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>The task execution failed.</para>
             /// </summary>
             [NameInMap("LastTaskInstMessage")]
             [Validation(Required=false)]
             public string LastTaskInstMessage { get; set; }
 
             /// <summary>
-            /// <para>The instance status of the most recent node.</para>
+            /// <para>The status of the most recent task instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. OK is returned if the call was successful.</para>
+        /// <para>The message returned. The value is OK if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The call was successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>

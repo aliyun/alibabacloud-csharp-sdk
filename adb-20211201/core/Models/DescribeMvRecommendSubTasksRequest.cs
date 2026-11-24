@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeMvRecommendSubTasksRequest : TeaModel {
         /// <summary>
-        /// <para>A fixed value. This value cannot be modified.</para>
+        /// <para>A fixed value. This parameter cannot be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Not modifiable</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>A fixed value. This value cannot be modified.</para>
+        /// <para>A fixed value. This parameter cannot be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Not modifiable</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <item><description>Asc</description></item>
         /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for the sort field:</para>
+        /// <para>Valid values for the field:</para>
         /// <list type="bullet">
         /// <item><description>StartTime</description></item>
         /// <item><description>EndTime</description></item>

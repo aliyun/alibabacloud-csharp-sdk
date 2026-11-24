@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateSqlPatternCompareReportRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of time window 2. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The end time of the second time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CompareEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of time window 2. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The start time of the second time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CompareStartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The ID of the AnalyticDB for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of time window 1. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The end time of the first time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The report type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>NEW</c>: Patterns that are new in time window 2.</description></item>
-        /// <item><description><c>CHANGED</c>: Patterns that exist in both time windows and have an increased average value in at least one metric.</description></item>
+        /// <item><description><c>NEW</c>: SQL patterns added in the second time window</description></item>
+        /// <item><description><c>CHANGED</c>: SQL patterns that exist in both time windows and have an increased average value in at least one dimension</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of time window 1. Specify the time in UTC in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The start time of the first time window. The time is in the yyyy-MM-ddTHH:mmZ or yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

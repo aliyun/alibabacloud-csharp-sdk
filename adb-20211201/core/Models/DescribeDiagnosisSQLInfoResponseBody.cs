@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDiagnosisSQLInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution details of the SQL statement, including the detailed SQL statement, statistics information, execution plan, and operator information.</para>
+        /// <para>The execute details of the SQL statement, including the detailed SQL statement, statistics information, execute plan, and operator information.</para>
         /// </summary>
         [NameInMap("DiagnosisSQLInfo")]
         [Validation(Required=false)]
@@ -27,18 +27,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The stage-level execution information of the query.</para>
+        /// <para>The staged execution information of the query.</para>
         /// </summary>
         [NameInMap("StageInfos")]
         [Validation(Required=false)]
         public List<DescribeDiagnosisSQLInfoResponseBodyStageInfos> StageInfos { get; set; }
         public class DescribeDiagnosisSQLInfoResponseBodyStageInfos : TeaModel {
+            /// <summary>
+            /// <para>The type of the SQL execution engine.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Java</para>
+            /// </summary>
             [NameInMap("ExecutionType")]
             [Validation(Required=false)]
             public string ExecutionType { get; set; }
 
             /// <summary>
-            /// <para>The total input data size of the stage, in bytes.</para>
+            /// <para>The total amount of input data for the stage. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -48,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? InputDataSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of input rows in the stage.</para>
+            /// <para>The total number of input rows for the stage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -58,7 +64,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? InputRows { get; set; }
 
             /// <summary>
-            /// <para>The cumulative operator duration of the stage, in milliseconds.</para>
+            /// <para>The cumulative execution duration of operators for the stage. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? OperatorCost { get; set; }
 
             /// <summary>
-            /// <para>The total output data size of the stage, in bytes.</para>
+            /// <para>The total amount of output data for the stage. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? OutputDataSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of output rows in the stage.</para>
+            /// <para>The total number of output rows for the stage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? OutputRows { get; set; }
 
             /// <summary>
-            /// <para>The total peak memory of the stage, in bytes.</para>
+            /// <para>The peak memory usage for the stage. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? Progress { get; set; }
 
             /// <summary>
-            /// <para>StageID。</para>
+            /// <para>The stage ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Stage[26]</para>

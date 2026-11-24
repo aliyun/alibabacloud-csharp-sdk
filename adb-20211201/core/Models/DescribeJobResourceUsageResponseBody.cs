@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ACU usage of the job resource group.</para>
+            /// <para>The ACU usage of job resource groups.</para>
             /// </summary>
             [NameInMap("JobAcuUsage")]
             [Validation(Required=false)]
             public List<DescribeJobResourceUsageResponseBodyDataJobAcuUsage> JobAcuUsage { get; set; }
             public class DescribeJobResourceUsageResponseBodyDataJobAcuUsage : TeaModel {
                 /// <summary>
-                /// <para>The ACU resource usage details.</para>
+                /// <para>The ACU resource usage.</para>
                 /// </summary>
                 [NameInMap("AcuUsageDetail")]
                 [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     /// <para>The number of elastic ACUs.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>16ACU</para>
+                    /// <para>16</para>
                     /// </summary>
                     [NameInMap("ElasticAcuNumber")]
                     [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     /// <para>The number of reserved ACUs.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>16ACU</para>
+                    /// <para>16</para>
                     /// </summary>
                     [NameInMap("ReservedAcuNumber")]
                     [Validation(Required=false)]
@@ -85,14 +85,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     /// <para>The number of spot instance ACUs.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>16ACU</para>
+                    /// <para>16</para>
                     /// </summary>
                     [NameInMap("SpotAcuNumber")]
                     [Validation(Required=false)]
                     public float? SpotAcuNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The percentage of spot instance resources in the total elastic resources.</para>
+                    /// <para>The ratio of spot instance resources to total elastic resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.9</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     /// <para>The total number of ACUs.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>32ACU</para>
+                    /// <para>32</para>
                     /// </summary>
                     [NameInMap("TotalAcuNumber")]
                     [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string SparkAppName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the cache pool is used.</para>
+                /// <para>Indicates whether the hot pool is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>

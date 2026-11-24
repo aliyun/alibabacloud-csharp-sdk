@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <remarks>
             /// <para>Each result contains only one key that matches the <c>MetricType</c> request parameter.</para>
             /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;CPU_COST&quot;:{&quot;MetricCode&quot;:&quot;CPU_COST&quot;,&quot;MetricName&quot;:&quot;OperatorCost&quot;,&quot;Primary&quot;:true,&quot;Time2&quot;:{&quot;AvgDisplayValue&quot;:&quot;3s&quot;,&quot;AvgRatioPercent&quot;:10.0,&quot;AvgValue&quot;:3.0,&quot;MaxDisplayValue&quot;:&quot;9s&quot;,&quot;MaxValue&quot;:9.0,&quot;SumDisplayValue&quot;:&quot;180s&quot;,&quot;SumRatioPercent&quot;:10.0,&quot;SumValue&quot;:180.0}}}</para>
             /// </summary>
             [NameInMap("MetricValues")]
             [Validation(Required=false)]

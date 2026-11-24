@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the prefix mode. Valid values:</para>
+        /// <para>Specifies whether the prefix mode is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Yes.</description></item>
         /// <item><description>false: No.</description></item>

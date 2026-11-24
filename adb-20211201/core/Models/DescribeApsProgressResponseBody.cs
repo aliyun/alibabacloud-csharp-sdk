@@ -13,9 +13,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The migration progress.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;DbName&quot;:&quot;example_db&quot;,&quot;TbName&quot;:&quot;example_table&quot;,&quot;Progress&quot;:&quot;95&quot;,&quot;Speed&quot;:&quot;2&quot;}]</para>
         /// </summary>
         [NameInMap("ApsHiveProgress")]
         [Validation(Required=false)]

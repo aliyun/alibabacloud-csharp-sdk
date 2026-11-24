@@ -13,16 +13,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The workload information.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;WorkloadName&quot;:&quot;test&quot;,&quot;State&quot;:&quot;COMPLETED&quot;,&quot;FullComputeUnit&quot;:&quot;16&quot;}</para>
         /// </summary>
         [NameInMap("ApsWorkload")]
         [Validation(Required=false)]
         public DescribeApsHiveWorkloadResponseBodyApsWorkload ApsWorkload { get; set; }
         public class DescribeApsHiveWorkloadResponseBodyApsWorkload : TeaModel {
             /// <summary>
-            /// <para>The advanced configurations.</para>
+            /// <para>The advanced configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test.adv.config=value</para>
@@ -32,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AdvancedConfig { get; set; }
 
             /// <summary>
-            /// <para>The handling strategy when a database or table with the same name exists at the destination.</para>
+            /// <para>The handling strategy for databases or tables with the same name in the destination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Intercept</para>
@@ -87,16 +85,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The EMR cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>c-b933c5aac8fe****</para>
             /// </summary>
             [NameInMap("EmrClusterId")]
             [Validation(Required=false)]
             public string EmrClusterId { get; set; }
 
             /// <summary>
-            /// <para>The number of ACUs required for migration.</para>
+            /// <para>The number of ACUs required for the migration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource pool to which the SQL statement belongs.</para>
+            /// <para>The resource pool to which the SQL statements belong.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -228,7 +224,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string WorkloadName { get; set; }
 
             /// <summary>
-            /// <para>The workload name.</para>
+            /// <para>The workload type name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

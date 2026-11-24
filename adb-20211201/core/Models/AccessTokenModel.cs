@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The access token.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example****token</para>
         /// </summary>
         [NameInMap("AccessToken")]
         [Validation(Required=false)]
@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The comment for the access token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample access token</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The creation time of the access token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-11-20T02:00:00Z</para>
         /// </summary>
         [NameInMap("CreatedAt")]
         [Validation(Required=false)]
@@ -35,6 +41,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The expiration time of the access token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-12-20T02:00:00Z</para>
         /// </summary>
         [NameInMap("ExpiredAt")]
         [Validation(Required=false)]
@@ -42,6 +51,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The status of the access token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ENABLE</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

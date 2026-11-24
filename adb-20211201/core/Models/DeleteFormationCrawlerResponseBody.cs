@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task is deleted. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The task is deleted.</description></item>
-        /// <item><description>false: The task failed to be deleted.</description></item>
-        /// </list>
+        /// <para>Indicates whether the deletion is successful. Valid values: - true: The deletion is successful. - false: The deletion fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

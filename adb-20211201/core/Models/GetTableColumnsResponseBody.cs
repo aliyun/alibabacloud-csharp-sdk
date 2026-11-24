@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetTableColumnsResponseBodyData Data { get; set; }
         public class GetTableColumnsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</para>
+            /// <para>The page number. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public TableDetailModel Table { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries in the result.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</para>
+        /// <para>The page number. Valid values: an integer greater than 0 and up to the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the result.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateFormationCrawlerRequest : TeaModel {
         /// <summary>
-        /// <para>The JSON string that contains the complete crawler configuration. This is the most important parameter. For the internal JSON structure, see the CrawlerInfo structure definition section.</para>
+        /// <para>The JSON string that contains the complete configuration information of the crawler. This field is the core parameter. For more information about its internal JSON structure, see the CrawlerInfo structure definition section.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CrawlerInfo { get; set; }
 
         /// <summary>
-        /// <para>The ADB instance ID. This specifies the resource-level scope of the operation.</para>
+        /// <para>The ID of the ADB instance. This parameter specifies the resource-level scope of the operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

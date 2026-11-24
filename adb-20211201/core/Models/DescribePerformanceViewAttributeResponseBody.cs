@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the keys completed in the original monitoring view are populated when you view the monitoring view. Valid values:</para>
+        /// <para>Specifies whether to populate the keys from the original monitoring view when querying the monitoring view. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string KeyName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the metric is selected. Valid values:</para>
+                    /// <para>Specifies whether the metric is selected. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>true</description></item>
                     /// <item><description>false</description></item>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether it is a linkage chart. Valid values:</para>
+            /// <para>Specifies whether it is a linkage chart. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true</description></item>
             /// <item><description>false</description></item>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The name of the monitoring view.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom-All metrics-2 columns-Linked</para>
+        /// <para>Custom-All metrics-2 columns-linked</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

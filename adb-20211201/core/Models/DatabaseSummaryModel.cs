@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The creation source of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XIHE</para>
         /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The user who created the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example_user</para>
         /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]
@@ -35,6 +41,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The database type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EXTERNAL_DB</para>
         /// </summary>
         [NameInMap("DbType")]
         [Validation(Required=false)]
@@ -52,6 +61,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The data storage location of the database.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://example-bucket/database/</para>
         /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]

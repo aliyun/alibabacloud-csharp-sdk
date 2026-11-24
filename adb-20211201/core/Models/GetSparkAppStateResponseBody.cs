@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The alert message returned, such as task execution failure or insufficient resources. This parameter is empty if no alerts are generated.</para>
+            /// <para>The alert message, such as task execution failure or insufficient resources. This field is empty if no alerts are triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Insufficient resources.</para>

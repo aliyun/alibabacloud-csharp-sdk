@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DeleteLakeStorageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The ADB instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-bp*********</para>
@@ -20,13 +20,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lake storage.</para>
+        /// <para>The ID of the lake storage instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>adb-lake-cn-hangzhou-1aa1a1aa11</para>
         /// </summary>
         [NameInMap("LakeStorageId")]
         [Validation(Required=false)]

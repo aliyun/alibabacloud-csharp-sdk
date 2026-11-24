@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDiagnosisDimensionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried source IP addresses.</para>
+        /// <para>The source IP addresses.</para>
         /// </summary>
         [NameInMap("ClientIps")]
         [Validation(Required=false)]
         public List<string> ClientIps { get; set; }
 
         /// <summary>
-        /// <para>The queried database names.</para>
+        /// <para>The database names.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried resource group names.</para>
+        /// <para>The resource group names.</para>
         /// </summary>
         [NameInMap("ResourceGroups")]
         [Validation(Required=false)]
         public List<string> ResourceGroups { get; set; }
 
         /// <summary>
-        /// <para>The queried usernames.</para>
+        /// <para>The usernames.</para>
         /// </summary>
         [NameInMap("UserNames")]
         [Validation(Required=false)]

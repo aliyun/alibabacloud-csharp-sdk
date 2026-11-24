@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetViewDDLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>421794A3-72A5-5D27-9E8B-A75A4C503E17</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The SQL statement.</para>
+        /// <para>The details of the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATE VIEW <c>test</c>.<c>test_view</c> AS SELECT

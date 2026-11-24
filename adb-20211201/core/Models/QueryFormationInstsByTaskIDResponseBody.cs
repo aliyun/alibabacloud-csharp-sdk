@@ -97,11 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Schema { get; set; }
 
             /// <summary>
-            /// <para>The task source. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>system</b>: System.</description></item>
-            /// <item><description><b>custom</b>: Custom.</description></item>
-            /// </list>
+            /// <para>The task source. Valid values: - <b>system</b>: System. - <b>custom</b>: Custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>shareScreen</para>
@@ -170,7 +166,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<Dictionary<string, object>> Items { get; set; }
 
         /// <summary>
-        /// <para>The message. The value is OK when the request is successful.</para>
+        /// <para>The message. The value is OK if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -190,7 +186,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -210,7 +206,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

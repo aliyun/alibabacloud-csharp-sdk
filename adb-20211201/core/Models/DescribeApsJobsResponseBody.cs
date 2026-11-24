@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of APS tasks.</para>
+        /// <para>The list of tasks.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>[{&quot;ApsJobId&quot;:&quot;aps-example&quot;,&quot;ApsJobName&quot;:&quot;example-job&quot;,&quot;CreateTime&quot;:&quot;2022-06-28 15:00:04&quot;}]</para>
         /// </summary>
         [NameInMap("APSJobs")]
         [Validation(Required=false)]
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ApsJobName { get; set; }
 
             /// <summary>
-            /// <para>The creation time in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-06-28 15:00:04</para>
@@ -105,9 +103,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The status of the task.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>Synchronizing</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -117,9 +113,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The status of the subtask.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>Synchronizing</para>
             /// </summary>
             [NameInMap("SubStatus")]
             [Validation(Required=false)]
@@ -138,7 +132,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code. A status code of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -150,8 +144,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, <b>Success</b> is returned. </description></item>
-        /// <item><description>If the request fails, a specific error code is returned.</description></item>
+        /// <item><description>If the request is normal, <b>Success</b> is returned. </description></item>
+        /// <item><description>If the request is abnormal, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,8 +188,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

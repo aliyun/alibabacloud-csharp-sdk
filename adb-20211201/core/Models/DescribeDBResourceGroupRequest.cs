@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, information about all resource groups in the specified cluster is returned by default.</para>
+        /// <para>If you do not specify this parameter, the information about all resource groups in the specified cluster is returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <list type="bullet">
         /// <item><description><b>Interactive</b></description></item>
         /// <item><description><b>Job</b><remarks>
-        /// <para>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</para>
+        /// <para>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

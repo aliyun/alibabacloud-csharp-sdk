@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterOwner { get; set; }
 
         /// <summary>
-        /// <para>The view name.</para>
+        /// <para>The name of the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_mv</para>
@@ -40,13 +40,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewName { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>VIRTUAL_VIEW</description></item>
-        /// <item><description>MATERIALIZED_VIEW</description></item>
+        /// <item><description>MATERIALIZED_VIEW
+        /// Default value: empty.</description></item>
         /// </list>
-        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MATERIALIZED_VIEW</para>
@@ -56,14 +55,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewType { get; set; }
 
         /// <summary>
-        /// <para>The sort field.</para>
-        /// <para>Valid values for the sort order:</para>
+        /// <para>The sort field. Valid values for the sort order:</para>
         /// <list type="bullet">
         /// <item><description>Asc</description></item>
-        /// <item><description>Desc</description></item>
-        /// </list>
-        /// <para>Valid values for the sort field:</para>
-        /// <list type="bullet">
+        /// <item><description>Desc
+        /// Valid values for the field:</description></item>
         /// <item><description>StartTime</description></item>
         /// <item><description>EndTime</description></item>
         /// <item><description>ScheduledStartTime</description></item>
@@ -87,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -107,7 +103,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo_db</para>

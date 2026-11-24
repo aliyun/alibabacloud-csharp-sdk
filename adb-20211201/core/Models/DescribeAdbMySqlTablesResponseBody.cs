@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, <b>Success</b> is returned.</description></item>
-        /// <item><description>If the request fails, a specific error code is returned.</description></item>
+        /// <item><description><b>Success</b>: The request is successful. </description></item>
+        /// <item><description>Specific error code: The request is abnormal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7A7D49E3-5585-5DF8-B62C-75C46B4991DC</para>

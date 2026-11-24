@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
         /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of clusters in a specified region, including the cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of clusters in a specific region, including the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

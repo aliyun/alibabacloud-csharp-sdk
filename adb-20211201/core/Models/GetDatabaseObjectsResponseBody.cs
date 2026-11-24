@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DatabaseSummaryModel> DatabaseSummaryModels { get; set; }
 
             /// <summary>
-            /// <para>The page number. The value must be greater than 0 and no greater than the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+            /// <para>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

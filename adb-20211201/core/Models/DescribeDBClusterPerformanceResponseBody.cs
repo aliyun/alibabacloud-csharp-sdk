@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</para>
         /// </remarks>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The time is in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</para>
+        /// <para>The end time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mmZ</i> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-11T15:01Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public List<DescribeDBClusterPerformanceResponseBodyPerformances> Performances { get; set; }
         public class DescribeDBClusterPerformanceResponseBodyPerformances : TeaModel {
             /// <summary>
-            /// <para>The name of the performance metric.</para>
+            /// <para>The name of the performance metrics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AnalyticDB_CPU_Usage_Percentage</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> Series { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformancesSeries : TeaModel {
                 /// <summary>
-                /// <para>The name of the performance metric (monitoring metric value name). For more information, see <a href="https://help.aliyun.com/document_detail/2863211.html">Monitoring metrics overview</a>.</para>
+                /// <para>The name of the performance metrics (the value name of the monitoring metrics). For details, see <a href="https://help.aliyun.com/document_detail/2863211.html">Overview of monitoring metrics</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AnalyticDB_Storage_CPU_Avg_Usage_Percentage</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The tag values.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{instance_name: &quot;am-***&quot;}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// <para>The key used for internationalization translation. You can ignore this parameter in most cases.</para>
+                /// <para>The key used for internationalization. You can ignore this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AnalyticDB_RP_WaitTime</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string TranslateKey { get; set; }
 
                 /// <summary>
-                /// <para>The performance values at different points in time.</para>
+                /// <para>The details of the performance values at different points in time.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The unit of the monitoring metric.</para>
+            /// <para>The unit of the monitoring metrics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BD8C3096-8BC6-51DF-A4AB-BACD9DC10435</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</para>
+        /// <para>The start time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mmZ</i> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-10T23:56Z</para>

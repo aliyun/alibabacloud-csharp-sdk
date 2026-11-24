@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeTablePartitionDiagnoseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the request denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -38,34 +38,34 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The queried detection items and detection results.</para>
+        /// <para>The list of check items and check results.</para>
         /// </summary>
         [NameInMap("DetectionItems")]
         [Validation(Required=false)]
         public List<DescribeTablePartitionDiagnoseResponseBodyDetectionItems> DetectionItems { get; set; }
         public class DescribeTablePartitionDiagnoseResponseBodyDetectionItems : TeaModel {
             /// <summary>
-            /// <para>The detection result.</para>
+            /// <para>The check result message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Multiple oversized non-partitioned tables are detected.</para>
+            /// <para>Unreasonable partitions detected in the table</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The name of the detection item.</para>
+            /// <para>The name of the check item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Improper partition field diagnostics</para>
+            /// <para>Table partition rationality check</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the detection result. Valid values:</para>
+            /// <para>The status of the check result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NORMAL</description></item>
             /// <item><description>WARNING</description></item>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The queried partition diagnostic information.</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeTablePartitionDiagnoseResponseBodyItems> Items { get; set; }
         public class DescribeTablePartitionDiagnoseResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The improper partitions.</para>
+            /// <para>The unreasonable partitions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[20210110, 20210113,20210123]</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? PartitionNumber { get; set; }
 
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_db</para>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// <para>The storage percentage of the table. Unit: %.</para>
+            /// <para>The table storage proportion. Unit: %.</para>
             /// <remarks>
-            /// <para> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</para>
+            /// <para>Calculation formula: Table storage proportion = Total data volume of the table / Total data volume of the instance × 100.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? SpaceRatio { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The total data size of the table. Unit: bytes.</para>
+            /// <para>The total data volume. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42949672960</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The recommended maximum number of rows in each partition.</para>
+        /// <para>The recommended maximum number of rows for subpartitions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>640000000</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? SuggestMaxRecordsPerPartition { get; set; }
 
         /// <summary>
-        /// <para>The recommended minimum number of rows in each partition.</para>
+        /// <para>The recommended minimum number of rows for subpartitions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64000000</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? SuggestMinRecordsPerPartition { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>185</para>

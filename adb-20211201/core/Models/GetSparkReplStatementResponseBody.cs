@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetSparkReplStatementResponseBodyData Data { get; set; }
         public class GetSparkReplStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the cluster.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>144740799645****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? AliyunUid { get; set; }
 
             /// <summary>
-            /// <para>The code that is executed.</para>
+            /// <para>The executed code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>print(1+1)</para>
@@ -37,12 +37,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The code execution status. Valid values:</para>
+            /// <para>The execution status of the code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CANCELLED</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>SUCCEEDED</description></item>
-            /// <item><description>ERROR</description></item>
+            /// <item><description>CANCELLED: The execution is canceled.</description></item>
+            /// <item><description>RUNNING: The execution is in progress.</description></item>
+            /// <item><description>SUCCEEDED: The execution is completed.</description></item>
+            /// <item><description>ERROR: The execution failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CodeState { get; set; }
 
             /// <summary>
-            /// <para>The code type. Valid values:</para>
+            /// <para>The type of the code. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PYTHON</description></item>
             /// <item><description>SCALA</description></item>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// <para>The column names.</para>
+            /// <para>The array of column names.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
             /// <summary>
-            /// <para>The end time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The end time of the task. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730968194000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The code execution result, which is a JSON string.</para>
+            /// <para>The output result, which is a string in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;text/plain&quot;: 2}</para>
@@ -104,12 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Output { get; set; }
 
             /// <summary>
-            /// <para>The execution result type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>TABLE</description></item>
-            /// <item><description>TEXT</description></item>
-            /// </list>
+            /// <para>The type of the output result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TEXT</para>
@@ -119,7 +114,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string OutputType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The start time of the task. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730968194000</para>
@@ -129,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the code block in the Spark job.</para>
+            /// <para>The unique ID of the code block in this Spark job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>

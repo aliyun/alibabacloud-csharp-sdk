@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The creation source of the table or view.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XIHE</para>
         /// </summary>
         [NameInMap("CreatedBySource")]
         [Validation(Required=false)]
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The user who created the table or view.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example_user</para>
         /// </summary>
         [NameInMap("CreatedByUser")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class OpenStructMvDetailModel : TeaModel {
         /// <summary>
-        /// <para>All direct parent base tables of the materialized view.</para>
+        /// <para>All direct parent base tables of the current materialized view.</para>
         /// </summary>
         [NameInMap("BaseTableInfos")]
         [Validation(Required=false)]
         public List<OpenStructMvDetailModelBaseTableInfos> BaseTableInfos { get; set; }
         public class OpenStructMvDetailModelBaseTableInfos : TeaModel {
             /// <summary>
-            /// <para>Whether the base table is a materialized view.</para>
+            /// <para>Specifies whether the base table is a materialized view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -59,39 +59,35 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>All direct parent base tables of the materialized view.</para>
+        /// <para>All direct parent base tables of the current materialized view.</para>
         /// </summary>
         [NameInMap("BaseTableNames")]
         [Validation(Required=false)]
         public List<List<string>> BaseTableNames { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to enable alerting for refresh latency. Valid values:</para>
+        /// <para>Specifies whether to enable the refresh delay alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Yes.</para>
-        /// </description></item>
-        /// <item><description><para>false: No.</para>
-        /// </description></item>
+        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("EnableDelayAlert")]
         [Validation(Required=false)]
         public int? EnableDelayAlert { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to enable alerting for refresh task failures. Valid values:</para>
+        /// <para>Specifies whether to enable the refresh task failure alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Yes.</para>
-        /// </description></item>
-        /// <item><description><para>false: No.</para>
-        /// </description></item>
+        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("EnableFailureAlert")]
         [Validation(Required=false)]
@@ -128,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ImplicitHit { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the materialized view has not been accessed by explicit or implicit queries for more than 30 days since its creation.</para>
+        /// <para>Indicates whether the current materialized view has not been accessed (including explicit and implicit queries) for more than 30 days since its creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -138,7 +134,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? IsInactive { get; set; }
 
         /// <summary>
-        /// <para>The refresh latency toleration, in minutes.</para>
+        /// <para>The refresh delay tolerance, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? LatencyTolerance { get; set; }
 
         /// <summary>
-        /// <para>The disk space that the materialized view occupies for hot data, in bytes.</para>
+        /// <para>The hot data disk space occupied by the materialized view, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -158,7 +154,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? LocalSize { get; set; }
 
         /// <summary>
-        /// <para>Whether query rewrite is enabled for the materialized view.</para>
+        /// <para>Specifies whether query rewrite is enabled for the current materialized view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -188,7 +184,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RefreshState { get; set; }
 
         /// <summary>
-        /// <para>The disk space that the materialized view occupies for cold data, in bytes.</para>
+        /// <para>The cold data disk space occupied by the materialized view, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -198,7 +194,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? RemoteSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group on which the refresh depends.</para>
+        /// <para>The resource group that the refresh depends on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_default</para>

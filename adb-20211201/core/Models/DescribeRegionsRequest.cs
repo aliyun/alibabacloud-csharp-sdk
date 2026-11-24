@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language used for the names of regions and zones (the LocalName values in the response). Valid values:</para>
+        /// <para>The language used for the region and zone names (the LocalName field in the response). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: simplified Chinese (default).</description></item>
+        /// <item><description><b>zh-CN</b>: Simplified Chinese (default).</description></item>
         /// <item><description><b>en-US</b>: English.</description></item>
         /// <item><description><b>ja</b>: Japanese.</description></item>
         /// </list>

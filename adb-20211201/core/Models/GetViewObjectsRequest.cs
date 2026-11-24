@@ -41,12 +41,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewName { get; set; }
 
         /// <summary>
-        /// <para>The view type. Valid values:</para>
+        /// <para>The view type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>VIRTUAL_VIEW</description></item>
         /// <item><description>MATERIALIZED_VIEW</description></item>
         /// </list>
-        /// <para>Default value: empty.</para>
+        /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VIRTUAL_VIEW</para>
@@ -57,12 +58,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The sort field.
-        /// Valid values for the sort type:</para>
+        /// Valid values for Type:</para>
         /// <list type="bullet">
         /// <item><description>Asc</description></item>
         /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for the sort field:</para>
+        /// <para>Valid values for Field:</para>
         /// <list type="bullet">
         /// <item><description>ViewName</description></item>
         /// <item><description>CreateTime</description></item>
@@ -124,7 +125,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the base table information of materialized views.</para>
+        /// <para>Specifies whether to display the base table information of the materialized view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAppliedAdvicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details.</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAppliedAdvicesResponseBodyItems> Items { get; set; }
         public class DescribeAppliedAdvicesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The advice ID.</para>
+            /// <para>The suggestion ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7417db9c-914d-43f3-a123-4d0e448f****</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AdviceId { get; set; }
 
             /// <summary>
-            /// <para>The benefit of the advice.</para>
+            /// <para>The benefit of the suggestion.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>节省0.4 GB的存储空间</para>
+            /// <para>Saves 0.4 GB of storage space</para>
             /// </summary>
             [NameInMap("Benefit")]
             [Validation(Required=false)]
             public string Benefit { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement of the build task.</para>
+            /// <para>The SQL statement used to execute the build task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>build table <c>schema1</c>.<c>table1</c></para>
@@ -57,12 +57,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string IndexFields { get; set; }
 
             /// <summary>
-            /// <para>The status of the task that is used to apply the advice. Valid values:</para>
+            /// <para>The status of the task that executes the suggestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>SUCCEED</b>: The task is successful.</para>
-            /// </description></item>
-            /// <item><description><para><b>FAILED</b>: The task has failed.</para>
-            /// </description></item>
+            /// <item><description><b>SUCCEED</b>: Succeeded.</description></item>
+            /// <item><description><b>FAILED</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string JobStatus { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</para>
+            /// <para>The page number. The value must be greater than 0 and no more than the maximum value of the Integer data type. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -83,14 +81,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries to return on each page. Valid values:</para>
+            /// <para>The number of entries per page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>30</b> (Default)</para>
-            /// </description></item>
-            /// <item><description><para><b>50</b></para>
-            /// </description></item>
-            /// <item><description><para><b>100</b></para>
-            /// </description></item>
+            /// <item><description><b>30</b> (default)</description></item>
+            /// <item><description><b>50</b></description></item>
+            /// <item><description><b>100</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement that is used to roll back the advice.</para>
+            /// <para>The rollback SQL statement for the suggestion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alter table <c>schema1</c>.<c>table1</c> add key col1_1_idx(col1)</para>
@@ -111,7 +106,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RollbackSQL { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement that is used to apply the advice.</para>
+            /// <para>The SQL statement used to apply the suggestion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alter table <c>schema1</c>.<c>table1</c> drop key col1_1_idx</para>
@@ -131,12 +126,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// <para>The submission status of the advice. Valid values:</para>
+            /// <para>The delivery status of the suggestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>SUCCEED</b>: The advice is submitted.</para>
-            /// </description></item>
-            /// <item><description><para><b>FAILED</b>: The advice fails to be submitted.</para>
-            /// </description></item>
+            /// <item><description><b>SUCCEED</b>: Succeeded.</description></item>
+            /// <item><description><b>FAILED</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,7 +140,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SubmitStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the advice was submitted. The time is in the <c>yyMMddHHmm</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the suggestion was issued. Format: yyMMddHHmm (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2208131600</para>
@@ -167,7 +160,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</para>
+            /// <para>The total number of returned results. The value must be greater than or equal to 0 and no more than the maximum value of the Integer data type. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -179,7 +172,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and no more than the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -189,14 +182,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b> (Default)</para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b> (default)</description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,14 +207,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The concatenated strings of database and table names.</para>
+        /// <para>The concatenated string of the database name and table name.</para>
         /// </summary>
         [NameInMap("SchemaTableNames")]
         [Validation(Required=false)]
         public List<string> SchemaTableNames { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</para>
+        /// <para>The total number of returned results. The value must be greater than or equal to 0 and no more than the maximum value of the Integer data type. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

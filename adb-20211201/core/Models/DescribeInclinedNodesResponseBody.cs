@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeInclinedNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried storage nodes.</para>
+        /// <para>The list information.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DiskUsageRatio { get; set; }
 
             /// <summary>
-            /// <para>The number of the storage node.</para>
+            /// <para>The storage node number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Node1</para>

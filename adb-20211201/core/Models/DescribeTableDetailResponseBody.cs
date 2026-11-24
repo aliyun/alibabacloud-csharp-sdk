@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeTableDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why the access was denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The average number of rows in a shard.</para>
+        /// <para>The average number of rows per shard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>160</para>
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AvgSize { get; set; }
 
         /// <summary>
-        /// <para>The queried data distribution.</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeTableDetailResponseBodyItems Items { get; set; }
         public class DescribeTableDetailResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The queried shards.</para>
+            /// <para>The list of shards.</para>
             /// </summary>
             [NameInMap("Shard")]
             [Validation(Required=false)]
             public List<DescribeTableDetailResponseBodyItemsShard> Shard { get; set; }
             public class DescribeTableDetailResponseBodyItemsShard : TeaModel {
                 /// <summary>
-                /// <para>The shard ID. Only the numeric part of the shard name is returned.</para>
+                /// <para>The shard number. Only the numeric part of the shard name is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows in the table.</para>
+                /// <para>The table size and number of rows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9484858</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

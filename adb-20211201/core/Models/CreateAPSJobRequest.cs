@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The password of the destination instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Example****123!</para>
         /// </summary>
         [NameInMap("DestinationEndpointPassword")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The username of the destination instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>example_user</para>
         /// </summary>
         [NameInMap("DestinationEndpointUserName")]
         [Validation(Required=false)]
@@ -73,10 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PartitionList { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</para>
-        /// </remarks>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The password of the source endpoint.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Example****123!</para>
         /// </summary>
         [NameInMap("SourceEndpointPassword")]
         [Validation(Required=false)]
@@ -121,14 +118,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The username of the source endpoint.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>example_user</para>
         /// </summary>
         [NameInMap("SourceEndpointUserName")]
         [Validation(Required=false)]
         public string SourceEndpointUserName { get; set; }
 
         /// <summary>
-        /// <para>The destination table mode.</para>
+        /// <para>The mode of the destination table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

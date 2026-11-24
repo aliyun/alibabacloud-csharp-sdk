@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyApsSlsADBJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code or the error code.</para>
+        /// <para>The status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidInput</para>
@@ -23,16 +23,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The HTTP status code returned by the request. A status code of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -42,10 +40,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The execution result of applying the suggestion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a success message is returned.****</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description>If the request is successful, <b>SUCCESS</b> is returned.</description></item>
+        /// <item><description>If an exception occurs, the specific error message is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>-3EEC-</b></b></b>-9F06-******</para>
@@ -66,10 +64,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

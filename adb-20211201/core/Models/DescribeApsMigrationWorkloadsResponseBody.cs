@@ -20,16 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The number of ACUs.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>16</para>
             /// </summary>
             [NameInMap("AcuCount")]
             [Validation(Required=false)]
             public int? AcuCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
+            /// <para>The time when the task was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-21T02:15:16Z</para>
@@ -42,9 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>The task execution failed</para>
             /// </summary>
             [NameInMap("FailedMsg")]
             [Validation(Required=false)]
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxRT { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was modified. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
+            /// <para>The time when the task was modified. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-21T02:15:16Z</para>

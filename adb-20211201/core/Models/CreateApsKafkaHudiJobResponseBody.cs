@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsKafkaHudiJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The code, which is the same as the HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The ID of the created task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>aps-aa1a1a11a1aaaa1a</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request is successful.</description></item>
-        /// <item><description>false: The request fails.</description></item>
+        /// <item><description>True: successful.</description></item>
+        /// <item><description>False: unsuccessful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountPrivilegesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account whose privileges you want to query.</para>
+        /// <para>The name of the database account whose permissions you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by column name. This parameter is used only when <c>PrivilegeType</c> is set to <c>Column</c>.</para>
+        /// <para>Filters the results by column name. This parameter is available only when the privilege level is column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>col1</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ColumnPrivilegeObject { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Lakehouse Edition cluster.
-        /// &lt;props=&quot;intl&quot;&gt;The ID of the Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by database name. This parameter is used only when <c>PrivilegeType</c> is set to <c>Database</c>, <c>Table</c>, or <c>Column</c>.</para>
+        /// <para>Filters the results by database name. This parameter is available only when the privilege level is database, table, or column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db1</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatabasePrivilegeObject { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start at 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The privilege level to query. To obtain the valid values for this parameter, call the <c>DescribeEnabledPrivileges</c> operation.</para>
+        /// <para>The privilege level to query. This value is returned by the DescribeEnabledPrivileges operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Global</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by table name. You can use this parameter with <c>DatabasePrivilegeObject</c> to refine the search. This parameter is used only when <c>PrivilegeType</c> is set to <c>Table</c> or <c>Column</c>.</para>
+        /// <para>Filters the results by table name. You can use this parameter together with the database name for joint filtering. This parameter is available only when the privilege level is table or column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table1</para>

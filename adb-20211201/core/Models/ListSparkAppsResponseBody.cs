@@ -17,20 +17,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ListSparkAppsResponseBodyData Data { get; set; }
         public class ListSparkAppsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of application information. Response parameter description:</para>
+            /// <para>The application information list. Returned parameter descriptions:</para>
             /// <list type="bullet">
-            /// <item><description><b>Data</b>: the Spark application template data.</description></item>
-            /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: the CPU time consumed to execute the Spark application, in milliseconds (ms).</description></item>
-            /// <item><description><b>LogRootPath</b>: the storage path of log files.</description></item>
-            /// <item><description><b>LastAttemptId</b>: the retry ID.</description></item>
-            /// <item><description><b>WebUiAddress</b>: the Web UI address.</description></item>
-            /// <item><description><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted, in UNIX timestamp format, in milliseconds (ms).</description></item>
-            /// <item><description><b>StartedTimeInMillis</b>: the time when the Spark application was created, in UNIX timestamp format, in milliseconds (ms).</description></item>
-            /// <item><description><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated, in UNIX timestamp format, in milliseconds (ms).</description></item>
-            /// <item><description><b>TerminatedTimeInMillis</b>: the time when the Spark application stopped execution, in UNIX timestamp format, in milliseconds (ms).</description></item>
-            /// <item><description><b>DBClusterId</b>: the ID of the cluster that executed the Spark application.</description></item>
-            /// <item><description><b>ResourceGroupName</b>: the name of the job resource group.</description></item>
-            /// <item><description><b>DurationInMillis</b>: the execution duration of the Spark application, in milliseconds (ms).</description></item>
+            /// <item><description><b>Data</b>: The Spark application template data.</description></item>
+            /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: The CPU time consumed to execute the Spark application, in milliseconds.</description></item>
+            /// <item><description><b>LogRootPath</b>: The storage path of log files.</description></item>
+            /// <item><description><b>LastAttemptId</b>: The retry ID.</description></item>
+            /// <item><description><b>WebUiAddress</b>: The Web UI address.</description></item>
+            /// <item><description><b>SubmittedTimeInMillis</b>: The time when the Spark application was committed. The value is a UNIX timestamp in milliseconds.</description></item>
+            /// <item><description><b>StartedTimeInMillis</b>: The time when the Spark application was created. The value is a UNIX timestamp in milliseconds.</description></item>
+            /// <item><description><b>LastUpdatedTimeInMillis</b>: The time when the Spark application was last updated. The value is a UNIX timestamp in milliseconds.</description></item>
+            /// <item><description><b>TerminatedTimeInMillis</b>: The time when the execution of the Spark application was stopped. The value is a UNIX timestamp in milliseconds.</description></item>
+            /// <item><description><b>DBClusterId</b>: The ID of the cluster where the Spark application is executed.</description></item>
+            /// <item><description><b>ResourceGroupName</b>: The name of the job resource group.</description></item>
+            /// <item><description><b>DurationInMillis</b>: The execution duration of the Spark application, in milliseconds.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("AppInfoList")]

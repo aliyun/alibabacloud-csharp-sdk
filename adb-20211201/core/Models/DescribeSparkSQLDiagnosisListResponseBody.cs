@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The SQL diagnostics information collection.</para>
+        /// <para>The collection of SQL diagnostic information.</para>
         /// </summary>
         [NameInMap("SQLDiagnosisList")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? ElapsedTime { get; set; }
 
             /// <summary>
-            /// <para>The internal query execution ID within the Spark application.</para>
+            /// <para>The internal query execution ID of the Spark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -142,10 +142,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The final execution state of the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>COMPLETED: The query is completed.</description></item>
-            /// <item><description>CANCELED: The query is canceled.</description></item>
-            /// <item><description>ABORTED: The query is aborted.</description></item>
-            /// <item><description>FAILED: The query failed.</description></item>
+            /// <item><description>COMPLETED: completed.</description></item>
+            /// <item><description>CANCELED: canceled.</description></item>
+            /// <item><description>ABORTED: aborted.</description></item>
+            /// <item><description>FAILED: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The language of file titles and error messages. Valid values:</para>
+        /// <para>Specifies the language for the title of the downloaded file and some error messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: simplified Chinese.</description></item>
+        /// <item><description><b>zh</b>: Simplified Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// <item><description><b>ja</b>: Japanese.</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// <item><description><b>zh-tw</b>: Traditional Chinese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

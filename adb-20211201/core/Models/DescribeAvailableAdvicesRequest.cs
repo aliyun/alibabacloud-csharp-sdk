@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAvailableAdvicesRequest : TeaModel {
         /// <summary>
-        /// <para>The generation date of the suggestion, in the yyyyMMdd format.</para>
+        /// <para>The generation date of the suggestions, in the yyyyMMdd format.</para>
         /// <remarks>
-        /// <para>Data is generated after daily analysis in the early morning. Therefore, you must specify a date of T-1 or earlier to query the data. For example, if today is 20240627, you must specify 20240626 or an earlier date.</para>
+        /// <para>Data is generated after daily analysis in the early morning. Therefore, you must specify a date of T-1 or earlier to query the data. For example, if today is 20240627, you should pass 20240626 or an earlier date.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The type of the suggestion. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INDEX</b>: Index optimization.</description></item>
-        /// <item><description><b>TIERING</b>: Hot and cold data optimization.</description></item>
+        /// <item><description><b>INDEX</b>: index optimization.</description></item>
+        /// <item><description><b>TIERING</b>: hot and cold data optimization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the query results. The value is a JSON string. Example: <c>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Parameters:</para>
+        /// <para>The field by which to sort the query results. The value must be a JSON string. Example: <c>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Parameters:</para>
         /// <list type="bullet">
         /// <item><description><c>Field</c>: the sort field. Valid values:<list type="bullet">
         /// <item><description><c>SchemaName</c>: the database name.</description></item>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The concatenated string of the database name and table name.</para>
+        /// <para>The concatenated string of the database name and the table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tpch.lineitem</para>

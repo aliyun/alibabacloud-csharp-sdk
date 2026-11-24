@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The column name that is used to filter columns.</para>
+        /// <para>The column name used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>col1</para>
@@ -31,7 +31,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ColumnPrivilegeObject { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The database name that is used to filter databases.</para>
+        /// <para>The database name used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>database1</para>
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatabasePrivilegeObject { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +63,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -72,7 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The permission level. Valid values: Database, Table, and Column. Global is not supported.</para>
+        /// <para>The privilege level. Only the Database, Table, and Column levels are supported. The Global level is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Column</para>
@@ -82,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PrivilegeType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The table name that is used to filter tables.</para>
+        /// <para>The table name used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table1</para>

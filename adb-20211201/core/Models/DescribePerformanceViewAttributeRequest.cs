@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query information about supported regions and zones, including region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom-All metrics-2 columns-Linked</para>
+        /// <para>Custom-All metrics-2 columns-linked</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

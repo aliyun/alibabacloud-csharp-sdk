@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The policy for handling databases and tables with the same name at the destination.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Intercept: reports error and aborts.
-        /// Ignore: ignores and continues.
-        /// Skip: skips relevant tables.</para>
+        /// <para>Intercept：报错拦截，暂停迁移
+        /// Ignore：忽略并继续执行，仍然迁移相关库表
+        /// Skip：跳过相关库表，只迁移其他库表</para>
         /// </summary>
         [NameInMap("ConflictStrategy")]
         [Validation(Required=false)]

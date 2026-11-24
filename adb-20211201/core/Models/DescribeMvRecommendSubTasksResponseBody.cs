@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public DescribeMvRecommendSubTasksResponseBodyData Data { get; set; }
         public class DescribeMvRecommendSubTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The execution list of the materialized view recommendation task.</para>
+            /// <para>The list of materialized view recommendation task executions.</para>
             /// </summary>
             [NameInMap("MvRecommendSubTaskModels")]
             [Validation(Required=false)]

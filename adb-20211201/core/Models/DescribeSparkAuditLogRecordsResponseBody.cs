@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSparkAuditLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// <para>The details of the access denial. This field is returned only when RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The list of SQL audit logs.</para>
+        /// <para>The list of SQL records.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The SQL execution error message.</para>
+            /// <para>The error message of the SQL execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>notFoundIp</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The SQL execution error stack trace.</para>
+            /// <para>The error stack trace of the SQL execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>notFoundIpException</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ErrorTrace { get; set; }
 
             /// <summary>
-            /// <para>The start time of the SQL statement. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</para>
+            /// <para>The start time of the SQL execution. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-23T16:05:08Z</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the query executed within the Spark application.</para>
+            /// <para>The internal query execution ID of the Spark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string InnerQueryId { get; set; }
 
             /// <summary>
-            /// <para>Whether it can be diagnosed.</para>
+            /// <para>Indicates whether the SQL statement can be diagnosed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ProcessId { get; set; }
 
             /// <summary>
-            /// <para>The resource group name.</para>
+            /// <para>The name of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_job</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement.</para>
+            /// <para>The details of the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM adb_hdfs_import_source</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SQLText { get; set; }
 
             /// <summary>
-            /// <para>The ID of the statement.</para>
+            /// <para>The statement ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fbd22066-1c03-xxxx-aa16-6ae28288****</para>
@@ -155,12 +155,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StatementId { get; set; }
 
             /// <summary>
-            /// <para>The source from which the query was initiated.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SQL_EDITOR: SQL_EDITOR.</description></item>
-            /// <item><description>JDBC: JDBC.</description></item>
-            /// </list>
+            /// <para>The source from which the query is initiated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL_EDITOR</para>
@@ -171,13 +166,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
             /// <summary>
             /// <para>The execution status of the SQL statement.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cancel: The task is canceled .</description></item>
-            /// <item><description>finished: The execution succeeds .</description></item>
-            /// <item><description>error: The execution fails .</description></item>
-            /// <item><description>timeout: The execution of the command timed out.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>finish</para>
@@ -187,7 +175,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The duration of the SQL statement. Unit: milliseconds.</para>
+            /// <para>The execution duration of the SQL statement. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000</para>
@@ -197,7 +185,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? TotalTime { get; set; }
 
             /// <summary>
-            /// <para>The username that is used to execute SQL statements.</para>
+            /// <para>The username that executed the SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_user</para>
@@ -219,7 +207,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -239,7 +227,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

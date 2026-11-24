@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "adb";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -2839,7 +2842,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2930,7 +2933,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3021,7 +3024,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3044,7 +3047,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3483,7 +3486,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3608,7 +3611,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3733,7 +3736,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3756,7 +3759,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4010,7 +4013,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS Kafka lakehouse ingestion task.</para>
+        /// <para>Creates an APS Kafka data lake ingestion task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4174,7 +4177,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS Kafka lakehouse ingestion task.</para>
+        /// <para>Creates an APS Kafka data lake ingestion task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4338,7 +4341,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS Kafka lakehouse ingestion task.</para>
+        /// <para>Creates an APS Kafka data lake ingestion task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4356,7 +4359,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS Kafka lakehouse ingestion task.</para>
+        /// <para>Creates an APS Kafka data lake ingestion task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4374,7 +4377,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
+        /// <para>Creates an APS pipeline from SLS to an ADB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4554,7 +4557,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
+        /// <para>Creates an APS pipeline from SLS to an ADB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4734,7 +4737,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
+        /// <para>Creates an APS pipeline from SLS to an ADB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4752,7 +4755,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
+        /// <para>Creates an APS pipeline from SLS to an ADB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4770,7 +4773,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a webhook for a specified database cluster and task type.</para>
+        /// <para>Creates a new webhook for a specified database cluster and job type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4830,7 +4833,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a webhook for a specified database cluster and task type.</para>
+        /// <para>Creates a new webhook for a specified database cluster and job type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4890,7 +4893,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a webhook for a specified database cluster and task type.</para>
+        /// <para>Creates a new webhook for a specified database cluster and job type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4908,7 +4911,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a webhook for a specified database cluster and task type.</para>
+        /// <para>Creates a new webhook for a specified database cluster and job type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5499,7 +5502,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5660,7 +5663,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5821,7 +5824,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5844,7 +5847,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6074,22 +6077,22 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL (ADB) instance.</para>
+        /// <para>Creates a Formation Crawler metadata discovery task in an ADB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL instance.</description></item>
-        /// <item><description>The created task configuration is not executed immediately. Call <c>StartFormationCrawler</c> to start the task.</description></item>
-        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration of the task, such as the target database name and data source type.</description></item>
-        /// <item><description>Some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
-        /// <item><description>The database name specified in <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
-        /// <item><description><c>schemaChangePolicy</c> is required. You must specify both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
+        /// <item><description>The created task configuration is not executed immediately. You must call <c>StartFormationCrawler</c> to start the task.</description></item>
+        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration information of the task, such as the target database name and data source type.</description></item>
+        /// <item><description>Note that some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
+        /// <item><description>The database name <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
+        /// <item><description><c>schemaChangePolicy</c> is required. You must provide both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
         /// <item><description>Use the <c>RUN_ON_DEMAND</c> scheduling mode to avoid unnecessary repeated scans.</description></item>
-        /// <item><description>Make sure the product name is <c>adb</c> and the endpoint format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
-        /// <item><description>After the task is created, manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
+        /// <item><description>Make sure that the product name is <c>adb</c> and the domain name format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
+        /// <item><description>After the task is created, you must manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6140,22 +6143,22 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL (ADB) instance.</para>
+        /// <para>Creates a Formation Crawler metadata discovery task in an ADB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL instance.</description></item>
-        /// <item><description>The created task configuration is not executed immediately. Call <c>StartFormationCrawler</c> to start the task.</description></item>
-        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration of the task, such as the target database name and data source type.</description></item>
-        /// <item><description>Some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
-        /// <item><description>The database name specified in <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
-        /// <item><description><c>schemaChangePolicy</c> is required. You must specify both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
+        /// <item><description>The created task configuration is not executed immediately. You must call <c>StartFormationCrawler</c> to start the task.</description></item>
+        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration information of the task, such as the target database name and data source type.</description></item>
+        /// <item><description>Note that some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
+        /// <item><description>The database name <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
+        /// <item><description><c>schemaChangePolicy</c> is required. You must provide both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
         /// <item><description>Use the <c>RUN_ON_DEMAND</c> scheduling mode to avoid unnecessary repeated scans.</description></item>
-        /// <item><description>Make sure the product name is <c>adb</c> and the endpoint format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
-        /// <item><description>After the task is created, manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
+        /// <item><description>Make sure that the product name is <c>adb</c> and the domain name format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
+        /// <item><description>After the task is created, you must manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6206,22 +6209,22 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL (ADB) instance.</para>
+        /// <para>Creates a Formation Crawler metadata discovery task in an ADB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL instance.</description></item>
-        /// <item><description>The created task configuration is not executed immediately. Call <c>StartFormationCrawler</c> to start the task.</description></item>
-        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration of the task, such as the target database name and data source type.</description></item>
-        /// <item><description>Some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
-        /// <item><description>The database name specified in <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
-        /// <item><description><c>schemaChangePolicy</c> is required. You must specify both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
+        /// <item><description>The created task configuration is not executed immediately. You must call <c>StartFormationCrawler</c> to start the task.</description></item>
+        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration information of the task, such as the target database name and data source type.</description></item>
+        /// <item><description>Note that some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
+        /// <item><description>The database name <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
+        /// <item><description><c>schemaChangePolicy</c> is required. You must provide both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
         /// <item><description>Use the <c>RUN_ON_DEMAND</c> scheduling mode to avoid unnecessary repeated scans.</description></item>
-        /// <item><description>Make sure the product name is <c>adb</c> and the endpoint format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
-        /// <item><description>After the task is created, manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
+        /// <item><description>Make sure that the product name is <c>adb</c> and the domain name format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
+        /// <item><description>After the task is created, you must manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6240,22 +6243,22 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL (ADB) instance.</para>
+        /// <para>Creates a Formation Crawler metadata discovery task in an ADB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a Formation Crawler metadata discovery task in an AnalyticDB for MySQL instance.</description></item>
-        /// <item><description>The created task configuration is not executed immediately. Call <c>StartFormationCrawler</c> to start the task.</description></item>
-        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration of the task, such as the target database name and data source type.</description></item>
-        /// <item><description>Some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
-        /// <item><description>The database name specified in <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
-        /// <item><description><c>schemaChangePolicy</c> is required. You must specify both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
+        /// <item><description>The created task configuration is not executed immediately. You must call <c>StartFormationCrawler</c> to start the task.</description></item>
+        /// <item><description>The <c>CrawlerInfo</c> field is a JSON string that contains the core configuration information of the task, such as the target database name and data source type.</description></item>
+        /// <item><description>Note that some parameters, such as <c>classifiers</c> and <c>frequency</c>, require double JSON encoding.</description></item>
+        /// <item><description>The database name <c>dbName</c> is automatically converted to lowercase by the server.</description></item>
+        /// <item><description><c>schemaChangePolicy</c> is required. You must provide both <c>updateRule</c> and <c>deleteRule</c>.</description></item>
         /// <item><description>Use the <c>RUN_ON_DEMAND</c> scheduling mode to avoid unnecessary repeated scans.</description></item>
-        /// <item><description>Make sure the product name is <c>adb</c> and the endpoint format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
-        /// <item><description>After the task is created, manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
+        /// <item><description>Make sure that the product name is <c>adb</c> and the domain name format is <c>adb.{regionId}.aliyuncs.com</c>.</description></item>
+        /// <item><description>After the task is created, you must manually call <c>StartFormationCrawler</c> to trigger the first metadata discovery.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7045,6 +7048,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Creates a semantic view.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <ol>
+        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
+        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
+        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSemanticViewRequest
         /// </param>
@@ -7098,6 +7112,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Creates a semantic view.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <ol>
+        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
+        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
+        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSemanticViewRequest
@@ -7153,6 +7178,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Creates a semantic view.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <ol>
+        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
+        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
+        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSemanticViewRequest
         /// </param>
@@ -7170,6 +7206,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Creates a semantic view.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <ol>
+        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
+        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
+        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSemanticViewRequest
@@ -7382,18 +7429,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SQL pattern comparison report.</para>
+        /// <para>Creates an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <para>Compares two time windows and asynchronously generates an SQL pattern comparison report.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
-        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
-        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
-        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows with the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request is accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for the same instance at a time.</description></item>
+        /// <item><description>The report is valid for 7 days and is isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7461,18 +7508,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SQL pattern comparison report.</para>
+        /// <para>Creates an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <para>Compares two time windows and asynchronously generates an SQL pattern comparison report.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
-        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
-        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
-        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows with the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request is accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for the same instance at a time.</description></item>
+        /// <item><description>The report is valid for 7 days and is isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7540,18 +7587,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SQL pattern comparison report.</para>
+        /// <para>Creates an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <para>Compares two time windows and asynchronously generates an SQL pattern comparison report.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
-        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
-        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
-        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows with the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request is accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for the same instance at a time.</description></item>
+        /// <item><description>The report is valid for 7 days and is isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7571,18 +7618,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a SQL pattern comparison report.</para>
+        /// <para>Creates an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <para>Compares two time windows and asynchronously generates an SQL pattern comparison report.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
-        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
-        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
-        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows with the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request is accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for the same instance at a time.</description></item>
+        /// <item><description>The report is valid for 7 days and is isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -9178,12 +9225,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lake storage.</para>
+        /// <para>Deletes lake storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9235,12 +9282,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lake storage.</para>
+        /// <para>Deletes lake storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9292,12 +9339,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lake storage.</para>
+        /// <para>Deletes lake storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9315,12 +9362,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lake storage.</para>
+        /// <para>Deletes lake storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10154,12 +10201,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
+        /// <para>Retrieves the list of AnalyticDB for MySQL instances for APS federated analytics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// <para>Queries the performance monitoring data of a specific cluster within a specified time range based on performance parameters. The collection granularity is 30 seconds. This operation supports querying slow SQL statements and provides monitoring content such as SQL query duration, number of scanned rows, and scanned data volume.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10197,12 +10244,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
+        /// <para>Retrieves the list of AnalyticDB for MySQL instances for APS federated analytics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// <para>Queries the performance monitoring data of a specific cluster within a specified time range based on performance parameters. The collection granularity is 30 seconds. This operation supports querying slow SQL statements and provides monitoring content such as SQL query duration, number of scanned rows, and scanned data volume.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10240,12 +10287,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
+        /// <para>Retrieves the list of AnalyticDB for MySQL instances for APS federated analytics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// <para>Queries the performance monitoring data of a specific cluster within a specified time range based on performance parameters. The collection granularity is 30 seconds. This operation supports querying slow SQL statements and provides monitoring content such as SQL query duration, number of scanned rows, and scanned data volume.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10263,12 +10310,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</para>
+        /// <para>Retrieves the list of AnalyticDB for MySQL instances for APS federated analytics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</para>
+        /// <para>Queries the performance monitoring data of a specific cluster within a specified time range based on performance parameters. The collection granularity is 30 seconds. This operation supports querying slow SQL statements and provides monitoring content such as SQL query duration, number of scanned rows, and scanned data volume.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10634,12 +10681,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases, tables, and columns on which a database account has permissions.</para>
+        /// <para>Retrieves the databases, tables, and columns visible to a specified account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10713,12 +10760,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases, tables, and columns on which a database account has permissions.</para>
+        /// <para>Retrieves the databases, tables, and columns visible to a specified account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10792,12 +10839,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases, tables, and columns on which a database account has permissions.</para>
+        /// <para>Retrieves the databases, tables, and columns visible to a specified account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10815,12 +10862,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases, tables, and columns on which a database account has permissions.</para>
+        /// <para>Retrieves the databases, tables, and columns visible to a specified account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10838,12 +10885,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions of a specified database account at a specific level.</para>
+        /// <para>Queries the permissions granted to a specified database account at a specific level.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>See <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10917,12 +10964,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions of a specified database account at a specific level.</para>
+        /// <para>Queries the permissions granted to a specified database account at a specific level.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>See <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10996,12 +11043,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions of a specified database account at a specific level.</para>
+        /// <para>Queries the permissions granted to a specified database account at a specific level.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>See <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11019,12 +11066,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions of a specified database account at a specific level.</para>
+        /// <para>Queries the permissions granted to a specified database account at a specific level.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>See <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11047,7 +11094,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11110,7 +11157,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11173,7 +11220,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11196,7 +11243,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11398,7 +11445,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table indexes.</para>
+        /// <para>Queries the index information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11452,7 +11499,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table indexes.</para>
+        /// <para>Queries the index information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11506,7 +11553,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table indexes.</para>
+        /// <para>Queries the index information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11524,7 +11571,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table indexes.</para>
+        /// <para>Queries the index information of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11548,8 +11595,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11606,8 +11653,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11664,8 +11711,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11690,8 +11737,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11710,7 +11757,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table metadata.</para>
+        /// <para>Queries the metadata of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11764,7 +11811,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table metadata.</para>
+        /// <para>Queries the metadata of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11818,7 +11865,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table metadata.</para>
+        /// <para>Queries the metadata of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11836,7 +11883,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table metadata.</para>
+        /// <para>Queries the metadata of a table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11860,8 +11907,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11922,8 +11969,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11984,8 +12031,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12010,8 +12057,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12035,7 +12082,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12086,7 +12133,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12137,7 +12184,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12160,7 +12207,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12354,7 +12401,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows applied recommendations.</para>
+        /// <para>Queries the accepted optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12436,7 +12483,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows applied recommendations.</para>
+        /// <para>Queries the accepted optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12518,7 +12565,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows applied recommendations.</para>
+        /// <para>Queries the accepted optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12536,7 +12583,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows applied recommendations.</para>
+        /// <para>Queries the accepted optimization suggestions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12554,15 +12601,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a real-time data ingestion job for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the detailed log information of real-time data ingestion tasks for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  General endpoint: <c>adb.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12657,15 +12704,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a real-time data ingestion job for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the detailed log information of real-time data ingestion tasks for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  General endpoint: <c>adb.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12760,15 +12807,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a real-time data ingestion job for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the detailed log information of real-time data ingestion tasks for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  General endpoint: <c>adb.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12787,15 +12834,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a real-time data ingestion job for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the detailed log information of real-time data ingestion tasks for a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  General endpoint: <c>adb.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12950,7 +12997,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APS data sources.</para>
+        /// <para>Queries the list of APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13020,7 +13067,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APS data sources.</para>
+        /// <para>Queries the list of APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13090,7 +13137,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APS data sources.</para>
+        /// <para>Queries the list of APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13108,7 +13155,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APS data sources.</para>
+        /// <para>Queries the list of APS data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13390,7 +13437,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of APS tasks.</para>
+        /// <para>Queries APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13452,7 +13499,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of APS tasks.</para>
+        /// <para>Queries APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13514,7 +13561,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of APS tasks.</para>
+        /// <para>Queries APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13532,7 +13579,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of APS tasks.</para>
+        /// <para>Queries APS tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16674,12 +16721,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View a cluster\&quot;s health status.</para>
+        /// <para>Checks the health status of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service access address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16725,12 +16772,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View a cluster\&quot;s health status.</para>
+        /// <para>Checks the health status of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service access address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16776,12 +16823,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View a cluster\&quot;s health status.</para>
+        /// <para>Checks the health status of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service access address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16799,12 +16846,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View a cluster\&quot;s health status.</para>
+        /// <para>Checks the health status of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service access address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16827,7 +16874,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16894,7 +16941,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16961,7 +17008,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16984,7 +17031,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17004,6 +17051,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Queries the SSL configurations of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 目前该功能处于内测阶段，控制台界面展示及API调用接口尚未稳定，可能持续变化。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDBClusterSSLRequest
@@ -17051,6 +17105,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Queries the SSL configurations of a cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 目前该功能处于内测阶段，控制台界面展示及API调用接口尚未稳定，可能持续变化。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDBClusterSSLRequest
         /// </param>
@@ -17097,6 +17158,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Queries the SSL configurations of a cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 目前该功能处于内测阶段，控制台界面展示及API调用接口尚未稳定，可能持续变化。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDBClusterSSLRequest
         /// </param>
@@ -17115,6 +17183,13 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Queries the SSL configurations of a cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 目前该功能处于内测阶段，控制台界面展示及API调用接口尚未稳定，可能持续变化。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDBClusterSSLRequest
         /// </param>
@@ -17130,12 +17205,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage overview of an instance, including the total data volume, hot data volume, cold data volume, and data growth.</para>
+        /// <para>Retrieves the storage overview of an instance, including the total data size, hot data size, cold data size, and data growth.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17197,12 +17272,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage overview of an instance, including the total data volume, hot data volume, cold data volume, and data growth.</para>
+        /// <para>Retrieves the storage overview of an instance, including the total data size, hot data size, cold data size, and data growth.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17264,12 +17339,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage overview of an instance, including the total data volume, hot data volume, cold data volume, and data growth.</para>
+        /// <para>Retrieves the storage overview of an instance, including the total data size, hot data size, cold data size, and data growth.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17287,12 +17362,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage overview of an instance, including the total data volume, hot data volume, cold data volume, and data growth.</para>
+        /// <para>Retrieves the storage overview of an instance, including the total data size, hot data size, cold data size, and data growth.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17667,7 +17742,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17730,7 +17805,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17793,7 +17868,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17816,7 +17891,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration endpoints</a>.</para>
+        /// <para>For the service registration endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17834,12 +17909,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the deduplicated statistics information of SQL statements that meet the specified conditional retrieve in an AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster across dimensions such as resource groups, database names, usernames, and access source addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17901,12 +17976,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the deduplicated statistics information of SQL statements that meet the specified conditional retrieve in an AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster across dimensions such as resource groups, database names, usernames, and access source addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17968,12 +18043,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the deduplicated statistics information of SQL statements that meet the specified conditional retrieve in an AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster across dimensions such as resource groups, database names, usernames, and access source addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17991,12 +18066,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>Queries the deduplicated statistics information of SQL statements that meet the specified conditional retrieve in an AnalyticDB for MySQL Data Lakehouse Edition (3.0) cluster across dimensions such as resource groups, database names, usernames, and access source addresses.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18014,12 +18089,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of SQL statements that meet specified conditions in an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the SQL summary information that meets specified conditions in a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18133,12 +18208,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of SQL statements that meet specified conditions in an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the SQL summary information that meets specified conditions in a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18252,12 +18327,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of SQL statements that meet specified conditions in an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the SQL summary information that meets specified conditions in a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18275,12 +18350,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of SQL statements that meet specified conditions in an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the SQL summary information that meets specified conditions in a specified AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18298,12 +18373,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnostics results.</para>
+        /// <para>Retrieves the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnosis results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration addresses of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18369,12 +18444,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnostics results.</para>
+        /// <para>Retrieves the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnosis results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration addresses of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18440,12 +18515,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnostics results.</para>
+        /// <para>Retrieves the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnosis results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration addresses of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18463,12 +18538,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnostics results.</para>
+        /// <para>Retrieves the execution details of a specific SQL statement, including the execution plan, runtime information, resource usage, and self-diagnosis results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration addresses of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19322,15 +19397,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the supported permission levels and the list of permissions.</para>
+        /// <para>Retrieves the supported permission levels and permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>The global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19369,15 +19444,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the supported permission levels and the list of permissions.</para>
+        /// <para>Retrieves the supported permission levels and permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>The global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19416,15 +19491,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the supported permission levels and the list of permissions.</para>
+        /// <para>Retrieves the supported permission levels and permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>The global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19443,15 +19518,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the supported permission levels and the list of permissions.</para>
+        /// <para>Retrieves the supported permission levels and permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>The global public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20431,7 +20506,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20502,7 +20577,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20573,7 +20648,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20596,7 +20671,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20782,12 +20857,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves job resource usage statistics.</para>
+        /// <para>Retrieves the resource usage statistics of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20849,12 +20924,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves job resource usage statistics.</para>
+        /// <para>Retrieves the resource usage statistics of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20916,12 +20991,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves job resource usage statistics.</para>
+        /// <para>Retrieves the resource usage statistics of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20939,12 +21014,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves job resource usage statistics.</para>
+        /// <para>Retrieves the resource usage statistics of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21462,7 +21537,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list of subtasks for a materialized view recommendation task.</para>
+        /// <para>Queries the list of subtask executions for a materialized view recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21536,7 +21611,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list of subtasks for a materialized view recommendation task.</para>
+        /// <para>Queries the list of subtask executions for a materialized view recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21610,7 +21685,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list of subtasks for a materialized view recommendation task.</para>
+        /// <para>Queries the list of subtask executions for a materialized view recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21628,7 +21703,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list of subtasks for a materialized view recommendation task.</para>
+        /// <para>Queries the list of subtask executions for a materialized view recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22174,12 +22249,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View metric details (such as query time and average memory consumption) for SQL patterns over a specified time range in a cluster.</para>
+        /// <para>Queries the details of various metrics, such as query time and average memory consumption, for SQL patterns in a cluster within a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22237,12 +22312,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View metric details (such as query time and average memory consumption) for SQL patterns over a specified time range in a cluster.</para>
+        /// <para>Queries the details of various metrics, such as query time and average memory consumption, for SQL patterns in a cluster within a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22300,12 +22375,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View metric details (such as query time and average memory consumption) for SQL patterns over a specified time range in a cluster.</para>
+        /// <para>Queries the details of various metrics, such as query time and average memory consumption, for SQL patterns in a cluster within a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22323,12 +22398,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View metric details (such as query time and average memory consumption) for SQL patterns over a specified time range in a cluster.</para>
+        /// <para>Queries the details of various metrics, such as query time and average memory consumption, for SQL patterns in a cluster within a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22674,7 +22749,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to view the running queries of an instance.</para>
+        /// <para>Queries the running queries of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22760,7 +22835,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to view the running queries of an instance.</para>
+        /// <para>Queries the running queries of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22846,7 +22921,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to view the running queries of an instance.</para>
+        /// <para>Queries the running queries of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22864,7 +22939,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeProcessList operation to view the running queries of an instance.</para>
+        /// <para>Queries the running queries of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22887,7 +22962,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22954,7 +23029,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23021,7 +23096,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23044,7 +23119,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23222,7 +23297,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user-configured result set export settings.</para>
+        /// <para>Retrieves the result set export configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23272,7 +23347,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user-configured result set export settings.</para>
+        /// <para>Retrieves the result set export configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23322,7 +23397,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user-configured result set export settings.</para>
+        /// <para>Retrieves the result set export configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23340,7 +23415,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user-configured result set export settings.</para>
+        /// <para>Retrieves the result set export configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23358,15 +23433,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified time range.</para>
+        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the center: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23449,15 +23524,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified time range.</para>
+        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the center: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23540,15 +23615,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified time range.</para>
+        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the center: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23567,15 +23642,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified time range.</para>
+        /// <para>Queries the list of SQL patterns for an AnalyticDB for MySQL Data Lakehouse Edition cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Central public endpoint: <c>adb.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>Regional VPC endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the center: <c>adb.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23890,7 +23965,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about a Spark application.</para>
+        /// <para>Queries the diagnostic information of a Spark application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23944,7 +24019,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about a Spark application.</para>
+        /// <para>Queries the diagnostic information of a Spark application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23998,7 +24073,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about a Spark application.</para>
+        /// <para>Queries the diagnostic information of a Spark application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24016,7 +24091,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the diagnostic information about a Spark application.</para>
+        /// <para>Queries the diagnostic information of a Spark application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24170,14 +24245,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs for a Spark Interactive resource group.</para>
+        /// <para>Queries the SQL audit logs of a Spark Interactive resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</para>
+        /// <para>SQL audit logs can be queried only when the SQL audit feature is enabled, and only logs generated within the last 30 days are supported. If the SQL audit feature is disabled and then re-enabled, only the logs generated after it is re-enabled can be queried.</para>
         /// <remarks>
-        /// <para> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</para>
+        /// <para>Notice: This operation can only query SQL audit logs executed through <b>Spark Interactive resource groups</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24300,14 +24375,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs for a Spark Interactive resource group.</para>
+        /// <para>Queries the SQL audit logs of a Spark Interactive resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</para>
+        /// <para>SQL audit logs can be queried only when the SQL audit feature is enabled, and only logs generated within the last 30 days are supported. If the SQL audit feature is disabled and then re-enabled, only the logs generated after it is re-enabled can be queried.</para>
         /// <remarks>
-        /// <para> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</para>
+        /// <para>Notice: This operation can only query SQL audit logs executed through <b>Spark Interactive resource groups</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24430,14 +24505,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs for a Spark Interactive resource group.</para>
+        /// <para>Queries the SQL audit logs of a Spark Interactive resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</para>
+        /// <para>SQL audit logs can be queried only when the SQL audit feature is enabled, and only logs generated within the last 30 days are supported. If the SQL audit feature is disabled and then re-enabled, only the logs generated after it is re-enabled can be queried.</para>
         /// <remarks>
-        /// <para> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</para>
+        /// <para>Notice: This operation can only query SQL audit logs executed through <b>Spark Interactive resource groups</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -24456,14 +24531,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL audit logs for a Spark Interactive resource group.</para>
+        /// <para>Queries the SQL audit logs of a Spark Interactive resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL auditing is turned off midway, when it is re-enabled, you can only query the SQL audit logs generated after it was turned back on.</para>
+        /// <para>SQL audit logs can be queried only when the SQL audit feature is enabled, and only logs generated within the last 30 days are supported. If the SQL audit feature is disabled and then re-enabled, only the logs generated after it is re-enabled can be queried.</para>
         /// <remarks>
-        /// <para> You can query only SQL audit logs that are executed by using Spark Interactive Resource Group.</para>
+        /// <para>Notice: This operation can only query SQL audit logs executed through <b>Spark Interactive resource groups</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25138,7 +25213,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark SQL diagnostics list.</para>
+        /// <para>Queries the list of Spark SQL diagnostics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25208,7 +25283,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark SQL diagnostics list.</para>
+        /// <para>Queries the list of Spark SQL diagnostics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25278,7 +25353,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark SQL diagnostics list.</para>
+        /// <para>Queries the list of Spark SQL diagnostics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25296,7 +25371,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Spark SQL diagnostics list.</para>
+        /// <para>Queries the list of Spark SQL diagnostics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25319,7 +25394,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25394,7 +25469,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25469,7 +25544,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25492,7 +25567,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
+        /// <para>For the service registration address, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26186,12 +26261,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times a specified table or all tables in a cluster are accessed within a specified date range.</para>
+        /// <para>Queries the access count of a specified table or all tables in a cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26257,12 +26332,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times a specified table or all tables in a cluster are accessed within a specified date range.</para>
+        /// <para>Queries the access count of a specified table or all tables in a cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26328,12 +26403,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times a specified table or all tables in a cluster are accessed within a specified date range.</para>
+        /// <para>Queries the access count of a specified table or all tables in a cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26351,12 +26426,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of times a specified table or all tables in a cluster are accessed within a specified date range.</para>
+        /// <para>Queries the access count of a specified table or all tables in a cluster within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoint of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26374,7 +26449,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data distribution among shards of a table.</para>
+        /// <para>Queries the data distribution of a table across shards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26428,7 +26503,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data distribution among shards of a table.</para>
+        /// <para>Queries the data distribution of a table across shards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26482,7 +26557,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data distribution among shards of a table.</para>
+        /// <para>Queries the data distribution of a table across shards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26500,7 +26575,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data distribution among shards of a table.</para>
+        /// <para>Queries the data distribution of a table across shards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26518,7 +26593,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about partition diagnostics.</para>
+        /// <para>Queries partition diagnostics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26580,7 +26655,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about partition diagnostics.</para>
+        /// <para>Queries partition diagnostics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26642,7 +26717,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about partition diagnostics.</para>
+        /// <para>Queries partition diagnostics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26660,7 +26735,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about partition diagnostics.</para>
+        /// <para>Queries partition diagnostics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28749,6 +28824,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Executes Spark SQL statements in batches.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>地域的公网接入地址：<c>adb.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb.cn-hangzhou.aliyuncs.com</c>。</description></item>
+        /// <item><description>地域的VPC接入地址：<c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb-vpc.cn-hangzhou.aliyuncs.com</c>。<remarks>
+        /// <para>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteSparkWarehouseBatchSQLRequest
         /// </param>
@@ -28818,6 +28904,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Executes Spark SQL statements in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>地域的公网接入地址：<c>adb.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb.cn-hangzhou.aliyuncs.com</c>。</description></item>
+        /// <item><description>地域的VPC接入地址：<c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb-vpc.cn-hangzhou.aliyuncs.com</c>。<remarks>
+        /// <para>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteSparkWarehouseBatchSQLRequest
@@ -28889,6 +28986,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Executes Spark SQL statements in batches.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>地域的公网接入地址：<c>adb.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb.cn-hangzhou.aliyuncs.com</c>。</description></item>
+        /// <item><description>地域的VPC接入地址：<c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb-vpc.cn-hangzhou.aliyuncs.com</c>。<remarks>
+        /// <para>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteSparkWarehouseBatchSQLRequest
         /// </param>
@@ -28906,6 +29014,17 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Executes Spark SQL statements in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>地域的公网接入地址：<c>adb.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb.cn-hangzhou.aliyuncs.com</c>。</description></item>
+        /// <item><description>地域的VPC接入地址：<c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>。示例：<c>adb-vpc.cn-hangzhou.aliyuncs.com</c>。<remarks>
+        /// <para>如果华北1（青岛）、华南1（深圳）、华南3（广州）、中国香港发起请求时，遇到409错误，请联系技术支持。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteSparkWarehouseBatchSQLRequest
@@ -29118,6 +29237,178 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a reference record for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建知识库文件引用记录。调用前需确保当前 RAM 用户已绑定到该 ADB 实例的数据库账号，可通过 CreateAccount 的 RamUserList 参数或 BindAccount 完成绑定；未绑定时接口返回错误码 119。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ForkKnowledgeFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForkKnowledgeFileResponse
+        /// </returns>
+        public ForkKnowledgeFileResponse ForkKnowledgeFileWithOptions(ForkKnowledgeFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadUser))
+            {
+                query["UploadUser"] = request.UploadUser;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ForkKnowledgeFile",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ForkKnowledgeFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a reference record for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建知识库文件引用记录。调用前需确保当前 RAM 用户已绑定到该 ADB 实例的数据库账号，可通过 CreateAccount 的 RamUserList 参数或 BindAccount 完成绑定；未绑定时接口返回错误码 119。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ForkKnowledgeFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForkKnowledgeFileResponse
+        /// </returns>
+        public async Task<ForkKnowledgeFileResponse> ForkKnowledgeFileWithOptionsAsync(ForkKnowledgeFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadUser))
+            {
+                query["UploadUser"] = request.UploadUser;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ForkKnowledgeFile",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ForkKnowledgeFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a reference record for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建知识库文件引用记录。调用前需确保当前 RAM 用户已绑定到该 ADB 实例的数据库账号，可通过 CreateAccount 的 RamUserList 参数或 BindAccount 完成绑定；未绑定时接口返回错误码 119。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ForkKnowledgeFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForkKnowledgeFileResponse
+        /// </returns>
+        public ForkKnowledgeFileResponse ForkKnowledgeFile(ForkKnowledgeFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ForkKnowledgeFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a reference record for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建知识库文件引用记录。调用前需确保当前 RAM 用户已绑定到该 ADB 实例的数据库账号，可通过 CreateAccount 的 RamUserList 参数或 BindAccount 完成绑定；未绑定时接口返回错误码 119。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ForkKnowledgeFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForkKnowledgeFileResponse
+        /// </returns>
+        public async Task<ForkKnowledgeFileResponse> ForkKnowledgeFileAsync(ForkKnowledgeFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ForkKnowledgeFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Generates an executable SQL statement from a semantic SQL statement.</para>
         /// </summary>
         /// 
@@ -29254,12 +29545,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the diagnostic report on basic Spark permissions for the current user.</para>
+        /// <para>Retrieves the Spark basic permission diagnostic report for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic report for this API indicates whether the current user has all the permissions required for ADB Spark features. The scope of the checked permissions may exceed the minimum business requirements. This diagnostic report is used for quick environment initialization of ADB Spark. To configure fine-grained permissions, refer to <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
+        /// <para>The API diagnostic report indicates whether the current user has all the permissions required for ADB Spark-related features. The scope of the checked permissions may exceed the minimum business requirements. The diagnostic report of this API is used for the quick environment initialization scenario of ADB Spark. For fine-grained permission configuration, refer to the <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29301,12 +29592,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the diagnostic report on basic Spark permissions for the current user.</para>
+        /// <para>Retrieves the Spark basic permission diagnostic report for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic report for this API indicates whether the current user has all the permissions required for ADB Spark features. The scope of the checked permissions may exceed the minimum business requirements. This diagnostic report is used for quick environment initialization of ADB Spark. To configure fine-grained permissions, refer to <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
+        /// <para>The API diagnostic report indicates whether the current user has all the permissions required for ADB Spark-related features. The scope of the checked permissions may exceed the minimum business requirements. The diagnostic report of this API is used for the quick environment initialization scenario of ADB Spark. For fine-grained permission configuration, refer to the <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29348,12 +29639,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the diagnostic report on basic Spark permissions for the current user.</para>
+        /// <para>Retrieves the Spark basic permission diagnostic report for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic report for this API indicates whether the current user has all the permissions required for ADB Spark features. The scope of the checked permissions may exceed the minimum business requirements. This diagnostic report is used for quick environment initialization of ADB Spark. To configure fine-grained permissions, refer to <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
+        /// <para>The API diagnostic report indicates whether the current user has all the permissions required for ADB Spark-related features. The scope of the checked permissions may exceed the minimum business requirements. The diagnostic report of this API is used for the quick environment initialization scenario of ADB Spark. For fine-grained permission configuration, refer to the <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29371,12 +29662,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the diagnostic report on basic Spark permissions for the current user.</para>
+        /// <para>Retrieves the Spark basic permission diagnostic report for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic report for this API indicates whether the current user has all the permissions required for ADB Spark features. The scope of the checked permissions may exceed the minimum business requirements. This diagnostic report is used for quick environment initialization of ADB Spark. To configure fine-grained permissions, refer to <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
+        /// <para>The API diagnostic report indicates whether the current user has all the permissions required for ADB Spark-related features. The scope of the checked permissions may exceed the minimum business requirements. The diagnostic report of this API is used for the quick environment initialization scenario of ADB Spark. For fine-grained permission configuration, refer to the <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">ADB Spark fine-grained permission configuration documentation</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29394,7 +29685,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the table creation statement for tables.</para>
+        /// <para>Queries the CREATE TABLE statement of a specified table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29464,7 +29755,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the table creation statement for tables.</para>
+        /// <para>Queries the CREATE TABLE statement of a specified table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29534,7 +29825,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the table creation statement for tables.</para>
+        /// <para>Queries the CREATE TABLE statement of a specified table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29552,7 +29843,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the table creation statement for tables.</para>
+        /// <para>Queries the CREATE TABLE statement of a specified table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29576,8 +29867,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29650,8 +29941,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29724,8 +30015,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29750,8 +30041,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30734,15 +31025,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an Spark application.</para>
+        /// <para>Retrieves the information about a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when making requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30793,15 +31084,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an Spark application.</para>
+        /// <para>Retrieves the information about a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when making requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30852,15 +31143,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an Spark application.</para>
+        /// <para>Retrieves the information about a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when making requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30881,15 +31172,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an Spark application.</para>
+        /// <para>Retrieves the information about a Spark application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when making requests in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -30916,8 +31207,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -30987,8 +31278,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -31058,8 +31349,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -31087,8 +31378,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -31296,8 +31587,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -31355,8 +31646,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -31414,8 +31705,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -31443,8 +31734,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
         /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
@@ -31962,7 +32253,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Spark session.</para>
+        /// <para>Retrieves the session status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32008,7 +32299,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Spark session.</para>
+        /// <para>Retrieves the session status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32054,7 +32345,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Spark session.</para>
+        /// <para>Retrieves the session status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32072,7 +32363,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a Spark session.</para>
+        /// <para>Retrieves the session status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32090,7 +32381,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a code block.</para>
+        /// <para>Retrieves the execution result of a code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32140,7 +32431,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a code block.</para>
+        /// <para>Retrieves the execution result of a code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32190,7 +32481,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a code block.</para>
+        /// <para>Retrieves the execution result of a code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32208,7 +32499,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution result of a code block.</para>
+        /// <para>Retrieves the execution result of a code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32230,15 +32521,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state information about the Spark SQL engine.</para>
+        /// <para>Queries the status of the Spark SQL engine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -32293,15 +32584,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state information about the Spark SQL engine.</para>
+        /// <para>Queries the status of the Spark SQL engine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -32356,15 +32647,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state information about the Spark SQL engine.</para>
+        /// <para>Queries the status of the Spark SQL engine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -32391,15 +32682,15 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the state information about the Spark SQL engine.</para>
+        /// <para>Queries the status of the Spark SQL engine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
-        /// <para> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</para>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -32922,15 +33213,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of a Spark SQL statement.</para>
+        /// <para>Retrieves the execution results of Spark SQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 error when sending requests from China North 1 (Qingdao), China South 1 (Shenzhen), China South 3 (Guangzhou), or Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -32983,15 +33274,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of a Spark SQL statement.</para>
+        /// <para>Retrieves the execution results of Spark SQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 error when sending requests from China North 1 (Qingdao), China South 1 (Shenzhen), China South 3 (Guangzhou), or Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -33044,15 +33335,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of a Spark SQL statement.</para>
+        /// <para>Retrieves the execution results of Spark SQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 error when sending requests from China North 1 (Qingdao), China South 1 (Shenzhen), China South 3 (Guangzhou), or Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -33073,15 +33364,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution results of a Spark SQL statement.</para>
+        /// <para>Retrieves the execution results of Spark SQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 error when sending requests from China North 1 (Qingdao), China South 1 (Shenzhen), China South 3 (Guangzhou), or Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when sending requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -33108,8 +33399,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33170,8 +33461,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33232,8 +33523,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33258,8 +33549,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33284,8 +33575,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33358,8 +33649,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33432,8 +33723,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33458,8 +33749,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33478,14 +33769,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a table.</para>
+        /// <para>Queries the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33540,14 +33831,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a table.</para>
+        /// <para>Queries the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33602,14 +33893,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a table.</para>
+        /// <para>Queries the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33628,14 +33919,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a table.</para>
+        /// <para>Queries the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33878,14 +34169,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a view.</para>
+        /// <para>Queries the creation statement of a view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33940,14 +34231,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a view.</para>
+        /// <para>Queries the creation statement of a view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34002,14 +34293,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a view.</para>
+        /// <para>Queries the creation statement of a view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34028,14 +34319,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statement that is used to create a view.</para>
+        /// <para>Queries the creation statement of a view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34060,8 +34351,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34146,8 +34437,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34232,8 +34523,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34258,8 +34549,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35279,6 +35570,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["FileIds"] = request.FileIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -35340,6 +35635,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIds))
             {
                 query["FileIds"] = request.FileIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -35798,7 +36097,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of result set export jobs of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the execution history of result set export jobs for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35886,7 +36185,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of result set export jobs of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the execution history of result set export jobs for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35974,7 +36273,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of result set export jobs of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the execution history of result set export jobs for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35992,7 +36291,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of result set export jobs of a Resource Access Management (RAM) user.</para>
+        /// <para>Queries the execution history of result set export jobs for the current Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36164,9 +36463,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), submit a ticket or contact technical support.</para>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when initiating a request in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36229,9 +36528,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), submit a ticket or contact technical support.</para>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when initiating a request in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36294,9 +36593,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), submit a ticket or contact technical support.</para>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when initiating a request in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36323,9 +36622,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), submit a ticket or contact technical support.</para>
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when initiating a request in China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36352,9 +36651,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36421,9 +36720,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36490,9 +36789,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36519,9 +36818,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.<remarks>
-        /// <para>If you encounter a 409 fault when initiating a request from Hong Kong (China), contact technical support.</para>
+        /// <item><description>The public endpoint for the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint for the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 fault when initiating requests from China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China), contact technical support.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -36886,8 +37185,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Spark SQL statements.</para>
+        /// <para>Queries all executed Spark SQL statements by paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from the China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China) regions, contact technical support.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSparkWarehouseBatchSQLRequest
@@ -36940,8 +37250,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Spark SQL statements.</para>
+        /// <para>Queries all executed Spark SQL statements by paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from the China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China) regions, contact technical support.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSparkWarehouseBatchSQLRequest
@@ -36994,8 +37315,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Spark SQL statements.</para>
+        /// <para>Queries all executed Spark SQL statements by paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from the China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China) regions, contact technical support.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSparkWarehouseBatchSQLRequest
@@ -37012,8 +37344,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Spark SQL statements.</para>
+        /// <para>Queries all executed Spark SQL statements by paging.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>The VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.<remarks>
+        /// <para>If you encounter a 409 error when sending requests from the China (Qingdao), China (Shenzhen), China (Guangzhou), or Hong Kong (China) regions, contact technical support.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSparkWarehouseBatchSQLRequest
@@ -37750,15 +38093,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Modifies an APS data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a></h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</description></item>
-        /// <item><description>You cannot modify the number of nodes for the USER_DEFAULT resource group.</description></item>
+        /// <item><description>This operation is applicable only to elastic mode Cluster Edition (new version) clusters with 32 or more cores.</description></item>
+        /// <item><description>You cannot modify the number of nodes in the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37859,15 +38202,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Modifies an APS data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a></h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</description></item>
-        /// <item><description>You cannot modify the number of nodes for the USER_DEFAULT resource group.</description></item>
+        /// <item><description>This operation is applicable only to elastic mode Cluster Edition (new version) clusters with 32 or more cores.</description></item>
+        /// <item><description>You cannot modify the number of nodes in the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37968,15 +38311,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Modifies an APS data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a></h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</description></item>
-        /// <item><description>You cannot modify the number of nodes for the USER_DEFAULT resource group.</description></item>
+        /// <item><description>This operation is applicable only to elastic mode Cluster Edition (new version) clusters with 32 or more cores.</description></item>
+        /// <item><description>You cannot modify the number of nodes in the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37995,15 +38338,15 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) data source.</para>
+        /// <para>Modifies an APS data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a></h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</description></item>
-        /// <item><description>You cannot modify the number of nodes for the USER_DEFAULT resource group.</description></item>
+        /// <item><description>This operation is applicable only to elastic mode Cluster Edition (new version) clusters with 32 or more cores.</description></item>
+        /// <item><description>You cannot modify the number of nodes in the default resource group USER_DEFAULT.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38186,8 +38529,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Modifies a Simple Log Service (SLS) data shipping task to an AnalyticDB data warehouse.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 SLS 投递 ADB 数仓任务。调用前需确认：</para>
+        /// <ol>
+        /// <item><description>已创建并处于运行中的 ADB 集群，可通过 CreateDBCluster 创建、DescribeDBClusters 查询状态。</description></item>
+        /// <item><description>集群已创建数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>已通过 CreateApsSlsADBJob 创建 SLS 数据链路任务，并从响应获取 WorkloadId。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyApsSlsADBJobRequest
@@ -38282,8 +38635,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Modifies a Simple Log Service (SLS) data shipping task to an AnalyticDB data warehouse.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 SLS 投递 ADB 数仓任务。调用前需确认：</para>
+        /// <ol>
+        /// <item><description>已创建并处于运行中的 ADB 集群，可通过 CreateDBCluster 创建、DescribeDBClusters 查询状态。</description></item>
+        /// <item><description>集群已创建数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>已通过 CreateApsSlsADBJob 创建 SLS 数据链路任务，并从响应获取 WorkloadId。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyApsSlsADBJobRequest
@@ -38378,8 +38741,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Modifies a Simple Log Service (SLS) data shipping task to an AnalyticDB data warehouse.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 SLS 投递 ADB 数仓任务。调用前需确认：</para>
+        /// <ol>
+        /// <item><description>已创建并处于运行中的 ADB 集群，可通过 CreateDBCluster 创建、DescribeDBClusters 查询状态。</description></item>
+        /// <item><description>集群已创建数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>已通过 CreateApsSlsADBJob 创建 SLS 数据链路任务，并从响应获取 WorkloadId。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsSlsADBJobRequest
@@ -38396,8 +38769,18 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Modifies a Simple Log Service (SLS) data shipping task to an AnalyticDB data warehouse.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>修改 SLS 投递 ADB 数仓任务。调用前需确认：</para>
+        /// <ol>
+        /// <item><description>已创建并处于运行中的 ADB 集群，可通过 CreateDBCluster 创建、DescribeDBClusters 查询状态。</description></item>
+        /// <item><description>集群已创建数据库账号，可通过 CreateAccount 创建。</description></item>
+        /// <item><description>已通过 CreateApsSlsADBJob 创建 SLS 数据链路任务，并从响应获取 WorkloadId。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApsSlsADBJobRequest
@@ -40623,7 +41006,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -40776,7 +41159,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -40929,7 +41312,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40952,7 +41335,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration address of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42758,7 +43141,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadata discovery task instances.</para>
+        /// <para>Queries the metadata discovery task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42808,7 +43191,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadata discovery task instances.</para>
+        /// <para>Queries the metadata discovery task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42858,7 +43241,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadata discovery task instances.</para>
+        /// <para>Queries the metadata discovery task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42876,7 +43259,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of metadata discovery task instances.</para>
+        /// <para>Queries the metadata discovery task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43038,7 +43421,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata discovery tasks by task type.</para>
+        /// <para>Query metadata discovery tasks by task type</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43088,7 +43471,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata discovery tasks by task type.</para>
+        /// <para>Query metadata discovery tasks by task type</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43138,7 +43521,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata discovery tasks by task type.</para>
+        /// <para>Query metadata discovery tasks by task type</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43156,7 +43539,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metadata discovery tasks by task type.</para>
+        /// <para>Query metadata discovery tasks by task type</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44863,8 +45246,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require Alibaba Cloud technical support, if the helpdesk needs to perform operations on your cluster during the support procedure, authorize the service account of the AnalyticDB for MySQL cluster so that the helpdesk can provide technical support through the service account. After the authorization expires, the permissions of the service account are automatically revoked.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require technical support from Alibaba Cloud, if the helpdesk needs to perform operations on your cluster during the support procedure, you must authorize the service account of the AnalyticDB for MySQL cluster. This allows the helpdesk to provide technical support through the service account. After the authorization validity period expires, the permissions of the service account are automatically revoked.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44923,8 +45306,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require Alibaba Cloud technical support, if the helpdesk needs to perform operations on your cluster during the support procedure, authorize the service account of the AnalyticDB for MySQL cluster so that the helpdesk can provide technical support through the service account. After the authorization expires, the permissions of the service account are automatically revoked.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require technical support from Alibaba Cloud, if the helpdesk needs to perform operations on your cluster during the support procedure, you must authorize the service account of the AnalyticDB for MySQL cluster. This allows the helpdesk to provide technical support through the service account. After the authorization validity period expires, the permissions of the service account are automatically revoked.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44983,8 +45366,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require Alibaba Cloud technical support, if the helpdesk needs to perform operations on your cluster during the support procedure, authorize the service account of the AnalyticDB for MySQL cluster so that the helpdesk can provide technical support through the service account. After the authorization expires, the permissions of the service account are automatically revoked.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require technical support from Alibaba Cloud, if the helpdesk needs to perform operations on your cluster during the support procedure, you must authorize the service account of the AnalyticDB for MySQL cluster. This allows the helpdesk to provide technical support through the service account. After the authorization validity period expires, the permissions of the service account are automatically revoked.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45007,8 +45390,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Operation description</h3>
-        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require Alibaba Cloud technical support, if the helpdesk needs to perform operations on your cluster during the support procedure, authorize the service account of the AnalyticDB for MySQL cluster so that the helpdesk can provide technical support through the service account. After the authorization expires, the permissions of the service account are automatically revoked.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>When you use a cloud-native data repository AnalyticDB for MySQL cluster and require technical support from Alibaba Cloud, if the helpdesk needs to perform operations on your cluster during the support procedure, you must authorize the service account of the AnalyticDB for MySQL cluster. This allows the helpdesk to provide technical support through the service account. After the authorization validity period expires, the permissions of the service account are automatically revoked.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45398,12 +45781,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a metadata discovery task that is currently running.</para>
+        /// <para>Stops the currently running metadata discovery task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Stops only the currently running task without canceling subsequent cron-scheduled executions.</para>
+        /// <para>Stops only the currently running task without stopping subsequent cron schedules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45457,12 +45840,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a metadata discovery task that is currently running.</para>
+        /// <para>Stops the currently running metadata discovery task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Stops only the currently running task without canceling subsequent cron-scheduled executions.</para>
+        /// <para>Stops only the currently running task without stopping subsequent cron schedules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45516,12 +45899,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a metadata discovery task that is currently running.</para>
+        /// <para>Stops the currently running metadata discovery task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Stops only the currently running task without canceling subsequent cron-scheduled executions.</para>
+        /// <para>Stops only the currently running task without stopping subsequent cron schedules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45539,12 +45922,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a metadata discovery task that is currently running.</para>
+        /// <para>Stops the currently running metadata discovery task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Stops only the currently running task without canceling subsequent cron-scheduled executions.</para>
+        /// <para>Stops only the currently running task without stopping subsequent cron schedules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45564,6 +45947,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Submits an SQL query and exports a result set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>提交结果集导出任务。调用前须先调用 ConfigureResultExport 配置导出目标（SLS 或 OSS），否则接口返回 APS.NotExists 错误。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitResultExportJobRequest
@@ -45631,6 +46019,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Submits an SQL query and exports a result set.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>提交结果集导出任务。调用前须先调用 ConfigureResultExport 配置导出目标（SLS 或 OSS），否则接口返回 APS.NotExists 错误。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitResultExportJobRequest
         /// </param>
@@ -45697,6 +46090,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <para>Submits an SQL query and exports a result set.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>提交结果集导出任务。调用前须先调用 ConfigureResultExport 配置导出目标（SLS 或 OSS），否则接口返回 APS.NotExists 错误。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitResultExportJobRequest
         /// </param>
@@ -45714,6 +46112,11 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <summary>
         /// <para>Submits an SQL query and exports a result set.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>提交结果集导出任务。调用前须先调用 ConfigureResultExport 配置导出目标（SLS 或 OSS），否则接口返回 APS.NotExists 错误。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitResultExportJobRequest
@@ -46242,6 +46645,142 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerKnowledgeFileParseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerKnowledgeFileParseResponse
+        /// </returns>
+        public TriggerKnowledgeFileParseResponse TriggerKnowledgeFileParseWithOptions(TriggerKnowledgeFileParseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerKnowledgeFileParse",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerKnowledgeFileParseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerKnowledgeFileParseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerKnowledgeFileParseResponse
+        /// </returns>
+        public async Task<TriggerKnowledgeFileParseResponse> TriggerKnowledgeFileParseWithOptionsAsync(TriggerKnowledgeFileParseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerKnowledgeFileParse",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerKnowledgeFileParseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerKnowledgeFileParseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerKnowledgeFileParseResponse
+        /// </returns>
+        public TriggerKnowledgeFileParseResponse TriggerKnowledgeFileParse(TriggerKnowledgeFileParseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TriggerKnowledgeFileParseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerKnowledgeFileParseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerKnowledgeFileParseResponse
+        /// </returns>
+        public async Task<TriggerKnowledgeFileParseResponse> TriggerKnowledgeFileParseAsync(TriggerKnowledgeFileParseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TriggerKnowledgeFileParseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disassociates a standard account of an AnalyticDB for MySQL cluster from a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
@@ -46694,7 +47233,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a metadata discovery task.</para>
+        /// <para>Updates the metadata discovery task information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46748,7 +47287,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a metadata discovery task.</para>
+        /// <para>Updates the metadata discovery task information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46802,7 +47341,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a metadata discovery task.</para>
+        /// <para>Updates the metadata discovery task information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46820,7 +47359,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a metadata discovery task.</para>
+        /// <para>Updates the metadata discovery task information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46838,7 +47377,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses or resumes the periodic scheduling of metadata discovery.</para>
+        /// <para>Pause or resume periodic scheduling for metadata discovery</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46896,7 +47435,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses or resumes the periodic scheduling of metadata discovery.</para>
+        /// <para>Pause or resume periodic scheduling for metadata discovery</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46954,7 +47493,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses or resumes the periodic scheduling of metadata discovery.</para>
+        /// <para>Pause or resume periodic scheduling for metadata discovery</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46972,7 +47511,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pauses or resumes the periodic scheduling of metadata discovery.</para>
+        /// <para>Pause or resume periodic scheduling for metadata discovery</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46990,8 +47529,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lake storage.</para>
+        /// <para>Updates the lake storage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新湖存储。LakeStorageId 和 DBClusterId 为更新湖存储的必要标识，实际调用时需同时传入，未传时请求会被拒绝。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLakeStorageRequest
@@ -47054,8 +47598,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lake storage.</para>
+        /// <para>Updates the lake storage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新湖存储。LakeStorageId 和 DBClusterId 为更新湖存储的必要标识，实际调用时需同时传入，未传时请求会被拒绝。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateLakeStorageRequest
@@ -47118,8 +47667,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lake storage.</para>
+        /// <para>Updates the lake storage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新湖存储。LakeStorageId 和 DBClusterId 为更新湖存储的必要标识，实际调用时需同时传入，未传时请求会被拒绝。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLakeStorageRequest
@@ -47136,8 +47690,13 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lake storage.</para>
+        /// <para>Updates the lake storage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新湖存储。LakeStorageId 和 DBClusterId 为更新湖存储的必要标识，实际调用时需同时传入，未传时请求会被拒绝。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLakeStorageRequest

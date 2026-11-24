@@ -41,12 +41,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The sort field.
-        /// Valid values for Type:</para>
+        /// Valid values for the sort type:</para>
         /// <list type="bullet">
         /// <item><description>Asc</description></item>
         /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for Field:</para>
+        /// <para>Valid values for the sort field:</para>
         /// <list type="bullet">
         /// <item><description>DatabseName</description></item>
         /// <item><description>CreateTime</description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than 0 and no greater than the maximum value of the Integer data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

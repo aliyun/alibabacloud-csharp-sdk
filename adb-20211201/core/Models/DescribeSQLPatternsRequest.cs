@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</para>
+        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format. The time must be in UTC.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The language configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Simplified Chinese (default language).</description></item>
+        /// <item><description><b>zh</b>: Simplified Chinese (default).</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// <item><description><b>ja</b>: Japanese.</description></item>
         /// <item><description><b>zh-tw</b>: Traditional Chinese.</description></item>
@@ -63,24 +63,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The sorting rule for the query results. The format is a JSON character string. Example: <c>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. The JSON character string contains the following parameters:</para>
+        /// <para>The sorting configuration for the query results. The value is a JSON string. Example: <c>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Parameters:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c>: the field by which to sort the results. Valid values:</para>
+        /// <item><description><para><c>Field</c>: the sorting field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PatternCreationTime</c>: the earliest commit time of the pattern within the query time range.</description></item>
-        /// <item><description><c>AverageQueryTime</c>: the average total time consumed by the pattern within the query time range.</description></item>
-        /// <item><description><c>MaxQueryTime</c>: the maximum total time consumed by the pattern within the query time range.</description></item>
+        /// <item><description><c>PatternCreationTime</c>: the earliest submission time of the pattern within the query time range.</description></item>
+        /// <item><description><c>AverageQueryTime</c>: the average total duration of the pattern within the query time range.</description></item>
+        /// <item><description><c>MaxQueryTime</c>: the maximum total duration of the pattern within the query time range.</description></item>
         /// <item><description><c>AverageExecutionTime</c>: the average execution duration of the pattern within the query time range.</description></item>
         /// <item><description><c>MaxExecutionTime</c>: the maximum execution duration of the pattern within the query time range.</description></item>
-        /// <item><description><c>AveragePeakMemory</c>: the average peak memory usage of the pattern within the query time range.</description></item>
-        /// <item><description><c>MaxPeakMemory</c>: the maximum peak memory usage of the pattern within the query time range.</description></item>
+        /// <item><description><c>AveragePeakMemory</c>: the average peak memory of the pattern within the query time range.</description></item>
+        /// <item><description><c>MaxPeakMemory</c>: the maximum peak memory of the pattern within the query time range.</description></item>
         /// <item><description><c>AverageScanSize</c>: the average amount of data read by the pattern within the query time range.</description></item>
         /// <item><description><c>MaxScanSize</c>: the maximum amount of data read by the pattern within the query time range.</description></item>
         /// <item><description><c>QueryCount</c>: the number of executions of the pattern within the query time range.</description></item>
-        /// <item><description><c>FailedCount</c>: the number of failed executions of the pattern within the query time range.</description></item>
+        /// <item><description><c>FailedCount</c>: the number of failures of the pattern within the query time range.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c>: the sort order. The value is not case-sensitive. Valid values:</para>
+        /// <item><description><para><c>Type</c>: the sorting method. The value is case-insensitive. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>Asc</c>: ascending order.</description></item>
         /// <item><description><c>Desc</c>: descending order.</description></item>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: integers greater than 0 and up to the maximum integer value.
+        /// <para>The page number. Valid values: positive integers up to the maximum value of the Integer data type.
         /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>10</b> (default value)</description></item>
+        /// <item><description><b>10</b> (default)</description></item>
         /// <item><description><b>30</b></description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
@@ -134,14 +134,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The hash value of the SQL pattern, which is used to filter a specific SQL pattern.</para>
+        /// <para>The hash value of the SQL pattern, which is used to filter specific SQL patterns.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567890123456789</para>
         /// </summary>
         [NameInMap("SqlPatternHash")]
         [Validation(Required=false)]
         public long? SqlPatternHash { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</para>
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format. The time must be in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You can only query data from the last 14 days.</description></item>

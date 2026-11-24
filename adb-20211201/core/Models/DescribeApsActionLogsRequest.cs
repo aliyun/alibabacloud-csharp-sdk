@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsActionLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster must be of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,21 +25,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the <b>yyyy-MM-ddTHH:mmZ</b> format. The time must be in UTC.</para>
+        /// <para>The end time of the logs. Specify the time in the <b>yyyy-MM-ddTHH:mmZ</b> format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. The maximum time range that can be specified is 30 days.</para>
+        /// <para>When you query logs, the end time must be later than the start time, and the time span between the start time and the end time cannot exceed 30 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-02-11T09:30:00Z</para>
+        /// <para>2023-02-11T09:30Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The keyword that you want to use for fuzzy match in the query.</para>
+        /// <para>The keyword for the query. Fuzzy matching is applied during log query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table_test</para>
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value must be a positive integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,9 +82,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -103,14 +104,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The phase during which the logs to be queried were generated. Valid values:</para>
+        /// <para>The task stage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>StructureMigrate</b>: schema migration.</description></item>
-        /// <item><description><b>FullDataSync</b>: full data synchronization.</description></item>
-        /// <item><description><b>IncrementalSync</b>: incremental data synchronization.</description></item>
+        /// <item><description><b>StructureMigrate</b>: Schema migration.</description></item>
+        /// <item><description><b>FullDataSync</b>: Full data synchronization.</description></item>
+        /// <item><description><b>IncrementalSync</b>: Incremental data synchronization.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, logs of all the phases are queried.</para>
+        /// <para>If you do not specify this parameter, logs of all task stages are queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,25 +122,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Stage { get; set; }
 
         /// <summary>
-        /// <para>The start time of the logs to be queried. Specify the time in the ISO 8601 standard in the <b>yyyy-MM-ddTHH:mmZ</b> format. The time must be in UTC.</para>
+        /// <para>The start time of the logs. Specify the time in the <b>yyyy-MM-ddTHH:mmZ</b> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-02-11T08:30:00Z</para>
+        /// <para>2023-02-11T08:30Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The types of the logs. Separate multiple log types with commas (,). Valid values:</para>
+        /// <para>The log type. Separate multiple log types with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INFO</b></description></item>
-        /// <item><description><b>WARN</b></description></item>
-        /// <item><description><b>ERROR</b></description></item>
+        /// <item><description><b>INFO</b>: Information.</description></item>
+        /// <item><description><b>WARN</b>: Warning.</description></item>
+        /// <item><description><b>ERROR</b>: Error.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, logs of all types are queried.</para>
+        /// <para>If you do not specify this parameter, logs of all types are queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,7 +151,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The ID of the real-time data ingestion job.</para>
+        /// <para>The ID of the data link task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
