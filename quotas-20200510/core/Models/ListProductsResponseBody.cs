@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductsResponseBody : Darabonba.Model {
+    public class ListProductsResponseBody : TeaModel {
         /// <summary>
         /// <para>The maximum number of entries returned for this query.</para>
         /// 
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("ProductInfo")]
         [Validation(Required=false)]
         public List<ListProductsResponseBodyProductInfo> ProductInfo { get; set; }
-        public class ListProductsResponseBodyProductInfo : Darabonba.Model {
+        public class ListProductsResponseBodyProductInfo : TeaModel {
             /// <summary>
             /// <para>Specifies whether general quotas are supported. Valid values:</para>
             /// <list type="bullet">
@@ -187,4 +186,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductQuotasRequest : Darabonba.Model {
+    public class ListProductQuotasRequest : TeaModel {
         /// <summary>
         /// <para>The quota dimensions.</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<ListProductQuotasRequestDimensions> Dimensions { get; set; }
-        public class ListProductQuotasRequestDimensions : Darabonba.Model {
+        public class ListProductQuotasRequestDimensions : TeaModel {
             /// <summary>
             /// <para>The key of the quota dimension.</para>
             /// <remarks>
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         }
 
         /// <summary>
-        /// <para>The code of the dimension group.</para>
+        /// <para>The dimension group code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>entconsole_w1j3ms****</para>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in a single request.</para>
+        /// <para>The maximum number of entries to return for the current query.</para>
         /// <para>Valid values: 1 to 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
@@ -80,10 +79,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results.</para>
+        /// <para>The token for the next query.</para>
         /// <list type="bullet">
-        /// <item><description>Leave this parameter empty for the first request or when no more results are available.</description></item>
-        /// <item><description>If more results are available, set this parameter to the NextToken value returned when you invoke the previous API call.</description></item>
+        /// <item><description>For the first query or when no subsequent query is required, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,9 +93,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the cloud service.</para>
+        /// <para>The abbreviated name of the cloud service.</para>
         /// <remarks>
-        /// <para>For more information about how to obtain the abbreviation of a cloud service, see <c>ProductCode</c> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
+        /// <para>For more information about how to obtain the abbreviated name of a cloud service, see <c>ProductCode</c> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,7 +107,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the quota.</para>
+        /// <para>The quota ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>q_security-groups</para>
@@ -131,7 +130,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The sorting method supported by the quota.</para>
         /// <remarks>
-        /// <para>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</para>
+        /// <para>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If the Settings are not specified, it is left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -144,7 +143,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The sorting method supported by the quota.</para>
         /// <remarks>
-        /// <para>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</para>
+        /// <para>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If the Settings are not specified, it is left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,4 +156,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

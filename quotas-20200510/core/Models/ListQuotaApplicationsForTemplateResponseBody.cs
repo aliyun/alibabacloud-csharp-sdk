@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsForTemplateResponseBody : Darabonba.Model {
+    public class ListQuotaApplicationsForTemplateResponseBody : TeaModel {
         /// <summary>
         /// <para>The maximum number of records returned for the query.</para>
         /// 
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaBatchApplications")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications> QuotaBatchApplications { get; set; }
-        public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications : Darabonba.Model {
+        public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications : TeaModel {
             /// <summary>
             /// <para>The list of Alibaba Cloud accounts of the members in a resource directory for which the quota applications are submitted.</para>
             /// </summary>
@@ -60,7 +59,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("AuditStatusVos")]
             [Validation(Required=false)]
             public List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos> AuditStatusVos { get; set; }
-            public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos : Darabonba.Model {
+            public class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos : TeaModel {
                 /// <summary>
                 /// <para>The number of applications.</para>
                 /// 
@@ -217,4 +216,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

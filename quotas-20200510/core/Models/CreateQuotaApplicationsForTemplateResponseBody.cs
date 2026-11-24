@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaApplicationsForTemplateResponseBody : Darabonba.Model {
+    public class CreateQuotaApplicationsForTemplateResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of Alibaba Cloud accounts that belong to the resource directory members for which quotas are applied.</para>
         /// </summary>
@@ -33,7 +32,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("FailResults")]
         [Validation(Required=false)]
         public List<CreateQuotaApplicationsForTemplateResponseBodyFailResults> FailResults { get; set; }
-        public class CreateQuotaApplicationsForTemplateResponseBodyFailResults : Darabonba.Model {
+        public class CreateQuotaApplicationsForTemplateResponseBodyFailResults : TeaModel {
             /// <summary>
             /// <para>The Alibaba Cloud account that belongs to the resource directory member for which the quota application failed.</para>
             /// 
@@ -69,4 +68,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

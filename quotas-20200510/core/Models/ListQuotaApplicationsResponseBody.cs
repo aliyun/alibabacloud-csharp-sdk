@@ -1,17 +1,16 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationsResponseBody : Darabonba.Model {
+    public class ListQuotaApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records returned in this query.</para>
+        /// <para>The maximum number of entries returned for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position of the returned data. An empty value indicates that all data has been returned.</para>
+        /// <para>The pagination token that specifies the position of the returned data. An empty value indicates that all data has been queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaApplications")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationsResponseBodyQuotaApplications> QuotaApplications { get; set; }
-        public class ListQuotaApplicationsResponseBodyQuotaApplications : Darabonba.Model {
+        public class ListQuotaApplicationsResponseBodyQuotaApplications : TeaModel {
             /// <summary>
             /// <para>The ID of the quota increase application.</para>
             /// 
@@ -48,7 +47,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The time when the quota increase application was submitted. The value is in ISO 8601 format, in UTC, and ends with Z.</para>
+            /// <para>The time when the quota increase application was submitted. The time follows the ISO 8601 standard and is displayed in UTC, ending with Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-15T09:13:53Z</para>
@@ -58,7 +57,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ApplyTime { get; set; }
 
             /// <summary>
-            /// <para>The approved quota value of the quota increase application.</para>
+            /// <para>The approved quota value for the quota increase application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101</para>
@@ -68,7 +67,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public float? ApproveValue { get; set; }
 
             /// <summary>
-            /// <para>The approval comment for the quota increase application.</para>
+            /// <para>The approval comments for the quota increase application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Agree</para>
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string AuditReason { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the quota increase application.</para>
+            /// <para>The remarks for the quota increase application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -88,7 +87,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The requested quota value of the quota increase application.</para>
+            /// <para>The requested quota value for the quota increase application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101</para>
@@ -108,7 +107,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public Dictionary<string, object> Dimension { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the quota increase application. The value is in ISO 8601 format, in UTC, and ends with Z.</para>
+            /// <para>The effective period of the quota increase application. Format: ISO 8601, UTC time, ending with Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-15T11:46:25Z</para>
@@ -118,7 +117,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the quota increase application. The value is in ISO 8601 format, in UTC, and ends with Z.</para>
+            /// <para>The expiration time of the quota increase application. The time follows the ISO 8601 standard and is displayed in UTC, ending with Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-17T11:46:25Z</para>
@@ -128,7 +127,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a notification is sent for the quota increase application result. Valid values:</para>
+            /// <para>Specifies whether to send notifications for the result of the quota increase application. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: No.</description></item>
             /// <item><description>3: Yes.</description></item>
@@ -147,15 +146,15 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("Period")]
             [Validation(Required=false)]
             public ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod Period { get; set; }
-            public class ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod : Darabonba.Model {
+            public class ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod : TeaModel {
                 /// <summary>
                 /// <para>The unit of the quota calculation period. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>second: seconds.</description></item>
-                /// <item><description>minute: minutes.</description></item>
-                /// <item><description>hour: hours.</description></item>
-                /// <item><description>day: days.</description></item>
-                /// <item><description>week: weeks.</description></item>
+                /// <item><description>second: Seconds.</description></item>
+                /// <item><description>minute: Minutes.</description></item>
+                /// <item><description>hour: Hours.</description></item>
+                /// <item><description>day: Days.</description></item>
+                /// <item><description>week: Weeks.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -198,7 +197,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaActionCode { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the quota.</para>
+            /// <para>The ARN of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:quotas:<em>:120886317861</em>***:quota/csk/q_i5uzm3</para>
@@ -208,10 +207,10 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             public string QuotaArn { get; set; }
 
             /// <summary>
-            /// <para>The quota category. Valid values:</para>
+            /// <para>The quota type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CommonQuota (default): general quota.</description></item>
-            /// <item><description>WhiteListLabel: privilege.</description></item>
+            /// <item><description>CommonQuota (default): General quota.</description></item>
+            /// <item><description>WhiteListLabel: Privilege.</description></item>
             /// <item><description>FlowControl: API rate limit.</description></item>
             /// </list>
             /// 
@@ -307,4 +306,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

@@ -1,29 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListDependentQuotasResponseBody : Darabonba.Model {
+    public class ListDependentQuotasResponseBody : TeaModel {
         /// <summary>
         /// <para>The list of quotas on which the target quota depends.</para>
         /// </summary>
         [NameInMap("Quotas")]
         [Validation(Required=false)]
         public List<ListDependentQuotasResponseBodyQuotas> Quotas { get; set; }
-        public class ListDependentQuotasResponseBodyQuotas : Darabonba.Model {
+        public class ListDependentQuotasResponseBodyQuotas : TeaModel {
             /// <summary>
             /// <para>The quota dimensions on which the target quota depends.</para>
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public List<ListDependentQuotasResponseBodyQuotasDimensions> Dimensions { get; set; }
-            public class ListDependentQuotasResponseBodyQuotasDimensions : Darabonba.Model {
+            public class ListDependentQuotasResponseBodyQuotasDimensions : TeaModel {
                 /// <summary>
                 /// <para>The quota dimension on which the dependent dimension of the target quota depends.</para>
                 /// </summary>
@@ -95,4 +94,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

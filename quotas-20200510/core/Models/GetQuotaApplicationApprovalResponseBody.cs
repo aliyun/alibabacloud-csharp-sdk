@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaApplicationApprovalResponseBody : Darabonba.Model {
+    public class GetQuotaApplicationApprovalResponseBody : TeaModel {
         /// <summary>
         /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
@@ -87,7 +86,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetQuotaApplicationApprovalResponseBodyModule Module { get; set; }
-        public class GetQuotaApplicationApprovalResponseBodyModule : Darabonba.Model {
+        public class GetQuotaApplicationApprovalResponseBodyModule : TeaModel {
             /// <summary>
             /// <para>The average approval time for the quota application. Unit: hours.</para>
             /// 
@@ -161,4 +160,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaTemplateServiceStatusResponseBody : Darabonba.Model {
+    public class GetQuotaTemplateServiceStatusResponseBody : TeaModel {
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("TemplateServiceStatus")]
         [Validation(Required=false)]
         public GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus TemplateServiceStatus { get; set; }
-        public class GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus : Darabonba.Model {
+        public class GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus : TeaModel {
             /// <summary>
             /// <para>The ID of the resource directory.</para>
             /// 
@@ -60,4 +59,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

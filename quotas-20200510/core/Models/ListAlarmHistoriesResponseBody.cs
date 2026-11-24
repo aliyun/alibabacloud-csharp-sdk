@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListAlarmHistoriesResponseBody : Darabonba.Model {
+    public class ListAlarmHistoriesResponseBody : TeaModel {
         /// <summary>
         /// <para>The details of the quota alert history records.</para>
         /// </summary>
         [NameInMap("AlarmHistories")]
         [Validation(Required=false)]
         public List<ListAlarmHistoriesResponseBodyAlarmHistories> AlarmHistories { get; set; }
-        public class ListAlarmHistoriesResponseBodyAlarmHistories : Darabonba.Model {
+        public class ListAlarmHistoriesResponseBodyAlarmHistories : TeaModel {
             /// <summary>
             /// <para>The name of the quota alert.</para>
             /// 
@@ -149,4 +148,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

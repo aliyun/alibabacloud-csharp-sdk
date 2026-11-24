@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetProductQuotaResponseBody : Darabonba.Model {
+    public class GetProductQuotaResponseBody : TeaModel {
         /// <summary>
         /// <para>The quota details.</para>
         /// </summary>
         [NameInMap("Quota")]
         [Validation(Required=false)]
         public GetProductQuotaResponseBodyQuota Quota { get; set; }
-        public class GetProductQuotaResponseBodyQuota : Darabonba.Model {
+        public class GetProductQuotaResponseBodyQuota : TeaModel {
             /// <summary>
             /// <para>Indicates whether the quota is adjustable. Valid values:</para>
             /// <list type="bullet">
@@ -43,9 +42,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The type of quota adjustment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>continuous: Continuous.</para>
+            /// <item><description><para>continuous: continuous</para>
             /// </description></item>
-            /// <item><description><para>discontinuous: Discontinuous.</para>
+            /// <item><description><para>discontinuous: discontinuous</para>
             /// </description></item>
             /// </list>
             /// 
@@ -132,19 +131,19 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("Period")]
             [Validation(Required=false)]
             public GetProductQuotaResponseBodyQuotaPeriod Period { get; set; }
-            public class GetProductQuotaResponseBodyQuotaPeriod : Darabonba.Model {
+            public class GetProductQuotaResponseBodyQuotaPeriod : TeaModel {
                 /// <summary>
                 /// <para>The unit of the quota period. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>second: Seconds.</para>
+                /// <item><description><para>second: seconds</para>
                 /// </description></item>
-                /// <item><description><para>minute: Minutes.</para>
+                /// <item><description><para>minute: minutes</para>
                 /// </description></item>
-                /// <item><description><para>hour: Hours.</para>
+                /// <item><description><para>hour: hours</para>
                 /// </description></item>
-                /// <item><description><para>day: Days.</para>
+                /// <item><description><para>day: days</para>
                 /// </description></item>
-                /// <item><description><para>week: Weeks.</para>
+                /// <item><description><para>week: weeks</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -200,11 +199,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The quota category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>CommonQuota: General quota.</para>
+            /// <item><description><para>CommonQuota: general quota</para>
             /// </description></item>
-            /// <item><description><para>FlowControl: API rate limit.</para>
+            /// <item><description><para>FlowControl: API rate limit</para>
             /// </description></item>
-            /// <item><description><para>WhiteListLabel: Privilege.</para>
+            /// <item><description><para>WhiteListLabel: privilege</para>
             /// </description></item>
             /// </list>
             /// 
@@ -231,7 +230,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("QuotaItems")]
             [Validation(Required=false)]
             public List<GetProductQuotaResponseBodyQuotaQuotaItems> QuotaItems { get; set; }
-            public class GetProductQuotaResponseBodyQuotaQuotaItems : Darabonba.Model {
+            public class GetProductQuotaResponseBodyQuotaQuotaItems : TeaModel {
                 /// <summary>
                 /// <para>The quota value.</para>
                 /// 
@@ -245,7 +244,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 /// <summary>
                 /// <para>The quota unit.</para>
                 /// <remarks>
-                /// <para>The unit varies for each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service servers is count.</para>
+                /// <para>The unit varies with each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service (ECS) servers is count.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -256,11 +255,11 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string QuotaUnit { get; set; }
 
                 /// <summary>
-                /// <para>The quota item type. Valid values:</para>
+                /// <para>The type of the quota item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>BaseQuota: Base quota.</para>
+                /// <item><description><para>BaseQuota: base quota</para>
                 /// </description></item>
-                /// <item><description><para>ReservedQuota: Reserved quota.</para>
+                /// <item><description><para>ReservedQuota: reserved quota</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -296,9 +295,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The quota type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>privilege: Privilege.</para>
+            /// <item><description><para>privilege: privileged</para>
             /// </description></item>
-            /// <item><description><para>normal: Normal.</para>
+            /// <item><description><para>normal: normal</para>
             /// </description></item>
             /// </list>
             /// 
@@ -312,7 +311,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// <summary>
             /// <para>The quota unit.</para>
             /// <remarks>
-            /// <para>The unit varies for each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service servers is count.</para>
+            /// <para>The unit varies with each quota. For example, the unit of the q_cbdch3 quota (maximum number of clusters) for Container Service for Kubernetes is Cluster, and the unit of the q_security-groups quota (maximum number of security groups) for Elastic Compute Service (ECS) servers is count.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -324,6 +323,9 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
 
             /// <summary>
             /// <para>The supported range of quota values for the current quota item, which can be used as a reference when configuring a quota template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[802,1000]</para>
             /// </summary>
             [NameInMap("SupportedRange")]
             [Validation(Required=false)]
@@ -358,7 +360,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             /// </description></item>
             /// <item><description><para>limitReached: The quota limit is reached.</para>
             /// </description></item>
-            /// <item><description><para>supportTicketRequired: A ticket must be submitted for the application.</para>
+            /// <item><description><para>supportTicketRequired: A ticket is required.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -378,18 +380,21 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("UsageMetric")]
             [Validation(Required=false)]
             public GetProductQuotaResponseBodyQuotaUsageMetric UsageMetric { get; set; }
-            public class GetProductQuotaResponseBodyQuotaUsageMetric : Darabonba.Model {
+            public class GetProductQuotaResponseBodyQuotaUsageMetric : TeaModel {
                 /// <summary>
                 /// <para>The CloudMonitor monitoring dimensions.</para>
                 /// <para>Format: a collection of <c>key:value</c> pairs. Example:
                 /// <c>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;productCode&quot;:&quot;ecs&quot;}</para>
                 /// </summary>
                 [NameInMap("MetricDimensions")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> MetricDimensions { get; set; }
 
                 /// <summary>
-                /// <para>The CloudMonitor metric name.</para>
+                /// <para>The name of the CloudMonitor metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Usage</para>
@@ -399,7 +404,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// <para>The CloudMonitor metric namespace.</para>
+                /// <para>The namespace of the CloudMonitor monitoring data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs_quotas_flowcontrol</para>
@@ -425,4 +430,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

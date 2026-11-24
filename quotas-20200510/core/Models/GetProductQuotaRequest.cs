@@ -1,29 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetProductQuotaRequest : Darabonba.Model {
+    public class GetProductQuotaRequest : TeaModel {
         /// <summary>
         /// <para>The quota dimensions.
-        /// The properties of the quota item. The combination of dimensions and QuotaActionCode determines a unique quota item.</para>
+        /// The properties of the quota item. The combination of dimensions and the quota ID (QuotaActionCode) uniquely identifies a quota item.</para>
         /// <remarks>
-        /// <para>Dimensions are required for some cloud services. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions of a cloud service and check whether a dimension is required. The Requisite response parameter indicates whether the dimension is required.</para>
+        /// <para>Dimensions are required for some cloud services. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quotas of a cloud service and check whether dimensions are required. The Requisite response parameter indicates whether a dimension is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;regionId\&quot;:\&quot;cn-beijing\&quot;}</para>
+        /// <para>[{&quot;Key&quot;:&quot;regionId&quot;,&quot;Value&quot;:&quot;cn-beijing&quot;}]</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<GetProductQuotaRequestDimensions> Dimensions { get; set; }
-        public class GetProductQuotaRequestDimensions : Darabonba.Model {
+        public class GetProductQuotaRequestDimensions : TeaModel {
             /// <summary>
             /// <para>The key of the quota dimension.</para>
             /// <remarks>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The abbreviated name of the cloud service.</para>
         /// <remarks>
-        /// <para>For more information about how to obtain the abbreviated name of a cloud service, see the ProductCode parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
+        /// <para>For more information about how to obtain the abbreviated name of a cloud service, see ProductCode in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         /// <summary>
         /// <para>The quota ID.</para>
         /// <remarks>
-        /// <para>For more information about how to obtain the quota ID of a specified cloud service, see the QuotaActionCode parameter in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</para>
+        /// <para>For more information about how to obtain the quota ID of a specified cloud service, see QuotaActionCode in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,4 +82,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

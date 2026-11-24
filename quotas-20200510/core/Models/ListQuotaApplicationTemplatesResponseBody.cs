@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaApplicationTemplatesResponseBody : Darabonba.Model {
+    public class ListQuotaApplicationTemplatesResponseBody : TeaModel {
         /// <summary>
         /// <para>The maximum number of records returned for the query.</para>
         /// 
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaApplicationTemplates")]
         [Validation(Required=false)]
         public List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> QuotaApplicationTemplates { get; set; }
-        public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates : Darabonba.Model {
+        public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates : TeaModel {
             /// <summary>
             /// <para>None.</para>
             /// </summary>
@@ -152,7 +151,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("Period")]
             [Validation(Required=false)]
             public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod Period { get; set; }
-            public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod : Darabonba.Model {
+            public class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod : TeaModel {
                 /// <summary>
                 /// <para>The unit of the calculation cycle. Valid values:</para>
                 /// <list type="bullet">
@@ -270,4 +269,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

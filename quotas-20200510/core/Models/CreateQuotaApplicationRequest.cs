@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class CreateQuotaApplicationRequest : Darabonba.Model {
+    public class CreateQuotaApplicationRequest : TeaModel {
         /// <summary>
         /// <remarks>
         /// <para>Notice: This parameter is deprecated and is not recommended.</para>
@@ -50,7 +49,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<CreateQuotaApplicationRequestDimensions> Dimensions { get; set; }
-        public class CreateQuotaApplicationRequestDimensions : Darabonba.Model {
+        public class CreateQuotaApplicationRequestDimensions : TeaModel {
             /// <summary>
             /// <para>The key of the quota dimension.</para>
             /// <remarks>
@@ -187,4 +186,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

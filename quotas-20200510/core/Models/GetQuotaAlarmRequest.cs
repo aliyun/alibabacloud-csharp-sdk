@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaAlarmRequest : Darabonba.Model {
+    public class GetQuotaAlarmRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the quota alert.</para>
         /// <para>For more information about how to obtain the ID of a quota alert, see <a href="https://help.aliyun.com/document_detail/184348.html">ListQuotaAlarms</a>.</para>
@@ -24,4 +23,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

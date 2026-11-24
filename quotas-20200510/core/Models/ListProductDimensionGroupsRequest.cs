@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductDimensionGroupsRequest : Darabonba.Model {
+    public class ListProductDimensionGroupsRequest : TeaModel {
         /// <summary>
         /// <para>The maximum number of records to return for the query.
         /// Valid values: 1 to 200. Default value: 30.</para>
@@ -48,4 +47,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

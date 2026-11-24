@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListQuotaAlarmsResponseBody : Darabonba.Model {
+    public class ListQuotaAlarmsResponseBody : TeaModel {
         /// <summary>
         /// <para>The maximum number of records returned for the current query.</para>
         /// 
@@ -39,7 +38,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaAlarms")]
         [Validation(Required=false)]
         public List<ListQuotaAlarmsResponseBodyQuotaAlarms> QuotaAlarms { get; set; }
-        public class ListQuotaAlarmsResponseBodyQuotaAlarms : Darabonba.Model {
+        public class ListQuotaAlarmsResponseBodyQuotaAlarms : TeaModel {
             /// <summary>
             /// <para>The alert ID.</para>
             /// 
@@ -227,4 +226,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

@@ -1,16 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaUtilizationOverviewRequest : Darabonba.Model {
+    public class GetQuotaUtilizationOverviewRequest : TeaModel {
         /// <summary>
+        /// <para>CommonQuota, FlowControl</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CommonQuota</para>
         /// </summary>
@@ -21,4 +22,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

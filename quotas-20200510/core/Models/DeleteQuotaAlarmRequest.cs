@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class DeleteQuotaAlarmRequest : Darabonba.Model {
+    public class DeleteQuotaAlarmRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the quota alert.</para>
         /// <remarks>
@@ -27,4 +26,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

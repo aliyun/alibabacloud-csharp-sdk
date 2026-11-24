@@ -1,15 +1,14 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class ListProductQuotaDimensionsResponseBody : Darabonba.Model {
+    public class ListProductQuotaDimensionsResponseBody : TeaModel {
         /// <summary>
         /// <para>The maximum number of entries returned for this query.</para>
         /// 
@@ -36,7 +35,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
         [NameInMap("QuotaDimensions")]
         [Validation(Required=false)]
         public List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> QuotaDimensions { get; set; }
-        public class ListProductQuotaDimensionsResponseBodyQuotaDimensions : Darabonba.Model {
+        public class ListProductQuotaDimensionsResponseBodyQuotaDimensions : TeaModel {
             /// <summary>
             /// <para>The quota dimensions on which the target quota dimension depends.</para>
             /// </summary>
@@ -72,14 +71,14 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("DimensionValueDetail")]
             [Validation(Required=false)]
             public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> DimensionValueDetail { get; set; }
-            public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail : Darabonba.Model {
+            public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail : TeaModel {
                 /// <summary>
                 /// <para>The quota dimensions on which the target quota dimension depends.</para>
                 /// </summary>
                 [NameInMap("DependentDimensions")]
                 [Validation(Required=false)]
                 public List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> DependentDimensions { get; set; }
-                public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions : Darabonba.Model {
+                public class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions : TeaModel {
                     /// <summary>
                     /// <para>The key of the quota dimension on which the target quota dimension depends.</para>
                     /// 
@@ -182,4 +181,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

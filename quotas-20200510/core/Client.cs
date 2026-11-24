@@ -1,24 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
-using Darabonba.Utils;
-using _OpenApiClient = AlibabaCloud.OpenApiClient.Client;
-using AlibabaCloud.OpenApiClient.Models;
-using AlibabaCloud.OpenApiClient;
+
+using Tea;
+using Tea.Utils;
+
 using AlibabaCloud.SDK.Quotas20200510.Models;
-using Darabonba;
 
 namespace AlibabaCloud.SDK.Quotas20200510
 {
-    public class Client : _OpenApiClient
+    public class Client : AlibabaCloud.OpenApiClient.Client
     {
 
-        public Client(Config config): base(config)
+        public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "quotas";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("quotas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -27,15 +29,15 @@ namespace AlibabaCloud.SDK.Quotas20200510
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
         {
-            if (!endpoint.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.Empty(endpoint))
             {
                 return endpoint;
             }
-            if (!endpointMap.IsNull() && !endpointMap.Get(regionId).IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(endpointMap) && !AlibabaCloud.TeaUtil.Common.Empty(endpointMap.Get(regionId)))
             {
                 return endpointMap.Get(regionId);
             }
-            return Utils.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
+            return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
         /// <term><b>Summary:</b></term>
@@ -59,51 +61,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaAlarmResponse
         /// </returns>
-        public CreateQuotaAlarmResponse CreateQuotaAlarmWithOptions(CreateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public CreateQuotaAlarmResponse CreateQuotaAlarmWithOptions(CreateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmName.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!request.OriginalContext.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalContext))
             {
                 body["OriginalContext"] = request.OriginalContext;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaDimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            if (!request.Threshold.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!request.ThresholdPercent.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!request.ThresholdType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!request.WebHook.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
             {
                 body["WebHook"] = request.WebHook;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateQuotaAlarm",
                 Version = "2020-05-10",
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<CreateQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -139,51 +141,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaAlarmResponse
         /// </returns>
-        public async Task<CreateQuotaAlarmResponse> CreateQuotaAlarmWithOptionsAsync(CreateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<CreateQuotaAlarmResponse> CreateQuotaAlarmWithOptionsAsync(CreateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmName.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!request.OriginalContext.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalContext))
             {
                 body["OriginalContext"] = request.OriginalContext;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaDimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            if (!request.Threshold.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!request.ThresholdPercent.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!request.ThresholdType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!request.WebHook.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
             {
                 body["WebHook"] = request.WebHook;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateQuotaAlarm",
                 Version = "2020-05-10",
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -218,7 +220,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateQuotaAlarmResponse CreateQuotaAlarm(CreateQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQuotaAlarmWithOptions(request, runtime);
         }
 
@@ -242,7 +244,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateQuotaAlarmResponse> CreateQuotaAlarmAsync(CreateQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQuotaAlarmWithOptionsAsync(request, runtime);
         }
 
@@ -268,59 +270,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationResponse
         /// </returns>
-        public CreateQuotaApplicationResponse CreateQuotaApplicationWithOptions(CreateQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public CreateQuotaApplicationResponse CreateQuotaApplicationWithOptions(CreateQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AuditMode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditMode))
             {
                 body["AuditMode"] = request.AuditMode;
             }
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Reason.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 body["Reason"] = request.Reason;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateQuotaApplication",
                 Version = "2020-05-10",
@@ -332,7 +334,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateQuotaApplicationResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<CreateQuotaApplicationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -357,59 +359,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationResponse
         /// </returns>
-        public async Task<CreateQuotaApplicationResponse> CreateQuotaApplicationWithOptionsAsync(CreateQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<CreateQuotaApplicationResponse> CreateQuotaApplicationWithOptionsAsync(CreateQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AuditMode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuditMode))
             {
                 body["AuditMode"] = request.AuditMode;
             }
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Reason.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 body["Reason"] = request.Reason;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateQuotaApplication",
                 Version = "2020-05-10",
@@ -421,7 +423,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -445,7 +447,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateQuotaApplicationResponse CreateQuotaApplication(CreateQuotaApplicationRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQuotaApplicationWithOptions(request, runtime);
         }
 
@@ -470,7 +472,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateQuotaApplicationResponse> CreateQuotaApplicationAsync(CreateQuotaApplicationRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQuotaApplicationWithOptionsAsync(request, runtime);
         }
 
@@ -495,59 +497,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationsForTemplateResponse
         /// </returns>
-        public CreateQuotaApplicationsForTemplateResponse CreateQuotaApplicationsForTemplateWithOptions(CreateQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public CreateQuotaApplicationsForTemplateResponse CreateQuotaApplicationsForTemplateWithOptions(CreateQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AliyunUids.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUids))
             {
                 body["AliyunUids"] = request.AliyunUids;
             }
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Reason.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 body["Reason"] = request.Reason;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -559,7 +561,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<CreateQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -583,59 +585,59 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateQuotaApplicationsForTemplateResponse
         /// </returns>
-        public async Task<CreateQuotaApplicationsForTemplateResponse> CreateQuotaApplicationsForTemplateWithOptionsAsync(CreateQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<CreateQuotaApplicationsForTemplateResponse> CreateQuotaApplicationsForTemplateWithOptionsAsync(CreateQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AliyunUids.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUids))
             {
                 body["AliyunUids"] = request.AliyunUids;
             }
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Reason.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 body["Reason"] = request.Reason;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -647,7 +649,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -670,7 +672,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateQuotaApplicationsForTemplateResponse CreateQuotaApplicationsForTemplate(CreateQuotaApplicationsForTemplateRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQuotaApplicationsForTemplateWithOptions(request, runtime);
         }
 
@@ -694,7 +696,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateQuotaApplicationsForTemplateResponse> CreateQuotaApplicationsForTemplateAsync(CreateQuotaApplicationsForTemplateRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQuotaApplicationsForTemplateWithOptionsAsync(request, runtime);
         }
 
@@ -722,51 +724,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateTemplateQuotaItemResponse
         /// </returns>
-        public CreateTemplateQuotaItemResponse CreateTemplateQuotaItemWithOptions(CreateTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public CreateTemplateQuotaItemResponse CreateTemplateQuotaItemWithOptions(CreateTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -778,7 +780,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<CreateTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -805,51 +807,51 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// CreateTemplateQuotaItemResponse
         /// </returns>
-        public async Task<CreateTemplateQuotaItemResponse> CreateTemplateQuotaItemWithOptionsAsync(CreateTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<CreateTemplateQuotaItemResponse> CreateTemplateQuotaItemWithOptionsAsync(CreateTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "CreateTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -861,7 +863,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<CreateTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<CreateTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -887,7 +889,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public CreateTemplateQuotaItemResponse CreateTemplateQuotaItem(CreateTemplateQuotaItemRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTemplateQuotaItemWithOptions(request, runtime);
         }
 
@@ -914,7 +916,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<CreateTemplateQuotaItemResponse> CreateTemplateQuotaItemAsync(CreateTemplateQuotaItemRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTemplateQuotaItemWithOptionsAsync(request, runtime);
         }
 
@@ -939,19 +941,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteQuotaAlarmResponse
         /// </returns>
-        public DeleteQuotaAlarmResponse DeleteQuotaAlarmWithOptions(DeleteQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public DeleteQuotaAlarmResponse DeleteQuotaAlarmWithOptions(DeleteQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteQuotaAlarm",
                 Version = "2020-05-10",
@@ -963,7 +965,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<DeleteQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DeleteQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -987,19 +989,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteQuotaAlarmResponse
         /// </returns>
-        public async Task<DeleteQuotaAlarmResponse> DeleteQuotaAlarmWithOptionsAsync(DeleteQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<DeleteQuotaAlarmResponse> DeleteQuotaAlarmWithOptionsAsync(DeleteQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteQuotaAlarm",
                 Version = "2020-05-10",
@@ -1011,7 +1013,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<DeleteQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1034,7 +1036,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public DeleteQuotaAlarmResponse DeleteQuotaAlarm(DeleteQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQuotaAlarmWithOptions(request, runtime);
         }
 
@@ -1058,7 +1060,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<DeleteQuotaAlarmResponse> DeleteQuotaAlarmAsync(DeleteQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQuotaAlarmWithOptionsAsync(request, runtime);
         }
 
@@ -1077,19 +1079,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteTemplateQuotaItemResponse
         /// </returns>
-        public DeleteTemplateQuotaItemResponse DeleteTemplateQuotaItemWithOptions(DeleteTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public DeleteTemplateQuotaItemResponse DeleteTemplateQuotaItemWithOptions(DeleteTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Id.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -1101,7 +1103,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<DeleteTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<DeleteTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1119,19 +1121,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// DeleteTemplateQuotaItemResponse
         /// </returns>
-        public async Task<DeleteTemplateQuotaItemResponse> DeleteTemplateQuotaItemWithOptionsAsync(DeleteTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<DeleteTemplateQuotaItemResponse> DeleteTemplateQuotaItemWithOptionsAsync(DeleteTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Id.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "DeleteTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -1143,7 +1145,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<DeleteTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<DeleteTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1160,7 +1162,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public DeleteTemplateQuotaItemResponse DeleteTemplateQuotaItem(DeleteTemplateQuotaItemRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTemplateQuotaItemWithOptions(request, runtime);
         }
 
@@ -1178,7 +1180,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<DeleteTemplateQuotaItemResponse> DeleteTemplateQuotaItemAsync(DeleteTemplateQuotaItemRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTemplateQuotaItemWithOptionsAsync(request, runtime);
         }
 
@@ -1197,27 +1199,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaResponse
         /// </returns>
-        public GetProductQuotaResponse GetProductQuotaWithOptions(GetProductQuotaRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public GetProductQuotaResponse GetProductQuotaWithOptions(GetProductQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetProductQuota",
                 Version = "2020-05-10",
@@ -1229,7 +1231,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetProductQuotaResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetProductQuotaResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1247,27 +1249,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaResponse
         /// </returns>
-        public async Task<GetProductQuotaResponse> GetProductQuotaWithOptionsAsync(GetProductQuotaRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<GetProductQuotaResponse> GetProductQuotaWithOptionsAsync(GetProductQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetProductQuota",
                 Version = "2020-05-10",
@@ -1279,7 +1281,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetProductQuotaResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetProductQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1296,7 +1298,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetProductQuotaResponse GetProductQuota(GetProductQuotaRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetProductQuotaWithOptions(request, runtime);
         }
 
@@ -1314,7 +1316,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetProductQuotaResponse> GetProductQuotaAsync(GetProductQuotaRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetProductQuotaWithOptionsAsync(request, runtime);
         }
 
@@ -1333,27 +1335,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaDimensionResponse
         /// </returns>
-        public GetProductQuotaDimensionResponse GetProductQuotaDimensionWithOptions(GetProductQuotaDimensionRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public GetProductQuotaDimensionResponse GetProductQuotaDimensionWithOptions(GetProductQuotaDimensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.DependentDimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependentDimensions))
             {
                 body["DependentDimensions"] = request.DependentDimensions;
             }
-            if (!request.DimensionKey.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionKey))
             {
                 body["DimensionKey"] = request.DimensionKey;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetProductQuotaDimension",
                 Version = "2020-05-10",
@@ -1365,7 +1367,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetProductQuotaDimensionResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetProductQuotaDimensionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1383,27 +1385,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetProductQuotaDimensionResponse
         /// </returns>
-        public async Task<GetProductQuotaDimensionResponse> GetProductQuotaDimensionWithOptionsAsync(GetProductQuotaDimensionRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<GetProductQuotaDimensionResponse> GetProductQuotaDimensionWithOptionsAsync(GetProductQuotaDimensionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.DependentDimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DependentDimensions))
             {
                 body["DependentDimensions"] = request.DependentDimensions;
             }
-            if (!request.DimensionKey.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionKey))
             {
                 body["DimensionKey"] = request.DimensionKey;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetProductQuotaDimension",
                 Version = "2020-05-10",
@@ -1415,7 +1417,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetProductQuotaDimensionResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetProductQuotaDimensionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1432,7 +1434,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetProductQuotaDimensionResponse GetProductQuotaDimension(GetProductQuotaDimensionRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetProductQuotaDimensionWithOptions(request, runtime);
         }
 
@@ -1450,7 +1452,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetProductQuotaDimensionResponse> GetProductQuotaDimensionAsync(GetProductQuotaDimensionRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetProductQuotaDimensionWithOptionsAsync(request, runtime);
         }
 
@@ -1474,19 +1476,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaAlarmResponse
         /// </returns>
-        public GetQuotaAlarmResponse GetQuotaAlarmWithOptions(GetQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public GetQuotaAlarmResponse GetQuotaAlarmWithOptions(GetQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaAlarm",
                 Version = "2020-05-10",
@@ -1498,7 +1500,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1521,19 +1523,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaAlarmResponse
         /// </returns>
-        public async Task<GetQuotaAlarmResponse> GetQuotaAlarmWithOptionsAsync(GetQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaAlarmResponse> GetQuotaAlarmWithOptionsAsync(GetQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaAlarm",
                 Version = "2020-05-10",
@@ -1545,7 +1547,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1567,7 +1569,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaAlarmResponse GetQuotaAlarm(GetQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQuotaAlarmWithOptions(request, runtime);
         }
 
@@ -1590,7 +1592,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaAlarmResponse> GetQuotaAlarmAsync(GetQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQuotaAlarmWithOptionsAsync(request, runtime);
         }
 
@@ -1609,19 +1611,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationResponse
         /// </returns>
-        public GetQuotaApplicationResponse GetQuotaApplicationWithOptions(GetQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public GetQuotaApplicationResponse GetQuotaApplicationWithOptions(GetQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaApplication",
                 Version = "2020-05-10",
@@ -1633,7 +1635,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaApplicationResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaApplicationResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1651,19 +1653,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationResponse
         /// </returns>
-        public async Task<GetQuotaApplicationResponse> GetQuotaApplicationWithOptionsAsync(GetQuotaApplicationRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaApplicationResponse> GetQuotaApplicationWithOptionsAsync(GetQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaApplication",
                 Version = "2020-05-10",
@@ -1675,7 +1677,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1692,7 +1694,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaApplicationResponse GetQuotaApplication(GetQuotaApplicationRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQuotaApplicationWithOptions(request, runtime);
         }
 
@@ -1710,7 +1712,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaApplicationResponse> GetQuotaApplicationAsync(GetQuotaApplicationRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQuotaApplicationWithOptionsAsync(request, runtime);
         }
 
@@ -1735,19 +1737,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationApprovalResponse
         /// </returns>
-        public GetQuotaApplicationApprovalResponse GetQuotaApplicationApprovalWithOptions(GetQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public GetQuotaApplicationApprovalResponse GetQuotaApplicationApprovalWithOptions(GetQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -1759,7 +1761,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1783,19 +1785,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaApplicationApprovalResponse
         /// </returns>
-        public async Task<GetQuotaApplicationApprovalResponse> GetQuotaApplicationApprovalWithOptionsAsync(GetQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaApplicationApprovalResponse> GetQuotaApplicationApprovalWithOptionsAsync(GetQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -1807,7 +1809,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1830,7 +1832,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaApplicationApprovalResponse GetQuotaApplicationApproval(GetQuotaApplicationApprovalRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQuotaApplicationApprovalWithOptions(request, runtime);
         }
 
@@ -1854,7 +1856,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaApplicationApprovalResponse> GetQuotaApplicationApprovalAsync(GetQuotaApplicationApprovalRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQuotaApplicationApprovalWithOptionsAsync(request, runtime);
         }
 
@@ -1878,19 +1880,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaTemplateServiceStatusResponse
         /// </returns>
-        public GetQuotaTemplateServiceStatusResponse GetQuotaTemplateServiceStatusWithOptions(GetQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public GetQuotaTemplateServiceStatusResponse GetQuotaTemplateServiceStatusWithOptions(GetQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ResourceDirectoryId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryId))
             {
                 body["ResourceDirectoryId"] = request.ResourceDirectoryId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaTemplateServiceStatus",
                 Version = "2020-05-10",
@@ -1902,7 +1904,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1925,19 +1927,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaTemplateServiceStatusResponse
         /// </returns>
-        public async Task<GetQuotaTemplateServiceStatusResponse> GetQuotaTemplateServiceStatusWithOptionsAsync(GetQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaTemplateServiceStatusResponse> GetQuotaTemplateServiceStatusWithOptionsAsync(GetQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ResourceDirectoryId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryId))
             {
                 body["ResourceDirectoryId"] = request.ResourceDirectoryId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaTemplateServiceStatus",
                 Version = "2020-05-10",
@@ -1949,7 +1951,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1971,7 +1973,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaTemplateServiceStatusResponse GetQuotaTemplateServiceStatus(GetQuotaTemplateServiceStatusRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQuotaTemplateServiceStatusWithOptions(request, runtime);
         }
 
@@ -1994,13 +1996,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaTemplateServiceStatusResponse> GetQuotaTemplateServiceStatusAsync(GetQuotaTemplateServiceStatusRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQuotaTemplateServiceStatusWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配额使用率概览</para>
+        /// <para>Retrieves an overview of quota utilization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2013,19 +2015,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaUtilizationOverviewResponse
         /// </returns>
-        public GetQuotaUtilizationOverviewResponse GetQuotaUtilizationOverviewWithOptions(GetQuotaUtilizationOverviewRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public GetQuotaUtilizationOverviewResponse GetQuotaUtilizationOverviewWithOptions(GetQuotaUtilizationOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaUtilizationOverview",
                 Version = "2020-05-10",
@@ -2037,12 +2039,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaUtilizationOverviewResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaUtilizationOverviewResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配额使用率概览</para>
+        /// <para>Retrieves an overview of quota utilization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2055,19 +2057,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// GetQuotaUtilizationOverviewResponse
         /// </returns>
-        public async Task<GetQuotaUtilizationOverviewResponse> GetQuotaUtilizationOverviewWithOptionsAsync(GetQuotaUtilizationOverviewRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<GetQuotaUtilizationOverviewResponse> GetQuotaUtilizationOverviewWithOptionsAsync(GetQuotaUtilizationOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetQuotaUtilizationOverview",
                 Version = "2020-05-10",
@@ -2079,12 +2081,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<GetQuotaUtilizationOverviewResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<GetQuotaUtilizationOverviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配额使用率概览</para>
+        /// <para>Retrieves an overview of quota utilization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2096,13 +2098,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public GetQuotaUtilizationOverviewResponse GetQuotaUtilizationOverview(GetQuotaUtilizationOverviewRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQuotaUtilizationOverviewWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取配额使用率概览</para>
+        /// <para>Retrieves an overview of quota utilization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2114,7 +2116,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<GetQuotaUtilizationOverviewResponse> GetQuotaUtilizationOverviewAsync(GetQuotaUtilizationOverviewRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQuotaUtilizationOverviewWithOptionsAsync(request, runtime);
         }
 
@@ -2138,43 +2140,43 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListAlarmHistoriesResponse
         /// </returns>
-        public ListAlarmHistoriesResponse ListAlarmHistoriesWithOptions(ListAlarmHistoriesRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListAlarmHistoriesResponse ListAlarmHistoriesWithOptions(ListAlarmHistoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!request.EndTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
             }
-            if (!request.Keyword.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.StartTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAlarmHistories",
                 Version = "2020-05-10",
@@ -2186,7 +2188,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListAlarmHistoriesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListAlarmHistoriesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2209,43 +2211,43 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListAlarmHistoriesResponse
         /// </returns>
-        public async Task<ListAlarmHistoriesResponse> ListAlarmHistoriesWithOptionsAsync(ListAlarmHistoriesRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListAlarmHistoriesResponse> ListAlarmHistoriesWithOptionsAsync(ListAlarmHistoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!request.EndTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 body["EndTime"] = request.EndTime;
             }
-            if (!request.Keyword.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 body["Keyword"] = request.Keyword;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.StartTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["StartTime"] = request.StartTime;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListAlarmHistories",
                 Version = "2020-05-10",
@@ -2257,7 +2259,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListAlarmHistoriesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListAlarmHistoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2279,7 +2281,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListAlarmHistoriesResponse ListAlarmHistories(ListAlarmHistoriesRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAlarmHistoriesWithOptions(request, runtime);
         }
 
@@ -2302,7 +2304,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListAlarmHistoriesResponse> ListAlarmHistoriesAsync(ListAlarmHistoriesRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAlarmHistoriesWithOptionsAsync(request, runtime);
         }
 
@@ -2321,23 +2323,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListDependentQuotasResponse
         /// </returns>
-        public ListDependentQuotasResponse ListDependentQuotasWithOptions(ListDependentQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListDependentQuotasResponse ListDependentQuotasWithOptions(ListDependentQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDependentQuotas",
                 Version = "2020-05-10",
@@ -2349,7 +2351,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListDependentQuotasResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListDependentQuotasResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2367,23 +2369,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListDependentQuotasResponse
         /// </returns>
-        public async Task<ListDependentQuotasResponse> ListDependentQuotasWithOptionsAsync(ListDependentQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListDependentQuotasResponse> ListDependentQuotasWithOptionsAsync(ListDependentQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListDependentQuotas",
                 Version = "2020-05-10",
@@ -2395,7 +2397,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListDependentQuotasResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListDependentQuotasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2412,7 +2414,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListDependentQuotasResponse ListDependentQuotas(ListDependentQuotasRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListDependentQuotasWithOptions(request, runtime);
         }
 
@@ -2430,7 +2432,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListDependentQuotasResponse> ListDependentQuotasAsync(ListDependentQuotasRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDependentQuotasWithOptionsAsync(request, runtime);
         }
 
@@ -2449,27 +2451,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductDimensionGroupsResponse
         /// </returns>
-        public ListProductDimensionGroupsResponse ListProductDimensionGroupsWithOptions(ListProductDimensionGroupsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListProductDimensionGroupsResponse ListProductDimensionGroupsWithOptions(ListProductDimensionGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = Utils.Query(query),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProductDimensionGroups",
                 Version = "2020-05-10",
@@ -2481,7 +2483,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductDimensionGroupsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListProductDimensionGroupsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2499,27 +2501,27 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductDimensionGroupsResponse
         /// </returns>
-        public async Task<ListProductDimensionGroupsResponse> ListProductDimensionGroupsWithOptionsAsync(ListProductDimensionGroupsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListProductDimensionGroupsResponse> ListProductDimensionGroupsWithOptionsAsync(ListProductDimensionGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = Utils.Query(query),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProductDimensionGroups",
                 Version = "2020-05-10",
@@ -2531,7 +2533,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductDimensionGroupsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListProductDimensionGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2548,7 +2550,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductDimensionGroupsResponse ListProductDimensionGroups(ListProductDimensionGroupsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProductDimensionGroupsWithOptions(request, runtime);
         }
 
@@ -2566,7 +2568,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductDimensionGroupsResponse> ListProductDimensionGroupsAsync(ListProductDimensionGroupsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProductDimensionGroupsWithOptionsAsync(request, runtime);
         }
 
@@ -2585,31 +2587,31 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotaDimensionsResponse
         /// </returns>
-        public ListProductQuotaDimensionsResponse ListProductQuotaDimensionsWithOptions(ListProductQuotaDimensionsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListProductQuotaDimensionsResponse ListProductQuotaDimensionsWithOptions(ListProductQuotaDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProductQuotaDimensions",
                 Version = "2020-05-10",
@@ -2621,7 +2623,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductQuotaDimensionsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListProductQuotaDimensionsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2639,31 +2641,31 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotaDimensionsResponse
         /// </returns>
-        public async Task<ListProductQuotaDimensionsResponse> ListProductQuotaDimensionsWithOptionsAsync(ListProductQuotaDimensionsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListProductQuotaDimensionsResponse> ListProductQuotaDimensionsWithOptionsAsync(ListProductQuotaDimensionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProductQuotaDimensions",
                 Version = "2020-05-10",
@@ -2675,7 +2677,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductQuotaDimensionsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListProductQuotaDimensionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2692,7 +2694,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductQuotaDimensionsResponse ListProductQuotaDimensions(ListProductQuotaDimensionsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProductQuotaDimensionsWithOptions(request, runtime);
         }
 
@@ -2710,13 +2712,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductQuotaDimensionsResponse> ListProductQuotaDimensionsAsync(ListProductQuotaDimensionsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProductQuotaDimensionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specified cloud service.</para>
+        /// <para>Queries the list of quotas for a specified cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2729,55 +2731,55 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotasResponse
         /// </returns>
-        public ListProductQuotasResponse ListProductQuotasWithOptions(ListProductQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListProductQuotasResponse ListProductQuotasWithOptions(ListProductQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.GroupCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
             {
                 body["GroupCode"] = request.GroupCode;
             }
-            if (!request.KeyWord.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.SortField.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
             {
                 body["SortField"] = request.SortField;
             }
-            if (!request.SortOrder.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 body["SortOrder"] = request.SortOrder;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProductQuotas",
                 Version = "2020-05-10",
@@ -2789,12 +2791,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductQuotasResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListProductQuotasResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specified cloud service.</para>
+        /// <para>Queries the list of quotas for a specified cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2807,55 +2809,55 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductQuotasResponse
         /// </returns>
-        public async Task<ListProductQuotasResponse> ListProductQuotasWithOptionsAsync(ListProductQuotasRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListProductQuotasResponse> ListProductQuotasWithOptionsAsync(ListProductQuotasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.GroupCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupCode))
             {
                 body["GroupCode"] = request.GroupCode;
             }
-            if (!request.KeyWord.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.SortField.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
             {
                 body["SortField"] = request.SortField;
             }
-            if (!request.SortOrder.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
             {
                 body["SortOrder"] = request.SortOrder;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProductQuotas",
                 Version = "2020-05-10",
@@ -2867,12 +2869,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductQuotasResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListProductQuotasResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specified cloud service.</para>
+        /// <para>Queries the list of quotas for a specified cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2884,13 +2886,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductQuotasResponse ListProductQuotas(ListProductQuotasRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProductQuotasWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quotas of a specified cloud service.</para>
+        /// <para>Queries the list of quotas for a specified cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2902,7 +2904,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductQuotasResponse> ListProductQuotasAsync(ListProductQuotasRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProductQuotasWithOptionsAsync(request, runtime);
         }
 
@@ -2926,23 +2928,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductsResponse
         /// </returns>
-        public ListProductsResponse ListProductsWithOptions(ListProductsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListProductsResponse ListProductsWithOptions(ListProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProducts",
                 Version = "2020-05-10",
@@ -2954,7 +2956,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListProductsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2977,23 +2979,23 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListProductsResponse
         /// </returns>
-        public async Task<ListProductsResponse> ListProductsWithOptionsAsync(ListProductsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListProductsResponse> ListProductsWithOptionsAsync(ListProductsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListProducts",
                 Version = "2020-05-10",
@@ -3005,7 +3007,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListProductsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListProductsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3027,7 +3029,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListProductsResponse ListProducts(ListProductsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListProductsWithOptions(request, runtime);
         }
 
@@ -3050,7 +3052,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListProductsResponse> ListProductsAsync(ListProductsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListProductsWithOptionsAsync(request, runtime);
         }
 
@@ -3074,39 +3076,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaAlarmsResponse
         /// </returns>
-        public ListQuotaAlarmsResponse ListQuotaAlarmsWithOptions(ListQuotaAlarmsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListQuotaAlarmsResponse ListQuotaAlarmsWithOptions(ListQuotaAlarmsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmName.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaDimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaAlarms",
                 Version = "2020-05-10",
@@ -3118,7 +3120,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaAlarmsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaAlarmsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3141,39 +3143,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaAlarmsResponse
         /// </returns>
-        public async Task<ListQuotaAlarmsResponse> ListQuotaAlarmsWithOptionsAsync(ListQuotaAlarmsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaAlarmsResponse> ListQuotaAlarmsWithOptionsAsync(ListQuotaAlarmsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmName.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaDimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimensions))
             {
                 body["QuotaDimensions"] = request.QuotaDimensions;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaAlarms",
                 Version = "2020-05-10",
@@ -3185,7 +3187,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaAlarmsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaAlarmsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3207,7 +3209,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaAlarmsResponse ListQuotaAlarms(ListQuotaAlarmsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQuotaAlarmsWithOptions(request, runtime);
         }
 
@@ -3230,7 +3232,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaAlarmsResponse> ListQuotaAlarmsAsync(ListQuotaAlarmsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQuotaAlarmsWithOptionsAsync(request, runtime);
         }
 
@@ -3249,45 +3251,45 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationTemplatesResponse
         /// </returns>
-        public ListQuotaApplicationTemplatesResponse ListQuotaApplicationTemplatesWithOptions(ListQuotaApplicationTemplatesRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationTemplatesResponse ListQuotaApplicationTemplatesWithOptions(ListQuotaApplicationTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.Id.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = Utils.Query(query),
-                Body = Utils.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplicationTemplates",
                 Version = "2020-05-10",
@@ -3299,7 +3301,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationTemplatesResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3317,45 +3319,45 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationTemplatesResponse
         /// </returns>
-        public async Task<ListQuotaApplicationTemplatesResponse> ListQuotaApplicationTemplatesWithOptionsAsync(ListQuotaApplicationTemplatesRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationTemplatesResponse> ListQuotaApplicationTemplatesWithOptionsAsync(ListQuotaApplicationTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.Id.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = Utils.Query(query),
-                Body = Utils.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplicationTemplates",
                 Version = "2020-05-10",
@@ -3367,7 +3369,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3384,7 +3386,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationTemplatesResponse ListQuotaApplicationTemplates(ListQuotaApplicationTemplatesRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQuotaApplicationTemplatesWithOptions(request, runtime);
         }
 
@@ -3402,7 +3404,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationTemplatesResponse> ListQuotaApplicationTemplatesAsync(ListQuotaApplicationTemplatesRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQuotaApplicationTemplatesWithOptionsAsync(request, runtime);
         }
 
@@ -3421,47 +3423,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsResponse
         /// </returns>
-        public ListQuotaApplicationsResponse ListQuotaApplicationsWithOptions(ListQuotaApplicationsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationsResponse ListQuotaApplicationsWithOptions(ListQuotaApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.KeyWord.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Status.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplications",
                 Version = "2020-05-10",
@@ -3473,7 +3475,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationsResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3491,47 +3493,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsResponse
         /// </returns>
-        public async Task<ListQuotaApplicationsResponse> ListQuotaApplicationsWithOptionsAsync(ListQuotaApplicationsRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationsResponse> ListQuotaApplicationsWithOptionsAsync(ListQuotaApplicationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.KeyWord.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
             {
                 body["KeyWord"] = request.KeyWord;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Status.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplications",
                 Version = "2020-05-10",
@@ -3543,7 +3545,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationsResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3560,7 +3562,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationsResponse ListQuotaApplications(ListQuotaApplicationsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQuotaApplicationsWithOptions(request, runtime);
         }
 
@@ -3578,13 +3580,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationsResponse> ListQuotaApplicationsAsync(ListQuotaApplicationsRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQuotaApplicationsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3597,47 +3599,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsDetailForTemplateResponse
         /// </returns>
-        public ListQuotaApplicationsDetailForTemplateResponse ListQuotaApplicationsDetailForTemplateWithOptions(ListQuotaApplicationsDetailForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationsDetailForTemplateResponse ListQuotaApplicationsDetailForTemplateWithOptions(ListQuotaApplicationsDetailForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AliyunUid.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
             {
                 body["AliyunUid"] = request.AliyunUid;
             }
-            if (!request.BatchQuotaApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Status.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplicationsDetailForTemplate",
                 Version = "2020-05-10",
@@ -3649,12 +3651,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3667,47 +3669,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsDetailForTemplateResponse
         /// </returns>
-        public async Task<ListQuotaApplicationsDetailForTemplateResponse> ListQuotaApplicationsDetailForTemplateWithOptionsAsync(ListQuotaApplicationsDetailForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationsDetailForTemplateResponse> ListQuotaApplicationsDetailForTemplateWithOptionsAsync(ListQuotaApplicationsDetailForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AliyunUid.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
             {
                 body["AliyunUid"] = request.AliyunUid;
             }
-            if (!request.BatchQuotaApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.Status.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["Status"] = request.Status;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplicationsDetailForTemplate",
                 Version = "2020-05-10",
@@ -3719,12 +3721,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationsDetailForTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3736,13 +3738,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationsDetailForTemplateResponse ListQuotaApplicationsDetailForTemplate(ListQuotaApplicationsDetailForTemplateRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQuotaApplicationsDetailForTemplateWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of quota increase applications for a member in a resource directory.</para>
+        /// <para>Queries the details of quota increase applications for members in a resource directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3754,7 +3756,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationsDetailForTemplateResponse> ListQuotaApplicationsDetailForTemplateAsync(ListQuotaApplicationsDetailForTemplateRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQuotaApplicationsDetailForTemplateWithOptionsAsync(request, runtime);
         }
 
@@ -3773,47 +3775,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsForTemplateResponse
         /// </returns>
-        public ListQuotaApplicationsForTemplateResponse ListQuotaApplicationsForTemplateWithOptions(ListQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListQuotaApplicationsForTemplateResponse ListQuotaApplicationsForTemplateWithOptions(ListQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplyEndTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyEndTime))
             {
                 body["ApplyEndTime"] = request.ApplyEndTime;
             }
-            if (!request.ApplyStartTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyStartTime))
             {
                 body["ApplyStartTime"] = request.ApplyStartTime;
             }
-            if (!request.BatchQuotaApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -3825,7 +3827,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationsForTemplateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3843,47 +3845,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaApplicationsForTemplateResponse
         /// </returns>
-        public async Task<ListQuotaApplicationsForTemplateResponse> ListQuotaApplicationsForTemplateWithOptionsAsync(ListQuotaApplicationsForTemplateRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaApplicationsForTemplateResponse> ListQuotaApplicationsForTemplateWithOptionsAsync(ListQuotaApplicationsForTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplyEndTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyEndTime))
             {
                 body["ApplyEndTime"] = request.ApplyEndTime;
             }
-            if (!request.ApplyStartTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyStartTime))
             {
                 body["ApplyStartTime"] = request.ApplyStartTime;
             }
-            if (!request.BatchQuotaApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchQuotaApplicationId))
             {
                 body["BatchQuotaApplicationId"] = request.BatchQuotaApplicationId;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaApplicationsForTemplate",
                 Version = "2020-05-10",
@@ -3895,7 +3897,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaApplicationsForTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3912,7 +3914,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaApplicationsForTemplateResponse ListQuotaApplicationsForTemplate(ListQuotaApplicationsForTemplateRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQuotaApplicationsForTemplateWithOptions(request, runtime);
         }
 
@@ -3930,13 +3932,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaApplicationsForTemplateResponse> ListQuotaApplicationsForTemplateAsync(ListQuotaApplicationsForTemplateRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQuotaApplicationsForTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举配额使用率报告</para>
+        /// <para>Lists quota utilization reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3949,47 +3951,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaUtilizationReportResponse
         /// </returns>
-        public ListQuotaUtilizationReportResponse ListQuotaUtilizationReportWithOptions(ListQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ListQuotaUtilizationReportResponse ListQuotaUtilizationReportWithOptions(ListQuotaUtilizationReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Adjustable.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Adjustable))
             {
                 body["Adjustable"] = request.Adjustable;
             }
-            if (!request.KeyWords.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWords))
             {
                 body["KeyWords"] = request.KeyWords;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.QuotaRegionId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaRegionId))
             {
                 body["QuotaRegionId"] = request.QuotaRegionId;
             }
-            if (!request.UtilizationStatuses.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtilizationStatuses))
             {
                 body["UtilizationStatuses"] = request.UtilizationStatuses;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaUtilizationReport",
                 Version = "2020-05-10",
@@ -4001,12 +4003,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaUtilizationReportResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaUtilizationReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举配额使用率报告</para>
+        /// <para>Lists quota utilization reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4019,47 +4021,47 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ListQuotaUtilizationReportResponse
         /// </returns>
-        public async Task<ListQuotaUtilizationReportResponse> ListQuotaUtilizationReportWithOptionsAsync(ListQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ListQuotaUtilizationReportResponse> ListQuotaUtilizationReportWithOptionsAsync(ListQuotaUtilizationReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.Adjustable.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Adjustable))
             {
                 body["Adjustable"] = request.Adjustable;
             }
-            if (!request.KeyWords.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWords))
             {
                 body["KeyWords"] = request.KeyWords;
             }
-            if (!request.MaxResults.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
             }
-            if (!request.NextToken.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 body["QuotaCategory"] = request.QuotaCategory;
             }
-            if (!request.QuotaRegionId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaRegionId))
             {
                 body["QuotaRegionId"] = request.QuotaRegionId;
             }
-            if (!request.UtilizationStatuses.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UtilizationStatuses))
             {
                 body["UtilizationStatuses"] = request.UtilizationStatuses;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ListQuotaUtilizationReport",
                 Version = "2020-05-10",
@@ -4071,12 +4073,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ListQuotaUtilizationReportResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ListQuotaUtilizationReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举配额使用率报告</para>
+        /// <para>Lists quota utilization reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4088,13 +4090,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ListQuotaUtilizationReportResponse ListQuotaUtilizationReport(ListQuotaUtilizationReportRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQuotaUtilizationReportWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举配额使用率报告</para>
+        /// <para>Lists quota utilization reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4106,7 +4108,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ListQuotaUtilizationReportResponse> ListQuotaUtilizationReportAsync(ListQuotaUtilizationReportRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQuotaUtilizationReportWithOptionsAsync(request, runtime);
         }
 
@@ -4133,19 +4135,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ModifyQuotaTemplateServiceStatusResponse
         /// </returns>
-        public ModifyQuotaTemplateServiceStatusResponse ModifyQuotaTemplateServiceStatusWithOptions(ModifyQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ModifyQuotaTemplateServiceStatusResponse ModifyQuotaTemplateServiceStatusWithOptions(ModifyQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ServiceStatus.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceStatus))
             {
                 body["ServiceStatus"] = request.ServiceStatus;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ModifyQuotaTemplateServiceStatus",
                 Version = "2020-05-10",
@@ -4157,7 +4159,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ModifyQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ModifyQuotaTemplateServiceStatusResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4183,19 +4185,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ModifyQuotaTemplateServiceStatusResponse
         /// </returns>
-        public async Task<ModifyQuotaTemplateServiceStatusResponse> ModifyQuotaTemplateServiceStatusWithOptionsAsync(ModifyQuotaTemplateServiceStatusRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ModifyQuotaTemplateServiceStatusResponse> ModifyQuotaTemplateServiceStatusWithOptionsAsync(ModifyQuotaTemplateServiceStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ServiceStatus.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceStatus))
             {
                 body["ServiceStatus"] = request.ServiceStatus;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ModifyQuotaTemplateServiceStatus",
                 Version = "2020-05-10",
@@ -4207,7 +4209,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ModifyQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ModifyQuotaTemplateServiceStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4232,7 +4234,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ModifyQuotaTemplateServiceStatusResponse ModifyQuotaTemplateServiceStatus(ModifyQuotaTemplateServiceStatusRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyQuotaTemplateServiceStatusWithOptions(request, runtime);
         }
 
@@ -4258,7 +4260,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ModifyQuotaTemplateServiceStatusResponse> ModifyQuotaTemplateServiceStatusAsync(ModifyQuotaTemplateServiceStatusRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyQuotaTemplateServiceStatusWithOptionsAsync(request, runtime);
         }
 
@@ -4277,57 +4279,57 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ModifyTemplateQuotaItemResponse
         /// </returns>
-        public ModifyTemplateQuotaItemResponse ModifyTemplateQuotaItemWithOptions(ModifyTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public ModifyTemplateQuotaItemResponse ModifyTemplateQuotaItemWithOptions(ModifyTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 query["QuotaCategory"] = request.QuotaCategory;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.Id.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = Utils.Query(query),
-                Body = Utils.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ModifyTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -4339,7 +4341,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ModifyTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<ModifyTemplateQuotaItemResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4357,57 +4359,57 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// ModifyTemplateQuotaItemResponse
         /// </returns>
-        public async Task<ModifyTemplateQuotaItemResponse> ModifyTemplateQuotaItemWithOptionsAsync(ModifyTemplateQuotaItemRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<ModifyTemplateQuotaItemResponse> ModifyTemplateQuotaItemWithOptionsAsync(ModifyTemplateQuotaItemRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!request.QuotaCategory.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaCategory))
             {
                 query["QuotaCategory"] = request.QuotaCategory;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.DesireValue.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesireValue))
             {
                 body["DesireValue"] = request.DesireValue;
             }
-            if (!request.Dimensions.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 body["Dimensions"] = request.Dimensions;
             }
-            if (!request.EffectiveTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
             {
                 body["EffectiveTime"] = request.EffectiveTime;
             }
-            if (!request.EnvLanguage.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvLanguage))
             {
                 body["EnvLanguage"] = request.EnvLanguage;
             }
-            if (!request.ExpireTime.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
             {
                 body["ExpireTime"] = request.ExpireTime;
             }
-            if (!request.Id.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
             }
-            if (!request.NoticeType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoticeType))
             {
                 body["NoticeType"] = request.NoticeType;
             }
-            if (!request.ProductCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 body["ProductCode"] = request.ProductCode;
             }
-            if (!request.QuotaActionCode.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaActionCode))
             {
                 body["QuotaActionCode"] = request.QuotaActionCode;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = Utils.Query(query),
-                Body = Utils.ParseToMap(body),
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "ModifyTemplateQuotaItem",
                 Version = "2020-05-10",
@@ -4419,7 +4421,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<ModifyTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<ModifyTemplateQuotaItemResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4436,7 +4438,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public ModifyTemplateQuotaItemResponse ModifyTemplateQuotaItem(ModifyTemplateQuotaItemRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ModifyTemplateQuotaItemWithOptions(request, runtime);
         }
 
@@ -4454,7 +4456,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<ModifyTemplateQuotaItemResponse> ModifyTemplateQuotaItemAsync(ModifyTemplateQuotaItemRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyTemplateQuotaItemWithOptionsAsync(request, runtime);
         }
 
@@ -4480,19 +4482,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// RemindQuotaApplicationApprovalResponse
         /// </returns>
-        public RemindQuotaApplicationApprovalResponse RemindQuotaApplicationApprovalWithOptions(RemindQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public RemindQuotaApplicationApprovalResponse RemindQuotaApplicationApprovalWithOptions(RemindQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RemindQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -4504,7 +4506,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<RemindQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<RemindQuotaApplicationApprovalResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4529,19 +4531,19 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// RemindQuotaApplicationApprovalResponse
         /// </returns>
-        public async Task<RemindQuotaApplicationApprovalResponse> RemindQuotaApplicationApprovalWithOptionsAsync(RemindQuotaApplicationApprovalRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<RemindQuotaApplicationApprovalResponse> RemindQuotaApplicationApprovalWithOptionsAsync(RemindQuotaApplicationApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.ApplicationId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 body["ApplicationId"] = request.ApplicationId;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RemindQuotaApplicationApproval",
                 Version = "2020-05-10",
@@ -4553,7 +4555,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<RemindQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<RemindQuotaApplicationApprovalResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4577,7 +4579,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public RemindQuotaApplicationApprovalResponse RemindQuotaApplicationApproval(RemindQuotaApplicationApprovalRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RemindQuotaApplicationApprovalWithOptions(request, runtime);
         }
 
@@ -4602,13 +4604,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<RemindQuotaApplicationApprovalResponse> RemindQuotaApplicationApprovalAsync(RemindQuotaApplicationApprovalRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemindQuotaApplicationApprovalWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起配额使用率报告查询</para>
+        /// <para>Initiates a quota usage report query. This API applies only to general quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4621,11 +4623,11 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// StartQuotaUtilizationReportResponse
         /// </returns>
-        public StartQuotaUtilizationReportResponse StartQuotaUtilizationReportWithOptions(StartQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public StartQuotaUtilizationReportResponse StartQuotaUtilizationReportWithOptions(StartQuotaUtilizationReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
-            OpenApiRequest req = new OpenApiRequest();
-            Params params_ = new Params
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StartQuotaUtilizationReport",
                 Version = "2020-05-10",
@@ -4637,12 +4639,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<StartQuotaUtilizationReportResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<StartQuotaUtilizationReportResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起配额使用率报告查询</para>
+        /// <para>Initiates a quota usage report query. This API applies only to general quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4655,11 +4657,11 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// StartQuotaUtilizationReportResponse
         /// </returns>
-        public async Task<StartQuotaUtilizationReportResponse> StartQuotaUtilizationReportWithOptionsAsync(StartQuotaUtilizationReportRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<StartQuotaUtilizationReportResponse> StartQuotaUtilizationReportWithOptionsAsync(StartQuotaUtilizationReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
-            OpenApiRequest req = new OpenApiRequest();
-            Params params_ = new Params
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "StartQuotaUtilizationReport",
                 Version = "2020-05-10",
@@ -4671,12 +4673,12 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<StartQuotaUtilizationReportResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<StartQuotaUtilizationReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起配额使用率报告查询</para>
+        /// <para>Initiates a quota usage report query. This API applies only to general quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4688,13 +4690,13 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public StartQuotaUtilizationReportResponse StartQuotaUtilizationReport(StartQuotaUtilizationReportRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return StartQuotaUtilizationReportWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起配额使用率报告查询</para>
+        /// <para>Initiates a quota usage report query. This API applies only to general quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4706,7 +4708,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<StartQuotaUtilizationReportResponse> StartQuotaUtilizationReportAsync(StartQuotaUtilizationReportRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StartQuotaUtilizationReportWithOptionsAsync(request, runtime);
         }
 
@@ -4730,39 +4732,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// UpdateQuotaAlarmResponse
         /// </returns>
-        public UpdateQuotaAlarmResponse UpdateQuotaAlarmWithOptions(UpdateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public UpdateQuotaAlarmResponse UpdateQuotaAlarmWithOptions(UpdateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!request.AlarmName.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!request.Threshold.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!request.ThresholdPercent.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!request.ThresholdType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!request.WebHook.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
             {
                 body["WebHook"] = request.WebHook;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateQuotaAlarm",
                 Version = "2020-05-10",
@@ -4774,7 +4776,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<UpdateQuotaAlarmResponse>(CallApi(params_, req, runtime));
+            return TeaModel.ToObject<UpdateQuotaAlarmResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4797,39 +4799,39 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// <returns>
         /// UpdateQuotaAlarmResponse
         /// </returns>
-        public async Task<UpdateQuotaAlarmResponse> UpdateQuotaAlarmWithOptionsAsync(UpdateQuotaAlarmRequest request, Darabonba.Models.RuntimeOptions runtime)
+        public async Task<UpdateQuotaAlarmResponse> UpdateQuotaAlarmWithOptionsAsync(UpdateQuotaAlarmRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            request.Validate();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!request.AlarmId.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmId))
             {
                 body["AlarmId"] = request.AlarmId;
             }
-            if (!request.AlarmName.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmName))
             {
                 body["AlarmName"] = request.AlarmName;
             }
-            if (!request.Threshold.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
                 body["Threshold"] = request.Threshold;
             }
-            if (!request.ThresholdPercent.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdPercent))
             {
                 body["ThresholdPercent"] = request.ThresholdPercent;
             }
-            if (!request.ThresholdType.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdType))
             {
                 body["ThresholdType"] = request.ThresholdType;
             }
-            if (!request.WebHook.IsNull())
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebHook))
             {
                 body["WebHook"] = request.WebHook;
             }
-            OpenApiRequest req = new OpenApiRequest
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Body = Utils.ParseToMap(body),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
-            Params params_ = new Params
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "UpdateQuotaAlarm",
                 Version = "2020-05-10",
@@ -4841,7 +4843,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            return Darabonba.Model.ToObject<UpdateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
+            return TeaModel.ToObject<UpdateQuotaAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4863,7 +4865,7 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public UpdateQuotaAlarmResponse UpdateQuotaAlarm(UpdateQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateQuotaAlarmWithOptions(request, runtime);
         }
 
@@ -4886,10 +4888,137 @@ namespace AlibabaCloud.SDK.Quotas20200510
         /// </returns>
         public async Task<UpdateQuotaAlarmResponse> UpdateQuotaAlarmAsync(UpdateQuotaAlarmRequest request)
         {
-            Darabonba.Models.RuntimeOptions runtime = new Darabonba.Models.RuntimeOptions();
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateQuotaAlarmWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Withdraws a quota application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawQuotaApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawQuotaApplicationResponse
+        /// </returns>
+        public WithdrawQuotaApplicationResponse WithdrawQuotaApplicationWithOptions(WithdrawQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WithdrawQuotaApplication",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WithdrawQuotaApplicationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Withdraws a quota application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawQuotaApplicationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawQuotaApplicationResponse
+        /// </returns>
+        public async Task<WithdrawQuotaApplicationResponse> WithdrawQuotaApplicationWithOptionsAsync(WithdrawQuotaApplicationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                body["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WithdrawQuotaApplication",
+                Version = "2020-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WithdrawQuotaApplicationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Withdraws a quota application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawQuotaApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawQuotaApplicationResponse
+        /// </returns>
+        public WithdrawQuotaApplicationResponse WithdrawQuotaApplication(WithdrawQuotaApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WithdrawQuotaApplicationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Withdraws a quota application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WithdrawQuotaApplicationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WithdrawQuotaApplicationResponse
+        /// </returns>
+        public async Task<WithdrawQuotaApplicationResponse> WithdrawQuotaApplicationAsync(WithdrawQuotaApplicationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WithdrawQuotaApplicationWithOptionsAsync(request, runtime);
         }
 
     }
 }
-

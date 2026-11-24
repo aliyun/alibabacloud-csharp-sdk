@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetProductQuotaDimensionResponseBody : Darabonba.Model {
+    public class GetProductQuotaDimensionResponseBody : TeaModel {
         /// <summary>
         /// <para>The details of the quota dimension.</para>
         /// </summary>
         [NameInMap("QuotaDimension")]
         [Validation(Required=false)]
         public GetProductQuotaDimensionResponseBodyQuotaDimension QuotaDimension { get; set; }
-        public class GetProductQuotaDimensionResponseBodyQuotaDimension : Darabonba.Model {
+        public class GetProductQuotaDimensionResponseBodyQuotaDimension : TeaModel {
             /// <summary>
             /// <para>The quota dimensions of the cloud service on which the target quota depends.</para>
             /// </summary>
@@ -52,7 +51,7 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
             [NameInMap("DimensionValueDetail")]
             [Validation(Required=false)]
             public List<GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail> DimensionValueDetail { get; set; }
-            public class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail : Darabonba.Model {
+            public class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail : TeaModel {
                 /// <summary>
                 /// <para>The name of the quota dimension value.</para>
                 /// 
@@ -107,4 +106,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-

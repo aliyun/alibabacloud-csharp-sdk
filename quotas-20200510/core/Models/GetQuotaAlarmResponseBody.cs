@@ -1,22 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
-using System.IO;
-using System.Collections;
 using System.Collections.Generic;
-using Darabonba;
-using Darabonba.Utils;
+using System.IO;
+
+using Tea;
 
 namespace AlibabaCloud.SDK.Quotas20200510.Models
 {
-    public class GetQuotaAlarmResponseBody : Darabonba.Model {
+    public class GetQuotaAlarmResponseBody : TeaModel {
         /// <summary>
         /// <para>The details of the quota alert.</para>
         /// </summary>
         [NameInMap("QuotaAlarm")]
         [Validation(Required=false)]
         public GetQuotaAlarmResponseBodyQuotaAlarm QuotaAlarm { get; set; }
-        public class GetQuotaAlarmResponseBodyQuotaAlarm : Darabonba.Model {
+        public class GetQuotaAlarmResponseBodyQuotaAlarm : TeaModel {
             /// <summary>
             /// <para>The ID of the quota alert.</para>
             /// 
@@ -173,4 +172,3 @@ namespace AlibabaCloud.SDK.Quotas20200510.Models
     }
 
 }
-
