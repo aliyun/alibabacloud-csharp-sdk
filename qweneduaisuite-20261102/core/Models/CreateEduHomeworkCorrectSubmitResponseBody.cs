@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
         public CreateEduHomeworkCorrectSubmitResponseBodyData Data { get; set; }
         public class CreateEduHomeworkCorrectSubmitResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The clockwise rotation angle of the image, in degrees.</para>
+            /// <para>The rotation angle of the image in the clockwise direction, in degrees.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
             public long? Angle { get; set; }
 
             /// <summary>
-            /// <para>The URL of the corrected image. If <c>dewarp</c> is set to <c>false</c>, the URL of the original image is returned.</para>
+            /// <para>The URL of the corrected image. If <c>dewarp</c> is set to <c>false</c>, the original image is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/dewarp.jpg">https://example.com/dewarp.jpg</a></para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
                 public List<CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResults> AnswerResults { get; set; }
                 public class CreateEduHomeworkCorrectSubmitResponseBodyDataQuestionResultsAnswerResults : TeaModel {
                     /// <summary>
-                    /// <para>The coordinate group of the user\&quot;s answering area. It generally contains four vertex coordinates arranged in the order of top-left, top-right, bottom-right, and bottom-left, formatted as <c>[{&quot;x&quot;: ..., &quot;y&quot;: ...}, ...]</c>.</para>
+                    /// <para>The coordinate group of the user\&quot;s answering area. It generally contains four vertex coordinates, arranged in the order of top-left, top-right, bottom-right, and bottom-left, such as <c>[{&quot;x&quot;: ..., &quot;y&quot;: ...}, ...]</c>.</para>
                     /// </summary>
                     [NameInMap("answerPoints")]
                     [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
                     }
 
                     /// <summary>
-                    /// <para>The coordinates of the grading mark point, formatted as <c>{ &quot;x&quot;: ..., &quot;y&quot;: ... }</c>.</para>
+                    /// <para>The coordinates of the grading mark point, such as <c>{ &quot;x&quot;: ..., &quot;y&quot;: ... }</c>.</para>
                     /// </summary>
                     [NameInMap("checkPoint")]
                     [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether the task is completed:</para>
+                /// <para>Specifies whether the task is completed. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b>: The task is completed.</description></item>
                 /// <item><description><b>false</b>: The task is not completed.</description></item>
@@ -185,10 +185,10 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
                 public string QuestionId { get; set; }
 
                 /// <summary>
-                /// <para>The coordinate group of the question area. It generally contains four vertex coordinates arranged in the order of top-left, top-right, bottom-right, and bottom-left.</para>
+                /// <para>The coordinate group of the question area. It generally contains four vertex coordinates, arranged in the order of top-left, top-right, bottom-right, and bottom-left.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Formatted as <c>[[{&quot;x&quot;: 0, &quot;y&quot;: 0}, ...]]</c></para>
+                /// <para>Example: <c>[[{&quot;x&quot;: 0, &quot;y&quot;: 0}, ...]]</c></para>
                 /// </summary>
                 [NameInMap("questionPoints")]
                 [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
                 /// <para>The question analysis and solution.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The question analysis and solution</para>
+                /// <para>Question analysis and solution</para>
                 /// </summary>
                 [NameInMap("solution")]
                 [Validation(Required=false)]
@@ -242,14 +242,14 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
             /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Examples: submitted, processing, finished, or failed</para>
+            /// <para>Examples: submitted, processing, finished, and failed</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the task. You must include this ID in subsequent queries.</para>
+            /// <para>The unique identifier of the task, which must be included in subsequent queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-20261116-abc123</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID on the caller side.</para>
+        /// <para>The request ID of the caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req-20261116-0001</para>

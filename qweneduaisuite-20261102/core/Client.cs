@@ -227,12 +227,12 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
-        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
-        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>This operation is used to submit a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> is preferred.</description></item>
+        /// <item><description>The optional parameter <c>dewarp</c> specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
         /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
-        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
-        /// <item><description>All requests and responses use the JSON format.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateEduHomeworkCorrectSubmitResponse>(CallApi(params_, req, runtime));
@@ -298,12 +298,12 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
-        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
-        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>This operation is used to submit a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> is preferred.</description></item>
+        /// <item><description>The optional parameter <c>dewarp</c> specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
         /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
-        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
-        /// <item><description>All requests and responses use the JSON format.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateEduHomeworkCorrectSubmitResponse>(await CallApiAsync(params_, req, runtime));
@@ -369,12 +369,12 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
-        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
-        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>This operation is used to submit a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> is preferred.</description></item>
+        /// <item><description>The optional parameter <c>dewarp</c> specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
         /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
-        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
-        /// <item><description>All requests and responses use the JSON format.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -401,12 +401,12 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation submits a homework image to the server for question segmentation, recognition, and grading.</description></item>
-        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> takes precedence.</description></item>
-        /// <item><description>The optional <c>dewarp</c> parameter specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
+        /// <item><description>This operation is used to submit a homework image to the server for question segmentation, recognition, and grading.</description></item>
+        /// <item><description>You can submit the image by using <c>imageBase64</c> or <c>imageUrl</c>. <c>imageBase64</c> is preferred.</description></item>
+        /// <item><description>The optional parameter <c>dewarp</c> specifies whether to correct the image distortion. Default value: <c>true</c>.</description></item>
         /// <item><description>Provide <c>requestId</c> to facilitate troubleshooting and reconciliation.</description></item>
-        /// <item><description>Image size limit: The Base64-encoded image size cannot exceed 15 MB.</description></item>
-        /// <item><description>All requests and responses use the JSON format.</description></item>
+        /// <item><description>Image size limit: The Base64-encoded image cannot exceed 15 MB.</description></item>
+        /// <item><description>All requests and responses are in JSON format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -431,23 +431,23 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
-        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>This API retrieves question resolution results by using the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Only a single image is supported per request, and the image format must be JPG, JPEG, or PNG.</description></item>
         /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
         /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
-        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
-        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
-        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
-        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
-        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum limit of 10 MB. The width and height of the image must not exceed 8,000 pixels, and the total number of pixels must not exceed 2.6 million.</description></item>
+        /// <item><description>Use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>This API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response technology. The client must read the response event by event and must not wait for the connection to close before reading the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process step by step through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
         /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
-        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
+        /// <item><description>Set a reasonable timeout period for the client, which must be at least 3 minutes, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="tmpReq">
+        /// <param name="request">
         /// CreateEduProblemSolveRequest
         /// </param>
         /// <param name="headers">
@@ -460,19 +460,13 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// <returns>
         /// CreateEduProblemSolveResponse
         /// </returns>
-        public CreateEduProblemSolveResponse CreateEduProblemSolveWithOptions(CreateEduProblemSolveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateEduProblemSolveResponse CreateEduProblemSolveWithOptions(CreateEduProblemSolveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateEduProblemSolveShrinkRequest request = new CreateEduProblemSolveShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Query))
-            {
-                request.QueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Query, "query", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
-                body["query"] = request.QueryShrink;
+                body["query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
             {
@@ -492,7 +486,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateEduProblemSolveResponse>(CallApi(params_, req, runtime));
@@ -505,23 +499,23 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
-        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>This API retrieves question resolution results by using the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Only a single image is supported per request, and the image format must be JPG, JPEG, or PNG.</description></item>
         /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
         /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
-        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
-        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
-        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
-        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
-        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum limit of 10 MB. The width and height of the image must not exceed 8,000 pixels, and the total number of pixels must not exceed 2.6 million.</description></item>
+        /// <item><description>Use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>This API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response technology. The client must read the response event by event and must not wait for the connection to close before reading the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process step by step through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
         /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
-        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
+        /// <item><description>Set a reasonable timeout period for the client, which must be at least 3 minutes, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 
-        /// <param name="tmpReq">
+        /// <param name="request">
         /// CreateEduProblemSolveRequest
         /// </param>
         /// <param name="headers">
@@ -534,19 +528,13 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// <returns>
         /// CreateEduProblemSolveResponse
         /// </returns>
-        public async Task<CreateEduProblemSolveResponse> CreateEduProblemSolveWithOptionsAsync(CreateEduProblemSolveRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateEduProblemSolveResponse> CreateEduProblemSolveWithOptionsAsync(CreateEduProblemSolveRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            CreateEduProblemSolveShrinkRequest request = new CreateEduProblemSolveShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Query))
-            {
-                request.QueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Query, "query", "json");
-            }
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryShrink))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
-                body["query"] = request.QueryShrink;
+                body["query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
             {
@@ -566,7 +554,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
-                ReqBodyType = "formData",
+                ReqBodyType = "json",
                 BodyType = "json",
             };
             return TeaModel.ToObject<CreateEduProblemSolveResponse>(await CallApiAsync(params_, req, runtime));
@@ -579,19 +567,19 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
-        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>This API retrieves question resolution results by using the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Only a single image is supported per request, and the image format must be JPG, JPEG, or PNG.</description></item>
         /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
         /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
-        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
-        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
-        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
-        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
-        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum limit of 10 MB. The width and height of the image must not exceed 8,000 pixels, and the total number of pixels must not exceed 2.6 million.</description></item>
+        /// <item><description>Use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>This API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response technology. The client must read the response event by event and must not wait for the connection to close before reading the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process step by step through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
         /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
-        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
+        /// <item><description>Set a reasonable timeout period for the client, which must be at least 3 minutes, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -616,19 +604,19 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports obtaining question resolution results by providing the URL or Base64 encoding of a question image.</description></item>
-        /// <item><description>Supports processing a single image. The image format must be JPG, JPEG, or PNG.</description></item>
+        /// <item><description>This API retrieves question resolution results by using the URL or Base64 encoding of a question image.</description></item>
+        /// <item><description>Only a single image is supported per request, and the image format must be JPG, JPEG, or PNG.</description></item>
         /// <item><description>The image must be clear and complete. Avoid tilted, obscured, or irrelevant content.</description></item>
         /// <item><description>Each request can process only one image. Multi-image or plain text requests are not supported.</description></item>
-        /// <item><description>The recommended image size is up to 1 MB, with a maximum of 10 MB. The image width and height must not exceed 8,000 pixels, and the total pixel count must not exceed 2.6 million.</description></item>
-        /// <item><description>You must use the HTTPS protocol to call the API and provide image URLs.</description></item>
-        /// <item><description>The user_id parameter must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
-        /// <item><description>The API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response. The client must read the response event by event, rather than waiting for the connection to close to read the entire response.</description></item>
-        /// <item><description>A successful response returns the question resolution process through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
+        /// <item><description>The recommended image size is up to 1 MB, with a maximum limit of 10 MB. The width and height of the image must not exceed 8,000 pixels, and the total number of pixels must not exceed 2.6 million.</description></item>
+        /// <item><description>Use the HTTPS protocol to call the API and provide image URLs.</description></item>
+        /// <item><description>The user_id must be an anonymized identifier. Do not pass direct identity information such as names or phone numbers.</description></item>
+        /// <item><description>This API uses the HTTP POST method combined with Server-Sent Events (SSE) streaming response technology. The client must read the response event by event and must not wait for the connection to close before reading the entire response.</description></item>
+        /// <item><description>A successful response returns the question resolution process step by step through a series of message events and ends with a complete event. If an error occurs, an error event is returned.</description></item>
         /// <item><description>For retryable errors such as TOO_MANY_ACTIVE_STREAMS, use an exponential backoff strategy to retry the request.</description></item>
-        /// <item><description>Set a reasonable timeout period of at least 3 minutes on the client, and ensure that the proxy layer does not cache SSE responses.</description></item>
+        /// <item><description>Set a reasonable timeout period for the client, which must be at least 3 minutes, and ensure that the proxy layer does not cache SSE responses.</description></item>
         /// </list>
         /// </description>
         /// 

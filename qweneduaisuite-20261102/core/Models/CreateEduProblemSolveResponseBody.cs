@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether this is the final full snapshot. The value is fixed to true in the complete event.</para>
+        /// <para>Specifies whether the response is the final full snapshot. This value is fixed to true in the complete event.</para>
         /// </summary>
         [NameInMap("finished")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
         public List<CreateEduProblemSolveResponseBodyItems> Items { get; set; }
         public class CreateEduProblemSolveResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The complete Markdown content of the question resolution, including the deduction process and the final result.</para>
+            /// <para>The complete question resolution content in Markdown format, including the deduction process and the final result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The question identifier. The value is the question title, such as Question 1. The server does not return a separate title field. If the downstream service does not provide a question title, which is always the case for single-question scenarios, titles such as Question 1 and Question 2 are generated in the order of the questions.</para>
+            /// <para>The question identifier. The value is the question title, such as Question 1. The server does not return a separate title field. If the downstream service does not provide a question title, which is always the case in single-question scenarios, titles such as Question 1 and Question 2 are generated in the order of the questions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50a10e43a33e36179e355556d319ebd5</para>
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
             /// <summary>
             /// <para>The current question status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>processing: Processing.</description></item>
-            /// <item><description>complete: Complete.</description></item>
+            /// <item><description>processing: The question is being processed.</description></item>
+            /// <item><description>complete: The question processing is complete.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The thinking process. This field is returned only when result_type is single, and is not returned for multiple questions.</para>
+            /// <para>The thinking process. This field is returned only when result_type is single. It is not returned for multiple questions.</para>
             /// </summary>
             [NameInMap("thinking")]
             [Validation(Required=false)]
@@ -97,8 +97,8 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
                 /// <summary>
                 /// <para>The thinking status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>processing: Processing.</description></item>
-                /// <item><description>complete: Complete.</description></item>
+                /// <item><description>processing: The thinking process is in progress.</description></item>
+                /// <item><description>complete: The thinking process is complete.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
         }
 
         /// <summary>
-        /// <para>The actual response message of the request.</para>
+        /// <para>The actual message returned by the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
         /// <summary>
         /// <para>The type of the question resolution result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>single: Single question.</description></item>
+        /// <item><description>single: A single question.</description></item>
         /// <item><description>multiple: Multiple questions.</description></item>
         /// </list>
         /// 
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.QwenEduAiSuite20261102.Models
         public bool? Retryable { get; set; }
 
         /// <summary>
-        /// <para>The token usage. Only the complete event carries the final value. The message event does not return this field.</para>
+        /// <para>The token usage. Only the complete event carries the final value. This field is not returned in message events.</para>
         /// </summary>
         [NameInMap("usage")]
         [Validation(Required=false)]
