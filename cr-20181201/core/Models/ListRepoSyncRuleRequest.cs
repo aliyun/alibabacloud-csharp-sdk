@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The image repository name.</para>
+        /// <para>The repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-repo</para>

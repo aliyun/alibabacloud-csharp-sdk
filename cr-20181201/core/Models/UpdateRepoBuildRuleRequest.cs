@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoBuildRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Building arguments.</para>
+        /// <para>The build parameters.</para>
         /// </summary>
         [NameInMap("BuildArgs")]
         [Validation(Required=false)]
         public List<string> BuildArgs { get; set; }
 
         /// <summary>
-        /// <para>The ID of the building rule.</para>
+        /// <para>The build rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildRuleId { get; set; }
 
         /// <summary>
-        /// <para>The path of the Dockerfile.</para>
+        /// <para>The path to the Dockerfile.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string DockerfileName { get; set; }
 
         /// <summary>
-        /// <para>The tag of the image.</para>
+        /// <para>The image tag version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v0.9.5</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ImageTag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,15 +69,15 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Architecture for image building. Valid values:</para>
+        /// <para>The architecture of the image to build. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>linux/amd64</c></description></item>
         /// <item><description><c>linux/arm64</c></description></item>
         /// <item><description><c>linux/386</c></description></item>
         /// <item><description><c>linux/arm/v7</c></description></item>
-        /// <item><description><c>linux/arm/v6</c></description></item>
+        /// <item><description><c>linux/arm/v6</c>
+        /// Default value: <c>linux/amd64</c>.</description></item>
         /// </list>
-        /// <para>Default value: <c>linux/amd64</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>linux/amd64</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<string> Platforms { get; set; }
 
         /// <summary>
-        /// <para>The name of the push that triggers the building rule.</para>
+        /// <para>The trigger name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>master</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string PushName { get; set; }
 
         /// <summary>
-        /// <para>The type of the push that triggers the building rule. Valid values:</para>
+        /// <para>The push type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>GIT_TAG</c>: tag push</description></item>
-        /// <item><description><c>GIT_BRANCH</c>: branch push</description></item>
+        /// <item><description><c>GIT_TAG</c>: Triggered by a tag.</description></item>
+        /// <item><description><c>GIT_BRANCH</c>: Triggered by a branch.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string PushType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

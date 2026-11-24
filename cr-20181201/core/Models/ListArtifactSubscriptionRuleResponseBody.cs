@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListArtifactSubscriptionRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// <item><description><para><c>true</c>: The call was successful.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// <item><description><para><c>false</c>: The call failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The subscription rules.</para>
+        /// <para>The list of rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListArtifactSubscriptionRuleResponseBodyRules> Rules { get; set; }
         public class ListArtifactSubscriptionRuleResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to enable the accelerated subscription channel. This feature is in public preview. Based on an optimized scheduling policy and network link, the speed of image subscription is improved.</para>
+            /// <para>Indicates whether the acceleration link is enabled. The subscription acceleration feature is in public preview and can improve image subscription speed based on scheduling policies and network link optimization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? Accelerate { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1638187989000</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was last modified.</para>
+            /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1678341923385</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace.</para>
+            /// <para>The namespace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-ns</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to overwrite the image.</para>
+            /// <para>Specifies whether to overwrite images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? Override { get; set; }
 
             /// <summary>
-            /// <para>The operating system and architecture. If the source repository contains a multi-architecture image, only images that have a specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</para>
+            /// <para>The operating system and architecture. If the source repository contains multi-architecture images, only the specified operating system and architecture are subscribed to the destination repository of the Enterprise instance.</para>
             /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]
             public List<string> Platform { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-repo</para>
@@ -159,6 +159,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public string RuleId { get; set; }
 
+            /// <summary>
+            /// <para>The domain name of the source image repository for the subscription rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>anolis-registry.cn-zhangjiakou.cr.aliyuncs.com</para>
+            /// </summary>
             [NameInMap("SourceDomain")]
             [Validation(Required=false)]
             public string SourceDomain { get; set; }
@@ -174,7 +180,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SourceNamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The source of the artifact. Valid values:</para>
+            /// <para>The artifact source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DOCKER_HUB</para>
@@ -204,7 +210,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? TagCount { get; set; }
 
             /// <summary>
-            /// <para>The regular expression that is used to subscribe to the source repository.</para>
+            /// <para>The list of subscribed tags.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>latest</para>
+            /// </summary>
+            [NameInMap("TagList")]
+            [Validation(Required=false)]
+            public List<string> TagList { get; set; }
+
+            /// <summary>
+            /// <para>The image versions subscribed from the source repository. Regular expressions are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release.*</para>

@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
-        /// <para>Use this parameter together with NextToken. This parameter takes priority over PageNo and PageSize.</para>
+        /// <para>The maximum number of results to return. Use this parameter together with the NextToken parameter. This parameter takes precedence over PageNo and PageSize.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -32,8 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</para>
-        /// <para>Use this parameter together with MaxResults. This parameter takes priority over PageNo and PageSize.</para>
+        /// <para>The pagination token. If a next page exists, the service returns a NextToken value, which you can include in the subsequent request. Use this parameter together with the MaxResults parameter. This parameter takes precedence over PageNo and PageSize.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</para>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The number of entries per page. A maximum of 100 entries can be returned per page.</para>
+        /// <para>The page size. The maximum number of entries per page is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

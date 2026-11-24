@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateChartRepositoryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// <para>The name of the repository namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the repository. Valid values:</para>
+        /// <para>The repository type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PUBLIC</c>: a public repository.</description></item>
-        /// <item><description><c>PRIVATE</c>: a private repository.</description></item>
+        /// <item><description><para><c>PUBLIC</c>: public repository</para>
+        /// </description></item>
+        /// <item><description><para><c>PRIVATE</c>: private repository</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoType { get; set; }
 
         /// <summary>
-        /// <para>The summary of the repository.</para>
+        /// <para>The summary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

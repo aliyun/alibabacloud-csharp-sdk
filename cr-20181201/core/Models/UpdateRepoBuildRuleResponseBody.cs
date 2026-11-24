@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoBuildRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the building rule.</para>
+        /// <para>The build rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crbr-ly77w5i3t31f****</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Specifies whether the contact is updated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><c>true</c>: The update is successful.</description></item>
+        /// <item><description><c>false</c>: The update failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC648259-91A7-4502-BED3-EDF64361FA83</para>

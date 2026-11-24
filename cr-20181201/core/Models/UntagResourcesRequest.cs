@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the resource. Valid values:</para>
+        /// <para>Specifies whether to unbind all tags from the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Unbinds all tags from the resource.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Does not unbind all tags.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you specify both this parameter and the TagKey parameter, this parameter does not take effect.</para>
+        /// <para>If you set both <b>TagKey.n</b> and this parameter, this parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the resources are deployed.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,14 +40,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify a maximum of 20 resource IDs.</para>
+        /// <para>The resource ID. You can specify up to 20 resources.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resources. Instance resources are supported.</para>
+        /// <para>The resource type. Currently, Instance resources are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The key of tag N added to the resource. Valid values of N: 1 to 20.</para>
+        /// <para>The tag key. Valid values of N: 1 to 20.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

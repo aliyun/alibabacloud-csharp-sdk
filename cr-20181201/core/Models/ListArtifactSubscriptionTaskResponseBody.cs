@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListArtifactSubscriptionTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The API call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,14 +66,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried artifact subscription tasks.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListArtifactSubscriptionTaskResponseBodyTasks> Tasks { get; set; }
         public class ListArtifactSubscriptionTaskResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The type of the artifact.</para>
+            /// <para>The artifact type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ArtifactType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the artifact subscription task.</para>
+            /// <para>The end time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1692756630000</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace.</para>
+            /// <para>The namespace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-ns</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-repo</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The name of the source namespace.</para>
+            /// <para>The source namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>library</para>
@@ -151,7 +153,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SourceProvider { get; set; }
 
             /// <summary>
-            /// <para>The name of the source repository.</para>
+            /// <para>The source repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nginx</para>
@@ -161,7 +163,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SourceRepoName { get; set; }
 
             /// <summary>
-            /// <para>The type of the source artifact.</para>
+            /// <para>The source artifact type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>
@@ -171,7 +173,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SourceRepoType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the artifact subscription task.</para>
+            /// <para>The start time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1695348301000</para>
@@ -181,7 +183,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of subscribed tags.</para>
+            /// <para>The number of subscribed tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -221,7 +223,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TaskResult { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -231,7 +233,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the task.</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AUTO</para>
@@ -243,7 +245,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

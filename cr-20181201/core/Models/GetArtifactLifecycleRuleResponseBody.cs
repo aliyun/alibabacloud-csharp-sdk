@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactLifecycleRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether automatic execution is enabled.</para>
+        /// <para>Indicates whether the rule is automatically executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1571926439000</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether DryRun mode is enabled. When DryRun mode is enabled, only lifecycle task scanning is performed, and actual data cleanup is not executed. This mode is disabled by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -59,6 +61,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? EnableDeleteTag { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether artifact cleanup is enabled.</para>
+        /// <para>Only one of this parameter and EnableDeleteTag can be set to true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The last modification time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The last modification time. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1638259914000</para>
@@ -113,7 +118,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The next execution time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The next execution time. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1701878400000</para>
@@ -214,7 +219,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of images to retain.</para>
+        /// <para>The number of retained images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -254,7 +259,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The regular expression used to match image versions to retain.</para>
+        /// <para>The regular expression used to retain image versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>.*-alpine</para>

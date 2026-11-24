@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoSourceCodeRepoRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to trigger image building when source code is committed. Valid values:</para>
+        /// <para>Specifies whether to enable automatic building. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: triggers image building when source code is committed.</description></item>
-        /// <item><description><c>false</c>: does not trigger image building when source code is committed.</description></item>
+        /// <item><description><para><c>true</c>: enables automatic building.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: disables automatic building.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string CodeRepoName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the source code repository belongs.</para>
+        /// <para>The namespace name of the source code repository.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string CodeRepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the source code hosting platform. Valid values: <c>GITHUB</c>, <c>GITLAB</c>, <c>GITEE</c>, <c>CODE</c>, and <c>CODEUP</c>.</para>
+        /// <para>The type of the source code platform. Valid values: <c>GITHUB</c>, <c>GITLAB</c>, <c>GITEE</c>, <c>CODE</c>, and <c>CODEUP</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,10 +59,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string CodeRepoType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable building caches. Valid values:</para>
+        /// <para>Specifies whether to disable the build cache. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: disables building caches.</description></item>
-        /// <item><description><c>false</c>: enables building caches.</description></item>
+        /// <item><description><para><c>true</c>: disables the build cache.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: enables the build cache.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +75,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? DisableCacheBuild { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,10 +86,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Build With Servers Deployed Outside Chinese Mainland. Valid values:</para>
+        /// <para>Specifies whether to enable intelligent build acceleration for overseas sources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables Build With Servers Deployed Outside Chinese Mainland.</description></item>
-        /// <item><description><c>false</c>: does not enable Build With Servers Deployed Outside Chinese Mainland.</description></item>
+        /// <item><description><para><c>true</c>: enables intelligent build acceleration for overseas sources.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: disables intelligent build acceleration for overseas sources.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? OverseaBuild { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

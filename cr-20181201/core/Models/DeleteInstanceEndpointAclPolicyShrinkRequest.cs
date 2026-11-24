@@ -20,6 +20,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string EndpointType { get; set; }
 
+        /// <summary>
+        /// <para>The list of public access whitelist entries to delete for the instance.</para>
+        /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
         public string EntriesShrink { get; set; }
@@ -49,11 +52,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The module for which the access policy is set. Valid values:</para>
+        /// <para>The module for which the access policy is configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Registry</c>: access to the image repository</para>
+        /// <item><description><para><c>Registry</c>: Access to the image repository.</para>
         /// </description></item>
-        /// <item><description><para><c>Chart</c>: access to Helm Chart</para>
+        /// <item><description><para><c>Chart</c>: Access to Helm Chart.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoBuildRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of image building records.</para>
+        /// <para>The list of build records.</para>
         /// </summary>
         [NameInMap("BuildRecords")]
         [Validation(Required=false)]
         public List<ListRepoBuildRecordResponseBodyBuildRecords> BuildRecords { get; set; }
         public class ListRepoBuildRecordResponseBodyBuildRecords : TeaModel {
             /// <summary>
-            /// <para>The ID of the image building record.</para>
+            /// <para>The build record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>537e08ab-735e-415f-b7c2-160eb87f8****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string BuildRecordId { get; set; }
 
             /// <summary>
-            /// <para>The status of the image building.</para>
+            /// <para>The build status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string BuildStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the image building ended.</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572875610000</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The information about the image.</para>
+            /// <para>The image information.</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public ListRepoBuildRecordResponseBodyBuildRecordsImage Image { get; set; }
             public class ListRepoBuildRecordResponseBodyBuildRecordsImage : TeaModel {
                 /// <summary>
-                /// <para>The tag of the image.</para>
+                /// <para>The image tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v0.1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string ImageTag { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the repository.</para>
+                /// <para>The repository ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>crr-gzsrlevmvoaq****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string RepoId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the repository.</para>
+                /// <para>The repository name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the namespace to which the repository belongs.</para>
+                /// <para>The repository namespace name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             }
 
             /// <summary>
-            /// <para>The time when the image building started.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572872207000</para>
@@ -118,10 +118,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The API call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9D23DEDF-E91D-434B-B7D5-9D12C648D166</para>
@@ -162,7 +164,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

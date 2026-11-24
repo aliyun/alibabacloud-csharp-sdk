@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The queried repositories.</para>
+        /// <para>The list of repositories.</para>
         /// </summary>
         [NameInMap("Repositories")]
         [Validation(Required=false)]
         public List<ListChartRepositoryResponseBodyRepositories> Repositories { get; set; }
         public class ListChartRepositoryResponseBodyRepositories : TeaModel {
             /// <summary>
-            /// <para>The time when the repository was created.</para>
+            /// <para>The time when the repository was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1571926644000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-xkx6vujuhay0****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the repository was last modified.</para>
+            /// <para>The time when the repository was last modified. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1571930329000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the repository.</para>
+            /// <para>The repository ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crcr-gpsu7b8chmxk****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>repo1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace to which the repository belongs.</para>
+            /// <para>The namespace of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ns1</para>
@@ -119,8 +119,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The status of the repository. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>NORMAL</c>: The repository is normal.</description></item>
-            /// <item><description><c>DELETING</c>: The repository is being deleted.</description></item>
+            /// <item><description><para><c>NORMAL</c>: Normal.</para>
+            /// </description></item>
+            /// <item><description><para><c>DELETING</c>: The repository is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,8 +135,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The type of the repository. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PRIVATE</c>: a private repository</description></item>
-            /// <item><description><c>PUBLIC</c>: a public repository</description></item>
+            /// <item><description><c>PRIVATE</c>: a private repository.</description></item>
+            /// <item><description><c>PUBLIC</c>: a public repository.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,7 +147,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the repository belongs.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek2ikd5rxxxxxx</para>
@@ -155,7 +157,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The summary about the repository.</para>
+            /// <para>The summary of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0AB62FB8-6873-4032-8515-4578D27523B7</para>
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

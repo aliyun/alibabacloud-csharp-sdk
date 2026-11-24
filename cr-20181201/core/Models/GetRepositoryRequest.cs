@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepositoryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the repository.</para>
+        /// <para>The repository ID. This API supports querying by RepoId, or by RepoNamespaceName and RepoName together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-03cuozrsqhkw****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository.</para>
+        /// <para>The repository name. This API supports querying by RepoId, or by RepoNamespaceName and RepoName together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// <para>The repository namespace name. This API supports querying by RepoId, or by RepoNamespaceName and RepoName together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of historical events.</para>
+        /// <para>The event history list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListEventCenterRecordResponseBodyRecords> Records { get; set; }
         public class ListEventCenterRecordResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The time when the event was created.</para>
+            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1638188622000</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The event notification channel.</para>
+            /// <para>The notification channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EVENT_BRIDGE</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string EventChannel { get; set; }
 
             /// <summary>
-            /// <para>The ID of the event notification.</para>
+            /// <para>The event ID of the downstream notification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7d478419-61df-49e5-b92b-30ce730c2127</para>
@@ -92,9 +92,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The notification method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>http</c>: The notification is sent over HTTP.</description></item>
-            /// <item><description><c>https</c>: The notification is sent over HTTPS.</description></item>
-            /// <item><description><c>dingding</c>: The notification is sent by using DingTalk.</description></item>
+            /// <item><description><para><c>http</c>: HTTP notification.</para>
+            /// </description></item>
+            /// <item><description><para><c>https</c>: HTTPS notification.</para>
+            /// </description></item>
+            /// <item><description><para><c>dingding</c>: DingTalk notification.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string EventNotifyMethod { get; set; }
 
             /// <summary>
-            /// <para>The type of the event.</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cr:Artifact:DeliveryChainCompleted</para>
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-gl34plsa****</para>
@@ -135,7 +138,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The ID of the event record.</para>
+            /// <para>The event record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crecrr-ctdbzwtkpr*****</para>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RecordId { get; set; }
 
             /// <summary>
-            /// <para>The name of the image repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ruby-2.4.0</para>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the event notification rule.</para>
+            /// <para>The event rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crecr-n6pbhgjxtla*****</para>
@@ -165,7 +168,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the event notification rule.</para>
+            /// <para>The event rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chain-demo</para>
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ruby-2.4.0</para>
@@ -185,7 +188,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was last updated.</para>
+            /// <para>The update time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1638188622000</para>
@@ -197,7 +200,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665C7A5E-BAEC-5BCD-AF9F-5F9260D672BF</para>
@@ -207,7 +210,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total entries of historical events.</para>
+        /// <para>The total number of event history records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

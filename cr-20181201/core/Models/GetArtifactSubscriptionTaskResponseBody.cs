@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The end time of the artifact subscription task.</para>
+        /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1691979202000</para>
@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The API call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The name of the Container Registry namespace.</para>
+        /// <para>The ACR namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the Container Registry repository.</para>
+        /// <para>The ACR repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-repo</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the source namespace.</para>
+        /// <para>The source namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>library</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceProvider { get; set; }
 
         /// <summary>
-        /// <para>The name of the source repository.</para>
+        /// <para>The source repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nginx</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceRepoName { get; set; }
 
         /// <summary>
-        /// <para>The type of the source repository.</para>
+        /// <para>The source artifact type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceRepoType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the artifact subscription task.</para>
+        /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1568718468000</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total subscribed tags.</para>
+        /// <para>The number of subscribed tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -184,7 +186,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task results.</para>
+        /// <para>The task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -194,7 +196,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TaskResult { get; set; }
 
         /// <summary>
-        /// <para>The status of the task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -204,7 +206,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AUTO</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoTriggerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><c>true</c>: The API call was successful.</description></item>
+        /// <item><description><c>false</c>: The API call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2CA76D52-A8F0-4D0B-854E-FBD9F6C99049</para>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The triggers of the repository.</para>
+        /// <para>The list of triggers.</para>
         /// </summary>
         [NameInMap("Triggers")]
         [Validation(Required=false)]
         public List<ListRepoTriggerResponseBodyTriggers> Triggers { get; set; }
         public class ListRepoTriggerResponseBodyTriggers : TeaModel {
             /// <summary>
-            /// <para>The type of the event that activates the trigger. Valid values:</para>
+            /// <para>The event type of the trigger. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>BUILD_SUCCESS</c>: The trigger is activated when an image building task is successful.</description></item>
-            /// <item><description><c>BUILD_Fail</c>: The trigger is activated when an image building task fails.</description></item>
+            /// <item><description><c>BUILD_SUCCESS</c>: The trigger was successful.</description></item>
+            /// <item><description><c>BUILD_Fail</c>: The trigger failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TriggerName { get; set; }
 
             /// <summary>
-            /// <para>The image tag based on which the trigger is set.</para>
+            /// <para>The image version that triggers the trigger.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -97,11 +97,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TriggerTag { get; set; }
 
             /// <summary>
-            /// <para>The type of the trigger. Valid values:</para>
+            /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ALL</c>: a trigger that supports both tags and regular expressions.</description></item>
-            /// <item><description><c>TAG_LISTTAG</c>: a tag-based trigger.</description></item>
-            /// <item><description><c>TAG_REG_EXP</c>: a regular expression-based trigger.</description></item>
+            /// <item><description><c>ALL</c>: All.</description></item>
+            /// <item><description><c>TAG_LISTTAG</c>: Tag list.</description></item>
+            /// <item><description><c>TAG_REG_EXP</c>: Regular expression.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

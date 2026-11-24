@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether a repository is automatically created when an image is pushed to a repository that does not yet exist in the namespace.</para>
+        /// <para>Specifies whether automatic creation of an image repository is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The default type of automatically created repositories. Valid values:</para>
+        /// <para>The default repository type for automatic creation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><c>PUBLIC</c>: public</para>
         /// </description></item>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace. The name must be 2 to 120 characters long and can contain only lowercase letters, digits, and the following separators: underscores (_), hyphens (-), and periods (.). A separator cannot be used as the first or last character.</para>
+        /// <para>The name of the namespace. The name must be 2 to 120 characters in length and can contain lowercase letters and digits. The following separators are supported: underscores (_), hyphens (-), and periods (.). A separator cannot be placed at the beginning or end of the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

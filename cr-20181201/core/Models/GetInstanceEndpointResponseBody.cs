@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the access control list (ACL) feature is enabled.</para>
+        /// <para>Indicates whether the access control list (ACL) is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? AclEnable { get; set; }
 
         /// <summary>
-        /// <para>The ACLs.</para>
+        /// <para>The list of ACL entries.</para>
         /// </summary>
         [NameInMap("AclEntries")]
         [Validation(Required=false)]
         public List<GetInstanceEndpointResponseBodyAclEntries> AclEntries { get; set; }
         public class GetInstanceEndpointResponseBodyAclEntries : TeaModel {
             /// <summary>
-            /// <para>Remarks for public IP address whitelists.</para>
+            /// <para>The comment for adding an Internet whitelist entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The public IP address whitelist.</para>
+            /// <para>The CIDR block added to the Internet whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.0/24</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Domain names.</para>
+        /// <para>The list of domain names.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<GetInstanceEndpointResponseBodyDomains> Domains { get; set; }
         public class GetInstanceEndpointResponseBodyDomains : TeaModel {
             /// <summary>
-            /// <para>The domain name that is used to access the Container Registry Enterprise Edition instance.</para>
+            /// <para>The domain name used to access the Enterprise instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>shanghai-instance1-registry.cn-shanghai.cr.aliyuncs.com</para>
@@ -76,10 +76,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The type of the domain name. Valid values:</para>
+            /// <para>The domain name type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>SYSTEM</c>: a system domain name.</description></item>
-            /// <item><description><c>USER</c>: a user domain name.</description></item>
+            /// <item><description><para><c>SYSTEM</c>: system domain name</para>
+            /// </description></item>
+            /// <item><description><para><c>USER</c>: user domain name</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the ACL feature is enabled.</para>
+        /// <para>Indicates whether the access endpoint is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8F3D5EC5-39D1-4C53-A198-48C54C658FA3</para>
@@ -122,7 +124,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance.</para>
+        /// <para>The running status. Valid values:</para>
+        /// <para><c>CREATING</c>: Creating.</para>
+        /// <para><c>RUNNING</c>: Running.</para>
+        /// <para><c>DELETING</c>: Deleting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>

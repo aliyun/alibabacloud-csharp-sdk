@@ -63,10 +63,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The repository type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PUBLIC</c>: public repository</para>
-        /// </description></item>
-        /// <item><description><para><c>PRIVATE</c>: private repository.</para>
-        /// </description></item>
+        /// <item><description><c>PUBLIC</c>: public repository</description></item>
+        /// <item><description><c>PRIVATE</c>: private repository</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,10 +89,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>Specifies whether image tag immutability is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: enabled</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: disabled.</para>
-        /// </description></item>
+        /// <item><description><c>true</c>: enabled</description></item>
+        /// <item><description><c>false</c>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

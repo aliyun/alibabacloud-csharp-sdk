@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListEventCenterRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the event. Valid values:</para>
+        /// <para>The event type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>cr:Artifact:DeliveryChainCompleted</c>: The delivery chain is processed.</description></item>
-        /// <item><description><c>cr:Artifact:SynchronizationCompleted</c>: The image is replicated.</description></item>
-        /// <item><description><c>cr:Artifact:BuildCompleted</c>: The image is built.</description></item>
-        /// <item><description><c>cr:Artifact:ScanCompleted</c>: The image is scanned.</description></item>
-        /// <item><description><c>cr:Artifact:SigningCompleted</c>: The image is signed.</description></item>
+        /// <item><description><c>cr:Artifact:DeliveryChainCompleted</c>: Delivery chain processing completed.</description></item>
+        /// <item><description><c>cr:Artifact:SynchronizationCompleted</c>: Image synchronization completed.</description></item>
+        /// <item><description><c>cr:Artifact:BuildCompleted</c>: Image building completed.</description></item>
+        /// <item><description><c>cr:Artifact:ScanCompleted</c>: Image scanning completed.</description></item>
+        /// <item><description><c>cr:Artifact:SigningCompleted</c>: Image signing completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository.</para>
+        /// <para>The repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// <para>The repository namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the event notification rule.</para>
+        /// <para>The event rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crecr-n6pbhgjxtla***</para>

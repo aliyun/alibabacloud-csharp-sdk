@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListRepoSyncTaskResponseBodySyncTasks> SyncTasks { get; set; }
         public class ListRepoSyncTaskResponseBodySyncTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572839126000</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572839133000</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifedTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572839133000</para>
@@ -335,9 +335,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The trigger policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>PASSIVE</c>: Synchronization is automatically triggered.</para>
+            /// <item><description><para><c>PASSIVE</c>: Automatically triggered synchronization.</para>
             /// </description></item>
-            /// <item><description><para><c>INITIATIVE</c>: Synchronization is manually triggered.</para>
+            /// <item><description><para><c>INITIATIVE</c>: Manually triggered synchronization.</para>
             /// </description></item>
             /// </list>
             /// <para>Default value: <c>PASSIVE</c></para>

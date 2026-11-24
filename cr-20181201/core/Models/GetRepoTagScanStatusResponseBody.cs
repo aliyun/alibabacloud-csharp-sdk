@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagScanStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// <item><description><para><c>true</c>: The API call succeeded.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -48,10 +48,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The scan engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ACR_SCAN_SERVICE</c>: the ACR Trivy scan engine.</para>
-        /// </description></item>
-        /// <item><description><para><c>SAS_SCAN_SERVICE</c>: the Cloud Security scan engine.</para>
-        /// </description></item>
+        /// <item><description><c>ACR_SCAN_SERVICE</c>: The ACR Trivy scan engine.</description></item>
+        /// <item><description><c>SAS_SCAN_SERVICE</c>: The cloud security scan engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,15 +60,15 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanService { get; set; }
 
         /// <summary>
-        /// <para>The scan status of the image. Valid values:</para>
+        /// <para>The scan status of the image version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>SCANNING</c>: The image is being scanned.</para>
+        /// <item><description><para><c>SCANNING</c>: Scanning.</para>
         /// </description></item>
-        /// <item><description><para><c>COMPLETE</c>: The scan is complete.</para>
+        /// <item><description><para><c>COMPLETE</c>: Completed.</para>
         /// </description></item>
-        /// <item><description><para><c>FAILED</c>: The scan failed.</para>
+        /// <item><description><para><c>FAILED</c>: Failed.</para>
         /// </description></item>
-        /// <item><description><para><c>RETRYING</c>: The scan is being retried.</para>
+        /// <item><description><para><c>RETRYING</c>: Retrying.</para>
         /// </description></item>
         /// </list>
         /// 

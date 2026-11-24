@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DiagnosisIssue : TeaModel {
         /// <summary>
-        /// <para>A unique code that identifies the issue type.</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RepoNumOverLimit</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>An object that contains additional, unstructured key-value information about the issue.</para>
+        /// <para>The additional information.</para>
         /// </summary>
         [NameInMap("Extra")]
         [Validation(Required=false)]
         public Dictionary<string, string> Extra { get; set; }
 
         /// <summary>
-        /// <para>The time, in ISO 8601 format, when the issue was first detected.</para>
+        /// <para>The first occurrence time of the event.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string FirstOccurrence { get; set; }
 
         /// <summary>
-        /// <para>The time, in ISO 8601 format, when the issue was last detected.</para>
+        /// <para>The last occurrence time of the event.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string LastOccurrence { get; set; }
 
         /// <summary>
-        /// <para>Specifies the severity of the issue. Valid values are <c>INFO</c>, <c>WARN</c>, and <c>ERROR</c>.</para>
+        /// <para>The event level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INFO</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The total number of times the issue has occurred.</para>
+        /// <para>The number of occurrences of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? OccurrenceCount { get; set; }
 
         /// <summary>
-        /// <para>The recommended action to resolve the issue.</para>
+        /// <para>The Solutions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Buy repository quota</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListInstanceRegionRequest : TeaModel {
         /// <summary>
-        /// <para>The language used for response parameters. Set this parameter to <c>zh-CN</c>.</para>
+        /// <para>The language of the response parameters. Valid values: <c>zh_CN</c> and <c>en_US</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh_CN</para>

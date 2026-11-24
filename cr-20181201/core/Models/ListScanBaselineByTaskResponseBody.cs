@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListScanBaselineByTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: successful</description></item>
-        /// <item><description><c>false</c>: failed</description></item>
+        /// <item><description><c>true</c>: The API call is successful.</description></item>
+        /// <item><description><c>false</c>: The API call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,44 +64,44 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scanned baseline risks.</para>
+        /// <para>The baseline list.</para>
         /// </summary>
         [NameInMap("ScanBaselines")]
         [Validation(Required=false)]
         public List<ListScanBaselineByTaskResponseBodyScanBaselines> ScanBaselines { get; set; }
         public class ListScanBaselineByTaskResponseBodyScanBaselines : TeaModel {
             /// <summary>
-            /// <para>The category to which the baseline risk belongs.</para>
+            /// <para>The baseline check category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务配置</para>
+            /// <para>Service Configuration</para>
             /// </summary>
             [NameInMap("BaselineClassAlias")]
             [Validation(Required=false)]
             public string BaselineClassAlias { get; set; }
 
             /// <summary>
-            /// <para>Suggestions about how to fix the baseline risk.</para>
+            /// <para>The baseline check remediation suggestion.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>建议对ak混淆加密，避免被利用</para>
+            /// <para>Obfuscate and encrypt the AccessKey to prevent exploitation</para>
             /// </summary>
             [NameInMap("BaselineDetailAdvice")]
             [Validation(Required=false)]
             public string BaselineDetailAdvice { get; set; }
 
             /// <summary>
-            /// <para>The description of the baseline risk.</para>
+            /// <para>The baseline description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Access Key明文存储</para>
+            /// <para>Access Key stored in plaintext</para>
             /// </summary>
             [NameInMap("BaselineDetailDescription")]
             [Validation(Required=false)]
             public string BaselineDetailDescription { get; set; }
 
             /// <summary>
-            /// <para>The path and content of the baseline risk.</para>
+            /// <para>The baseline check path and content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>usr/local/www/project/environments/dev/common/config/paramsxxx</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string BaselineDetailPrompt { get; set; }
 
             /// <summary>
-            /// <para>The number of baseline risks.</para>
+            /// <para>The number of baseline check items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,17 +121,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? BaselineItemCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the baseline risk.</para>
+            /// <para>The baseline check name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>服务配置</para>
+            /// <para>Service Configuration</para>
             /// </summary>
             [NameInMap("BaselineNameAlias")]
             [Validation(Required=false)]
             public string BaselineNameAlias { get; set; }
 
             /// <summary>
-            /// <para>The key of the baseline name.</para>
+            /// <para>The baseline name key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ak_leak</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string BaselineNameKey { get; set; }
 
             /// <summary>
-            /// <para>The severity of the baseline risk.</para>
+            /// <para>The baseline check risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string BaselineNameLevel { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1695090008000</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// <para>High risk quantity.</para>
+            /// <para>The number of high-risk items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? HighRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>Low risk quantity.</para>
+            /// <para>The number of low-risk items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? LowRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>Medium risk quantity.</para>
+            /// <para>The number of medium-risk items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? MiddleRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image scan task.</para>
+            /// <para>The image scan task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2328fcaa-f28a-405d-a357-asdvfrew23</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanTaskId { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684220824226</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

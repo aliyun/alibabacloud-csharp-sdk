@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "cr";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("cr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an artifact building task.</para>
+        /// <para>Cancels an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an artifact building task.</para>
+        /// <para>Cancels an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an artifact building task.</para>
+        /// <para>Cancels an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -149,7 +152,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an artifact building task.</para>
+        /// <para>Cancels an artifact build task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -167,7 +170,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a repository building record.</para>
+        /// <para>Cancels a repository build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -217,7 +220,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a repository building record.</para>
+        /// <para>Cancels a repository build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -267,7 +270,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a repository building record.</para>
+        /// <para>Cancels a repository build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -285,7 +288,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a repository building record.</para>
+        /// <para>Cancels a repository build.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -303,7 +306,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a single replication task.</para>
+        /// <para>Cancels a single synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -349,7 +352,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a single replication task.</para>
+        /// <para>Cancels a single synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -395,7 +398,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a single replication task.</para>
+        /// <para>Cancels a single synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -413,7 +416,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a single replication task.</para>
+        /// <para>Cancels a single synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -431,7 +434,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a resource belongs.</para>
+        /// <para>Modifies the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -481,7 +484,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a resource belongs.</para>
+        /// <para>Modifies the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -531,7 +534,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a resource belongs.</para>
+        /// <para>Modifies the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -549,7 +552,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group to which a resource belongs.</para>
+        /// <para>Modifies the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -567,13 +570,14 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create image repository acceleration rules for image building.</para>
+        /// <para>Creates an accelerated image build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
-        /// Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -637,13 +641,14 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create image repository acceleration rules for image building.</para>
+        /// <para>Creates an accelerated image build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
-        /// Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -707,13 +712,14 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create image repository acceleration rules for image building.</para>
+        /// <para>Creates an accelerated image build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
-        /// Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -731,13 +737,14 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create image repository acceleration rules for image building.</para>
+        /// <para>Creates an accelerated image build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
-        /// Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;You can create accelerated image build rules only for Standard Edition and Advanced Edition instances. Basic Edition does not support accelerated image build rules. For more information about instance specifications, see <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -755,7 +762,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a lifecycle management rule for an artifact.</para>
+        /// <para>Creates a lifecycle management rule for artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -837,7 +844,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a lifecycle management rule for an artifact.</para>
+        /// <para>Creates a lifecycle management rule for artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -919,7 +926,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a lifecycle management rule for an artifact.</para>
+        /// <para>Creates a lifecycle management rule for artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -937,7 +944,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a lifecycle management rule for an artifact.</para>
+        /// <para>Creates a lifecycle management rule for artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1011,6 +1018,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagCount))
             {
                 query["TagCount"] = request.TagCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagRegexp))
             {
@@ -1093,6 +1104,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagCount))
             {
                 query["TagCount"] = request.TagCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagRegexp))
             {
@@ -1283,7 +1298,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on an existing record.</para>
+        /// <para>Rebuilds a build record based on an existing build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1333,7 +1348,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on an existing record.</para>
+        /// <para>Rebuilds a build record based on an existing build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1383,7 +1398,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on an existing record.</para>
+        /// <para>Rebuilds a build record based on an existing build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1401,7 +1416,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on an existing record.</para>
+        /// <para>Rebuilds a build record based on an existing build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1419,7 +1434,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on a rule.</para>
+        /// <para>Creates a build record based on a build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1469,7 +1484,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on a rule.</para>
+        /// <para>Creates a build record based on a build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1519,7 +1534,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on a rule.</para>
+        /// <para>Creates a build record based on a build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1537,7 +1552,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building record based on a rule.</para>
+        /// <para>Creates a build record based on a build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1723,7 +1738,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a chart namespace in an instance.</para>
+        /// <para>Creates a chart namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1777,7 +1792,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a chart namespace in an instance.</para>
+        /// <para>Creates a chart namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1831,7 +1846,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a chart namespace in an instance.</para>
+        /// <para>Creates a chart namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1849,7 +1864,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a chart namespace in an instance.</para>
+        /// <para>Creates a chart namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2515,7 +2530,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a repository namespace.</para>
+        /// <para>Creates a namespace for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2579,7 +2594,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a repository namespace.</para>
+        /// <para>Creates a namespace for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2643,7 +2658,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a repository namespace.</para>
+        /// <para>Creates a namespace for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2661,7 +2676,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a repository namespace.</para>
+        /// <para>Creates a namespace for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2679,7 +2694,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building rule for a repository.</para>
+        /// <para>Creates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2753,7 +2768,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building rule for a repository.</para>
+        /// <para>Creates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2827,7 +2842,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building rule for a repository.</para>
+        /// <para>Creates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2845,7 +2860,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image building rule for a repository.</para>
+        /// <para>Creates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2863,7 +2878,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a source code repository to an image repository.</para>
+        /// <para>Associates a source code repository with an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2933,7 +2948,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a source code repository to an image repository.</para>
+        /// <para>Associates a source code repository with an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3003,7 +3018,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a source code repository to an image repository.</para>
+        /// <para>Associates a source code repository with an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3021,7 +3036,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a source code repository to an image repository.</para>
+        /// <para>Associates a source code repository with an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3783,7 +3798,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security scan task for an image.</para>
+        /// <para>Creates an image scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3845,7 +3860,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security scan task for an image.</para>
+        /// <para>Creates an image scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3907,7 +3922,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security scan task for an image.</para>
+        /// <para>Creates an image scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3925,7 +3940,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a security scan task for an image.</para>
+        /// <para>Creates an image scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4490,11 +4505,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
         /// CreateStorageDomainRoutingRuleRequest
         /// </param>
@@ -4546,11 +4556,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateStorageDomainRoutingRuleRequest
@@ -4604,11 +4609,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateStorageDomainRoutingRuleRequest
         /// </param>
@@ -4626,11 +4626,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Creates an instance store domain name routing rule.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateStorageDomainRoutingRuleRequest
@@ -5739,7 +5734,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5803,7 +5798,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5867,7 +5862,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5885,7 +5880,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
+        /// <para>Deletes a whitelist policy from the public endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6906,11 +6901,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Deletes a scan rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>删除扫描规则。</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
         /// </param>
@@ -6956,11 +6946,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Deletes a scan rule.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>删除扫描规则。</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
@@ -7008,11 +6993,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Deletes a scan rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>删除扫描规则。</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
         /// </param>
@@ -7031,11 +7011,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Deletes a scan rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>删除扫描规则。</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteScanRuleRequest
         /// </param>
@@ -7053,11 +7028,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
@@ -7105,11 +7075,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
         /// </param>
@@ -7156,11 +7121,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
         /// </param>
@@ -7178,11 +7138,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Deletes an instance store domain name routing rule.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteStorageDomainRoutingRuleRequest
@@ -7311,7 +7266,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the build task of an artifact.</para>
+        /// <para>Retrieves the build task of a cloud native artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7349,7 +7304,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the build task of an artifact.</para>
+        /// <para>Retrieves the build task of a cloud native artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7387,7 +7342,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the build task of an artifact.</para>
+        /// <para>Retrieves the build task of a cloud native artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7405,7 +7360,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the build task of an artifact.</para>
+        /// <para>Retrieves the build task of a cloud native artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7423,7 +7378,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of artifacts.</para>
+        /// <para>Queries the lifecycle management rule of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7461,7 +7416,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of artifacts.</para>
+        /// <para>Queries the lifecycle management rule of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7499,7 +7454,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of artifacts.</para>
+        /// <para>Queries the lifecycle management rule of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7517,7 +7472,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the lifecycle management rules of artifacts.</para>
+        /// <para>Queries the lifecycle management rule of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7535,7 +7490,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact subscription rule.</para>
+        /// <para>Queries artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7573,7 +7528,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact subscription rule.</para>
+        /// <para>Queries artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7611,7 +7566,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact subscription rule.</para>
+        /// <para>Queries artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7629,7 +7584,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact subscription rule.</para>
+        /// <para>Queries artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7647,7 +7602,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an artifact subscription task.</para>
+        /// <para>Retrieves artifact subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7685,7 +7640,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an artifact subscription task.</para>
+        /// <para>Retrieves artifact subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7723,7 +7678,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an artifact subscription task.</para>
+        /// <para>Retrieves artifact subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7741,7 +7696,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an artifact subscription task.</para>
+        /// <para>Retrieves artifact subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7759,7 +7714,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact subscription task.</para>
+        /// <para>Lists the details of subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7797,7 +7752,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact subscription task.</para>
+        /// <para>Lists the details of subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7835,7 +7790,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact subscription task.</para>
+        /// <para>Lists the details of subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7853,7 +7808,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact subscription task.</para>
+        /// <para>Lists the details of subscription tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8039,7 +7994,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
+        /// <para>Retrieves the definition of a delivery chain to understand the node execution order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8085,7 +8040,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
+        /// <para>Retrieves the definition of a delivery chain to understand the node execution order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8131,7 +8086,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
+        /// <para>Retrieves the definition of a delivery chain to understand the node execution order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8149,7 +8104,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the delivery chain definition to understand the execution order of edge zones in the delivery chain.</para>
+        /// <para>Retrieves the definition of a delivery chain to understand the node execution order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8295,7 +8250,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a chart repository.</para>
+        /// <para>Queries the repository information of a chart.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8345,7 +8300,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a chart repository.</para>
+        /// <para>Queries the repository information of a chart.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8395,7 +8350,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a chart repository.</para>
+        /// <para>Queries the repository information of a chart.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8413,7 +8368,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a chart repository.</para>
+        /// <para>Queries the repository information of a chart.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8431,7 +8386,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance information.</para>
+        /// <para>Queries instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8473,7 +8428,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance information.</para>
+        /// <para>Queries instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8515,7 +8470,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance information.</para>
+        /// <para>Queries instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8533,7 +8488,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance information.</para>
+        /// <para>Queries instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8775,7 +8730,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an endpoint of an instance.</para>
+        /// <para>Queries the access endpoints of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8825,7 +8780,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an endpoint of an instance.</para>
+        /// <para>Queries the access endpoints of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8875,7 +8830,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an endpoint of an instance.</para>
+        /// <para>Queries the access endpoints of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8893,7 +8848,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an endpoint of an instance.</para>
+        /// <para>Queries the access endpoints of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9295,7 +9250,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about image building records of a repository.</para>
+        /// <para>Queries the build records of a repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9346,7 +9301,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about image building records of a repository.</para>
+        /// <para>Queries the build records of a repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9397,7 +9352,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about image building records of a repository.</para>
+        /// <para>Queries the build records of a repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9420,7 +9375,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about image building records of a repository.</para>
+        /// <para>Queries the build records of a repository.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9835,7 +9790,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve information about a single image tag.</para>
+        /// <para>Retrieves the tag information of a specific image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9873,7 +9828,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve information about a single image tag.</para>
+        /// <para>Retrieves the tag information of a specific image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9911,7 +9866,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve information about a single image tag.</para>
+        /// <para>Retrieves the tag information of a specific image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9929,7 +9884,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve information about a single image tag.</para>
+        /// <para>Retrieves the tag information of a specific image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9947,7 +9902,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the scan status of a specific image tag.</para>
+        /// <para>Retrieves the scan status of an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10009,7 +9964,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the scan status of a specific image tag.</para>
+        /// <para>Retrieves the scan status of an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10071,7 +10026,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the scan status of a specific image tag.</para>
+        /// <para>Retrieves the scan status of an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10089,7 +10044,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the scan status of a specific image tag.</para>
+        /// <para>Retrieves the scan status of an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10259,7 +10214,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about an image repository.</para>
+        /// <para>Queries repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10313,7 +10268,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about an image repository.</para>
+        /// <para>Queries repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10367,7 +10322,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about an image repository.</para>
+        /// <para>Queries repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10385,7 +10340,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about an image repository.</para>
+        /// <para>Queries repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10551,12 +10506,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the instance storage domain name routing list.</para>
+        /// <para>Retrieves the list of instance storage domain name routes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10602,12 +10557,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the instance storage domain name routing list.</para>
+        /// <para>Retrieves the list of instance storage domain name routes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10653,12 +10608,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the instance storage domain name routing list.</para>
+        /// <para>Retrieves the list of instance storage domain name routes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10676,12 +10631,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the instance storage domain name routing list.</para>
+        /// <para>Retrieves the list of instance storage domain name routes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to obtain support.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10923,7 +10878,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List artifact subscription rules.</para>
+        /// <para>Lists artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10961,7 +10916,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List artifact subscription rules.</para>
+        /// <para>Lists artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10999,7 +10954,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List artifact subscription rules.</para>
+        /// <para>Lists artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11017,7 +10972,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List artifact subscription rules.</para>
+        /// <para>Lists artifact subscription rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11603,7 +11558,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the versions of a chart in a chart repository.</para>
+        /// <para>Queries the list of chart versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11665,7 +11620,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the versions of a chart in a chart repository.</para>
+        /// <para>Queries the list of chart versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11727,7 +11682,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the versions of a chart in a chart repository.</para>
+        /// <para>Queries the list of chart versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11745,7 +11700,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the versions of a chart in a chart repository.</para>
+        /// <para>Queries the list of chart versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11763,7 +11718,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the chart repositories of a Container Registry instance.</para>
+        /// <para>Queries a list of repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11825,7 +11780,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the chart repositories of a Container Registry instance.</para>
+        /// <para>Queries a list of repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11887,7 +11842,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the chart repositories of a Container Registry instance.</para>
+        /// <para>Queries a list of repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11905,7 +11860,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the chart repositories of a Container Registry instance.</para>
+        /// <para>Queries a list of repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11923,7 +11878,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical events of an event rule.</para>
+        /// <para>Retrieves the event history of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11961,7 +11916,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical events of an event rule.</para>
+        /// <para>Retrieves the event history of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11999,7 +11954,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical events of an event rule.</para>
+        /// <para>Retrieves the event history of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12017,7 +11972,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical events of an event rule.</para>
+        /// <para>Retrieves the event history of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12035,7 +11990,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name of an event rule.</para>
+        /// <para>Retrieves event rule names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12073,7 +12028,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name of an event rule.</para>
+        /// <para>Retrieves event rule names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12111,7 +12066,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name of an event rule.</para>
+        /// <para>Retrieves event rule names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12129,7 +12084,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name of an event rule.</para>
+        /// <para>Retrieves event rule names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12147,7 +12102,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12205,7 +12160,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12263,7 +12218,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12281,7 +12236,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Queries the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12435,7 +12390,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which you can create Container Registry instances.</para>
+        /// <para>Queries the list of instance regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12477,7 +12432,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which you can create Container Registry instances.</para>
+        /// <para>Queries the list of instance regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12519,7 +12474,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which you can create Container Registry instances.</para>
+        /// <para>Queries the list of instance regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12537,7 +12492,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions in which you can create Container Registry instances.</para>
+        /// <para>Queries the list of instance regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12707,7 +12662,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building records of an image repository.</para>
+        /// <para>Queries the list of build records for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12761,7 +12716,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building records of an image repository.</para>
+        /// <para>Queries the list of build records for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12815,7 +12770,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building records of an image repository.</para>
+        /// <para>Queries the list of build records for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12833,7 +12788,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image building records of an image repository.</para>
+        /// <para>Queries the list of build records for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12851,7 +12806,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an image building record.</para>
+        /// <para>Retrieves the logs of a build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12905,7 +12860,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an image building record.</para>
+        /// <para>Retrieves the logs of a build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12959,7 +12914,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an image building record.</para>
+        /// <para>Retrieves the logs of a build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12977,7 +12932,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an image building record.</para>
+        /// <para>Retrieves the logs of a build record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12995,7 +12950,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the build rules of an image repository.</para>
+        /// <para>Queries the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13049,7 +13004,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the build rules of an image repository.</para>
+        /// <para>Queries the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13103,7 +13058,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the build rules of an image repository.</para>
+        /// <para>Queries the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13121,7 +13076,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the build rules of an image repository.</para>
+        /// <para>Queries the build rules of an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13139,7 +13094,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of repository synchronization rules.</para>
+        /// <para>Queries the repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13205,7 +13160,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of repository synchronization rules.</para>
+        /// <para>Queries the repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13271,7 +13226,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of repository synchronization rules.</para>
+        /// <para>Queries the repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13289,7 +13244,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of repository synchronization rules.</para>
+        /// <para>Queries the repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13478,6 +13433,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, prepare an Enterprise Edition instance and an image repository. You can invoke ListInstance to query the InstanceId and invoke ListRepository to query the RepoId.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListRepoTagRequest
         /// </param>
@@ -13539,6 +13499,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, prepare an Enterprise Edition instance and an image repository. You can invoke ListInstance to query the InstanceId and invoke ListRepository to query the RepoId.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRepoTagRequest
@@ -13602,6 +13567,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, prepare an Enterprise Edition instance and an image repository. You can invoke ListInstance to query the InstanceId and invoke ListRepository to query the RepoId.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListRepoTagRequest
         /// </param>
@@ -13620,6 +13590,11 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, prepare an Enterprise Edition instance and an image repository. You can invoke ListInstance to query the InstanceId and invoke ListRepository to query the RepoId.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListRepoTagRequest
         /// </param>
@@ -13635,7 +13610,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a security scan that is created for an image tag.</para>
+        /// <para>Queries the list of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13717,7 +13692,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a security scan that is created for an image tag.</para>
+        /// <para>Queries the list of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13799,7 +13774,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a security scan that is created for an image tag.</para>
+        /// <para>Queries the list of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13817,7 +13792,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of a security scan that is created for an image tag.</para>
+        /// <para>Queries the list of scan results for an image version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13835,7 +13810,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a repository.</para>
+        /// <para>Queries the list of repository triggers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13881,7 +13856,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a repository.</para>
+        /// <para>Queries the list of repository triggers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13927,7 +13902,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a repository.</para>
+        /// <para>Queries the list of repository triggers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13945,7 +13920,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a repository.</para>
+        /// <para>Queries the list of repository triggers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13963,7 +13938,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image repositories.</para>
+        /// <para>Queries image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14033,7 +14008,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image repositories.</para>
+        /// <para>Queries image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14103,7 +14078,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image repositories.</para>
+        /// <para>Queries image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14121,7 +14096,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of image repositories.</para>
+        /// <para>Queries image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14139,12 +14114,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the baseline risks of a scan task by page.</para>
+        /// <para>Queries baseline vulnerabilities of a cloud security scan task by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14182,12 +14157,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the baseline risks of a scan task by page.</para>
+        /// <para>Queries baseline vulnerabilities of a cloud security scan task by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14225,12 +14200,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the baseline risks of a scan task by page.</para>
+        /// <para>Queries baseline vulnerabilities of a cloud security scan task by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14248,12 +14223,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the baseline risks of a scan task by page.</para>
+        /// <para>Queries baseline vulnerabilities of a cloud security scan task by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14271,12 +14246,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the malicious files of a scan task by page.</para>
+        /// <para>Performs a paged query for the malicious file vulnerabilities of a scan node by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14314,12 +14289,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the malicious files of a scan task by page.</para>
+        /// <para>Performs a paged query for the malicious file vulnerabilities of a scan node by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14357,12 +14332,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the malicious files of a scan task by page.</para>
+        /// <para>Performs a paged query for the malicious file vulnerabilities of a scan node by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14380,12 +14355,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the malicious files of a scan task by page.</para>
+        /// <para>Performs a paged query for the malicious file vulnerabilities of a scan node by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, use a Security Center scan engine to scan the image.</para>
+        /// <para>Before calling this operation, scan the image by using the cloud security engine.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14403,12 +14378,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scan rules.</para>
+        /// <para>Lists scan rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列举扫描规则。</para>
+        /// <para>Lists scan rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14446,12 +14421,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scan rules.</para>
+        /// <para>Lists scan rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列举扫描规则。</para>
+        /// <para>Lists scan rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14489,12 +14464,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scan rules.</para>
+        /// <para>Lists scan rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列举扫描规则。</para>
+        /// <para>Lists scan rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14512,12 +14487,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scan rules.</para>
+        /// <para>Lists scan rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列举扫描规则。</para>
+        /// <para>Lists scan rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14535,15 +14510,15 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
+        /// <para>Queries the list of tags that are bound to resources. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
-        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
-        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// <item><description>At least one of ResourceId.N or (Tag.N.Key, Tag.N.Value) must be specified in the request to determine the objects to query.</description></item>
+        /// <item><description>Tag.N is a tag of the resource, which consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with the specified tag key are returned. If you specify only Tag.N.Value, an error is returned.</description></item>
+        /// <item><description>ResourceId.N must match all specified key-value pairs. If you specify multiple key-value pairs, the query results include only resources that contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14602,15 +14577,15 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
+        /// <para>Queries the list of tags that are bound to resources. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
-        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
-        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// <item><description>At least one of ResourceId.N or (Tag.N.Key, Tag.N.Value) must be specified in the request to determine the objects to query.</description></item>
+        /// <item><description>Tag.N is a tag of the resource, which consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with the specified tag key are returned. If you specify only Tag.N.Value, an error is returned.</description></item>
+        /// <item><description>ResourceId.N must match all specified key-value pairs. If you specify multiple key-value pairs, the query results include only resources that contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14669,15 +14644,15 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
+        /// <para>Queries the list of tags that are bound to resources. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
-        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
-        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// <item><description>At least one of ResourceId.N or (Tag.N.Key, Tag.N.Value) must be specified in the request to determine the objects to query.</description></item>
+        /// <item><description>Tag.N is a tag of the resource, which consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with the specified tag key are returned. If you specify only Tag.N.Value, an error is returned.</description></item>
+        /// <item><description>ResourceId.N must match all specified key-value pairs. If you specify multiple key-value pairs, the query results include only resources that contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14696,15 +14671,15 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to cloud resources. Instance resources are supported.</para>
+        /// <para>Queries the list of tags that are bound to resources. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>请求中ResourceId.N 及 (Tag.N.Key,Tag.N.Value) 至少存在一个，以确定检索对象。</description></item>
-        /// <item><description>Tag.N是资源的标签，由一个键值对组成。仅指定Tag.N.Key时，则返回该标签键关联的所有标签值。仅指定Tag.N.Value会报错。</description></item>
-        /// <item><description>ResourceId.N需满足所有输入的键值对。当输入多个键值对，查询结果为资源中包含指定多个键值对的资源。</description></item>
+        /// <item><description>At least one of ResourceId.N or (Tag.N.Key, Tag.N.Value) must be specified in the request to determine the objects to query.</description></item>
+        /// <item><description>Tag.N is a tag of the resource, which consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with the specified tag key are returned. If you specify only Tag.N.Value, an error is returned.</description></item>
+        /// <item><description>ResourceId.N must match all specified key-value pairs. If you specify multiple key-value pairs, the query results include only resources that contain all the specified key-value pairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14851,12 +14826,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources. Instance resources are supported.</para>
+        /// <para>Tags resources. Currently supports Instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// <para>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14910,12 +14885,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources. Instance resources are supported.</para>
+        /// <para>Tags resources. Currently supports Instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// <para>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14969,12 +14944,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources. Instance resources are supported.</para>
+        /// <para>Tags resources. Currently supports Instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// <para>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14992,12 +14967,12 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources. Instance resources are supported.</para>
+        /// <para>Tags resources. Currently supports Instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>单个实例最多可绑定 20 条标签。绑定标签前，阿里云会校验资源已有标签数量，超过限制值会返回报错信息。</para>
+        /// <para>You can attach up to 20 tags to a single instance. Before attaching tags, Alibaba Cloud verifies the number of existing tags on the resource. If the limit is exceeded, an error message is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15015,7 +14990,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources. Instance resources are supported.</para>
+        /// <para>Deletes resource tags. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15073,7 +15048,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources. Instance resources are supported.</para>
+        /// <para>Deletes resource tags. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15131,7 +15106,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources. Instance resources are supported.</para>
+        /// <para>Deletes resource tags. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15149,7 +15124,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources. Instance resources are supported.</para>
+        /// <para>Deletes resource tags. Currently, Instance resources are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15378,6 +15353,13 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Updates an artifact subscription rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is currently not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateArtifactSubscriptionRuleRequest
         /// </param>
@@ -15436,6 +15418,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["TagCount"] = request.TagCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagRegexp))
             {
                 query["TagRegexp"] = request.TagRegexp;
@@ -15463,6 +15449,13 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Updates an artifact subscription rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is currently not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateArtifactSubscriptionRuleRequest
@@ -15522,6 +15515,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["TagCount"] = request.TagCount;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
+            {
+                query["TagList"] = request.TagList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagRegexp))
             {
                 query["TagRegexp"] = request.TagRegexp;
@@ -15550,6 +15547,13 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Updates an artifact subscription rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is currently not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateArtifactSubscriptionRuleRequest
         /// </param>
@@ -15568,6 +15572,13 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Updates an artifact subscription rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc">Specifications</a>.
+        /// &lt;props=&quot;china&quot;&gt;Accelerated image build rules can only be created for Standard and Advanced Edition instances. Basic Edition does not support the creation of accelerated image build rules. For differences in instance specifications, refer to <a href="https://help.aliyun.com/document_detail/257112.html#section-go7-lhg-qbc">Specifications</a>.
+        /// Accelerated image conversion is currently not supported in Alibaba Finance Cloud and Alibaba Gov Cloud regions.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateArtifactSubscriptionRuleRequest
         /// </param>
@@ -15583,7 +15594,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a delivery chain, such as the node execution sequence of the delivery chain.</para>
+        /// <para>Modifies the definition of a delivery chain, such as the execution order of nodes in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15645,7 +15656,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a delivery chain, such as the node execution sequence of the delivery chain.</para>
+        /// <para>Modifies the definition of a delivery chain, such as the execution order of nodes in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15707,7 +15718,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a delivery chain, such as the node execution sequence of the delivery chain.</para>
+        /// <para>Modifies the definition of a delivery chain, such as the execution order of nodes in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15725,7 +15736,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a delivery chain, such as the node execution sequence of the delivery chain.</para>
+        /// <para>Modifies the definition of a delivery chain, such as the execution order of nodes in the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15887,7 +15898,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chart repository of a Container Registry instance.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15945,7 +15956,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chart repository of a Container Registry instance.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16003,7 +16014,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chart repository of a Container Registry instance.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16021,7 +16032,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a chart repository of a Container Registry instance.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16711,7 +16722,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an image building rule for a repository.</para>
+        /// <para>Updates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16789,7 +16800,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an image building rule for a repository.</para>
+        /// <para>Updates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16867,7 +16878,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an image building rule for a repository.</para>
+        /// <para>Updates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16885,7 +16896,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an image building rule for a repository.</para>
+        /// <para>Updates a build rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17087,7 +17098,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a trigger of an image repository.</para>
+        /// <para>Updates a trigger for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17153,7 +17164,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a trigger of an image repository.</para>
+        /// <para>Updates a trigger for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17219,7 +17230,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a trigger of an image repository.</para>
+        /// <para>Updates a trigger for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17237,7 +17248,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a trigger of an image repository.</para>
+        /// <para>Updates a trigger for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17255,7 +17266,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates repository information.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17325,7 +17336,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates repository information.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17395,7 +17406,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates repository information.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17413,7 +17424,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates repository information.</para>
+        /// <para>Updates the repository information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17436,7 +17447,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17521,7 +17532,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17606,7 +17617,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17629,7 +17640,7 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is available through whitelist access. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
+        /// <para>This API is available through a whitelist. <a href="https://smartservice.console.aliyun.com/service/create-ticket">Submit a ticket</a> to request access.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17649,11 +17660,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateStorageDomainRoutingRuleRequest
@@ -17711,11 +17717,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
         /// UpdateStorageDomainRoutingRuleRequest
         /// </param>
@@ -17772,11 +17773,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// UpdateStorageDomainRoutingRuleRequest
         /// </param>
@@ -17794,11 +17790,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <summary>
         /// <para>Updates a routing rule for an instance store domain name.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>此API白名单开放，请<a href="https://smartservice.console.aliyun.com/service/create-ticket">提交工单</a>获取支持。</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateStorageDomainRoutingRuleRequest

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListEventCenterRuleNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>031572FA-7D8F-4C05-B790-1071E0E05DE6</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of names of event notification rules.</para>
+        /// <para>The list of event rule names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;RuleName\&quot;: \&quot;mlf\&quot;, \&quot;RuleId\&quot;: \&quot;crecr-73q93pgljm1pc2fp\&quot;}]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListEventCenterRuleNameResponseBodyRuleNames> RuleNames { get; set; }
         public class ListEventCenterRuleNameResponseBodyRuleNames : TeaModel {
             /// <summary>
-            /// <para>The ID of the event notification rule.</para>
+            /// <para>The event rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crecr-n6pbhgjxtl*****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the event notification rule.</para>
+            /// <para>The event rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-chain</para>

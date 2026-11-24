@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateRepoTriggerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trigger.</para>
+        /// <para>The trigger ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,8 +43,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TriggerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the trigger.</para>
-        /// <para>You can specify the TriggerName or TriggerUrl parameter. The TriggerName parameter is optional.</para>
+        /// <para>The trigger name. This parameter is optional. You must specify either TriggerName or TriggerUrl.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_trigger</para>
@@ -54,7 +53,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TriggerName { get; set; }
 
         /// <summary>
-        /// <para>The image tag based on which the trigger is set.</para>
+        /// <para>The image version that triggers the trigger.</para>
         /// 
         /// <b>Example:</b>
         /// <para>master</para>
@@ -64,11 +63,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TriggerTag { get; set; }
 
         /// <summary>
-        /// <para>The type of the trigger. Valid values:</para>
+        /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ALL</c>: a trigger that supports both tags and regular expressions.</description></item>
-        /// <item><description><c>TAG_LISTTAG</c>: a tag-based trigger.</description></item>
-        /// <item><description><c>TAG_REG_EXP</c>: a regular expression-based trigger.</description></item>
+        /// <item><description><para><c>ALL</c>: all.</para>
+        /// </description></item>
+        /// <item><description><para><c>TAG_LISTTAG</c>: tag list.</para>
+        /// </description></item>
+        /// <item><description><para><c>TAG_REG_EXP</c>: regular expression.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TriggerType { get; set; }
 
         /// <summary>
-        /// <para>The URL of the trigger.</para>
+        /// <para>The trigger URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.test.com">https://www.test.com</a></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListChartRepositoryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository.</para>
+        /// <para>The repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>repo1</para>
@@ -61,11 +61,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The status of the chart repositories that you want to query. Valid values:</para>
+        /// <para>The status of the chart repository. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ALL</c>: query repositories of all status.</description></item>
-        /// <item><description><c>NORMAL</c>: query normal repositories.</description></item>
-        /// <item><description><c>DELETING</c>: query repositories that are being deleted.</description></item>
+        /// <item><description><para><c>NORMAL</c>: The chart repository is in the Normal state.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETING</c>: The chart repository is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

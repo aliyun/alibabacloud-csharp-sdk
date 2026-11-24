@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListInstanceResponseBodyInstances> Instances { get; set; }
         public class ListInstanceResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1562849679000</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <para>The instance issue.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>实例问题，取值：
-            /// OSS_TOO_MANY_BUCKETS：OSS Bucket 数量超限</para>
-            /// <para>OSS_BUCKET_ALREADY_EXISTS：同名 OSS Bucket 已存在</para>
-            /// <para>OSS_SERVICE_ROLE_UNAUTHORIZED：OSS 权限未授权</para>
-            /// <para>USER_NOT_REGISTERED_BY_REAL_NAME：国际站账号在购买中国站 OSS Bucket 时未进行实名认证</para>
+            /// <para>Instance issue. Valid values:
+            /// OSS_TOO_MANY_BUCKETS: The number of OSS buckets exceeds the limit.</para>
+            /// <para>OSS_BUCKET_ALREADY_EXISTS: An OSS bucket with the same name already exists.</para>
+            /// <para>OSS_SERVICE_ROLE_UNAUTHORIZED: OSS permissions are not authorized.</para>
+            /// <para>USER_NOT_REGISTERED_BY_REAL_NAME: The China site account has not completed real-name verification when purchasing an OSS bucket on the China site</para>
             /// </summary>
             [NameInMap("InstanceIssue")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last modification time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1562849760000</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags of the instance.</para>
+            /// <para>The collection of instance tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

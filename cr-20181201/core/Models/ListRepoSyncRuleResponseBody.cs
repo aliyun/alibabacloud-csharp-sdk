@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of synchronization rules.</para>
+        /// <para>The synchronization rules.</para>
         /// </summary>
         [NameInMap("SyncRules")]
         [Validation(Required=false)]
         public List<ListRepoSyncRuleResponseBodySyncRules> SyncRules { get; set; }
         public class ListRepoSyncRuleResponseBodySyncRules : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572604642000</para>
@@ -77,14 +77,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether images are synchronized across accounts. Valid values:</para>
+            /// <para>Specifies whether to synchronize images across accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: Images are synchronized across accounts.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: Images are synchronized within the same account.</para>
-            /// </description></item>
+            /// <item><description><c>true</c>: synchronizes images across accounts</description></item>
+            /// <item><description><c>false</c>: synchronizes images within the same account
+            /// Default value: <c>false</c>.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -144,7 +142,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string LocalRepoName { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572604642000</para>
@@ -154,19 +152,22 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The namespace regex at the instance level.</para>
+            /// <para>The instance-level namespace regular expression.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when SyncScope is set to <c>INSTANCE</c>.</para>
+            /// <para>This parameter is valid only when the SyncScope parameter is set to <c>INSTANCE</c>.</para>
             /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>.*</para>
             /// </summary>
             [NameInMap("NamespaceNameFilter")]
             [Validation(Required=false)]
             public string NamespaceNameFilter { get; set; }
 
             /// <summary>
-            /// <para>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</para>
-            /// <para>Valid values: 1 to 5.</para>
-            /// <para>Default value: 3.</para>
+            /// <para>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Synchronization tasks with the same priority are executed in random order.
+            /// Valid values: 1 to 5.
+            /// Default value: 3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -178,7 +179,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The repository filtering rule.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when SyncScope is set to <c>INSTANCE</c> or <c>NAMESPACE</c>.</para>
+            /// <para>This parameter is valid only when the SyncScope parameter is set to <c>INSTANCE</c> or <c>NAMESPACE</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -191,10 +192,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The synchronization direction. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>FROM</c>: synchronizes from the source instance to the target instance</para>
-            /// </description></item>
-            /// <item><description><para><c>TO</c>: synchronizes from the target instance to the source instance</para>
-            /// </description></item>
+            /// <item><description><c>FROM</c>: synchronizes from the source instance to the target instance</description></item>
+            /// <item><description><c>TO</c>: synchronizes from the target instance to the source instance</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -227,12 +226,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The synchronization scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>INSTANCE</c>: synchronizes based on namespace regex and repository regex rules</para>
-            /// </description></item>
-            /// <item><description><para><c>NAMESPACE</c>: synchronizes by namespace</para>
-            /// </description></item>
-            /// <item><description><para><c>REPO</c>: synchronizes by image repository</para>
-            /// </description></item>
+            /// <item><description><c>INSTANCE</c>: synchronizes based on namespace and repository regular expressions</description></item>
+            /// <item><description><c>NAMESPACE</c>: synchronizes based on namespaces</description></item>
+            /// <item><description><c>REPO</c>: synchronizes based on image repositories</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -245,10 +241,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The trigger policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>INITIATIVE</c>: proactive trigger</para>
-            /// </description></item>
-            /// <item><description><para><c>PASSIVE</c>: passive trigger</para>
-            /// </description></item>
+            /// <item><description><c>INITIATIVE</c>: active trigger</description></item>
+            /// <item><description><c>PASSIVE</c>: passive trigger</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

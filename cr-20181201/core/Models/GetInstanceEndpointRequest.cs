@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the endpoint. Set the value to Internet.</para>
+        /// <para>The endpoint type. Only Internet is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the module that you want to access. Valid values:</para>
+        /// <para>The access module. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>Registry</c>: the image repository.</description></item>
-        /// <item><description><c>Chart</c>: a Helm chart.</description></item>
+        /// <item><description><para><c>Registry</c>: image repository</para>
+        /// </description></item>
+        /// <item><description><para><c>Chart</c>: Helm chart</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactSubscriptionRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to enable the accelerated data transfer feature. This feature is in public preview. It optimizes scheduling policies and network paths to improve the speed of artifact subscription.</para>
+        /// <para>Specifies whether to enable link acceleration. The subscription acceleration feature is in public preview and can improve image subscription speed through scheduling policies and network link optimization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the rule was created.</para>
+        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1570759546000</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request succeeded.</para>
+        /// <item><description><para><c>true</c>: The API call was successful.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The time when the rule was last modified.</para>
+        /// <para>The modification time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1638259914000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The destination ACR namespace.</para>
+        /// <para>The ACR namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ns</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to overwrite the existing images that have the same tag in the destination repository.</para>
+        /// <para>Specifies whether to overwrite images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? Override { get; set; }
 
         /// <summary>
-        /// <para>The operating systems and architectures. If a source repository contains multi-architecture images, only images that match the specified platforms are synchronized to the destination repository of the Enterprise Edition instance.</para>
+        /// <para>The operating system and architecture. If the source repository contains multi-architecture images, only images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise instance.</para>
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public List<string> Platform { get; set; }
 
         /// <summary>
-        /// <para>The destination ACR repository.</para>
+        /// <para>The ACR repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-repo</para>
@@ -133,7 +133,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the artifact source.</para>
+        /// <para>The domain name of the source image repository for the subscription rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>registry-1.docker.io</para>
         /// </summary>
         [NameInMap("SourceDomain")]
         [Validation(Required=false)]
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceRepoName { get; set; }
 
         /// <summary>
-        /// <para>The number of images to subscribe to.</para>
+        /// <para>The number of subscribed images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -180,7 +183,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? TagCount { get; set; }
 
         /// <summary>
-        /// <para>The regular expression that is used to match the tags of images in the source repository for subscription.</para>
+        /// <para>The list of subscribed tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>latest</para>
+        /// </summary>
+        [NameInMap("TagList")]
+        [Validation(Required=false)]
+        public List<string> TagList { get; set; }
+
+        /// <summary>
+        /// <para>The image versions in the source repository to subscribe to. Regular expressions are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>release-v.*</para>

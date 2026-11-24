@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateBuildRecordByRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image building record.</para>
+        /// <para>The build record ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A311FC5-B8C6-4332-80E4-539EB73****</para>

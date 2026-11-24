@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateArtifactSubscriptionRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable an acceleration link for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</para>
+        /// <para>Specifies whether to enable the acceleration link. The subscription acceleration feature is in public preview. It improves the image subscription speed based on scheduling policies and network link optimization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Container Registry namespace.</para>
+        /// <para>The ACR namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ns</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to overwrite the original image.</para>
+        /// <para>Specifies whether to overwrite images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Override { get; set; }
 
         /// <summary>
-        /// <para>The operating system and architecture. If the source repository contains multi-arch images, only the images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance.</para>
+        /// <para>The operating system and architecture. If the source repository contains multi-architecture images, only images with the specified operating system and architecture are subscribed to the destination repository of the Enterprise instance.</para>
         /// </summary>
         [NameInMap("Platform")]
         [Validation(Required=false)]
         public List<string> Platform { get; set; }
 
         /// <summary>
-        /// <para>The name of the Container Registry repository.</para>
+        /// <para>The ACR repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-repo</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the source namespace.</para>
+        /// <para>The source namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>library</para>
@@ -89,13 +89,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The source of the artifacts.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DOCKER_HUB: Docker Hub</description></item>
-        /// <item><description>GCR: GCR</description></item>
-        /// <item><description>QUAY: Quay.io</description></item>
-        /// </list>
+        /// <para>The artifact source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DOCKER_HUB</para>
@@ -115,7 +109,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceRepoName { get; set; }
 
         /// <summary>
-        /// <para>The number of subscribed images.</para>
+        /// <para>The number of images to subscribe to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -128,7 +122,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? TagCount { get; set; }
 
         /// <summary>
-        /// <para>The image tags in the subscription source repository. Regular expressions are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>The image tags to subscribe to when matching by tag list. A maximum of 10 tags are supported.</description></item>
+        /// <item><description>This parameter is valid only when the rule is created by using tag list matching. It cannot be specified together with TagRegexp or TagCount.</description></item>
+        /// <item><description>If this parameter is not specified or an empty list is specified, the original tag list is retained and cannot be cleared. The matching method cannot be modified. To modify the matching method, delete the rule and create a new one.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>latest</para>
+        /// </summary>
+        [NameInMap("TagList")]
+        [Validation(Required=false)]
+        public List<string> TagList { get; set; }
+
+        /// <summary>
+        /// <para>The image versions in the source repository to subscribe to. Regular expressions are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>release-v.*</para>

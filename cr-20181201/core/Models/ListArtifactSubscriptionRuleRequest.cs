@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 100. If you specify a value greater than 100, the system either caps the page size at 100 or returns a parameter error.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. If the specified value exceeds 100, the system returns a parameter error or uses 100 as the maximum number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

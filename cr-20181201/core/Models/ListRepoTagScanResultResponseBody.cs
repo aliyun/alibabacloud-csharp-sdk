@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: Success</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Failure</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number of the scan result list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in the scan result list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56B5C92F-F5D9-46E0-823F-EC71D1892DAA</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of vulnerabilities detected on images.</para>
+        /// <para>The total number of scanned vulnerabilities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>196</para>
@@ -74,14 +76,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The details about the detected vulnerabilities.</para>
+        /// <para>The array of scanned vulnerabilities.</para>
         /// </summary>
         [NameInMap("Vulnerabilities")]
         [Validation(Required=false)]
         public List<ListRepoTagScanResultResponseBodyVulnerabilities> Vulnerabilities { get; set; }
         public class ListRepoTagScanResultResponseBodyVulnerabilities : TeaModel {
             /// <summary>
-            /// <para>The ID of the image layer where the vulnerability was detected.</para>
+            /// <para>The image layer that introduced the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha256:123456717b8e40b6480979b739010d8d549989602bcdd07922119aec6f9dbe57</para>
@@ -93,10 +95,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The name of the vulnerability.</para>
+            /// <para>The vulnerability name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>漏洞</para>
+            /// <para>Vulnerability</para>
             /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The URL of the vulnerability.</para>
+            /// <para>The vulnerability link.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://security-tracker.debian.org/tracker/CVE-2009-5155">https://security-tracker.debian.org/tracker/CVE-2009-5155</a></para>
@@ -114,7 +116,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string CveLink { get; set; }
 
             /// <summary>
-            /// <para>The directory of the vulnerability.</para>
+            /// <para>The vulnerability location.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test.txt</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string CveLocation { get; set; }
 
             /// <summary>
-            /// <para>The name of the vulnerability.</para>
+            /// <para>The vulnerability name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2009-5155</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string CveName { get; set; }
 
             /// <summary>
-            /// <para>The description of the vulnerability.</para>
+            /// <para>The vulnerability description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description.</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The cause of the vulnerability.</para>
+            /// <para>The feature that introduced the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eglibc</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Feature { get; set; }
 
             /// <summary>
-            /// <para>The command used to fix the vulnerability.</para>
+            /// <para>The vulnerability fix command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yum install -y xxx</para>
@@ -164,10 +166,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string FixCmd { get; set; }
 
             /// <summary>
-            /// <para>The type of the vulnerability. Valid values:</para>
+            /// <para>The vulnerability type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cve</c>: image system vulnerability</description></item>
-            /// <item><description><c>sca</c>: image application vulnerability</description></item>
+            /// <item><description><para><c>cve</c>: System vulnerability</para>
+            /// </description></item>
+            /// <item><description><para><c>sca</c>: Application vulnerability</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -178,7 +182,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanType { get; set; }
 
             /// <summary>
-            /// <para>The severity of the vulnerability.</para>
+            /// <para>The severity level of the scanned vulnerability. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>High</c>: High</para>
+            /// </description></item>
+            /// <item><description><para><c>Medium</c>: Medium</para>
+            /// </description></item>
+            /// <item><description><para><c>Low</c>: Low</para>
+            /// </description></item>
+            /// <item><description><para><c>Unknown</c>: Unknown</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Medium</para>
@@ -188,7 +202,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Severity { get; set; }
 
             /// <summary>
-            /// <para>The version of the vulnerability.</para>
+            /// <para>The vulnerability version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.19-6.9</para>
@@ -198,7 +212,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The version where the vulnerability was fixed.</para>
+            /// <para>The version that fixes the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.19-18+deb8u5</para>
@@ -208,7 +222,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string VersionFixed { get; set; }
 
             /// <summary>
-            /// <para>The format of the vulnerability.</para>
+            /// <para>The version format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dpkg</para>

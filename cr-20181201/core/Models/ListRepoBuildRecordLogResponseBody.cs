@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoBuildRecordLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log content of the image building record.</para>
+        /// <para>The build log content.</para>
         /// </summary>
         [NameInMap("BuildRecordLogs")]
         [Validation(Required=false)]
         public List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> BuildRecordLogs { get; set; }
         public class ListRepoBuildRecordLogResponseBodyBuildRecordLogs : TeaModel {
             /// <summary>
-            /// <para>The stage of the building that is recorded in the log entry.</para>
+            /// <para>The build stage of the log entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GIT_CLONE</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? LineNumber { get; set; }
 
             /// <summary>
-            /// <para>The content of the log.</para>
+            /// <para>The log content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fetch stage begin</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of log entries displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

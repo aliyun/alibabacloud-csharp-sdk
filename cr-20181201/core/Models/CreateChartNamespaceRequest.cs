@@ -10,9 +10,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateChartNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically create repositories in the namespace. Valid values:</para>
-        /// <para>\-<c> true</c>: automatically creates repositories in the namespace.</para>
-        /// <para>\-<c> false</c>: does not automatically create repositories in the namespace.</para>
+        /// <para>Specifies whether automatic creation of a repository is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: Automatic creation of a repository is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Automatic creation of a repository is disabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -24,8 +28,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The default repository type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PUBLIC</c>: a public repository</description></item>
-        /// <item><description><c>PRIVATE</c>: a private repository</description></item>
+        /// <item><description><para><c>PUBLIC</c>: Public repository.</para>
+        /// </description></item>
+        /// <item><description><para><c>PRIVATE</c>: Private repository.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string DefaultRepoType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

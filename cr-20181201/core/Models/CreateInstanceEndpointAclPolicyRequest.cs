@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>internet</para>
+        /// <para>Internet</para>
         /// </summary>
         [NameInMap("EndpointType")]
         [Validation(Required=false)]

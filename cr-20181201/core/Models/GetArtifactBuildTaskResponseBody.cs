@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The artifact build type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>IMAGE_TO_ACCELERATED_IMAGE</c>: Accelerated image creation optimized for ACK scenarios.</para>
+        /// <item><description><para><c>IMAGE_TO_ACCELERATED_IMAGE</c>: accelerated image optimized for ACK scenarios.</para>
         /// </description></item>
-        /// <item><description><para><c>IMAGE_TO_ECI_ACCELERATED_IMAGE</c>: Accelerated image artifact optimized for ECI scenarios.</para>
+        /// <item><description><para><c>IMAGE_TO_ECI_ACCELERATED_IMAGE</c>: accelerated image artifact optimized for Elastic Container Instance (ECI) scenarios.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public GetArtifactBuildTaskResponseBodyArtifactCompression ArtifactCompression { get; set; }
         public class GetArtifactBuildTaskResponseBodyArtifactCompression : TeaModel {
             /// <summary>
-            /// <para>The operating system and architecture.</para>
+            /// <para>The operating system/architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linux/arm64</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The number of layers to retain after compression.</para>
+            /// <para>The number of layers retained after compression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<string> Instructions { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -112,6 +112,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
+        /// <para>The task priority.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -137,7 +139,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public GetArtifactBuildTaskResponseBodySourceArtifact SourceArtifact { get; set; }
         public class GetArtifactBuildTaskResponseBodySourceArtifact : TeaModel {
             /// <summary>
-            /// <para>The artifact type. Only IMAGE is supported.</para>
+            /// <para>The artifact type. Currently, only IMAGE is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE</para>
@@ -157,7 +159,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? LayerCount { get; set; }
 
             /// <summary>
-            /// <para>The repository ID. Only image repositories are supported.</para>
+            /// <para>The repository ID. Currently, only image repositories are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-shac42yvqzvq****</para>
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The artifact version. Only image versions are supported.</para>
+            /// <para>The artifact version. Currently, only image versions are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest</para>
@@ -206,7 +208,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public GetArtifactBuildTaskResponseBodyTargetArtifact TargetArtifact { get; set; }
         public class GetArtifactBuildTaskResponseBodyTargetArtifact : TeaModel {
             /// <summary>
-            /// <para>The artifact type. Only IMAGE is supported.</para>
+            /// <para>The artifact type. Currently, only IMAGE is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE</para>
@@ -226,7 +228,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public int? LayerCount { get; set; }
 
             /// <summary>
-            /// <para>The repository ID. Only image repositories are supported. The repository ID of the target artifact must be the same as that of the source artifact.</para>
+            /// <para>The repository ID. Currently, only image repositories are supported. The repository ID of the target artifact must be the same as that of the source artifact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crr-1234567</para>
@@ -246,7 +248,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The artifact version. Only images are supported.</para>
+            /// <para>The artifact version. Currently, only images are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest_accelerated</para>
@@ -260,9 +262,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The artifact build status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PENDING</c>: Scheduling in progress.</para>
+        /// <item><description><para><c>PENDING</c>: Scheduling.</para>
         /// </description></item>
-        /// <item><description><para><c>BUILDING</c>: Building in progress.</para>
+        /// <item><description><para><c>BUILDING</c>: Building.</para>
         /// </description></item>
         /// <item><description><para><c>SUCCESS</c>: Build succeeded.</para>
         /// </description></item>

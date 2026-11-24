@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetChartRepositoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the chart repository was created.</para>
+        /// <para>The time when the chart repository was created. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1563767620000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-kmsiwlxxdcva****</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The API call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The time when the chart repository was last modified.</para>
+        /// <para>The time when the chart repository was last modified. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1563767700000</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the chart repository.</para>
+        /// <para>The chart repository ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crcr-c7letfwev5oq****</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The name of the chart repository.</para>
+        /// <para>The chart repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the chart repository belongs.</para>
+        /// <para>The namespace to which the chart repository belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -96,8 +98,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The status of the chart repository. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>NORMAL</c>: The repository is normal.</description></item>
-        /// <item><description><c>DELETING</c>: The repository is being deleted.</description></item>
+        /// <item><description><para><c>NORMAL</c>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETING</c>: Being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,8 +114,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The type of the chart repository. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PUBLIC</c>: a public repository</description></item>
-        /// <item><description><c>PRIVATE</c>: a private repository</description></item>
+        /// <item><description><para><c>PUBLIC</c>: public repository.</para>
+        /// </description></item>
+        /// <item><description><para><c>PRIVATE</c>: private repository.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmv36i4is****</para>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The summary about the chart repository.</para>
+        /// <para>The chart repository summary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

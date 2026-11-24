@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The collection of namespaces.</para>
         /// <list type="bullet">
-        /// <item><description>If the scan scope is set to NAMESPACE, this parameter is required.</description></item>
-        /// <item><description>If the scan scope is set to REPO, specify exactly one namespace for this parameter.</description></item>
+        /// <item><description>When the scan scope is NAMESPACE, this parameter cannot be empty.</description></item>
+        /// <item><description>When the scan scope is REPO, this parameter must contain exactly one namespace.</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The list of repositories.</para>
         /// <list type="bullet">
-        /// <item><description>If the scan scope is set to NAMESPACE, this parameter must be empty.</description></item>
-        /// <item><description>If the scan scope is set to REPO, this parameter is required.</description></item>
+        /// <item><description>When the scan scope is NAMESPACE, this parameter must be empty.</description></item>
+        /// <item><description>When the scan scope is REPO, this parameter cannot be empty.</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>
@@ -82,11 +82,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanRuleId { get; set; }
 
         /// <summary>
-        /// <para>The scan scope. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>NAMESPACE: namespace</description></item>
-        /// <item><description>REPO: repository.</description></item>
-        /// </list>
+        /// <para>The scan scope.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,11 +93,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanScope { get; set; }
 
         /// <summary>
-        /// <para>The trigger type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AUTO: Automatically triggered upon push.</description></item>
-        /// <item><description>MANUAL: Manually triggered.</description></item>
-        /// </list>
+        /// <para>The trigger type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

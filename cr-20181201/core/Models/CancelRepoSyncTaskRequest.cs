@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the replication task.</para>
+        /// <para>The synchronization task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

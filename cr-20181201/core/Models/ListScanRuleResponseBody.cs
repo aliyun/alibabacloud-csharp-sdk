@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListScanRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListScanRuleResponseBodyScanRules> ScanRules { get; set; }
         public class ListScanRuleResponseBodyScanRules : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1702361810000</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public List<string> RepoNames { get; set; }
 
             /// <summary>
-            /// <para>The tag that triggers the scan matches the regular expression.</para>
+            /// <para>The regular expression used to match tags that trigger a scan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>.*</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The scan rule id.</para>
+            /// <para>The scan rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crscnr-2sdveqjhpzd****</para>
@@ -133,8 +133,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The scan type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>VUL</c>: Products Cloud Security Scanner</description></item>
-            /// <item><description><c>SBOM</c>: Product Content Analysis</description></item>
+            /// <item><description><c>VUL</c>: artifact vulnerability scanning.</description></item>
+            /// <item><description><c>SBOM</c>: artifact content analysis.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TriggerType { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1764122725000</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoBuildRecordLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image building record.</para>
+        /// <para>The build record ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildRecordId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The offset of log lines.</para>
+        /// <para>The log line offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-z4dvahhku9wv4****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagRequest : TeaModel {
         /// <summary>
-        /// <para>The return value of status code.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>GetRepoTag</b>.</para>
+        /// <para>The repository ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The number of milliseconds that have elapsed since the image was created.</para>
+        /// <para>The repository tag.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

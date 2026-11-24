@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoTagScanResultRequest : TeaModel {
         /// <summary>
-        /// <para>The digest of the image.</para>
+        /// <para>The image digest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sha256:6b0b094f8a904f8fb6602427aed0d1fa</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The parameter whose value that you want to query. Fox example, if the value is <c>FixCmd</c>, only the <c>FixCmd</c> parameter is returned.</para>
+        /// <para>The query filter parameter. If the value is <c>FixCmd</c>, only the <c>FixCmd</c> result is returned, and other fields are not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FixCmd</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string FilterValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the scan result list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in the scan result list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-uf082u9dg8do****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security scan task.</para>
+        /// <para>The image scan task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6b0b094f-8a90-4f8f-b660-2427aed0****</para>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanTaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The vulnerability type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>cve</c>: image system vulnerability</description></item>
-        /// <item><description><c>sca</c>: image application vulnerability</description></item>
+        /// <item><description><c>cve</c>: Image system vulnerability</description></item>
+        /// <item><description><c>sca</c>: Image application vulnerability</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,12 +95,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanType { get; set; }
 
         /// <summary>
-        /// <para>The severity of the vulnerability. Valid values:</para>
+        /// <para>The severity level of the scanned vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>High</c></description></item>
-        /// <item><description><c>Medium</c></description></item>
-        /// <item><description><c>Low</c></description></item>
-        /// <item><description><c>Unknown</c></description></item>
+        /// <item><description><para><c>High</c>: High</para>
+        /// </description></item>
+        /// <item><description><para><c>Medium</c>: Medium</para>
+        /// </description></item>
+        /// <item><description><para><c>Low</c>: Low</para>
+        /// </description></item>
+        /// <item><description><para><c>Unknown</c>: Unknown</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +115,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The name of the image tag.</para>
+        /// <para>The image version name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,7 +125,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy search used in scanning. The value can be a CVE name.</para>
+        /// <para>The fuzzy search keyword for scanning. Fuzzy match by CVE name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CVE-2021</para>

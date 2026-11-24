@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class DiagnosisTarget : TeaModel {
         /// <summary>
-        /// <para>The end of the diagnostic time window, in ISO 8601 format. Must be after <c>StartTime</c>.</para>
+        /// <para>The end time of the diagnostic.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>A map of key-value pairs providing additional context for the diagnosis.</para>
+        /// <para>The extra parameters.</para>
         /// </summary>
         [NameInMap("Extra")]
         [Validation(Required=false)]
         public Dictionary<string, string> Extra { get; set; }
 
         /// <summary>
-        /// <para>The namespace that contains the repository.</para>
+        /// <para>The namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_namespace</para>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The ID of a related operation, such as a previous diagnostic task.</para>
+        /// <para>The ID of the diagnosed item.</para>
         /// </summary>
         [NameInMap("RelatedId")]
         [Validation(Required=false)]
         public string RelatedId { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository.</para>
+        /// <para>The repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_repo</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Repository { get; set; }
 
         /// <summary>
-        /// <para>The start of the diagnostic time window, in ISO 8601 format.</para>
+        /// <para>The start time of the diagnostic.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The container image tag.</para>
+        /// <para>The image tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>latest</para>

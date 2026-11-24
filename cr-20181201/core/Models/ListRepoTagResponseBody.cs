@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The image size, in bytes.</para>
+            /// <para>The size of the image. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27107966</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was last updated.</para>
+            /// <para>The time when the image was updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572875608000</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of results returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</para>
+        /// <para>The pagination token. If a next page exists, the service returns a NextToken value, which you can include in the subsequent request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

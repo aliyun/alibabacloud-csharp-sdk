@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetRepoTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The size of the image. Unit: Bytes.</para>
+        /// <para>The digest value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>crr-tquyps22md8p****</para>
+        /// <para>The time when the image was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1572839125000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ImageCreate { get; set; }
 
         /// <summary>
-        /// <para>Image ID</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The number of milliseconds that have elapsed since the image was last updated.</para>
+        /// <para>The size of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27107966</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ImageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The time when the image was last updated. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1572875608000</para>
@@ -70,11 +70,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ImageUpdate { get; set; }
 
         /// <summary>
-        /// <para>The status of the image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><c>NORMAL</c>: The image is normal.</description></item>
-        /// <item><description><c>DELETING</c>: The image is being deleted.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>1.0</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>031572FA-7D8F-4C05-B790-1071E0E05DE6</para>
@@ -94,7 +90,13 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The status of the image. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>NORMAL</c>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETING</c>: The image is being deleted.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The version of the repository.</para>
+        /// <para>The repository tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>

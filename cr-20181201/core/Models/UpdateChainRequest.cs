@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateChainRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the delivery chain in the JSON format.</para>
+        /// <para>The JSON-formatted entity object that describes the delivery chain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ChainConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the delivery chain.</para>
+        /// <para>The delivery chain ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Repositories in which the delivery chain does not take effect.</para>
+        /// <para>The set of repositories excluded from delivery chain execution.</para>
         /// </summary>
         [NameInMap("ScopeExclude")]
         [Validation(Required=false)]

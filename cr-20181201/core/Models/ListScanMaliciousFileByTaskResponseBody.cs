@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListScanMaliciousFileByTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: successful</description></item>
-        /// <item><description><c>false</c>: failed</description></item>
+        /// <item><description><para><c>true</c>: The API call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number of the queried data. You can specify this parameter to determine the page from which the queried data is returned. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,14 +66,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried malicious files.</para>
+        /// <para>The list of malicious files.</para>
         /// </summary>
         [NameInMap("ScanMaliciousFiles")]
         [Validation(Required=false)]
         public List<ListScanMaliciousFileByTaskResponseBodyScanMaliciousFiles> ScanMaliciousFiles { get; set; }
         public class ListScanMaliciousFileByTaskResponseBodyScanMaliciousFiles : TeaModel {
             /// <summary>
-            /// <para>The time when the image was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-10 11:42:06</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The path of the file.</para>
+            /// <para>The file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant/0000000000000000/</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was first scanned.</para>
+            /// <para>The time of the first scan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-10 11:42:06</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// <para>The severity of the malicious file.</para>
+            /// <para>The severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remind</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the malicious file.</para>
+            /// <para>The MD5 hash of the malicious file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e76c9759783cbbc9be0ff91ca3xxxxxx</para>
@@ -121,10 +123,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string MaliciousMd5 { get; set; }
 
             /// <summary>
-            /// <para>The type of the malicious file.</para>
+            /// <para>The type of the malicious sample.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>疑似含有Webshell代码</para>
+            /// <para>Suspected webshell code</para>
             /// </summary>
             [NameInMap("MaliciousName")]
             [Validation(Required=false)]
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ScanTaskId { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-10 11:42:06</para>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListChartReleaseResponseBodyChartReleases> ChartReleases { get; set; }
         public class ListChartReleaseResponseBodyChartReleases : TeaModel {
             /// <summary>
-            /// <para>The name of the chart version.</para>
+            /// <para>The chart version name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chart1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Chart { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-xkx6vujuhay0****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the chart was last modified.</para>
+            /// <para>The time when the chart was last modified. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1571930323000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The version number of the chart.</para>
+            /// <para>The chart version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1.0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Release { get; set; }
 
             /// <summary>
-            /// <para>The ID of the chart repository.</para>
+            /// <para>The chart repository ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crcr-gpsu7b8chmxk****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The size of the chart of the version. Unit: bytes.</para>
+            /// <para>The size of the chart version, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2826</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Size { get; set; }
 
             /// <summary>
-            /// <para>The status of the chart.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLED</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F68823F6-F1B5-4A4E-8421-A83CAB8F2963</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

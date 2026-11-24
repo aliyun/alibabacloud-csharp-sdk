@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateArtifactBuildRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the accelerated image building rule.</para>
+        /// <para>The ID of the build rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crabr-7dfa5qye5****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

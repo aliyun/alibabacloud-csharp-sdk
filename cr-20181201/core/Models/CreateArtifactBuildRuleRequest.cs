@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateArtifactBuildRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the artifact.</para>
+        /// <para>The type of the accelerated image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ACCELERATED_IMAGE</c>: accelerated images.</description></item>
+        /// <item><description><c>ACCELERATED_IMAGE</c>: accelerated image.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Additional parameters.</para>
+        /// <para>The additional parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The ID of the effective range of the rule.</para>
+        /// <para>The ID of the scope in which the rule takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to the ID of the image repository.</description></item>
+        /// <item><description>The ID of the image repository.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScopeId { get; set; }
 
         /// <summary>
-        /// <para>The effective range of the rule. Valid values:</para>
+        /// <para>The scope in which the rule takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>REPOSITORY</c></description></item>
+        /// <item><description><c>REPOSITORY</c>: repository level.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

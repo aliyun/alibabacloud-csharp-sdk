@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateArtifactSubscriptionRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether an acceleration link is enabled for image subscription. The subscription acceleration feature is in public preview. The feature is optimized based on scheduling policies and network links to accelerate image subscription.</para>
+        /// <para>Specifies whether to enable the acceleration link. The subscription acceleration feature is in public preview. Based on scheduling policies and network link optimization, it can improve the image subscription speed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Container Registry namespace.</para>
+        /// <para>The ACR namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the original image is overwritten.</para>
+        /// <para>Specifies whether to overwrite images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? Override { get; set; }
 
         /// <summary>
-        /// <para>The operating system and architecture. If the source repository contains a multi-arch image, only the specified operating system and architecture are subscribed to the destination repository of the Enterprise Edition instance. Subscribe to the destination repository of an Enterprise Edition instance</para>
+        /// <para>The operating system or architecture. If the source repository contains multi-architecture images, only images with the specified operating system or architecture are subscribed to the destination repository of the Enterprise instance.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Platform")]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<string> Platform { get; set; }
 
         /// <summary>
-        /// <para>The name of the Container Registry repository.</para>
+        /// <para>The ACR repository.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The source namespace.</para>
+        /// <para>The source namespace. If <c>SourceProvider</c> is set to <c>DOCKER_HUB</c>, the default value is <c>library</c>. This parameter is required in other scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>library</para>
@@ -81,13 +81,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The source of the artifact.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DOCKER_HUB: Docker Hub</description></item>
-        /// <item><description>GCR: GCR</description></item>
-        /// <item><description>QUAY: Quay.io</description></item>
-        /// </list>
+        /// <para>The artifact source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,8 +103,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SourceRepoName { get; set; }
 
         /// <summary>
-        /// <para>The number of subscribed images.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The number of images to subscribe to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,8 +113,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? TagCount { get; set; }
 
         /// <summary>
-        /// <para>The image tag in the subscription source repository. Regular expressions are supported.</para>
-        /// <para>This parameter is required.</para>
+        /// <list type="bullet">
+        /// <item><description>The image tags to subscribe to when matching by tag list. A maximum of 10 tags are supported.</description></item>
+        /// <item><description>If TagList is specified, these tags are queried one by one. TagRegexp and TagCount cannot be specified at the same time. If TagList is not specified, TagRegexp and TagCount are used for matching, and both must be specified.</description></item>
+        /// <item><description>The matching method cannot be changed after the rule is created. To change the matching method, delete the rule and create a new one.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>latest</para>
+        /// </summary>
+        [NameInMap("TagList")]
+        [Validation(Required=false)]
+        public List<string> TagList { get; set; }
+
+        /// <summary>
+        /// <para>The image versions to subscribe to from the source repository. Regular expressions are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>release-v.*</para>

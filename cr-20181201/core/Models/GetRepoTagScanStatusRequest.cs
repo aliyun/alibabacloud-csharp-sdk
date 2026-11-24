@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the repository.</para>
+        /// <para>The image repository ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-uf082u9dg8do****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image scan task.</para>
+        /// <para>The image scan task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>838152F9-F725-5A52-A344-8972D65AC045</para>
@@ -50,6 +50,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string ScanTaskId { get; set; }
 
+        /// <summary>
+        /// <para>The image security scan type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cve</para>
+        /// </summary>
         [NameInMap("ScanType")]
         [Validation(Required=false)]
         public string ScanType { get; set; }

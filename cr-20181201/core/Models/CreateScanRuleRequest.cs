@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The collection of namespaces.</para>
         /// <list type="bullet">
-        /// <item><description>If the scan scope is set to NAMESPACE, this parameter cannot be empty.</description></item>
-        /// <item><description>If the scan scope is set to REPO, this parameter must contain exactly one namespace.</description></item>
+        /// <item><description>If the scan scope is NAMESPACE, this parameter cannot be empty.</description></item>
+        /// <item><description>If the scan scope is REPO, specify exactly one namespace for this parameter.</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The list of repositories.</para>
         /// <list type="bullet">
-        /// <item><description>If the scan scope is set to NAMESPACE, this parameter must be empty.</description></item>
-        /// <item><description>If the scan scope is set to REPO, this parameter cannot be empty.</description></item>
+        /// <item><description>If the scan scope is NAMESPACE, this parameter must be empty.</description></item>
+        /// <item><description>If the scan scope is REPO, this parameter cannot be empty.</description></item>
         /// </list>
         /// 
         /// <b>if can be null:</b>
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <summary>
         /// <para>The scan type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>VUL</c>: cloud native artifact vulnerability scanning.</description></item>
-        /// <item><description><c>SBOM</c>: cloud native artifact content analysis.</description></item>
+        /// <item><description><c>VUL</c>: Artifact vulnerability scanning.</description></item>
+        /// <item><description><c>SBOM</c>: Artifact content analysis.</description></item>
         /// </list>
         /// <para>Default value: <c>VUL</c>.</para>
         /// 

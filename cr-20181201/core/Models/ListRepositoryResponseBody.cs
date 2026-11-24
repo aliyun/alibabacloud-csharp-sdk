@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepositoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</para>
+        /// <para>The token for the next page. If a next page exists, the service returns a NextToken value, which you can pass in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListRepositoryResponseBodyRepositories> Repositories { get; set; }
         public class ListRepositoryResponseBodyRepositories : TeaModel {
             /// <summary>
-            /// <para>The time when the repository was created.</para>
+            /// <para>The time when the repository was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1564153576000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the repository was last modified.</para>
+            /// <para>The time when the repository was last modified. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1564153576000</para>
@@ -109,9 +109,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The repository build type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>AUTO</c>: Automatically triggered build.</para>
+            /// <item><description><para><c>AUTO</c>: Automatically triggered.</para>
             /// </description></item>
-            /// <item><description><para><c>MANUAL</c>: Manually triggered build.</para>
+            /// <item><description><para><c>MANUAL</c>: Manually triggered.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The summary.</para>
+            /// <para>The summary information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test OK</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Summary { get; set; }
 
             /// <summary>
-            /// <para>The tag immutability of the image.</para>
+            /// <para>The immutability of image tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

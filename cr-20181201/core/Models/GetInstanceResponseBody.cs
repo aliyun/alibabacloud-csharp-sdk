@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return value</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was created.</para>
+        /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1571926439000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-xkx6vujuhay0****</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The issue occurs on the instance.</para>
+        /// <para>The instance issue.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>实例问题，取值：
-        /// OSS_TOO_MANY_BUCKETS：OSS Bucket 数量超限</para>
-        /// <para>OSS_BUCKET_ALREADY_EXISTS：同名 OSS Bucket 已存在</para>
-        /// <para>OSS_SERVICE_ROLE_UNAUTHORIZED：OSS 权限未授权</para>
-        /// <para>USER_NOT_REGISTERED_BY_REAL_NAME：国际站账号在购买中国站 OSS Bucket 时未进行实名认证</para>
+        /// <para>The instance issue. Valid values:
+        /// OSS_TOO_MANY_BUCKETS: The number of OSS buckets exceeds the limit.</para>
+        /// <para>OSS_BUCKET_ALREADY_EXISTS: An OSS bucket with the same name already exists.</para>
+        /// <para>OSS_SERVICE_ROLE_UNAUTHORIZED: OSS permissions are not authorized.</para>
+        /// <para>USER_NOT_REGISTERED_BY_REAL_NAME: The China site account has not completed real-name verification when purchasing an OSS bucket on the China site</para>
         /// </summary>
         [NameInMap("InstanceIssue")]
         [Validation(Required=false)]
         public string InstanceIssue { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shanghai-instance1</para>
@@ -64,7 +64,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The edition of the instance. Valid values: Enterprise_Basic: Basic Edition instances Enterprise_Standard: Standard Edition instances Enterprise_Advanced: Advanced Edition instances</para>
+        /// <para>The instance specification. Valid values:
+        /// Enterprise_Basic: basic instance.
+        /// Enterprise_Standard: standard instance.
+        /// Enterprise_Advanced: advanced instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enterprise_Basic</para>
@@ -74,16 +77,24 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceSpecification { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. Valid values:</para>
+        /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PENDING</c>: The instance is being initialized.</description></item>
-        /// <item><description><c>INIT_ERROR</c>: The instance failed to be initialized.</description></item>
-        /// <item><description><c>STARTING</c>: The instance is being started.</description></item>
-        /// <item><description><c>RUNNING</c>: The instance is running.</description></item>
-        /// <item><description><c>STOPPING</c>: The instance is being stopped.</description></item>
-        /// <item><description><c>STOPPED</c>: The instance is stopped.</description></item>
-        /// <item><description><c>DELETING</c>: The instance is being deleted.</description></item>
-        /// <item><description><c>DELETED</c>: The instance is deleted.</description></item>
+        /// <item><description><para><c>PENDING</c>: Initializing.</para>
+        /// </description></item>
+        /// <item><description><para><c>INIT_ERROR</c>: Initialization failed.</para>
+        /// </description></item>
+        /// <item><description><para><c>STARTING</c>: Starting.</para>
+        /// </description></item>
+        /// <item><description><para><c>RUNNING</c>: Running.</para>
+        /// </description></item>
+        /// <item><description><para><c>STOPPING</c>: Stopping.</para>
+        /// </description></item>
+        /// <item><description><para><c>STOPPED</c>: Stopped.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETING</c>: Deleting.</para>
+        /// </description></item>
+        /// <item><description><para><c>DELETED</c>: Deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,10 +105,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +121,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was last modified.</para>
+        /// <para>The modification time, in UNIX timestamp format. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1571926560000</para>
@@ -128,7 +141,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmv36i4isx****</para>
@@ -138,7 +151,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance.</para>
+        /// <para>The tag collection of the instance.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

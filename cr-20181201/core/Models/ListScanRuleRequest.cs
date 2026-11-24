@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The vulnerability type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>VUL</c>: Products Cloud Security Scanner.</description></item>
-        /// <item><description><c>SBOM</c>: Product Content Analysis.</description></item>
+        /// <item><description><c>VUL</c>: artifact vulnerability scanning.</description></item>
+        /// <item><description><c>SBOM</c>: artifact content analysis.</description></item>
         /// </list>
-        /// <para>Default value: <c>VUL</c></para>
+        /// <para>Default value: <c>VUL</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SBOM</para>

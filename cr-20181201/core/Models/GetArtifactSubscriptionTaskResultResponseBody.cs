@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactSubscriptionTaskResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Specifies whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,14 +66,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the artifact subscription task.</para>
+        /// <para>The image task results.</para>
         /// </summary>
         [NameInMap("TaskResults")]
         [Validation(Required=false)]
         public List<GetArtifactSubscriptionTaskResultResponseBodyTaskResults> TaskResults { get; set; }
         public class GetArtifactSubscriptionTaskResultResponseBodyTaskResults : TeaModel {
             /// <summary>
-            /// <para>The end time of the subscription task.</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1692756630000</para>
@@ -91,7 +93,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace.</para>
+            /// <para>The error message returned when the task fails.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Tag not found.</para>
+            /// </summary>
+            [NameInMap("Message")]
+            [Validation(Required=false)]
+            public string Message { get; set; }
+
+            /// <summary>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-ns</para>
@@ -101,7 +113,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-reop</para>
@@ -111,7 +123,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The result of the task.</para>
+            /// <para>The result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -121,7 +133,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The start time of the subscription task.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1691719501000</para>
@@ -131,7 +143,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -163,7 +175,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

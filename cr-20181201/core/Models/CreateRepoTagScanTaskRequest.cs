@@ -42,12 +42,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The scan engine type:</para>
+        /// <para>The scan engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>SAS_SCAN_SERVICE</c>: The cloud security scan engine. This is a paid service.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACR_SCAN_SERVICE</c>: The ACR scan engine.</para>
-        /// </description></item>
+        /// <item><description><c>SAS_SCAN_SERVICE</c>: Security Center scan engine (requires paid activation).</description></item>
+        /// <item><description><c>ACR_SCAN_SERVICE</c>: ACR scan engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,12 +55,18 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string ScanService { get; set; }
 
+        /// <summary>
+        /// <para>The image security scan type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cve</para>
+        /// </summary>
         [NameInMap("ScanType")]
         [Validation(Required=false)]
         public string ScanType { get; set; }
 
         /// <summary>
-        /// <para>The image tag.</para>
+        /// <para>The image version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

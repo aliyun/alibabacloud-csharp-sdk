@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListScanMaliciousFileByTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The image digest.</para>
+        /// <para>The digest of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sha256:aa4bffff6406785e930dab1f94c9a1297ba22xxxx71d71504a015764*********</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The severity of the malicious file.</para>
+        /// <para>The severity level of the malicious file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>serious、suspicious、remind</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. If the value that you specify exceeds 100, the system returns a parameter error or uses 100 as the maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The image repository ID.</para>
+        /// <para>The ID of the image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-h1y4l279wb8*****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScanTaskId { get; set; }
 
         /// <summary>
-        /// <para>The image tag.</para>
+        /// <para>The image version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V6.11</para>

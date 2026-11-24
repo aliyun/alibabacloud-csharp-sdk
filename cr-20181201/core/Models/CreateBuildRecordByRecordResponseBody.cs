@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateBuildRecordByRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image building record.</para>
+        /// <para>The build record ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crbr-ly77w5i3t31f****</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildRecordId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request is successful.\
-        /// Other status codes indicate that the request failed.</para>
+        /// <para>The return code of the API operation. A value of 200 indicates success. Other values indicate error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -31,10 +30,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

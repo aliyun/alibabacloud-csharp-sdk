@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class UpdateNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to automatically create a repository when an image is pushed.</para>
+        /// <para>Specifies whether to allow automatic creation of a repository upon push.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? AutoCreateRepo { get; set; }
 
         /// <summary>
-        /// <para>The default configuration for automatically created repositories.</para>
+        /// <para>The default repository configuration.</para>
         /// </summary>
         [NameInMap("DefaultRepoConfiguration")]
         [Validation(Required=false)]
@@ -29,11 +29,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The default type for automatically created repositories. This parameter applies only if <c>AutoCreateRepo</c> is set to <c>true</c>. Valid values:</para>
+        /// <para>The default repository type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PUBLIC</c>: a public repository</para>
+        /// <item><description><para><c>PUBLIC</c>: public repository</para>
         /// </description></item>
-        /// <item><description><para><c>PRIVATE</c>: a private repository</para>
+        /// <item><description><para><c>PRIVATE</c>: private repository</para>
         /// </description></item>
         /// </list>
         /// 
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
