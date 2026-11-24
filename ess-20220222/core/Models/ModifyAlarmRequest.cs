@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyAlarmRequest : TeaModel {
         /// <summary>
-        /// <para>The list of unique identifiers of the scaling rules that are associated with the event-triggered task.</para>
+        /// <para>The list of unique identifiers of the scaling rules associated with the event-triggered task.</para>
         /// </summary>
         [NameInMap("AlarmActions")]
         [Validation(Required=false)]
@@ -28,12 +28,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AlarmTaskId { get; set; }
 
         /// <summary>
-        /// <para>The operator that is used to compare the metric value and the threshold. Valid values:</para>
+        /// <para>The comparison operator between the statistical value and the threshold of the metric. The comparison operator indicates the relationship in which the statistical value and the threshold can satisfy the condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the metric value is greater than or equal to the threshold, set the value to <c>&gt;=</c>.</description></item>
-        /// <item><description>If the metric value is less than or equal to the threshold, set the value to <c>&lt;=</c>.</description></item>
-        /// <item><description>If the metric value is greater than the threshold, set the value to <c>&gt;</c>.</description></item>
-        /// <item><description>If the metric value is less than the threshold, set the value to <c>&lt;</c>.</description></item>
+        /// <item><description>The statistical value is greater than or equal to the threshold. Value: <c>&gt;=</c>.</description></item>
+        /// <item><description>The statistical value is less than or equal to the threshold. Value: <c>&lt;=</c>.</description></item>
+        /// <item><description>The statistical value is greater than the threshold. Value: <c>&gt;</c>.</description></item>
+        /// <item><description>The statistical value is less than the threshold. Value: <c>&lt;</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,24 +56,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The metric dimensions.</para>
+        /// <para>The dimension information associated with the metric.</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<ModifyAlarmRequestDimensions> Dimensions { get; set; }
         public class ModifyAlarmRequestDimensions : TeaModel {
             /// <summary>
-            /// <para>The key of dimension N that you want to associate with the metric. The valid values of Dimension.N.DimensionKey vary based on the value of MetricType.</para>
+            /// <para>The key of the dimension information associated with the metric. Valid values vary based on the monitoring type of the event-triggered node:</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set MetricType to custom, you can specify this parameter based on your business requirements.</para>
+            /// <item><description><para>If the event-triggered task is of the custom monitoring type (MetricType=custom), valid values are not restricted. You can specify custom values.</para>
             /// </description></item>
-            /// <item><description><para>If you set MetricType to system, this parameter has the following valid values:</para>
+            /// <item><description><para>If the event-triggered task is of the system monitoring type (MetricType=system), valid values:</para>
             /// <list type="bullet">
-            /// <item><description>user_id: the ID of your Alibaba Cloud account.</description></item>
-            /// <item><description>scaling_group: the scaling group that is monitored by the event-triggered task.</description></item>
-            /// <item><description>device: the NIC type.</description></item>
-            /// <item><description>state: the status of the TCP connection.</description></item>
-            /// <item><description>rulePool: the specified server group for the ALB qps metric.</description></item>
+            /// <item><description>user_id: your account ID.</description></item>
+            /// <item><description>scaling_group: the scaling group to be monitored.</description></item>
+            /// <item><description>device: the type of the network interface controller (NIC) device.</description></item>
+            /// <item><description>state: the state of the TCP connection.</description></item>
+            /// <item><description>rulePool: the server group specified for the ALB QPS monitoring metrics.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -86,26 +86,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string DimensionKey { get; set; }
 
             /// <summary>
-            /// <para>The dimension value of the metric. The valid values of this parameter vary based on the value of Dimensions.DimensionKey.</para>
+            /// <para>The value of the dimension information associated with the metric. Valid values are determined by Dimension.N.DimensionKey:</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set MetricType to custom, you can specify this parameter based on your business requirements.</para>
+            /// <item><description><para>If Dimension.N.DimensionKey is set to a custom value, which means the event-triggered task is of the custom monitoring type (MetricType=custom), valid values are not restricted. You can specify custom values.</para>
             /// </description></item>
-            /// <item><description><para>If you set MetricType to system, Dimension.N.DimensionValue has the following valid values:</para>
+            /// <item><description><para>If Dimension.N.DimensionKey is set to a system-specified value, which means the event-triggered task is of the system monitoring type (MetricType=system), valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>user_id: The system specifies the value.</para>
+            /// <item><description><para>user_id: automatically populated by the system.</para>
             /// </description></item>
-            /// <item><description><para>scaling_group: The system specifies the value.</para>
+            /// <item><description><para>scaling_group: automatically populated by the system.</para>
             /// </description></item>
             /// <item><description><para>device:</para>
             /// <list type="bullet">
-            /// <item><description>eth0: For classic network instances, eth0 indicates the internal network network interface controller. Only one eth0 NIC exists on each instance that resides in VPCs.</description></item>
-            /// <item><description>eth1: For classic network instances, eth1 represents the Internet network interface controller.</description></item>
+            /// <item><description>eth0: for classic network instances, eth0 represents the internal NIC. For VPC-connected instances, only the eth0 NIC exists.</description></item>
+            /// <item><description>eth1: for classic network instances, eth1 represents the public NIC.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>state:</para>
             /// <list type="bullet">
-            /// <item><description>TCP_TOTAL specifies the total number of TCP connections.</description></item>
-            /// <item><description>ESTABLISHED specifies the number of TCP connections that are established.</description></item>
+            /// <item><description>TCP_TOTAL: the total number of TCP connections.</description></item>
+            /// <item><description>ESTABLISHED: the number of established TCP connections.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -122,20 +122,25 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The effective period of the event-triggered task.</para>
-        /// <para>This parameter follows the cron expression format. The default format is <c>X X X X X ?</c>, in which:</para>
+        /// <para>Specifies the effective period of the event-triggered task.</para>
+        /// <para>This parameter follows cron expressions. The default format is <c>X X X X X ?</c>, where:</para>
         /// <list type="bullet">
-        /// <item><description>X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see <a href="https://help.aliyun.com/document_detail/25907.html">Cron expression</a>.</description></item>
-        /// <item><description>?: No value is specified.</description></item>
+        /// <item><description><para>X: a placeholder for a field, which sequentially represents seconds, minutes, hours, day, and month. X can be a specific value or a special character with logical meaning. For more information about the valid values of X, see <a href="https://help.aliyun.com/document_detail/25907.html">Cron expression</a>.</para>
+        /// </description></item>
+        /// <item><description><para>?: specifies no value.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>By default, the value of this parameter is specified in <b>UTC+8</b>. You can specify the time zone in the <c>TZ=+yy</c> format before a cron expression. y indicates the time zone. For example, <c>TZ=+00 * * 1-2 * * ?</c> specifies that the event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.</para>
+        /// <para>The value of this parameter is <b>in the UTC+8 time zone by default</b>. You can add time zone information <c>TZ=+yy</c> before the cron expression to specify a time zone, where y represents the numeric value of the time zone. For example, <c>TZ=+00 * * 1-2 * * ?</c> indicates that the event-triggered task takes effect between 01:00 and 02:59 every day in the UTC+0 time zone.</para>
         /// </remarks>
-        /// <para>Examples:</para>
+        /// <para>Examples and descriptions:</para>
         /// <list type="bullet">
-        /// <item><description><c>* * * * * ? </c>: The event-triggered task is in effect all the time.</description></item>
-        /// <item><description><c>* * 17-18 * * ? </c>: The event-triggered task is in effect between 17:00 and 18:59 (UTC+8) every day.</description></item>
-        /// <item><description><c>TZ=+00 * * 1-2 * * ?</c>: The event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.</description></item>
+        /// <item><description><para><c>* * * * * ?  </c>: takes effect at all times.</para>
+        /// </description></item>
+        /// <item><description><para><c>* * 17-18 * * ? </c>: takes effect between 17:00 and 18:59 every day in the UTC+8 time zone.</para>
+        /// </description></item>
+        /// <item><description><para><c>TZ=+00 * * 1-2 * * ?</c>: takes effect between 01:00 and 02:59 every day in the UTC+0 time zone.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,7 +151,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Effective { get; set; }
 
         /// <summary>
-        /// <para>The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.</para>
+        /// <para>The number of times that the threshold expression must be met before the scaling rule is triggered. For example, the average CPU utilization must be greater than or equal to 80% in three consecutive statistical results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -156,19 +161,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// <para>The expressions that are specified in the multi-metric alert rule.</para>
+        /// <para>The monitoring metrics of the multi-metric event-triggered task.</para>
         /// </summary>
         [NameInMap("Expressions")]
         [Validation(Required=false)]
         public List<ModifyAlarmRequestExpressions> Expressions { get; set; }
         public class ModifyAlarmRequestExpressions : TeaModel {
             /// <summary>
-            /// <para>The operator that is used to compare the metric value and the threshold. Valid values:</para>
+            /// <para>The comparison operator between the statistical value and the threshold of the metric. The comparison operator indicates the relationship in which the statistical value and the threshold can satisfy the condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If the metric value is greater than or equal to the threshold, set the value to <c>&gt;=</c>.</description></item>
-            /// <item><description>If the metric value is less than or equal to the threshold, set the value to <c>&lt;=</c>.</description></item>
-            /// <item><description>If the metric value is greater than the threshold, set the value to <c>&gt;</c>.</description></item>
-            /// <item><description>If the metric value is less than the threshold, set the value to <c>&lt;</c>.</description></item>
+            /// <item><description>The statistical value is greater than or equal to the threshold. Value: <c>&gt;=</c>.</description></item>
+            /// <item><description>The statistical value is less than or equal to the threshold. Value: <c>&lt;=</c>.</description></item>
+            /// <item><description>The statistical value is greater than the threshold. Value: <c>&gt;</c>.</description></item>
+            /// <item><description>The statistical value is less than the threshold. Value: <c>&lt;</c>.</description></item>
             /// </list>
             /// <para>Default value: &gt;=.</para>
             /// 
@@ -182,37 +187,58 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ComparisonOperator { get; set; }
 
             /// <summary>
-            /// <para>The name of the metric that is specified in the multi-metric alert rule. The valid values vary based on the metric type.</para>
+            /// <para>The name of the monitoring metric in the multi-metric event-triggered node. Valid values vary based on the monitoring type of the event-triggered task: </para>
             /// <list type="bullet">
-            /// <item><description><para>If you set the MetricType parameter to custom, the valid values are your custom metrics.</para>
+            /// <item><description><para>If the event-triggered task is of the custom monitoring type (MetricType=custom), valid values are your custom monitoring metrics.</para>
             /// </description></item>
-            /// <item><description><para>If you set the MetricType parameter to system, the MetricName parameter has the following valid values:</para>
+            /// <item><description><para>If the event-triggered task is of the system monitoring type (MetricType=system), valid values: </para>
             /// <list type="bullet">
-            /// <item><description>CpuUtilization: the CPU utilization of an ECS instance. Unit: %.</description></item>
-            /// <item><description>IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.</description></item>
-            /// <item><description>IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.</description></item>
-            /// <item><description>VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.</description></item>
-            /// <item><description>VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.</description></item>
-            /// <item><description>SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.</description></item>
-            /// <item><description>SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.</description></item>
-            /// <item><description>SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.</description></item>
-            /// <item><description>SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.</description></item>
-            /// <item><description>CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.</description></item>
-            /// <item><description>GpuUtilizationAgent: the GPU utilization of an agent. Unit: %.</description></item>
-            /// <item><description>GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.</description></item>
-            /// <item><description>GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.</description></item>
-            /// <item><description>MemoryUtilization: the memory usage of an agent. Unit: %.</description></item>
-            /// <item><description>LoadAverage: the average system load of an agent.</description></item>
-            /// <item><description>TcpConnection: the total number of TCP connections of an agent.</description></item>
-            /// <item><description>TcpConnection: the number of established TCP connections of an agent.</description></item>
-            /// <item><description>PackagesNetOut: the number of packets that are sent by the internal NIC used by an agent.</description></item>
-            /// <item><description>PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.</description></item>
-            /// <item><description>EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.</description></item>
-            /// <item><description>EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.</description></item>
+            /// <item><description><para>CpuUtilization: (ECS) CPU utilization (%).</para>
+            /// </description></item>
+            /// <item><description><para>IntranetTx: (ECS) outbound traffic over the internal network (KByte/min).</para>
+            /// </description></item>
+            /// <item><description><para>IntranetRx: (ECS) inbound traffic over the internal network (KByte/min).</para>
+            /// </description></item>
+            /// <item><description><para>VpcInternetTx: (ECS) outbound traffic over the Internet (KByte/min).</para>
+            /// </description></item>
+            /// <item><description><para>VpcInternetRx: (ECS) inbound traffic over the Internet (KByte/min).</para>
+            /// </description></item>
+            /// <item><description><para>SystemDiskReadBps: (ECS) system cloud disk read BPS (Byte/s).</para>
+            /// </description></item>
+            /// <item><description><para>SystemDiskWriteBps: (ECS) system cloud disk write BPS (Byte/s).</para>
+            /// </description></item>
+            /// <item><description><para>SystemDiskReadOps: (ECS) system cloud disk read IOPS (count/s).</para>
+            /// </description></item>
+            /// <item><description><para>SystemDiskWriteOps: (ECS) system cloud disk write IOPS (count/s).</para>
+            /// </description></item>
+            /// <item><description><para>CpuUtilizationAgent: (Agent) CPU utilization (%).</para>
+            /// </description></item>
+            /// <item><description><para>GpuUtilizationAgent: (Agent) GPU utilization (%).</para>
+            /// </description></item>
+            /// <item><description><para>GpuMemoryFreeUtilizationAgent: (Agent) GPU memory idle rate (%).</para>
+            /// </description></item>
+            /// <item><description><para>GpuMemoryUtilizationAgent: (Agent) GPU memory utilization (%).</para>
+            /// </description></item>
+            /// <item><description><para>MemoryUtilization: (Agent) memory utilization (%).</para>
+            /// </description></item>
+            /// <item><description><para>LoadAverage: (Agent) average system load.</para>
+            /// </description></item>
+            /// <item><description><para>TcpConnection: (Agent) total number of TCP connections.</para>
+            /// </description></item>
+            /// <item><description><para>TcpConnection: (Agent) number of established TCP connections.</para>
+            /// </description></item>
+            /// <item><description><para>PackagesNetOut: (Agent) number of packets sent by the network interface controller (NIC).</para>
+            /// </description></item>
+            /// <item><description><para>PackagesNetIn: (Agent) number of packets received by the network interface controller (NIC).</para>
+            /// </description></item>
+            /// <item><description><para>EciPodCpuUtilization: CPU utilization (%).</para>
+            /// </description></item>
+            /// <item><description><para>EciPodMemoryUtilization: memory utilization (%).</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered task for system monitoring</a>.</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks for system monitoring</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CpuUtilization</para>
@@ -222,16 +248,31 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The period of time during which statistics about the metrics in the multi-metric alert rule is collected. Unit: seconds. Valid values:</para>
+            /// <para>The statistical period for the metric data in the multi-metric event-triggered task, in seconds. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>15</description></item>
-            /// <item><description>60</description></item>
-            /// <item><description>120</description></item>
-            /// <item><description>300</description></item>
-            /// <item><description>900</description></item>
+            /// <item><description><ol start="15">
+            /// <item><description></description></item>
+            /// </ol>
+            /// </description></item>
+            /// <item><description><ol start="60">
+            /// <item><description></description></item>
+            /// </ol>
+            /// </description></item>
+            /// <item><description><ol start="120">
+            /// <item><description></description></item>
+            /// </ol>
+            /// </description></item>
+            /// <item><description><ol start="300">
+            /// <item><description></description></item>
+            /// </ol>
+            /// </description></item>
+            /// <item><description><ol start="900">
+            /// <item><description></description></item>
+            /// </ol>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>If your scaling group is of the ECS type and the event-triggered task associated with your scaling group monitors CloudMonitor metrics, you can set the Period parameter to 15. In other cases, you can set the Period parameter to 60, 120, 300, or 900. In most cases, the name of a CloudMonitor metric contains Agent.</para>
+            /// <para>A statistical period of 15 seconds is applicable only to metrics collected by the CloudMonitor agent (metrics that start with Agent) when monitoring ECS-type scaling groups. For all other metrics, the statistical period can be set to 60, 120, 300, or 900 seconds.</para>
             /// </remarks>
             /// <para>Default value: 300.</para>
             /// 
@@ -243,11 +284,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to aggregate statistics about the metrics that are specified in the multi-metric alert rule. Valid values:</para>
+            /// <para>The method used to aggregate the metric data in the multi-metric event-triggered task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Average</description></item>
-            /// <item><description>Minimum</description></item>
-            /// <item><description>Maximum</description></item>
+            /// <item><description>Average: average value.</description></item>
+            /// <item><description>Minimum: minimum value.</description></item>
+            /// <item><description>Maximum: maximum value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -258,7 +299,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Statistics { get; set; }
 
             /// <summary>
-            /// <para>The thresholds of the metric values in the multi-metric alert rule. If the thresholds are reached the specified number of times within the specified period, a scaling rule is executed.</para>
+            /// <para>The threshold of the monitoring metrics in a multi-metric event-triggered task. The scaling rule is executed when the threshold expression is met the specified number of times.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40.0</para>
@@ -270,10 +311,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The relationship between the trigger conditions in the multi-metric alert rule. Valid values:</para>
+        /// <para>The relationship between multiple monitoring metrics conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>&amp;&amp;</c>: An alert is triggered only if all metrics in the multi-metric alert rule meet the trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are <c>true</c>.</description></item>
-        /// <item><description><c>||</c>: An alert is triggered if one of the metrics in the multi-metric alert rule meets the trigger condition.</description></item>
+        /// <item><description><c>&amp;&amp;</c>: An alert is triggered only when all monitoring metrics meet the alert conditions. An alert is triggered only when all expressions in the multi-metric event-triggered task evaluate to <c>true</c>.</description></item>
+        /// <item><description><c>||</c>: An alert is triggered when any monitoring metric meets the alert condition.</description></item>
         /// </list>
         /// <para>Default value: <c>&amp;&amp;</c>.</para>
         /// 
@@ -285,7 +326,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ExpressionsLogicOperator { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group to which the custom metric belongs. If you set the MetricType parameter to custom, you must specify this parameter.</para>
+        /// <para>The ID of the CloudMonitor application group to which the custom metric belongs. This parameter is required only when MetricType is set to custom.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4055401</para>
@@ -295,36 +336,56 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric. The valid values vary based on the metric type.</para>
+        /// <para>The name of the metric. Valid values vary based on the monitoring type of the event-triggered task: </para>
         /// <list type="bullet">
-        /// <item><description><para>If you set the MetricType parameter to custom, the valid values are your custom metrics.</para>
+        /// <item><description><para>If the event-triggered task is of the custom monitoring type (MetricType=custom), valid values are your custom metrics.</para>
         /// </description></item>
-        /// <item><description><para>If you set the MetricType parameter to system, the MetricName parameter has the following valid values:</para>
+        /// <item><description><para>If the event-triggered task is of the system monitoring type (MetricType=system), valid values: </para>
         /// <list type="bullet">
-        /// <item><description>CpuUtilization: the CPU utilization of an ECS instance. Unit: %.</description></item>
-        /// <item><description>IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.</description></item>
-        /// <item><description>IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a virtual private cloud (VPC). Unit: KB/min.</description></item>
-        /// <item><description>VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.</description></item>
-        /// <item><description>VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.</description></item>
-        /// <item><description>SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.</description></item>
-        /// <item><description>SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.</description></item>
-        /// <item><description>SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.</description></item>
-        /// <item><description>SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.</description></item>
-        /// <item><description>CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.</description></item>
-        /// <item><description>GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.</description></item>
-        /// <item><description>GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.</description></item>
-        /// <item><description>MemoryUtilization: the memory usage of an agent. Unit: %.</description></item>
-        /// <item><description>LoadAverage: the average system load of an agent.</description></item>
-        /// <item><description>TcpConnection: the total number of TCP connections of an agent.</description></item>
-        /// <item><description>TcpConnection: the number of established TCP connections of an agent.</description></item>
-        /// <item><description>PackagesNetOut: the number of packets that are sent by the internal network interface controller (NIC) used by an agent.</description></item>
-        /// <item><description>PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.</description></item>
-        /// <item><description>EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.</description></item>
-        /// <item><description>EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.</description></item>
+        /// <item><description><para>CpuUtilization: (ECS) CPU utilization (%).</para>
+        /// </description></item>
+        /// <item><description><para>IntranetTx: (ECS) outbound traffic over the internal network (KByte/min).</para>
+        /// </description></item>
+        /// <item><description><para>IntranetRx: (ECS) inbound traffic over the internal network (KByte/min).</para>
+        /// </description></item>
+        /// <item><description><para>VpcInternetTx: (ECS) outbound traffic over the Internet (KByte/min).</para>
+        /// </description></item>
+        /// <item><description><para>VpcInternetRx: (ECS) inbound traffic over the Internet (KByte/min).</para>
+        /// </description></item>
+        /// <item><description><para>SystemDiskReadBps: (ECS) system cloud disk read BPS (Byte/s).</para>
+        /// </description></item>
+        /// <item><description><para>SystemDiskWriteBps: (ECS) system cloud disk write BPS (Byte/s).</para>
+        /// </description></item>
+        /// <item><description><para>SystemDiskReadOps: (ECS) system cloud disk read IOPS (count/s).</para>
+        /// </description></item>
+        /// <item><description><para>SystemDiskWriteOps: (ECS) system cloud disk write IOPS (count/s).</para>
+        /// </description></item>
+        /// <item><description><para>CpuUtilizationAgent: (Agent) CPU utilization (%).</para>
+        /// </description></item>
+        /// <item><description><para>GpuMemoryFreeUtilizationAgent: (Agent) GPU memory idle rate (%).</para>
+        /// </description></item>
+        /// <item><description><para>GpuMemoryUtilizationAgent: (Agent) GPU memory utilization (%).</para>
+        /// </description></item>
+        /// <item><description><para>MemoryUtilization: (Agent) memory utilization (%).</para>
+        /// </description></item>
+        /// <item><description><para>LoadAverage: (Agent) average system load.</para>
+        /// </description></item>
+        /// <item><description><para>TcpConnection: (Agent) total number of TCP connections.</para>
+        /// </description></item>
+        /// <item><description><para>TcpConnection: (Agent) number of established TCP connections.</para>
+        /// </description></item>
+        /// <item><description><para>PackagesNetOut: (Agent) number of packets sent by the NIC.</para>
+        /// </description></item>
+        /// <item><description><para>PackagesNetIn: (Agent) number of packets received by the NIC.</para>
+        /// </description></item>
+        /// <item><description><para>EciPodCpuUtilization: CPU utilization (%).</para>
+        /// </description></item>
+        /// <item><description><para>EciPodMemoryUtilization: memory utilization (%).</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered task for system monitoring</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks for system monitoring</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MemoryUtilization</para>
@@ -334,10 +395,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The metric type. Valid Values:</para>
+        /// <para>The type of the metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: a system metric of CloudMonitor.</description></item>
-        /// <item><description>custom: a custom metric that is reported to CloudMonitor.</description></item>
+        /// <item><description>system: uses CloudMonitor system metrics.</description></item>
+        /// <item><description>custom: uses custom metrics reported to CloudMonitor.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -362,16 +423,31 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The period of time during which statistics about the metric is collected. Unit: seconds. Valid values:</para>
+        /// <para>The statistical period for the metric data, in seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>15</description></item>
-        /// <item><description>60</description></item>
-        /// <item><description>120</description></item>
-        /// <item><description>300</description></item>
-        /// <item><description>900</description></item>
+        /// <item><description><ol start="15">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="60">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="120">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="300">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><ol start="900">
+        /// <item><description></description></item>
+        /// </ol>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your scaling group is of the ECS type and uses CloudMonitor metrics, you can set the Period parameter to 15. In other cases, you can set the Period parameter to 60, 120, 300, or 900. In most cases, the name of a CloudMonitor metric contains Agent.</para>
+        /// <para>A statistical period of 15 seconds is applicable only to metrics collected by the CloudMonitor agent (metrics that start with Agent) when monitoring ECS-type scaling groups. For all other metrics, the statistical period can be set to 60, 120, 300, or 900 seconds.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -397,11 +473,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to aggregate statistics for the metric. Valid values:</para>
+        /// <para>The method used to aggregate the metric data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Average</description></item>
-        /// <item><description>Minimum</description></item>
-        /// <item><description>Maximum</description></item>
+        /// <item><description>Average: average value.</description></item>
+        /// <item><description>Minimum: minimum value.</description></item>
+        /// <item><description>Maximum: maximum value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -412,7 +488,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Statistics { get; set; }
 
         /// <summary>
-        /// <para>The thresholds of the metric values in the multi-metric alert rule. If the thresholds are reached the specified number of times within the specified period, a scaling rule is executed.</para>
+        /// <para>The threshold of the monitoring metrics in a multi-metric event-triggered task. The scaling rule is executed when the threshold expression is met the specified number of times.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>

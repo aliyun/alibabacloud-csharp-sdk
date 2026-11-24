@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateEciScalingConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89945DD3-9072-47D0-A318-353284CF****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the elastic container instance (container group).</para>
+        /// <para>The instance ID, which is the container group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eci-uf6fonnghi50u374****</para>

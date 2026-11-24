@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:</para>
+        /// <para>Specifies whether to protect the ECS instance from being terminated or removed from the scaling group during automatic scale-in. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Protects the ECS instance.</description></item>
+        /// <item><description>false: Does not protect the ECS instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

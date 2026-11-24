@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AlarmTaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BACACF83-7070-4953-A8FD-D81F89F1****</para>

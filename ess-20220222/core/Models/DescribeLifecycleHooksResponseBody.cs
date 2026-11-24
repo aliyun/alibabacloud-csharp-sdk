@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeLifecycleHooksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the lifecycle hooks.</para>
+        /// <para>The list of lifecycle hooks.</para>
         /// </summary>
         [NameInMap("LifecycleHooks")]
         [Validation(Required=false)]
         public List<DescribeLifecycleHooksResponseBodyLifecycleHooks> LifecycleHooks { get; set; }
         public class DescribeLifecycleHooksResponseBodyLifecycleHooks : TeaModel {
             /// <summary>
-            /// <para>The next action that is performed after the lifecycle hook times out.</para>
+            /// <para>The action to perform after the wait state of the instance ends.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONTINUE</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string DefaultResult { get; set; }
 
             /// <summary>
-            /// <para>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.</para>
+            /// <para>The wait time configured in the lifecycle hook for the scaling activity. The next action is performed after the wait time expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -35,6 +35,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("HeartbeatTimeout")]
             [Validation(Required=false)]
             public int? HeartbeatTimeout { get; set; }
+
+            /// <summary>
+            /// <para>The specific scenarios in which the lifecycle hook is triggered.</para>
+            /// </summary>
+            [NameInMap("LifecycleActionSources")]
+            [Validation(Required=false)]
+            public List<string> LifecycleActionSources { get; set; }
 
             /// <summary>
             /// <para>The ID of the lifecycle hook.</para>
@@ -59,8 +66,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The status of the lifecycle hook. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: The lifecycle hook is enabled.</description></item>
-            /// <item><description>InActive: The lifecycle hook is disabled.</description></item>
+            /// <item><description>Active: The lifecycle hook is active.</description></item>
+            /// <item><description>InActive: The lifecycle hook is inactive.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +78,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecycleHookStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the scaling activity to which the lifecycle hook applies.</para>
+            /// <para>The scaling activity type associated with the lifecycle hook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SCALE_OUT</para>
@@ -81,21 +88,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecycleTransition { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter must be in one of the following formats:</para>
+            /// <para>The identifier of the notification recipient for the lifecycle hook. The parameter format is as follows:</para>
             /// <list type="bullet">
-            /// <item><description>If you do not create a notification rule, specify the value in the <c>acs:ess:{region-id}:{account-id}:null/null</c> format.</description></item>
-            /// <item><description>If you specify a Simple Message Queue (SMQ, formerly MNS) queue as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c> format.</description></item>
-            /// <item><description>If you specify an SMQ as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c> format.</description></item>
-            /// <item><description>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the <c>acs:oos:{region-id}:{account-id}:template/{templatename}</c> format.</description></item>
-            /// <item><description>If you specify an event bus as the notification recipient, specify the value in the <c>acs:eventbridge:{region-id}:{account-id}:eventbus/default</c> format.</description></item>
+            /// <item><description>Notifications not configured: <c>acs:ess:{region-id}:{account-id}:null/null</c>.</description></item>
+            /// <item><description>MNS queue: <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c>.</description></item>
+            /// <item><description>MNS topic: <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c>.</description></item>
+            /// <item><description>OOS template: <c>acs:oos:{region-id}:{account-id}:template/{templatename}</c>.</description></item>
+            /// <item><description>EventBridge: <c>acs:eventbridge:{region-id}:{account-id}:eventbus/default</c>.</description></item>
             /// </list>
-            /// <para>The variables in the preceding value formats have the following meanings:</para>
+            /// <para>The variables in the parameter format have the following meanings:</para>
             /// <list type="bullet">
-            /// <item><description>region-id: the region ID of your scaling group.</description></item>
-            /// <item><description>account-id: the ID of your Alibaba Cloud account.</description></item>
-            /// <item><description>queuename: the name of the SMQ queue.</description></item>
-            /// <item><description>topicname: the name of the SMQ topic.</description></item>
-            /// <item><description>templatename: the name of the OOS template.</description></item>
+            /// <item><description>region-id: The ID of the region where the scaling group resides.</description></item>
+            /// <item><description>account-id: The Alibaba Cloud account ID.</description></item>
+            /// <item><description>queuename: The name of the MNS queue.</description></item>
+            /// <item><description>topicname: The name of the MNS topic.</description></item>
+            /// <item><description>templatename: The name of the OOS template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +113,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string NotificationArn { get; set; }
 
             /// <summary>
-            /// <para>The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.</para>
+            /// <para>The fixed string information for the wait state of the scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test Lifecycle Hook.</para>

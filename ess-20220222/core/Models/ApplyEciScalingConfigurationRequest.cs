@@ -43,12 +43,6 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
-        /// <summary>
-        /// <para>Optional. Set the value to YAML.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>YAML</para>
-        /// </summary>
         [NameInMap("Format")]
         [Validation(Required=false)]
         public string Format { get; set; }
@@ -64,8 +58,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling configuration.</para>
-        /// <para>If you want the system to update a scaling configuration of the Elastic Container Instance type based on a YAML configuration file, you must specify <c>ScalingConfigurationId</c>. If you do not specify <c>ScalingConfigurationId</c>, the system creates a new scaling configuration based on the YAML configuration file.</para>
+        /// <para>The ID of the scaling configuration to be updated. Specify ScalingConfigurationId when you update an ECI scaling configuration based on the Content parameter. If you do not specify ScalingConfigurationId, an ECI scaling configuration is created based on the Content parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc-bp1i65jd06v04vdh****</para>

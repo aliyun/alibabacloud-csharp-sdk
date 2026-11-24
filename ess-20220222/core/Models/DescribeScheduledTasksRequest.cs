@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number of the scheduled task list. Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 50.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The interval at which scheduled task N is repeatedly executed. Valid values:</para>
+        /// <para>The recurrence type of the scheduled task. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>Daily: Scheduled task N is executed once every specified number of days.</description></item>
-        /// <item><description>Weekly: Scheduled task N is executed on each specified day of a week.</description></item>
-        /// <item><description>Monthly: Scheduled task N is executed on each specified day of a month.</description></item>
-        /// <item><description>Cron: Scheduled task N is executed based on the specified Cron expression.</description></item>
+        /// <item><description>Daily: The scheduled task is executed once every specified number of days. </description></item>
+        /// <item><description>Weekly: The scheduled task is executed on specified days of each week. </description></item>
+        /// <item><description>Monthly: The scheduled task is executed on specified days of each month. </description></item>
+        /// <item><description>Cron: The scheduled task is executed based on a specified cron expression.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RecurrenceType { get; set; }
 
         /// <summary>
-        /// <para>The number of times scheduled task N is repeatedly executed.</para>
-        /// <para>You can specify this parameter only if you set RecurrenceType to Weekly. Separate multiple values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.</para>
+        /// <para>The recurrence value of the scheduled task.</para>
+        /// <para>This parameter is supported only when RecurrenceType is set to Weekly. You can specify multiple values separated by commas (,). For example, the values for Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling group to which the scheduled task belongs.</para>
+        /// <para>The ID of the scaling group that executes the scheduled task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asg-bp1bo5tca4m56nap****</para>
@@ -96,31 +96,31 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.</para>
+        /// <para>The scaling rules that are used when the scheduled tasks are triggered. This parameter is valid only when a scaling rule is specified for the scheduled task.</para>
         /// </summary>
         [NameInMap("ScheduledActions")]
         [Validation(Required=false)]
         public List<string> ScheduledActions { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the scheduled tasks that you want to query.</para>
+        /// <para>The IDs of the scheduled tasks to be queried.</para>
         /// </summary>
         [NameInMap("ScheduledTaskIds")]
         [Validation(Required=false)]
         public List<string> ScheduledTaskIds { get; set; }
 
         /// <summary>
-        /// <para>The names of the scheduled tasks that you want to query.</para>
+        /// <para>The names of the scheduled tasks to be queried.</para>
         /// </summary>
         [NameInMap("ScheduledTaskNames")]
         [Validation(Required=false)]
         public List<string> ScheduledTaskNames { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether scheduled task N is enabled.</para>
+        /// <para>Specifies whether the scheduled task is started. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The task is started.</description></item>
+        /// <item><description>false: The task is stopped.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? TaskEnabled { get; set; }
 
         /// <summary>
-        /// <para>The name of scheduled task N. Fuzzy search based on keywords is supported.</para>
+        /// <para>The name of the task. Fuzzy match by keyword is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scheduled****</para>

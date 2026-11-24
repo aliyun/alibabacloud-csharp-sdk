@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enabled scaling group.</para>
+        /// <para>The ID of the applied scaling group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asg-bp1igpak5ft1flyp****</para>

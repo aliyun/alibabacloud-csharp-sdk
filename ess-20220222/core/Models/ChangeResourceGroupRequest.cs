@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group to which you want to move the scaling group.</para>
+        /// <para>The ID of the new resource group to which you want to move the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling group that you want to move from the current resource group to another resource group.</para>
+        /// <para>The ID of the scaling group whose resource group you want to change.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to scalinggroup.</para>
+        /// <para>The resource type. Currently, only scaling groups are supported. Valid value: scalinggroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scalinggroup</para>

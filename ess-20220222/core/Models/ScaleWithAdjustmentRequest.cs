@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ScaleWithAdjustmentRequest : TeaModel {
         /// <summary>
-        /// <para>The metadata for the scaling activity.</para>
+        /// <para>The metadata of the scaling activity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ActivityMetadata { get; set; }
 
         /// <summary>
-        /// <para>The method used to adjust the number of instances in a scaling activity. Valid values:</para>
+        /// <para>The adjustment method for the scaling activity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>QuantityChangeInCapacity</c>: Adds or removes a specified number of ECS instances.</para>
-        /// </description></item>
-        /// <item><description><para><c>PercentChangeInCapacity</c>: Adds or removes a specified percentage of ECS instances.</para>
-        /// </description></item>
-        /// <item><description><para><c>TotalCapacity</c>: Adjusts the number of ECS instances in the scaling group to a specified number.</para>
-        /// </description></item>
+        /// <item><description>QuantityChangeInCapacity: Increases or decreases a specified number of ECS instances.</description></item>
+        /// <item><description>PercentChangeInCapacity: Increases or decreases a specified percentage of ECS instances.</description></item>
+        /// <item><description>TotalCapacity: Adjusts the number of ECS instances in the current scaling group to a specified number.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,14 +36,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AdjustmentType { get; set; }
 
         /// <summary>
-        /// <para>The adjustment value for the scaling activity. A single adjustment cannot add or remove more than 1,000 ECS instances. The valid range depends on <c>AdjustmentType</c>:</para>
+        /// <para>The adjustment value for the scaling activity. In all cases, the number of ECS instances adjusted in a single operation cannot exceed 1,000. Otherwise, the adjustment fails. Valid values vary based on the adjustment method:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>QuantityChangeInCapacity</c>: -1000 to 1000.</para>
-        /// </description></item>
-        /// <item><description><para><c>PercentChangeInCapacity</c>: -100 to 10000.</para>
-        /// </description></item>
-        /// <item><description><para><c>TotalCapacity</c>: 0 to 2000.</para>
-        /// </description></item>
+        /// <item><description>QuantityChangeInCapacity: -1,000 to 1,000.</description></item>
+        /// <item><description>PercentChangeInCapacity: -100 to 10,000.</description></item>
+        /// <item><description>TotalCapacity: 0 to 2,000.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +52,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? AdjustmentValue { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token to ensure the idempotence of the request. This token must be a unique string of up to 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -70,10 +64,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The execution mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>None</c>: Executes a standard scaling activity.</para>
-        /// </description></item>
-        /// <item><description><para><c>PlanOnly</c>: Only performs elastic planning and returns the results in <c>PlanResult</c> without triggering the scaling activity. The results include details such as instance types, availability zones, billing methods, and the number of new instances.</para>
-        /// </description></item>
+        /// <item><description>None: Not specified. Normal scaling is performed.</description></item>
+        /// <item><description>PlanOnly: Does not trigger scaling. Only elastic planning is executed. The planning results, including instance types, zone IDs, billing methods, and the number of instances to be created, are returned in PlanResult.</description></item>
         /// </list>
         /// <para>Default value: None.</para>
         /// 
@@ -85,7 +77,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ExecutionMode { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle hook context.</para>
+        /// <para>The context information of the lifecycle hook.</para>
         /// </summary>
         [NameInMap("LifecycleHookContext")]
         [Validation(Required=false)]
@@ -94,10 +86,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>Specifies whether to disable all lifecycle hooks for the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: Disables all lifecycle hooks.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: Does not disable lifecycle hooks.</para>
-            /// </description></item>
+            /// <item><description>true: Disables all lifecycle hooks.</description></item>
+            /// <item><description>false: Does not disable lifecycle hooks.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,12 +98,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? DisableLifecycleHook { get; set; }
 
             /// <summary>
-            /// <para>A list of lifecycle hook IDs to ignore during the scaling activity.</para>
+            /// <para>The list of IDs of the lifecycle hooks that are disabled for the scaling activity.</para>
             /// </summary>
             [NameInMap("IgnoredLifecycleHookIds")]
             [Validation(Required=false)]
             public List<string> IgnoredLifecycleHookIds { get; set; }
 
+            /// <summary>
+            /// <para>The default execution result of the lifecycle hook in this scaling activity. If specified, this value overrides the original default execution result of the hook.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONTINUE</para>
+            /// </summary>
             [NameInMap("LifecycleHookResult")]
             [Validation(Required=false)]
             public string LifecycleHookResult { get; set; }
@@ -121,7 +117,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The minimum number of instances to adjust in a scaling activity. This parameter takes effect only when <c>AdjustmentType</c> is set to <c>PercentChangeInCapacity</c>.</para>
+        /// <para>The minimum number of instances to be adjusted in the scaling activity. This parameter takes effect only when <c>AdjustmentType</c> is set to <c>PercentChangeInCapacity</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -131,28 +127,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinAdjustmentMagnitude { get; set; }
 
         /// <summary>
-        /// <para>The parameters to override when scaling out an ECI scaling group.</para>
+        /// <para>The override parameters specified for scaling out an Elastic Container Instance (ECI) scaling group.</para>
         /// </summary>
         [NameInMap("Overrides")]
         [Validation(Required=false)]
         public ScaleWithAdjustmentRequestOverrides Overrides { get; set; }
         public class ScaleWithAdjustmentRequestOverrides : TeaModel {
             /// <summary>
-            /// <para>A list of container-specific overrides.</para>
+            /// <para>The override parameters for the container list.</para>
             /// </summary>
             [NameInMap("ContainerOverrides")]
             [Validation(Required=false)]
             public List<ScaleWithAdjustmentRequestOverridesContainerOverrides> ContainerOverrides { get; set; }
             public class ScaleWithAdjustmentRequestOverridesContainerOverrides : TeaModel {
                 /// <summary>
-                /// <para>The arguments for the container\&quot;s startup command. You can specify up to 10 arguments.</para>
+                /// <para>The arguments for the container startup command. A maximum of 10 arguments can be specified.</para>
                 /// </summary>
                 [NameInMap("Args")]
                 [Validation(Required=false)]
                 public List<string> Args { get; set; }
 
                 /// <summary>
-                /// <para>The container\&quot;s startup command, specified as an array of strings. You can specify up to 20 strings, and each can be up to 256 characters long.</para>
+                /// <para>The startup commands for the container. A maximum of 20 commands can be specified. Each command can contain up to 256 characters.</para>
                 /// </summary>
                 [NameInMap("Commands")]
                 [Validation(Required=false)]
@@ -169,14 +165,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public float? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>Environment variables to set in the container.</para>
+                /// <para>The list of environment variables.</para>
                 /// </summary>
                 [NameInMap("EnvironmentVars")]
                 [Validation(Required=false)]
                 public List<ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars> EnvironmentVars { get; set; }
                 public class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars : TeaModel {
                     /// <summary>
-                    /// <para>The name of the environment variable. It must be 1 to 128 characters long, cannot start with a digit, and can contain only letters (a-z, A-Z), digits (0-9), and underscores (_).</para>
+                    /// <para>The name of the environment variable. The name must be 1 to 128 characters in length. It can contain letters, digits, and underscores (_), and cannot start with a digit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PATH</para>
@@ -186,7 +182,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the environment variable, up to 256 characters long.</para>
+                    /// <para>The value of the environment variable. The value can be 0 to 256 characters in length.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/usr/local/tomcat</para>
@@ -198,7 +194,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The memory size for the container. Unit: GiB.</para>
+                /// <para>The memory size of the container. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -208,7 +204,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public float? Memory { get; set; }
 
                 /// <summary>
-                /// <para>The name of the container to override. The override takes effect only if this name matches a container name in the scaling configuration.</para>
+                /// <para>The name of the container. When you need to override container parameters, you must specify the container name. The container parameters can be overridden only when the container name matches the container name in the scaling configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>container-1</para>
@@ -220,7 +216,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The number of vCPUs for the instance. Unit: cores.</para>
+            /// <para>The number of vCPUs at the instance level. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -230,7 +226,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The memory size for the instance. Unit: GiB.</para>
+            /// <para>The memory size at the instance level. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -240,7 +236,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Memory { get; set; }
 
             /// <summary>
-            /// <para>The user data for the ECS instance. It must be Base64-encoded, and the raw data cannot exceed 32 KB.</para>
+            /// <para>The user data of the ECS instance. The user data must be encoded in Base64. The maximum size of the raw data before encoding is 32 KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
@@ -256,7 +252,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the current scaling activity supports concurrency.</para>
+        /// <para>Specifies whether the current scaling task supports concurrent execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -281,12 +277,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to execute the scaling activity synchronously. This parameter applies only to scaling groups that are configured with an expected number of instances. Valid values:</para>
+        /// <para>Specifies whether to synchronously execute the scaling activity. This parameter is valid only for scaling groups that have the expected number of instances configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Synchronous execution. The scaling activity is triggered immediately.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: Asynchronous execution. The call updates the expected number of instances without immediately triggering the scaling activity. The activity occurs when the system detects a discrepancy between the new expected number and the current number of instances.</para>
-        /// </description></item>
+        /// <item><description>true: Synchronous process. When the scaling rule is executed, the scale-out or scale-in activity of the scaling group is directly triggered.</description></item>
+        /// <item><description>false: Asynchronous process. When the expected number of instances in the scaling group is modified, the actual scale-out or scale-in activity of the scaling group is not immediately triggered. The system automatically detects the difference between the expected number of instances and the current number of instances in the scaling group, and then triggers the scale-out or scale-in activity.</description></item>
         /// </list>
         /// <remarks>
         /// <para>For more information about the expected number of instances, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</para>

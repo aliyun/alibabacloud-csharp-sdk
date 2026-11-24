@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateDiagnoseReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the diagnostic report.</para>
+        /// <para>The diagnostic report ID, which is the unique identifier of the resource diagnostic report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dr-uf6enpbnri1xhcy9qc7s</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ReportId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0189C6CB-07BA-5AFE-B533-D93892324774</para>

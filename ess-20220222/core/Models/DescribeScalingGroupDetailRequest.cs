@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingGroupDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The output format. Set the value to yaml.</para>
+        /// <para>The output format. Only the YAML format is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YAML</para>

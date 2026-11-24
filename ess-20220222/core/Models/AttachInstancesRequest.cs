@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request.</para>
+        /// <para>You can generate a parameter value from your client to ensure that the value is unique among different requests. The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the scaling group to manage the lifecycles of manually added instances. Valid values:</para>
+        /// <para>Specifies whether to entrust the lifecycle of an existing instance to the scaling group when the instance is manually added to the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</description></item>
-        /// <item><description>false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</description></item>
+        /// <item><description>true: Entrusted. The lifecycle of the instance is managed by Auto Scaling, which is the same as that of instances automatically created by the scaling group. The instance is automatically released when it is removed from the scaling group (excluding instances removed when you invoke the DetachInstances operation).</description></item>
+        /// <item><description>false: Not entrusted. The instance is not released when it is removed from the scaling group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.</para>
+        /// <para>This parameter is not supported for subscription instances, managed instances, and instances in the Economical Mode in the scaling group.</para>
         /// </remarks>
         /// <para>Default value: false.</para>
         /// 
@@ -41,8 +41,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>Specifies whether to ignore invalid instances when a batch of instances is added to the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: ignores invalid instances. If invalid instances exist and valid instances are added, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</description></item>
-        /// <item><description>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to add to the scaling group, an error is reported.</description></item>
+        /// <item><description><para>true: Invalid instances are ignored when a batch of instances is added to the scaling group. If invalid instances exist and valid instances are successfully added, the execution status of the scaling activity is displayed as Warning. You can view the invalid instances in the scaling activity details.</para>
+        /// </description></item>
+        /// <item><description><para>false: Invalid instances are not ignored when a batch of instances is added to the scaling group. If invalid instances exist in the batch, an error is reported.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -54,21 +56,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? IgnoreInvalidInstance { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.</para>
+        /// <para>The IDs of the ECS instances, ECI instances, managed instances, or instances in the Economical Mode in the scaling group to be added.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to trigger the lifecycle hook for scale-outs when you call this operation. Valid values:</para>
+        /// <para>Specifies whether to trigger the scale-out lifecycle hook when instances are added to the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> You cannot specify this parameter for subscription instances and instances in Economical Mode.</para>
+        /// <item><description>true: Triggered.</description></item>
+        /// <item><description>false: Not triggered.<remarks>
+        /// <para>This parameter is not supported for managed instances and instances in the Economical Mode in the scaling group.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? LifecycleHook { get; set; }
 
         /// <summary>
-        /// <para>The weight of an ECS instance or elastic container instance as a backend server. You can use this parameter to specify weights for multiple instances at the same time.</para>
+        /// <para>The weight of the ECS instance or ECI instance as a backend server of the load balancing instance.</para>
         /// </summary>
         [NameInMap("LoadBalancerWeights")]
         [Validation(Required=false)]

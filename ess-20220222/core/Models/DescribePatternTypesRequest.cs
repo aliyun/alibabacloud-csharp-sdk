@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribePatternTypesRequest : TeaModel {
         /// <summary>
-        /// <para>The architecture types of the instance types. Valid values:</para>
+        /// <para>The architecture type of the instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>X86: x86 architecture.</description></item>
-        /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</description></item>
-        /// <item><description>BareMetal: ECS Bare Metal Instance.</description></item>
-        /// <item><description>Arm: Arm.</description></item>
+        /// <item><description>X86: x86 computing</description></item>
+        /// <item><description>Heterogeneous: heterogeneous computing, such as GPU or FPGA</description></item>
+        /// <item><description>BareMental: Elastic Compute Service Bare Metal Server</description></item>
+        /// <item><description>Arm: Arm computing</description></item>
         /// </list>
-        /// <para>By default, all values are selected.</para>
+        /// <para>Default value: all architecture types.</para>
         /// </summary>
         [NameInMap("Architecture")]
         [Validation(Required=false)]
         public List<string> Architecture { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include burstable instance types. Valid values:</para>
+        /// <para>Specifies whether the instance type is a burstable instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Exclude: does not include burstable instance types.</description></item>
-        /// <item><description>Include: includes burstable instance types.</description></item>
-        /// <item><description>Required: includes only burstable instance types.</description></item>
+        /// <item><description>Exclude: Burstable instance types are excluded.</description></item>
+        /// <item><description>Include: Burstable instance types are included.</description></item>
+        /// <item><description>Required: Only burstable instance types are included.</description></item>
         /// </list>
         /// <para>Default value: Include.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string BurstablePerformance { get; set; }
 
         /// <summary>
-        /// <para>The channel ID. This parameter is not for public use.</para>
+        /// <para>The channel ID. This parameter is reserved for internal use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79425074</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs that you want to assign to the instance type.</para>
+        /// <para>The number of vCPUs for the instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -60,20 +60,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs that you want to assign to the instance type. You can specify multiple vCPUs.</para>
+        /// <para>The number of vCPUs for the instance type. You can specify multiple values.</para>
         /// </summary>
         [NameInMap("CoresList")]
         [Validation(Required=false)]
         public List<int?> CoresList { get; set; }
 
         /// <summary>
-        /// <para>The CPU architectures of the instance types. Valid values:</para>
+        /// <para>The CPU architecture of the instance type. Valid values:</para>
         /// <remarks>
-        /// <para> You can specify 1 to 2 CPU architectures.</para>
+        /// <para>N specifies the number of CPU architectures that you can set. Valid values of N: 1 to 2.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>x86</description></item>
-        /// <item><description>Arm</description></item>
+        /// <item><description>X86</description></item>
+        /// <item><description>ARM</description></item>
         /// </list>
         /// </summary>
         [NameInMap("CpuArchitectures")]
@@ -85,30 +85,30 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> ExcludedInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The GPU models.</para>
+        /// <para>The GPU type.</para>
         /// </summary>
         [NameInMap("GpuSpecs")]
         [Validation(Required=false)]
         public List<string> GpuSpecs { get; set; }
 
         /// <summary>
-        /// <para>The classifications of the instance types. Valid values:</para>
+        /// <para>The categorization of the instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>General-purpose: general-purpose instance type.</description></item>
-        /// <item><description>Compute-optimized: compute-optimized instance type.</description></item>
-        /// <item><description>Memory-optimized: memory-optimized instance type.</description></item>
-        /// <item><description>Big data: big data instance type.</description></item>
-        /// <item><description>Local SSDs: instance type with local SSDs.</description></item>
-        /// <item><description>High Clock Speed: instance type with high clock speeds.</description></item>
-        /// <item><description>Enhanced: enhanced instance type.</description></item>
-        /// <item><description>Shared: shared instance type.</description></item>
-        /// <item><description>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</description></item>
-        /// <item><description>Visual Compute-optimized: visual compute-optimized instance type.</description></item>
-        /// <item><description>Heterogeneous Service: heterogeneous service instance type.</description></item>
-        /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</description></item>
-        /// <item><description>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</description></item>
-        /// <item><description>ECS Bare Metal: ECS Bare Metal Instance type.</description></item>
-        /// <item><description>High Performance Compute: HPC-optimized instance type.</description></item>
+        /// <item><description>General-purpose: general-purpose</description></item>
+        /// <item><description>Compute-optimized: compute-optimized</description></item>
+        /// <item><description>Memory-optimized: memory-optimized</description></item>
+        /// <item><description>Big data: big data</description></item>
+        /// <item><description>Local SSDs: local SSD</description></item>
+        /// <item><description>High Clock Speed: high frequency</description></item>
+        /// <item><description>Enhanced: enhanced</description></item>
+        /// <item><description>Shared: shared</description></item>
+        /// <item><description>Compute-optimized with GPU: GPU-accelerated compute-optimized</description></item>
+        /// <item><description>Visual Compute-optimized: visual compute-optimized</description></item>
+        /// <item><description>Heterogeneous Service: heterogeneous service</description></item>
+        /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized</description></item>
+        /// <item><description>Compute-optimized with NPU: NPU-accelerated compute-optimized</description></item>
+        /// <item><description>ECS Bare Metal: Elastic Compute Service Bare Metal Server</description></item>
+        /// <item><description>High Performance Compute: high-performance computing (HPC)</description></item>
         /// </list>
         /// </summary>
         [NameInMap("InstanceCategories")]
@@ -118,9 +118,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The level of the instance family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EntryLevel: entry level</description></item>
-        /// <item><description>EnterpriseLevel: enterprise level</description></item>
-        /// <item><description>CreditEntryLevel: credit-based entry level For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</description></item>
+        /// <item><description>EntryLevel: Entry-level instance family.</description></item>
+        /// <item><description>EnterpriseLevel: Enterprise-level instance family.</description></item>
+        /// <item><description>CreditEntryLevel: Credit entry-level instance family. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,14 +131,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The instance families that you want to query. You can query 1 to 10 instance families in each call.</para>
+        /// <para>The instance families to be queried. N specifies the number of instance families that you can set. Valid values of N: 1 to 10.</para>
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
         public List<string> InstanceTypeFamilies { get; set; }
 
         /// <summary>
-        /// <para>The maximum hourly price for pay-as-you-go or preemptible instances.</para>
+        /// <para>The maximum acceptable hourly price for the pay-as-you-go or spot instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of vCPUs per instance type.</para>
+        /// <para>The maximum number of vCPUs for the instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaximumCpuCoreCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of GPUs per instance. The value must be a positive integer.</para>
+        /// <para>The maximum number of GPUs for the instance. Valid values: positive integers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaximumGpuAmount { get; set; }
 
         /// <summary>
-        /// <para>The maximum memory size per instance. Unit: GiB.</para>
+        /// <para>The maximum memory size of the instance. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? MaximumMemorySize { get; set; }
 
         /// <summary>
-        /// <para>The memory size that you want to assign to the instance type. Unit: GiB.</para>
+        /// <para>The memory size of the instance type. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? Memory { get; set; }
 
         /// <summary>
-        /// <para>The memory size that you want to assign to the instance type. Unit: GiB. You can specify multiple memory sizes.</para>
+        /// <para>The memory size of the instance type. Unit: GiB. You can specify multiple values.</para>
         /// </summary>
         [NameInMap("MemoryList")]
         [Validation(Required=false)]
         public List<float?> MemoryList { get; set; }
 
         /// <summary>
-        /// <para>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</para>
+        /// <para>The minimum baseline vCPU computing performance (sum of all vCPUs) for burstable instances of the t5 and t6 instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinimumBaselineCredit { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of vCPUs per instance type.</para>
+        /// <para>The minimum number of vCPUs for the instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinimumCpuCoreCount { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of IPv6 addresses per ENI.</para>
+        /// <para>The minimum upper limit on the number of IPv6 addresses per elastic network interface controller (NIC) for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinimumEniIpv6AddressQuantity { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of IPv4 addresses per ENI.</para>
+        /// <para>The minimum upper limit on the number of IPv4 addresses per elastic network interface controller (NIC) for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinimumEniPrivateIpAddressQuantity { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of elastic network interfaces (ENIs) per instance.</para>
+        /// <para>The minimum upper limit on the number of elastic network interfaces (ENIs) that can be bound to the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinimumEniQuantity { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of GPUs per instance. The value must be a positive integer.</para>
+        /// <para>The minimum number of GPUs for the instance. Valid values: positive integers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinimumGpuAmount { get; set; }
 
         /// <summary>
-        /// <para>The initial vCPU credits per t5 or t6 burstable instance.</para>
+        /// <para>The minimum initial vCPU credit for burstable instances of the t5 and t6 instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinimumInitialCredit { get; set; }
 
         /// <summary>
-        /// <para>The minimum memory size per instance. Unit: GiB.</para>
+        /// <para>The minimum memory size of the instance. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? MinimumMemorySize { get; set; }
 
         /// <summary>
-        /// <para>The processor models of the instance types. You can specify 1 to 10 processor models.</para>
+        /// <para>The processor model of the instance. N specifies the number of processor models that you can set. Valid values of N: 1 to 10.</para>
         /// </summary>
         [NameInMap("PhysicalProcessorModels")]
         [Validation(Required=false)]
@@ -293,11 +293,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The preemption policy that you want to apply to pay-as-you-go instances. Valid values:</para>
+        /// <para>The preemption policy for the pay-as-you-go instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instances are created as regular pay-as-you-go instances.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</description></item>
+        /// <item><description>NoSpot: regular pay-as-you-go instance</description></item>
+        /// <item><description>SpotWithPriceLimit: spot instance with a maximum price limit</description></item>
+        /// <item><description>SpotAsPriceGo: spot instance whose price is automatically offered by the system based on the current market price</description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>
         /// 
@@ -309,14 +309,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the vSwitches.</para>
+        /// <para>The list of vSwitch IDs. You must specify at least one of VSwitchId and ZoneId.</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public List<string> VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone IDs. If you pass vSwitch IDs to the system, this parameter does not take effect.</para>
+        /// <para>The list of zone IDs. This parameter is invalid if a vSwitch ID is specified. You must specify at least one of VSwitchId and ZoneId.</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

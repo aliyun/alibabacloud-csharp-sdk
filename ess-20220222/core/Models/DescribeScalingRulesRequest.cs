@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number of the scaling rule list. Pages start from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 50.</para>
+        /// <para>The Settings for the number of entries per page during a paged query. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group to which the scaling rules that you want to query belong.</para>
+        /// <para>The region ID of the scaling group to which the scaling rules belong.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,33 +69,33 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifiers of the scaling rules that you want to query.</para>
+        /// <para>The unique identifiers of the scaling rules to be queried.</para>
         /// </summary>
         [NameInMap("ScalingRuleAris")]
         [Validation(Required=false)]
         public List<string> ScalingRuleAris { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the scaling rules that you want to query.</para>
+        /// <para>The IDs of the scaling rules to be queried.</para>
         /// </summary>
         [NameInMap("ScalingRuleIds")]
         [Validation(Required=false)]
         public List<string> ScalingRuleIds { get; set; }
 
         /// <summary>
-        /// <para>The names of the scaling rules that you want to query.</para>
+        /// <para>The names of the scaling rules to be queried.</para>
         /// </summary>
         [NameInMap("ScalingRuleNames")]
         [Validation(Required=false)]
         public List<string> ScalingRuleNames { get; set; }
 
         /// <summary>
-        /// <para>The type of the scaling rule. Valid values:</para>
+        /// <para>The type of the scaling rule. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.</description></item>
-        /// <item><description>TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.</description></item>
-        /// <item><description>StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.</description></item>
-        /// <item><description>PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.</description></item>
+        /// <item><description>SimpleScalingRule: simple scaling rule. Adjusts the number of ECS instances based on the adjustment type (AdjustmentType) and adjustment value (AdjustmentValue).</description></item>
+        /// <item><description>TargetTrackingScalingRule: target tracking scaling rule. Dynamically calculates the number of ECS instances to scale out or scale-in based on a predefined metric (MetricName) and attempts to maintain the metric value near the target value (TargetValue).</description></item>
+        /// <item><description>StepScalingRule: step scaling rule. Provides a step-by-step extension method based on thresholds and metric values.</description></item>
+        /// <item><description>PredictiveScalingRule: predictive scaling rule. Analyzes the historical monitoring data of the scaling group based on machine learning capabilities to predict future monitoring metrics, and supports the automatic creation of scheduled tasks to set the boundaries of the scaling group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,10 +106,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingRuleType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the event-triggered tasks that are associated with the scaling rule. Valid values:</para>
+        /// <para>Specifies whether to return the CloudMonitor event-triggered tasks associated with the scaling rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: returns the CloudMonitor event-triggered tasks associated with the scaling rules.</description></item>
+        /// <item><description>false: does not return the CloudMonitor event-triggered tasks associated with the scaling rules.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

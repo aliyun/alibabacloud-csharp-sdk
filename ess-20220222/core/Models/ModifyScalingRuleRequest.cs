@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The adjustment method of the scaling rule. This is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. Valid values:</para>
+        /// <para>The adjustment method of the scaling rule. This parameter is required and applicable only to simple scaling rules and step scaling rules. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</description></item>
-        /// <item><description>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</description></item>
-        /// <item><description>TotalCapacity: adjusts the number of ECS instances in the scaling group to the specified number.</description></item>
+        /// <item><description>QuantityChangeInCapacity: adds or removes a specified number of ECS instances. </description></item>
+        /// <item><description>PercentChangeInCapacity: adds or removes a specified percentage of ECS instances. </description></item>
+        /// <item><description>TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AdjustmentType { get; set; }
 
         /// <summary>
-        /// <para>The target value specified in the scaling rule. This parameter is required when the ScalingRuleType parameter is set to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.</para>
+        /// <para>The adjustment value of the scaling rule. This parameter is required and applicable only to simple scaling rules and step scaling rules. The number of ECS instances adjusted in a single operation cannot exceed 1,000. Valid values vary based on the adjustment method:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</description></item>
-        /// <item><description>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</description></item>
-        /// <item><description>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</description></item>
+        /// <item><description>QuantityChangeInCapacity: -1000 to 1000.</description></item>
+        /// <item><description>PercentChangeInCapacity: -100 to 10000.</description></item>
+        /// <item><description>TotalCapacity: 0 to 2000.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? AdjustmentValue { get; set; }
 
         /// <summary>
-        /// <para>The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.</para>
+        /// <para>The dimension values of the monitoring metric. This parameter is applicable to target tracking scaling rules and is configured when the monitoring metric requires additional dimension information. For example, the LoadBalancerRealServerAverageQps metric requires the rulePool dimension.</para>
         /// </summary>
         [NameInMap("AlarmDimensions")]
         [Validation(Required=false)]
         public List<ModifyScalingRuleRequestAlarmDimensions> AlarmDimensions { get; set; }
         public class ModifyScalingRuleRequestAlarmDimensions : TeaModel {
             /// <summary>
-            /// <para>The dimension key of the metric.</para>
+            /// <para>The key of the dimension associated with the monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rulePool</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string DimensionKey { get; set; }
 
             /// <summary>
-            /// <para>The dimension value of the metric.</para>
+            /// <para>The value of the dimension associated with the monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sgp-l1cbirz451yxu2dxxx</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public ModifyScalingRuleRequestAlarmOptions AlarmOptions { get; set; }
         public class ModifyScalingRuleRequestAlarmOptions : TeaModel {
             /// <summary>
-            /// <para>The statistical period of the metric data in the target tracking scaling rule. Unit: seconds. Valid values:</para>
+            /// <para>The period for collecting monitoring metric data in the target tracking scaling rule. Unit: seconds. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>15</description></item>
             /// <item><description>60</description></item>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <item><description>900</description></item>
             /// </list>
             /// <remarks>
-            /// <para> Default value: 60.</para>
+            /// <para>Default value: 60.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.</para>
+        /// <para>The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules.</para>
         /// <para>Valid values: 0 to 86400. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? Cooldown { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.</para>
+        /// <para>Specifies whether to disable scale-in. This parameter is applicable only to target tracking scaling rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? DisableScaleIn { get; set; }
 
         /// <summary>
-        /// <para>The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.</para>
+        /// <para>The warmup period of instances. This parameter is applicable to target tracking scaling rules and step scaling rules. ECS instances in the warmup state are added to the scaling group as usual, but they do not report monitoring data to CloudMonitor during the warmup period.</para>
         /// <remarks>
-        /// <para>Auto Scaling calculates the number of ECS instances that need to be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</para>
+        /// <para>When the system dynamically calculates the number of ECS instances to scale out or scale in, instances in the warmup state are not counted as existing instances.</para>
         /// </remarks>
         /// <para>Valid values: 0 to 86400. Unit: seconds.</para>
         /// 
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? EstimatedInstanceWarmup { get; set; }
 
         /// <summary>
-        /// <para>The Hybrid Cloud Monitoring metrics. For more information, see <a href="https://help.aliyun.com/document_detail/2852162.html">Create a custom target tracking scaling rule</a>.</para>
+        /// <para>The Hybrid Cloud Monitoring monitoring metrics settings. For more information about how to configure the settings, see <a href="https://help.aliyun.com/document_detail/2852162.html">Use formula operations to customize target tracking scaling rules</a>.</para>
         /// </summary>
         [NameInMap("HybridMetrics")]
         [Validation(Required=false)]
         public List<ModifyScalingRuleRequestHybridMetrics> HybridMetrics { get; set; }
         public class ModifyScalingRuleRequestHybridMetrics : TeaModel {
             /// <summary>
-            /// <para>The metric dimensions. You can use this parameter to specify the monitored resources.</para>
+            /// <para>The dimensions of the metric. This parameter is used to specify the resources monitored by the metric.</para>
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
@@ -169,8 +169,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The metric expression that consists of multiple Hybrid Cloud Monitoring metrics. It calculates a result used to trigger scaling events.</para>
-            /// <para>The expression must be written in Reverse Polish Notation (RPN) format and supports only the following operators: <c>+, -, *, /</c>.</para>
+            /// <para>The metric operation expression for multiple Hybrid Cloud Monitoring metrics. The calculation result of the expression is used to trigger scaling activities.</para>
+            /// <para>The operation expression must comply with the Reverse Polish Notation (RPN) specification, and only the <c>+</c>, <c>-</c>, <c>*</c>, and <c>/</c> operators are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(a+b)/2</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Expression { get; set; }
 
             /// <summary>
-            /// <para>The reference ID of the metric in the metric expression.</para>
+            /// <para>The reference ID of the metric in the metric operation expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the Hybrid Cloud Monitoring metric.</para>
+            /// <para>The name of the metric in the Hybrid Cloud Monitoring monitoring metrics repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunSmq_NumberOfMessagesVisible</para>
@@ -200,11 +200,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The statistical method of the metric value. Valid values:</para>
+            /// <para>The statistical method of the metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Average: calculates the average value of all metric values within a specified interval.</description></item>
-            /// <item><description>Minimum: calculates the minimum value of all metric values within a specified interval.</description></item>
-            /// <item><description>Maximum: calculates the maximum value of all metric values within a specified interval.</description></item>
+            /// <item><description>Average: the average value of all data points in the specified period.</description></item>
+            /// <item><description>Minimum: the minimum value of all data points in the specified period.</description></item>
+            /// <item><description>Maximum: the maximum value of all data points in the specified period.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,8 +217,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Hybrid Cloud Monitoring namespace.</para>
-        /// <para>For information about how to manage Hybrid Cloud Monitoring namespaces, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage namespaces</a>.</para>
+        /// <para>The ID of the Hybrid Cloud Monitoring monitoring metrics repository.</para>
+        /// <para>For more information about how to manage monitoring metrics repositories, see <a href="https://help.aliyun.com/document_detail/217606.html">Manage monitoring metrics repositories</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-test</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HybridMonitorNamespace { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify <c>PredictiveValueBehavior</c>.</para>
+        /// <para>The maximum number of instances in the scaling group. This parameter is used together with <c>PredictiveValueBehavior</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -238,25 +238,25 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? InitialMaxSize { get; set; }
 
         /// <summary>
-        /// <para>The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.</para>
-        /// <para>Valid values if you create a target tracking scaling rule:</para>
+        /// <para>The predefined monitoring metric. This parameter is required and applicable to target tracking scaling rules and predictive scaling rules.</para>
+        /// <para>Valid values for target tracking scaling rules:</para>
         /// <list type="bullet">
-        /// <item><description>CpuUtilizationAgent (recommended): the CPU utilization.</description></item>
-        /// <item><description>MemoryUtilization (recommended): the memory usage.</description></item>
-        /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
-        /// <item><description>IntranetTx: the average outbound traffic over an internal network.</description></item>
-        /// <item><description>IntranetRx: the average inbound traffic over an internal network.</description></item>
-        /// <item><description>VpcInternetTx: the average outbound traffic from a virtual private cloud (VPC) to the Internet.</description></item>
-        /// <item><description>VpcInternetRx: the average inbound traffic from the Internet to a VPC.</description></item>
-        /// <item><description>LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.</description></item>
+        /// <item><description>CpuUtilizationAgent: the CPU utilization collected by the CloudMonitor agent (recommended).</description></item>
+        /// <item><description>MemoryUtilization: the memory usage collected by the CloudMonitor agent (recommended).</description></item>
+        /// <item><description>CpuUtilization: the average CPU utilization of ECS instances.</description></item>
+        /// <item><description>IntranetTx: the average outbound internal traffic of ECS instances.</description></item>
+        /// <item><description>IntranetRx: the average inbound internal traffic of ECS instances.</description></item>
+        /// <item><description>VpcInternetTx: the average outbound Internet traffic of ECS instances.</description></item>
+        /// <item><description>VpcInternetRx: the average inbound Internet traffic of ECS instances.</description></item>
+        /// <item><description>LoadBalancerRealServerAverageQps: the average queries per second (QPS) per backend server in an Application Load Balancer (ALB) server group.</description></item>
         /// </list>
-        /// <para>Valid values if you create a predictive scaling rule:</para>
+        /// <para>Valid values for predictive scaling rules:</para>
         /// <list type="bullet">
-        /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
-        /// <item><description>IntranetRx: the average inbound traffic over an internal network.</description></item>
-        /// <item><description>IntranetTx: the average outbound traffic over an internal network.</description></item>
+        /// <item><description>CpuUtilization: the average CPU utilization of ECS instances.</description></item>
+        /// <item><description>IntranetRx: the average inbound internal traffic of ECS instances.</description></item>
+        /// <item><description>IntranetTx: the average outbound internal traffic of ECS instances.</description></item>
         /// </list>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">System monitoring event-triggered tasks</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CpuUtilization</para>
@@ -266,11 +266,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The metric type. Valid values:</para>
+        /// <para>The type of the monitoring metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: system metrics of CloudMonitor.</description></item>
-        /// <item><description>custom: custom metrics that are reported to CloudMonitor.</description></item>
-        /// <item><description>hybrid: metrics of Hybrid Cloud Monitoring.</description></item>
+        /// <item><description>system: uses system metrics of CloudMonitor.</description></item>
+        /// <item><description>custom: uses custom metrics reported to CloudMonitor.</description></item>
+        /// <item><description>hybrid: uses metrics of Hybrid Cloud Monitoring.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of instances to scale. This parameter takes effect only if you create a simple scaling rule or step scaling rule and set <c>AdjustmentType</c> to <c>PercentChangeInCapacity</c>.</para>
+        /// <para>The minimum number of instances to adjust. This parameter takes effect only when the scaling rule type is SimpleScalingRule or StepScalingRule and <c>AdjustmentType</c> is set to <c>PercentChangeInCapacity</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -301,8 +301,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The mode of the predictive scaling rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PredictAndScale: produces predictions and creates prediction tasks.</description></item>
-        /// <item><description>PredictOnly: produces predictions but does not create prediction tasks.</description></item>
+        /// <item><description>PredictAndScale: generates prediction results and creates predictive tasks.</description></item>
+        /// <item><description>PredictOnly: generates prediction results but does not create predictive tasks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string PredictiveScalingMode { get; set; }
 
         /// <summary>
-        /// <para>The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60.</para>
+        /// <para>By default, predictive tasks automatically created by predictive scaling rules are executed on the hour. You can set a pre-start time to execute the predictive tasks in advance and prepare resources. Valid values: 0 to 60. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -323,11 +323,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PredictiveTaskBufferTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies which one of the initial maximum capacity and the predicted value can be used as the maximum value for prediction tasks. Valid values:</para>
+        /// <para>The method to handle the maximum value for the predictive scaling rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</description></item>
-        /// <item><description>PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks when the predicted value is greater than the initial maximum capacity.</description></item>
-        /// <item><description>PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</description></item>
+        /// <item><description>MaxOverridePredictiveValue: the initial maximum value overrides the predicted value. If the predicted value is greater than the initial maximum value, the initial maximum value is used as the maximum value for the predictive task.</description></item>
+        /// <item><description>PredictiveValueOverrideMax: the predicted value overrides the initial maximum value. If the predicted value is greater than the initial maximum value, the predicted value is used as the maximum value for the predictive task.</description></item>
+        /// <item><description>PredictiveValueOverrideMaxWithBuffer: a buffer ratio is added to the predicted value. The predicted value is increased by the ratio specified by PredictiveValueBuffer. If the increased value is greater than the initial maximum value, the increased value is used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string PredictiveValueBehavior { get; set; }
 
         /// <summary>
-        /// <para>The ratio based on which the predicted value is increased when <c>PredictiveValueBehavior</c> is set to <c>PredictiveValueOverrideMaxWithBuffer</c>. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</para>
+        /// <para>The buffer ratio added to the predicted value. This parameter takes effect only when <c>PredictiveValueBehavior</c> is set to <c>PredictiveValueOverrideMaxWithBuffer</c>. The predicted value is increased by this ratio. If the increased value is greater than the initial maximum value, the increased value is used. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</para>
+        /// <para>After a target tracking scaling rule is created, an event-triggered task is automatically created. This parameter specifies the number of consecutive times that the threshold condition must be met before the scale-in event-triggered task triggers an alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? ScaleInEvaluationCount { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</para>
+        /// <para>After a target tracking scaling rule is created, an event-triggered task is automatically created. This parameter specifies the number of consecutive times that the threshold condition must be met before the scale-out event-triggered task triggers an alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -387,8 +387,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingRuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the scaling rule. The name must be 2 to 64 letters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit.</para>
-        /// <para>The name of each scaling rule must be unique under the same account within the same region.</para>
+        /// <para>The name of the scaling rule. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or digit. The scaling rule name must be unique within a scaling group in a region for an Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scalingrule****</para>
@@ -398,14 +397,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingRuleName { get; set; }
 
         /// <summary>
-        /// <para>Details of the step adjustments.</para>
+        /// <para>The set of instance scaling configurations for step adjustments.</para>
         /// </summary>
         [NameInMap("StepAdjustments")]
         [Validation(Required=false)]
         public List<ModifyScalingRuleRequestStepAdjustments> StepAdjustments { get; set; }
         public class ModifyScalingRuleRequestStepAdjustments : TeaModel {
             /// <summary>
-            /// <para>The lower limit that is specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</para>
+            /// <para>The lower boundary of the step adjustment. This parameter is applicable only to step scaling rules. Valid values: -9.999999E18 to 9.999999E18.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
@@ -415,7 +414,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MetricIntervalLowerBound { get; set; }
 
             /// <summary>
-            /// <para>The upper limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</para>
+            /// <para>The upper boundary of the step adjustment. This parameter is applicable only to step scaling rules. Valid values: -9.999999E18 to 9.999999E18.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.0</para>
@@ -425,7 +424,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MetricIntervalUpperBound { get; set; }
 
             /// <summary>
-            /// <para>The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.</para>
+            /// <para>The number of instances to adjust for the step adjustment. This parameter is applicable only to step scaling rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -437,7 +436,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The target value. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.</para>
+        /// <para>The target value. This parameter is applicable to target tracking scaling rules and predictive scaling rules. The value can have up to three decimal places and must be greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.125</para>

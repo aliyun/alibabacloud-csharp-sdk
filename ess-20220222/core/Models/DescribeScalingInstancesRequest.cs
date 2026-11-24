@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The method used to create the instance in the scaling group. Valid values: </para>
+        /// <para>The creation type of the instances in the scaling group. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>AutoCreated: The ECS instance is created by automatic creation based on the instance configuration source in Auto Scaling. </description></item>
-        /// <item><description>Attached: The ECS instance is not created by Auto Scaling but manually added to the scaling group.</description></item>
-        /// <item><description>Managed: The managed instance is not created by Auto Scaling but manually added to the scaling group.</description></item>
+        /// <item><description>AutoCreated: The ECS instance is created by Auto Scaling through automatic creation based on the instance configuration source. </description></item>
+        /// <item><description>Attached: The ECS instance is not created by Auto Scaling, but is manually added to the scaling group.</description></item>
+        /// <item><description>Managed: The managed instance is not created by Auto Scaling, but is manually added to the scaling group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,22 +25,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string CreationType { get; set; }
 
         /// <summary>
-        /// <para>The methods used to create instances in the scaling group. You can specify only one of this parameter and CreationType.</para>
+        /// <para>The creation types of the instances in the scaling group. You can specify only one of the CreationTypes and CreationType parameters at a time.</para>
         /// </summary>
         [NameInMap("CreationTypes")]
         [Validation(Required=false)]
         public List<string> CreationTypes { get; set; }
 
         /// <summary>
-        /// <para>The health check status of the ECS instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </para>
+        /// <para>The health status of the ECS instances in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>Healthy: The ECS instance is healthy. </description></item>
         /// <item><description>Unhealthy: The ECS instance is unhealthy.</description></item>
         /// </list>
-        /// <para>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases the ECS instances created by automatic creation.</para>
-        /// <para>Whether a manually added ECS instance is released depends on its managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</para>
+        /// <para>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases ECS instances created through automatic creation.</para>
+        /// <para>Whether to release manually added ECS instances depends on their managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</para>
         /// <remarks>
-        /// <para>Make sure that your account has a sufficient available quota. If your account has an overdue payment, all pay-as-you-go ECS instances (including pay-as-you-go instances and spot instances) are stopped or even released. For information about how the status of ECS instances in a scaling group changes after an overdue payment occurs, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</para>
+        /// <para>Make sure that your account has sufficient active balance. If your account has overdue payments, all pay-as-you-go ECS instances, including pay-as-you-go instances and spot instances, are stopped or even released. For more information about the instance status changes of ECS instances in a scaling group after overdue payments, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,23 +52,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The IDs of the ECS instances.</para>
-        /// <para>Invalid InstanceId values are ignored in the query results, and no error is returned.</para>
+        /// <para>Invalid InstanceIds are ignored in the returned query results, and no error is reported.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle state of the ECS instance in the scaling group. Valid values:</para>
+        /// <para>The lifecycle state of the ECS instances in the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InService: The ECS instance is added to the scaling group and provides services in the Normal state. </description></item>
-        /// <item><description>Pending: The ECS instance is being added to the scaling group. During this procedure, the ECS instance is added to the backend server group of the associated load balancing instance and to the access whitelist of the associated ApsaraDB RDS instance.</description></item>
-        /// <item><description>Pending:Wait: The ECS instance is waiting to be added to the scaling group. If a lifecycle hook that applies to scale-out activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</description></item>
-        /// <item><description>Protected: The ECS instance is protected. The ECS instance provides services as expected, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
-        /// <item><description>Standby: The ECS instance is in the standby state. The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
+        /// <item><description>InService: The ECS instance is added to the scaling group and provides services normally. </description></item>
+        /// <item><description>Pending: The ECS instance is being added to the scaling group. The procedure of adding an ECS instance to a scaling group includes adding the instance to the backend server group of a load balancing instance and adding the IP address of the instance to the access whitelist of an ApsaraDB RDS instance.</description></item>
+        /// <item><description>Pending:Wait: The addition of the ECS instance to the scaling group is suspended. If a lifecycle hook applicable to scale-out activities is created in the scaling group, the ECS instance is suspended when it is added to the scaling group and waits for the hook timeout to end.</description></item>
+        /// <item><description>Protected: The ECS instance provides services normally, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
+        /// <item><description>Standby: The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
         /// <item><description>Stopped: The ECS instance is stopped and does not provide services.</description></item>
-        /// <item><description>Removing: The ECS instance is being removed from the scaling group. During this procedure, the ECS instance is removed from the backend server group of the associated load balancing instance and from the access whitelist of the associated ApsaraDB RDS instance. </description></item>
-        /// <item><description>Removing:Wait: The ECS instance is waiting to be removed from the scaling group. If a lifecycle hook that applies to scale-down activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</description></item>
+        /// <item><description>Removing: The ECS instance is being removed from the scaling group. The procedure of removing an ECS instance from a scaling group includes removing the instance from the backend server group of a load balancing instance and removing the IP address of the instance from the access whitelist of an ApsaraDB RDS instance. </description></item>
+        /// <item><description>Removing:Wait: The removal of the ECS instance from the scaling group is suspended. If a lifecycle hook applicable to scale-down activities is created in the scaling group, the ECS instance is suspended when it is removed from the scaling group and waits for the hook timeout to end.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LifecycleState { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle states of ECS instances in the scaling group. You can specify only one of this parameter and LifecycleState. We recommend that you use this parameter.</para>
+        /// <para>The lifecycle statuses of the ECS instances in the scaling group. You can specify only one of the LifecycleStates and LifecycleState parameters at a time. We recommend that you use this parameter.</para>
         /// </summary>
         [NameInMap("LifecycleStates")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the ECS instance list. Minimum value: 1.</para>
+        /// <para>The page number of the ECS instance list. Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Settings: Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page in a paging query. Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group.</para>
+        /// <para>The ID of the region to which the scaling group belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

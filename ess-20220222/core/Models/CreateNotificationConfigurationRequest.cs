@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateNotificationConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The codec for the content of message notifications. Valid values:</para>
+        /// <para>The encoding method for the notification content. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: No encoding; messages are transmitted in plaintext.</description></item>
-        /// <item><description>Base64: Messages are encoded in Base64.</description></item>
+        /// <item><description>PlainText: no encoding. The content is transmitted in plaintext.</description></item>
+        /// <item><description>Base64: Base64 encoding.</description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// <remarks>
-        /// <para>This parameter applies only to MNS notification objects.</para>
+        /// <para>The Settings for this parameter are supported only for MNS notification recipients.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,18 +28,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MessageEncoding { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</para>
+        /// <para>The identifier of the notification recipient. The following notification methods are supported when you configure the Settings for this parameter:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify CloudMonitor as the notification recipient, specify the value in the <c>acs:ess:{region-id}:{account-id}:cloudmonitor</c> format.</description></item>
-        /// <item><description>If you specify an SMQ queue as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c> format.</description></item>
-        /// <item><description>If you specify an SMQ topic as the notification recipient, specify the value in the <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c> format.</description></item>
+        /// <item><description>Cloud monitoring. Format: <c>acs:ess:{region-id}:{account-id}:cloudmonitor</c>.</description></item>
+        /// <item><description>MNS queue. Format: <c>acs:mns:{region-id}:{account-id}:queue/{queuename}</c>.</description></item>
+        /// <item><description>MNS topic. Format: <c>acs:mns:{region-id}:{account-id}:topic/{topicname}</c>.</description></item>
         /// </list>
-        /// <para>The variables in the preceding formats have the following meanings:</para>
+        /// <para>Variables in the formats:</para>
         /// <list type="bullet">
-        /// <item><description><c>region-id</c>: the region ID of the scaling group.</description></item>
-        /// <item><description><c>account-id</c>: the ID of the Alibaba Cloud account.</description></item>
-        /// <item><description><c>queuename</c>: the name of the SMQ queue.</description></item>
-        /// <item><description><c>topicname</c>: the name of the SMQ topic.</description></item>
+        /// <item><description><c>region-id</c>: the ID of the region where the scaling group resides.</description></item>
+        /// <item><description><c>account-id</c>: the Alibaba Cloud account ID. You can invoke the STS GetCallerIdentity operation to obtain the AccountId response parameter, or view it by clicking your profile picture in the upper-right corner of the Alibaba Cloud Management Console.</description></item>
+        /// <item><description><c>queuename</c>: the name of the MNS queue.</description></item>
+        /// <item><description><c>topicname</c>: the name of the MNS topic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string NotificationArn { get; set; }
 
         /// <summary>
-        /// <para>The notification types. Specify multiple IDs in the repeated list form.</para>
-        /// <para>You can call the DescribeNotificationTypes operation to query the values of this parameter.</para>
+        /// <para>The types of Auto Scaling events and resource changes for which you want to receive notifications. You can specify multiple values by using a repeated list.</para>
+        /// <para>You can invoke the DescribeNotificationTypes operation to query parameter values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NotificationTypes")]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group.</para>
+        /// <para>The ID of the region to which the scaling group belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -89,7 +89,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The time zone of the notification. Specify the value in UTC. For example, a value of UTC+8 specifies that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 specifies that the time is 7 hours behind Coordinated Universal Time.</para>
+        /// <para>The time zone for notifications.
+        /// Specify the time zone offset from Coordinated Universal Time (UTC), such as UTC+8 or UTC-7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UTC+8</para>

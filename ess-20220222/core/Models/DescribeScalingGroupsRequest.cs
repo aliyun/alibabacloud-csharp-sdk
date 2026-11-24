@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of instances that are managed by the scaling group. Valid values:</para>
+        /// <para>The type of instances managed by the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ECS: Elastic Compute Service (ECS) instances.</description></item>
-        /// <item><description>ECI: elastic container instances.</description></item>
+        /// <item><description><para>ECS: The scaling group manages ECS instances.</para>
+        /// </description></item>
+        /// <item><description><para>ECI: The scaling group manages ECI instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Page starts from page 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 50.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,9 +67,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the scaling group that you want to query belongs.</para>
+        /// <para>The ID of the resource group to which the scaling groups to query belong.</para>
         /// <remarks>
-        /// <para> If no scaling group belongs to the specified resource group, the query result is empty and no error is reported.</para>
+        /// <para>If no scaling group belongs to the specified resource group, an empty result is returned and no error is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,8 +88,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the scaling groups that you want to query.</para>
-        /// <para>The IDs of inactive scaling groups are not included in the query results, and no error is returned.</para>
+        /// <para>The IDs of the scaling groups to query.</para>
+        /// <para>Invalid scaling group IDs are ignored in the response and no error is returned.</para>
         /// </summary>
         [NameInMap("ScalingGroupIds")]
         [Validation(Required=false)]
@@ -104,8 +106,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupName { get; set; }
 
         /// <summary>
-        /// <para>The names of the scaling groups that you want to query.</para>
-        /// <para>The names of inactive scaling groups are not displayed in the query results, and no error is reported.</para>
+        /// <para>The names of the scaling groups to query.</para>
+        /// <para>Invalid scaling group names are ignored in the response and no error is returned.</para>
         /// </summary>
         [NameInMap("ScalingGroupNames")]
         [Validation(Required=false)]

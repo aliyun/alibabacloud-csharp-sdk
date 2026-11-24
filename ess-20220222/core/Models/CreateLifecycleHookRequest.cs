@@ -10,12 +10,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateLifecycleHookRequest : TeaModel {
         /// <summary>
-        /// <para>The action that you want Auto Scaling to perform after the lifecycle hook times out. Valid values:</para>
+        /// <para>The action to be performed after the wait state ends. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>CONTINUE: Auto Scaling continues to respond to scale-in or scale-out requests.</description></item>
-        /// <item><description>ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities, or removes ECS instances from the scaling group during scale-in activities.</description></item>
+        /// <item><description>CONTINUE: Continues the response to the scale-out or scale-in activity.</description></item>
+        /// <item><description>ABANDON: Releases the ECS instances created by the scale-out activity or removes the ECS instances in the scale-in activity from the scaling group. </description></item>
+        /// <item><description>ROLLBACK: Rejects the release of ECS instances and rolls back the scale-in activity. For a scale-out activity, this value directly releases the created ECS instances, which has the same effect as ABANDON.</description></item>
         /// </list>
-        /// <para>If multiple lifecycle hooks in a scaling group are triggered during scale-in activities and you set the DefaultResult parameter to ABANDON for one of the lifecycle hooks, Auto Scaling immediately performs the action after the lifecycle hook whose DefaultResult is set to ABANDON times out. As a result, other lifecycle hooks time out ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks time out.</para>
+        /// <para>When a scale-in activity occurs in the scaling group and multiple lifecycle hooks are triggered, if the DefaultResult of one lifecycle hook is set to ABANDON or ROLLBACK and the wait state of the hook ends, the wait states of other lifecycle hooks are ended in advance. In other cases, the action to be performed is subject to the action of the last lifecycle hook whose wait state ends.</para>
         /// <para>Default value: CONTINUE.</para>
         /// 
         /// <b>Example:</b>
@@ -26,8 +27,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DefaultResult { get; set; }
 
         /// <summary>
-        /// <para>The period of time before the lifecycle hook times out. After the lifecycle hook times out, Auto Scaling performs the default action. Valid values: 30 to 21600. Unit: seconds.</para>
-        /// <para>After you create a lifecycle hook, you can call the RecordLifecycleActionHeartbeat operation to prolong the timeout period of the lifecycle hook. You can also call the CompleteLifecycleAction operation to end the timeout period of the lifecycle hook ahead of schedule.</para>
+        /// <para>The wait time configured by the lifecycle hook for the scaling activity. After the wait state times out, the next action is performed. Valid values: 30 to 21600. Unit: seconds.</para>
+        /// <para>After you create a lifecycle hook, you can call RecordLifecycleActionHeartbeat to extend the wait time of the ECS instance, or call CompleteLifecycleAction to end the wait state of the scaling activity in advance. </para>
         /// <para>Default value: 600.</para>
         /// 
         /// <b>Example:</b>
@@ -38,8 +39,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? HeartbeatTimeout { get; set; }
 
         /// <summary>
-        /// <para>The name of the lifecycle hook. Each lifecycle hook name must be unique within a scaling group. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or a digit.</para>
-        /// <para>If you do not specify this parameter, the value of the LifecycleHookId parameter is used.</para>
+        /// <para>The specific scenarios triggered by the lifecycle hook.</para>
+        /// </summary>
+        [NameInMap("LifecycleActionSources")]
+        [Validation(Required=false)]
+        public List<string> LifecycleActionSources { get; set; }
+
+        /// <summary>
+        /// <para>The name of the lifecycle hook. The name must be unique among all lifecycle hooks in the current scaling group. It must be 2 to 64 characters in length, start with a digit, an uppercase or lowercase letter, or a Chinese character, and can contain digits, underscores (_), hyphens (-), and periods (.).</para>
+        /// <para>Default value: the value of LifecycleHookId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lifecyclehook****</para>
@@ -49,10 +57,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LifecycleHookName { get; set; }
 
         /// <summary>
-        /// <para>The type of the scaling activity to which the lifecycle hook applies. Valid values:</para>
+        /// <para>The type of scaling activity to which the lifecycle hook applies. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>SCALE_OUT</description></item>
-        /// <item><description>SCALE_IN</description></item>
+        /// <item><description>SCALE_OUT: scale-out activity of the scaling group. </description></item>
+        /// <item><description>SCALE_IN: scale-in activity of the scaling group.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,19 +72,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LifecycleTransition { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. If you do not specify this parameter, no notification is sent when the lifecycle hook takes effect. If you specify this parameter, the value must be in one of the following formats:</para>
+        /// <para>The identifier of the notification recipient for the lifecycle hook. If you do not specify this parameter, no notifications are sent. If you specify this parameter, the following notification methods are supported:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</description></item>
-        /// <item><description>If you specify an SMQ topic as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</description></item>
-        /// <item><description>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</description></item>
-        /// <item><description>If you specify an event bus as the notification recipient, specify the value in the acs:eventbridge:{region-id}:{account-id}:eventbus/default format.</description></item>
+        /// <item><description>MNS queue. Format: acs:mns:{region-id}:{account-id}:queue/{queuename}.</description></item>
+        /// <item><description>MNS topic. Format: acs:mns:{region-id}:{account-id}:topic/{topicname}.</description></item>
+        /// <item><description>OOS template. Format: acs:oos:{region-id}:{account-id}:template/{templatename}.</description></item>
+        /// <item><description>EventBridge. Format: acs:eventbridge:{region-id}:{account-id}:eventbus/default.</description></item>
         /// </list>
-        /// <para>The variables in the preceding value formats have the following meanings:</para>
+        /// <para>The variables in the formats have the following meanings:</para>
         /// <list type="bullet">
-        /// <item><description>region-id: the region ID of your scaling group.</description></item>
-        /// <item><description>account-id: the ID of the Alibaba Cloud account. IDs of Resource Access Management (RAM) users are not supported.</description></item>
-        /// <item><description>queuename: the name of the SMQ queue.</description></item>
-        /// <item><description>topicname: the name of the SMQ topic.</description></item>
+        /// <item><description>region-id: the ID of the region where the scaling group resides.</description></item>
+        /// <item><description>account-id: the Alibaba Cloud account ID. The ID of a Resource Access Management (RAM) user is not supported.</description></item>
+        /// <item><description>queuename: the name of the MNS queue.</description></item>
+        /// <item><description>topicname: the name of the MNS topic.</description></item>
         /// <item><description>templatename: the name of the OOS template.</description></item>
         /// </list>
         /// 
@@ -88,18 +96,31 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string NotificationArn { get; set; }
 
         /// <summary>
-        /// <para>The notification metadata that is sent when the lifecycle hook takes effect. This helps you manage and categorize notifications in an efficient manner. If you specify this parameter, you must specify the NotificationArn parameter. The parameter value cannot exceed 4,096 characters in length.</para>
-        /// <para>If you use the NotificationArn parameter to specify a public or customOOS template, the value of the NotificationMetadata parameter must be a JSON string that contains the OOS template parameters. For example, your OOS template includes the following parameters: <c>{&quot;dbInstanceId&quot;: &quot;dds-bp17661e0135****&quot;, &quot;modifyMode&quot;: &quot;Append&quot;}</c>, <c>dbInstanceId</c>, and <c>modifyMode</c>. Some parameters defined in your OOS template have default values. When you specify the NotificationMetadata parameter, specify parameters that do not have default values. If you specify parameters that have default values, the default values are overwritten. However, the default values of the following parameters must be retained to obtain information about scaling activities that are in progress:</para>
+        /// <para>The notification message pushed to the NotificationArn (notification recipient) when the lifecycle hook pauses the scaling activity. This parameter helps you manage and mark different types of notification messages. You must specify NotificationArn together with this parameter. The value can be up to 4,096 characters in length.</para>
+        /// <para>If NotificationArn is set to an OOS template, including a public or custom template, NotificationMetadata must be specified as a JSON string that matches the parameters of the OOS template. For example, <c>{&quot;dbInstanceId&quot;: &quot;dds-bp17661e0135****&quot;, &quot;modifyMode&quot;: &quot;Append&quot;}</c>, where <c>dbInstanceId</c> and <c>modifyMode</c> are parameters defined in the OOS template. Some parameters of the OOS template have default values. You must specify parameters without default values in NotificationMetadata. If you specify parameters with default values, the original default values are overwritten. However, keep the default values for the following parameters to obtain relevant information at runtime:</para>
         /// <list type="bullet">
-        /// <item><description><c>regionId</c>: the region ID of the scaling activity that is in progress. Default value: ${regionId}.</description></item>
-        /// <item><description><c>instanceIds</c>: the IDs of ECS instances that are scaled in in the scaling activity. Default value: ${instanceIds}.</description></item>
-        /// <item><description><c>lifecycleHookId</c>: the ID of the lifecycle hook. Default value: ${lifecycleHookId}.</description></item>
-        /// <item><description><c>lifecycleActionToken</c>: the token of the lifecycle action. You can use the token to end the timeout period of the lifecycle hook ahead of schedule. Default value: ${lifecycleActionToken}</description></item>
-        /// <item><description><c>scalingGroupId</c>: the ID of the scaling group in which the scaling activity is executed. Default value: ${scalingGroupId}.</description></item>
+        /// <item><description><para><c>regionId</c>: the region where the scaling activity is executed. Default value: ${regionId}.</para>
+        /// </description></item>
+        /// <item><description><para><c>instanceIds</c>: the list of instances associated with the scaling activity. Default value: ${instanceIds}.</para>
+        /// </description></item>
+        /// <item><description><para><c>lifecycleHookId</c>: the ID of the lifecycle hook. Default value: ${lifecycleHookId}.</para>
+        /// </description></item>
+        /// <item><description><para><c>lifecycleActionToken</c>: the wait state identifier for the scaling activity, which is used to end the current suspended activity in advance. Default value: ${lifecycleActionToken}.</para>
+        /// </description></item>
+        /// <item><description><para><c>scalingGroupId</c>: the ID of the scaling group to which the scaling activity belongs. Default value: ${scalingGroupId}.</para>
+        /// </description></item>
+        /// <item><description><para><c>lifecycleActionResult</c>: the action to be performed after the wait state of the lifecycle hook ends. This parameter is used to end the current suspended activity in advance when the OOS template execution fails. When DefaultResult is set to ROLLBACK, the default value of this parameter is ROLLBACK. In other cases, the default value is ABANDON.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can obtain template parameter information in the <a href="https://oos.console.aliyun.com/">OOS console</a>.</para>
+        /// <list type="bullet">
+        /// <item><description>You can configure the value of lifecycleActionResult to overwrite the current default value as needed. Valid values: ABANDON, CONTINUE, ROLLBACK, and ${lifecycleActionResult}.
+        /// Among these values, ${lifecycleActionResult} indicates that the value of lifecycleActionResult is the same as that of DefaultResult.</description></item>
+        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can obtain detailed information about the parameters of the corresponding template in the <a href="https://oos.console.aliyun.com/">OOS console</a>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Test lifecycle hook.</para>

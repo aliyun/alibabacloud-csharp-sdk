@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CC107349-57B7-4405-B1BF-9BF5AF7F2A46</para>
+        /// <para>CC107349-57B7-4405-B1BF-9BF5AF7F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scaling activities.</para>
+        /// <para>The collection of scaling activity information.</para>
         /// </summary>
         [NameInMap("ScalingActivities")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ActivityMetadata { get; set; }
 
             /// <summary>
-            /// <para>The total number of instances that are manually added to the scaling group after the scaling activity is complete.</para>
+            /// <para>The total number of manually added instances in the scaling group after the scaling activity is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string AttachedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The total number of instances that are created by Auto Scaling after the scaling activity was complete.</para>
+            /// <para>The total number of instances in the scaling group that are generated through automatic creation after you execute the scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string AutoCreatedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The reason why the scaling activity was triggered.</para>
+            /// <para>The cause that triggered the scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A user requests to execute scaling rule \&quot;asr-bp12tcnol686y1ik****\&quot;, changing the Total Capacity from \&quot;1\&quot; to \&quot;2\&quot;.</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Cause { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are created during the scale-out event.</para>
+            /// <para>The number of instances created during the current scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? CreatedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The instances that are created during the scale-out event.</para>
+            /// <para>The list of instances created during the current scaling activity.</para>
             /// </summary>
             [NameInMap("CreatedInstances")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are released during the scale-in event.</para>
+            /// <para>The number of instances released during the current scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? DestroyedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The instances that are released during the scale-in event.</para>
+            /// <para>The list of instances released during the current scaling activity.</para>
             /// </summary>
             [NameInMap("DestroyedInstances")]
             [Validation(Required=false)]
             public List<string> DestroyedInstances { get; set; }
 
             /// <summary>
-            /// <para>Details of the scaling activity.</para>
+            /// <para>The details of the scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;new ECS instances &quot;i-j6c8ilerw, i-j6c8iler4mx&quot; are created.&quot;</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The time when the scaling activity was complete.</para>
+            /// <para>The end time of the scaling activity. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-09-10T09:54Z</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The error code that is returned when the scaling activity failed.</para>
+            /// <para>The error code returned when the scaling activity fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OperationDenied.NoStock</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message that is returned when the scaling activity failed.</para>
+            /// <para>The error message returned when the scaling activity fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The specified ECS resource is out of stock in this region. Please try again later.</para>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The error messages that are returned when the scaling activities failed or are partially successful.</para>
+            /// <para>The error messages returned when the scaling activity fails or is partially successful.</para>
             /// </summary>
             [NameInMap("ErrorMessages")]
             [Validation(Required=false)]
             public List<DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages> ErrorMessages { get; set; }
             public class DescribeScalingActivitiesResponseBodyScalingActivitiesErrorMessages : TeaModel {
                 /// <summary>
-                /// <para>The error code that is returned when the scaling activity failed.</para>
+                /// <para>The error code returned when the scaling activity fails or is partially successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OperationDenied.NoStock</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The description of the scaling activity exception.</para>
+                /// <para>The exception description of the scaling activity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Fail to create instances into scaling group.</para>
@@ -198,14 +198,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the instances included in the failed scaling activities.</para>
+                /// <para>The list of failed instance ID.</para>
                 /// </summary>
                 [NameInMap("FailedInstanceIds")]
                 [Validation(Required=false)]
                 public List<string> FailedInstanceIds { get; set; }
 
                 /// <summary>
-                /// <para>The error message that is returned when the scaling activity failed or is partially successful.</para>
+                /// <para>The error messages returned when the scaling activity fails or is partially successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The resource is out of stock in the specified zone. Please try other types, or choose other regions and zones.</para>
@@ -227,17 +227,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceRefreshTaskId { get; set; }
 
             /// <summary>
-            /// <para>The context of the lifecycle hook.</para>
+            /// <para>The context information of the lifecycle hook.</para>
             /// </summary>
             [NameInMap("LifecycleHookContext")]
             [Validation(Required=false)]
             public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext LifecycleHookContext { get; set; }
             public class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether all lifecycle hooks are disabled when the scaling activity is triggered. Valid values:</para>
+                /// <para>Specifies whether all lifecycle hooks are disabled for the scaling activity. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description>true: Disabled.</description></item>
+                /// <item><description>false: Not disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? DisableLifecycleHook { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the lifecycle hooks that are disabled.</para>
+                /// <para>The list of IDs of the lifecycle hooks disabled for the scaling activity.</para>
                 /// </summary>
                 [NameInMap("IgnoredLifecycleHookIds")]
                 [Validation(Required=false)]
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The execution progress of the scaling activity.</para>
+            /// <para>The progress of the scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -288,8 +288,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from Economical Mode.</description></item>
-            /// <item><description>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in Economical Mode.</description></item>
+            /// <item><description><para>If the scaling activity is a scale-out activity, this parameter indicates the number of instances that are created or started from the stopped and reclaimed state during the scaling activity.</para>
+            /// </description></item>
+            /// <item><description><para>If the scaling activity is a scale-in activity, this parameter indicates the number of instances that are deleted or enter the stopped and reclaimed state during the scaling activity.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -300,7 +302,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? ScalingInstanceNumber { get; set; }
 
             /// <summary>
-            /// <para>The time when the scaling activity was started.</para>
+            /// <para>The start time of the scaling activity. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-09-10T09:54Z</para>
@@ -310,7 +312,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are started from the Economical Mode during the scale-out event.</para>
+            /// <para>The number of instances started from the economical mode during the current scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -320,7 +322,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? StartedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The instances that are started from the Economical Mode during the scale-out event.</para>
+            /// <para>The list of instances started from the economical mode during the current scaling activity.</para>
             /// </summary>
             [NameInMap("StartedInstances")]
             [Validation(Required=false)]
@@ -329,11 +331,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The status of the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Successful: The scaling activity is successful.</description></item>
-            /// <item><description>Warning: The scaling activity is partially successful.</description></item>
-            /// <item><description>Failed: The scaling activity failed.</description></item>
-            /// <item><description>InProgress: The scaling activity is in progress.</description></item>
-            /// <item><description>Rejected: The request to trigger the scaling activity is rejected.</description></item>
+            /// <item><description>Successful: The scaling activity is successful. </description></item>
+            /// <item><description>Warning: The scaling activity is partially successful. </description></item>
+            /// <item><description>Failed: The scaling activity failed. </description></item>
+            /// <item><description>InProgress: The scaling activity is in progress. </description></item>
+            /// <item><description>Rejected: The request to execute the scaling activity is rejected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -354,7 +356,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string StatusMessage { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that are stopped in the Economical Mode during the scale-in event.</para>
+            /// <para>The number of instances that entered the economical mode during the current scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -364,14 +366,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? StoppedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The instances that are stopped in the Economical Mode during the scale-in event.</para>
+            /// <para>The list of instances that entered the economical mode during the current scaling activity.</para>
             /// </summary>
             [NameInMap("StoppedInstances")]
             [Validation(Required=false)]
             public List<string> StoppedInstances { get; set; }
 
             /// <summary>
-            /// <para>The total number of instances in the scaling group after the scaling activity was complete.</para>
+            /// <para>The total number of instances in the scaling group after the scaling activity is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -381,11 +383,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string TotalCapacity { get; set; }
 
             /// <summary>
-            /// <para>The ID of the trigger source of the scaling activity. Valid values:</para>
+            /// <para>The ID of the trigger source for the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If the scaling activity is triggered by an event-triggered task, the ID of the trigger source is the ID of the event-triggered task.</description></item>
-            /// <item><description>If the scaling activity is triggered by calling an API operation, the ID of the trigger source is the ID of the Alibaba Cloud account or Resource Access Management (RAM) user that you use to call the API operation.</description></item>
-            /// <item><description>If the scaling activity is triggered by Auto Scaling, the ID of the trigger source is null.</description></item>
+            /// <item><description>Cms trigger source ID: displayed as the event-triggered task ID.</description></item>
+            /// <item><description>Api trigger source ID: displayed as the Alibaba Cloud account ID or RAM user ID.</description></item>
+            /// <item><description>Ess trigger source ID: displayed as empty.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -396,11 +398,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string TriggerSourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the trigger source of the scaling activity. Valid values:</para>
+            /// <para>The type of the trigger source for the scaling activity. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Cms: The scaling activity is triggered by an event-triggered task.</description></item>
-            /// <item><description>APIs: The scaling activity is triggered by calling an API operation.</description></item>
-            /// <item><description>Ess: The scaling activity is triggered by Auto Scaling.</description></item>
+            /// <item><description>Api: The scaling activity is triggered by a user through an API call.</description></item>
+            /// <item><description>Ess: The scaling activity is triggered by a system task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -413,7 +415,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The total number of scaling activities.</para>
+        /// <para>The total number of scaling activity records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

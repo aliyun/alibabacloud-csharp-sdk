@@ -10,28 +10,37 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class RemoveInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances that were not removed and the reasons why they were not removed.</para>
+        /// <para>The list of ignored invalid instance information in the request.</para>
         /// </summary>
         [NameInMap("IgnoredInstances")]
         [Validation(Required=false)]
         public List<RemoveInstancesResponseBodyIgnoredInstances> IgnoredInstances { get; set; }
         public class RemoveInstancesResponseBodyIgnoredInstances : TeaModel {
             /// <summary>
-            /// <para>The error code that indicates the reason why the instance was not removed.</para>
+            /// <para>The code of the reason why the instance is ignored.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IncorrectInstanceStatus</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance that was not removed.</para>
+            /// <para>The instance ID of the ignored instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-28wt4****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The error message that indicates the reason why the instance was not removed.</para>
+            /// <para>The description of the reason why the instance is ignored.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The current status of instance &quot;i-28wt4****&quot; does not support this action.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -40,7 +49,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

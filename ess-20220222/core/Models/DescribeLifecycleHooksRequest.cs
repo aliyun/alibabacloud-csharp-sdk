@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeLifecycleHooksRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the lifecycle hooks that you want to query.</para>
+        /// <para>The IDs of the lifecycle hooks.</para>
+        /// <remarks>
+        /// <para>Conditionally required: You must specify at least one of LifecycleHookIds or ScalingGroupId when you query lifecycle hooks. If you specify both parameters, LifecycleHookIds takes precedence. If you specify only RegionId without specifying either of the two parameters, a 400 InvalidParameter error is returned.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("LifecycleHookIds")]
         [Validation(Required=false)]
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1.</para>
+        /// <para>The page number of the instance status list. Pages start from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +75,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The ID of the scaling group.</para>
+        /// <remarks>
+        /// <para>Conditionally required: You must specify at least one of LifecycleHookIds or ScalingGroupId when you query lifecycle hooks. If you specify only RegionId without specifying either of the two parameters, a 400 InvalidParameter error is returned.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>asg-bp1igpak5ft1flyp****</para>

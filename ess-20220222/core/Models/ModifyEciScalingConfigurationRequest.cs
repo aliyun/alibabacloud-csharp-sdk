@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyEciScalingConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The Container Registry Enterprise Edition instances.</para>
+        /// <para>The information about ACR Enterprise Edition instances.</para>
         /// </summary>
         [NameInMap("AcrRegistryInfos")]
         [Validation(Required=false)]
         public List<ModifyEciScalingConfigurationRequestAcrRegistryInfos> AcrRegistryInfos { get; set; }
         public class ModifyEciScalingConfigurationRequestAcrRegistryInfos : TeaModel {
             /// <summary>
-            /// <para>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Separate multiple domain names with commas (,).</para>
+            /// <para>The domain names of the ACR Enterprise Edition instance. By default, all domain names of the instance are used. You can specify individual domain names and separate multiple domain names with commas (,).</para>
             /// </summary>
             [NameInMap("Domains")]
             [Validation(Required=false)]
             public List<string> Domains { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Container Registry Enterprise Edition instance.</para>
+            /// <para>The ID of the ACR Enterprise Edition instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-nwj395hgf6f3****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Container Registry Enterprise Edition instance.</para>
+            /// <para>The name of the ACR Enterprise Edition instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acr-test</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the Container Registry Enterprise Edition instance.</para>
+            /// <para>The region ID of the ACR Enterprise Edition instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The validity period of the scaling configuration. Unit: seconds.</para>
+        /// <para>The validity period. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ActiveDeadlineSeconds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically create elastic IP addresses (EIPs) and bind the EIPs to elastic container instances.</para>
+        /// <para>Specifies whether automatic creation of an elastic IP address (EIP) is enabled and the EIP is attached to the ECI instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? AutoCreateEip { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically match image caches.</para>
+        /// <para>Specifies whether to automatically match an image cache.</para>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? AutoMatchImageCache { get; set; }
 
         /// <summary>
-        /// <para>The name series of elastic container instances. Naming conventions:</para>
+        /// <para>The name of the ECI, which is the name of the container group. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, and hyphens (-), and cannot start or end with a hyphen (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ContainerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The containers.</para>
+        /// <para>The list of containers.</para>
         /// </summary>
         [NameInMap("Containers")]
         [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestContainersLivenessProbeExec Exec { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersLivenessProbeExec : TeaModel {
                     /// <summary>
-                    /// <para>The command executed in the container when using the command line to perform the health check.</para>
+                    /// <para>The command executed in the container when the exec action is used for health checks.</para>
                     /// </summary>
                     [NameInMap("Commands")]
                     [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The minimum number of consecutive failures that must occur for a liveness probe to be considered failed.</para>
+                /// <para>The minimum consecutive failures for the liveness check to be considered failed after having succeeded.</para>
                 /// <para>Default value: 3.</para>
                 /// 
                 /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestContainersLivenessProbeHttpGet HttpGet { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersLivenessProbeHttpGet : TeaModel {
                     /// <summary>
-                    /// <para>The path to which you want to send the HTTP GET request to perform a liveness probe.</para>
+                    /// <para>The path to which the HTTP GET request is sent when HTTP GET is used for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/healthyz</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The port over which you want to send the HTTP GET request to perform a liveness probe.</para>
+                    /// <para>The port number to which the HTTP GET request is sent when HTTP GET is used for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8888</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol type of the HTTP GET request that you use to perform a liveness probe. Valid values:</para>
+                    /// <para>The protocol type of the HTTP GET request when HTTP GET is used for health checks. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>HTTP</description></item>
                     /// <item><description>HTTPS</description></item>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The interval between the launch of the container and the onset of a liveness probe. Unit: seconds.</para>
+                /// <para>The number of seconds after the container has started before the readiness check is initiated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? InitialDelaySeconds { get; set; }
 
                 /// <summary>
-                /// <para>The interval between consecutive liveness probes. Unit: seconds. Default value: 10. Minimum value: 1.</para>
+                /// <para>The period for executing the liveness check, in seconds. Default value: 10. Minimum value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? PeriodSeconds { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of consecutive successes that must occur to consider a failed liveness probe successful. Default value: 1. Set the value to 1.</para>
+                /// <para>The minimum consecutive successes for the liveness check to be considered successful after having failed. Default value: 1. The value must be 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestContainersLivenessProbeTcpSocket TcpSocket { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersLivenessProbeTcpSocket : TeaModel {
                     /// <summary>
-                    /// <para>The port detected by the TCP socket when you perform a liveness probe.</para>
+                    /// <para>The port number on which the TCP socket check is performed when TCP socket is used for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The timeout limit for a liveness probe to be complete. Unit: seconds. Default value: 1. Minimum value: 1.</para>
+                /// <para>The timeout period for the readiness check, in seconds. Default value: 1. Minimum value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestContainersReadinessProbeExec Exec { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersReadinessProbeExec : TeaModel {
                     /// <summary>
-                    /// <para>The commands executed in the container when using the command line to perform the health check.</para>
+                    /// <para>The command executed in the container when the exec action is used for health checks.</para>
                     /// </summary>
                     [NameInMap("Commands")]
                     [Validation(Required=false)]
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The minimum number of consecutive failures that must occur for a readiness probe to be considered failed.</para>
+                /// <para>The minimum consecutive failures for the liveness check to be considered failed after having succeeded.</para>
                 /// <para>Default value: 3.</para>
                 /// 
                 /// <b>Example:</b>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestContainersReadinessProbeHttpGet HttpGet { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersReadinessProbeHttpGet : TeaModel {
                     /// <summary>
-                    /// <para>The path to which you want to send the HTTP GET request to perform a readiness probe.</para>
+                    /// <para>The path to which the HTTP GET request is sent when HTTP GET is used for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/healthz</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The port over which you want to send the HTTP GET request to perform a readiness probe.</para>
+                    /// <para>The port number to which the HTTP GET request is sent when HTTP GET is used for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8080</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol type of the HTTP GET request that you use to perform a readiness probe. Valid values:</para>
+                    /// <para>The protocol type of the HTTP GET request when HTTP GET is used for health checks. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>HTTP</description></item>
                     /// <item><description>HTTPS</description></item>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The interval between the launch of the container and the onset of a readiness probe. Unit: seconds.</para>
+                /// <para>The number of seconds after the container has started before the readiness check is initiated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? InitialDelaySeconds { get; set; }
 
                 /// <summary>
-                /// <para>The interval between consecutive readiness probes. Unit: seconds. Default value: 10. Minimum value: 1.</para>
+                /// <para>The period for executing the liveness check, in seconds. Default value: 10. Minimum value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? PeriodSeconds { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of consecutive successes that must occur for a failed readiness probe to be considered successful. Default value: 1. Set the value to 1.</para>
+                /// <para>The minimum consecutive successes for the readiness check to be considered successful after having failed. Default value: 1. The value must be 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestContainersReadinessProbeTcpSocket TcpSocket { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersReadinessProbeTcpSocket : TeaModel {
                     /// <summary>
-                    /// <para>The port detected by the TCP socket when you perform a readiness probe.</para>
+                    /// <para>The port number on which the TCP socket check is performed when TCP socket is used for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8000</para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The timeout limit for a readiness probe to be complete. Unit: seconds. Default value: 1. Minimum value: 1.</para>
+                /// <para>The timeout period for the readiness check, in seconds. Default value: 1. Minimum value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -368,9 +368,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestContainersSecurityContextCapability Capability { get; set; }
                 public class ModifyEciScalingConfigurationRequestContainersSecurityContextCapability : TeaModel {
                     /// <summary>
-                    /// <para>The permissions that you want to grant to the processes in the container. Valid values: NET_ADMIN and NET_RAW.</para>
+                    /// <para>Grants specific privileges to processes in the container. Valid values: NET_ADMIN and NET_RAW.</para>
                     /// <remarks>
-                    /// <para> To use NET_RAW, submit a ticket.</para>
+                    /// <para>NET_RAW is not supported by default. To use NET_RAW, submit a ticket.</para>
                     /// </remarks>
                     /// </summary>
                     [NameInMap("Adds")]
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether the root file system is read-only. Set the value to true.</para>
+                /// <para>Specifies whether the root file system of the container is read-only. Only true is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? ReadOnlyRootFilesystem { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user that runs the container.</para>
+                /// <para>The user ID to run the container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -402,21 +402,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The container startup arguments. You can specify up to 10 arguments.</para>
+            /// <para>The arguments for the container startup command. A maximum of 10 arguments are supported.</para>
             /// </summary>
             [NameInMap("Args")]
             [Validation(Required=false)]
             public List<string> Args { get; set; }
 
             /// <summary>
-            /// <para>The commands that you can run in the container when you use the CLI to perform a liveness probe.</para>
+            /// <para>The startup commands for the container. A maximum of 20 commands are supported. Each command can contain up to 256 characters.</para>
             /// </summary>
             [NameInMap("Commands")]
             [Validation(Required=false)]
             public List<string> Commands { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs per container.</para>
+            /// <para>The number of vCPUs allocated to the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The environment variables.</para>
+            /// <para>The environment variable information.</para>
             /// </summary>
             [NameInMap("EnvironmentVars")]
             [Validation(Required=false)]
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public class ModifyEciScalingConfigurationRequestContainersEnvironmentVarsFieldRef : TeaModel {
                     /// <summary>
                     /// <remarks>
-                    /// <para> This parameter is unavailable.</para>
+                    /// <para>This parameter is not available.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <c>[0-9a-zA-Z]</c> format.</para>
+                /// <para>The name of the environment variable. The name must be 1 to 128 characters in length, match the <c>[0-9a-zA-Z]</c> format, and can contain underscores (_). It cannot start with a digit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PATH</para>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The number of GPUs per container.</para>
+            /// <para>The number of GPUs allocated to the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -493,11 +493,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>The image pulling policy. Valid values:</para>
+            /// <para>The image pull policy for the container. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Always: Image pulling is performed each time instances are created.</description></item>
-            /// <item><description>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</description></item>
-            /// <item><description>Never: On-premises images are always used. Image pulling is not performed.</description></item>
+            /// <item><description>Always: Always pulls the image.</description></item>
+            /// <item><description>IfNotPresent: Pulls the image only if it is not present locally.</description></item>
+            /// <item><description>Never: Never pulls the image. Only local images are used.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -508,14 +508,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// <para>The commands that you can run within the container to configure the postStart callback function.</para>
+            /// <para>The command executed in the container when the command line is used for the postStart callback function Settings.</para>
             /// </summary>
             [NameInMap("LifecyclePostStartHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePostStartHandlerExecs { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host to which you want to send the HTTP GET request to configure the postStart callback function.</para>
+            /// <para>The host address that accepts the HTTP GET request when the HTTP request method is used for the postStart callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerHttpGetHost { get; set; }
 
             /// <summary>
-            /// <para>The path to which you want to send the HTTP GET request to configure the postStart callback function.</para>
+            /// <para>The path to which the HTTP GET request is sent when the HTTP request method is used for the postStart callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/healthyz</para>
@@ -535,7 +535,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// <para>The port over which you want to send the HTTP GET request to configure the postStart callback function.</para>
+            /// <para>The port number to which the HTTP GET request is sent when the HTTP request method is used for the postStart callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5050</para>
@@ -545,7 +545,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePostStartHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the HTTP GET request that you want to send to configure the postStart callback function. Valid values:</para>
+            /// <para>The protocol type of the HTTP GET request when the HTTP request method is used for the postStart callback function Settings. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HTTP</description></item>
             /// <item><description>HTTPS</description></item>
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host detected by the TCP socket that you want to use to configure the postStart callback function.</para>
+            /// <para>The host address on which the TCP socket check is performed when the TCP socket method is used for the postStart callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -569,7 +569,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePostStartHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// <para>The port detected by the TCP socket that you want to use to configure the postStart callback function.</para>
+            /// <para>The port number on which the TCP socket check is performed when the TCP socket method is used for the postStart callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -579,14 +579,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePostStartHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// <para>The commands that you can run within the container to configure the preStop callback function.</para>
+            /// <para>The command executed in the container when the command line is used for the preStop callback function Settings.</para>
             /// </summary>
             [NameInMap("LifecyclePreStopHandlerExecs")]
             [Validation(Required=false)]
             public List<string> LifecyclePreStopHandlerExecs { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host to which you want to send the HTTP GET request to configure the preStop callback function.</para>
+            /// <para>The host address that accepts the HTTP GET request when the HTTP request method is used for the preStop callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -596,7 +596,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerHttpGetHost { get; set; }
 
             /// <summary>
-            /// <para>The path to which you want to send the HTTP GET request to configure the preStop callback function.</para>
+            /// <para>The path to which the HTTP GET request is sent when the HTTP request method is used for the preStop callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/healthyz</para>
@@ -606,7 +606,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerHttpGetPath { get; set; }
 
             /// <summary>
-            /// <para>The port over which you want to send the HTTP GET request to configure the preStop callback function.</para>
+            /// <para>The port number to which the HTTP GET request is sent when the HTTP request method is used for the preStop callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -616,7 +616,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePreStopHandlerHttpGetPort { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the HTTP GET request that you want to send to configure the preStop callback function. Valid values:</para>
+            /// <para>The protocol type of the HTTP GET request when the HTTP request method is used for the preStop callback function Settings. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HTTP</description></item>
             /// <item><description>HTTPS</description></item>
@@ -630,7 +630,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerHttpGetScheme { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host detected by the TCP socket that you want to use to configure the preStop callback function.</para>
+            /// <para>The host address on which the TCP socket check is performed when the TCP socket method is used for the preStop callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.XX.XX</para>
@@ -640,7 +640,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecyclePreStopHandlerTcpSocketHost { get; set; }
 
             /// <summary>
-            /// <para>The port detected by the TCP socket that you want to use to configure the preStop callback function.</para>
+            /// <para>The port number on which the TCP socket check is performed when the TCP socket method is used for the preStop callback function Settings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -650,7 +650,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LifecyclePreStopHandlerTcpSocketPort { get; set; }
 
             /// <summary>
-            /// <para>The memory size per container. Unit: GiB.</para>
+            /// <para>The memory size of the container, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -670,7 +670,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ports.</para>
+            /// <para>The port information.</para>
             /// </summary>
             [NameInMap("Ports")]
             [Validation(Required=false)]
@@ -703,7 +703,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.</para>
+            /// <para>Specifies whether to allocate a buffer for standard input while the container is running. If this parameter is not set, a read from standard input results in an EOF.</para>
             /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
@@ -714,8 +714,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Stdin { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.</para>
-            /// <para>If you set StdinOnce to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.</para>
+            /// <para>Specifies whether the standard input stream maintains the enabling status across multiple attached sessions when standard input is true.</para>
+            /// <para>If StdinOnce is set to true, standard input is opened when the container starts, remains empty until the first client attaches to it, and then maintains the enabling status to accept data until the client disconnects. After the client disconnects, standard input enters shutdown and remains in shutdown until the container is restarted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -725,8 +725,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? StdinOnce { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable Interaction. Default value: false.</para>
-            /// <para>If the command is a /bin/bash command, set this parameter to true.</para>
+            /// <para>Specifies whether to allocate a TTY for the container. Default value: false.</para>
+            /// <para>Set this parameter to true when the Command parameter is set to /bin/bash.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -736,16 +736,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Tty { get; set; }
 
             /// <summary>
-            /// <para>The volume mounts of the container.</para>
+            /// <para>The volume mount information for the container.</para>
             /// </summary>
             [NameInMap("VolumeMounts")]
             [Validation(Required=false)]
             public List<ModifyEciScalingConfigurationRequestContainersVolumeMounts> VolumeMounts { get; set; }
             public class ModifyEciScalingConfigurationRequestContainersVolumeMounts : TeaModel {
                 /// <summary>
-                /// <para>The directory within the container onto which you want to mount the volume.</para>
+                /// <para>The directory where the volume is mounted in the container.</para>
                 /// <remarks>
-                /// <para> The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.</para>
+                /// <para>The contents of the mount path in the container are directly overwritten by the contents of the volume. Use this parameter with caution.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -756,11 +756,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</para>
+                /// <para>The mount propagation settings for the volume. Mount propagation allows volumes mounted by a container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</description></item>
-                /// <item><description>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</description></item>
-                /// <item><description>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.</description></item>
+                /// <item><description>None: The volume does not receive any subsequent mounts that are performed on the volume or its subdirectories.</description></item>
+                /// <item><description>HostToCotainer: The volume receives all subsequent mounts that are performed on the volume or its subdirectories.</description></item>
+                /// <item><description>Bidirectional: Similar to HostToContainer, the volume receives all subsequent mounts. In addition, all mounts created by the container are propagated back to the host and to all containers of all pods that use the same volume.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -771,7 +771,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// <para>The volume name. The value of this parameter is the same as the name of the volume that is mounted to containers.</para>
+                /// <para>The name of the volume. The value must be the same as the Name parameter in Volume.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default-volume1</para>
@@ -792,7 +792,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The volume subdirectory.</para>
+                /// <para>The subpath of the volume.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>data2/</para>
@@ -816,10 +816,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The update mode of containers. Valid values:</para>
+        /// <para>The control parameter for the update method of the Containers parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RenewUpdate: full update mode. This value takes effect based on the value of Containers in an update request. This value indicates that the previous setting of Containers is overwritten.</description></item>
-        /// <item><description>IncrementalUpdate: incremental update mode. Container matching is performed based on the Container.name value. Only the parameters that are included in the request parameters are updated.</description></item>
+        /// <item><description>RenewUpdate: full update. The Containers parameter in the update request prevails and overwrites the original Containers parameter configuration.</description></item>
+        /// <item><description>IncrementalUpdate: incremental update. Containers are matched based on Container.name, and only the parameters specified in the request are updated.</description></item>
         /// </list>
         /// <para>Default value: RenewUpdate.</para>
         /// 
@@ -831,10 +831,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ContainersUpdateType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Cost Optimization feature. Valid values:</para>
+        /// <para>Specifies whether to enable cost optimization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -846,7 +846,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? CostOptimization { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs per elastic container instance.</para>
+        /// <para>The number of vCPUs for the instance. Unit: cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -856,7 +856,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The number of physical CPU cores. You can specify this parameter for only specific ECS instance types. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</para>
+        /// <para>The number of physical CPU cores. Only specific instance types support custom settings. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Customize CPU options</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -866,7 +866,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? CpuOptionsCore { get; set; }
 
         /// <summary>
-        /// <para>The number of threads per core. You can specify this parameter for only specific instance types. A value of 1 specifies that Hyper-Threading is disabled. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Specify CPU options</a>.</para>
+        /// <para>The number of threads per core. Only specific instance types support custom settings. A value of 1 indicates that hyper-threading is disabled. For more information, see <a href="https://help.aliyun.com/document_detail/197781.html">Customize CPU options</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -876,7 +876,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? CpuOptionsThreadsPerCore { get; set; }
 
         /// <summary>
-        /// <para>The bucket in which data caches are stored.</para>
+        /// <para>The data cache bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -886,14 +886,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DataCacheBucket { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Performance Burst feature for the ESSD AutoPL disk in which data caches are stored. Valid values:</para>
+        /// <para>Specifies whether to enable the burst feature for the ESSD AutoPL cloud disk used for data caching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para>For more information about ESSD AutoPL cloud disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -904,16 +904,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? DataCacheBurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the cloud disk in which data caches are stored. We recommend that you use Enterprise SSDs (ESSDs). Valid values:</para>
+        /// <para>The performance level of the cloud disk used for data caching. Use ESSDs. Valid values for the performance level of an ESSD:</para>
         /// <list type="bullet">
-        /// <item><description>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-        /// <item><description>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-        /// <item><description>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-        /// <item><description>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
+        /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
+        /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
+        /// <item><description>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
+        /// <item><description>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</description></item>
         /// </list>
         /// <para>Default value: PL1.</para>
         /// <remarks>
-        /// <para> For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+        /// <para>For more information about ESSDs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -924,9 +924,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DataCachePL { get; set; }
 
         /// <summary>
-        /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk in which data caches are stored. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.</para>
+        /// <para>The provisioned read and write IOPS of the ESSD AutoPL cloud disk used for data caching. Valid values: 0 to min{50000, 1000 × capacity - baseline performance}, where baseline performance = min{1800 + 50 × capacity, 50000}.</para>
         /// <remarks>
-        /// <para> For more information about ESSD AutoPL disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para>For more information about ESSD AutoPL cloud disks, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -938,7 +938,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is unavailable for use.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -949,21 +949,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses of DNS servers.</para>
+        /// <para>The list of IP addresses of DNS servers.</para>
         /// </summary>
         [NameInMap("DnsConfigNameServers")]
         [Validation(Required=false)]
         public List<string> DnsConfigNameServers { get; set; }
 
         /// <summary>
-        /// <para>The options. Each option is a name-value pair. The value in the name-value pair is optional.</para>
+        /// <para>The list of object options. Each object consists of a Name and an optional Value.</para>
         /// </summary>
         [NameInMap("DnsConfigOptions")]
         [Validation(Required=false)]
         public List<ModifyEciScalingConfigurationRequestDnsConfigOptions> DnsConfigOptions { get; set; }
         public class ModifyEciScalingConfigurationRequestDnsConfigOptions : TeaModel {
             /// <summary>
-            /// <para>The variable name of the option.</para>
+            /// <para>The name of the object variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -973,7 +973,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The variable value of the option.</para>
+            /// <para>The value of the object variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -985,17 +985,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The search domains of DNS servers.</para>
+        /// <para>The list of DNS search domains.</para>
         /// </summary>
         [NameInMap("DnsConfigSearchs")]
         [Validation(Required=false)]
         public List<string> DnsConfigSearchs { get; set; }
 
         /// <summary>
-        /// <para>The Domain Name System (DNS) policy. Valid values:</para>
+        /// <para>The DNS policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>None: uses the DNS that is specified by DnsConfig.</description></item>
-        /// <item><description>Default: uses the DNS that is specified for the runtime environment.</description></item>
+        /// <item><description><para>None: uses the DNS settings specified in the DnsConfig field.</para>
+        /// </description></item>
+        /// <item><description><para>Default: inherits the DNS settings from the runtime environment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1006,7 +1008,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DnsPolicy { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound bandwidth. Unit: bit/s.</para>
+        /// <para>The outbound bandwidth limit. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024000</para>
@@ -1016,8 +1018,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? EgressBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The EIP bandwidth.</para>
-        /// <para>Default value: 5. Unit: Mbit/s.</para>
+        /// <para>The bandwidth of the EIP.</para>
+        /// <para>Default value: 5 Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -1028,7 +1030,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not available for use.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1039,7 +1041,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? EnableSls { get; set; }
 
         /// <summary>
-        /// <para>The size of the temporary storage space. By default, an Enterprise SSD (ESSD) of the PL1 type is used. Unit: GiB.</para>
+        /// <para>The size of the temporary storage space. By default, PL1 ESSDs are used. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -1049,13 +1051,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? EphemeralStorage { get; set; }
 
         /// <summary>
-        /// <para>The version of the GPU driver. Valid values:</para>
+        /// <para>The specified GPU driver version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>tesla=470.82.01 (default)</description></item>
         /// <item><description>tesla=525.85.12</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</para>
+        /// <para>Only specific instance types support switching the GPU driver version. For more information, see <a href="https://help.aliyun.com/document_detail/2579486.html">Create an instance by specifying a GPU instance type</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1066,21 +1068,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string GpuDriverVersion { get; set; }
 
         /// <summary>
-        /// <para>The hosts.</para>
+        /// <para>The host-related information.</para>
         /// </summary>
         [NameInMap("HostAliases")]
         [Validation(Required=false)]
         public List<ModifyEciScalingConfigurationRequestHostAliases> HostAliases { get; set; }
         public class ModifyEciScalingConfigurationRequestHostAliases : TeaModel {
             /// <summary>
-            /// <para>The names of the hosts that you want to add.</para>
+            /// <para>The hostname to be added.</para>
             /// </summary>
             [NameInMap("Hostnames")]
             [Validation(Required=false)]
             public List<string> Hostnames { get; set; }
 
             /// <summary>
-            /// <para>The IP address that you want to add.</para>
+            /// <para>The IP address to be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX</para>
@@ -1092,7 +1094,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The hostname series of elastic container instances.</para>
+        /// <para>The hostname, which is the name of the container group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -1102,14 +1104,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The image repositories.</para>
+        /// <para>The details of the image registry.</para>
         /// </summary>
         [NameInMap("ImageRegistryCredentials")]
         [Validation(Required=false)]
         public List<ModifyEciScalingConfigurationRequestImageRegistryCredentials> ImageRegistryCredentials { get; set; }
         public class ModifyEciScalingConfigurationRequestImageRegistryCredentials : TeaModel {
             /// <summary>
-            /// <para>The password of the image repository.</para>
+            /// <para>The password for the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourpaasword</para>
@@ -1119,7 +1121,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The address of the image repository.</para>
+            /// <para>The address of the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-shanghai.aliyuncs.com</para>
@@ -1129,7 +1131,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Server { get; set; }
 
             /// <summary>
-            /// <para>The username of the image repository.</para>
+            /// <para>The username for the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourusername</para>
@@ -1151,7 +1153,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ImageSnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The maximum inbound bandwidth. Unit: bit/s.</para>
+        /// <para>The inbound bandwidth limit. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024000</para>
@@ -1161,7 +1163,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? IngressBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The init containers.</para>
+        /// <para>The list of init containers.</para>
         /// </summary>
         [NameInMap("InitContainers")]
         [Validation(Required=false)]
@@ -1176,9 +1178,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public ModifyEciScalingConfigurationRequestInitContainersSecurityContextCapability Capability { get; set; }
                 public class ModifyEciScalingConfigurationRequestInitContainersSecurityContextCapability : TeaModel {
                     /// <summary>
-                    /// <para>The permissions that you want to grant to the processes in the init container. Valid values: NET_ADMIN and NET_RAW.</para>
+                    /// <para>Grants specific privileges to processes in the container. Valid values: NET_ADMIN and NET_RAW.</para>
                     /// <remarks>
-                    /// <para> To use NET_RAW, submit a ticket.</para>
+                    /// <para>NET_RAW is not supported by default. To use NET_RAW, submit a ticket.</para>
                     /// </remarks>
                     /// </summary>
                     [NameInMap("Adds")]
@@ -1189,7 +1191,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
                 /// <summary>
                 /// <remarks>
-                /// <para> This parameter is unavailable.</para>
+                /// <para>This parameter is not available.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -1200,7 +1202,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? ReadOnlyRootFilesystem { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who runs the init container.</para>
+                /// <para>The user ID to run the container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>587</para>
@@ -1212,21 +1214,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The container startup arguments.</para>
+            /// <para>The startup arguments for the container.</para>
             /// </summary>
             [NameInMap("Args")]
             [Validation(Required=false)]
             public List<string> Args { get; set; }
 
             /// <summary>
-            /// <para>The commands that you can run to start the init container.</para>
+            /// <para>The startup commands for the container.</para>
             /// </summary>
             [NameInMap("Commands")]
             [Validation(Required=false)]
             public List<string> Commands { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs per init container.</para>
+            /// <para>The number of vCPUs allocated to the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -1236,7 +1238,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The number of GPUs per init container.</para>
+            /// <para>The number of GPUs allocated to the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1246,7 +1248,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Gpu { get; set; }
 
             /// <summary>
-            /// <para>The image of the init container.</para>
+            /// <para>The image used by the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nginx</para>
@@ -1256,11 +1258,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>The image pulling policy. Valid values:</para>
+            /// <para>The image pull policy for the container. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Always: Image pulling is performed each time instances are created.</description></item>
-            /// <item><description>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</description></item>
-            /// <item><description>Never: On-premises images are always used. Image pulling is not performed.</description></item>
+            /// <item><description>Always: Always pulls the image.</description></item>
+            /// <item><description>IfNotPresent: Pulls the image only if it is not present locally.</description></item>
+            /// <item><description>Never: Never pulls the image. Only local images are used.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1271,7 +1273,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ImagePullPolicy { get; set; }
 
             /// <summary>
-            /// <para>The environment variables of the init container.</para>
+            /// <para>The environment variable information of the init container.</para>
             /// </summary>
             [NameInMap("InitContainerEnvironmentVars")]
             [Validation(Required=false)]
@@ -1283,7 +1285,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public class ModifyEciScalingConfigurationRequestInitContainersInitContainerEnvironmentVarsFieldRef : TeaModel {
                     /// <summary>
                     /// <remarks>
-                    /// <para> This parameter is unavailable.</para>
+                    /// <para>This parameter is not available.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -1296,7 +1298,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <c>[0-9a-zA-Z]</c> format.</para>
+                /// <para>The name of the environment variable. The name must be 1 to 128 characters in length. It can contain letters, digits, and underscores (_), and cannot start with a digit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Path</para>
@@ -1318,7 +1320,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The ports of the init container.</para>
+            /// <para>The port information of the init container.</para>
             /// </summary>
             [NameInMap("InitContainerPorts")]
             [Validation(Required=false)]
@@ -1351,16 +1353,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The volume mounts of the init container.</para>
+            /// <para>The array of mount point information for the init container.</para>
             /// </summary>
             [NameInMap("InitContainerVolumeMounts")]
             [Validation(Required=false)]
             public List<ModifyEciScalingConfigurationRequestInitContainersInitContainerVolumeMounts> InitContainerVolumeMounts { get; set; }
             public class ModifyEciScalingConfigurationRequestInitContainersInitContainerVolumeMounts : TeaModel {
                 /// <summary>
-                /// <para>The directory within the init container onto which you want to mount the volume.</para>
+                /// <para>The directory where the volume is mounted in the container.</para>
                 /// <remarks>
-                /// <para> The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.</para>
+                /// <para>The contents of the mount path in the container are directly overwritten by the contents of the volume. Use this parameter with caution.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -1371,11 +1373,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:</para>
+                /// <para>The mount propagation settings for the volume. Mount propagation allows a volume mounted to a container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</description></item>
-                /// <item><description>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</description></item>
-                /// <item><description>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.</description></item>
+                /// <item><description>None: The volume is not aware of any subsequent mount operations performed on the volume or its subdirectories.</description></item>
+                /// <item><description>HostToCotainer: The volume is aware of subsequent mount operations performed on the volume or its subdirectories.</description></item>
+                /// <item><description>Bidirectional: Similar to HostToCotainer, the volume is aware of mount operations. In addition, the volume is propagated back to the host and to all containers of all pods that use the same volume.</description></item>
                 /// </list>
                 /// <para>Default value: None.</para>
                 /// 
@@ -1387,7 +1389,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string MountPropagation { get; set; }
 
                 /// <summary>
-                /// <para>The name of the volume.</para>
+                /// <para>The name of the mounted volume.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-empty</para>
@@ -1408,7 +1410,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The volume subdirectory. The pod can mount different directories of the same volume to different subdirectories of init containers.</para>
+                /// <para>The subdirectory under the volume. This allows a pod to mount different directories under the same volume to different directories in the container.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Always</para>
@@ -1420,7 +1422,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The memory size per init container. Unit: GiB.</para>
+            /// <para>The memory size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
@@ -1430,7 +1432,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Memory { get; set; }
 
             /// <summary>
-            /// <para>The name of the init container.</para>
+            /// <para>The name of the container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-init</para>
@@ -1452,11 +1454,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The level of the instance family, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set <c>CostOptimization</c> to true. Valid values:</para>
+        /// <para>The level of the instance family. This parameter is used to filter instance types that meet your requirements and takes effect only when CostOptimization is set to true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
-        /// <item><description>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
-        /// <item><description>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</description></item>
+        /// <item><description>EntryLevel: shared instance types. Shared instance types are more cost-effective but cannot guarantee stable computing performance. They are suitable for business scenarios with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
+        /// <item><description>EnterpriseLevel: enterprise-level instance types. Enterprise-level instance types provide stable performance and dedicated resources. They are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>CreditEntryLevel: burstable instance types. Burstable instance types use CPU credits to ensure computing performance. They are suitable for business scenarios with low CPU utilization but occasional CPU usage spikes. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1467,7 +1469,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The ECS instance types. You can specify up to five instance types.</para>
+        /// <para>The specified ECS instance types. You can specify up to five instance types.</para>
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
@@ -1484,7 +1486,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// <para>The load balancing weight of each backend server. Valid values: 1 to 100.</para>
+        /// <para>The weight of the backend server. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -1494,7 +1496,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? LoadBalancerWeight { get; set; }
 
         /// <summary>
-        /// <para>The memory size per elastic container instance. Unit: GiB.</para>
+        /// <para>The memory size for the instance. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
@@ -1504,15 +1506,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? Memory { get; set; }
 
         /// <summary>
-        /// <para>The endpoints of Network Time Protocol (NTP) servers.</para>
+        /// <para>The NTP server.</para>
         /// </summary>
         [NameInMap("NtpServers")]
         [Validation(Required=false)]
         public List<string> NtpServers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to override existing data. Valid Values:</para>
-        /// <para>true false</para>
+        /// <para>Specifies whether to overwrite. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Overwrite.</description></item>
+        /// <item><description>false: Do not overwrite.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -1526,7 +1531,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and Elastic Compute Service (ECS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use an instance RAM role by calling API operations</a>.</para>
+        /// <para>The name of the RAM role for the instance. ECIs and ECS instances share the same instance RAM roles. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use an instance RAM role by calling API operations</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RamTestRole</para>
@@ -1550,11 +1555,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The instance restart policy. Valid values:</para>
+        /// <para>The restart policy of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Always: always restarts elastic container instances.</description></item>
-        /// <item><description>Never: never restarts elastic container instances.</description></item>
-        /// <item><description>OnFailure: restarts elastic container instances upon failures.</description></item>
+        /// <item><description>Always: always restarts the instance.</description></item>
+        /// <item><description>Never: never restarts the instance.</description></item>
+        /// <item><description>OnFailure: restarts the instance when it fails.</description></item>
         /// </list>
         /// <para>Default value: Always.</para>
         /// 
@@ -1566,7 +1571,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RestartPolicy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling configuration that you want to modify.</para>
+        /// <para>The ID of the scaling configuration to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1577,8 +1582,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingConfigurationId { get; set; }
 
         /// <summary>
-        /// <para>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</para>
-        /// <para>The name of a scaling configuration must be unique in the specified region. If you do not specify this parameter, the value of ScalingConfigurationId is used.</para>
+        /// <para>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain digits, letters, and Chinese characters. It must start with a digit, a letter, or a Chinese character, and can contain digits, underscores (_), hyphens (-), and periods (.).</para>
+        /// <para>The name of a scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the ID of the scaling configuration is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-modify</para>
@@ -1588,14 +1593,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingConfigurationName { get; set; }
 
         /// <summary>
-        /// <para>The security contexts in which the elastic container instance runs.</para>
+        /// <para>The system information of the contextual security context in which the instance runs.</para>
         /// </summary>
         [NameInMap("SecurityContextSysCtls")]
         [Validation(Required=false)]
         public List<ModifyEciScalingConfigurationRequestSecurityContextSysCtls> SecurityContextSysCtls { get; set; }
         public class ModifyEciScalingConfigurationRequestSecurityContextSysCtls : TeaModel {
             /// <summary>
-            /// <para>The variable name of the security context in which the elastic container instance runs.</para>
+            /// <para>The system name of the security context in which the instance runs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kernel.msgmax</para>
@@ -1605,7 +1610,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The variable value of the security context in which the elastic container instance runs.</para>
+            /// <para>The variable value of the contextual security context in which the instance runs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65536</para>
@@ -1617,8 +1622,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The ID of the security group to which elastic container instances belong. Elastic container instances that belong to the same security group can communicate with each other.</para>
-        /// <para>If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.</para>
+        /// <para>The ID of the security group to which the ECI instance belongs. ECI instances in the same security group can access each other.</para>
+        /// <para>If you do not specify a security group, the system automatically uses the default security group in the selected region. You must ensure that the inbound rules of the security group include the protocols and ports that the containers need to expose. If no default security group exists in the region, the system performs automatic creation of a default security group and adds the declared container protocols and ports to the inbound rules of the security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-uf66jeqopgqa9hdn****</para>
@@ -1628,8 +1633,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The maximum hourly price of preemptible elastic container instances. The value can be accurate to three decimal places.</para>
-        /// <para>If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.</para>
+        /// <para>The maximum hourly price for the spot instance. The value can be accurate to three decimal places.</para>
+        /// <para>This parameter is required when SpotStrategy is set to SpotWithPriceLimit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.025</para>
@@ -1639,11 +1644,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public float? SpotPriceLimit { get; set; }
 
         /// <summary>
-        /// <para>The instance bidding policy. Valid values:</para>
+        /// <para>The preemption policy for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instances are created as pay-as-you-go instances.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</description></item>
+        /// <item><description>NoSpot: applies to regular pay-as-you-go instances.</description></item>
+        /// <item><description>SpotWithPriceLimit: applies to spot instances that have maximum hourly prices.</description></item>
+        /// <item><description>SpotAsPriceGo: applies to spot instances whose prices are automatically set by the system based on the current market price.</description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>
         /// 
@@ -1684,7 +1689,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The buffer period during which the program handles operations before the program is stopped. Unit: seconds.</para>
+        /// <para>The buffer time for the program to handle operations before shutdown. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -1694,7 +1699,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? TerminationGracePeriodSeconds { get; set; }
 
         /// <summary>
-        /// <para>The volumes.</para>
+        /// <para>The volume information.</para>
         /// </summary>
         [NameInMap("Volumes")]
         [Validation(Required=false)]
@@ -1715,7 +1720,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string DiskId { get; set; }
 
                 /// <summary>
-                /// <para>The volume size. Unit: GiB.</para>
+                /// <para>The size of the disk volume. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -1725,7 +1730,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// <para>We recommend that you specify <c>FlexVolume.FsType</c> instead of DiskVolume.FsType.</para>
+                /// <para>This file system type is deprecated. Use the FlexVolume.FsType parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xfs</para>
@@ -1741,7 +1746,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume EmptyDirVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume : TeaModel {
                 /// <summary>
-                /// <para>The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the emptyDir volume stores data in the file system of a node. A value of memory specifies that the emptyDir volume stores data in the memory.</para>
+                /// <para>The storage medium of the EmptyDirVolume. The default value is empty, which indicates that the node file system is used. If this parameter is set to memory, the memory is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>memory</para>
@@ -1751,7 +1756,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Medium { get; set; }
 
                 /// <summary>
-                /// <para>The size of the emptyDir volume. The value contains a unit. We recommend that you use Gi or Mi as the unit.</para>
+                /// <para>The size of the EmptyDir volume. Specify a unit for the value, such as Gi or Mi.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>256Mi</para>
@@ -1767,7 +1772,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public ModifyEciScalingConfigurationRequestVolumesFlexVolume FlexVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesFlexVolume : TeaModel {
                 /// <summary>
-                /// <para>The name of the FlexVolume driver.</para>
+                /// <para>The name of the driver used for the FlexVolume.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>flexvolume</para>
@@ -1777,7 +1782,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Driver { get; set; }
 
                 /// <summary>
-                /// <para>The type of the mounted file system. The default value is determined by the script of FlexVolume.</para>
+                /// <para>The type of the file system to be mounted. The default value depends on the script of the FlexVolume.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ext4</para>
@@ -1787,8 +1792,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string FsType { get; set; }
 
                 /// <summary>
-                /// <para>The FlexVolume options. Each option is a key-value pair in a JSON string.</para>
-                /// <para>For example, if you use FlexVolume to mount a disk, the format of Options is <c>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</c>.</para>
+                /// <para>The list of options for the FlexVolume object. The options are passed as key-value pairs in JSON format.</para>
+                /// <para>Example: When you mount a cloud disk by using FlexVolume, the format of Options is <c>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;volumeId&quot;:&quot;d-2zehdahrwoa7srg****&quot;,&quot;performanceLevel&quot;: &quot;PL2&quot;}</para>
@@ -1814,7 +1819,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The type of host directory. For example: File, Directory, Socket, etc.</para>
+                /// <para>The type of the host directory, such as File, Directory, or Socket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Directory</para>
@@ -1830,7 +1835,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public ModifyEciScalingConfigurationRequestVolumesNFSVolume NFSVolume { get; set; }
             public class ModifyEciScalingConfigurationRequestVolumesNFSVolume : TeaModel {
                 /// <summary>
-                /// <para>The path to the Network File System (NFS) volume.</para>
+                /// <para>The path of the NFS volume.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/share</para>
@@ -1840,7 +1845,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the permissions on the NFS volume are read-only.</para>
+                /// <para>Specifies whether the NFS volume is read-only.</para>
                 /// <para>Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
@@ -1851,7 +1856,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint of the NFS server.</para>
+                /// <para>The address of the NFS server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3f9cd4a596-n****.cn-shanghai.nas.aliyuncs.com</para>
@@ -1863,7 +1868,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The paths to the configuration files.</para>
+            /// <para>The list of configuration file paths.</para>
             /// </summary>
             [NameInMap("ConfigFileVolumeConfigFileToPath")]
             [Validation(Required=false)]
@@ -1880,7 +1885,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The permissions on the ConfigFile volume.</para>
+                /// <para>The directory permissions for the ConfigFileVolume.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0644</para>
@@ -1890,7 +1895,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? Mode { get; set; }
 
                 /// <summary>
-                /// <para>The relative path to the configuration file.</para>
+                /// <para>The relative file path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/usr/bin/</para>
@@ -1902,7 +1907,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The default permissions on the ConfigFile volume.</para>
+            /// <para>The default permissions for the ConfigFileVolume.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0644</para>
@@ -1912,7 +1917,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? ConfigFileVolumeDefaultMode { get; set; }
 
             /// <summary>
-            /// <para>The volume name.</para>
+            /// <para>The name of the volume.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-volume1</para>
@@ -1922,7 +1927,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the Host directory. Examples: File, Directory, and Socket.</para>
+            /// <para>The volume type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>EmptyDirVolume</description></item>
+            /// <item><description>NFSVolume</description></item>
+            /// <item><description>ConfigFileVolume</description></item>
+            /// <item><description>FlexVolume</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>EmptyDirVolume</para>

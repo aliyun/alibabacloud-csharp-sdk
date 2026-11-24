@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ResumeProcessesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E38EB733-D714-4658-8A5F-0688AB68****</para>

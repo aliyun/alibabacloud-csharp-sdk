@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateDiagnoseReportRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the scaling group.</para>
+        /// <para>The ID of the region to which the scaling group belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling group.</para>
+        /// <para>The ID of the target scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

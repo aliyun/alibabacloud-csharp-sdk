@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScheduledTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information collection of the scheduled tasks.</para>
+        /// <para>The information about the scheduled tasks.</para>
         /// </summary>
         [NameInMap("ScheduledTasks")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The expected number of instances in the scaling group. If you set <c>Scaling Method</c> to <c>Configure Number of Instances in Scaling Group</c>, you can specify this parameter.</para>
+            /// <para>The expected number of instances in the scaling group. This parameter takes effect when the scaling method of the scheduled task is set to adjust the number of instances in the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? DesiredCapacity { get; set; }
 
             /// <summary>
-            /// <para>The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.</para>
+            /// <para>The time period during which a retry is performed after the scheduled task fails to be triggered. Unit: seconds. Valid values: 0 to 21600.</para>
             /// 
             /// <b>Example:</b>
             /// <para>600</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LaunchExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>The point in time at which the scheduled task is triggered.</para>
+            /// <para>The time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2014-08-18T10:52Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LaunchTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of instances that must be contained in the scaling group. If you set <c>Scaling Method</c> to <c>Configure Number of Instances in Scaling Group</c>, you can specify this parameter.</para>
+            /// <para>The maximum number of instances in the scaling group. This parameter takes effect when the scaling method of the scheduled task is set to adjust the number of instances in the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MaxValue { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of instances that must be contained in the scaling group. If you set <c>Scaling Method</c> to <c>Configure Number of Instances in Scaling Group</c>, you can specify this parameter.</para>
+            /// <para>The minimum number of instances in the scaling group. This parameter takes effect when the scaling method of the scheduled task is set to adjust the number of instances in the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinValue { get; set; }
 
             /// <summary>
-            /// <para>The end time of the recurrence of the scheduled task.</para>
+            /// <para>The end time of the recurring scheduled task. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2014-08-20T16:55Z</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string RecurrenceEndTime { get; set; }
 
             /// <summary>
-            /// <para>The recurring interval of the scheduled task.</para>
+            /// <para>The recurrence type of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Daily</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string RecurrenceType { get; set; }
 
             /// <summary>
-            /// <para>The frequency of recurrence of the scheduled task.</para>
+            /// <para>The recurrence value of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string RecurrenceValue { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scaling group to which the scheduled task belongs.</para>
+            /// <para>The ID of the scaling group that executes the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asg-bp1bo5tca4m56nap****</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// <para>The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.</para>
+            /// <para>The scaling rule used when the scheduled task is executed. This parameter is returned only when a scaling rule is specified for the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ari:acs:ess:cn-hangzhou:1406926474****:scalingrule/asr-bp1id5rhu8edp7kd****</para>
@@ -177,10 +177,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScheduledTaskName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the scheduled task is enabled.</para>
+            /// <para>Indicates whether the scheduled task is started. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: The task is started.</description></item>
+            /// <item><description>false: The task is stopped.</description></item>
             /// </list>
             /// <para>Default value: true.</para>
             /// 
@@ -190,6 +190,35 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("TaskEnabled")]
             [Validation(Required=false)]
             public bool? TaskEnabled { get; set; }
+
+            /// <summary>
+            /// <para>The warm pool capacity configurations of the scaling group.</para>
+            /// </summary>
+            [NameInMap("WarmPoolCapacityOptions")]
+            [Validation(Required=false)]
+            public DescribeScheduledTasksResponseBodyScheduledTasksWarmPoolCapacityOptions WarmPoolCapacityOptions { get; set; }
+            public class DescribeScheduledTasksResponseBodyScheduledTasksWarmPoolCapacityOptions : TeaModel {
+                /// <summary>
+                /// <para>The expected number of instances covered by the warm pool. The system maintains the sum of the current number of instances in the scaling group and the number of instances in the warm pool at this value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
+                [NameInMap("DesiredGroupPreparedCapacity")]
+                [Validation(Required=false)]
+                public int? DesiredGroupPreparedCapacity { get; set; }
+
+                /// <summary>
+                /// <para>The minimum number of instances in the warm pool.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("MinCapacity")]
+                [Validation(Required=false)]
+                public int? MinCapacity { get; set; }
+
+            }
 
         }
 

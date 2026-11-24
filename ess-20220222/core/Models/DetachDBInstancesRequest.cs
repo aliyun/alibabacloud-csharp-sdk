@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DetachDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.</para>
+        /// <para>The IDs of the ApsaraDB RDS instances. You can remove up to five ApsaraDB RDS instances at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DBInstances")]
@@ -29,10 +28,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> DBInstances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove the private IP addresses of the existing instances in the scaling group from the IP address whitelist of the ApsaraDB RDS instance. Valid values:</para>
+        /// <para>Specifies whether to remove the private IP addresses of the instances in the scaling group from the IP whitelist of the RDS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: removes the private IP addresses of the instances.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not remove the private IP addresses of the instances.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -58,10 +59,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove the security group. This parameter takes effect only if you set <c>AttachMode</c> to <c>SecurityGroup</c>. Valid values:</para>
+        /// <para>This parameter is valid only for databases whose <c>AttachMode</c> is set to <c>SecurityGroup</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: removes the security group ID that was added when the scaling group was associated with the database.</description></item>
+        /// <item><description>false: retains the security group ID that was added when the scaling group was associated with the database.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

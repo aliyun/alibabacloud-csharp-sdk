@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateScalingGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The Application Load Balancer (ALB) server groups to associate with the scaling group.</para>
+        /// <para>The collection of information about the ALB server groups.</para>
         /// </summary>
         [NameInMap("AlbServerGroups")]
         [Validation(Required=false)]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public class CreateScalingGroupRequestAlbServerGroups : TeaModel {
             /// <summary>
             /// <para>The ID of the ALB server group.</para>
-            /// <para>A scaling group can be associated with a limited number of ALB server groups. To view or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</para>
+            /// <para>A scaling group supports a limited number of associated ALB server groups. To view or manually apply for a quota increase, go to the <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sgp-ddwb0y0g6y9bjm****</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string AlbServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The port number used by an instance after it is added to the ALB server group. Valid values: 1 to 65535.</para>
+            /// <para>The port number used by the instance after Auto Scaling adds the instance to the ALB server group. Valid values: 1 to 65535.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The weight of an instance as a backend server after the instance is added to the ALB server group. The higher the weight, the more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance. Valid values: 0 to 100.</para>
+            /// <para>The weight of the instance as a backend server after Auto Scaling adds the instance to the ALB server group. A higher weight specifies that more requests are distributed to the instance. If the weight is 0, the instance does not receive requests. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The capacity allocation policy determines how the scaling group selects available instance types to meet capacity requirements. The policy applies to both on-demand and preemptible capacity (effective only when the <c>MultiAZPolicy</c> parameter is set to <c>COMPOSABLE</c>). Valid values:</para>
+        /// <para>The capacity allocation policy, which determines how the scaling group selects available instance types to meet the capacity requirements. The capacity distribution policy applies to both pay-as-you-go and spot capacities. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>priority: Creates instances in the order of the configured instance types.</para>
-        /// </description></item>
-        /// <item><description><para>lowestPrice: Create instances based on the price per vCPU of instance types, from lowest to highest.</para>
-        /// </description></item>
+        /// <item><description>priority: Creates instances based on the order of the configured instance types.</description></item>
+        /// <item><description>lowestPrice: Creates instances based on the unit price per vCPU of the instance types in ascending order.</description></item>
         /// </list>
         /// <para>Default value: priority.</para>
         /// 
@@ -67,12 +65,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AllocationStrategy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic balancing for the scaling group. This setting takes effect only when BalancedOnly is enabled for a scaling group that is balanced across availability zones. Value range:</para>
+        /// <para>Specifies whether to enable automatic balancing for the scaling group. This parameter takes effect only when BalancedOnly is enabled for the zone-balanced scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false: Does not enable automatic balancing for the scaling group.</para>
-        /// </description></item>
-        /// <item><description><para>true: When automatic balancing for the scaling group is enabled, the scaling group automatically detects the capacity across availability zones. If the capacity is imbalanced, the scaling group proactively performs scaling across availability zones to rebalance the capacity.</para>
-        /// </description></item>
+        /// <item><description>false: Does not enable automatic balancing for the scaling group.</description></item>
+        /// <item><description>true: Enables automatic balancing for the scaling group. The scaling group automatically detects the capacity across zones. When the capacity is unbalanced across zones, the scaling group proactively scales out or in to rebalance the capacity across zones.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -84,17 +80,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? AutoRebalance { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to evenly distribute the capacity of the scaling group across multiple availability zones. This parameter is valid only when <c>MultiAZPolicy</c> is set to <c>COMPOSABLE</c>. Valid values:</para>
+        /// <para>Specifies whether the capacity of the scaling group is evenly distributed across multiple zones. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The capacity of the scaling group is evenly distributed across multiple availability zones.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The capacity of the scaling group is not evenly distributed across multiple availability zones.</para>
-        /// </description></item>
+        /// <item><description>true: The capacity of the scaling group is evenly distributed across multiple zones.</description></item>
+        /// <item><description>false: The capacity of the scaling group is not evenly distributed across multiple zones.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If <c>MultiAZPolicy</c> is set to <c>COMPOSABLE</c> and <c>AzBalance</c> is set to <c>true</c>, the effect is the same as setting <c>MultiAZPolicy</c> to <c>BALANCE</c>.</para>
+        /// <para>If the MultiAZPolicy parameter is set to COMPOSABLE and the AzBalance parameter is set to true, the effect is the same as when the MultiAZPolicy parameter is set to BALANCE.</para>
         /// </remarks>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -104,12 +98,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? AzBalance { get; set; }
 
         /// <summary>
-        /// <para>The zone balancing mode is effective only when enabled. Valid values:</para>
+        /// <para>The zone balancing mode. This parameter takes effect only when the zone balancing mode is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BalancedBestEffort: If a resource fails to be created in an availability zone, the system falls back to other availability zones to ensure best-effort delivery.</para>
+        /// <item><description><para>BalancedBestEffort: When resource creation fails in a zone, the system falls back to other zones to ensure best-effort delivery of resources.</para>
         /// </description></item>
-        /// <item><description><para>BalancedOnly:
-        /// If resource creation fails in an availability zone, the system does not fall back to other availability zones. The scaling activity is partially successful, which prevents an excessive imbalance of resources across different availability zones.</para>
+        /// <item><description><para>BalancedOnly: When resource creation fails in a zone, the system does not fall back to other zones. The scale-out activity partially succeeds to avoid excessive imbalance of resources across different zones.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: BalancedBestEffort.</para>
@@ -129,14 +122,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public CreateScalingGroupRequestCapacityOptions CapacityOptions { get; set; }
         public class CreateScalingGroupRequestCapacityOptions : TeaModel {
             /// <summary>
-            /// <para>When <c>MultiAZPolicy</c> is set to <c>COST_OPTIMIZED</c>, this parameter specifies whether to automatically create on-demand instances to meet capacity requirements when spot instances are unavailable due to price or inventory. Valid values:</para>
+            /// <para>Specifies whether to allow the system to automatically attempt to create pay-as-you-go instances to meet the required number of ECS instances when the MultiAZPolicy parameter is set to COST_OPTIMIZED and sufficient spot instances cannot be created due to price or inventory reasons. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: Yes.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: No.</para>
-            /// </description></item>
+            /// <item><description>true: Allowed.</description></item>
+            /// <item><description>false: Not allowed.</description></item>
             /// </list>
-            /// <para>Default value: <c>true</c>.</para>
+            /// <para>Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -146,8 +137,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? CompensateWithOnDemand { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of on-demand instances required in the scaling group. When the number of on-demand instances in the scaling group is less than this value, the system preferentially creates on-demand instances. Valid values: 0 to 1,000.</para>
-            /// <para>When <c>MultiAZPolicy</c> is set to <c>COMPOSABLE</c>, the default value is 0.</para>
+            /// <para>The minimum number of pay-as-you-go instances required in the scaling group. When the number of pay-as-you-go instances in the scaling group is less than this value, the system preferentially creates pay-as-you-go instances. Valid values: 0 to 1000.</para>
+            /// <para>When the MultiAZPolicy parameter is set to COMPOSABLE, the default value is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -157,8 +148,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? OnDemandBaseCapacity { get; set; }
 
             /// <summary>
-            /// <para>The percentage of on-demand instances among the excess instances after the <c>OnDemandBaseCapacity</c> requirement is met. Valid values: 0 to 100.</para>
-            /// <para>When <c>MultiAZPolicy</c> is set to <c>COMPOSABLE</c>, the default value is 100.</para>
+            /// <para>The percentage of pay-as-you-go instances in the excess instances after the scaling group meets the minimum number of pay-as-you-go instances specified by OnDemandBaseCapacity. Valid values: 0 to 100.</para>
+            /// <para>When the MultiAZPolicy parameter is set to COMPOSABLE, the default value is 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -168,15 +159,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? OnDemandPercentageAboveBaseCapacity { get; set; }
 
             /// <summary>
-            /// <para>The price comparison mode for the cost optimization strategy of the scaling group. Valid values:</para>
+            /// <para>The price comparison mode for the cost optimization policy of the scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>PricePerUnit</c>: Compares prices based on per-unit capacity.</para>
-            /// <para>The capacity of an instance in a scaling group is equal to the weight set for the instance type, with a default of 1, meaning one ECS instance equals one unit of capacity.</para>
+            /// <item><description><para>PricePerUnit: Compares prices based on the price per unit of capacity.</para>
+            /// <para>The capacity of an instance in the scaling group is equal to the weight set for the instance type. The default weight is 1, which means one ECS instance occupies a capacity of 1.</para>
             /// </description></item>
-            /// <item><description><para><c>PricePerVCpu</c>: Compares prices based on per-vCPU price.</para>
+            /// <item><description><para>PricePerVCpu: Compares prices based on the price per vCPU.</para>
             /// </description></item>
             /// </list>
-            /// <para>Default value: <c>PricePerUnit</c>.</para>
+            /// <para>Default value: PricePerUnit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PricePerUnit</para>
@@ -186,14 +177,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string PriceComparisonMode { get; set; }
 
             /// <summary>
-            /// <para>After you enable <c>CompensateWithOnDemand</c>, if the on-demand percentage exceeds the <c>OnDemandPercentageAboveBaseCapacity</c> ratio, the system attempts to replace on-demand capacity with spot capacity. A common scenario is when <c>CompensateWithOnDemand</c> leads to on-demand instances being created due to spot inventory or price issues. To avoid the prolonged existence of these on-demand instances, the system attempts to replace the excess on-demand capacity with spot instances. Valid values:</para>
+            /// <para>Specifies whether to attempt to use spot instances to replace pay-as-you-go capacity when CompensateWithOnDemand is enabled and the proportion of pay-as-you-go instances exceeds the OnDemandPercentageAboveBaseCapacity value. In common scenarios where CompensateWithOnDemand downgrades spot instances to pay-as-you-go instances due to spot inventory or price reasons, this parameter attempts to use spot instances to replace the excess pay-as-you-go capacity to avoid long-term existence of pay-as-you-go instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: Allows replacement.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: Does not allow replacement.</para>
-            /// </description></item>
+            /// <item><description>true: Allowed.</description></item>
+            /// <item><description>false: Not allowed.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -205,8 +194,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>A client-generated token to ensure the idempotence of the request.</para>
-        /// <para>The token must be unique across requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -216,14 +205,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>This parameter is effective only when <c>MultiAZPolicy</c> is set to <c>COST_OPTIMIZED</c>. If <c>true</c>, Auto Scaling creates on-demand instances to meet capacity requirements when spot instances are unavailable due to price or inventory. Valid values:</para>
+        /// <para>Specifies whether to automatically attempt to create pay-as-you-go instances to meet the required number of ECS instances when the MultiAZPolicy parameter is set to COST_OPTIMIZED and sufficient spot instances cannot be created due to price or inventory reasons. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Yes.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: No.</para>
-        /// </description></item>
+        /// <item><description>true: allows the creation.</description></item>
+        /// <item><description>false: does not allow the creation.</description></item>
         /// </list>
-        /// <para>Default value: <c>true</c>.</para>
+        /// <para>Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -233,7 +220,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? CompensateWithOnDemand { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECI instance, also known as the container group ID.</para>
+        /// <para>The ECI instance ID, which is the container group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eci-uf6fonnghi50u374****</para>
@@ -243,7 +230,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ContainerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the custom scale-in policy function. This parameter is valid only when the first removal policy in <c>RemovalPolicies</c> is <c>CustomPolicy</c>.</para>
+        /// <para>The ARN of the Function Compute function for the custom scale-in policy. This parameter takes effect only when the first removal policy configured in RemovalPolicies is CustomPolicy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-zhangjiakou:16145688****:services/ess_custom_terminate_policy.LATEST/functions/ess_custom_terminate_policy_name</para>
@@ -253,13 +240,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string CustomPolicyARN { get; set; }
 
         /// <summary>
-        /// <para>A JSON array of RDS instance IDs.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The number of RDS instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <b>Maximum number of RDS instances that can be associated with a single scaling group</b>.</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para>The number of RDS instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <b>Maximum number of RDS instances that can be associated with a single scaling group</b>.</para>
-        /// <para>&lt;props=&quot;partner&quot;&gt;</para>
-        /// <para>The number of RDS instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to Quota Center to view the quota for <b>Maximum number of RDS instances that can be associated with a single scaling group</b>.</para>
+        /// <para>The IDs of the ApsaraDB RDS instances. The value can be a JSON array that contains multiple ApsaraDB RDS instance IDs. Separate multiple IDs with commas (,). </para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <b>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</b>.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <b>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</b>.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;The maximum number of ApsaraDB RDS instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <b>maximum number of ApsaraDB RDS instances that can be associated with a scaling group</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;rm-bp142f86de0t7****&quot;, &quot;rm-bp18l1z42ar4o****&quot;, &quot;rm-bp1lqr97h4aqk****&quot;]</para>
@@ -269,19 +253,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DBInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The databases that are associated with the scaling group.</para>
+        /// <para>The list of databases associated with the scaling group.</para>
         /// </summary>
         [NameInMap("DBInstances")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestDBInstances> DBInstances { get; set; }
         public class CreateScalingGroupRequestDBInstances : TeaModel {
             /// <summary>
-            /// <para>The method that is used to associate the scaling group with the database. Valid values:</para>
+            /// <para>The association mode between the scaling group and the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>SecurityIp</c>: The IP address whitelist mode. This mode automatically adds the scaled-out instances to the IP address whitelist of the database. This mode is supported only by RDS databases.</para>
-            /// </description></item>
-            /// <item><description><para><c>SecurityGroup</c>: The security group mode. This mode adds the security group of the scaling configuration to the security group whitelist of the database. This allows instances in the security group to access the database.</para>
-            /// </description></item>
+            /// <item><description>SecurityIp: Modifies the IP whitelist mode by automatically adding scaled-out instances to the IP whitelist of the database. Only ApsaraDB RDS databases are supported.</description></item>
+            /// <item><description>SecurityGroup: Uses the security group mode by adding the security group of the scaling configuration to the security group whitelist of the database to allow instances in the security group to access the database.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -292,7 +274,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string AttachMode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database instance.</para>
+            /// <para>The database instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-m5eqju85s45mu0***</para>
@@ -304,12 +286,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The type of the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>RDS</para>
-            /// </description></item>
-            /// <item><description><para>Redis</para>
-            /// </description></item>
-            /// <item><description><para>MongoDB</para>
-            /// </description></item>
+            /// <item><description>RDS</description></item>
+            /// <item><description>Redis</description></item>
+            /// <item><description>MongoDB</description></item>
             /// </list>
             /// <para>Default value: RDS.</para>
             /// 
@@ -323,8 +302,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The cooldown period, in seconds, after a scaling activity completes. Valid values: 0 to 86400.</para>
-        /// <para>During the cooldown period, the scaling group does not execute other scaling activities that are triggered by CloudMonitor alarm tasks.</para>
+        /// <para>The cooldown time after a scaling activity (adding or removing instances) is completed. Valid values: 0 to 86400. Unit: seconds.</para>
+        /// <para>During the cooldown time, the scaling group does not execute other scaling activities. This parameter takes effect only for scaling activities triggered by CloudMonitor event-triggered tasks.  </para>
         /// <para>Default value: 300.</para>
         /// 
         /// <b>Example:</b>
@@ -335,7 +314,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? DefaultCooldown { get; set; }
 
         /// <summary>
-        /// <para>The desired number of instances in the scaling group. Auto Scaling automatically maintains this number of instances. The value must be less than or equal to <c>MaxSize</c> and greater than or equal to <c>MinSize</c>.</para>
+        /// <para>The expected number of instances in the scaling group. The scaling group automatically maintains the number of instances at the expected number. The value cannot be greater than MaxSize or less than MinSize.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -347,12 +326,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>Specifies whether to enable deletion protection for the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Enables deletion protection. The scaling group cannot be deleted.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: Disables deletion protection.</para>
-        /// </description></item>
+        /// <item><description>true: enables deletion protection for the scaling group. In this case, the scaling group cannot be deleted.</description></item>
+        /// <item><description>false: disables deletion protection for the scaling group.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -364,12 +341,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The type of instances managed by the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ECS</c>: The scaling group manages ECS instances.</para>
+        /// <item><description><para>ECS: the scaling group manages ECS instances.</para>
         /// </description></item>
-        /// <item><description><para><c>ECI</c>: The scaling group manages ECI instances.</para>
+        /// <item><description><para>ECI: the scaling group manages ECI instances.</para>
         /// </description></item>
         /// </list>
-        /// <para>Default value: <c>ECS</c>.</para>
+        /// <para>Default value: ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -379,18 +356,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>The health check method for the scaling group. Valid values:</para>
+        /// <para>The health check type of the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>NONE</c>: No health checks are performed.</para>
-        /// </description></item>
-        /// <item><description><para><c>ECS</c>: Health checks are performed on instances in the scaling group. This value enables health checks for scaling groups of both the ECS and ECI types.</para>
-        /// </description></item>
-        /// <item><description><para><c>LOAD_BALANCER</c>: The instance health status is based on health check results from the attached load balancer. This option does not support Classic Load Balancer (CLB) instances.</para>
-        /// </description></item>
+        /// <item><description>NONE: disables health checks.</description></item>
+        /// <item><description>ECS: performs health checks on instances in the scaling group. This value is used to enable instance health checks for both ECS and ECI scaling groups.</description></item>
+        /// <item><description>LOAD_BALANCER: determines the health status of instances based on the health check results of the load balancer. CLB is not supported.</description></item>
         /// </list>
-        /// <para>Default value: <c>ECS</c>.</para>
+        /// <para>Default value: ECS.</para>
         /// <remarks>
-        /// <para>To enable both instance health checks and load balancer health checks, use the <c>HealthCheckTypes</c> parameter.</para>
+        /// <para>If you want to enable both instance health checks and load balancer health checks, use the <c>HealthCheckTypes</c> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -401,9 +375,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HealthCheckType { get; set; }
 
         /// <summary>
-        /// <para>The health check methods for the scaling group.</para>
+        /// <para>The health check modes of the scaling group.</para>
         /// <remarks>
-        /// <para>You can use this parameter to set multiple values and enable multiple health check options. If you set the <c>HealthCheckType</c> parameter, this parameter is ignored.</para>
+        /// <para>You can set multiple values for this parameter to enable multiple health check options. If the HealthCheckType parameter is specified, this parameter is ignored.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("HealthCheckTypes")]
@@ -411,7 +385,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> HealthCheckTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of an existing instance to use as a template. Auto Scaling uses this instance to create a new scaling configuration for the scaling group.</para>
+        /// <para>The ID of the instance. When you create a scaling group, Auto Scaling obtains the required configuration information from the specified instance and automatically creates a scaling configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-28wt4****</para>
@@ -421,7 +395,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the launch template that provides the configuration for the scaling group.</para>
+        /// <para>The ID of the launch template. This parameter is used to specify the launch template from which the scaling group obtains launch configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-m5e3ofjr1zn1aw7****</para>
@@ -431,19 +405,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The instance type information for extending the launch template.</para>
+        /// <para>The extended instance type information of the launch template.</para>
         /// </summary>
         [NameInMap("LaunchTemplateOverrides")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
         public class CreateScalingGroupRequestLaunchTemplateOverrides : TeaModel {
             /// <summary>
-            /// <para>To enable the scaling group to scale based on instance type capacity, you must specify both this parameter and <c>LaunchTemplateOverrides.WeightedCapacity</c>.</para>
-            /// <para>This parameter specifies the instance type, which overrides the instance type specified in the launch template.</para>
+            /// <para>If you want the scaling group to scale based on the capacity of the instance type, specify both this parameter and LaunchTemplateOverrides.WeightedCapacity.</para>
+            /// <para>This parameter is used to specify the instance type and overrides the instance type in the launch template.</para>
             /// <remarks>
-            /// <para>This parameter takes effect only when the <c>LaunchTemplateId</c> parameter is specified.</para>
+            /// <para>This parameter takes effect only when the LaunchTemplateId parameter is specified.</para>
             /// </remarks>
-            /// <para>Must be a valid ECS instance type.</para>
+            /// <para>Valid values of InstanceType: available ECS instance types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.c5.xlarge</para>
@@ -453,7 +427,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The maximum hourly price for the instance type specified in <c>LaunchTemplateOverride.InstanceType</c>.</para>
+            /// <para>This parameter is used to specify the maximum price for the overridden instance type (namely, <c>LaunchTemplateOverride.InstanceType</c>) in the launch template.</para>
             /// <remarks>
             /// <para>This parameter takes effect only when the <c>LaunchTemplateId</c> parameter is specified.</para>
             /// </remarks>
@@ -466,23 +440,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? SpotPriceLimit { get; set; }
 
             /// <summary>
-            /// <para>To enable the scaling group to scale based on instance type capacity, you must specify this parameter after you specify <c>LaunchTemplateOverrides.InstanceType</c>.</para>
-            /// <para>This parameter specifies the weight of the instance type, which represents the capacity of a single instance of that type in the scaling group. A higher weight means that fewer instances of this type are needed to meet the desired capacity.</para>
-            /// <para>Because instance types have different performance metrics, such as the number of vCPUs and memory size, you can assign different weights to different instance types based on your requirements.</para>
+            /// <para>If you want the scaling group to scale based on the capacity of the instance type, specify this parameter after you specify LaunchTemplateOverrides.InstanceType.</para>
+            /// <para>This parameter is used to specify the weight of the instance type, which indicates the capacity represented by a single instance of the instance type in the scaling group. A larger weight indicates that fewer instances of this instance type are required to meet the expected capacity.</para>
+            /// <para>Because performance metrics such as the number of vCPUs and memory size vary among instance types, you can configure different weights for different instance types based on your needs.</para>
             /// <para>Example:</para>
             /// <list type="bullet">
             /// <item><description><para>Current capacity: 0.</para>
             /// </description></item>
-            /// <item><description><para>Desired capacity: 6.</para>
+            /// <item><description><para>Expected capacity: 6.</para>
             /// </description></item>
-            /// <item><description><para>Capacity of ecs.c5.xlarge: 4.</para>
+            /// <item><description><para>Capacity of the ecs.c5.xlarge instance type: 4.</para>
             /// </description></item>
             /// </list>
-            /// <para>To meet the desired capacity, the scaling group will create two ecs.c5.xlarge instances.</para>
+            /// <para>To meet the expected capacity, the scaling group scales out two ecs.c5.xlarge instances for you.</para>
             /// <remarks>
-            /// <para>During a scale-out activity, the capacity of the scaling group cannot exceed the sum of the maximum capacity (<c>MaxSize</c>) and the maximum weight of an instance type.</para>
+            /// <para>During scale-out, the capacity of the scaling group cannot exceed the sum of the maximum capacity (MaxSize) and the maximum weight of the instance type.</para>
             /// </remarks>
-            /// <para>Valid values: 1 to 500.</para>
+            /// <para>Valid values of WeightedCapacity: 1 to 500.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -496,11 +470,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The version of the launch template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>A specific version number of the template.</para>
+        /// <item><description><para>A specific version number.</para>
         /// </description></item>
-        /// <item><description><para><c>Default</c>: Uses the default version of the template.</para>
+        /// <item><description><para>Default: always uses the default version of the launch template.</para>
         /// </description></item>
-        /// <item><description><para><c>Latest</c>: Uses the latest version of the template.</para>
+        /// <item><description><para>Latest: always uses the latest version of the launch template.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -512,22 +486,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The list of lifecycle hooks.</para>
+        /// <para>The list of lifecycle hook information.</para>
         /// </summary>
         [NameInMap("LifecycleHooks")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestLifecycleHooks> LifecycleHooks { get; set; }
         public class CreateScalingGroupRequestLifecycleHooks : TeaModel {
             /// <summary>
-            /// <para>The action to take after the wait state ends. Valid values:</para>
+            /// <para>The action to be performed after the wait state ends. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>CONTINUE</c>: Continues the scale-out or scale-in activity.</para>
+            /// <item><description><para>CONTINUE: continues the response to the scale-out activity or continues the response to the scale-down activity.</para>
             /// </description></item>
-            /// <item><description><para><c>ABANDON</c>: Aborts the scale-out activity by releasing the created instances, or aborts the scale-in activity by keeping the instances in the scaling group.</para>
+            /// <item><description><para>ABANDON: directly releases the instances created by the scale-out activity or directly removes the instances in the scale-down activity from the scaling group.</para>
             /// </description></item>
             /// </list>
-            /// <para>If a scale-in (SCALE_IN) activity triggers multiple lifecycle hooks, and the <c>DefaultResult</c> of one of the lifecycle hooks is <c>ABANDON</c>, the wait state of the other lifecycle hooks ends prematurely. In other cases, the action is determined by the last lifecycle hook to complete.</para>
-            /// <para>Default value: <c>CONTINUE</c>.</para>
+            /// <para>When a scale-down activity (SCALE_IN) occurs in the scaling group and triggers multiple lifecycle hooks, if the wait state triggered by a lifecycle hook whose DefaultResult is ABANDON ends, the other corresponding wait states end in advance. In other cases, the next action is subject to the next action of the last wait state that ends.</para>
+            /// <para>Default value: CONTINUE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONTINUE</para>
@@ -537,8 +511,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string DefaultResult { get; set; }
 
             /// <summary>
-            /// <para>The wait time that is defined in the lifecycle hook for a scaling activity. After the wait time expires, the next action is performed. Valid values: 30 to 21600. Unit: seconds.</para>
-            /// <para>After you create a lifecycle hook, you can call the <c>RecordLifecycleActionHeartbeat</c> operation to extend the wait time of an instance, or call the <c>CompleteLifecycleAction</c> operation to end the wait state of the scaling activity in advance.</para>
+            /// <para>The wait time set by the lifecycle hook for the scaling group activity. After the wait state times out, the next action is performed. Valid values: 30 to 21600. Unit: seconds.</para>
+            /// <para>After you create a lifecycle hook, you can call RecordLifecycleActionHeartbeat to extend the wait time of the instance, or call CompleteLifecycleAction to end the wait state of the scaling activity in advance.</para>
             /// <para>Default value: 600.</para>
             /// 
             /// <b>Example:</b>
@@ -549,7 +523,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? HeartbeatTimeout { get; set; }
 
             /// <summary>
-            /// <para>The name of the lifecycle hook. The name cannot be modified after it is specified. If you do not specify a name, the ID of the lifecycle hook is used.</para>
+            /// <para>The name of the lifecycle hook. The name cannot be modified after it is specified. If you do not specify this parameter, the default value is the same as the lifecycle hook ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lifecyclehook****</para>
@@ -561,13 +535,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The type of scaling activity to which the lifecycle hook applies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>SCALE_OUT</c>: A scale-out activity.</para>
+            /// <item><description><para>SCALE_OUT: scale-out activities of the scaling group.</para>
             /// </description></item>
-            /// <item><description><para><c>SCALE_IN</c>: A scale-in activity.</para>
+            /// <item><description><para>SCALE_IN: scale-down activities of the scaling group.</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is required if you specify a lifecycle hook for the scaling group. Other related parameters are optional.</para>
+            /// <para>If you specify a lifecycle hook for the scaling group, this parameter is required, and other related parameters are optional.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -578,18 +552,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecycleTransition { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient for the lifecycle hook. Message Service (MNS) queues and topics are supported. The format is <c>acs:ess:{region}:{account-id}:{resource-relative-id}</c>.</para>
+            /// <para>The identifier of the notification recipient for the lifecycle hook. Simple Message Queue (formerly MNS) queues or topics are supported. The parameter value format is acs:ess:{region}:{account-id}:{resource-relative-id}.</para>
             /// <list type="bullet">
-            /// <item><description><para><c>region</c>: the region where the scaling group is located.</para>
+            /// <item><description><para>region: the region where the scaling group resides.</para>
             /// </description></item>
-            /// <item><description><para><c>account-id</c>: the ID of your Alibaba Cloud account.</para>
+            /// <item><description><para>account-id: the Alibaba Cloud account ID.</para>
             /// </description></item>
             /// </list>
             /// <para>Examples:</para>
             /// <list type="bullet">
-            /// <item><description><para>MNS queue: <c>acs:ess:{region}:{account-id}:queue/{queuename}</c>.</para>
+            /// <item><description><para>Simple Message Queue (formerly MNS) queue: acs:ess:{region}:{account-id}:queue/{queuename}.</para>
             /// </description></item>
-            /// <item><description><para>MNS topic: <c>acs:ess:{region}:{account-id}:topic/{topicname}</c>.</para>
+            /// <item><description><para>Simple Message Queue (formerly MNS) topic: acs:ess:{region}:{account-id}:topic/{topicname}.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -601,7 +575,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string NotificationArn { get; set; }
 
             /// <summary>
-            /// <para>A fixed string of information for the wait state of a scaling activity. The value cannot exceed 4,096 characters in length. When Auto Scaling sends a message to the specified notification recipient, it includes the value of this parameter. This allows you to manage and categorize notifications. This parameter is valid only when you specify the <c>NotificationArn</c> parameter.</para>
+            /// <para>The fixed string information for the wait state of the scaling activity. The value cannot exceed 4,096 characters in length. Each time Auto Scaling pushes a message to the notification recipient, it also sends the predefined value of the NotificationMetadata parameter to help you manage and mark different types of notification information. The NotificationMetadata parameter takes effect only when you also specify the NotificationArn parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -613,7 +587,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The load balancer configurations.</para>
+        /// <para>The list of load balancing configurations.</para>
         /// </summary>
         [NameInMap("LoadBalancerConfigs")]
         [Validation(Required=false)]
@@ -630,7 +604,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// <para>The weight of an instance as a backend server after the instance is added to the SLB server group. The higher the weight, the more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance. Valid values: 0 to 100.</para>
+            /// <para>The weight of the instance as a backend server after Auto Scaling adds the instance to the CLB server group. A higher weight specifies that more requests are distributed to the instance. If the weight is 0, the instance does not receive requests. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -642,13 +616,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>A JSON array of Classic Load Balancer (CLB) instance IDs.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The number of CLB instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <b>Maximum number of load balancer instances that can be associated with a single scaling group</b>.</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para>The number of CLB instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <b>Maximum number of load balancer instances that can be associated with a single scaling group</b>.</para>
-        /// <para>&lt;props=&quot;partner&quot;&gt;</para>
-        /// <para>The number of CLB instances that you can associate with a single scaling group varies based on your Auto Scaling usage. Go to Quota Center to view the quota for <b>Maximum number of load balancer instances that can be associated with a single scaling group</b>.</para>
+        /// <para>The IDs of the Classic Load Balancer (CLB) instances. The value can be a JSON array that contains multiple CLB instance IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <b>maximum number of load balancing instances that can be associated with a scaling group</b>.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <b>maximum number of load balancing instances that can be associated with a scaling group</b>.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;The maximum number of CLB instances that can be associated with a scaling group depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <b>maximum number of load balancing instances that can be associated with a scaling group</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;lb-bp1u7etiogg38yvwz****&quot;, &quot;lb-bp168cqrux9ai9l7f****&quot;, &quot;lb-bp1jv3m9zvj22ufxp****&quot;]</para>
@@ -659,25 +630,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The maximum lifetime of an instance in the scaling group. Unit: seconds.</para>
-        /// <para>Value range: [86400, Integer.maxValue].</para>
+        /// <para>Valid values: [86400, Integer.maxValue].</para>
         /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>86400</para>
         /// </summary>
         [NameInMap("MaxInstanceLifetime")]
         [Validation(Required=false)]
         public int? MaxInstanceLifetime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of instances in the scaling group. If the total number of instances exceeds this value, Auto Scaling removes instances to meet this maximum.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The value range of <c>MaxSize</c> depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <b>Maximum number of instances per scaling group</b>.</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para>The value range of <c>MaxSize</c> depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to view the quota for <b>Maximum number of instances per scaling group</b>.</para>
-        /// <para>&lt;props=&quot;partner&quot;&gt;</para>
-        /// <para>The value range of <c>MaxSize</c> depends on your Auto Scaling usage. Go to Quota Center to view the quota for <b>Maximum number of instances per scaling group</b>.</para>
-        /// <para>If the quota for <b>Maximum number of instances per scaling group</b> is 2,000, the value of <c>MaxSize</c> can range from 0 to 2,000.</para>
+        /// <para>The maximum number of instances in the scaling group. If the number of instances in the scaling group is greater than the value of MaxSize, Auto Scaling automatically removes instances. </para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <b>maximum number of instances in a scaling group</b>.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a> to check the quota for the <b>maximum number of instances in a scaling group</b>.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;The value range of MaxSize depends on your Auto Scaling usage. Go to Quota Center to check the quota for the <b>maximum number of instances in a scaling group</b>.</para>
+        /// <para>If the quota for the <b>maximum number of instances in a scaling group</b> is 2000, the value range of MaxSize is 0 to 2000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -688,9 +656,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxSize { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of instances in the scaling group. If the total number of instances falls below this value, Auto Scaling adds instances to meet this minimum.</para>
+        /// <para>The minimum number of instances in the scaling group. If the number of instances in the scaling group is less than the value of MinSize, Auto Scaling automatically creates instances. </para>
         /// <remarks>
-        /// <para>The value of <c>MinSize</c> must be less than or equal to the value of <c>MaxSize</c>.</para>
+        /// <para>The value of MinSize must be less than or equal to the value of MaxSize.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -702,24 +670,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MinSize { get; set; }
 
         /// <summary>
-        /// <para>The scaling policy for ECS instances in a multi-zone scaling group. Valid values:</para>
+        /// <para>The multi-zone scaling policy for ECS instances in the scaling group. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><c>PRIORITY</c>: Auto Scaling prioritizes the vSwitches specified in <c>VSwitchIds</c>. If an operation fails in a higher-priority availability zone, Auto Scaling automatically attempts it in the next-highest-priority zone.</para>
+        /// <item><description><para>PRIORITY: the vSwitches specified by VSwitchIds are prioritized. Auto Scaling preferentially attempts to scale ECS instances in the zone where the highest-priority vSwitch resides. If the scaling fails, Auto Scaling automatically attempts to scale instances in the zone of the next highest-priority vSwitch.  </para>
         /// </description></item>
-        /// <item><description><para><c>COST_OPTIMIZED</c>: During scale-out, creates instances from the instance types with the lowest vCPU unit price. During scale-in, removes instances from the instance types with the highest vCPU unit price. If the scaling configuration includes multiple spot instance types, spot instances are prioritized for creation. You can use the <c>CompensateWithOnDemand</c> parameter to specify whether to automatically create on-demand instances when spot instances cannot be created due to reasons such as insufficient inventory.</para>
+        /// <item><description><para>COST_OPTIMIZED: during scale-out, Auto Scaling attempts to create ECS instances in ascending order of vCPU unit price. During scale-in, Auto Scaling attempts to remove ECS instances in descending order of vCPU unit price. If the scaling configuration settings specify multiple instance types that use the preemptible billing method, spot instances are preferentially created. You can use the CompensateWithOnDemand parameter to specify whether to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory or other reasons. </para>
         /// <remarks>
-        /// <para>The <c>COST_OPTIMIZED</c> policy takes effect only when the scaling configuration specifies multiple instance types or includes spot instances.</para>
+        /// <para>COST_OPTIMIZED takes effect only when the scaling configuration settings specify multiple instance types or use spot instances. </para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para><c>BALANCE</c>: Distributes ECS instances evenly across the specified availability zones in the scaling group. If the distribution of instances becomes uneven due to insufficient inventory, you can call the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstance</a> API operation to rebalance the instances.</para>
+        /// <item><description><para>BALANCE: evenly distributes ECS instances across the zones specified for the scaling group. If the instances are unevenly allocated across zones due to insufficient inventory or other reasons, you can invoke the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstance</a> operation to balance the resources.</para>
         /// <remarks>
-        /// <para>If <c>MultiAZPolicy</c> is set to <c>BALANCE</c>, the effect is the same as setting <c>MultiAZPolicy</c> to <c>COMPOSABLE</c> and <c>AzBalance</c> to <c>true</c>.</para>
+        /// <para>If the <c>MultiAZPolicy</c> parameter is set to <c>BALANCE</c>, the effect is the same as when the <c>MultiAZPolicy</c> parameter is set to <c>COMPOSABLE</c> and the <c>AzBalance</c> parameter is set to <c>true</c>. </para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para><c>COMPOSABLE</c>: A composite policy that allows you to combine the preceding policies for multi-zone scaling groups as needed. You can also specify additional parameters to gain finer control over the capacity of your scaling group.</para>
+        /// <item><description><para>COMPOSABLE: a combined policy that allows you to combine the preceding multi-zone scaling policies for ECS instances based on your needs. You can also specify additional parameters to control the capacity of the scaling group in a more fine-grained manner.</para>
         /// </description></item>
         /// </list>
-        /// <para>Default value: <c>PRIORITY</c>.</para>
+        /// <para>Default value: PRIORITY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIORITY</para>
@@ -729,7 +697,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MultiAZPolicy { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of on-demand instances required in the scaling group. Valid values: 0 to 1,000. If the number of on-demand instances is less than this value, Auto Scaling preferentially creates on-demand instances.</para>
+        /// <para>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are preferentially created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -739,7 +707,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? OnDemandBaseCapacity { get; set; }
 
         /// <summary>
-        /// <para>The percentage of on-demand instances among the excess instances after the minimum number of on-demand instances (<c>OnDemandBaseCapacity</c>) is met. Valid values: 0 to 100.</para>
+        /// <para>The percentage of pay-as-you-go instances in the excess instances after the scaling group meets the minimum number of pay-as-you-go instances (OnDemandBaseCapacity). Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -757,7 +725,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the scaling group resides.</para>
+        /// <para>The region ID of the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -768,20 +736,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instance removal policies. Valid values:</para>
+        /// <para>The filtering policy for the instance removal policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>OldestInstance</c>: Removes the ECS instance that was first added to the scaling group.</para>
-        /// </description></item>
-        /// <item><description><para><c>NewestInstance</c>: Removes the ECS instance that was most recently added to the scaling group.</para>
-        /// </description></item>
-        /// <item><description><para><c>OldestScalingConfiguration</c>: Removes the ECS instance that was created based on the earliest scaling configuration.</para>
-        /// </description></item>
-        /// <item><description><para><c>CustomPolicy</c>: Removes ECS instances based on a custom scale-in policy defined by a function.</para>
-        /// </description></item>
+        /// <item><description>OldestInstance: removes the ECS instances that were added to the scaling group at the earliest point in time.</description></item>
+        /// <item><description>NewestInstance: removes the ECS instances that were added to the scaling group at the latest point in time.</description></item>
+        /// <item><description>OldestScalingConfiguration: removes the ECS instances that were created based on the earliest scaling configuration.</description></item>
+        /// <item><description>CustomPolicy: removes ECS instances based on a custom scale-in policy function.</description></item>
         /// </list>
-        /// <para>The term <c>scaling configuration</c> in <c>OldestScalingConfiguration</c> refers to the source of instance configuration information, which includes both scaling configurations and launch templates. <c>CustomPolicy</c> can only be set as the first removal policy. If you specify <c>CustomPolicy</c>, you must also specify the <c>CustomPolicyARN</c> parameter.</para>
+        /// <para>The scaling configuration mentioned in OldestScalingConfiguration refers to the instance configuration source in the scaling group, including scaling configurations and launch templates. CustomPolicy can only be set as the first removal policy. If you specify CustomPolicy, you must also specify the CustomPolicyARN parameter.</para>
         /// <remarks>
-        /// <para>The removal of instances is also affected by the scaling group\&quot;s multi-AZ policy (<c>MultiAZPolicy</c>). For more information, see <a href="https://help.aliyun.com/document_detail/254822.html">Configure a combination of removal policies</a>.</para>
+        /// <para>The removal of ECS instances from a scaling group is also affected by the multi-zone scaling policy (MultiAZPolicy) of the scaling group. For more information, see <a href="https://help.aliyun.com/document_detail/254822.html">Configure a combined policy for removing instances</a>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RemovalPolicies")]
@@ -789,9 +753,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> RemovalPolicies { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the new scaling group belongs.</para>
+        /// <para>The ID of the resource group to which the newly created scaling group belongs.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the new scaling group is added to the default resource group.</para>
+        /// <para>Assigns the newly created scaling group to the specified resource group. If you do not specify this parameter, the scaling group belongs to the default resource group.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -807,8 +771,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The name of the scaling group. The name must be unique within a region.</para>
-        /// <para>The name must be 2 to 64 characters in length. It must start with a letter, a digit, or a Chinese character and can contain digits, underscores (_), hyphens (-), and periods (.).</para>
-        /// <para>If you do not specify this parameter, the value of <c>ScalingGroupId</c> is used.</para>
+        /// <para>It must be 2 to 64 characters in length. It must start with a digit, a letter, or a Chinese character, and can contain digits, underscores (_), hyphens (-), and periods (.).</para>
+        /// <para>Default value: the value of ScalingGroupId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scalinggroup****</para>
@@ -818,24 +782,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupName { get; set; }
 
         /// <summary>
-        /// <para>The reclamation mode of the scaling group. Valid values:</para>
+        /// <para>The reclaim mode of the scaling group. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><c>recycle</c>: The reclamation mode is Economical Mode.</para>
-        /// </description></item>
-        /// <item><description><para><c>release</c>: The reclamation mode is Release Mode.</para>
-        /// </description></item>
-        /// <item><description><para><c>forcerelease</c>: The reclamation mode is Force Release Mode.</para>
-        /// <remarks>
-        /// <para>A forced release is equivalent to a power-off operation, which erases data in the memory and ephemeral storage of the instances. This data cannot be recovered. Use this option with caution.</para>
+        /// <item><description>recycle: sets the reclaim mode of the scaling group to shutdown and reclaim mode.  </description></item>
+        /// <item><description>release: sets the reclaim mode of the scaling group to release mode.</description></item>
+        /// <item><description>forcerelease: sets the reclaim mode of the scaling group to force release mode.<remarks>
+        /// <para>If you select forcerelease, the system forcibly releases instances in the <c>Running</c> state during scale-down activities. Forcibly releasing an instance is equivalent to a power-off operation, which erases temporary data in the memory and storage of the instance. The data cannot be recovered. Proceed with caution.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para><c>forcerecycle</c>: The reclamation mode is Force Economical Mode.</para>
-        /// <remarks>
-        /// <para>A forced stop is equivalent to a power-off operation, which erases data in the memory and ephemeral storage of the instances. This data cannot be recovered. Use this option with caution.</para>
+        /// <item><description>forcerecycle: sets the reclaim mode of the scaling group to force shutdown and reclaim mode.<remarks>
+        /// <para>If you select forcerecycle, the system forcibly shuts down instances in the <c>Running</c> state during scale-down activities. Forcibly shutting down an instance is equivalent to a power-off operation, which erases temporary data in the memory and storage of the instance. The data cannot be recovered. Proceed with caution.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <para><c>ScalingPolicy</c> specifies the reclamation mode of the scaling group. The specific action taken when an instance is removed from the scaling group is determined by the <c>RemovePolicy</c> parameter of the <c>RemoveInstances</c> operation. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</para>
+        /// <para>The ScalingPolicy parameter specifies the reclaim mode of the scaling group, but the specific action taken when an instance is removed from the scaling group is determined by the RemovePolicy parameter of RemoveInstances. For more information, see <a href="https://help.aliyun.com/document_detail/25955.html">RemoveInstances</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>recycle</para>
@@ -845,9 +805,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingPolicy { get; set; }
 
         /// <summary>
-        /// <para>The load balancer server groups.</para>
+        /// <para>The collection of information about the server groups.</para>
         /// <remarks>
-        /// <para>You cannot specify the same server group in both <c>AlbServerGroups</c> and <c>ServerGroups</c>.</para>
+        /// <para>You cannot configure the same server group settings in both AlbServerGroups and ServerGroups at the same time.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ServerGroups")]
@@ -855,7 +815,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<CreateScalingGroupRequestServerGroups> ServerGroups { get; set; }
         public class CreateScalingGroupRequestServerGroups : TeaModel {
             /// <summary>
-            /// <para>The port number used by an instance after it is added to the server group. Valid values: 1 to 65535.</para>
+            /// <para>The port number used by the instance after Auto Scaling adds the instance to the server group. Valid values: 1 to 65535.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -877,12 +837,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The type of the server group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>ALB</c>: Application Load Balancer.</para>
-            /// </description></item>
-            /// <item><description><para><c>NLB</c>: Network Load Balancer.</para>
-            /// </description></item>
-            /// <item><description><para><c>GWLB</c>: Gateway Load Balancer.</para>
-            /// </description></item>
+            /// <item><description>ALB: Application Load Balancer (ALB).</description></item>
+            /// <item><description>NLB: Network Load Balancer (NLB).</description></item>
+            /// <item><description>GWLB: Gateway Load Balancer (GWLB).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -893,10 +850,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The weight of an instance as a backend server after the instance is added to the server group. Valid values: 0 to 100.</para>
-            /// <para>A higher weight indicates that more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance.</para>
+            /// <para>The weight of the instance as a backend server after Auto Scaling adds the instance to the server group. Valid values: 0 to 100.</para>
+            /// <para>A higher weight specifies that more access requests are allocated to the instance. If the weight is 0, the instance does not receive access requests.</para>
             /// <remarks>
-            /// <para>This parameter is required for ALB and NLB server groups. You cannot set this parameter for GWLB server groups.</para>
+            /// <para>This parameter is required for ALB and NLB. You cannot configure this parameter for GWLB.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -909,12 +866,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The distribution strategy for spot capacity. You can use this parameter to specify a separate strategy for spot capacity (effective only when the <c>MultiAZPolicy</c> parameter is set to <c>COMPOSABLE</c>). Valid values:</para>
+        /// <para>The spot capacity distribution policy. You can use this parameter to separately specify the distribution policy for spot capacity. This parameter takes effect only when the MultiAZPolicy parameter is set to COMPOSABLE. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>priority: Creates instances in the order of the configured instance types.</para>
-        /// </description></item>
-        /// <item><description><para>lowestPrice: Creates instances in ascending order of the price per vCPU of the instance types.</para>
-        /// </description></item>
+        /// <item><description>priority: Creates instances based on the order of the configured instance types.</description></item>
+        /// <item><description>lowestPrice: Creates instances based on the unit price per vCPU of the instance types in ascending order.</description></item>
         /// </list>
         /// <para>Default value: priority.</para>
         /// 
@@ -926,7 +881,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SpotAllocationStrategy { get; set; }
 
         /// <summary>
-        /// <para>The number of instance types to use. The scaling group creates spot instances in a balanced manner across the specified number of lowest-cost instance types. Valid values: 1 to 10.</para>
+        /// <para>The number of available instance types. The scaling group evenly creates spot instances across multiple instance types with the lowest cost. Valid values: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -936,7 +891,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? SpotInstancePools { get; set; }
 
         /// <summary>
-        /// <para>If set to <c>true</c>, Auto Scaling attempts to create a new instance to replace a spot instance that is about to be reclaimed.</para>
+        /// <para>Specifies whether to enable the Auto Scaling policy to supplement spot instances. After this feature is enabled, when a system message indicating that a spot instance is to be reclaimed is received, the scaling group attempts to create a new instance to replace the spot instance to be reclaimed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -946,16 +901,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? SpotInstanceRemedy { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the system to wait for an ECS instance to be stopped during a scale-in event. Unit: seconds.
+        /// <para>The timeout period for waiting for an ECS instance to be stopped during the scale-in process. Unit: seconds.
         /// Valid values: 30 to 240.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only during scale-in events when <c>ScalingPolicy</c> is set to <c>release</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is set, the system waits for the specified <c>StopInstanceTimeout</c> period for the instance to be stopped. If the instance is not stopped after the timeout period, the scale-in process continues regardless of the instance status.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is not set, the system waits for an extended period for the instance to be stopped. The scale-in process continues only after the instance is stopped. If the instance fails to stop, the scale-in process is rolled back, and the scale-in event fails.</para>
-        /// </description></item>
+        /// <item><description>This parameter takes effect only in the scale-in process when ScalingPolicy is set to release.  </description></item>
+        /// <item><description>If this parameter is specified, the system waits for a maximum of the StopInstanceTimeout period for the instance to be stopped. After the timeout period elapses, the scale-in process continues regardless of whether the instance is stopped.  </description></item>
+        /// <item><description>If this parameter is not specified, the system waits for a long time for the instance to be stopped. The scale-in process continues only after the instance is stopped. If the instance fails to be stopped, the scale-in process is rolled back and the scale-in fails.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -968,7 +920,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -979,14 +931,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? SyncAlarmRuleToCms { get; set; }
 
         /// <summary>
-        /// <para>The tags to apply to the scaling group.</para>
+        /// <para>The collection of tag information for the scaling group.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestTags> Tags { get; set; }
         public class CreateScalingGroupRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key of the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Department</para>
@@ -996,14 +948,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the tag can be propagated. Valid values:</para>
+            /// <para>Specifies whether the tag is a propagatable tag. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c>: The tag is propagated from the scaling group only to newly created instances, not to instances that are already running in the scaling group.</para>
-            /// </description></item>
-            /// <item><description><para><c>false</c>: The tag is not propagated from the scaling group to any instances.</para>
-            /// </description></item>
+            /// <item><description>true: tags on the scaling group are propagated only to newly created instances, not to existing instances in the scaling group.</description></item>
+            /// <item><description>false: tags on the scaling group are not propagated to instances.</description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -1013,7 +963,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Propagate { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value of the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Finance</para>
@@ -1025,14 +975,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The vServer groups to associate with the scaling group.</para>
+        /// <para>The collection of information about the virtual server groups associated with the scaling group.</para>
         /// </summary>
         [NameInMap("VServerGroups")]
         [Validation(Required=false)]
         public List<CreateScalingGroupRequestVServerGroups> VServerGroups { get; set; }
         public class CreateScalingGroupRequestVServerGroups : TeaModel {
             /// <summary>
-            /// <para>The ID of the Classic Load Balancer (CLB) instance to which the vServer group belongs.</para>
+            /// <para>The ID of the Classic Load Balancer (CLB) instance to which the virtual server group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-bp1u7etiogg38yvwz****</para>
@@ -1049,7 +999,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<CreateScalingGroupRequestVServerGroupsVServerGroupAttributes> VServerGroupAttributes { get; set; }
             public class CreateScalingGroupRequestVServerGroupsVServerGroupAttributes : TeaModel {
                 /// <summary>
-                /// <para>The port number used by an instance after it is added to the vServer group. Valid values: 1 to 65535.</para>
+                /// <para>The port number used by the instance after Auto Scaling adds the instance to the virtual server group. Valid values: 1 to 65535.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
@@ -1059,7 +1009,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vServer group.</para>
+                /// <para>The ID of the virtual server group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rsp-bp1443g77****</para>
@@ -1069,7 +1019,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string VServerGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The weight of an instance as a backend server after the instance is added to the vServer group. The higher the weight, the more access requests are distributed to the instance. If the weight is 0, no access requests are distributed to the instance. Valid values: 0 to 100.</para>
+                /// <para>The weight of the instance as a backend server after Auto Scaling adds the instance to the virtual server group. A higher weight indicates that more access requests are allocated to the instance. If the weight is 0, the instance does not receive access requests. Valid values: 0 to 100.</para>
                 /// <para>Default value: 50.</para>
                 /// 
                 /// <b>Example:</b>
@@ -1084,9 +1034,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. If you specify this parameter, the network type of the scaling group is Virtual Private Cloud (VPC).</para>
+        /// <para>The ID of the vSwitch. After this parameter is specified, the network type of the scaling group is VPC.</para>
         /// <remarks>
-        /// <para>If you do not specify the <c>VSwitchId</c> or <c>VSwitchIds</c> parameter, the network type of the scaling group defaults to classic network.</para>
+        /// <para>If neither VSwitchId nor VSwitchIds is specified for the scaling group, the network type of the scaling group is classic network by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1097,23 +1047,78 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of one or more vSwitches. If you specify this parameter, the <c>VSwitchId</c> parameter is ignored. If you specify this parameter, the network type of the scaling group is Virtual Private Cloud (VPC).</para>
-        /// <para>If you specify multiple vSwitches:</para>
+        /// <para>The IDs of one or more vSwitches. If you use the VSwitchIds parameter, the VSwitchId parameter is ignored. After this parameter is specified, the network type of the scaling group is VPC.</para>
+        /// <para>When you specify multiple vSwitches:</para>
         /// <list type="bullet">
-        /// <item><description><para>They must belong to the same VPC.</para>
+        /// <item><description><para>The vSwitches must belong to the same VPC.</para>
         /// </description></item>
-        /// <item><description><para>They can be in different availability zones.</para>
+        /// <item><description><para>The vSwitches can belong to different zones.</para>
         /// </description></item>
-        /// <item><description><para>The vSwitches are prioritized based on their order in the list, with the first vSwitch having the highest priority. If an instance cannot be created in the availability zone of a higher-priority vSwitch, Auto Scaling automatically attempts to create the instance in the availability zone of the next-highest-priority vSwitch.</para>
+        /// <item><description><para>The vSwitches are prioritized in ascending order of numbers. 1 indicates the highest priority. If instances cannot be created in the zone of a higher-priority vSwitch, the system automatically selects the next highest-priority vSwitch to create instances.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify the <c>VSwitchId</c> or <c>VSwitchIds</c> parameter, the network type of the scaling group defaults to classic network.</para>
+        /// <para>If neither VSwitchId nor VSwitchIds is specified for the scaling group, the network type of the scaling group is classic network by default.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
+
+        /// <summary>
+        /// <para>The behavior policy of the scaling group during zone shift.</para>
+        /// </summary>
+        [NameInMap("ZoneShiftPolicy")]
+        [Validation(Required=false)]
+        public CreateScalingGroupRequestZoneShiftPolicy ZoneShiftPolicy { get; set; }
+        public class CreateScalingGroupRequestZoneShiftPolicy : TeaModel {
+            /// <summary>
+            /// <para>The health check behavior in impaired zones. Valid values: </para>
+            /// <list type="bullet">
+            /// <item><description>ReplaceUnhealthy: Replaces unhealthy instances in all zones normally. </description></item>
+            /// <item><description>IgnoreUnhealthy: Does not replace unhealthy instances in impaired zones. Healthy zones are not affected.</description></item>
+            /// </list>
+            /// <para>Default value: ReplaceUnhealthy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ReplaceUnhealthy</para>
+            /// </summary>
+            [NameInMap("ImpairedZoneHealthCheckBehavior")]
+            [Validation(Required=false)]
+            public string ImpairedZoneHealthCheckBehavior { get; set; }
+
+            /// <summary>
+            /// <para>Blocks scale-in triggered by specified types of scaling rules. The blocking scope applies to all zones under the scaling group, not just the impaired zones. This prevents false scale-in caused by fake improvements in monitoring metrics due to unreachable instances in impaired zones. Valid values: </para>
+            /// <list type="bullet">
+            /// <item><description>StepScalingRule: Blocks scale-in triggered by step scaling rules. </description></item>
+            /// <item><description>TargetTrackingScalingRule: Blocks scale-in triggered by target tracking scaling rules. </description></item>
+            /// <item><description>None: Does not block.</description></item>
+            /// </list>
+            /// <para>Default value: None.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>StepScalingRule</para>
+            /// </summary>
+            [NameInMap("ScaleInBlockedRuleTypes")]
+            [Validation(Required=false)]
+            public List<string> ScaleInBlockedRuleTypes { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether scale-out creates instances only in healthy zones during zone shift. Valid values: </para>
+            /// <list type="bullet">
+            /// <item><description>true: Scale-out creates instances only in healthy zones and skips impaired zones. </description></item>
+            /// <item><description>false: Scale-out is not restricted by zone and can create instances in any zone of the scaling group.</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("ScaleOutInHealthyZonesOnly")]
+            [Validation(Required=false)]
+            public bool? ScaleOutInHealthyZonesOnly { get; set; }
+
+        }
 
     }
 

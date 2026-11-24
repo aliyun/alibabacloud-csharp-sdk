@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B13527BF-1FBD-4334-A512-20F5E9D3****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<DescribeScalingInstancesResponseBodyScalingInstances> ScalingInstances { get; set; }
         public class DescribeScalingInstancesResponseBodyScalingInstances : TeaModel {
             /// <summary>
-            /// <para>The time when the ECS instance was added to the scaling group. The value is accurate to the second.</para>
+            /// <para>The time when the ECS instance was added to the scaling group. The time is accurate to seconds and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-18T03:11:39Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the ECS instance was added to the scaling group. The value is accurate to the minute.</para>
+            /// <para>The time when the ECS instance was added to the scaling group. The time is accurate to minutes and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-18T03:11Z</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The method used to create the ECS instance. Valid values: </para>
+            /// <para>The creation type of the ECS instance. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>AutoCreated: The ECS instance is created by automatic creation based on the instance configuration source in Auto Scaling. </description></item>
-            /// <item><description>Attached: The ECS instance is not created by Auto Scaling but manually added to the scaling group.</description></item>
+            /// <item><description>AutoCreated: The ECS instance is created by Auto Scaling through automatic creation based on the instance configuration source. </description></item>
+            /// <item><description>Attached: The ECS instance is not created by Auto Scaling, but is manually added to the scaling group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string CreationType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the manually added instance is managed by the scaling group. A managed manually added instance is released when it is removed from the scaling group (excluding manual removal). Valid values:</para>
+            /// <para>Specifies whether the instance is managed by the scaling group when it is manually added to the scaling group. A manually added instance in the managed state is released when it is removed from the scaling group, excluding manual removal. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The instance is managed by the scaling group.</description></item>
             /// <item><description>false: The instance is not managed by the scaling group.</description></item>
@@ -95,15 +95,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Entrusted { get; set; }
 
             /// <summary>
-            /// <para>The health check status of the ECS instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </para>
+            /// <para>The health status of the ECS instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values: </para>
             /// <list type="bullet">
             /// <item><description>Healthy: The ECS instance is healthy. </description></item>
             /// <item><description>Unhealthy: The ECS instance is unhealthy.</description></item>
             /// </list>
-            /// <para>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases the ECS instances created by automatic creation.</para>
-            /// <para>Whether a manually added ECS instance is released depends on its managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</para>
+            /// <para>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and releases ECS instances created through automatic creation.</para>
+            /// <para>Whether to release manually added ECS instances depends on their managed state. If the instance lifecycle is not managed by the scaling group, the instance is only removed but not released. If the instance lifecycle is managed by the scaling group, the instance is removed and released.</para>
             /// <remarks>
-            /// <para>Make sure that your account has a sufficient available quota. If your account has an overdue payment, all pay-as-you-go ECS instances (including pay-as-you-go instances and spot instances) are stopped or even released. For information about how the status of ECS instances in a scaling group changes after an overdue payment occurs, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</para>
+            /// <para>Make sure that your account has sufficient active balance. If your account has overdue payments, all pay-as-you-go ECS instances, including pay-as-you-go instances and spot instances, are stopped or even released. For more information about the instance status changes of ECS instances in a scaling group after overdue payments, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the launch template.</para>
+            /// <para>The ID of the instance launch template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lt-m5e3ofjr1zn1aw7****</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LaunchTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The version of the launch template.</para>
+            /// <para>The version of the instance launch template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The lifecycle state of the ECS instance in the scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>InService: The ECS instance is added to the scaling group and provides services in the Normal state. </description></item>
-            /// <item><description>Pending: The ECS instance is being added to the scaling group. During this procedure, the ECS instance is added to the backend server group of the associated load balancing instance and to the access whitelist of the associated ApsaraDB RDS instance.</description></item>
-            /// <item><description>Pending:Wait: The ECS instance is waiting to be added to the scaling group. If a lifecycle hook that applies to scale-out activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</description></item>
-            /// <item><description>Protected: The ECS instance is protected. The ECS instance provides services as expected, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
-            /// <item><description>Standby: The ECS instance is in the standby state. The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
+            /// <item><description>InService: The ECS instance is added to the scaling group and provides services normally. </description></item>
+            /// <item><description>Pending: The ECS instance is being added to the scaling group. The procedure of adding an ECS instance to a scaling group includes adding the instance to the backend server group of a load balancing instance and adding the IP address of the instance to the access whitelist of an ApsaraDB RDS instance.</description></item>
+            /// <item><description>Pending:Wait: The addition of the ECS instance to the scaling group is suspended. If a lifecycle hook applicable to scale-out activities is created in the scaling group, the ECS instance is suspended when it is added to the scaling group and waits for the hook timeout to end.</description></item>
+            /// <item><description>Protected: The ECS instance provides services normally, but Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
+            /// <item><description>Standby: The ECS instance does not provide services, the weight of SLB backend server is set to zero, and Auto Scaling does not manage the lifecycle of the ECS instance. You must manually manage the lifecycle.</description></item>
             /// <item><description>Stopped: The ECS instance is stopped and does not provide services.</description></item>
-            /// <item><description>Removing: The ECS instance is being removed from the scaling group. During this procedure, the ECS instance is removed from the backend server group of the associated load balancing instance and from the access whitelist of the associated ApsaraDB RDS instance. </description></item>
-            /// <item><description>Removing:Wait: The ECS instance is waiting to be removed from the scaling group. If a lifecycle hook that applies to scale-down activities is created for the scaling group, the ECS instance is suspended and waits for the lifecycle hook timeout to end.</description></item>
+            /// <item><description>Removing: The ECS instance is being removed from the scaling group. The procedure of removing an ECS instance from a scaling group includes removing the instance from the backend server group of a load balancing instance and removing the IP address of the instance from the access whitelist of an ApsaraDB RDS instance. </description></item>
+            /// <item><description>Removing:Wait: The removal of the ECS instance from the scaling group is suspended. If a lifecycle hook applicable to scale-down activities is created in the scaling group, the ECS instance is suspended when it is removed from the scaling group and waits for the hook timeout to end.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,9 +164,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string LifecycleState { get; set; }
 
             /// <summary>
-            /// <para>The weight of the load balancing instance.</para>
+            /// <para>The weight of the SLB backend server.</para>
             /// <remarks>
-            /// <para>This parameter is deprecated and is not recommended.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated. Do not use it.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? LoadBalancerWeight { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the instance in the scaling group.</para>
+            /// <para>The internal IP address of the instance in the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**.2*.1**.2**</para>
@@ -186,12 +186,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string PrivateIpAddress { get; set; }
 
+            /// <summary>
+            /// <para>The instance replacement process that the instance is in. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Normal: The instance is not in any replacement process.</description></item>
+            /// <item><description>ReBalance: The instance is in the rebalancing replacement process of the scaling group.</description></item>
+            /// <item><description>SpotRemedy: The instance is in the spot instance remedy replacement process.</description></item>
+            /// <item><description>MaxInstanceLifetimeExpire: The instance is in the replacement process due to the expiration of the maximum instance lifetime.</description></item>
+            /// <item><description>InstanceRefresh: The instance is in the instance refresh replacement process.</description></item>
+            /// <item><description>SpotReplaceOnDemand: The instance is in the process of replacing a spot instance with a pay-as-you-go instance.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ReBalance</para>
+            /// </summary>
             [NameInMap("ReplaceStatus")]
             [Validation(Required=false)]
             public string ReplaceStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scaling activity during which the ECS instance was added to the scaling group.</para>
+            /// <para>The ID of the scaling activity when the ECS instance was added to the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asa-bp1c9djwrgxjyk31****</para>
@@ -221,7 +235,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// <para>The instance identity in the scaling group, which has a one-to-one mapping with the ECS instance ID or Elastic Container Instance (ECI) instance identity.</para>
+            /// <para>The instance identity in the scaling group, which corresponds one-to-one with the ID of the ECS instance or elastic container instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asi-j6cj1gcte640ekhb****</para>
@@ -231,10 +245,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The preemption policy of the spot instance. Valid values:</para>
+            /// <para>The bidding policy for the spot instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SpotWithPriceLimit: The spot instance has a maximum price limit.</description></item>
-            /// <item><description>SpotAsPriceGo: The system automatically bids at the current market price.</description></item>
+            /// <item><description>SpotWithPriceLimit: The spot instance with a maximum price.</description></item>
+            /// <item><description>SpotAsPriceGo: The system automatically bids based on the current market price.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -245,11 +259,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <para>The warmup state of the ECS instance. Valid values: </para>
+            /// <para>The warmup status of the ECS instance. Valid values: </para>
             /// <list type="bullet">
             /// <item><description>NoNeedWarmup: No warmup is required.</description></item>
-            /// <item><description>WaitingForInstanceWarmup: The instance is waiting for warmup to complete.</description></item>
-            /// <item><description>InstanceWarmupFinish: Warmup is complete.</description></item>
+            /// <item><description>WaitingForInstanceWarmup: The instance is waiting for the warmup to complete.</description></item>
+            /// <item><description>InstanceWarmupFinish: The warmup is complete.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -260,7 +274,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string WarmupState { get; set; }
 
             /// <summary>
-            /// <para>The weight of the instance type. The weight indicates the capacity that a single instance of this instance type represents in the scaling group. A higher weight means that fewer instances of this type are required to meet the expected capacity.</para>
+            /// <para>The weight of the instance type, which indicates the capacity of a single instance of the instance type in the scaling group. A greater weight indicates that fewer instances of the instance type are required to meet the expected capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -270,7 +284,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? WeightedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the ECS instance.</para>
+            /// <para>The ID of the zone to which the ECS instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-g</para>
@@ -292,7 +306,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of running spot instances in the current scaling group.</para>
+        /// <para>The total number of running spot instances in the scaling group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

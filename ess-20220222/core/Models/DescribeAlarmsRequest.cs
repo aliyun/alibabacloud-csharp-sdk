@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AlarmTaskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the event-triggered task. Valid values:</para>
+        /// <para>Specifies whether the event-triggered task is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the event-triggered task.</description></item>
-        /// <item><description>false: disables the event-triggered task.</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? IsEnable { get; set; }
 
         /// <summary>
-        /// <para>The metric name.</para>
+        /// <para>The name of the metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CpuUtilization</para>
@@ -44,15 +44,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The metric type. Valid values:</para>
+        /// <para>The type of the metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>system: a system metric of CloudMonitor</description></item>
-        /// <item><description>custom: a custom metric that is reported to CloudMonitor.</description></item>
-        /// <item><description>hybrid: a metric of Hybrid Cloud Monitoring.</description></item>
+        /// <item><description>system: system metrics of CloudMonitor.</description></item>
+        /// <item><description>custom: custom metrics reported to CloudMonitor.</description></item>
+        /// <item><description>hybrid: metrics of Hybrid Cloud Monitoring.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>system</para>
         /// </summary>
         [NameInMap("MetricType")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number of the scaling rule list. Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50.</para>
+        /// <para>The Settings for the number of entries per page in a paged query. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the event-triggered task.</para>
+        /// <para>The ID of the region to which the event-triggered task belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,11 +110,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the event-triggered task. Valid values:</para>
+        /// <para>The state of the event-triggered task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALARM: The alert condition is met and an alert is triggered.</description></item>
-        /// <item><description>OK: The alert condition is not met.</description></item>
-        /// <item><description>INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.</description></item>
+        /// <item><description>ALARM: Alerting. The alert condition is met.</description></item>
+        /// <item><description>OK: Normal. The alert condition is not met.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: Insufficient data. The data is insufficient to determine whether the alert condition is met.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

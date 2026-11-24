@@ -10,12 +10,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyLifecycleHookRequest : TeaModel {
         /// <summary>
-        /// <para>The action that you want Auto Scaling to perform after the lifecycle hook ends. Valid values:</para>
+        /// <para>The subsequent action to perform after the wait state ends. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>CONTINUE: Auto Scaling continues to respond to scaling requests.</description></item>
-        /// <item><description>ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities, or removes ECS instances from the scaling group during scale-in activities.</description></item>
+        /// <item><description>CONTINUE: Continues the response to the scale-out or scale-down activity.</description></item>
+        /// <item><description>ABANDON: Releases the ECS instances created during the scale-out activity or removes the ECS instances from the scaling group during the scale-down activity.</description></item>
+        /// <item><description>ROLLBACK: Rejects the release of ECS instances and rolls back the scale-down activity. For a scale-out activity, releases the created ECS instances, which has the same effect as ABANDON.</description></item>
         /// </list>
-        /// <para>If multiple lifecycle hooks in a scaling group are triggered during scale-in activities and you set the DefaultResult parameter to ABANDON for the lifecycle hook that you want to modify, Auto Scaling immediately performs the action after the lifecycle hook that you want to modify ends. As a result, other lifecycle hooks end ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks end.</para>
+        /// <para>If a scale-down activity is triggered and multiple lifecycle hooks are invoked, and the DefaultResult of one lifecycle hook is set to ABANDON or ROLLBACK, the wait states of other lifecycle hooks are ended in advance when the wait state of this hook ends. In other cases, the subsequent action is determined by the last lifecycle hook that ends its wait state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CONTINUE</para>
@@ -25,8 +26,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DefaultResult { get; set; }
 
         /// <summary>
-        /// <para>The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends. Valid values: 30 to 21600. Unit: seconds.</para>
-        /// <para>You can call the RecordLifecycleActionHeartbeat operation to prolong the length of a lifecycle hook. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.</para>
+        /// <para>The wait time set by the lifecycle hook for the scaling activity. The subsequent action is performed after the wait state times out. Valid values: 30 to 21600. Unit: seconds.</para>
+        /// <para>You can call the RecordLifecycleActionHeartbeat operation to extend the wait time of the ECS instance, or call the CompleteLifecycleAction operation to end the wait state of the scaling activity in advance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -36,7 +37,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? HeartbeatTimeout { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lifecycle hook that you want to modify.</para>
+        /// <para>The specific scenarios that trigger the lifecycle hook.</para>
+        /// </summary>
+        [NameInMap("LifecycleActionSources")]
+        [Validation(Required=false)]
+        public List<string> LifecycleActionSources { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the lifecycle hook to be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ash-bp1fxuqyi98w0aib****</para>
@@ -46,24 +54,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LifecycleHookId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lifecycle hook that you want to modify.</para>
+        /// <para>The name of the lifecycle hook to be modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_SCALE_IN</para>
+        /// <para>test_SCAL****</para>
         /// </summary>
         [NameInMap("LifecycleHookName")]
         [Validation(Required=false)]
         public string LifecycleHookName { get; set; }
 
         /// <summary>
-        /// <para>The status into which you want to put the lifecycle hook. Valid values:</para>
+        /// <para>The status of the lifecycle hook. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active</description></item>
-        /// <item><description>InActive</description></item>
+        /// <item><description>Active: Enables the lifecycle hook.</description></item>
+        /// <item><description>InActive: Disables the lifecycle hook.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the status of the lifecycle hook remains unchanged after you call this operation.</para>
+        /// <para>If you do not specify this parameter, the status of the lifecycle hook remains unchanged.</para>
         /// <remarks>
-        /// <para>By default, a lifecycle hook is in the Active state after you create it.</para>
+        /// <para>After a lifecycle hook is created, it is enabled by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,8 +84,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The type of scaling activity to which the lifecycle hook applies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SCALE_OUT</description></item>
-        /// <item><description>SCALE_IN</description></item>
+        /// <item><description>SCALE_OUT: Scale-out activity of the scaling group.</description></item>
+        /// <item><description>SCALE_IN: Scale-in activity of the scaling group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,20 +96,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LifecycleTransition { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the notification recipient. Specify the value in one of the following formats:</para>
+        /// <para>The identifier of the notification recipient for the lifecycle hook. The following notification methods are supported:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify a Simple Message Queue (SMQ, formerly MNS) as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</description></item>
-        /// <item><description>If you specify an SMQ topic as the notification recipient, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</description></item>
-        /// <item><description>If you specify a CloudOps Orchestration Service (OOS) template as the notification recipient, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</description></item>
-        /// <item><description>If you specify an event bus as the notification recipient, specify the value in the acs:eventbridge:{region-id}:{account-id}:eventbus/default format.</description></item>
+        /// <item><description>Message Service (MNS) queue. Format: acs:mns:{region-id}:{account-id}:queue/{queuename}.</description></item>
+        /// <item><description>MNS topic. Format: acs:mns:{region-id}:{account-id}:topic/{topicname}.</description></item>
+        /// <item><description>Operation Orchestration Service (OOS) template. Format: acs:oos:{region-id}:{account-id}:template/{templatename}.</description></item>
+        /// <item><description>EventBridge. Format: acs:eventbridge:{region-id}:{account-id}:eventbus/default.</description></item>
         /// </list>
-        /// <para>The variables in the preceding value formats have the following meanings:</para>
+        /// <para>Variables in the formats:</para>
         /// <list type="bullet">
-        /// <item><description>region-id: the region ID of your scaling group.</description></item>
-        /// <item><description>account-id: the ID of your Alibaba Cloud account.</description></item>
-        /// <item><description>queuename: the name of the SMQ queue.</description></item>
-        /// <item><description>topicname: the name of the SMQ topic.</description></item>
-        /// <item><description>templatename: the name of the OOS template.</description></item>
+        /// <item><description>region-id: The ID of the region where the scaling group resides.</description></item>
+        /// <item><description>account-id: The Alibaba Cloud account ID.</description></item>
+        /// <item><description>queuename: The name of the MNS queue.</description></item>
+        /// <item><description>topicname: The name of the MNS topic.</description></item>
+        /// <item><description>templatename: The name of the OOS template.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,8 +120,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string NotificationArn { get; set; }
 
         /// <summary>
-        /// <para>The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect. The value of this parameter cannot exceed 4,096 characters in length.</para>
-        /// <para>Auto Scaling sends the value specified for the NotificationMetadata parameter together with the notification. This helps you categorize your notifications. The NotificationMetadata parameter takes effect only after you specify the NotificationArn parameter.</para>
+        /// <para>The fixed string information for the wait state of the scaling activity. The value can be up to 4,096 characters in length.</para>
+        /// <para>When Auto Scaling pushes a message to the notification recipient, it also sends the predefined NotificationMetadata value to help you manage and tag different types of notifications. This parameter takes effect only when the NotificationArn parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>

@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachServerGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the token value from your client and ensure that it is unique across different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -21,10 +20,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances (ECI) in the scaling group to the server group. Valid values:</para>
+        /// <para>Specifies whether to add the existing ECS instances or ECI instances in the scaling group to the newly added server groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: adds the instances.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not add the instances.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group.</para>
+        /// <para>The ID of the region to which the scaling group belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +67,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The information about the server groups.</para>
+        /// <para>The information about the load balancing server groups.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ServerGroups")]
@@ -74,10 +75,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<AttachServerGroupsRequestServerGroups> ServerGroups { get; set; }
         public class AttachServerGroupsRequestServerGroups : TeaModel {
             /// <summary>
-            /// <para>The port used by ECS or ECI instances after being added as backend servers to the server group.</para>
+            /// <para>The port number used by the ECS instance or ECI instance after Auto Scaling adds it to the server group.</para>
             /// <para>Valid values: 1 to 65535.</para>
             /// <remarks>
-            /// <para>For ALB and NLB types, this parameter is required. GWLB type cannot set this parameter and the default value is 6081.</para>
+            /// <para>This parameter is required for ALB and NLB load balancing. You cannot modify the Settings of this parameter for GWLB load balancing, and the default value is 6081.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -88,7 +89,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server group.</para>
+            /// <para>The ID of the load balancing server group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -99,11 +100,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of the server group. Valid Values:</para>
+            /// <para>The type of the load balancing server group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALB</description></item>
-            /// <item><description>NLB</description></item>
-            /// <item><description>GWLB</description></item>
+            /// <item><description>ALB: Application Load Balancer (ALB).</description></item>
+            /// <item><description>NLB: Network Load Balancer (NLB).</description></item>
+            /// <item><description>GWLB: Gateway Load Balancer (GWLB).</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -115,10 +116,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The weight of an ECS or ECI instance as a backend server of the server group. Valid values: 0 to 100</para>
-            /// <para>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If the weight is 0, the ECS or ECI instance does not receive access requests.</para>
+            /// <para>The weight of the ECS instance or ECI instance as a backend server after Auto Scaling adds it to the server group. Valid values: 0 to 100.</para>
+            /// <para>A higher weight indicates that Auto Scaling will allocate more access requests to the ECS instance or ECI instance. If the weight is set to 0, the instance does not receive access requests.</para>
             /// <remarks>
-            /// <para>For ALB and NLB types, this parameter is required. GWLB type cannot be set.</para>
+            /// <para>This parameter is required for ALB and NLB load balancing. You cannot modify the Settings of this parameter for GWLB load balancing.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

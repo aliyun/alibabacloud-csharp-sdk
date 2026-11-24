@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeEciScalingConfigurationDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The output format. Set the value to YAML.</para>
+        /// <para>The output format. Only YAML is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>yaml</para>
+        /// <para>YAML</para>
         /// </summary>
         [NameInMap("OutputFormat")]
         [Validation(Required=false)]
         public string OutputFormat { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group to which the scaling configuration belongs.</para>
+        /// <para>The region ID of the scaling group to which the scaling rule belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling configuration based on which elastic container instances are created.</para>
+        /// <para>The ID of the scaling configuration for the ECI scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class SetInstanceHealthRequest : TeaModel {
         /// <summary>
-        /// <para>The health status of the instance. Valid values:</para>
+        /// <para>The health status to set for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Healthy: sets the instance as healthy.</description></item>
-        /// <item><description>Unhealthy: sets the instance as unhealthy.</description></item>
+        /// <item><description>Healthy: Sets the instance to the healthy state.</description></item>
+        /// <item><description>Unhealthy: Sets the instance to the unhealthy state.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the instance in the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

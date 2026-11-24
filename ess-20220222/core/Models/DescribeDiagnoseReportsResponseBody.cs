@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic reports.</para>
+        /// <para>The list of diagnostic reports.</para>
         /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
         public List<DescribeDiagnoseReportsResponseBodyReports> Reports { get; set; }
         public class DescribeDiagnoseReportsResponseBodyReports : TeaModel {
             /// <summary>
-            /// <para>The time when the diagnostic report was created.</para>
+            /// <para>The time when the diagnostic report was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-23T02:22:30Z</para>
@@ -56,15 +56,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// <para>The type of the diagnostic item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AccountArrearage: Checks whether your Alibaba Cloud account has overdue payments.</description></item>
-                /// <item><description>AccountNotEnoughBalance: Checks whether the balance of your Alibaba Cloud account at the China site (aliyun.com) is greater than or equal to CNY 100.</description></item>
-                /// <item><description>ElasticStrength: Checks whether the instance types that are specified in the scaling configuration are sufficient.</description></item>
-                /// <item><description>VSwitch: Checks whether a specific vSwitch can work as expected. For example, if a vSwitch is deleted, the vSwitch cannot provide services and an exception occurs.</description></item>
-                /// <item><description>SecurityGroup: Checks whether a specific security group can work as expected. For example, if a security group is deleted, the security group cannot provide services and an exception occurs.</description></item>
-                /// <item><description>KeyPair: Checks whether the key pair is available. If the specified key pair is deleted, specify another key pair for the scaling group.</description></item>
-                /// <item><description>SlbBackendServerQuota: Checks whether the number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</description></item>
-                /// <item><description>AlbBackendServerQuota: Checks whether the number of ECS instances that are added to the backend server groups of the ALB instances associated with the scaling group has reached the upper limit.</description></item>
-                /// <item><description>NlbBackendServerQuota: Checks whether the number of ECS instances that are added to the backend server groups of the NLB instances associated with the scaling group has reached the upper limit.</description></item>
+                /// <item><description><para>AccountArrearage: account overdue payment. Checks whether the user account has overdue payments.</para>
+                /// </description></item>
+                /// <item><description><para>AccountNotEnoughBalance: insufficient account balance. Checks whether the balance of a user account on the China site is greater than or equal to CNY 100.</para>
+                /// </description></item>
+                /// <item><description><para>ElasticStrength: inventory health. Checks the inventory health of the instance type configured for the scaling group.</para>
+                /// </description></item>
+                /// <item><description><para>VSwitch: vSwitch status. Checks whether the vSwitch is active, such as whether it is deleted.</para>
+                /// </description></item>
+                /// <item><description><para>SecurityGroup: security group status. Checks whether the security group is active, such as whether it is deleted.</para>
+                /// </description></item>
+                /// <item><description><para>KeyPair: key pair status. Checks whether the key pair is active, such as whether it is deleted.</para>
+                /// </description></item>
+                /// <item><description><para>SlbBackendServerQuota: number of instances mounted to the SLB instance in the scaling group. Checks whether the number of ECS instances mounted to the default server group and virtual service groups of the SLB instance exceeds the quota.</para>
+                /// </description></item>
+                /// <item><description><para>AlbBackendServerQuota: number of instances mounted to the ALB instance in the scaling group. Checks whether the number of ECS instances mounted to the server groups of the ALB instance exceeds the quota.</para>
+                /// </description></item>
+                /// <item><description><para>NlbBackendServerQuota: number of instances mounted to the NLB instance in the scaling group. Checks whether the number of ECS instances mounted to the server groups of the NLB instance exceeds the quota.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -77,15 +86,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// <para>The error code of the diagnostic item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>VSwitchIdNotFound: The vSwitch does not exist.</description></item>
-                /// <item><description>SecurityGroupNotFound: The security group does not exist.</description></item>
-                /// <item><description>KeyPairNotFound: The key pair does not exist.</description></item>
-                /// <item><description>SlbBackendServerQuotaExceeded: The number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</description></item>
-                /// <item><description>AlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the ALB instances of the scaling group has reached the upper limit.</description></item>
-                /// <item><description>NlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the NLB instances of the scaling group has reached the upper limit.</description></item>
-                /// <item><description>AccountArrearage: Your account has overdue payments.</description></item>
-                /// <item><description>AccountNotEnoughBalance: The balance of your Alibaba Cloud account is less than CNY 100.</description></item>
-                /// <item><description>ElasticStrengthAlert: The inventory levels are lower than expected.</description></item>
+                /// <item><description><para>VSwitchIdNotFound: the vSwitch does not exist.</para>
+                /// </description></item>
+                /// <item><description><para>SecurityGroupNotFound: the security group does not exist.</para>
+                /// </description></item>
+                /// <item><description><para>KeyPairNotFound: the key pair does not exist.</para>
+                /// </description></item>
+                /// <item><description><para>SlbBackendServerQuotaExceeded: the number of ECS instances mounted to the default server group and virtual service groups of the SLB instance exceeds the quota.</para>
+                /// </description></item>
+                /// <item><description><para>AlbBackendServerQuotaExceeded: the number of ECS instances mounted to the server groups of the ALB instance exceeds the quota.</para>
+                /// </description></item>
+                /// <item><description><para>NlbBackendServerQuotaExceeded: the number of ECS instances mounted to the server groups of the NLB instance exceeds the quota.</para>
+                /// </description></item>
+                /// <item><description><para>AccountArrearage: the account has overdue payments.</para>
+                /// </description></item>
+                /// <item><description><para>AccountNotEnoughBalance: the account balance is insufficient (less than CNY 100).</para>
+                /// </description></item>
+                /// <item><description><para>ElasticStrengthAlert: the inventory health is poor.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -96,7 +114,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource.</para>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-280ih****</para>
@@ -106,11 +124,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the diagnostic item. Valid values:</para>
+                /// <para>The diagnostic status of the diagnostic item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: The diagnostic result is normal.</description></item>
-                /// <item><description>Warn: The diagnostic result is warning.</description></item>
-                /// <item><description>Critical: The diagnostic result is critical.</description></item>
+                /// <item><description><para>Normal: the diagnostic result is normal.</para>
+                /// </description></item>
+                /// <item><description><para>Warn: the diagnostic result is a warning.</para>
+                /// </description></item>
+                /// <item><description><para>Critical: the diagnostic result is critical.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -123,11 +144,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The status of the diagnostic item. Only the severe status is displayed in the diagnostic report. Valid values:</para>
+            /// <para>The diagnostic status. The value is the most severe status among the diagnostic details. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: The diagnostic result is normal.</description></item>
-            /// <item><description>Warn: The diagnostic result is warning.</description></item>
-            /// <item><description>Critical: The diagnostic result is critical.</description></item>
+            /// <item><description><para>Normal: the diagnostic result is normal.</para>
+            /// </description></item>
+            /// <item><description><para>Warn: the diagnostic result is a warning.</para>
+            /// </description></item>
+            /// <item><description><para>Critical: the diagnostic result is critical.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,8 +164,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The status of the diagnostic report. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>processing: The diagnosis is in progress.</description></item>
-            /// <item><description>Finished: The diagnosis is complete.</description></item>
+            /// <item><description><para>Processing: in progress.</para>
+            /// </description></item>
+            /// <item><description><para>Finished: completed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,7 +178,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ProcessStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-qingdao</para>
@@ -194,7 +220,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECA123C6-107B-5F70-A177-740A7224C996</para>

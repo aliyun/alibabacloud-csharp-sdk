@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The mode in which you want to attach the database to the scaling group. Valid values:</para>
+        /// <para>The association mode between the scaling group and the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SecurityIp: adds the private IP addresses of scaled out ECS instances to the IP address whitelist of the database. Take note that you can choose this mode only when the database that you want to attach is an ApsaraDB RDS instance.</description></item>
-        /// <item><description>SecurityGroup: adds the security group of the scaling configuration based on which ECS instances are created in the scaling group to the security group whitelist of the database for registration.</description></item>
+        /// <item><description>SecurityIp: The SecurityIp mode. In this mode, the IP addresses of scaled-out instances are automatically added to the IP address whitelist of the database. Currently, only ApsaraDB RDS databases support this mode.</description></item>
+        /// <item><description>SecurityGroup: The security group mode. In this mode, the security group of the scaling configuration is added to the security group whitelist of the database for association and registration.</description></item>
         /// </list>
         /// <para>Default value: SecurityIp.</para>
         /// 
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string AttachMode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</para>
-        /// <para>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure the idempotence of a request</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the parameter value is unique across different requests.</para>
+        /// <para>The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the ApsaraDB RDS instances that you want to attach to the scaling group.</para>
+        /// <para>The IDs of the RDS instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DBInstances")]
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> DBInstances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance that you want to attach to the scaling group. Valid values:</para>
+        /// <para>Specifies whether to add the private IP addresses of all instances in the current scaling group to the IP address whitelist of the RDS instances when the RDS instances are attached to the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Adds the private IP addresses.</para>
+        /// </description></item>
+        /// <item><description><para>false: Does not add the private IP addresses.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the database that you want to attach to the scaling group. Valid values:</para>
+        /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RDS</description></item>
         /// <item><description>Redis</description></item>

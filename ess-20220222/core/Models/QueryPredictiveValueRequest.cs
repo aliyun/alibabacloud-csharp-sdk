@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class QueryPredictiveValueRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the predicted number of instances in the scaling group. The time follows the ISO8601 standard and uses UTC time.</para>
+        /// <para>The end time to query the predicted number of instances in the scaling group. The time must be in UTC and follow the ISO 8601 standard.</para>
         /// <para>Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the monitoring metric of the prediction rule. Valid values:</para>
+        /// <para>The name of the monitoring metrics for the predictive scaling rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CpuUtilization: the average CPU utilization.</description></item>
-        /// <item><description>IntranetRx: the inbound traffic over an internal network.</description></item>
-        /// <item><description>IntranetTx: the outbound traffic over an internal network.</description></item>
+        /// <item><description>CpuUtilization: the average CPU utilization of ECS instances.</description></item>
+        /// <item><description>IntranetRx: the average inbound internal network traffic of ECS instances.</description></item>
+        /// <item><description>IntranetTx: the average outbound internal network traffic of ECS instances.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the predicted number of instances in the scaling group. The time follows the ISO8601 standard and uses UTC time.</para>
+        /// <para>The start time to query the predicted number of instances in the scaling group. The time must be in UTC and follow the ISO 8601 standard.</para>
         /// <para>Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The current value of the monitoring metric of the prediction rule.</para>
+        /// <para>The current value of the monitoring metrics for the predictive scaling rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

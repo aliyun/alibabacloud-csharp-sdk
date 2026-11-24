@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.</para>
+        /// <para>The expected number of instances in the scaling group. This parameter is required when the scaling method of the scheduled task is set to specify the number of instances in the scaling group.</para>
         /// <remarks>
-        /// <para>You must specify the <c>DesiredCapacity</c> parameter when you create a scaling group.</para>
+        /// <para>The scaling group must support the expected number of instances. This means that DesiredCapacity must be specified when the scaling group is created.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? DesiredCapacity { get; set; }
 
         /// <summary>
-        /// <para>The time period during which the failed scheduled task is retried. Unit: seconds. Valid values: 0 to 1800.</para>
+        /// <para>The retry period during which Auto Scaling continues to attempt to execute the scheduled task after the triggered operation fails. Unit: seconds. Valid values: 0 to 1800.</para>
         /// <para>Default value: 600.</para>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? LaunchExpirationTime { get; set; }
 
         /// <summary>
-        /// <para>The point in time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a time point later than 90 days from the point in time at which the scheduled task is modified.</para>
+        /// <para>The time at which the scheduled task is executed. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot specify a time that is later than 90 days from the date of modification.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify the <c>RecurrenceType</c> parameter, the task is repeatedly executed at the time point that is specified by the LaunchTime parameter.</description></item>
-        /// <item><description>If you do not specify the <c>RecurrenceType</c> parameter, the task is executed only once at the point in time that is specified by the LaunchTime parameter.</description></item>
+        /// <item><description><para>If RecurrenceType is specified, the time specified by this parameter is the default time for recurring execution.</para>
+        /// </description></item>
+        /// <item><description><para>If RecurrenceType is not specified, the task is executed only once at the specified date and time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string LaunchTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.</para>
+        /// <para>The maximum number of instances in the scaling group. This parameter is required when the scaling method of the scheduled task is set to specify the number of instances in the scaling group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxValue { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.</para>
+        /// <para>The minimum number of instances in the scaling group. This parameter is required when the scaling method of the scheduled task is set to specify the number of instances in the scaling group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the scheduled task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a point in time that is later than 365 days from the point in time at which the scheduled task is modified.</para>
+        /// <para>The end time of the scheduled task that is executed repeatedly. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot specify a time that is later than 365 days from the date of modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2014-08-20T16:55Z</para>
@@ -96,14 +98,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RecurrenceEndTime { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the scheduled task is repeated. Valid values:</para>
+        /// <para>The recurrence type of the scheduled task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Daily: The scheduled task is executed once every specified number of days.</description></item>
-        /// <item><description>Weekly: The scheduled task is executed on each specified day of the week.</description></item>
-        /// <item><description>Monthly: The scheduled task is executed on each specified day of the month.</description></item>
+        /// <item><description>Weekly: The scheduled task is executed on specified days of each week.</description></item>
+        /// <item><description>Monthly: The scheduled task is executed on specified days of each month.</description></item>
         /// <item><description>Cron: The scheduled task is executed based on the specified cron expression.</description></item>
         /// </list>
-        /// <para>After you modify the scheduled task, the values that you specify for the <c>RecurrenceType</c> and <c>RecurrenceValue</c> parameters must be valid at the same time.</para>
+        /// <para>After modification, both RecurrenceType and RecurrenceValue must be valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
@@ -113,14 +115,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RecurrenceType { get; set; }
 
         /// <summary>
-        /// <para>The number of recurrences of the scheduled task.</para>
+        /// <para>The recurrence value of the scheduled task.</para>
         /// <list type="bullet">
-        /// <item><description>If you set the <c>RecurrenceType</c> parameter to <c>Daily</c>, you can specify only one value for this parameter. Valid values: 1 to 31.</description></item>
-        /// <item><description>If you set the <c>RecurrenceType</c> parameter to <c>Weekly</c>, you can specify multiple values for this parameter. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.``</description></item>
-        /// <item><description>If you set the <c>RecurrenceType</c> parameter to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A.</description></item>
-        /// <item><description>If you set the <c>RecurrenceType</c> parameter to <c>Cron</c>, you can specify a cron expression. A cron expression is written in UTC time and consists of the following fields: minute, hour, day, month, and week. The expression can contain the letters L and W and the following wildcard characters: commas (,), question marks (?), hyphens (-), asterisks (\*), number signs (#), and forward slashes (/).</description></item>
+        /// <item><description>If RecurrenceType is set to Daily, you can specify only one value. Valid values: 1 to 31.</description></item>
+        /// <item><description>If RecurrenceType is set to Weekly, you can specify multiple values separated by commas (,). For example, the values for Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0,1,2,3,4,5,6.</description></item>
+        /// <item><description>If RecurrenceType is set to Monthly, the format is A-B. Valid values of A and B: 1 to 31. B must be greater than or equal to A.</description></item>
+        /// <item><description>If RecurrenceType is set to Cron, the value specifies a cron expression in UTC. The expression supports five fields: minute, hour, day, month, and week. It supports wildcards such as commas (,), question marks (?), hyphens (-), asterisks (*), number signs (#), forward slashes (/), L, and W.</description></item>
         /// </list>
-        /// <para>After you modify the scheduled task, the values that you specify for the <c>RecurrenceType</c> and <c>RecurrenceValue</c> parameters must be valid at the same time.</para>
+        /// <para>After modification, both RecurrenceType and RecurrenceValue must be valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -148,9 +150,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling group whose number of instances must be modified when the scheduled task is triggered. If you specify the <c>ScalingGroupId</c> parameter for a scheduled task, you must specify the minimum, maximum, or expected numbers of instances for a scaling group in the scheduled task. That is, you must specify at least one of the <c>MinValue</c>, <c>MaxValue</c>, and <c>DesiredCapacity</c> parameters.</para>
+        /// <para>The ID of the scaling group in which you want to modify the number of instances or adjust the warm pool capacity when the scheduled task is triggered.</para>
+        /// <para>After you specify ScalingGroupId, the scaling method of the scheduled task is set to specify the number of instances in the scaling group or adjust the warm pool capacity.</para>
+        /// <list type="bullet">
+        /// <item><description>Specify the number of instances in the scaling group: You must specify at least one of the MinValue, MaxValue, and DesiredCapacity parameters.</description></item>
+        /// <item><description>Adjust the warm pool capacity: You must specify WarmPoolCapacityOptions.</description></item>
+        /// </list>
         /// <remarks>
-        /// <para>You cannot specify the <c>ScheduledAction</c> and <c>ScalingGroupId</c> parameters at the same time.</para>
+        /// <para>You cannot specify both ScheduledAction and ScalingGroupId at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -161,9 +168,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The scaling rule that you want to execute when the scheduled task is triggered. Enter the ID of the scaling rule. To obtain the ID of a scaling rule, go to the scaling rule details page. If you specify <c>ScheduledAction</c>, you must select an existing scaling rule for the scheduled task.</para>
+        /// <para>The ID of the scaling rule to execute. This parameter is available only when the scaling method is set to execute an existing scaling rule. You can view the ID on the details page of the scaling rule.</para>
         /// <remarks>
-        /// <para> You can specify only one of <c>ScheduledAction</c> and <c>ScalingGroupId</c>.</para>
+        /// <para>You cannot specify both ScheduledAction and ScalingGroupId at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,7 +192,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScheduledTaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the scheduled task. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of the scheduled task must be unique in the region and within the Alibaba Cloud account.</para>
+        /// <para>The name of the scheduled task. The name must be 2 to 64 characters in length and can contain periods (.), underscores (_), and hyphens (-). It must start with a letter, digit, or Chinese character. The name must be unique within the same region and Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scheduled****</para>
@@ -197,8 +204,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>Specifies whether to enable the scheduled task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: enables the scheduled task.</description></item>
+        /// <item><description>false: disables the scheduled task.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -208,6 +215,38 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [NameInMap("TaskEnabled")]
         [Validation(Required=false)]
         public bool? TaskEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The warm pool capacity configuration of the scaling group. This parameter is valid only when a warm pool is configured for the scaling group.</para>
+        /// <remarks>
+        /// <para>You must specify ScalingGroupId when you specify this parameter.</para>
+        /// </remarks>
+        /// </summary>
+        [NameInMap("WarmPoolCapacityOptions")]
+        [Validation(Required=false)]
+        public ModifyScheduledTaskRequestWarmPoolCapacityOptions WarmPoolCapacityOptions { get; set; }
+        public class ModifyScheduledTaskRequestWarmPoolCapacityOptions : TeaModel {
+            /// <summary>
+            /// <para>The expected number of prepared instances. The system maintains the sum of the current number of instances in the scaling group and the number of instances in the warm pool at this value. Default value: the maximum number of instances in the scaling group, which is specified by MaxSize.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("DesiredGroupPreparedCapacity")]
+            [Validation(Required=false)]
+            public int? DesiredGroupPreparedCapacity { get; set; }
+
+            /// <summary>
+            /// <para>The minimum number of instances in the warm pool. The system always retains at least this number of prepared instances in the warm pool to ensure that instances can be quickly added from the warm pool during scale-out. Default value: 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
+            [NameInMap("MinCapacity")]
+            [Validation(Required=false)]
+            public int? MinCapacity { get; set; }
+
+        }
 
     }
 

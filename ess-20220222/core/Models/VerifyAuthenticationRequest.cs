@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class VerifyAuthenticationRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to check only the authorization status. Valid values:</para>
+        /// <para>Specifies whether to only check the authorization status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: checks only the authorization status. The service-linked role is not created.</description></item>
-        /// <item><description>false (default): checks the authorization status and resource usage.</description></item>
+        /// <item><description>true: Only checks the authorization status and does not create the service-linked role.</description></item>
+        /// <item><description>false: Checks the authorization status and resource usage.
+        /// Default value: false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of your Alibaba Cloud account.</para>
+        /// <para>The ID of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678123*****</para>

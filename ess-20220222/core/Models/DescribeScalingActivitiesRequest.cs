@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeScalingActivitiesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance refresh task. If you specify this parameter, this operation returns the list of scaling activities associated with the instance refresh task.</para>
+        /// <para>The ID of the instance refresh task node. You can configure the Settings of this parameter to perform a parameter query for the scaling activity list related to the instance refresh task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ir-a12ds234fasd*****</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number of the scaling activity list. Pages start from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 50.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group to which the scaling activity that you want to query belongs.</para>
+        /// <para>The region ID of the scaling group to which the scaling activity belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the scaling activities that you want to query.</para>
+        /// <para>The ID of the scaling activity to be queried.</para>
         /// <remarks>
-        /// <para> When you call this operation, you must specify one of the following parameters: <c>ScalingGroupId</c> and <c>ScalingActivityIds</c>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</para>
+        /// <para>When you invoke this API, you must specify either the ScalingGroupId or ScalingActivityIds parameter. If neither parameter is specified, an error occurs.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ScalingActivityIds")]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The ID of the scaling group.</para>
         /// <remarks>
-        /// <para> When you call this operation, you must specify one of the following parameters: <c>ScalingGroupId</c> and <c>ScalingActivityIds</c>. You cannot specify both of them at the same time. If you specify neither of them, an error is reported.</para>
+        /// <para>When you call this operation, you must specify either ScalingGroupId or ScalingActivityIds. If neither is specified, an error occurs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The status of the scaling activity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Successful: The scaling activity is successful.</description></item>
-        /// <item><description>Warning: The scaling activity is partially successful.</description></item>
-        /// <item><description>Failed: The scaling activity failed.</description></item>
-        /// <item><description>InProgress: The scaling activity is in progress.</description></item>
-        /// <item><description>Rejected: The request to trigger the scaling activity is rejected.</description></item>
+        /// <item><description>Successful: The scaling activity is successful. </description></item>
+        /// <item><description>Warning: The scaling activity is partially successful. </description></item>
+        /// <item><description>Failed: The scaling activity failed. </description></item>
+        /// <item><description>InProgress: The scaling activity is in progress. </description></item>
+        /// <item><description>Rejected: The request to execute the scaling activity is rejected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

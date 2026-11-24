@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class AttachLoadBalancersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The ID of the scaling activity.</para>
-        /// <para>This parameter is returned only if you set <c>Async</c> to <c>true</c>. You can call the DescribeScalingActivities operation to query the scaling activity IDs and status.</para>
+        /// <para>This value is returned only when Async is set to <c>true</c>. You can call the DescribeScalingActivities operation to query the returned scaling activity ID and view the execution status of the scaling activity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asa-bp140qd7mak8k63f****</para>

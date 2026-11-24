@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeInstanceRefreshesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instance refresh tasks to query.</para>
+        /// <para>The IDs of the instance refresh tasks to be queried.</para>
         /// </summary>
         [NameInMap("InstanceRefreshTaskIds")]
         [Validation(Required=false)]
         public List<string> InstanceRefreshTaskIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query. Valid values: 1 to 50.
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 50.
         /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous call. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -67,8 +67,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The ID of the scaling group.</para>
         /// <remarks>
-        /// <para>You must specify at least one of ScalingGroupId and InstanceRefreshTaskIds. If neither parameter is specified, an error is returned.
-        /// .</para>
+        /// <para>When you call this operation, you must specify either ScalingGroupId or InstanceRefreshTaskIds. If neither is specified, an error occurs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

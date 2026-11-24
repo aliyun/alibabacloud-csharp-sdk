@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<DescribePatternTypesResponseBodyPatternTypes> PatternTypes { get; set; }
         public class DescribePatternTypesResponseBodyPatternTypes : TeaModel {
             /// <summary>
-            /// <para>The number of vCPUs that are assigned to the instance type.</para>
+            /// <para>The number of vCPUs for the instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The level of the instance family.</para>
             /// <list type="bullet">
-            /// <item><description>EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
-            /// <item><description>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
-            /// <item><description>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+            /// <item><description>EntryLevel: Entry-level. This level refers to shared instance types. These instance types are more cost-effective but cannot guarantee stable computing performance. They are suitable for business scenarios with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance types</a>.</description></item>
+            /// <item><description>EnterpriseLevel: Enterprise-level. These instance types provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+            /// <item><description>CreditEntryLevel: Credit entry-level. This level refers to burstable instances. These instance types use CPU credits to ensure computing performance and are suitable for business scenarios with low CPU utilization but occasional spikes in CPU usage. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The memory size that are assigned to the instance type. Unit: GiB.</para>
+            /// <para>The memory size of the instance type. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>

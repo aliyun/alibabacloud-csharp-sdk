@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number of the scaling configuration list. Pages start from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 50.</para>
+        /// <para>The number of entries per page for a paged query. Settings for paging: Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -59,23 +59,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration IDs.</para>
-        /// <para>The IDs of active and inactive scaling configurations are displayed in the query results. You can distinguish between active and inactive scaling configurations based on the value of <c>LifecycleState</c>.</para>
+        /// <para>The IDs of the scaling configurations to be queried. You can specify 1 to 10 IDs.</para>
+        /// <para>The query results include both active and inactive scaling configurations, which are identified by the LifecycleState response parameter.</para>
         /// </summary>
         [NameInMap("ScalingConfigurationIds")]
         [Validation(Required=false)]
         public List<string> ScalingConfigurationIds { get; set; }
 
         /// <summary>
-        /// <para>The names of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration names.</para>
-        /// <para>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</para>
+        /// <para>The names of the scaling configurations to be queried. You can specify 1 to 10 names.</para>
+        /// <para>Invalid scaling configuration names are ignored in the query results, and no error is reported.</para>
         /// </summary>
         [NameInMap("ScalingConfigurationNames")]
         [Validation(Required=false)]
         public List<string> ScalingConfigurationNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</para>
+        /// <para>The ID of the scaling group. You can query all scaling configurations in the scaling group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asg-bp17pelvl720x3v7****</para>

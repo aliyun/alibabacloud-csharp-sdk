@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow the scaling group to manage the lifecycles of the manually added ECS instances. Valid values:</para>
+        /// <para>Specifies whether the lifecycle (epoch) of an instance manually added to the scaling group is managed by the scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: allows the scaling group to manage the lifecycles of the manually added ECS instances. The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</description></item>
-        /// <item><description>false: does not allow the scaling group to manage the lifecycles of the manually added ECS instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</description></item>
+        /// <item><description>true: Managed. The lifecycle (epoch) of the instance is managed by Auto Scaling, which is consistent with that of instances automatically created in the scaling group. The instance is automatically released when it is removed from the scaling group, excluding instances removed when you invoke the DetachInstances operation.</description></item>
+        /// <item><description>false: Unmanaged. The instance is not released when it is removed from the scaling group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can specify this parameter only for ECS instances that are manually added to the scaling group.</para>
+        /// <para>This parameter applies only to instances manually added to the scaling group, not to instances created within the scaling group.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? Entrusted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS instance.</para>
+        /// <para>The ID of the ECS instance in the scaling group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp109k5j3dum1ce6****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group.</para>
+        /// <para>The ID of the region to which the scaling group belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
