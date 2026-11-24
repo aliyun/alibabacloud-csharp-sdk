@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetConversationsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>flow-c5007b4a03a2446cbe9d</para>
+        /// </summary>
+        [NameInMap("FlowId")]
+        [Validation(Required=false)]
+        public string FlowId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the last conversation record.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string LastId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: 1 to 100.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Limit { get; set; }
 
         /// <summary>
-        /// <para>The pinned bookmark flag for the application.</para>
+        /// <para>The pin mark for application favorites.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The ContextDB workspace ID.</para>
+        /// <para>The ID of the ContextDB workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool calling invoke events, child node events, and document events are unified into the answer field of the event = message. When set to separate, tool calling invoke events, child node events, and document events have their own respective events.</para>
+        /// <para>The event output mode. Valid values: inline and separate. Default value: inline. When set to inline, tool invoke events, child node events, and document events are unified into the answer field of the event where event = message. When set to separate, tool invoke events, child node events, and document events have their own respective events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inline</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The query content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instance rm-bp14as9914vd3**** disk usage, and whether capacity expansion is required</para>
+        /// <para>Disk usage of instance rm-bp14as9914vd3****, and whether it needs to be scaled up</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

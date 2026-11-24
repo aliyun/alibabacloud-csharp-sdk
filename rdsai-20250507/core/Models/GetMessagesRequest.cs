@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ConversationId { get; set; }
 
+        /// <summary>
+        /// <para>The event output type. Valid values: inline and separate. Default value: inline. In inline mode, tool invocation events, child node events, and document events are unified into the answer field of the event where event = message. In separate mode, tool invocation events, child node events, and document events have their own respective events.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inline</para>
+        /// </summary>
         [NameInMap("EventMode")]
         [Validation(Required=false)]
         public string EventMode { get; set; }
@@ -34,7 +40,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string FirstId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The flow instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>flow-90ea18a8254645968325</para>
+        /// </summary>
+        [NameInMap("FlowId")]
+        [Validation(Required=false)]
+        public string FlowId { get; set; }
+
+        /// <summary>
+        /// <para>The number of rows per page for paging. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool calling invoke events, child node events, and document events are unified into the answer field of the event = message. When set to separate, tool calling invoke events, child node events, and document events have their own respective events.</para>
+        /// <para>The event output mode. Valid values: inline and separate. Default value: inline. When set to inline, tool invoke events, child node events, and document events are unified into the answer field of the event where event = message. When set to separate, tool invoke events, child node events, and document events have their own respective events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inline</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<ChatMessagesRequestFiles> Files { get; set; }
         public class ChatMessagesRequestFiles : TeaModel {
             /// <summary>
-            /// <para>The file transfer method. Set this parameter to local_file when referencing an uploaded file, and provide the UploadFileId at the same time.</para>
+            /// <para>The file transfer method. Set this parameter to local_file and provide the UploadFileId when referencing an uploaded file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>local_file</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the uploaded file. The ContextDB management agent can use the UploadFileId returned by the current workspace knowledge base.</para>
+            /// <para>The identifier of the uploaded file. The ContextDB management agent can use the UploadFileId returned by the knowledge base of the current workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00000000-0000-4000-8000-000000000001</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public ChatMessagesRequestInputs Inputs { get; set; }
         public class ChatMessagesRequestInputs : TeaModel {
             /// <summary>
-            /// <para>The custom agent ID for the user.</para>
+            /// <para>The custom agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d1b7d639-f34e-44c7-8231-987da14d****</para>
@@ -104,6 +104,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("EnableThinking")]
             [Validation(Required=false)]
             public string EnableThinking { get; set; }
+
+            /// <summary>
+            /// <para>The IM flow ID. Used to bind messages to a registered IM channel when a conversation is initiated through an IM channel.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>flow-xxxxxxxxxx</para>
+            /// </summary>
+            [NameInMap("FlowId")]
+            [Validation(Required=false)]
+            public string FlowId { get; set; }
 
             /// <summary>
             /// <para>The conversation language.</para>
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The tool approval call ID for resuming execution. Pass this parameter after the console completes all decisions for the current approval round to continue the interrupted ChatMessage loop. Do not pass this parameter for regular conversations.</para>
+            /// <para>The tool approval call ID for resuming execution. Pass this parameter after the console completes all decisions for the current approval round to continue the interrupted ChatMessage loop. Do not pass this parameter for normal conversations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>call-example</para>
@@ -166,7 +176,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Timezone { get; set; }
 
             /// <summary>
-            /// <para>The tool approval mode for the current conversation. Valid values: read_only (read-only, rejects write tools), manual (write tools require manual approval), and auto (automatically determined by the approval sub-agent; escalated to manual approval when needs_human is returned). Passing this parameter updates the approval mode for the current conversation.</para>
+            /// <para>Specifies the tool approval mode for the current conversation. Valid values: read_only (read-only, rejects write tools), manual (write tools require manual approval), and auto (automatically determined by the approval sub-agent; escalated to manual approval when needs_human is returned). If specified, updates the approval mode of the current conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>manual</para>
@@ -201,7 +211,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The query content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instance rm-bp14as9914vd3**** disk usage, and whether capacity expansion is required</para>
+        /// <para>Disk usage of instance rm-bp14as9914vd3****, and whether it needs to be scaled up</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

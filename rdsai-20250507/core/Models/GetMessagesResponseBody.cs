@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query result.</para>
+        /// <para>The query results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetMessagesResponseBodyData> Data { get; set; }
         public class GetMessagesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The answer.</para>
+            /// <para>The reply.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The disk usage of the instance rm-bp14as9914vd3**** you queried is 23%, and no capacity expansion is needed at this time. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</para>
+            /// <para>The instance rm-bp14as9914vd3**** you inquired about has a disk usage of 23%, so no storage expansion is needed at the moment. If you need to view detailed configurations, check performance monitoring, or perform other operations on a specific instance, please let me know your specific requirements.</para>
             /// </summary>
             [NameInMap("Answer")]
             [Validation(Required=false)]
             public string Answer { get; set; }
 
             /// <summary>
-            /// <para>The session ID.</para>
+            /// <para>The conversation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9cbbe885-b240-4803-9d15-6781a3fd****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the message was created. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763986004</para>
@@ -46,12 +46,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
+            /// <summary>
+            /// <para>The list of events.</para>
+            /// </summary>
             [NameInMap("Events")]
             [Validation(Required=false)]
             public List<GetMessagesResponseBodyDataEvents> Events { get; set; }
             public class GetMessagesResponseBodyDataEvents : TeaModel {
                 /// <summary>
-                /// <para>The approval status of the tool calling.</para>
+                /// <para>The tool invocation approval status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pending</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ApprovalStatus { get; set; }
 
                 /// <summary>
-                /// <para>The tool calling ID.</para>
+                /// <para>The tool invocation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>call-example</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string CallId { get; set; }
 
                 /// <summary>
-                /// <para>The session ID.</para>
+                /// <para>The conversation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>conversation-example</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ConversationId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the tool calling.</para>
+                /// <para>The tool invocation description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Search ContextDB records</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string RoundId { get; set; }
 
                 /// <summary>
-                /// <para>The parameters of the tool calling.</para>
+                /// <para>The tool invocation parameters.</para>
                 /// </summary>
                 [NameInMap("ToolArguments")]
                 [Validation(Required=false)]
@@ -190,7 +193,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The upload file ID.</para>
+                /// <para>The uploaded file ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file-example</para>
@@ -205,14 +208,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The query statement.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</para>
+            /// <para>Disk usage of instance rm-bp14as9914vd3**** and whether capacity expansion is required</para>
             /// </summary>
             [NameInMap("Query")]
             [Validation(Required=false)]
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>The retrieval resources.</para>
+            /// <para>The retrieved resources.</para>
             /// </summary>
             [NameInMap("RetrieverResources")]
             [Validation(Required=false)]
@@ -235,7 +238,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

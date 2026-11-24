@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The historical conversation ID.</para>
+            /// <para>The ID of the historical conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60b335ca-124d-4ee1-864b-de554987****</para>
@@ -46,12 +46,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Introduction { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the session is running.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsRunning")]
             [Validation(Required=false)]
             public bool? IsRunning { get; set; }
 
             /// <summary>
-            /// <para>The historical conversation name.</para>
+            /// <para>The name of the historical conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Search for RDS resources</para>
@@ -61,13 +67,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The session status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>idle: The session is idle.</description></item>
-            /// <item><description>running: The session is generating a response.</description></item>
-            /// <item><description>pending_approval: The session is waiting for approval or manual review.</description></item>
-            /// </list>
-            /// <para>If both pending_approval and running conditions are met, pending_approval is returned.</para>
+            /// <para>The session status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idle</para>
@@ -76,6 +76,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1785919275</para>
+            /// </summary>
             [NameInMap("UpdatedAt")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
@@ -83,7 +89,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether there is a next page.</para>
+        /// <para>Indicates whether more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string HasMore { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? Limit { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>

@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The answer content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, so capacity expansion is not required at this time. If you need to view detailed configurations, performance monitoring, or perform other operations for a specific instance, let me know your specific requirements</para>
+        /// <para>The disk usage of the instance rm-bp14as9914vd3**** you asked about is 23%, and it does not need to be scaled up at the moment. If you need to further view the detailed configuration, performance monitoring, or perform other operations for a specific instance, please let me know your specific requirements!</para>
         /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
         public string Answer { get; set; }
 
         /// <summary>
-        /// <para>The tool calling invoke approval status.</para>
+        /// <para>The tool invoke approval status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApprovalStatus { get; set; }
 
         /// <summary>
-        /// <para>The tool calling invoke ID.</para>
+        /// <para>The tool invoke ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>call-example</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The tool calling invoke description.</para>
+        /// <para>The tool invoke description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Search ContextDB records</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The query mode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This will be deprecated in the future and can be ignored</para>
+        /// <para>This will be deprecated in the future. You can ignore it</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The tool calling invoke parameters.</para>
+        /// <para>The tool invoke parameters.</para>
         /// </summary>
         [NameInMap("ToolArguments")]
         [Validation(Required=false)]

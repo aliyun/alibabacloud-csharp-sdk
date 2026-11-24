@@ -10725,7 +10725,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical conversations of a user.</para>
+        /// <para>Queries the conversation history of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10742,6 +10742,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
+            {
+                query["FlowId"] = request.FlowId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastId))
             {
                 query["LastId"] = request.LastId;
@@ -10783,7 +10787,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical conversations of a user.</para>
+        /// <para>Queries the conversation history of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10800,6 +10804,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
+            {
+                query["FlowId"] = request.FlowId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastId))
             {
                 query["LastId"] = request.LastId;
@@ -10841,7 +10849,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical conversations of a user.</para>
+        /// <para>Queries the conversation history of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10859,7 +10867,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical conversations of a user.</para>
+        /// <para>Queries the conversation history of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11133,7 +11141,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of specific conversation messages.</para>
+        /// <para>Retrieves the details of a specific conversation message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11161,6 +11169,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstId))
             {
                 query["FirstId"] = request.FirstId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
+            {
+                query["FlowId"] = request.FlowId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -11191,7 +11203,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of specific conversation messages.</para>
+        /// <para>Retrieves the details of a specific conversation message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11219,6 +11231,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstId))
             {
                 query["FirstId"] = request.FirstId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
+            {
+                query["FlowId"] = request.FlowId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
@@ -11249,7 +11265,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of specific conversation messages.</para>
+        /// <para>Retrieves the details of a specific conversation message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11267,7 +11283,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of specific conversation messages.</para>
+        /// <para>Retrieves the details of a specific conversation message.</para>
         /// </summary>
         /// 
         /// <param name="request">
