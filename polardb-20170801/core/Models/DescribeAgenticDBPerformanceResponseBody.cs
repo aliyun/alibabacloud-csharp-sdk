@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string BranchId { get; set; }
 
+                [NameInMap("EndpointId")]
+                [Validation(Required=false)]
+                public string EndpointId { get; set; }
+
                 [NameInMap("Measurement")]
                 [Validation(Required=false)]
                 public string Measurement { get; set; }
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-09-23T01:00Z</para>

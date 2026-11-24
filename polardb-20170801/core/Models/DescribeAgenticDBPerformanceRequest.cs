@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAgenticDBPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The statistical method for alerts. Valid values for different monitoring items:</para>
+        /// <para>The alert aggregation method. Valid values vary by metric:</para>
         /// <list type="bullet">
         /// <item><description>Value: The value of the HTTP status code.</description></item>
         /// <item><description>Average: The average HTTP wait time.</description></item>
-        /// <item><description>Value: The value of the TELNET status code.</description></item>
-        /// <item><description>TelnetLatency: The average TELNET wait time.</description></item>
-        /// <item><description>Average: The average PING packet loss rate.</description></item>
+        /// <item><description>Value: The value of the Telnet status code.</description></item>
+        /// <item><description>TelnetLatency: The average Telnet wait time.</description></item>
+        /// <item><description>Average: The average ping packet loss rate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Aggregate { get; set; }
 
         /// <summary>
-        /// <para>The anchor branch ID. If this parameter is not specified, the main branch of the project is used by default.</para>
+        /// <para>The anchor branch ID. If you do not specify this parameter, the main branch of the project is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-7g8h9i0j1k2l</para>
@@ -59,7 +59,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The data granularity of performance data. Valid values:</para>
+        /// <para>The endpoint ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ep-3m4n5o6p7q8r</para>
+        /// </summary>
+        [NameInMap("EndpointId")]
+        [Validation(Required=false)]
+        public string EndpointId { get; set; }
+
+        /// <summary>
+        /// <para>The granularity of performance data. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>5</description></item>
         /// <item><description>30</description></item>

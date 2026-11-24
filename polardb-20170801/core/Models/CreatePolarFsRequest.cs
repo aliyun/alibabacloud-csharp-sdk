@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarFsRequest : TeaModel {
         /// <summary>
-        /// <para>The acceleration space size. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the basic edition.</para>
+        /// <para>The acceleration space size. Unit: GB. The value must be no less than 5000 and must be a multiple of 1000. This parameter is required when acceleration is enabled for the Basic Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccelerateType { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized accounts for the cold storage edition instance. Separate multiple accounts with commas (<c>,</c>).</para>
+        /// <para>The list of authorized accounts for the Cold Storage Edition instance. Separate multiple accounts with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>128***********，198***********</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
+        /// <para>This parameter takes effect only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the basic edition, you must specify the AccelerateSwitch and AccelerateStorageSize parameters. For the high_performance edition, you must specify the StorageType parameter (essdpl0 or essdpl1). For the cold edition, the StorageType parameter (local_redundancy or city_redundancy) is optional.</para>
+        /// <para>The edition. Valid values: basic (Basic Edition, default), high_performance (High-performance Edition), and cold (Cold Storage Edition). For the Basic Edition, you must specify AccelerateSwitch and AccelerateStorageSize. For the High-performance Edition, you must specify StorageType (essdpl0 or essdpl1). For the Cold Storage Edition, StorageType (local_redundancy or city_redundancy) is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>basic</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The bucket and corresponding path information.</para>
         /// <remarks>
-        /// <para>This parameter is required for transparent acceleration scenarios.</para>
+        /// <para>This parameter is required for transparent acceleration.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CustomBucketPathList")]
@@ -212,10 +212,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>If the billing method is <b>Prepaid</b>, this is a required pass parameter. Specifies whether the subscription cluster is billed by year or by month. </para>
+        /// <para>The subscription period. This parameter is required when PayType is set to <b>Prepaid</b>. Specifies whether the subscription cluster is billed on a yearly or monthly basis. </para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: year. If you select subscription, the unit is year.</description></item>
-        /// <item><description><b>Month</b>: month. If you select subscription, the unit is month.</description></item>
+        /// <item><description><b>Year</b>: yearly.</description></item>
+        /// <item><description><b>Month</b>: monthly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>The storage type. For the high_performance edition, use lowercase essdpl0 or essdpl1. For the cold edition, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</para>
+        /// <para>The storage type. For high_performance, use lowercase essdpl0 or essdpl1. For cold, use local_redundancy or city_redundancy. Select the value based on the edition. The value is case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>local_redundancy</para>
@@ -280,10 +280,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required when the <b>PayType</b> parameter is set to <b>Prepaid</b>.</para>
+        /// <para>The subscription duration. This parameter is required when PayType is set to <b>Prepaid</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the value of <b>UsedTime</b> must be an integer in the range of <c>[1-9]</c>.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the value of <b>UsedTime</b> must be an integer in the range of <c>[1-3]</c>.</description></item>
+        /// <item><description>When <b>Period</b> is set to <b>Month</b>, <b>UsedTime</b> must be an integer in the range of <c>[1-9]</c>.</description></item>
+        /// <item><description>When <b>Period</b> is set to <b>Year</b>, <b>UsedTime</b> must be an integer in the range of <c>[1-3]</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

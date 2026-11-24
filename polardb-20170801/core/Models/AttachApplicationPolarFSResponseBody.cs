@@ -20,7 +20,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The Polarlakebase instance ID.</para>
+        /// <para>The actual container path to which the file system is mounted. If ContainerMountPath is not specified, the effective default value /mnt/<PolarFSInstanceId> is returned. If the file system is repeatedly mounted without changing the path, the original mount point of the instance is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/mnt/datasets</para>
+        /// </summary>
+        [NameInMap("ContainerMountPath")]
+        [Validation(Required=false)]
+        public string ContainerMountPath { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the PolarLakebase instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcs-**************</para>

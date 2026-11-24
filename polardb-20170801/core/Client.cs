@@ -2128,13 +2128,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts a specified Polarlakebase instance to a PolarDB application.</para>
+        /// <para>Mounts a specified PolarLakebase instance to a PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Before you begin</h2>
-        /// <para>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
+        /// <para>The Before you begin section specifies the following: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2154,6 +2154,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerMountPath))
+            {
+                query["ContainerMountPath"] = request.ContainerMountPath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFSAccessKeyId))
             {
@@ -2188,13 +2192,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts a specified Polarlakebase instance to a PolarDB application.</para>
+        /// <para>Mounts a specified PolarLakebase instance to a PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Before you begin</h2>
-        /// <para>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
+        /// <para>The Before you begin section specifies the following: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2214,6 +2218,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContainerMountPath))
+            {
+                query["ContainerMountPath"] = request.ContainerMountPath;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFSAccessKeyId))
             {
@@ -2248,13 +2256,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts a specified Polarlakebase instance to a PolarDB application.</para>
+        /// <para>Mounts a specified PolarLakebase instance to a PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Before you begin</h2>
-        /// <para>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
+        /// <para>The Before you begin section specifies the following: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2272,13 +2280,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts a specified Polarlakebase instance to a PolarDB application.</para>
+        /// <para>Mounts a specified PolarLakebase instance to a PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Before you begin</h2>
-        /// <para>This section describes the prerequisites: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
+        /// <para>The Before you begin section specifies the following: (1) The application must be of the supabase type (ApplicationType=polardb_supabase). (2) PolarFS must be created by calling CreatePolarFs with CreationCategory set to cold. (3) PolarFS and the application must be in the same VPC, vSwitch, and zone. You can query this information by calling DescribeApplicationAttribute. A dependency chain example is provided: CreateApplication → DescribeApplicationAttribute → CreatePolarFs → AttachApplicationPolarFS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33452,6 +33460,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointId))
+            {
+                query["EndpointId"] = request.EndpointId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["Interval"] = request.Interval;
@@ -33524,6 +33536,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointId))
+            {
+                query["EndpointId"] = request.EndpointId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
@@ -34400,12 +34416,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API operation queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34447,12 +34463,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API operation queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34494,12 +34510,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API operation queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34517,12 +34533,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the specified PolarDB instance application.</para>
+        /// <para>Queries the details of a specified PolarDB application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API queries all relevant information about a specific PolarDB application, including but not limited to component details and connection endpoints.</para>
+        /// <para>This API operation queries all relevant information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -88089,6 +88105,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ApplicationId"] = request.ApplicationId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentTypes))
+            {
+                query["ComponentTypes"] = request.ComponentTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupNames))
+            {
+                query["GroupNames"] = request.GroupNames;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
             {
                 query["Operation"] = request.Operation;
@@ -88134,6 +88158,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
             {
                 query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentTypes))
+            {
+                query["ComponentTypes"] = request.ComponentTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupNames))
+            {
+                query["GroupNames"] = request.GroupNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
             {
