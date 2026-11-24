@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <list type="bullet">
         /// <item><description><para><b>share</b>: CNAME access. This is the default value.</para>
         /// </description></item>
-        /// <item><description><para><b>hybrid_cloud_cname</b>: hybrid cloud CNAME access.</para>
+        /// <item><description><para><b>hybrid_cloud_cname</b>: Hybrid Cloud CNAME access.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The domain name to manage.</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The listener settings.</para>
+        /// <para>The listener configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ListenShrink { get; set; }
 
         /// <summary>
-        /// <para>The forwarding settings.</para>
+        /// <para>The forwarding configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Redirect")]

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the value is <b>share</b>, or the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is enabled, you must invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to authenticate the domain name ownership first. If the website config is added to a region in the Chinese mainland, it must also have an ICP filing.</para>
+        /// <para>If the value is <b>share</b>, or the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is enabled, you must first invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to authenticate the domain name ownership. If the website config is added to a region in the Chinese mainland, it must also have an ICP filing.</para>
         /// <para>If the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is disabled, you do not need to authenticate the domain name ownership and can directly invoke this operation.</para>
         /// </remarks>
         /// 
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The domain name to query.</para>
+        /// <para>The name of the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public CreateDomainRequestListen Listen { get; set; }
         public class CreateDomainRequestListen : TeaModel {
             /// <summary>
-            /// <para>The ID of the certificate to add. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses HTTPS.</para>
+            /// <para>The ID of the certificate to be added. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses the HTTPS protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CertId { get; set; }
 
             /// <summary>
-            /// <para>The type of cipher suite to add. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses HTTPS. Valid values:</para>
+            /// <para>The type of cipher suite to be added. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>1</b>: adds all cipher suites.</para>
             /// </description></item>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? CipherSuite { get; set; }
 
             /// <summary>
-            /// <para>The custom cipher suites to add.</para>
+            /// <para>The custom cipher suites to be added.</para>
             /// </summary>
             [NameInMap("CustomCiphers")]
             [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses HTTPS. When TLSVersion is set to tlsv1.3, this parameter must be set to true.</para>
+            /// <para>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be set to true.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -139,11 +139,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? ExclusiveIp { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable force redirect to HTTPS. This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses HTTPS, and HttpPorts is empty, which indicates that the domain name does not use HTTP. Valid values:</para>
+            /// <para>Specifies whether to enable forced HTTPS redirection. This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol, and HttpPorts is empty, which indicates that the domain name does not use the HTTP protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: enables force redirect to HTTPS.</para>
+            /// <item><description><para><b>true</b>: enables forced HTTPS redirection.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: disables force redirect to HTTPS.</para>
+            /// <item><description><para><b>false</b>: disables forced HTTPS redirection.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -157,9 +157,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>Specifies whether HTTP Strict Transport Security (HSTS) includes subdomains. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: enabled.</para>
+            /// <item><description><para><b>true</b>: includes subdomains.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: disabled.</para>
+            /// <item><description><para><b>false</b>: does not include subdomains.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -181,10 +181,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? HstsMaxAge { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable HSTS preload. Default value: disabled. Valid values:</para>
+            /// <para>Specifies whether to enable HSTS preload. Default value: false. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled.</description></item>
-            /// <item><description>false: disabled.</description></item>
+            /// <item><description>true: enables HSTS preload.</description></item>
+            /// <item><description>false: disables HSTS preload.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? HstsPreload { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable HTTP/2. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses HTTPS. Valid values:</para>
+            /// <para>Specifies whether to enable HTTP/2. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: enables HTTP/2.</para>
             /// </description></item>
@@ -211,14 +211,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? Http2Enabled { get; set; }
 
             /// <summary>
-            /// <para>The listening ports for HTTP.</para>
+            /// <para>The listening ports for the HTTP protocol.</para>
             /// </summary>
             [NameInMap("HttpPorts")]
             [Validation(Required=false)]
             public List<int?> HttpPorts { get; set; }
 
             /// <summary>
-            /// <para>The listening ports for HTTPS.</para>
+            /// <para>The listening ports for the HTTPS protocol.</para>
             /// </summary>
             [NameInMap("HttpsPorts")]
             [Validation(Required=false)]
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? IPv6Enabled { get; set; }
 
             /// <summary>
-            /// <para>The type of protection resource to use. Valid values:</para>
+            /// <para>The type of protection resource to be used. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>share</b> (default): uses a shared cluster.</para>
             /// </description></item>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? SM2AccessOnly { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SM2 certificate to add. This parameter is used only when SM2Enabled is set to true.</para>
+            /// <para>The ID of the SM2 certificate to be added. This parameter is used only when SM2Enabled is set to true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123-cn-hangzhou</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? SM2Enabled { get; set; }
 
             /// <summary>
-            /// <para>The TLS version to add. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses HTTPS. Valid values:</para>
+            /// <para>The TLS version to be added. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>tlsv1</b>: supports TLS 1.0 and later versions. This value provides the highest compatibility but lower security.</description></item>
             /// <item><description><b>tlsv1.1</b>: supports TLS 1.1 and later versions. This value provides good compatibility and security.</description></item>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TLSVersion { get; set; }
 
             /// <summary>
-            /// <para>The method for WAF to obtain the actual IP address of the client. Valid values:</para>
+            /// <para>The method used by WAF to obtain the actual IP address of the client. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>0</b> (default): The client access traffic is not forwarded by other Layer 7 proxies before it reaches WAF.</para>
             /// </description></item>
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// </description></item>
             /// <item><description><para><b>2</b>: WAF reads the value of a custom field that you specified in the request header as the client IP address.</para>
             /// </description></item>
-            /// <item><description><para><b>3</b>: WAF reads the Client IP field in the Proxy Protocol header as the client IP address.</para>
+            /// <item><description><para><b>3</b>: WAF reads the Client IP address in the Proxy Protocol header as the client IP address.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -354,6 +354,35 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public CreateDomainRequestRedirect Redirect { get; set; }
         public class CreateDomainRequestRedirect : TeaModel {
+            /// <summary>
+            /// <para>The custom back-to-origin configuration.</para>
+            /// </summary>
+            [NameInMap("BackendConfig")]
+            [Validation(Required=false)]
+            public List<CreateDomainRequestRedirectBackendConfig> BackendConfig { get; set; }
+            public class CreateDomainRequestRedirectBackendConfig : TeaModel {
+                /// <summary>
+                /// <para>The origin server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.1.XX.XX</para>
+                /// </summary>
+                [NameInMap("Backend")]
+                [Validation(Required=false)]
+                public string Backend { get; set; }
+
+                /// <summary>
+                /// <para>The weight.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Weight")]
+                [Validation(Required=false)]
+                public int? Weight { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The custom port configuration.</para>
             /// </summary>
@@ -384,9 +413,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 /// <summary>
                 /// <para>The protocol of the listening port. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>http</b>: The protocol of the listening port is HTTP.</para>
+                /// <item><description><para><b>http</b>: the HTTP protocol.</para>
                 /// </description></item>
-                /// <item><description><para><b>https</b>: The protocol of the listening port is HTTPS.</para>
+                /// <item><description><para><b>https</b>: the HTTPS protocol.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -442,11 +471,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ConnectTimeout { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable force back-to-origin over HTTP. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses HTTPS. Valid values:</para>
+            /// <para>Specifies whether to enable forced HTTP back-to-origin. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: enables force back-to-origin over HTTP.</para>
+            /// <item><description><para><b>true</b>: enables forced HTTP back-to-origin.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: disables force back-to-origin over HTTP.</para>
+            /// <item><description><para><b>false</b>: disables forced HTTP back-to-origin.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -502,7 +531,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The number of requests that reuse a persistent connection. Valid values: 60 to 1000. Default value: 1000.</para>
             /// <remarks>
-            /// <para>The maximum number of requests that can be served over a single persistent connection after persistent connections are enabled.</para>
+            /// <para>The number of requests that can reuse a persistent connection after persistent connections are enabled.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -545,7 +574,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Loadbalance { get; set; }
 
             /// <summary>
-            /// <para>The maximum size of the request body. Valid values: 2 to 10. Default value: 2. Unit: GB.</para>
+            /// <para>The maximum request body size. Valid values: 2 to 10. Default value: 2. Unit: GB.</para>
             /// <remarks>
             /// <para>This parameter is supported only by the Ultimate Edition.</para>
             /// </remarks>
@@ -558,10 +587,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? MaxBodySize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the feature to preserve the client source IP address is enabled. Valid values:</para>
+            /// <para>Specifies whether to enable the feature of preserving the client source IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The feature is enabled. After this feature is enabled, backend services can view the original IP address of the client.</description></item>
-            /// <item><description><b>false</b>: The feature is disabled.</description></item>
+            /// <item><description><b>true</b>: enables the feature. After this feature is enabled, backend services can view the original IP address of the client.</description></item>
+            /// <item><description><b>false</b>: disables the feature.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -592,7 +621,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<CreateDomainRequestRedirectRequestHeaders> RequestHeaders { get; set; }
             public class CreateDomainRequestRedirectRequestHeaders : TeaModel {
                 /// <summary>
-                /// <para>The specified custom request header field.</para>
+                /// <para>The custom request header field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aaa</para>
@@ -663,7 +692,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RoutingRules { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable back-to-origin Server Name Indication (SNI). This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses HTTPS. Valid values:</para>
+            /// <para>Specifies whether to enable back-to-origin Server Name Indication (SNI). This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses the HTTPS protocol. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: enables back-to-origin SNI.</para>
             /// </description></item>
@@ -680,7 +709,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The value of the custom SNI extension field. If you do not specify this parameter, the value of the <b>Host</b> field in the request header is used as the value of the SNI extension field by default.
-            /// In most cases, you do not need to customize the SNI unless your business has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests.</para>
+            /// In most cases, you do not need to customize SNI unless your service has special configuration requirements and you want WAF to use an SNI that is different from the actual request Host in back-to-origin requests.</para>
             /// <remarks>
             /// <para>This parameter is required only when <b>SniEnabled</b> is set to <b>true</b>, which indicates that back-to-origin SNI is enabled.</para>
             /// </remarks>
@@ -693,11 +722,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SniHost { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow WAF to overwrite the WL-Proxy-Client-IP header. Valid values:</para>
+            /// <para>Specifies whether to allow WAF to overwrite WL-Proxy-Client-IP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b> (default): allows WAF to overwrite the header.</para>
+            /// <item><description><para><b>true</b> (default): allows WAF to overwrite WL-Proxy-Client-IP.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: does not allow WAF to overwrite the header.</para>
+            /// <item><description><para><b>false</b>: does not allow WAF to overwrite WL-Proxy-Client-IP.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -709,11 +738,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? WLProxyClientIp { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow WAF to overwrite the Web-Server-Type header. Valid values:</para>
+            /// <para>Specifies whether to allow WAF to overwrite Web-Server-Type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b> (default): allows WAF to overwrite the header.</para>
+            /// <item><description><para><b>true</b> (default): allows WAF to overwrite Web-Server-Type.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: does not allow WAF to overwrite the header.</para>
+            /// <item><description><para><b>false</b>: does not allow WAF to overwrite Web-Server-Type.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -737,11 +766,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? WriteTimeout { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow WAF to overwrite the X-Client-IP header. Valid values:</para>
+            /// <para>Specifies whether to allow WAF to overwrite X-Client-IP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b> (default): allows WAF to overwrite the header.</para>
+            /// <item><description><para><b>true</b> (default): allows WAF to overwrite X-Client-IP.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: does not allow WAF to overwrite the header.</para>
+            /// <item><description><para><b>false</b>: does not allow WAF to overwrite X-Client-IP.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -753,11 +782,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? XClientIp { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow WAF to overwrite the X-True-IP header. Valid values:</para>
+            /// <para>Specifies whether to allow WAF to overwrite X-True-IP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b> (default): allows WAF to overwrite the header.</para>
+            /// <item><description><para><b>true</b> (default): allows WAF to overwrite X-True-IP.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: does not allow WAF to overwrite the header.</para>
+            /// <item><description><para><b>false</b>: does not allow WAF to overwrite X-True-IP.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -769,7 +798,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public bool? XTrueIp { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to pass the WAF protocol in the X-Forwarded-Proto header. Valid values:</para>
+            /// <para>Specifies whether to pass the WAF protocol by using X-Forwarded-Proto. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b> (default): passes the WAF protocol.</para>
             /// </description></item>
@@ -814,7 +843,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags, which can contain up to 20 items.</para>
+        /// <para>The list of tags. A maximum of 20 tags are supported.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
