@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "AlikafkaStreaming";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("alikafkastreaming", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,19 +42,19 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查sql语法</para>
+        /// <para>Validates whether a specified Flink SQL statement complies with the specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 GET 或 POST 方法调用。</description></item>
-        /// <item><description>必须提供 <c>InstanceId</c>、<c>JobName</c> 和 <c>SqlContent</c> 参数，其中 <c>SqlContent</c> 是待校验的 Flink SQL 语句。</description></item>
-        /// <item><description>返回结果中，<c>Data.Valid</c> 字段指示 SQL 是否通过校验；若未通过，则错误详情位于 <c>Data.ErrorList</c> 中。</description></item>
-        /// <item><description>当前版本要求同时传入实例 ID (<c>InstanceId</c>) 和作业名称 (<c>JobName</c>) 以构建作业上下文。</description></item>
-        /// <item><description>接口返回成功仅表示校验流程执行完成，并不直接反映 SQL 的有效性，请检查 <c>Data.Valid</c> 字段来确定 SQL 是否有效。</description></item>
-        /// <item><description>错误码和异常处理请参考文档中的“错误码”部分。</description></item>
+        /// <item><description>You can invoke this operation by using the GET or POST method.</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>JobName</c>, and <c>SqlContent</c> parameters. The <c>SqlContent</c> parameter specifies the Flink SQL statement to be validated.</description></item>
+        /// <item><description>In the response, the <c>Data.Valid</c> field indicates whether the SQL statement passed the validation. If the validation fails, the fault details are returned in the <c>Data.ErrorList</c> field.</description></item>
+        /// <item><description>The current version requires both the instance ID (<c>InstanceId</c>) and the job name (<c>JobName</c>) to build the job context.</description></item>
+        /// <item><description>A successful response only indicates that the system starts to execute the validation flow. It does not directly indicate whether the SQL statement is valid. Check the <c>Data.Valid</c> field to determine whether the SQL statement is valid.</description></item>
+        /// <item><description>For error codes and exception handling, refer to the Error codes section in the References.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -106,19 +109,19 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查sql语法</para>
+        /// <para>Validates whether a specified Flink SQL statement complies with the specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 GET 或 POST 方法调用。</description></item>
-        /// <item><description>必须提供 <c>InstanceId</c>、<c>JobName</c> 和 <c>SqlContent</c> 参数，其中 <c>SqlContent</c> 是待校验的 Flink SQL 语句。</description></item>
-        /// <item><description>返回结果中，<c>Data.Valid</c> 字段指示 SQL 是否通过校验；若未通过，则错误详情位于 <c>Data.ErrorList</c> 中。</description></item>
-        /// <item><description>当前版本要求同时传入实例 ID (<c>InstanceId</c>) 和作业名称 (<c>JobName</c>) 以构建作业上下文。</description></item>
-        /// <item><description>接口返回成功仅表示校验流程执行完成，并不直接反映 SQL 的有效性，请检查 <c>Data.Valid</c> 字段来确定 SQL 是否有效。</description></item>
-        /// <item><description>错误码和异常处理请参考文档中的“错误码”部分。</description></item>
+        /// <item><description>You can invoke this operation by using the GET or POST method.</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>JobName</c>, and <c>SqlContent</c> parameters. The <c>SqlContent</c> parameter specifies the Flink SQL statement to be validated.</description></item>
+        /// <item><description>In the response, the <c>Data.Valid</c> field indicates whether the SQL statement passed the validation. If the validation fails, the fault details are returned in the <c>Data.ErrorList</c> field.</description></item>
+        /// <item><description>The current version requires both the instance ID (<c>InstanceId</c>) and the job name (<c>JobName</c>) to build the job context.</description></item>
+        /// <item><description>A successful response only indicates that the system starts to execute the validation flow. It does not directly indicate whether the SQL statement is valid. Check the <c>Data.Valid</c> field to determine whether the SQL statement is valid.</description></item>
+        /// <item><description>For error codes and exception handling, refer to the Error codes section in the References.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -173,19 +176,19 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查sql语法</para>
+        /// <para>Validates whether a specified Flink SQL statement complies with the specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 GET 或 POST 方法调用。</description></item>
-        /// <item><description>必须提供 <c>InstanceId</c>、<c>JobName</c> 和 <c>SqlContent</c> 参数，其中 <c>SqlContent</c> 是待校验的 Flink SQL 语句。</description></item>
-        /// <item><description>返回结果中，<c>Data.Valid</c> 字段指示 SQL 是否通过校验；若未通过，则错误详情位于 <c>Data.ErrorList</c> 中。</description></item>
-        /// <item><description>当前版本要求同时传入实例 ID (<c>InstanceId</c>) 和作业名称 (<c>JobName</c>) 以构建作业上下文。</description></item>
-        /// <item><description>接口返回成功仅表示校验流程执行完成，并不直接反映 SQL 的有效性，请检查 <c>Data.Valid</c> 字段来确定 SQL 是否有效。</description></item>
-        /// <item><description>错误码和异常处理请参考文档中的“错误码”部分。</description></item>
+        /// <item><description>You can invoke this operation by using the GET or POST method.</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>JobName</c>, and <c>SqlContent</c> parameters. The <c>SqlContent</c> parameter specifies the Flink SQL statement to be validated.</description></item>
+        /// <item><description>In the response, the <c>Data.Valid</c> field indicates whether the SQL statement passed the validation. If the validation fails, the fault details are returned in the <c>Data.ErrorList</c> field.</description></item>
+        /// <item><description>The current version requires both the instance ID (<c>InstanceId</c>) and the job name (<c>JobName</c>) to build the job context.</description></item>
+        /// <item><description>A successful response only indicates that the system starts to execute the validation flow. It does not directly indicate whether the SQL statement is valid. Check the <c>Data.Valid</c> field to determine whether the SQL statement is valid.</description></item>
+        /// <item><description>For error codes and exception handling, refer to the Error codes section in the References.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -204,19 +207,19 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查sql语法</para>
+        /// <para>Validates whether a specified Flink SQL statement complies with the specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 GET 或 POST 方法调用。</description></item>
-        /// <item><description>必须提供 <c>InstanceId</c>、<c>JobName</c> 和 <c>SqlContent</c> 参数，其中 <c>SqlContent</c> 是待校验的 Flink SQL 语句。</description></item>
-        /// <item><description>返回结果中，<c>Data.Valid</c> 字段指示 SQL 是否通过校验；若未通过，则错误详情位于 <c>Data.ErrorList</c> 中。</description></item>
-        /// <item><description>当前版本要求同时传入实例 ID (<c>InstanceId</c>) 和作业名称 (<c>JobName</c>) 以构建作业上下文。</description></item>
-        /// <item><description>接口返回成功仅表示校验流程执行完成，并不直接反映 SQL 的有效性，请检查 <c>Data.Valid</c> 字段来确定 SQL 是否有效。</description></item>
-        /// <item><description>错误码和异常处理请参考文档中的“错误码”部分。</description></item>
+        /// <item><description>You can invoke this operation by using the GET or POST method.</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>JobName</c>, and <c>SqlContent</c> parameters. The <c>SqlContent</c> parameter specifies the Flink SQL statement to be validated.</description></item>
+        /// <item><description>In the response, the <c>Data.Valid</c> field indicates whether the SQL statement passed the validation. If the validation fails, the fault details are returned in the <c>Data.ErrorList</c> field.</description></item>
+        /// <item><description>The current version requires both the instance ID (<c>InstanceId</c>) and the job name (<c>JobName</c>) to build the job context.</description></item>
+        /// <item><description>A successful response only indicates that the system starts to execute the validation flow. It does not directly indicate whether the SQL statement is valid. Check the <c>Data.Valid</c> field to determine whether the SQL statement is valid.</description></item>
+        /// <item><description>For error codes and exception handling, refer to the Error codes section in the References.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -235,15 +238,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 流计算实例</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个计算实例。接口只完成购买阶段；创建成功后需调用 StartComputeInstance 完成网络配置和部署。</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：CreateComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: CreateComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -294,15 +297,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 流计算实例</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个计算实例。接口只完成购买阶段；创建成功后需调用 StartComputeInstance 完成网络配置和部署。</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：CreateComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: CreateComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -353,15 +356,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 流计算实例</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个计算实例。接口只完成购买阶段；创建成功后需调用 StartComputeInstance 完成网络配置和部署。</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：CreateComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: CreateComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -380,15 +383,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 流计算实例</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个计算实例。接口只完成购买阶段；创建成功后需调用 StartComputeInstance 完成网络配置和部署。</para>
+        /// <para>Creates a compute instance. This operation only completes the purchase phase. After the instance is created, call StartComputeInstance to complete network configuration and deployment.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：CreateComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: CreateComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -407,20 +410,20 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Creates a Flink SQL job on a running compute instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于在指定的运行中的计算实例上创建一个新的Flink SQL作业。</description></item>
-        /// <item><description>创建后的作业将处于<c>INIT</c>状态。</description></item>
-        /// <item><description>用户可以通过设置<c>CuLimit</c>和<c>CuReserved</c>来控制作业的资源使用情况。</description></item>
-        /// <item><description><c>Remark</c>字段允许用户为作业添加备注信息，便于管理和识别。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果尝试创建同名作业，则会返回错误提示。</description></item>
-        /// <item><description>计算实例必须处于运行状态才能成功创建作业。</description></item>
+        /// <item><description>This API creates a new Flink SQL job on a specified running compute instance.</description></item>
+        /// <item><description>The created job is in the <c>INIT</c> state.</description></item>
+        /// <item><description>You can control the resource usage of the job by setting <c>CuLimit</c> and <c>CuReserved</c>.</description></item>
+        /// <item><description>The <c>Remark</c> field allows you to add remarks to the job for easier management and identification.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If you attempt to create a job with a duplicate name, an error is returned.</description></item>
+        /// <item><description>The compute instance must be in the running state to successfully create a job.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -483,20 +486,20 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Creates a Flink SQL job on a running compute instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于在指定的运行中的计算实例上创建一个新的Flink SQL作业。</description></item>
-        /// <item><description>创建后的作业将处于<c>INIT</c>状态。</description></item>
-        /// <item><description>用户可以通过设置<c>CuLimit</c>和<c>CuReserved</c>来控制作业的资源使用情况。</description></item>
-        /// <item><description><c>Remark</c>字段允许用户为作业添加备注信息，便于管理和识别。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果尝试创建同名作业，则会返回错误提示。</description></item>
-        /// <item><description>计算实例必须处于运行状态才能成功创建作业。</description></item>
+        /// <item><description>This API creates a new Flink SQL job on a specified running compute instance.</description></item>
+        /// <item><description>The created job is in the <c>INIT</c> state.</description></item>
+        /// <item><description>You can control the resource usage of the job by setting <c>CuLimit</c> and <c>CuReserved</c>.</description></item>
+        /// <item><description>The <c>Remark</c> field allows you to add remarks to the job for easier management and identification.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If you attempt to create a job with a duplicate name, an error is returned.</description></item>
+        /// <item><description>The compute instance must be in the running state to successfully create a job.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -559,20 +562,20 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Creates a Flink SQL job on a running compute instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于在指定的运行中的计算实例上创建一个新的Flink SQL作业。</description></item>
-        /// <item><description>创建后的作业将处于<c>INIT</c>状态。</description></item>
-        /// <item><description>用户可以通过设置<c>CuLimit</c>和<c>CuReserved</c>来控制作业的资源使用情况。</description></item>
-        /// <item><description><c>Remark</c>字段允许用户为作业添加备注信息，便于管理和识别。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果尝试创建同名作业，则会返回错误提示。</description></item>
-        /// <item><description>计算实例必须处于运行状态才能成功创建作业。</description></item>
+        /// <item><description>This API creates a new Flink SQL job on a specified running compute instance.</description></item>
+        /// <item><description>The created job is in the <c>INIT</c> state.</description></item>
+        /// <item><description>You can control the resource usage of the job by setting <c>CuLimit</c> and <c>CuReserved</c>.</description></item>
+        /// <item><description>The <c>Remark</c> field allows you to add remarks to the job for easier management and identification.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If you attempt to create a job with a duplicate name, an error is returned.</description></item>
+        /// <item><description>The compute instance must be in the running state to successfully create a job.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -591,20 +594,20 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Creates a Flink SQL job on a running compute instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于在指定的运行中的计算实例上创建一个新的Flink SQL作业。</description></item>
-        /// <item><description>创建后的作业将处于<c>INIT</c>状态。</description></item>
-        /// <item><description>用户可以通过设置<c>CuLimit</c>和<c>CuReserved</c>来控制作业的资源使用情况。</description></item>
-        /// <item><description><c>Remark</c>字段允许用户为作业添加备注信息，便于管理和识别。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果尝试创建同名作业，则会返回错误提示。</description></item>
-        /// <item><description>计算实例必须处于运行状态才能成功创建作业。</description></item>
+        /// <item><description>This API creates a new Flink SQL job on a specified running compute instance.</description></item>
+        /// <item><description>The created job is in the <c>INIT</c> state.</description></item>
+        /// <item><description>You can control the resource usage of the job by setting <c>CuLimit</c> and <c>CuReserved</c>.</description></item>
+        /// <item><description>The <c>Remark</c> field allows you to add remarks to the job for easier management and identification.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If you attempt to create a job with a duplicate name, an error is returned.</description></item>
+        /// <item><description>The compute instance must be in the running state to successfully create a job.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -623,15 +626,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除处于待部署、已停止或已释放状态的计算实例。</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：DeleteComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: DeleteComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -678,15 +681,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除处于待部署、已停止或已释放状态的计算实例。</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：DeleteComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: DeleteComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -733,15 +736,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除处于待部署、已停止或已释放状态的计算实例。</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：DeleteComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: DeleteComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -760,15 +763,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除处于待部署、已停止或已释放状态的计算实例。</para>
+        /// <para>Deletes a compute instance that is in the pending deployment, stopped, or released state.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：DeleteComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: DeleteComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -787,18 +790,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 JOB</para>
+        /// <para>Deletes a specified compute job. A successful request indicates that the deletion request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于删除一个特定的计算作业。</description></item>
-        /// <item><description>成功调用此接口仅表示删除请求已被系统接受，并非立即完成删除操作。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果计算实例或作业处于不允许删除的状态（例如：非运行状态），则会返回相应的错误信息。</description></item>
-        /// <item><description>删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description>This operation deletes a specific compute job.</description></item>
+        /// <item><description>A successful call to this operation only indicates that the deletion request has been accepted by the system. The deletion is not completed immediately.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the compute instance or job is in a state that does not allow deletion, such as a non-running state, an error message is returned.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -849,18 +852,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 JOB</para>
+        /// <para>Deletes a specified compute job. A successful request indicates that the deletion request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于删除一个特定的计算作业。</description></item>
-        /// <item><description>成功调用此接口仅表示删除请求已被系统接受，并非立即完成删除操作。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果计算实例或作业处于不允许删除的状态（例如：非运行状态），则会返回相应的错误信息。</description></item>
-        /// <item><description>删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description>This operation deletes a specific compute job.</description></item>
+        /// <item><description>A successful call to this operation only indicates that the deletion request has been accepted by the system. The deletion is not completed immediately.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the compute instance or job is in a state that does not allow deletion, such as a non-running state, an error message is returned.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -911,18 +914,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 JOB</para>
+        /// <para>Deletes a specified compute job. A successful request indicates that the deletion request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于删除一个特定的计算作业。</description></item>
-        /// <item><description>成功调用此接口仅表示删除请求已被系统接受，并非立即完成删除操作。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果计算实例或作业处于不允许删除的状态（例如：非运行状态），则会返回相应的错误信息。</description></item>
-        /// <item><description>删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description>This operation deletes a specific compute job.</description></item>
+        /// <item><description>A successful call to this operation only indicates that the deletion request has been accepted by the system. The deletion is not completed immediately.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the compute instance or job is in a state that does not allow deletion, such as a non-running state, an error message is returned.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -941,18 +944,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 JOB</para>
+        /// <para>Deletes a specified compute job. A successful request indicates that the deletion request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于删除一个特定的计算作业。</description></item>
-        /// <item><description>成功调用此接口仅表示删除请求已被系统接受，并非立即完成删除操作。</description></item>
-        /// <item><description>确保提供的<c>RegionId</c>、<c>InstanceId</c>以及<c>JobName</c>参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果计算实例或作业处于不允许删除的状态（例如：非运行状态），则会返回相应的错误信息。</description></item>
-        /// <item><description>删除操作不可逆，请谨慎使用。</description></item>
+        /// <item><description>This operation deletes a specific compute job.</description></item>
+        /// <item><description>A successful call to this operation only indicates that the deletion request has been accepted by the system. The deletion is not completed immediately.</description></item>
+        /// <item><description>Make sure that the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the compute instance or job is in a state that does not allow deletion, such as a non-running state, an error message is returned.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -971,7 +974,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个实例</para>
+        /// <para>Queries the details of a specified compute instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1017,7 +1020,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个实例</para>
+        /// <para>Queries the details of a specified compute instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1063,7 +1066,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个实例</para>
+        /// <para>Queries the details of a specified compute instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1081,7 +1084,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个实例</para>
+        /// <para>Queries the details of a specified compute instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1099,18 +1102,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 JOB 详情</para>
+        /// <para>Queries the details of a compute job in Alikafka Streaming by using a parameter query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询指定计算作业的详情。</description></item>
-        /// <item><description>支持使用 GET 或 POST 方法进行请求。</description></item>
-        /// <item><description>所有时间字段以 Unix 时间戳形式返回，单位为毫秒。</description></item>
-        /// <item><description>必须提供 <c>RegionId</c>、<c>InstanceId</c> 和 <c>JobName</c> 参数。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:GetComputeJob</c>，访问级别为读取（Read）。</description></item>
+        /// <item><description>This operation queries the details of a specified compute job.</description></item>
+        /// <item><description>You can use the GET or POST method to send requests.</description></item>
+        /// <item><description>The <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are required.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:GetComputeJob</c>, and the access level is Read.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1161,18 +1163,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 JOB 详情</para>
+        /// <para>Queries the details of a compute job in Alikafka Streaming by using a parameter query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询指定计算作业的详情。</description></item>
-        /// <item><description>支持使用 GET 或 POST 方法进行请求。</description></item>
-        /// <item><description>所有时间字段以 Unix 时间戳形式返回，单位为毫秒。</description></item>
-        /// <item><description>必须提供 <c>RegionId</c>、<c>InstanceId</c> 和 <c>JobName</c> 参数。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:GetComputeJob</c>，访问级别为读取（Read）。</description></item>
+        /// <item><description>This operation queries the details of a specified compute job.</description></item>
+        /// <item><description>You can use the GET or POST method to send requests.</description></item>
+        /// <item><description>The <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are required.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:GetComputeJob</c>, and the access level is Read.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1223,18 +1224,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 JOB 详情</para>
+        /// <para>Queries the details of a compute job in Alikafka Streaming by using a parameter query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询指定计算作业的详情。</description></item>
-        /// <item><description>支持使用 GET 或 POST 方法进行请求。</description></item>
-        /// <item><description>所有时间字段以 Unix 时间戳形式返回，单位为毫秒。</description></item>
-        /// <item><description>必须提供 <c>RegionId</c>、<c>InstanceId</c> 和 <c>JobName</c> 参数。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:GetComputeJob</c>，访问级别为读取（Read）。</description></item>
+        /// <item><description>This operation queries the details of a specified compute job.</description></item>
+        /// <item><description>You can use the GET or POST method to send requests.</description></item>
+        /// <item><description>The <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are required.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:GetComputeJob</c>, and the access level is Read.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1253,18 +1253,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 JOB 详情</para>
+        /// <para>Queries the details of a compute job in Alikafka Streaming by using a parameter query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询指定计算作业的详情。</description></item>
-        /// <item><description>支持使用 GET 或 POST 方法进行请求。</description></item>
-        /// <item><description>所有时间字段以 Unix 时间戳形式返回，单位为毫秒。</description></item>
-        /// <item><description>必须提供 <c>RegionId</c>、<c>InstanceId</c> 和 <c>JobName</c> 参数。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:GetComputeJob</c>，访问级别为读取（Read）。</description></item>
+        /// <item><description>This operation queries the details of a specified compute job.</description></item>
+        /// <item><description>You can use the GET or POST method to send requests.</description></item>
+        /// <item><description>The <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are required.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:GetComputeJob</c>, and the access level is Read.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1623,7 +1622,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表（分页）</para>
+        /// <para>Queries compute instances under the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1687,7 +1686,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表（分页）</para>
+        /// <para>Queries compute instances under the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1751,7 +1750,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表（分页）</para>
+        /// <para>Queries compute instances under the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1769,7 +1768,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表（分页）</para>
+        /// <para>Queries compute instances under the current account by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1787,18 +1786,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 JOB 列表</para>
+        /// <para>Queries all job information under a specified compute instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 <c>MaxResults</c> 和 <c>NextToken</c> 参数进行游标分页查询。</description></item>
-        /// <item><description>首次请求时不需要传递 <c>NextToken</c>，后续请求需使用上一次响应中返回的 <c>NextToken</c> 值。</description></item>
-        /// <item><description>支持按作业名称或备注搜索，并可选择不同的排序字段和方向。</description></item>
-        /// <item><description>返回的时间字段均为 Unix 时间戳（单位：毫秒）。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:ListComputeJobs</c>，访问级别为列出（List），适用于全部资源。</description></item>
+        /// <item><description>This operation supports a cursor-based paged query by using the <c>MaxResults</c> and <c>NextToken</c> parameters.</description></item>
+        /// <item><description>You do not need to specify <c>NextToken</c> in the first request. For subsequent requests, use the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description>You can search by job name or remark, and specify different sorting fields and directions.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:ListComputeJobs</c>. The access level is List, which applies to all resources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1865,18 +1863,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 JOB 列表</para>
+        /// <para>Queries all job information under a specified compute instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 <c>MaxResults</c> 和 <c>NextToken</c> 参数进行游标分页查询。</description></item>
-        /// <item><description>首次请求时不需要传递 <c>NextToken</c>，后续请求需使用上一次响应中返回的 <c>NextToken</c> 值。</description></item>
-        /// <item><description>支持按作业名称或备注搜索，并可选择不同的排序字段和方向。</description></item>
-        /// <item><description>返回的时间字段均为 Unix 时间戳（单位：毫秒）。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:ListComputeJobs</c>，访问级别为列出（List），适用于全部资源。</description></item>
+        /// <item><description>This operation supports a cursor-based paged query by using the <c>MaxResults</c> and <c>NextToken</c> parameters.</description></item>
+        /// <item><description>You do not need to specify <c>NextToken</c> in the first request. For subsequent requests, use the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description>You can search by job name or remark, and specify different sorting fields and directions.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:ListComputeJobs</c>. The access level is List, which applies to all resources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1943,18 +1940,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 JOB 列表</para>
+        /// <para>Queries all job information under a specified compute instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 <c>MaxResults</c> 和 <c>NextToken</c> 参数进行游标分页查询。</description></item>
-        /// <item><description>首次请求时不需要传递 <c>NextToken</c>，后续请求需使用上一次响应中返回的 <c>NextToken</c> 值。</description></item>
-        /// <item><description>支持按作业名称或备注搜索，并可选择不同的排序字段和方向。</description></item>
-        /// <item><description>返回的时间字段均为 Unix 时间戳（单位：毫秒）。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:ListComputeJobs</c>，访问级别为列出（List），适用于全部资源。</description></item>
+        /// <item><description>This operation supports a cursor-based paged query by using the <c>MaxResults</c> and <c>NextToken</c> parameters.</description></item>
+        /// <item><description>You do not need to specify <c>NextToken</c> in the first request. For subsequent requests, use the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description>You can search by job name or remark, and specify different sorting fields and directions.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:ListComputeJobs</c>. The access level is List, which applies to all resources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1973,18 +1969,17 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询 JOB 列表</para>
+        /// <para>Queries all job information under a specified compute instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过 <c>MaxResults</c> 和 <c>NextToken</c> 参数进行游标分页查询。</description></item>
-        /// <item><description>首次请求时不需要传递 <c>NextToken</c>，后续请求需使用上一次响应中返回的 <c>NextToken</c> 值。</description></item>
-        /// <item><description>支持按作业名称或备注搜索，并可选择不同的排序字段和方向。</description></item>
-        /// <item><description>返回的时间字段均为 Unix 时间戳（单位：毫秒）。</description></item>
-        /// <item><description>授权操作为 <c>alikafkastreaming:ListComputeJobs</c>，访问级别为列出（List），适用于全部资源。</description></item>
+        /// <item><description>This operation supports a cursor-based paged query by using the <c>MaxResults</c> and <c>NextToken</c> parameters.</description></item>
+        /// <item><description>You do not need to specify <c>NextToken</c> in the first request. For subsequent requests, use the <c>NextToken</c> value returned in the previous response.</description></item>
+        /// <item><description>You can search by job name or remark, and specify different sorting fields and directions.</description></item>
+        /// <item><description>The authorization action is <c>alikafkastreaming:ListComputeJobs</c>. The access level is List, which applies to all resources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2131,15 +2126,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新启动后付费实例</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重新启用一个已停止的后付费计算实例。接口返回成功表示启用请求已受理。</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：ReopenComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: ReopenComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2186,15 +2181,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新启动后付费实例</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重新启用一个已停止的后付费计算实例。接口返回成功表示启用请求已受理。</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：ReopenComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: ReopenComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2241,15 +2236,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新启动后付费实例</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重新启用一个已停止的后付费计算实例。接口返回成功表示启用请求已受理。</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：ReopenComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: ReopenComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2268,15 +2263,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新启动后付费实例</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重新启用一个已停止的后付费计算实例。接口返回成功表示启用请求已受理。</para>
+        /// <para>Re-enables a stopped pay-as-you-go compute instance. A successful response indicates that the re-enablement request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API版本：2026-02-02</description></item>
-        /// <item><description>Action：ReopenComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: ReopenComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2443,15 +2438,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署实例</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为处于待部署状态的计算实例配置网络并发起部署。</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StartComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StartComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2516,15 +2511,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署实例</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为处于待部署状态的计算实例配置网络并发起部署。</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StartComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StartComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2589,15 +2584,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署实例</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为处于待部署状态的计算实例配置网络并发起部署。</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StartComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StartComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2616,15 +2611,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部署实例</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为处于待部署状态的计算实例配置网络并发起部署。</para>
+        /// <para>Configures the network and deploys a compute instance in the pending deployment state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StartComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StartComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2643,16 +2638,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Starts, resumes, or debugs a compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RecoveryMode</c> 支持两种模式：<c>savepoint</c> 和 <c>stateless</c>。如果选择 <c>savepoint</c> 模式但没有可用的 savepoint，则会返回错误。</description></item>
-        /// <item><description><c>CuLimit</c> 和 <c>CuReserved</c> 参数分别用来设定作业的 CU 上限和预留 CU 数量，支持整数或小数形式输入。</description></item>
-        /// <item><description>确保提供的 <c>RegionId</c>, <c>InstanceId</c>, 和 <c>JobName</c> 参数值正确且存在，否则将导致请求失败。</description></item>
+        /// <item><description><c>RecoveryMode</c> supports two modes: <c>savepoint</c> and <c>stateless</c>. If you select the <c>savepoint</c> mode but no savepoint is available, an error is returned.</description></item>
+        /// <item><description>The <c>CuLimit</c> and <c>CuReserved</c> parameters are used to set the CU limit and the number of reserved CUs for the job, respectively. Integers and decimals are supported.</description></item>
+        /// <item><description>Make sure that the values of the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are correct and exist. Otherwise, the request fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2719,16 +2714,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Starts, resumes, or debugs a compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RecoveryMode</c> 支持两种模式：<c>savepoint</c> 和 <c>stateless</c>。如果选择 <c>savepoint</c> 模式但没有可用的 savepoint，则会返回错误。</description></item>
-        /// <item><description><c>CuLimit</c> 和 <c>CuReserved</c> 参数分别用来设定作业的 CU 上限和预留 CU 数量，支持整数或小数形式输入。</description></item>
-        /// <item><description>确保提供的 <c>RegionId</c>, <c>InstanceId</c>, 和 <c>JobName</c> 参数值正确且存在，否则将导致请求失败。</description></item>
+        /// <item><description><c>RecoveryMode</c> supports two modes: <c>savepoint</c> and <c>stateless</c>. If you select the <c>savepoint</c> mode but no savepoint is available, an error is returned.</description></item>
+        /// <item><description>The <c>CuLimit</c> and <c>CuReserved</c> parameters are used to set the CU limit and the number of reserved CUs for the job, respectively. Integers and decimals are supported.</description></item>
+        /// <item><description>Make sure that the values of the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are correct and exist. Otherwise, the request fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2795,16 +2790,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Starts, resumes, or debugs a compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RecoveryMode</c> 支持两种模式：<c>savepoint</c> 和 <c>stateless</c>。如果选择 <c>savepoint</c> 模式但没有可用的 savepoint，则会返回错误。</description></item>
-        /// <item><description><c>CuLimit</c> 和 <c>CuReserved</c> 参数分别用来设定作业的 CU 上限和预留 CU 数量，支持整数或小数形式输入。</description></item>
-        /// <item><description>确保提供的 <c>RegionId</c>, <c>InstanceId</c>, 和 <c>JobName</c> 参数值正确且存在，否则将导致请求失败。</description></item>
+        /// <item><description><c>RecoveryMode</c> supports two modes: <c>savepoint</c> and <c>stateless</c>. If you select the <c>savepoint</c> mode but no savepoint is available, an error is returned.</description></item>
+        /// <item><description>The <c>CuLimit</c> and <c>CuReserved</c> parameters are used to set the CU limit and the number of reserved CUs for the job, respectively. Integers and decimals are supported.</description></item>
+        /// <item><description>Make sure that the values of the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are correct and exist. Otherwise, the request fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2823,16 +2818,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 JOB</para>
+        /// <para>Starts, resumes, or debugs a compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RecoveryMode</c> 支持两种模式：<c>savepoint</c> 和 <c>stateless</c>。如果选择 <c>savepoint</c> 模式但没有可用的 savepoint，则会返回错误。</description></item>
-        /// <item><description><c>CuLimit</c> 和 <c>CuReserved</c> 参数分别用来设定作业的 CU 上限和预留 CU 数量，支持整数或小数形式输入。</description></item>
-        /// <item><description>确保提供的 <c>RegionId</c>, <c>InstanceId</c>, 和 <c>JobName</c> 参数值正确且存在，否则将导致请求失败。</description></item>
+        /// <item><description><c>RecoveryMode</c> supports two modes: <c>savepoint</c> and <c>stateless</c>. If you select the <c>savepoint</c> mode but no savepoint is available, an error is returned.</description></item>
+        /// <item><description>The <c>CuLimit</c> and <c>CuReserved</c> parameters are used to set the CU limit and the number of reserved CUs for the job, respectively. Integers and decimals are supported.</description></item>
+        /// <item><description>Make sure that the values of the <c>RegionId</c>, <c>InstanceId</c>, and <c>JobName</c> parameters are correct and exist. Otherwise, the request fails.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2851,15 +2846,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用/释放后付费实例</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止一个正在运行的后付费计算实例。接口返回成功表示停止请求已受理。</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StopComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StopComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2906,15 +2901,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用/释放后付费实例</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止一个正在运行的后付费计算实例。接口返回成功表示停止请求已受理。</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StopComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StopComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2961,15 +2956,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用/释放后付费实例</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止一个正在运行的后付费计算实例。接口返回成功表示停止请求已受理。</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StopComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StopComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2988,15 +2983,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用/释放后付费实例</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止一个正在运行的后付费计算实例。接口返回成功表示停止请求已受理。</para>
+        /// <para>Stops a running pay-as-you-go compute instance. A successful response indicates that the stop request has been accepted.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：StopComputeInstance</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: StopComputeInstance</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3015,15 +3010,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 JOB</para>
+        /// <para>Stops a compute job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于停止指定的计算作业生产或 Debug 运行实例。</description></item>
-        /// <item><description>接口返回成功表示停止请求已被受理，但并不意味着作业立即停止。</description></item>
+        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3074,15 +3069,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 JOB</para>
+        /// <para>Stops a compute job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于停止指定的计算作业生产或 Debug 运行实例。</description></item>
-        /// <item><description>接口返回成功表示停止请求已被受理，但并不意味着作业立即停止。</description></item>
+        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3133,15 +3128,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 JOB</para>
+        /// <para>Stops a compute job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于停止指定的计算作业生产或 Debug 运行实例。</description></item>
-        /// <item><description>接口返回成功表示停止请求已被受理，但并不意味着作业立即停止。</description></item>
+        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3160,15 +3155,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 JOB</para>
+        /// <para>Stops a compute job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于停止指定的计算作业生产或 Debug 运行实例。</description></item>
-        /// <item><description>接口返回成功表示停止请求已被受理，但并不意味着作业立即停止。</description></item>
+        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3187,15 +3182,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改计算实例名称。实例需处于部署准备阶段或运行中状态。</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：UpdateComputeInstanceName</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: UpdateComputeInstanceName</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3246,15 +3241,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改计算实例名称。实例需处于部署准备阶段或运行中状态。</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：UpdateComputeInstanceName</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: UpdateComputeInstanceName</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3305,15 +3300,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改计算实例名称。实例需处于部署准备阶段或运行中状态。</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：UpdateComputeInstanceName</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: UpdateComputeInstanceName</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3332,15 +3327,15 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例名称</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改计算实例名称。实例需处于部署准备阶段或运行中状态。</para>
+        /// <para>Updates the name of a compute instance. The instance must be in the deployment preparation or running state.</para>
         /// <list type="bullet">
-        /// <item><description>API 版本：2026-02-02</description></item>
-        /// <item><description>Action：UpdateComputeInstanceName</description></item>
+        /// <item><description>API version: 2026-02-02</description></item>
+        /// <item><description>Action: UpdateComputeInstanceName</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3359,16 +3354,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB</para>
+        /// <para>Modifies the remarks of a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>确保提供的 <c>InstanceId</c> 和 <c>JobName</c> 是有效的，否则将返回错误。</description></item>
-        /// <item><description>如果实例状态不在运行中，则不允许执行此操作。</description></item>
-        /// <item><description>当前作业状态如果为调试任务正在运行或变更中，则不支持修改。</description></item>
+        /// <item><description>Ensure that the provided <c>InstanceId</c> and <c>JobName</c> are valid. Otherwise, an error is returned.</description></item>
+        /// <item><description>You cannot execute this operation if the instance is not in the running state.</description></item>
+        /// <item><description>Modifications are not supported if the current job is running as a debug node or undergoing changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3423,16 +3418,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB</para>
+        /// <para>Modifies the remarks of a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>确保提供的 <c>InstanceId</c> 和 <c>JobName</c> 是有效的，否则将返回错误。</description></item>
-        /// <item><description>如果实例状态不在运行中，则不允许执行此操作。</description></item>
-        /// <item><description>当前作业状态如果为调试任务正在运行或变更中，则不支持修改。</description></item>
+        /// <item><description>Ensure that the provided <c>InstanceId</c> and <c>JobName</c> are valid. Otherwise, an error is returned.</description></item>
+        /// <item><description>You cannot execute this operation if the instance is not in the running state.</description></item>
+        /// <item><description>Modifications are not supported if the current job is running as a debug node or undergoing changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3487,16 +3482,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB</para>
+        /// <para>Modifies the remarks of a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>确保提供的 <c>InstanceId</c> 和 <c>JobName</c> 是有效的，否则将返回错误。</description></item>
-        /// <item><description>如果实例状态不在运行中，则不允许执行此操作。</description></item>
-        /// <item><description>当前作业状态如果为调试任务正在运行或变更中，则不支持修改。</description></item>
+        /// <item><description>Ensure that the provided <c>InstanceId</c> and <c>JobName</c> are valid. Otherwise, an error is returned.</description></item>
+        /// <item><description>You cannot execute this operation if the instance is not in the running state.</description></item>
+        /// <item><description>Modifications are not supported if the current job is running as a debug node or undergoing changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3515,16 +3510,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB</para>
+        /// <para>Modifies the remarks of a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>确保提供的 <c>InstanceId</c> 和 <c>JobName</c> 是有效的，否则将返回错误。</description></item>
-        /// <item><description>如果实例状态不在运行中，则不允许执行此操作。</description></item>
-        /// <item><description>当前作业状态如果为调试任务正在运行或变更中，则不支持修改。</description></item>
+        /// <item><description>Ensure that the provided <c>InstanceId</c> and <c>JobName</c> are valid. Otherwise, an error is returned.</description></item>
+        /// <item><description>You cannot execute this operation if the instance is not in the running state.</description></item>
+        /// <item><description>Modifications are not supported if the current job is running as a debug node or undergoing changes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3543,13 +3538,13 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 CU 配额</para>
+        /// <para>Modifies the compute unit (CU) limit and the number of reserved CUs for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定计算作业的计算单元（CU）上限和预留CU数量。在调用此接口前，请确保提供的<c>InstanceId</c>和<c>JobName</c>正确无误，并且实例处于运行状态。此外，注意检查<c>CuLimit</c>与<c>CuReserved</c>参数的有效性和合理性，避免因超出限制或不符合业务逻辑导致请求失败。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to modify the compute unit (CU) limit and the number of reserved CUs for a specific compute job. Before calling this operation, ensure that the specified <c>InstanceId</c> and <c>JobName</c> are correct and that the instance is in the running state. Additionally, verify the validity and reasonableness of the <c>CuLimit</c> and <c>CuReserved</c> parameters to prevent request failures caused by exceeding limits or violating business logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3607,13 +3602,13 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 CU 配额</para>
+        /// <para>Modifies the compute unit (CU) limit and the number of reserved CUs for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定计算作业的计算单元（CU）上限和预留CU数量。在调用此接口前，请确保提供的<c>InstanceId</c>和<c>JobName</c>正确无误，并且实例处于运行状态。此外，注意检查<c>CuLimit</c>与<c>CuReserved</c>参数的有效性和合理性，避免因超出限制或不符合业务逻辑导致请求失败。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to modify the compute unit (CU) limit and the number of reserved CUs for a specific compute job. Before calling this operation, ensure that the specified <c>InstanceId</c> and <c>JobName</c> are correct and that the instance is in the running state. Additionally, verify the validity and reasonableness of the <c>CuLimit</c> and <c>CuReserved</c> parameters to prevent request failures caused by exceeding limits or violating business logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3671,13 +3666,13 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 CU 配额</para>
+        /// <para>Modifies the compute unit (CU) limit and the number of reserved CUs for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定计算作业的计算单元（CU）上限和预留CU数量。在调用此接口前，请确保提供的<c>InstanceId</c>和<c>JobName</c>正确无误，并且实例处于运行状态。此外，注意检查<c>CuLimit</c>与<c>CuReserved</c>参数的有效性和合理性，避免因超出限制或不符合业务逻辑导致请求失败。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to modify the compute unit (CU) limit and the number of reserved CUs for a specific compute job. Before calling this operation, ensure that the specified <c>InstanceId</c> and <c>JobName</c> are correct and that the instance is in the running state. Additionally, verify the validity and reasonableness of the <c>CuLimit</c> and <c>CuReserved</c> parameters to prevent request failures caused by exceeding limits or violating business logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3695,13 +3690,13 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 CU 配额</para>
+        /// <para>Modifies the compute unit (CU) limit and the number of reserved CUs for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本API允许用户修改特定计算作业的计算单元（CU）上限和预留CU数量。在调用此接口前，请确保提供的<c>InstanceId</c>和<c>JobName</c>正确无误，并且实例处于运行状态。此外，注意检查<c>CuLimit</c>与<c>CuReserved</c>参数的有效性和合理性，避免因超出限制或不符合业务逻辑导致请求失败。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to modify the compute unit (CU) limit and the number of reserved CUs for a specific compute job. Before calling this operation, ensure that the specified <c>InstanceId</c> and <c>JobName</c> are correct and that the instance is in the running state. Additionally, verify the validity and reasonableness of the <c>CuLimit</c> and <c>CuReserved</c> parameters to prevent request failures caused by exceeding limits or violating business logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3719,18 +3714,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 SQL</para>
+        /// <para>Updates the Flink SQL draft saved for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口用于更新特定计算实例下的某个计算作业所保存的Flink SQL草稿内容。请确保提供的<c>InstanceId</c>和<c>JobName</c>准确无误，并且该作业当前状态支持进行SQL修改操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation updates the Flink SQL draft saved for a specific compute job under a given compute instance. Make sure that the provided <c>InstanceId</c> and <c>JobName</c> are accurate, and the current status of the job supports SQL modification.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意事项</b>：<list type="bullet">
-        /// <item><description>确保目标实例处于运行状态。</description></item>
-        /// <item><description>当前作业状态需允许修改SQL，即作业不应处于调试或变更过程中。</description></item>
-        /// <item><description><c>DraftSql</c>参数应包含完整的、格式正确的Flink SQL语句。</description></item>
+        /// <item><description><b>Precautions</b>:<list type="bullet">
+        /// <item><description>Make sure that the target instance is in the running state.</description></item>
+        /// <item><description>The current job status must allow SQL modification. The job must not be undergoing debugging or modification.</description></item>
+        /// <item><description>The <c>DraftSql</c> parameter must contain a complete and correctly formatted Flink SQL statement.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -3787,18 +3782,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 SQL</para>
+        /// <para>Updates the Flink SQL draft saved for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口用于更新特定计算实例下的某个计算作业所保存的Flink SQL草稿内容。请确保提供的<c>InstanceId</c>和<c>JobName</c>准确无误，并且该作业当前状态支持进行SQL修改操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation updates the Flink SQL draft saved for a specific compute job under a given compute instance. Make sure that the provided <c>InstanceId</c> and <c>JobName</c> are accurate, and the current status of the job supports SQL modification.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意事项</b>：<list type="bullet">
-        /// <item><description>确保目标实例处于运行状态。</description></item>
-        /// <item><description>当前作业状态需允许修改SQL，即作业不应处于调试或变更过程中。</description></item>
-        /// <item><description><c>DraftSql</c>参数应包含完整的、格式正确的Flink SQL语句。</description></item>
+        /// <item><description><b>Precautions</b>:<list type="bullet">
+        /// <item><description>Make sure that the target instance is in the running state.</description></item>
+        /// <item><description>The current job status must allow SQL modification. The job must not be undergoing debugging or modification.</description></item>
+        /// <item><description>The <c>DraftSql</c> parameter must contain a complete and correctly formatted Flink SQL statement.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -3855,18 +3850,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 SQL</para>
+        /// <para>Updates the Flink SQL draft saved for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口用于更新特定计算实例下的某个计算作业所保存的Flink SQL草稿内容。请确保提供的<c>InstanceId</c>和<c>JobName</c>准确无误，并且该作业当前状态支持进行SQL修改操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation updates the Flink SQL draft saved for a specific compute job under a given compute instance. Make sure that the provided <c>InstanceId</c> and <c>JobName</c> are accurate, and the current status of the job supports SQL modification.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意事项</b>：<list type="bullet">
-        /// <item><description>确保目标实例处于运行状态。</description></item>
-        /// <item><description>当前作业状态需允许修改SQL，即作业不应处于调试或变更过程中。</description></item>
-        /// <item><description><c>DraftSql</c>参数应包含完整的、格式正确的Flink SQL语句。</description></item>
+        /// <item><description><b>Precautions</b>:<list type="bullet">
+        /// <item><description>Make sure that the target instance is in the running state.</description></item>
+        /// <item><description>The current job status must allow SQL modification. The job must not be undergoing debugging or modification.</description></item>
+        /// <item><description>The <c>DraftSql</c> parameter must contain a complete and correctly formatted Flink SQL statement.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -3887,18 +3882,18 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 JOB 的 SQL</para>
+        /// <para>Updates the Flink SQL draft saved for a specified compute job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口用于更新特定计算实例下的某个计算作业所保存的Flink SQL草稿内容。请确保提供的<c>InstanceId</c>和<c>JobName</c>准确无误，并且该作业当前状态支持进行SQL修改操作。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation updates the Flink SQL draft saved for a specific compute job under a given compute instance. Make sure that the provided <c>InstanceId</c> and <c>JobName</c> are accurate, and the current status of the job supports SQL modification.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意事项</b>：<list type="bullet">
-        /// <item><description>确保目标实例处于运行状态。</description></item>
-        /// <item><description>当前作业状态需允许修改SQL，即作业不应处于调试或变更过程中。</description></item>
-        /// <item><description><c>DraftSql</c>参数应包含完整的、格式正确的Flink SQL语句。</description></item>
+        /// <item><description><b>Precautions</b>:<list type="bullet">
+        /// <item><description>Make sure that the target instance is in the running state.</description></item>
+        /// <item><description>The current job status must allow SQL modification. The job must not be undergoing debugging or modification.</description></item>
+        /// <item><description>The <c>DraftSql</c> parameter must contain a complete and correctly formatted Flink SQL statement.</description></item>
         /// </list>
         /// </description></item>
         /// </list>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class CheckSqlContentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CheckSqlContentResponseBodyData Data { get; set; }
         public class CheckSqlContentResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of SQL validation errors.</para>
+            /// </summary>
             [NameInMap("ErrorList")]
             [Validation(Required=false)]
             public List<CheckSqlContentResponseBodyDataErrorList> ErrorList { get; set; }
             public class CheckSqlContentResponseBodyDataErrorList : TeaModel {
                 /// <summary>
+                /// <para>The SQL snippet where the error occurred.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SELECT FROM source_table</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
                 public string CodeSnippet { get; set; }
 
                 /// <summary>
+                /// <para>The starting column number of the error.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
                 public int? ColumnNumber { get; set; }
 
                 /// <summary>
+                /// <para>The ending column number of the error.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
                 public int? EndColumnNumber { get; set; }
 
                 /// <summary>
+                /// <para>The ending line number of the error.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
                 public int? EndLineNumber { get; set; }
 
                 /// <summary>
+                /// <para>The error type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SYNTAX_ERROR</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
                 public string ErrorType { get; set; }
 
                 /// <summary>
+                /// <para>The starting line number of the error.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
                 public int? LineNumber { get; set; }
 
                 /// <summary>
+                /// <para>The error message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SQL parse failed near FROM</para>
                 /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether the SQL statement passed the validation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</para>
         /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

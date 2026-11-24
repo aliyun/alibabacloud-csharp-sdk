@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class UpdateComputeJobDraftSqlRequest : TeaModel {
         /// <summary>
+        /// <para>The Flink SQL draft.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string DraftSql { get; set; }
 
         /// <summary>
+        /// <para>The compute instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the compute job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

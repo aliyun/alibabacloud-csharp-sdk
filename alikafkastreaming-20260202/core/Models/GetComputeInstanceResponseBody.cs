@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class GetComputeInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetComputeInstanceResponseBodyData Data { get; set; }
         public class GetComputeInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The billing method.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>POST_PAID</para>
             /// </summary>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The total CU limit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4.0</para>
             /// </summary>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public double? CuLimitSum { get; set; }
 
             /// <summary>
+            /// <para>The total number of reserved CUs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
             /// </summary>
@@ -56,6 +68,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public double? CuReservedSum { get; set; }
 
             /// <summary>
+            /// <para>The total number of used CUs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.5</para>
             /// </summary>
@@ -64,6 +78,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public double? CuUsedSum { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The compute instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alikafka_streaming-cn-pe333xxxxxx</para>
             /// </summary>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the compute instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>streaming-prod</para>
             /// </summary>
@@ -90,6 +109,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -98,6 +119,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-aek53bg4tl6fgma</para>
             /// </summary>
@@ -106,6 +129,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The service status of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -114,6 +139,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string ServiceStatus { get; set; }
 
             /// <summary>
+            /// <para>The total number of jobs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -122,6 +149,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public long? TotalJobs { get; set; }
 
             /// <summary>
+            /// <para>The number of running jobs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -129,11 +158,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             [Validation(Required=false)]
             public long? TotalRunningJobs { get; set; }
 
+            /// <summary>
+            /// <para>The list of vSwitch IDs.</para>
+            /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
+            /// <para>VPC ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1abcdefg</para>
             /// </summary>
@@ -144,6 +178,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>019F5939-507B-57C1-B82C-E55821456FA6</para>
         /// </summary>
@@ -152,6 +188,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

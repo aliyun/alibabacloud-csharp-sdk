@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class ReopenComputeInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the compute instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

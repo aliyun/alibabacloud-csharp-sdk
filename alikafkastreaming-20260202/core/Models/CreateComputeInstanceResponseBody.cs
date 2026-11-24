@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class CreateComputeInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateComputeInstanceResponseBodyData Data { get; set; }
         public class CreateComputeInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The compute instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alikafka_streaming-cn-pe333xxxxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>062D8E8B-8D47-5DCC-BB12-5A1D93C3A66B</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

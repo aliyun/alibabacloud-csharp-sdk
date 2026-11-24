@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class UpdateComputeJobCuRequest : TeaModel {
         /// <summary>
+        /// <para><b>The CU limit for the job.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +21,21 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public double? CuLimit { get; set; }
 
         /// <summary>
+        /// <para><b>The reserved CUs for the job.</b></para>
+        /// <remarks>
+        /// <para>The number of reserved CUs must not exceed the CU limit.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.0</para>
+        /// <para>2.0</para>
         /// </summary>
         [NameInMap("CuReserved")]
         [Validation(Required=false)]
         public double? CuReserved { get; set; }
 
         /// <summary>
+        /// <para><b>The compute instance ID.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para><b>The name of the compute job.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +57,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para><b>The region ID.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

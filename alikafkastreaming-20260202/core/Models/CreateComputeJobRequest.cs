@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class CreateComputeJobRequest : TeaModel {
         /// <summary>
+        /// <para>The compute unit (CU) limit for the job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +21,21 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public double? CuLimit { get; set; }
 
         /// <summary>
+        /// <para>The reserved compute units (CUs) for the job.</para>
+        /// <remarks>
+        /// <para>The reserved CUs must not exceed the CU limit.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.0</para>
+        /// <para>2.0</para>
         /// </summary>
         [NameInMap("CuReserved")]
         [Validation(Required=false)]
         public double? CuReserved { get; set; }
 
         /// <summary>
+        /// <para>The compute instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the compute job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +57,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,8 +68,10 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The remarks for the job.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>订单流实时清洗</para>
+        /// <para>Real-time order stream cleaning</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

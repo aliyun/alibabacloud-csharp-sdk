@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class StartComputeInstanceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the compute instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>streaming-prod</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The list of vSwitch IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string VSwitchIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC where the instance is deployed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

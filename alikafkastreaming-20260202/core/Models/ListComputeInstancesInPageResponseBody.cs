@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class ListComputeInstancesInPageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public long? Code { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListComputeInstancesInPageResponseBodyData> Data { get; set; }
         public class ListComputeInstancesInPageResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether auto-renewal is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public bool? AutoRenewFlag { get; set; }
 
             /// <summary>
+            /// <para>The billing method.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>POST_PAID</para>
             /// </summary>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -56,6 +68,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The total CU limit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4.0</para>
             /// </summary>
@@ -64,6 +78,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public double? CuLimitSum { get; set; }
 
             /// <summary>
+            /// <para>The total number of reserved CUs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
             /// </summary>
@@ -72,6 +88,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public double? CuReservedSum { get; set; }
 
             /// <summary>
+            /// <para>The total number of used CUs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.5</para>
             /// </summary>
@@ -80,6 +98,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public double? CuUsedSum { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -90,6 +109,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The compute instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alikafka_streaming-cn-xxxxxxx</para>
             /// </summary>
@@ -98,6 +119,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>streaming-prod</para>
             /// </summary>
@@ -106,6 +129,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The owner of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890123456</para>
             /// </summary>
@@ -114,6 +139,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -122,6 +149,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The service status of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -130,6 +159,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public string ServiceStatus { get; set; }
 
             /// <summary>
+            /// <para>The total number of jobs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -138,6 +169,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             public long? TotalJobs { get; set; }
 
             /// <summary>
+            /// <para>The number of running jobs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -145,11 +178,16 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             [Validation(Required=false)]
             public long? TotalRunningJobs { get; set; }
 
+            /// <summary>
+            /// <para>The list of vSwitch IDs.</para>
+            /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
+            /// <para>The VPC ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1abcdefg</para>
             /// </summary>
@@ -160,6 +198,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -168,6 +208,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9079DD86-09F1-5303-A64F-D9089F96BC16</para>
         /// </summary>
@@ -176,6 +218,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -184,6 +228,8 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries that meet the query conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

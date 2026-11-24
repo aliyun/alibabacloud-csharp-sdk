@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class UpdateComputeJobRequest : TeaModel {
         /// <summary>
+        /// <para><b>The compute instance ID.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para><b>The compute job name.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para><b>The region ID.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +43,10 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para><b>The job remarks.</b></para>
+        /// 
         /// <b>Example:</b>
-        /// <para>订单流实时清洗</para>
+        /// <para>Real-time order flow cleaning</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
