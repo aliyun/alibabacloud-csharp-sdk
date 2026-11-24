@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class CreateUploadMediaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unsigned OSS URL of the file. The format is <c>oss://bucket/objectKey</c>.</para>
+        /// <para>The unsigned OSS URL of the file in the <c>oss://bucket/objectKey</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://yike-shared-ap-southeast-1-1/yike-v1/gi3dkn-gi3dkn/2026-11-18/08/video/b7e94fc0e1bf71f1bfa2f6e7c5486601aB3xYz01.mp4</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The OSS object key. The format is <c>yike-v1/uid segment-ws segment/date/hour/type/mediaId+random string+source suffix.file name extension</c>.</para>
+        /// <para>The OSS object key in the <c>yike-v1/uid segment-ws segment/date/hour/type/mediaId+random string+source suffix.file name extension</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yike-v1/gi3dkn-gi3dkn/2026-11-18/08/video/b7e94fc0e1bf71f1bfa2f6e7c5486601aB3xYz01.mp4</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The storage location identifier. The format is <c>bucket.endpoint</c>.</para>
+        /// <para>The storage location identifier in the <c>bucket.endpoint</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string StorageLocation { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the ticket. The time is in UTC and follows the ISO 8601 standard. This field is returned when UPLOAD_TICKET is used.</para>
+        /// <para>The expiration time of the ticket in UTC and ISO 8601 format. This field is returned when <c>UPLOAD_TICKET</c> is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-11-18T12:00:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public CreateUploadMediaResponseBodyUploadCredentials UploadCredentials { get; set; }
         public class CreateUploadMediaResponseBodyUploadCredentials : TeaModel {
             /// <summary>
-            /// <para>The temporary STS <c>AccessKey ID</c>. This field is returned when <c>STS_TOKEN</c> is used.</para>
+            /// <para>The temporary STS AccessKey ID. This field is returned when <c>STS_TOKEN</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STS.NUgYrLnoC63mLqWeRtYuIoPaSdF</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The temporary STS AccessKey secret. This field is returned when STS_TOKEN is used.</para>
+            /// <para>The temporary STS AccessKey secret. This field is returned when <c>STS_TOKEN</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVwjCkNzTMupZ8nRtYeXwQaBcDfGhIjK</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string AccessKeySecret { get; set; }
 
             /// <summary>
-            /// <para>The OSS bucket. This field is returned when STS_TOKEN, POST_POLICY, or PRESIGNED_URL is used.</para>
+            /// <para>The OSS bucket. This field is returned when <c>STS_TOKEN</c>, <c>POST_POLICY</c>, or <c>PRESIGNED_URL</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yike-shared-ap-southeast-1-1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the credential. The time is in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The expiration time of the credential in UTC and ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-11-18T12:00:00Z</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Expiration { get; set; }
 
             /// <summary>
-            /// <para>The Base64-encoded PostObject policy. This field is returned when POST_POLICY is used.</para>
+            /// <para>The Base64-encoded PostObject policy. This field is returned when <c>POST_POLICY</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJleHBpcmF0aW9uIjoiMjAyNi0xMS0xOFQxMjowMDowMFoiLCJjb25kaXRpb25zIjpbXX0=</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey ID used for the signature. This field is returned when POST_POLICY is used.</para>
+            /// <para>The AccessKey ID used for the signature. This field is returned when <c>POST_POLICY</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LTAI5tG8XkQmP2vR9wYzAbCd</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string PostAccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The target endpoint for the POST request. This field is returned when POST_POLICY is used.</para>
+            /// <para>The destination endpoint for the POST request. This field is returned when <c>POST_POLICY</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com">https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com</a></para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The STS security token. This field is returned when STS_TOKEN is used.</para>
+            /// <para>The STS security token. This field is returned when <c>STS_TOKEN</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAISjgJ1q6Ft5B2yfSjIr5DDEOTM2pZ6g7oIExampleToken</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string SecurityToken { get; set; }
 
             /// <summary>
-            /// <para>The PostObject signature. This field is returned when POST_POLICY is used.</para>
+            /// <para>The PostObject signature. This field is returned when <c>POST_POLICY</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vXkQ9dRt2mLpN8sYwZaBcDfEgHj=</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Signature { get; set; }
 
             /// <summary>
-            /// <para>The pre-signed PUT URL. This field is returned when PRESIGNED_URL is used.</para>
+            /// <para>The pre-signed PUT URL. This field is returned when <c>PRESIGNED_URL</c> is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com/yike-v1/.../demo.mp4?Expires=1763467200&OSSAccessKeyId=STS.xxx&Signature=xxx">https://yike-shared-ap-southeast-1-1.oss-ap-southeast-1.aliyuncs.com/yike-v1/.../demo.mp4?Expires=1763467200&amp;OSSAccessKeyId=STS.xxx&amp;Signature=xxx</a></para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         }
 
         /// <summary>
-        /// <para>The upload ticket. This field is returned when UPLOAD_TICKET is used. The ticket is a 27-character string in the format of UT1+region code+random string+check digit. A real credential is issued based on this ticket during a ticket exchange.</para>
+        /// <para>The upload ticket. This field is returned when <c>UPLOAD_TICKET</c> is used. It is a 27-character string in the UT1+region code+random string+check digit format. A real credential is issued based on this ticket during a ticket exchange.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UT1SGK7M2QX9R4T6V8W0Y3Z5ABC</para>

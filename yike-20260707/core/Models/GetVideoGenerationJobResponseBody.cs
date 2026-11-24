@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The video generation job.</para>
+        /// <para>The video generation task.</para>
         /// </summary>
         [NameInMap("VideoGenerationJob")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string AspectRatio { get; set; }
 
             /// <summary>
-            /// <para>The video duration, in seconds.</para>
+            /// <para>The video duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Duration { get; set; }
 
             /// <summary>
-            /// <para>The error message. The value is a string. This parameter is returned only when the job status is Failed.</para>
+            /// <para>The error message. The value is a string and is returned when the task status is Failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Input file not found.</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The job input.</para>
+            /// <para>The task input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, performing a slam dunk with Image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
+            /// <para>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, performing a slam dunk using Image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
             /// </summary>
             [NameInMap("Input")]
             [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>fdc7f121056249c2b64e04bba27bcc8c</para>
+            /// <para>ag_68ca759b4903b255*******</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The job feature configurations. This parameter does not require configuration at this time.</para>
+            /// <para>The task feature configuration. Currently, no configuration is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public int? N { get; set; }
 
             /// <summary>
-            /// <para>The generation result. The value is a JSON string that contains the following fields:</para>
-            /// <para>Medias: the list of media information (Media objects). Fields of a Media object:
+            /// <para>The generation result. The value is a JSON string that contains the following fields:
+            /// Medias: the list of media information (Media objects). The Media object includes the following fields:
             /// MediaId: String. The media asset ID.
             /// OutputUrl: String. The media URL, including the authentication string.</para>
             /// 
@@ -150,13 +150,13 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The job status. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Created: The job is created.</description></item>
-            /// <item><description>Queuing: The job is queued.</description></item>
-            /// <item><description>Executing: The job is executing.</description></item>
-            /// <item><description>Finished: The job succeeded.</description></item>
-            /// <item><description>Failed: The job failed.</description></item>
+            /// <item><description>Created: The task is created.</description></item>
+            /// <item><description>Queuing: The task is queuing.</description></item>
+            /// <item><description>Executing: The task is executing.</description></item>
+            /// <item><description>Finished: The task ran successfully.</description></item>
+            /// <item><description>Failed: The task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

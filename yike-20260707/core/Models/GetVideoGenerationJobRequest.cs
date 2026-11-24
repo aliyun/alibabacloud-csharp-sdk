@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetVideoGenerationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The client token.</para>
+        /// <para>The idempotency parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>818**811</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>68ca759e798b40b4903b255*******</para>
+        /// <para>ag_68ca759b4903b255*******</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

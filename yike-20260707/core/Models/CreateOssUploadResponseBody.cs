@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ObjectKey { get; set; }
 
         /// <summary>
-        /// <para>The <b>OSS presigned GET URL</b>, which is valid for 24 hours and uses the public endpoint. If signature generation fails, null is returned, which does not affect direct upload with the credentials.</para>
+        /// <para>The <b>OSS pre-signed GET URL</b>, which is valid for 24 hours and uses the public endpoint. If the signature generation fails, null is returned, which does not affect direct upload using the credentials.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://yike-shared-pre-2.oss-cn-shanghai.aliyuncs.com/yike-v1/ge2tqn-o5zv6m/2026/11/18/13/upload/media/hkyo9v003.mp4?Expires=1795095160&OSSAccessKeyId=STS.Nxxxxxxxxxxxxxxxxxxxxxxxx&Signature=xxxxxxxxxxx%3D">https://yike-shared-pre-2.oss-cn-shanghai.aliyuncs.com/yike-v1/ge2tqn-o5zv6m/2026/11/18/13/upload/media/hkyo9v003.mp4?Expires=1795095160&amp;OSSAccessKeyId=STS.Nxxxxxxxxxxxxxxxxxxxxxxxx&amp;Signature=xxxxxxxxxxx%3D</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the credentials. The time is in UTC and follows the ISO 8601 standard. The actual return value prevails.</para>
+            /// <para>The expiration time of the credential in UTC and ISO 8601 format. The actual return value prevails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-11-20T01:32:40Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Expiration { get; set; }
 
             /// <summary>
-            /// <para>The PostObject policy, which is Base64-encoded. This field is returned when POST_POLICY is used.</para>
+            /// <para>The PostObject policy, which is Base64-encoded. This is returned when POST_POLICY is used.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey ID used for signing. This field is returned when POST_POLICY is used.</para>
+            /// <para>The AccessKey ID used for the signature. This is returned when POST_POLICY is used.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string PostAccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The destination endpoint for POST requests. This field is returned when POST_POLICY is used.</para>
+            /// <para>The target endpoint for the POST request. This is returned when POST_POLICY is used.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string SecurityToken { get; set; }
 
             /// <summary>
-            /// <para>The PostObject signature. This field is returned when POST_POLICY is used.</para>
+            /// <para>The PostObject signature. This is returned when POST_POLICY is used.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Signature { get; set; }
 
             /// <summary>
-            /// <para>The presigned PUT URL. This field is returned when PRESIGNED_URL is used.</para>
+            /// <para>The pre-signed PUT URL. This is returned when PRESIGNED_URL is used.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">

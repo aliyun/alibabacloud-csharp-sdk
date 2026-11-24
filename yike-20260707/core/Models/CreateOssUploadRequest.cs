@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string CredentialType { get; set; }
 
         /// <summary>
-        /// <para>The file name extension, such as mp4, wav, or png. Do not include the dot. If this parameter is not specified, <c>MissingParameter</c> is returned.</para>
+        /// <para>The file name extension, such as mp4, wav, or png. Do not include the dot. If this parameter is missing, <c>MissingParameter</c> is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The explicitly specified destination bucket.</para>
+        /// <para>The explicitly specified target bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-bucket</para>

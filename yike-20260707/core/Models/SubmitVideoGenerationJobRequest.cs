@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string AspectRatio { get; set; }
 
         /// <summary>
-        /// <para>The idempotency parameter. A unique, case-sensitive, 32-character random string. This parameter ensures that the request is completed no more than once, preventing duplicate operations caused by multiple retries.</para>
+        /// <para>The idempotency parameter. A unique, case-sensitive, 32-character random string. This parameter ensures that the request is completed only once and prevents duplicate operations caused by multiple retries.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>3e761e9d11edba640c42a1b7</b></b></para>
@@ -45,12 +45,12 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <summary>
         /// <para>The task input. This parameter is required. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Prompt: the prompt. This field is required. Data type: String.</description></item>
+        /// <item><description>Prompt: the prompt. This field is required. Type: String.</description></item>
         /// <item><description>Medias: the media list.<list type="bullet">
-        /// <item><description>If JobType is set to image_to_video, this field is required and only one media file is required.</description></item>
-        /// <item><description>If JobType is set to first_last_frame, this field is required and exactly two media files are required.</description></item>
-        /// <item><description>If JobType is set to reference_to_video, this field is required and up to 9 media files are allowed. For wan3.0-video and wan3.0-video-prime, up to 20 media files are allowed, including up to 10 images, 5 videos, and 5 audio files. The total duration of audio and video files cannot exceed 15 seconds.<remarks>
-        /// <para>The Media structure contains the following fields: Type, the media type. Data type: String. Valid values: image, video, and audio. URL, the download URL of the media file. Data type: String. MediaId, the media asset ID. Data type: String.</para>
+        /// <item><description>When JobType is set to image_to_video, this field is required and only one media file is needed.</description></item>
+        /// <item><description>When JobType is set to first_last_frame, this field is required and exactly two media files are needed.</description></item>
+        /// <item><description>When JobType is set to reference_to_video, this field is required and up to 9 media files are allowed. For wan3.0-video and wan3.0-video-prime, up to 20 media files are allowed, including up to 10 images, 5 videos, and 5 audio files. The total duration of audio and video files cannot exceed 15 seconds.<remarks>
+        /// <para>The Media structure contains the following fields: Type: the media type. Type: String. Valid values: image, video, and audio. URL: the download URL of the media file. Type: String. MediaId: the media asset ID. Type: String.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, performing a slam dunk with Image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
+        /// <para>{&quot;Prompt&quot;:&quot;Image 1 is on the basketball court, and Image 2 performs a slam dunk&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
@@ -67,26 +67,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <summary>
         /// <para>The task feature parameters. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>EnableAudio: specifies whether to output audio. Data type: Boolean. This field is optional. Valid values:<list type="bullet">
-        /// <item><description>true: outputs audio.</description></item>
-        /// <item><description>false: does not output audio.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>Watermark: specifies whether to include a watermark. Data type: Boolean. This field is optional. Valid values:<list type="bullet">
-        /// <item><description>true: adds an &quot;AI-generated&quot; watermark to the lower-right corner of the video.</description></item>
-        /// <item><description>false: does not add a watermark to the generated video.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>PromptExtend: specifies whether to enable intelligent prompt rewriting. Data type: Boolean. This field is optional. This field is valid only for wan3.0-video and wan3.0-video-prime. Valid values:<list type="bullet">
-        /// <item><description>true: enables intelligent prompt rewriting. This is the default value.</description></item>
-        /// <item><description>false: disables intelligent prompt rewriting.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>PostProcessing: the post-processing feature switch. Data type: Object. This field contains the EnableSubtitleRemoval field. Data type: Boolean. Valid values:<list type="bullet">
-        /// <item><description>true: enables subtitle removal.</description></item>
-        /// <item><description>false: disables subtitle removal.</description></item>
-        /// </list>
-        /// </description></item>
+        /// <item><description>EnableAudio: specifies whether to output audio. Type: Boolean. This field is optional.</description></item>
+        /// <item><description>Watermark: specifies whether to include a watermark. Type: Boolean. This field is optional. Valid values: true (the video contains an AI-generated watermark in the lower-right corner) and false (the generated video does not contain a watermark).</description></item>
+        /// <item><description>PromptExtend: specifies whether to enable intelligent prompt rewriting. Type: Boolean. This field is optional. This field is valid only for wan3.0-video and wan3.0-video-prime. Valid values: true (enabled, default value) and false (disabled).</description></item>
+        /// <item><description>PostProcessing: the post-processing feature switch. Type: Object. This field contains EnableSubtitleRemoval, which specifies whether to remove subtitles. Type: Boolean. Valid values: true (enabled) and false (disabled).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,8 +85,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <list type="bullet">
         /// <item><description>text_to_video: text-to-video</description></item>
         /// <item><description>image_to_video: image-to-video</description></item>
-        /// <item><description>first_last_frame: first and last frames to video</description></item>
-        /// <item><description>reference_to_video: reference to video</description></item>
+        /// <item><description>first_last_frame: first and last frame to video</description></item>
+        /// <item><description>reference_to_video: reference-to-video</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,6 +100,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <para>The model name. This parameter is required. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Wonder-Ultra</description></item>
+        /// <item><description>Wonder-Ultra-Flash</description></item>
         /// <item><description>Wonder-Pro</description></item>
         /// <item><description>Wonder-Standard</description></item>
         /// <item><description>wan3.0-video</description></item>
@@ -133,7 +118,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The number of outputs. Valid values: 1 to 4. Default value: 1.</para>
+        /// <para>The number of output videos. Valid values: 1 to 4. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -143,7 +128,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public int? N { get; set; }
 
         /// <summary>
-        /// <para>The output configuration. The value is a JSON string. OssUri is the optional customer OSS output directory. If this parameter is not specified, a signed URL for the service-generated output is returned.</para>
+        /// <para>The output configuration JSON string. OssUri is the optional customer OSS output directory. If this parameter is not specified, a signed URL for the service-owned artifact is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;OssUri&quot;:&quot;oss://example-bucket/video-translation/output/&quot;}</para>
@@ -156,7 +141,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <para>The resolution. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1080P</description></item>
-        /// <item><description>720P: the default value</description></item>
+        /// <item><description>720P: default value</description></item>
         /// <item><description>480P: valid only for wan3.0-video and wan3.0-video-prime</description></item>
         /// </list>
         /// 
@@ -178,7 +163,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The user-defined parameters. The value is a JSON string. The callback result returns this parameter as is. The system reserved field NotifyAddress specifies the callback URL. The system calls this URL after the task is completed.</para>
+        /// <para>The custom user parameters. The value is a JSON string. The callback result carries this parameter as is. The system reserves the NotifyAddress field, which specifies the callback URL. The system sends a callback to this URL after the task is completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></para>

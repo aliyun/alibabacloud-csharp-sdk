@@ -949,9 +949,9 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</description></item>
         /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
-        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional. The default value is <c>Media</c>. This parameter affects the path segment in the returned <c>ObjectKey</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1017,9 +1017,9 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</description></item>
         /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
-        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional. The default value is <c>Media</c>. This parameter affects the path segment in the returned <c>ObjectKey</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1085,9 +1085,9 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</description></item>
         /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
-        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional. The default value is <c>Media</c>. This parameter affects the path segment in the returned <c>ObjectKey</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1113,9 +1113,9 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation generates temporary OSS upload credentials so that clients can directly upload files to a specified OSS bucket.</description></item>
+        /// <item><description>This API operation generates a temporary OSS upload credential so that the client can directly upload files to a specified OSS bucket.</description></item>
         /// <item><description>The <c>FileExt</c> parameter is required and specifies the file name extension of the file to be uploaded, such as mp4 or wav. Do not include the dot.</description></item>
-        /// <item><description>The <c>FileType</c> parameter is optional and defaults to <c>Media</c>. It affects the path segment in the returned <c>ObjectKey</c>.</description></item>
+        /// <item><description>The <c>FileType</c> parameter is optional. The default value is <c>Media</c>. This parameter affects the path segment in the returned <c>ObjectKey</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1289,7 +1289,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing one.</description></item>
         /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
         /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
         /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
@@ -1374,7 +1374,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing one.</description></item>
         /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
         /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
         /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
@@ -1459,7 +1459,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing one.</description></item>
         /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
         /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
         /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
@@ -1488,7 +1488,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing media asset.</description></item>
+        /// <item><description>This operation supports two modes: creating a new media asset and overwriting an existing one.</description></item>
         /// <item><description>When creating a new media asset, the <c>FileInfo</c> and <c>MediaMetaData</c> parameters are required.</description></item>
         /// <item><description>When overwriting an existing media asset, you must set <c>Overwrite</c> to true and provide <c>MediaId</c>.</description></item>
         /// <item><description>You can specify the credential type by using <c>CredentialType</c>. The default value is STS_TOKEN.</description></item>
@@ -2430,6 +2430,134 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateYikeLoginTokenWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an intelligent workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAppJobResponse
+        /// </returns>
+        public GetAIAppJobResponse GetAIAppJobWithOptions(GetAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyOutputs))
+            {
+                query["OnlyOutputs"] = request.OnlyOutputs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIAppJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIAppJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an intelligent workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAppJobResponse
+        /// </returns>
+        public async Task<GetAIAppJobResponse> GetAIAppJobWithOptionsAsync(GetAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyOutputs))
+            {
+                query["OnlyOutputs"] = request.OnlyOutputs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIAppJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIAppJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an intelligent workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAppJobResponse
+        /// </returns>
+        public GetAIAppJobResponse GetAIAppJob(GetAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAIAppJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an intelligent workflow task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAppJobResponse
+        /// </returns>
+        public async Task<GetAIAppJobResponse> GetAIAppJobAsync(GetAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAIAppJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3914,7 +4042,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation job.</para>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3960,7 +4088,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation job.</para>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4006,7 +4134,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation job.</para>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4024,7 +4152,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a video generation job.</para>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5257,7 +5385,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>This operation retrieves all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
         /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
         /// </list>
         /// </description>
@@ -5316,7 +5444,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>This operation retrieves all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
         /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
         /// </list>
         /// </description>
@@ -5375,7 +5503,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>This operation retrieves all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
         /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
         /// </list>
         /// </description>
@@ -5402,7 +5530,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description>This operation retrieves all media folders in a specified project (<c>ProductionId</c>). Pagination is supported by using the <c>PageNo</c> and <c>PageSize</c> parameters.</description></item>
         /// <item><description>If <c>ProductionId</c> is not provided, the default project of the current account is used.</description></item>
         /// </list>
         /// </description>
@@ -6050,6 +6178,154 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchMediaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an intelligent workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAppJobResponse
+        /// </returns>
+        public SubmitAIAppJobResponse SubmitAIAppJobWithOptions(SubmitAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                body["Inputs"] = request.Inputs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAIAppJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAIAppJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an intelligent workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAIAppJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAppJobResponse
+        /// </returns>
+        public async Task<SubmitAIAppJobResponse> SubmitAIAppJobWithOptionsAsync(SubmitAIAppJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Inputs))
+            {
+                body["Inputs"] = request.Inputs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAIAppJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAIAppJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an intelligent workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAppJobResponse
+        /// </returns>
+        public SubmitAIAppJobResponse SubmitAIAppJob(SubmitAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitAIAppJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts an intelligent workflow.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAIAppJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAIAppJobResponse
+        /// </returns>
+        public async Task<SubmitAIAppJobResponse> SubmitAIAppJobAsync(SubmitAIAppJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitAIAppJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string FolderName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the folder is the default folder. Each project has exactly one default folder.</para>
+            /// <para>Indicates whether the folder is the default folder. Each project has one and only one default folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

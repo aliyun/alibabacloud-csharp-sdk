@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The project ID. If this parameter is not specified, the default project of the current account is used. The value is in the <c>pd_{uid}</c> format.</para>
+        /// <para>The project ID. If this parameter is not specified, the default project of the current account is used. The value format is <c>pd_{uid}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pd_1585***</para>
