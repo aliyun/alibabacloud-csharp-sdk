@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CancelCopilotTurnResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API version number. The value is 1.0.0.</para>
+        /// <para>The API version number, which is &quot;1.0.0&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1.2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The security operations Agent conversation turn.</para>
+        /// <para>The conversation turn of the security operations agent.</para>
         /// </summary>
         [NameInMap("Turn")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ClientMessageId { get; set; }
 
             /// <summary>
-            /// <para>The session ID.</para>
+            /// <para>The conversation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>54b6c969-4b75-47be-9f43-71f88aeb****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time follows the ISO 8601 standard in UTC.</para>
+            /// <para>The creation time in ISO 8601 format and the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-23T02:13:49Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The conversation feedback information.</para>
+            /// <para>The returned conversation information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? Feedback { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens used for input.</para>
+            /// <para>The number of input tokens used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1280</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ModelId { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens used for output.</para>
+            /// <para>The number of output tokens.</para>
             /// 
             /// <b>Example:</b>
             /// <para>856</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? ReasoningTokens { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a retry is allowed.</para>
+            /// <para>Specifies whether retries are allowed.</para>
             /// </summary>
             [NameInMap("RetryAllowed")]
             [Validation(Required=false)]
             public bool? RetryAllowed { get; set; }
 
             /// <summary>
-            /// <para>The status of the conversation turn.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>

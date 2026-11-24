@@ -9,22 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateProductResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The product ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>alibaba_cloud_sas</para>
-        /// </summary>
         [NameInMap("ProductId")]
         [Validation(Required=false)]
         public string ProductId { get; set; }
 
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

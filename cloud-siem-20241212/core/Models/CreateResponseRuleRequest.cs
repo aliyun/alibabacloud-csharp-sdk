@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data records to return in the current read operation.</para>
+        /// <para>The maximum number of data records to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which the current read operation starts. If you leave this parameter empty, the read operation starts from the beginning.</para>
+        /// <para>The token that marks the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>

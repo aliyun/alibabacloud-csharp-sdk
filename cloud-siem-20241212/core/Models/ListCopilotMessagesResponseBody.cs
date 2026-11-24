@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The list of conversation messages.</para>
+        /// <para>The list of session messages.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <para>The sent content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The correlation analysis of alerts and network logs has been completed</para>
+            /// <para>The correlation analysis of alerts and network logs is complete</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum amount of data read in this query.</para>
+        /// <para>The maximum amount of data read in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token for the start of the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDataConnectorsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of collector IDs.</para>
+        /// <para>The list of data connector IDs.</para>
         /// </summary>
         [NameInMap("DataConnectorIds")]
         [Validation(Required=false)]
         public List<string> DataConnectorIds { get; set; }
 
         /// <summary>
-        /// <para>The collector name.</para>
+        /// <para>The name of the data connector.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAS-CTDR-2026070210****</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataConnectorName { get; set; }
 
         /// <summary>
-        /// <para>The collector status. Valid values:</para>
+        /// <para>The enabled status of the data connector. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled: Enabled.</description></item>
-        /// <item><description>disabled (default): Disabled.</description></item>
+        /// <item><description>&quot;enabled&quot;: Enabled.</description></item>
+        /// <item><description>&quot;disabled&quot; (default): Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataConnectorStatus { get; set; }
 
         /// <summary>
-        /// <para>The collector type. Valid values:</para>
+        /// <para>The type of the data connector. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>oss</description></item>
         /// <item><description>s3</description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataConnectorType { get; set; }
 
         /// <summary>
-        /// <para>The destination data source ID. This parameter is required only for synchronization.</para>
+        /// <para>The ID of the destination data source. This parameter is required only for synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-5sfe68t122pxnti1cjpl</para>
@@ -66,12 +66,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DestDataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
-        /// <para>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</para>
+        /// <para>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</para>
+        /// <para>The maximum number of entries to return for a single query when you use the NextToken method. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The token used to query the next page. You do not need to specify this parameter for the first query or when no next page exists. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -101,7 +101,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Currently, only sorting by updateTime is supported. If OrderField is empty, the default order returned by the database is used.</para>
+        /// <para>The field used for sorting.
+        /// Currently, only sorting by updateTime is supported.
+        /// If OrderField is empty, the default order returned by the database is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id</para>
@@ -113,8 +115,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order.</description></item>
-        /// <item><description>desc (default): descending order.</description></item>
+        /// <item><description>&quot;asc&quot;</description></item>
+        /// <item><description>&quot;desc&quot; (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Default value: 1000.</para>
+        /// <para>The number of entries per page. Default value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -145,10 +147,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -159,7 +161,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member to which the administrator switches the view.</para>
+        /// <para>The ID of the user whose perspective the administrator assumes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -169,7 +171,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service (SLS) data import job for the collector.</para>
+        /// <para>The name of the Simple Log Service (SLS) data import job for the data connector.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ingest-oss-dc-1a2b3c4d5e6f7a8****</para>

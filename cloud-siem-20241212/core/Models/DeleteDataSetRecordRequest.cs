@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class DeleteDataSetRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset ID.</para>
+        /// <para>The ID of the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSetId { get; set; }
 
         /// <summary>
-        /// <para>The list of dataset record IDs in JSON array format.</para>
+        /// <para>The IDs of the dataset records, in JSON array format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located in regions outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user whose perspective the administrator assumes.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

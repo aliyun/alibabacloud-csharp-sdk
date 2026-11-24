@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class SetDefaultNormalizationRuleVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The normalization rule version.</para>
+        /// <para>The version of the normalization rule.</para>
         /// </summary>
         [NameInMap("NormalizationRuleVersion")]
         [Validation(Required=false)]
         public SetDefaultNormalizationRuleVersionResponseBodyNormalizationRuleVersion NormalizationRuleVersion { get; set; }
         public class SetDefaultNormalizationRuleVersionResponseBodyNormalizationRuleVersion : TeaModel {
             /// <summary>
-            /// <para>The time when the normalization rule version was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule category ID.</para>
+            /// <para>The category ID of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationCategoryId { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule description.</para>
+            /// <para>The description of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normalization_rule_Z57np</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleDescription { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule expression.</para>
+            /// <para>The expression of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleExpression { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule format.</para>
+            /// <para>The format of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SPL</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleFormat { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule ID.</para>
+            /// <para>The ID of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nr-z0b2ssjteut85uoh9nzp</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule name.</para>
+            /// <para>The name of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normalization_rule_Z57np</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleName { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule status.</para>
+            /// <para>The status of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>started</para>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationRuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule type. Valid values:</para>
+            /// <para>The type of the normalization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>predefined: predefined normalization rule.</description></item>
-            /// <item><description>custom: custom normalization rule.</description></item>
+            /// <item><description>predefined: predefined normalization rule</description></item>
+            /// <item><description>custom: custom normalization rule</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <para>The current version of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>V1</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("NormalizationRuleVersion")]
             [Validation(Required=false)]
             public int? NormalizationRuleVersion { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema ID.</para>
+            /// <para>The ID of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP_ACTIVITY</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaId { get; set; }
 
             /// <summary>
-            /// <para>The normalization security domain ID.</para>
+            /// <para>The ID of the normalization security domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_AND_WEB_SECURITY</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSecurityDomainId { get; set; }
 
             /// <summary>
-            /// <para>The product ID.</para>
+            /// <para>The ID of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ProductId { get; set; }
 
             /// <summary>
-            /// <para>The time when the normalization rule version was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The vendor ID associated with the normalization rule.</para>
+            /// <para>The ID of the vendor corresponding to the normalization rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

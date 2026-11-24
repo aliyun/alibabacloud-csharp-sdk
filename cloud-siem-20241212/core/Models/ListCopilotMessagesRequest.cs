@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</para>
+        /// <para>The maximum number of results to return per page when you use the NextToken parameter for pagination. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start the query. Leave this parameter empty to query from the beginning.</para>
+        /// <para>The token that specifies the starting position of the current read operation. If this parameter is left empty, the read operation starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the Cloud Threat Detection and Response (CTDR) data management center resides. Specify the management center based on the region where your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The trace ID, which is used to query specific call information.</para>
+        /// <para>The trace ID, which is used to precisely query call information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550e8400e29b41d4a71644665544****</para>

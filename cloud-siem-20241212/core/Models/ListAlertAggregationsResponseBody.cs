@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListAlertAggregationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of alert groups returned based on the specified aggregation method, sorted by alert count in descending order.</para>
+        /// <para>The list of alert groups returned based on the specified aggregation method, sorted in descending order of the number of alerts.</para>
         /// </summary>
         [NameInMap("AlertAggregations")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<string> AccountDisplayValues { get; set; }
 
             /// <summary>
-            /// <para>The list of IDs of the member accounts for which the report is generated. Note: You only need to specify this parameter when you generate a multi-account report and want to generate a report for a specified range of accounts.</para>
+            /// <para>The list of IDs of member accounts for which the report is generated. Note: This parameter is required only when you generate a multi-account report and want to generate the report for a specified range of accounts.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<string> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the aggregation group. It is concatenated by AggregationType, PrimaryValue, and SecondaryValue with colons (:). If there is no secondary aggregation value, the last segment is empty.</para>
+            /// <para>The unique identifier of the aggregation group. It is concatenated by AggregationType, PrimaryValue, and SecondaryValue with colons (:). If no secondary aggregation value exists, the last segment is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vendor_product:alibaba_cloud:sas</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AggregationType { get; set; }
 
             /// <summary>
-            /// <para>The number of consecutive failures. This parameter is optional.</para>
+            /// <para>The number of consecutive failures. This field is optional.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<string> AttackStages { get; set; }
 
             /// <summary>
-            /// <para>The distribution of alert counts by defense action in the aggregation group. Name is the value of the action field, and Value is the corresponding alert count.</para>
+            /// <para>The distribution of the number of alerts in the aggregation group, counted by defense action. Name is the value of the action field, and Value is the corresponding number of alerts.</para>
             /// </summary>
             [NameInMap("DefenseActionCounts")]
             [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 /// <para>The default right value displayed for the whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test-Qiantu System AI</para>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? LatestTime { get; set; }
 
             /// <summary>
-            /// <para>The display text of the primary aggregation value. For account aggregation, it returns &quot;Username/Account ID&quot;. If there is no valid username, only the account ID is returned. For event summaries, it returns the event name based on Lang. If the name is missing, the event UUID is returned.</para>
+            /// <para>The display text of the primary aggregation value. For account aggregation, &quot;Username/Account ID&quot; is returned. If no valid username exists, only the account ID is returned. For event summaries, the event name is returned based on Lang. If the name is missing, the event UUID is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test incident</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The collection of event source codes.</para>
             /// <remarks>
-            /// <para>Example: [\&quot;MRM\&quot;]</para>
+            /// <para>Example: [\\\&quot;MRM\\\&quot;]</para>
             /// </remarks>
             /// </summary>
             [NameInMap("SourceCodes")]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<string> SourceCodes { get; set; }
 
             /// <summary>
-            /// <para>The distribution of alert counts by alert status in the aggregation group. Name is the alert status value, and Value is the corresponding alert count.</para>
+            /// <para>The distribution of the number of alerts in the aggregation group, counted by alert status. Name is the alert status value, and Value is the corresponding number of alerts.</para>
             /// </summary>
             [NameInMap("StatusCounts")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 /// <para>The right value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>123.123.123.123</para>
+                /// <para>11</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in this request.</para>
+        /// <para>The maximum number of entries returned for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>

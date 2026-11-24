@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateNormalizationRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The normalization rule ID.</para>
+        /// <para>The ID of the normalization rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nr-z0b2ssjteut85uoh9nzp</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>The request message ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

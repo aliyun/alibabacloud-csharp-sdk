@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CheckUpgradeItemRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.
-        /// Note: This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</description></item>
+        /// Note: This parameter is required. If you do not specify this parameter, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center resides. Specify the management center region based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: The assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: The assets reside outside China.</description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member to which the administrator switches the view.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The upgrade item ID.</para>
+        /// <para>The ID of the upgrade item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dispose_task_upgrade</para>

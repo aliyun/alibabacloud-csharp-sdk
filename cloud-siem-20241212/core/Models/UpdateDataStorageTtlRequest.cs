@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateDataStorageTtlRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The storage duration for cold storage in Simple Log Service. This setting is not yet available.</para>
+        /// <para>The cold storage duration in Simple Log Service. This parameter is not available for configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogStoreColdTtl { get; set; }
 
         /// <summary>
-        /// <para>The storage duration for hot storage in Simple Log Service.</para>
+        /// <para>The hot storage duration in Simple Log Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogStoreHotTtl { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore for threat analysis.</para>
+        /// <para>The name of the Logstore for Threat Analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>network-activity</para>
@@ -66,12 +64,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogStoreTtl { get; set; }
 
         /// <summary>
-        /// <para>The region of the Data Management Center for threat analysis. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region of the data management center for Threat Analysis. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: The Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Regions outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member whose perspective the administrator assumes.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

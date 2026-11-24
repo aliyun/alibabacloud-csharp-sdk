@@ -1,3 +1,10 @@
+2026-11-24 Version: 2.8.2
+- Update API GetDataStorage: add request parameters WithAutoKeyDetect.
+- Update API GetDataStorage: add response parameters Body.Data.NormalizationLogStores.$.AutoKeyDetect.
+- Update API GetDataStorage: add response parameters Body.Data.NormalizationLogStores.$.LogStoreExisted.
+- Update API GetDataStorage: add response parameters Body.Data.SasLogStores.$.AutoKeyDetect.
+
+
 2026-11-06 Version: 2.8.1
 - Update API ListDetectionRules: add request parameters LogSchemaIds.
 

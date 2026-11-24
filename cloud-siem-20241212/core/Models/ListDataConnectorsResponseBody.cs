@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDataConnectorsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of collectors.</para>
+        /// <para>The list of data connectors.</para>
         /// </summary>
         [NameInMap("DataConnector")]
         [Validation(Required=false)]
         public List<ListDataConnectorsResponseBodyDataConnector> DataConnector { get; set; }
         public class ListDataConnectorsResponseBodyDataConnector : TeaModel {
             /// <summary>
-            /// <para>The configuration item ID of the collector access object in the multi-cloud configuration.</para>
+            /// <para>The ID of the configuration item for the data connector access object in the multi-cloud configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-smbc-prod-cloudtrail.s3.cn-north-1.amazonaws.com.cn_AKIAX4AUG6AYSJO7FAG4</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AuthConfigId { get; set; }
 
             /// <summary>
-            /// <para>The cloud product to which the authentication configuration belongs.</para>
+            /// <para>The cloud service to which the authentication configuration belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>salesForceRestAPI</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AuthConfigProduct { get; set; }
 
             /// <summary>
-            /// <para>The cloud vendor to which the authentication configuration belongs.</para>
+            /// <para>The cloud provider to which the authentication configuration belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SALESFORCE</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2026-06-01T02:14:24Z</para>
+            /// <para>1792515606000</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The collector configuration information.</para>
+            /// <para>The configuration information of the data connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;endpoint\&quot;:\&quot;csrm-sentinel.s3.cn-north-1.amazonaws.com.cn_AKIARGUYUGSX6A6VUXQJ\&quot;,\&quot;bucket\&quot;:\&quot;csrm-sentinel\&quot;,\&quot;prefix\&quot;:\&quot;AliTest/\&quot;,\&quot;format\&quot;:{\&quot;type\&quot;:\&quot;JSON\&quot;},\&quot;encoding\&quot;:\&quot;UTF-8\&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataConnectorConfig { get; set; }
 
             /// <summary>
-            /// <para>The collector ID.</para>
+            /// <para>The data connector ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dc-07423146117d77db266f78bc41f4fd80</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataConnectorId { get; set; }
 
             /// <summary>
-            /// <para>The data connector name.</para>
+            /// <para>The name of the data connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dc-***</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataConnectorName { get; set; }
 
             /// <summary>
-            /// <para>The connector status.</para>
+            /// <para>The enabled status of the data connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enable</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataConnectorStatus { get; set; }
 
             /// <summary>
-            /// <para>The connector type.</para>
+            /// <para>The type of the data connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataConnectorType { get; set; }
 
             /// <summary>
-            /// <para>The destination data source ID. This parameter is required only for synchronization.</para>
+            /// <para>The ID of the destination data source. This parameter is required only for synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-t3ywipile7gctobaunx0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DestDataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project name.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun-cloudsiem-channel-1371069058301795-cn-shanghai</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string LogRegionId { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service Logstore name.</para>
+            /// <para>The name of the Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ls-wecom-crontasklog-prod</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
-            /// <para>The name of the SLS data import job for the collector.</para>
+            /// <para>The name of the Simple Log Service (SLS) data import job for the data connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1a2b3c4d5e6f7a8b9c0d1e2f3a4b****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string SlsIngestionJobName { get; set; }
 
             /// <summary>
-            /// <para>The status of the SLS data import job for the collector.</para>
+            /// <para>The status of the Simple Log Service (SLS) data import job for the data connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string SlsIngestionJobState { get; set; }
 
             /// <summary>
-            /// <para>The source data type.</para>
+            /// <para>The type of the source data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s3</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-01-04 22:31:54</para>
+            /// <para>1792515606000</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this query.</para>
+        /// <para>The maximum number of entries returned in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token used to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

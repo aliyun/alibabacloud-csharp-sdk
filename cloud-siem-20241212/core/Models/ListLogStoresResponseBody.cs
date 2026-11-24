@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<string> LogStores { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries to return in this request.</para>
+        /// <para>The maximum number of entries to return for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. You do not need to specify this parameter for the first query or when no subsequent query is required. If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</para>
+        /// <para>The token for the next query. If this is the first query or no subsequent query is required, you do not need to specify this parameter. If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateNormalizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</para>
+        /// <para>Specifies whether to pack non-standard fields into the extend_content extension field. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enabled: Enabled.</description></item>
         /// <item><description>disabled: Disabled.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExtendContentPacked { get; set; }
 
         /// <summary>
-        /// <para>The storage mode for extended fields. Valid values: flat, pack, reject.</para>
+        /// <para>The storage mode for extension fields. Valid values: flat, pack, and reject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>flat</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ExtendFieldStoreMode { get; set; }
 
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationRuleFormat { get; set; }
 
         /// <summary>
-        /// <para>The list of normalization rule IDs.</para>
+        /// <para>The IDs of the normalization rules.</para>
         /// </summary>
         [NameInMap("NormalizationRuleIds")]
         [Validation(Required=false)]
@@ -124,8 +124,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The type of the normalization rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>predefined: predefined normalization rule.</description></item>
-        /// <item><description>custom: custom normalization rule.</description></item>
+        /// <item><description>predefined: Predefined normalization rule.</description></item>
+        /// <item><description>custom: Custom normalization rule.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,8 +168,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The field used to sort the rule list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GmtModified: sorts by modification time.</description></item>
-        /// <item><description>Id: sorts by rule ID (default).</description></item>
+        /// <item><description>GmtModified: Sorts by modification time.</description></item>
+        /// <item><description>Id: Sorts by rule ID. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -190,10 +190,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member accounts in the resource folder.</para>
+        /// <para>The ID of the member account in the resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The vendor ID associated with the normalization rule.</para>
+        /// <para>The ID of the vendor associated with the normalization rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud</para>

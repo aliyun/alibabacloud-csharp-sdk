@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class DeleteLogStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
-        /// <item><description><b>en</b>: English.<remarks>
-        /// <para>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;The specified Lang can not be empty.&quot;</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>en</b>: English.
+        /// Note: This parameter is actually required. If it is not provided, the API returns a 400 error with the message &quot;The specified Lang can not be empty.&quot;.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,10 +25,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service project name.</para>
-        /// <remarks>
-        /// <para>Note: This parameter is required in practice. If this parameter is not specified, the API returns a 400 error: &quot;SLS log project name is empty.&quot;</para>
-        /// </remarks>
+        /// <para>The name of the Simple Log Service project.
+        /// Note: This parameter is actually required. If it is not provided, the API returns a 400 error with the message &quot;SLS log project name is empty.&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-cloudsiem-data-173326*******-cn-hangzhou</para>
@@ -40,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogProjectName { get; set; }
 
         /// <summary>
-        /// <para>The log storage region ID.</para>
+        /// <para>The ID of the log storage region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogRegionId { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service LogStore name.</para>
+        /// <para>The name of the Simple Log Service Logstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds-logstore</para>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>The user ID for data access.</para>
+        /// <para>The ID of the user for data ingestion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -70,10 +66,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? LogUserId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Cloud Threat Detection and Response (CTDR) data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets belong to the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Your assets belong to regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that the administrator switches to when viewing from the perspective of another member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
     public class ExecuteLogQueryResponseBody : TeaModel {
         /// <summary>
         /// <para>The query result.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[]。</para>
         /// </summary>
         [NameInMap("QueryResult")]
         [Validation(Required=false)]

@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <item><description>ALERT_ACTIVITY: other alerts</description></item>
             /// <item><description>EDR_ALERT_ACTIVITY: endpoint detection and response alerts</description></item>
             /// <item><description>FIREWALL_ALERT_ACTIVITY: firewall alerts</description></item>
-            /// <item><description>WAF_ALERT_ACTIVITY: Web Application Firewall alerts</description></item>
+            /// <item><description>WAF_ALERT_ACTIVITY: web application firewall alerts</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,16 +148,19 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <para>The alerting type mapping.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>进程异常行为</para>
             /// </summary>
             [NameInMap("AlertTypeMapping")]
             [Validation(Required=false)]
             public string AlertTypeMapping { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-03-21 13:47:01</para>
+            /// <para>1794302020000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -315,7 +318,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The incident aggregation period configuration.</para>
+            /// <para>The event aggregation period configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5m</para>
@@ -325,13 +328,13 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IncidentAggregationExpression { get; set; }
 
             /// <summary>
-            /// <para>The incident aggregation type. Valid values:</para>
+            /// <para>The event aggregation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>none: no event generated</description></item>
+            /// <item><description>none: no event generation</description></item>
             /// <item><description>graph_compute: graph computing (supported by predefined rules)</description></item>
-            /// <item><description>expert: expert rule</description></item>
+            /// <item><description>expert: expert rules</description></item>
             /// <item><description>passthrough: alerting pass-through (one-to-one)</description></item>
-            /// <item><description>window: similar aggregation (window)</description></item>
+            /// <item><description>window: similar event aggregation (window)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -420,7 +423,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The user-defined parameters of the playbook.</para>
+            /// <para>The custom parameters of the playbook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -464,7 +467,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ScheduleExpression { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of retries upon timeout. Valid values: 1 to 100.</para>
+            /// <para>The maximum number of retries for a timeout. Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -508,10 +511,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ScheduleWindow { get; set; }
 
             /// <summary>
-            /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-04-16 10:51:00</para>
+            /// <para>1794302022000</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -520,7 +523,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of data entries to return in this request.</para>
+        /// <para>The maximum number of results to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

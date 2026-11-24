@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The storage mode of extended fields. Valid values: flat, pack, and reject.</para>
+        /// <para>The storage mode for extended fields. Valid values: flat, pack, and reject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>flat</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
-        /// <para>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message \&quot;The specified Lang can not be empty.\&quot; Explicitly specify the language code.</para>
+        /// <para>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
         /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>

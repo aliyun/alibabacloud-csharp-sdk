@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateCopilotConversationRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the returned message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string PlanMode { get; set; }
 
         /// <summary>
-        /// <para>The security project ID.</para>
+        /// <para>The ID of the security project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project-incident-****</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center for threat analysis is located. Select the management center region based on the region where your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets reside outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The thinking mode configuration.</para>
+        /// <para>The deep thinking configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ThinkingMode { get; set; }
 
         /// <summary>
-        /// <para>The session title.</para>
+        /// <para>The title of the session.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Security incident investigation</para>
+        /// <para>Security event investigation</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

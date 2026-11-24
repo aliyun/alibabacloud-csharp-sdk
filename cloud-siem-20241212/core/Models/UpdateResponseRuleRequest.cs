@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data records to read in the current request.</para>
+        /// <para>The maximum number of data records to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</para>
+        /// <para>The token that indicates the position from which to start reading. An empty value indicates that the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseActionType { get; set; }
 
         /// <summary>
-        /// <para>The rule trigger condition configuration.</para>
+        /// <para>The trigger condition configuration of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? ResponseRulePriority { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the response rule.</para>
+        /// <para>The remarks for the response rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Verified as a low-risk alert and scheduled for regular cleanup</para>

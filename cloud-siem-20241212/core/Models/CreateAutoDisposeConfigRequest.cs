@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateAutoDisposeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether automatic analysis is enabled for the user. Valid values:</para>
+        /// <para>Specifies whether the user has enabled automatic analysis. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enabled: Enabled.</description></item>
         /// <item><description>disabled: Disabled.</description></item>

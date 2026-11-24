@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetAlertResponseBody : TeaModel {
         /// <summary>
-        /// <para>If this value is true, the minor engine version is not the latest version.</para>
+        /// <para>Indicates whether the minor version is not the latest version.</para>
         /// <remarks>
-        /// <para>If the minor engine version of your server is not the latest version, the sampling logs may be inaccurate, which causes imprecise IP statistics. We recommend that you upgrade the minor engine version at your earliest convenience.</para>
+        /// <para>If the minor version of your server is not the latest, the sampled logs may be inaccurate, resulting in inaccurate IP address statistics. Therefore, we recommend that you upgrade the minor version of your server as soon as possible.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Alert")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public GetAlertResponseBodyAlert Alert { get; set; }
         public class GetAlertResponseBodyAlert : TeaModel {
             /// <summary>
-            /// <para>The alert content.</para>
+            /// <para>The content of the alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{***}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AlertRecord { get; set; }
 
             /// <summary>
-            /// <para>The alert UUID.</para>
+            /// <para>The UUID of the alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas_1175554881779200_e59368b3ce1690eae7978f7712a69050</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>

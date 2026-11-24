@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceRecognizer { get; set; }
 
         /// <summary>
-        /// <para>The data ingestion IDs associated with the data source.</para>
+        /// <para>The IDs of the data ingestion tasks associated with the data source.</para>
         /// </summary>
         [NameInMap("DataSourceReferences")]
         [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceStoreId { get; set; }
 
             /// <summary>
-            /// <para>The log storage status. Valid values:</para>
+            /// <para>The status of the log storage. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>normal</description></item>
             /// <item><description>abnormal</description></item>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user whose perspective the administrator switches to.</para>
+        /// <para>The ID of the member whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

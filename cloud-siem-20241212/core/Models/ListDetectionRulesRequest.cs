@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The type of the detection rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>preset: Preset detection rule.</description></item>
-        /// <item><description>custom: Custom detection rule.</description></item>
-        /// <item><description>custom_template: Rule template.</description></item>
+        /// <item><description>preset: Preset detection rules.</description></item>
+        /// <item><description>custom: Custom detection rules.</description></item>
+        /// <item><description>custom_template: Rule templates.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The event summaries type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>none: No event is generated.</description></item>
+        /// <item><description>none: No events are generated.</description></item>
         /// <item><description>graph_compute: Graph computing (supported by preset rules).</description></item>
         /// <item><description>expert: Expert rules.</description></item>
-        /// <item><description>passthrough: Alerting pass-through (one-to-one).</description></item>
+        /// <item><description>passthrough: alerting pass-through (one-to-one).</description></item>
         /// <item><description>window: Similar aggregation (window).</description></item>
         /// </list>
         /// 
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
-        /// <para>Note: This parameter is required in actual calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</para>
+        /// <para>Note: This parameter is required in actual API calls. If this parameter is not provided, the service returns a 400 error with the message &quot;The specified Lang can not be empty.&quot; Explicitly pass the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogSchemaId { get; set; }
 
         /// <summary>
-        /// <para>The collection of log schema IDs, which matches any schema by its full ID. If this parameter is not provided, this condition is not applied. If an empty array is explicitly provided, zero records are returned. If both this parameter and LogSchemaId are provided, the intersection is used.</para>
+        /// <para>The collection of log schema IDs, which matches any schema by its full ID. If this parameter is not provided, this condition is not applied. If an explicit empty array is provided, zero records are returned. If both this parameter and LogSchemaId are provided, the intersection is used.</para>
         /// </summary>
         [NameInMap("LogSchemaIds")]
         [Validation(Required=false)]
         public List<string> LogSchemaIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries to return in this request.</para>
+        /// <para>The maximum number of results to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort direction. Valid values:</para>
+        /// <para>The sorting direction. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asc</b>: Ascending order. This is the default value.</description></item>
         /// <item><description><b>desc</b>: Descending order.</description></item>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center for Threat Analysis is located. Select the region of the management center based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
         /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user whose perspective the administrator switches to.</para>
+        /// <para>The ID of the user whose perspective the administrator assumes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

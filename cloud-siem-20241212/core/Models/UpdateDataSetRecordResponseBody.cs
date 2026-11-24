@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateDataSetRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the dataset update.</para>
+        /// <para>The dataset update results.</para>
         /// </summary>
         [NameInMap("DataSetRecordStatistic")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>

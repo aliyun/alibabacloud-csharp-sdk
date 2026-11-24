@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateCopilotChatShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client session ID.</para>
+        /// <para>The client conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54b6c969-4b75-47be-9f43-71f88aeb****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ClientMessageId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54b6c969-4b75-47be-9f43-71f88aeb****</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The session creation configuration.</para>
+        /// <para>The conversation creation configuration.</para>
         /// </summary>
         [NameInMap("CreateConversation")]
         [Validation(Required=false)]
         public string CreateConversationShrink { get; set; }
 
         /// <summary>
-        /// <para>The language of the returned message. Valid values:</para>
+        /// <para>The language of the returned messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Assets reside outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located in regions outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

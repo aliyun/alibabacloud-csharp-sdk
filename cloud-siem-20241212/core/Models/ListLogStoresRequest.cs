@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListLogStoresRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the returned message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogProjectName { get; set; }
 
         /// <summary>
-        /// <para>The log storage region ID. This parameter is required when LogProjectName is provided, and the log storage region must match the log project. You can call the GetDataStorage operation to obtain valid values.</para>
+        /// <para>The log storage region ID. This parameter is required when LogProjectName is provided, and the log storage region must be consistent with the log project. You can call the GetDataStorage operation to obtain valid values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? LogUserId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries to return in this request.</para>
+        /// <para>The maximum number of entries to return for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. You do not need to specify this parameter for the first query or when no subsequent query is required. If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</para>
+        /// <para>The token for the next query. If this is the first query or no subsequent query is required, you do not need to specify this parameter. If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets are located. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

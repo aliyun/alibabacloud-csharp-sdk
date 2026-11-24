@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CheckUpgradeItemResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public CheckUpgradeItemResponseBodyUpgradeItem UpgradeItem { get; set; }
         public class CheckUpgradeItemResponseBodyUpgradeItem : TeaModel {
             /// <summary>
-            /// <para>The check result of the check item. Example values: OK and FAIL.</para>
+            /// <para>The check result of the check item. Possible values include OK and FAIL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string CheckStatus { get; set; }
 
             /// <summary>
-            /// <para>The upgrade item ID.</para>
+            /// <para>The ID of the upgrade item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>incident_upgrade</para>

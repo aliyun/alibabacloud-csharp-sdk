@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateNormalizationSchemaRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
-        /// <para>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Pass the language code explicitly.</para>
+        /// <para>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly pass the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The normalization category ID.</para>
+        /// <para>The ID of the normalization category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NETWORK_CATEGORY</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationCategoryId { get; set; }
 
         /// <summary>
-        /// <para>The field source.</para>
+        /// <para>The source of the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>native</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<CreateNormalizationSchemaRequestNormalizationFields> NormalizationFields { get; set; }
         public class CreateNormalizationSchemaRequestNormalizationFields : TeaModel {
             /// <summary>
-            /// <para>The standard field description.</para>
+            /// <para>The description of the normalization field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_user</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldDescription { get; set; }
 
             /// <summary>
-            /// <para>The standard field example.</para>
+            /// <para>The example of the normalization field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>173326*******</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldExample { get; set; }
 
             /// <summary>
-            /// <para>The key source for a standard field of the JSON type.</para>
+            /// <para>The source of the key for the JSON normalization field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>preset</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldFrom { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to create indexes for all keys in a standard field of the JSON type.</para>
+            /// <para>Specifies whether to create indexes for all keys of the JSON normalization field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? NormalizationFieldJsonIndexAll { get; set; }
 
             /// <summary>
-            /// <para>The key list for a standard field of the JSON type.</para>
+            /// <para>The list of keys for the JSON normalization field.</para>
             /// </summary>
             [NameInMap("NormalizationFieldJsonKeys")]
             [Validation(Required=false)]
             public List<CreateNormalizationSchemaRequestNormalizationFieldsNormalizationFieldJsonKeys> NormalizationFieldJsonKeys { get; set; }
             public class CreateNormalizationSchemaRequestNormalizationFieldsNormalizationFieldJsonKeys : TeaModel {
                 /// <summary>
-                /// <para>The key description for a standard field of the JSON type.</para>
+                /// <para>The description of the key for the JSON normalization field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The alert severity levels are represented by the values 1, 2, 3, and 4.</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldDescription { get; set; }
 
                 /// <summary>
-                /// <para>The key example for a standard field of the JSON type.</para>
+                /// <para>The example of the key for the JSON normalization field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1, 2, 3, 4</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldExample { get; set; }
 
                 /// <summary>
-                /// <para>The key source for a standard field of the JSON type.</para>
+                /// <para>The source of the key for the JSON normalization field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>preset</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldFrom { get; set; }
 
                 /// <summary>
-                /// <para>The key name for a standard field of the JSON type.</para>
+                /// <para>The name of the key for the JSON normalization field.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string NormalizationFieldName { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the key for a standard field of the JSON type is required.</para>
+                /// <para>Specifies whether the key for the JSON normalization field is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public bool? NormalizationFieldRequired { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the key for a standard field of the JSON type is tokenized.</para>
+                /// <para>Specifies whether the key for the JSON normalization field is tokenized.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public bool? NormalizationFieldTokenize { get; set; }
 
                 /// <summary>
-                /// <para>The key type for a standard field of the JSON type. Valid values: text, long, double, and json.</para>
+                /// <para>The type of the key for the JSON normalization field. Valid values: text, long, double, and json.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The normalization field name.</para>
+            /// <para>The name of the normalization field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the standard field is required.</para>
+            /// <para>Specifies whether the normalization field is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? NormalizationFieldReserved { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the standard field is tokenized.</para>
+            /// <para>Specifies whether the normalization field is tokenized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? NormalizationFieldTokenize { get; set; }
 
             /// <summary>
-            /// <para>The standard field type. Valid values: text, long, double, and json.</para>
+            /// <para>The type of the normalization field. Valid values: text, long, double, and json.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The normalization schema description.</para>
+        /// <para>The description of the normalization schema.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ProcessQuery</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaDescription { get; set; }
 
         /// <summary>
-        /// <para>The normalization schema ID. When creating a custom schema, the ID must start with custom- and can contain only lowercase letters, digits, and hyphens. Example: custom-my-log-schema.</para>
+        /// <para>The ID of the normalization schema. When you create a custom schema, the ID must start with custom- and can contain only lowercase letters, digits, and hyphens. Example: custom-my-log-schema.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaId { get; set; }
 
         /// <summary>
-        /// <para>The normalization schema name.</para>
+        /// <para>The name of the normalization schema.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -269,10 +269,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaName { get; set; }
 
         /// <summary>
-        /// <para>The normalization schema type. Valid values:</para>
+        /// <para>The type of the normalization schema. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>log: log.</description></item>
-        /// <item><description>entity: entity.</description></item>
+        /// <item><description>log: Log.</description></item>
+        /// <item><description>entity: Entity.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaType { get; set; }
 
         /// <summary>
-        /// <para>The security domain ID.</para>
+        /// <para>The ID of the security domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NETWORK_AND_WEB_SECURITY</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSecurityDomainId { get; set; }
 
         /// <summary>
-        /// <para>The product ID.</para>
+        /// <para>The ID of the product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -304,10 +304,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: assets in the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: assets in regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located in regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that the administrator uses to switch to the view of another member account.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service LogStore.</para>
+        /// <para>The Logstore of Simple Log Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string TargetLogStore { get; set; }
 
         /// <summary>
-        /// <para>The vendor ID.</para>
+        /// <para>The ID of the vendor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba</para>

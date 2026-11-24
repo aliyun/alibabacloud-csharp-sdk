@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <item><description>OperationDenied.TheValueLessThanMin: The field value is less than the specified minimum value.</description></item>
             /// <item><description>OperationDenied.TheValueMoreThanMax: The field value is greater than the specified maximum value.</description></item>
             /// <item><description>OperationDenied.TheValueNotMatchRegularExpression: The field value fails the regular expression match.</description></item>
-            /// <item><description>success: The validation is passed.</description></item>
+            /// <item><description>success: The validation passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,11 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The source of the normalized field. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>preset: Built-in.</description></item>
-            /// <item><description>custom: Custom.</description></item>
-            /// </list>
+            /// <para>The source of the normalized field. Valid values: preset and custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>preset</para>
@@ -120,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public bool? NormalizationFieldRequired { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the normalized field name is built into the system.</para>
+            /// <para>Indicates whether the normalized field name is built into the system.</para>
             /// </summary>
             [NameInMap("NormalizationFieldReserved")]
             [Validation(Required=false)]
@@ -159,9 +155,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The validation result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: The validation is passed.</description></item>
+            /// <item><description>1: The validation passed.</description></item>
             /// <item><description>0: A warning is returned.</description></item>
-            /// <item><description>1: The validation fails.</description></item>
+            /// <item><description>1: The validation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

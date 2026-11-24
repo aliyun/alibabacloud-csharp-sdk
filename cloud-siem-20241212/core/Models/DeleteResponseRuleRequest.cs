@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position to start reading. If this parameter is left empty, the reading starts from the beginning.</para>
+        /// <para>The token that specifies the starting position for reading. Leave this parameter empty to start reading from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>

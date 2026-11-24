@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>Specifies whether to pack non-standard fields into the extended field extend_content. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enabled.</description></item>
-            /// <item><description>disabled: Disabled.</description></item>
+            /// <item><description>enabled: enabled</description></item>
+            /// <item><description>disabled: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ExtendContentPacked { get; set; }
 
             /// <summary>
-            /// <para>The storage mode for extended fields. Valid values: flat (ingest as-is), reject (do not ingest), and pack (pack into the extend_content field).</para>
+            /// <para>The storage mode for extended fields. Valid values: flat: ingested as-is, reject: not ingested, pack: packed into the extend_content field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flat</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ExtendFieldStoreMode { get; set; }
 
             /// <summary>
-            /// <para>The category ID of the normalization rule.</para>
+            /// <para>The ID of the normalization rule category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationCategoryId { get; set; }
 
             /// <summary>
-            /// <para>The field source:</para>
+            /// <para>The source of the field. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>&quot;native&quot;: raw logs</description></item>
             /// <item><description>&quot;normalized&quot;: normalized logs</description></item>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <para>The version of the normalization rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>V1</para>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("NormalizationRuleVersion")]
             [Validation(Required=false)]
@@ -203,10 +203,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSecurityDomainId { get; set; }
 
             /// <summary>
-            /// <para>The field used to sort the rule list. Valid values:</para>
+            /// <para>The field by which the rule list is sorted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>GmtModified: sort by modification time</description></item>
-            /// <item><description>Id: sort by rule ID (default)</description></item>
+            /// <item><description>GmtModified: sorts by update time</description></item>
+            /// <item><description>Id: sorts by rule ID (default)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string OrderField { get; set; }
 
             /// <summary>
-            /// <para>The product ID.</para>
+            /// <para>The ID of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas</para>
