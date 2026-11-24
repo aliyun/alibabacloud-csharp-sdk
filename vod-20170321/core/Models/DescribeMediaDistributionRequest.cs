@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeMediaDistributionRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of CreationTime. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The maximum time span between the start time and end time is six months.</para>
+        /// <para>The end time of the creation time. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The maximum time span between the start time and end time is six months.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:59:00Z</para>
@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The statistical interval. Default value: day. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>hour: by hour. Statistics are collected based on the calendar hours within the specified time range.</description></item>
-        /// <item><description>day: by day. Statistics are collected based on the calendar days within the specified time range.</description></item>
-        /// <item><description>week: by week. Statistics are collected based on the calendar weeks within the specified time range.</description></item>
-        /// <item><description>month: by month. Statistics are collected based on the calendar months within the specified time range.</description></item>
+        /// <item><description>hour: Hour. Statistics are collected based on the natural hours of the start time and end time.</description></item>
+        /// <item><description>day: Day. Statistics are collected based on the natural days of the start time and end time.</description></item>
+        /// <item><description>week: Week. Statistics are collected based on the natural weeks of the start time and end time.</description></item>
+        /// <item><description>month: Month. Statistics are collected based on the natural months of the start time and end time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The start time of CreationTime. Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The maximum time span between the start time and end time is six months.</para>
+        /// <para>The start time of the creation time. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The maximum time span between the start time and end time is six months.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:00:00Z</para>
@@ -48,15 +48,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: standard storage.</description></item>
-        /// <item><description>IA: Infrequent Access.</description></item>
+        /// <item><description>Standard: Standard storage.</description></item>
+        /// <item><description>IA: Infrequent access.</description></item>
         /// <item><description>Archive: Archive storage.</description></item>
-        /// <item><description>ColdArchive: Cold Archive storage.</description></item>
-        /// <item><description>SourceIA: Infrequent Access for source files.</description></item>
+        /// <item><description>ColdArchive: Cold archive storage.</description></item>
+        /// <item><description>SourceIA: Infrequent access for source files.</description></item>
         /// <item><description>SourceArchive: Archive storage for source files.</description></item>
-        /// <item><description>SourceColdArchive: Cold Archive storage for source files.</description></item>
-        /// <item><description>Changing: the media asset storage class is being changed.</description></item>
-        /// <item><description>SourceChanging: the source file storage class is being changed.</description></item>
+        /// <item><description>SourceColdArchive: Cold archive storage for source files.</description></item>
+        /// <item><description>Changing: The storage type of the media asset is being changed.</description></item>
+        /// <item><description>SourceChanging: The storage type of the source file is being changed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

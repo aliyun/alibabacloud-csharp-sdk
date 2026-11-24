@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID. Only a single category ID can be specified. You can obtain the category ID by using the following methods:</para>
+        /// <para>The category ID. You can specify only one category ID. You can obtain the category ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Category Management</b> &gt; <b>Audio/Video/Image Category</b> or <b>Short Video Material Category</b> to view the category ID.</description></item>
-        /// <item><description>Obtain the category ID from the response of the <a href="~~AddCategory~~">AddCategory</a> operation when you create a category.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Category Management</b> &gt; <b>Audio/Video and Image Categories</b> or <b>Short Video Material Categories</b> to view the category ID.</description></item>
+        /// <item><description>The category ID is returned when you call the <a href="~~AddCategory~~">AddCategory</a> operation to create a category.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

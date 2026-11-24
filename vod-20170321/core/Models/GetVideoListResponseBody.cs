@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of audio and video files.</para>
+        /// <para>The total number of audio and video assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public AddCategoryResponseBodyCategory Category { get; set; }
         public class AddCategoryResponseBodyCategory : TeaModel {
             /// <summary>
-            /// <para>The category ID. You can use it as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</para>
+            /// <para>The category ID. You can use this ID as a request parameter for the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10020</para>

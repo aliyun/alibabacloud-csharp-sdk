@@ -261,14 +261,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD for efficient resource search and management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio, video, and image categories (where <c>Type</c> is <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (where <c>Type</c> is <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After you create a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -319,14 +319,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD for efficient resource search and management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio, video, and image categories (where <c>Type</c> is <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (where <c>Type</c> is <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After you create a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -377,14 +377,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD for efficient resource search and management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio, video, and image categories (where <c>Type</c> is <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (where <c>Type</c> is <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After you create a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -403,14 +403,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD, making resource search and management more efficient.</para>
+        /// <para>Creates a category to classify audio, video, image, and short video materials stored in ApsaraVideo VOD for efficient resource search and management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Audio and video/image categories (<c>Type</c> set to <c>default</c>) support up to three levels of categories, with a maximum of 100 subcategories per level. Short video material categories (<c>Type</c> set to <c>material</c>) support up to two levels of categories, with a maximum of 100 subcategories per level.</description></item>
-        /// <item><description>After creating a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
+        /// <item><description>Audio, video, and image categories (where <c>Type</c> is <c>default</c>) support up to three levels, with a maximum of 100 subcategories per level. Short video material categories (where <c>Type</c> is <c>material</c>) support up to two levels, with a maximum of 100 subcategories per level.</description></item>
+        /// <item><description>After you create a category, you can classify media assets during or after upload. For more information, see <a href="https://help.aliyun.com/document_detail/86070.html">Media asset categories</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -805,6 +805,178 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddEditingProjectMaterialsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a ManifestEdit track orchestration template for the SubmitEditMediaManifestJob task to configure video, audio, and subtitle tracks based on the template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
+        /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
+        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddManifestEditTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddManifestEditTemplateResponse
+        /// </returns>
+        public AddManifestEditTemplateResponse AddManifestEditTemplateWithOptions(AddManifestEditTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Templates))
+            {
+                query["Templates"] = request.Templates;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddManifestEditTemplate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddManifestEditTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a ManifestEdit track orchestration template for the SubmitEditMediaManifestJob task to configure video, audio, and subtitle tracks based on the template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
+        /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
+        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddManifestEditTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddManifestEditTemplateResponse
+        /// </returns>
+        public async Task<AddManifestEditTemplateResponse> AddManifestEditTemplateWithOptionsAsync(AddManifestEditTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Templates))
+            {
+                query["Templates"] = request.Templates;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddManifestEditTemplate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddManifestEditTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a ManifestEdit track orchestration template for the SubmitEditMediaManifestJob task to configure video, audio, and subtitle tracks based on the template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
+        /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
+        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddManifestEditTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddManifestEditTemplateResponse
+        /// </returns>
+        public AddManifestEditTemplateResponse AddManifestEditTemplate(AddManifestEditTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddManifestEditTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a ManifestEdit track orchestration template for the SubmitEditMediaManifestJob task to configure video, audio, and subtitle tracks based on the template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>Name</c> parameter is required and must pass the <c>COMPLEX_STRING_SPACE_ALLOWED</c> format validation.</description></item>
+        /// <item><description>Other parameters are optional, but if provided, they must meet the corresponding format requirements.</description></item>
+        /// <item><description>The encryption type <c>EncryptType</c> supports a combination of multiple encryption methods. For more information, see the valid values.</description></item>
+        /// <item><description>When HLS encryption is used, <c>EncryptConfig</c> must include information such as <c>DecryptKeyUri</c>, <c>KeyServiceType</c>, <c>CipherText</c>, and <c>MasterKeyId</c>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddManifestEditTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddManifestEditTemplateResponse
+        /// </returns>
+        public async Task<AddManifestEditTemplateResponse> AddManifestEditTemplateAsync(AddManifestEditTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddManifestEditTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5633,6 +5805,158 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a specified ManifestEdit track orchestration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteManifestEditTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteManifestEditTemplateResponse
+        /// </returns>
+        public DeleteManifestEditTemplateResponse DeleteManifestEditTemplateWithOptions(DeleteManifestEditTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteManifestEditTemplate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteManifestEditTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ManifestEdit track orchestration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteManifestEditTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteManifestEditTemplateResponse
+        /// </returns>
+        public async Task<DeleteManifestEditTemplateResponse> DeleteManifestEditTemplateWithOptionsAsync(DeleteManifestEditTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteManifestEditTemplate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteManifestEditTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ManifestEdit track orchestration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteManifestEditTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteManifestEditTemplateResponse
+        /// </returns>
+        public DeleteManifestEditTemplateResponse DeleteManifestEditTemplate(DeleteManifestEditTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteManifestEditTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ManifestEdit track orchestration template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After deletion, the template and its track configurations cannot be recovered. Submitted jobs are not affected, but resubmitting a SubmitEditMediaManifestJob job with the deleted template ID will fail.</description></item>
+        /// <item><description>The custom transcoding template configurations associated with the template in the MediaConvert pipeline will also be cleared (preset templates are not affected).</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteManifestEditTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteManifestEditTemplateResponse
+        /// </returns>
+        public async Task<DeleteManifestEditTemplateResponse> DeleteManifestEditTemplateAsync(DeleteManifestEditTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteManifestEditTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes the callback method, callback URL, and event types of an event notification.</para>
         /// </summary>
         /// 
@@ -7281,14 +7605,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-based distribution of audio and video media assets. The maximum time span between the start time and end time is six months.</para>
+        /// <para>Queries the time distribution of audio and video media asset data. The maximum time span between the start time and end time is six months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the China (Shanghai) region.</description></item>
-        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only China (Shanghai).</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7343,14 +7667,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-based distribution of audio and video media assets. The maximum time span between the start time and end time is six months.</para>
+        /// <para>Queries the time distribution of audio and video media asset data. The maximum time span between the start time and end time is six months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the China (Shanghai) region.</description></item>
-        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only China (Shanghai).</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7405,14 +7729,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-based distribution of audio and video media assets. The maximum time span between the start time and end time is six months.</para>
+        /// <para>Queries the time distribution of audio and video media asset data. The maximum time span between the start time and end time is six months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the China (Shanghai) region.</description></item>
-        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only China (Shanghai).</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7431,14 +7755,14 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-based distribution of audio and video media assets. The maximum time span between the start time and end time is six months.</para>
+        /// <para>Queries the time distribution of audio and video media asset data. The maximum time span between the start time and end time is six months.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Currently, this operation is supported only in the China (Shanghai) region.</description></item>
-        /// <item><description>If you do not specify StartTime and EndTime, this operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
+        /// <item><description>Currently, the endpoint for this API operation supports only China (Shanghai).</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, this API operation returns data for the past 7 days by default. If you specify StartTime and EndTime, this API operation returns data for the specified time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21553,15 +21877,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information such as task status and filtering policies for a video purge or prefetch task.</para>
+        /// <para>Queries task information such as task status and filter policies for video refresh or prefetch tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>You can query task information for all audio or video files under a purge or prefetch task, or query task information for a specific audio or video file.</para>
+        /// <para>You can query the task information of all audio and video files under a refresh or prefetch task, or specify a single audio or video file to query its task information.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21599,15 +21923,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information such as task status and filtering policies for a video purge or prefetch task.</para>
+        /// <para>Queries task information such as task status and filter policies for video refresh or prefetch tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>You can query task information for all audio or video files under a purge or prefetch task, or query task information for a specific audio or video file.</para>
+        /// <para>You can query the task information of all audio and video files under a refresh or prefetch task, or specify a single audio or video file to query its task information.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21645,15 +21969,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information such as task status and filtering policies for a video purge or prefetch task.</para>
+        /// <para>Queries task information such as task status and filter policies for video refresh or prefetch tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>You can query task information for all audio or video files under a purge or prefetch task, or query task information for a specific audio or video file.</para>
+        /// <para>You can query the task information of all audio and video files under a refresh or prefetch task, or specify a single audio or video file to query its task information.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21671,15 +21995,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information such as task status and filtering policies for a video purge or prefetch task.</para>
+        /// <para>Queries task information such as task status and filter policies for video refresh or prefetch tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Usage notes</h3>
-        /// <para>You can query task information for all audio or video files under a purge or prefetch task, or query task information for a specific audio or video file.</para>
+        /// <para>You can query the task information of all audio and video files under a refresh or prefetch task, or specify a single audio or video file to query its task information.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The single-user QPS limit for this operation is 50 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>The queries per second (QPS) limit for a single user calling this API operation is 50. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limits</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22025,18 +22349,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
+        /// <para>Retrieves the playback URL of an audio or video file based on the media ID. You can then use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description><b>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the playback URL of ApsaraVideo VOD incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of storage outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the playback URL of ApsaraVideo VOD also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal status (the value of the Status field is Normal) can be played normally. For more information about the playback instructions and limits of playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
         /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description>If video playback is abnormal, you can invoke the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the information about the video source file is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To invoke this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22131,18 +22455,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
+        /// <para>Retrieves the playback URL of an audio or video file based on the media ID. You can then use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description><b>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the playback URL of ApsaraVideo VOD incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of storage outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the playback URL of ApsaraVideo VOD also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal status (the value of the Status field is Normal) can be played normally. For more information about the playback instructions and limits of playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
         /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description>If video playback is abnormal, you can invoke the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the information about the video source file is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To invoke this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22237,18 +22561,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
+        /// <para>Retrieves the playback URL of an audio or video file based on the media ID. You can then use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description><b>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the playback URL of ApsaraVideo VOD incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of storage outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the playback URL of ApsaraVideo VOD also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal status (the value of the Status field is Normal) can be played normally. For more information about the playback instructions and limits of playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
         /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description>If video playback is abnormal, you can invoke the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the information about the video source file is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To invoke this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22267,18 +22591,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the playback URL of an audio or video file. You can use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
+        /// <para>Retrieves the playback URL of an audio or video file based on the media ID. You can then use ApsaraVideo Player or a third-party player, such as a native, open-source, or custom player, to play the media content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the VOD playback URL incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the VOD playback URL also incurs download acceleration fees. For more information about billing, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
-        /// <item><description>Only videos in the Normal state (the Status field is set to Normal) can be played. For more information about playback instructions and limits for playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
+        /// <item><description><b>Before you invoke this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Downloading or playing videos directly from the playback URL of ApsaraVideo VOD incurs outbound traffic fees. If no accelerated domain name is configured, refer to <a href="~~188308#section-rwh-e88-f7j~~">Billing of storage outbound traffic</a>. If an accelerated domain name is configured, refer to <a href="~~188308#section-c5t-oq9-15e~~">Billing of acceleration services</a>. If you have enabled storage transfer acceleration, downloading or playing videos directly from the playback URL of ApsaraVideo VOD also incurs download acceleration fees. For billing details, refer to <a href="~~188310#section_sta_zm2_tsv~~">Billing of storage transfer acceleration</a>.</b></description></item>
+        /// <item><description>Only videos in the Normal status (the value of the Status field is Normal) can be played normally. For more information about the playback instructions and limits of playback URLs, refer to <a href="https://help.aliyun.com/document_detail/57290.html">Media playback</a>.</description></item>
         /// <item><description>When the <a href="https://help.aliyun.com/document_detail/2392368.html">media asset storage</a> type is non-standard storage, you must configure the StorageClass field in the PlayConfig parameter accordingly. For more information, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</description></item>
-        /// <item><description>If video playback is abnormal, you can call the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the video source file information is correct.
+        /// <item><description>If video playback is abnormal, you can invoke the <a href="~~GetMezzanineInfo~~">GetMezzanineInfo</a> operation to check whether the information about the video source file is correct.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
-        /// <item><description>To call this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
+        /// <item><description>To invoke this operation to generate an m3u8 tracing watermark video stream, submit a ticket to apply for activation. For more information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>. For more information about tracing watermarks, refer to <a href="https://help.aliyun.com/document_detail/2527021.html">Digital watermarking</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23137,12 +23461,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about a single audio or video file by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
+        /// <para>Retrieves the details of a single audio or video file by its ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</para>
+        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>. After receiving the event notification for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>, call this operation to retrieve the audio or video information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23188,12 +23512,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about a single audio or video file by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
+        /// <para>Retrieves the details of a single audio or video file by its ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</para>
+        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>. After receiving the event notification for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>, call this operation to retrieve the audio or video information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23239,12 +23563,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about a single audio or video file by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
+        /// <para>Retrieves the details of a single audio or video file by its ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</para>
+        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>. After receiving the event notification for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>, call this operation to retrieve the audio or video information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23262,12 +23586,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about a single audio or video file by audio or video ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
+        /// <para>Retrieves the details of a single audio or video file by its ID, including the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure an <a href="https://help.aliyun.com/document_detail/55627.html">event notification</a> for <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a>. After you receive the <a href="https://help.aliyun.com/document_detail/99935.html">AudioVideoAnalysisComplete</a> event notification, call this operation to retrieve the audio or video information.</para>
+        /// <para>After an audio or video file is uploaded, ApsaraVideo VOD analyzes the uploaded source file. Therefore, media asset information is generated asynchronously. You can configure <a href="https://help.aliyun.com/document_detail/55627.html">event notifications</a> for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>. After receiving the event notification for <a href="https://help.aliyun.com/document_detail/99935.html">audio and video analysis completion</a>, call this operation to retrieve the audio or video information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23445,12 +23769,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audio and video information.</para>
+        /// <para>Retrieves a list of video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves up to <b>5000</b> audio and video files that match the specified filter conditions (such as video status and category ID). Specify StartTime and EndTime to retrieve data in batches. To query more audio and video files or traverse all audio and video information, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</para>
+        /// <para>This operation retrieves up to the first <b>5,000</b> audio and video assets that match specified filter conditions, such as video status and category ID. Specify StartTime and EndTime to retrieve data in batches. To query more audio and video assets or traverse all audio and video information, refer to <a href="https://help.aliyun.com/document_detail/86044.html">Search for media assets</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23524,12 +23848,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audio and video information.</para>
+        /// <para>Retrieves a list of video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves up to <b>5000</b> audio and video files that match the specified filter conditions (such as video status and category ID). Specify StartTime and EndTime to retrieve data in batches. To query more audio and video files or traverse all audio and video information, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</para>
+        /// <para>This operation retrieves up to the first <b>5,000</b> audio and video assets that match specified filter conditions, such as video status and category ID. Specify StartTime and EndTime to retrieve data in batches. To query more audio and video assets or traverse all audio and video information, refer to <a href="https://help.aliyun.com/document_detail/86044.html">Search for media assets</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23603,12 +23927,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audio and video information.</para>
+        /// <para>Retrieves a list of video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves up to <b>5000</b> audio and video files that match the specified filter conditions (such as video status and category ID). Specify StartTime and EndTime to retrieve data in batches. To query more audio and video files or traverse all audio and video information, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</para>
+        /// <para>This operation retrieves up to the first <b>5,000</b> audio and video assets that match specified filter conditions, such as video status and category ID. Specify StartTime and EndTime to retrieve data in batches. To query more audio and video assets or traverse all audio and video information, refer to <a href="https://help.aliyun.com/document_detail/86044.html">Search for media assets</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23626,12 +23950,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of audio and video information.</para>
+        /// <para>Retrieves a list of video information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves up to <b>5000</b> audio and video files that match the specified filter conditions (such as video status and category ID). Specify StartTime and EndTime to retrieve data in batches. To query more audio and video files or traverse all audio and video information, see <a href="https://help.aliyun.com/document_detail/86044.html">Search for media information</a>.</para>
+        /// <para>This operation retrieves up to the first <b>5,000</b> audio and video assets that match specified filter conditions, such as video status and category ID. Specify StartTime and EndTime to retrieve data in batches. To query more audio and video assets or traverse all audio and video information, refer to <a href="https://help.aliyun.com/document_detail/86044.html">Search for media assets</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25497,12 +25821,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Live to VOD videos.</para>
+        /// <para>Queries a list of Live to VOD videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A maximum of 5,000 records that match the specified filter conditions can be retrieved.</para>
+        /// <para>You can retrieve up to 5,000 records that match the specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25572,12 +25896,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Live to VOD videos.</para>
+        /// <para>Queries a list of Live to VOD videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A maximum of 5,000 records that match the specified filter conditions can be retrieved.</para>
+        /// <para>You can retrieve up to 5,000 records that match the specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25647,12 +25971,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Live to VOD videos.</para>
+        /// <para>Queries a list of Live to VOD videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A maximum of 5,000 records that match the specified filter conditions can be retrieved.</para>
+        /// <para>You can retrieve up to 5,000 records that match the specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25670,12 +25994,12 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Live to VOD videos.</para>
+        /// <para>Queries a list of Live to VOD videos.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A maximum of 5,000 records that match the specified filter conditions can be retrieved.</para>
+        /// <para>You can retrieve up to 5,000 records that match the specified filter conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25689,6 +26013,134 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListLiveRecordVideoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManifestEditTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManifestEditTemplateResponse
+        /// </returns>
+        public ListManifestEditTemplateResponse ListManifestEditTemplateWithOptions(ListManifestEditTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListManifestEditTemplate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListManifestEditTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManifestEditTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManifestEditTemplateResponse
+        /// </returns>
+        public async Task<ListManifestEditTemplateResponse> ListManifestEditTemplateWithOptionsAsync(ListManifestEditTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListManifestEditTemplate",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListManifestEditTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManifestEditTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManifestEditTemplateResponse
+        /// </returns>
+        public ListManifestEditTemplateResponse ListManifestEditTemplate(ListManifestEditTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListManifestEditTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the created ManifestEdit track orchestration templates by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListManifestEditTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManifestEditTemplateResponse
+        /// </returns>
+        public async Task<ListManifestEditTemplateResponse> ListManifestEditTemplateAsync(ListManifestEditTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListManifestEditTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -31509,6 +31961,242 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Submits a manifest editing task for an existing adaptive bitrate streaming (AUTO) packaging output to add or remove audio, video, or subtitle tracks to or from the master playlist without re-transcoding.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
+        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitEditMediaManifestJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEditMediaManifestJobResponse
+        /// </returns>
+        public SubmitEditMediaManifestJobResponse SubmitEditMediaManifestJobWithOptions(SubmitEditMediaManifestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioTracks))
+            {
+                query["AudioTracks"] = request.AudioTracks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStreamJobId))
+            {
+                query["AutoStreamJobId"] = request.AutoStreamJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveTracks))
+            {
+                query["RemoveTracks"] = request.RemoveTracks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subtitles))
+            {
+                query["Subtitles"] = request.Subtitles;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoId))
+            {
+                query["VideoId"] = request.VideoId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoTracks))
+            {
+                query["VideoTracks"] = request.VideoTracks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitEditMediaManifestJob",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitEditMediaManifestJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a manifest editing task for an existing adaptive bitrate streaming (AUTO) packaging output to add or remove audio, video, or subtitle tracks to or from the master playlist without re-transcoding.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
+        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitEditMediaManifestJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEditMediaManifestJobResponse
+        /// </returns>
+        public async Task<SubmitEditMediaManifestJobResponse> SubmitEditMediaManifestJobWithOptionsAsync(SubmitEditMediaManifestJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioTracks))
+            {
+                query["AudioTracks"] = request.AudioTracks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStreamJobId))
+            {
+                query["AutoStreamJobId"] = request.AutoStreamJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputConfig))
+            {
+                query["OutputConfig"] = request.OutputConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveTracks))
+            {
+                query["RemoveTracks"] = request.RemoveTracks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subtitles))
+            {
+                query["Subtitles"] = request.Subtitles;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoId))
+            {
+                query["VideoId"] = request.VideoId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoTracks))
+            {
+                query["VideoTracks"] = request.VideoTracks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitEditMediaManifestJob",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitEditMediaManifestJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a manifest editing task for an existing adaptive bitrate streaming (AUTO) packaging output to add or remove audio, video, or subtitle tracks to or from the master playlist without re-transcoding.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
+        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitEditMediaManifestJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEditMediaManifestJobResponse
+        /// </returns>
+        public SubmitEditMediaManifestJobResponse SubmitEditMediaManifestJob(SubmitEditMediaManifestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitEditMediaManifestJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a manifest editing task for an existing adaptive bitrate streaming (AUTO) packaging output to add or remove audio, video, or subtitle tracks to or from the master playlist without re-transcoding.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation incrementally edits the manifest of an existing HLS/DASH AUTO stream (definition=7) without re-transcoding.</description></item>
+        /// <item><description><c>VideoId</c> and <c>JobId</c> are required parameters used for authentication isolation and consistency verification.</description></item>
+        /// <item><description>You can specify <c>TemplateId</c> to apply a predefined manifest editing template.</description></item>
+        /// <item><description>This operation supports appending, removing, and replacing audio, subtitle, and video tracks.</description></item>
+        /// <item><description>The <c>OutputConfig</c> parameter specifies the storage location of the edited manifest.</description></item>
+        /// <item><description>You can pass custom data in <c>UserData</c> as pass-through information.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitEditMediaManifestJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitEditMediaManifestJobResponse
+        /// </returns>
+        public async Task<SubmitEditMediaManifestJobResponse> SubmitEditMediaManifestJobAsync(SubmitEditMediaManifestJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitEditMediaManifestJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a media fingerprint job.</para>
         /// </summary>
         /// 
@@ -32994,7 +33682,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a category is created, you can call this operation to modify the name of the category. If the category has been annotated to some media assets, the category name annotated to those media assets is updated synchronously after the category name is modified.</para>
+        /// <para>After you create a category, you can call this operation to update the category name. If the category is already tagged on media assets, the category name tagged on these media assets is automatically updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33045,7 +33733,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a category is created, you can call this operation to modify the name of the category. If the category has been annotated to some media assets, the category name annotated to those media assets is updated synchronously after the category name is modified.</para>
+        /// <para>After you create a category, you can call this operation to update the category name. If the category is already tagged on media assets, the category name tagged on these media assets is automatically updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33096,7 +33784,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a category is created, you can call this operation to modify the name of the category. If the category has been annotated to some media assets, the category name annotated to those media assets is updated synchronously after the category name is modified.</para>
+        /// <para>After you create a category, you can call this operation to update the category name. If the category is already tagged on media assets, the category name tagged on these media assets is automatically updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33119,7 +33807,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a category is created, you can call this operation to modify the name of the category. If the category has been annotated to some media assets, the category name annotated to those media assets is updated synchronously after the category name is modified.</para>
+        /// <para>After you create a category, you can call this operation to update the category name. If the category is already tagged on media assets, the category name tagged on these media assets is automatically updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33473,18 +34161,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of media assets.</para>
+        /// <para>Modifies the storage class of a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
-        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
-        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of a media asset is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of the media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>You cannot initiate another modification task for a media asset that is being modified, nor can you produce or process it.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum storage duration of 30 days. Archive and Source File Archive require a minimum storage duration of 60 days. Cold Archive and Source File Cold Archive require a minimum storage duration of 180 days. If the storage duration does not meet the requirement when you modify the storage class of a media asset, you are charged for the remaining days of the minimum storage duration. For example, if you change the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in your own buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 
@@ -33543,18 +34231,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of media assets.</para>
+        /// <para>Modifies the storage class of a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
-        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
-        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of a media asset is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of the media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>You cannot initiate another modification task for a media asset that is being modified, nor can you produce or process it.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum storage duration of 30 days. Archive and Source File Archive require a minimum storage duration of 60 days. Cold Archive and Source File Cold Archive require a minimum storage duration of 180 days. If the storage duration does not meet the requirement when you modify the storage class of a media asset, you are charged for the remaining days of the minimum storage duration. For example, if you change the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in your own buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 
@@ -33613,18 +34301,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of media assets.</para>
+        /// <para>Modifies the storage class of a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
-        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
-        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of a media asset is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of the media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>You cannot initiate another modification task for a media asset that is being modified, nor can you produce or process it.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum storage duration of 30 days. Archive and Source File Archive require a minimum storage duration of 60 days. Cold Archive and Source File Cold Archive require a minimum storage duration of 180 days. If the storage duration does not meet the requirement when you modify the storage class of a media asset, you are charged for the remaining days of the minimum storage duration. For example, if you change the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in your own buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 
@@ -33643,18 +34331,18 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage class of media assets.</para>
+        /// <para>Modifies the storage class of a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD before you call this operation. Modifying the storage class of media assets in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
-        /// <item><description>Modifying the storage class of media assets is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
-        /// <item><description>If the current storage class of a media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
-        /// <item><description>Media assets that are being modified cannot be submitted for another modification task, production, or processing.</description></item>
-        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum of 30 days. Archive and Source File Archive require a minimum of 60 days. Cold Archive and Source File Cold Archive require a minimum of 180 days. If the storage duration does not meet the requirement when you modify the storage class, you are charged for the remaining days. For example, if you modify the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
-        /// <item><description><b>Modifying the storage class of media assets in custom buckets is not supported.</b></description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing methods and pricing of ApsaraVideo VOD. Modifying the storage class of a media asset in ApsaraVideo VOD incurs storage fees. For billing details, see <a href="~~188308#section-e97-xrp-mzz~~">Media asset storage billing</a>.</description></item>
+        /// <item><description>Modifying the storage class of a media asset is an <b>asynchronous operation</b>. A callback is sent to you after the operation is complete.</description></item>
+        /// <item><description>If the current storage class of the media asset is Archive or Cold Archive, calling this operation automatically triggers restoration. The storage class is modified after the restoration is complete. You do not need to manually call the RestoreMedia operation to restore the media asset. For Cold Archive media assets, you must specify the restoration priority. The default value is RestoreTier=Standard.</description></item>
+        /// <item><description>You cannot initiate another modification task for a media asset that is being modified, nor can you produce or process it.</description></item>
+        /// <item><description>Media assets in non-standard storage classes have minimum storage duration requirements. Infrequent Access (IA) and Source File IA require a minimum storage duration of 30 days. Archive and Source File Archive require a minimum storage duration of 60 days. Cold Archive and Source File Cold Archive require a minimum storage duration of 180 days. If the storage duration does not meet the requirement when you modify the storage class of a media asset, you are charged for the remaining days of the minimum storage duration. For example, if you change the storage class of a media asset from IA to Standard after 10 days of IA storage, you are charged for the remaining 20 days of IA storage at a time, resulting in a total charge for 30 days of IA storage.</description></item>
+        /// <item><description><b>Modifying the storage class of media assets in your own buckets is not supported.</b></description></item>
         /// </list>
         /// </description>
         /// 

@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The final review result of the audio or video file. Valid values:</para>
+            /// <para>The final moderation result of the audio or video file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: Approved.</description></item>
+            /// <item><description><b>Normal</b>: Passed.</description></item>
             /// <item><description><b>Blocked</b>: Blocked.</description></item>
             /// </list>
             /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// <para>The time when the audio or video file was created. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The time when the audio or video file was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-14T09:15:50Z</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The custom media asset information.</para>
             /// <remarks>
-            /// <para>This parameter is deprecated. The API no longer returns this parameter.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and is no longer returned when you call this operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -114,10 +114,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The status of the offline download switch. After the offline download feature is enabled, mobile users can cache videos to their local devices for offline viewing by using ApsaraVideo Player. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</para>
+            /// <para>The status of the offline download switch. After the offline download feature is enabled, mobile users can use ApsaraVideo Player to cache videos to their local devices for playback. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Offline download</a>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: enabled. Offline download is allowed.</description></item>
-            /// <item><description><b>off</b>: disabled. Offline download is not allowed.</description></item>
+            /// <item><description><b>on</b>: Enabled. Offline download is allowed.</description></item>
+            /// <item><description><b>off</b>: Disabled. Offline download is prohibited.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>The time when the audio or video file was last updated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+            /// <para>The last time when the audio or video file was updated. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-14T10:15:50Z</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ModificationTime { get; set; }
 
             /// <summary>
-            /// <para>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The length is 6 to 64 characters. The ID is unique at the user level.</para>
+            /// <para>The custom ID. The ID must be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens, and underscores. The ID must be unique per user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123-123</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             }
 
             /// <summary>
-            /// <para>The status of the audio or video file. For more information about the operations that can be performed on audio and video files in each status and the limits, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: audio and video status</a>. Valid values:</para>
+            /// <para>The status of the audio or video file. For more information about the operations that can be performed and the limits in each status, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: Audio and video status</a>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Uploading</b>: The file is being uploaded.</description></item>
             /// <item><description><b>UploadFail</b>: The file failed to be uploaded.</description></item>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <item><description><b>Transcoding</b>: The file is being transcoded.</description></item>
             /// <item><description><b>TranscodeFail</b>: The file failed to be transcoded.</description></item>
             /// <item><description><b>Blocked</b>: The file is blocked.</description></item>
-            /// <item><description><b>Normal</b>: The file is in a normal state.</description></item>
+            /// <item><description><b>Normal</b>: The file is normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -234,13 +234,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The storage class of the media asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Standard</b>: standard.</description></item>
-            /// <item><description><b>IA</b>: Infrequent Access (media asset).</description></item>
-            /// <item><description><b>Archive</b>: Archive (media asset).</description></item>
-            /// <item><description><b>ColdArchive</b>: Cold Archive (media asset).</description></item>
-            /// <item><description><b>SourceIA</b>: Infrequent Access (source file).</description></item>
-            /// <item><description><b>SourceArchive</b>: Archive (source file).</description></item>
-            /// <item><description><b>SourceColdArchive</b>: Cold Archive (source file).</description></item>
+            /// <item><description><b>Standard</b>: Standard.</description></item>
+            /// <item><description><b>IA</b>: Infrequent Access for media assets.</description></item>
+            /// <item><description><b>Archive</b>: Archive for media assets.</description></item>
+            /// <item><description><b>ColdArchive</b>: Cold Archive for media assets.</description></item>
+            /// <item><description><b>SourceIA</b>: Infrequent Access for source files.</description></item>
+            /// <item><description><b>SourceArchive</b>: Archive for source files.</description></item>
+            /// <item><description><b>SourceColdArchive</b>: Cold Archive for source files.</description></item>
             /// <item><description><b>Changing</b>: The storage class of the media asset is being changed.</description></item>
             /// <item><description><b>SourceChanging</b>: The storage class of the source file is being changed.</description></item>
             /// </list>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The transcoding template group ID.</para>
+            /// <para>The ID of the transcoding template group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9ae2af636ca64835b0c10412f448****</para>

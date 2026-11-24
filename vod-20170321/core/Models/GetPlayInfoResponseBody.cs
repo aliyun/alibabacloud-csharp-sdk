@@ -139,9 +139,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public GetPlayInfoResponseBodyVideoBase VideoBase { get; set; }
         public class GetPlayInfoResponseBodyVideoBase : TeaModel {
             /// <summary>
-            /// <para>The URL of the audio or video thumbnail.</para>
+            /// <para>The URL of the thumbnail for the audio or video file.</para>
             /// <remarks>
-            /// <para>If you need to obtain the thumbnail URL in real time after a video is uploaded, you can configure VOD callbacks. For more information, refer to <a href="https://help.aliyun.com/document_detail/67214.html">HTTP callbacks</a> and <a href="https://help.aliyun.com/document_detail/57337.html">Snapshot completion event</a>.</para>
+            /// <para>If you need to obtain the thumbnail URL in real time after a video is uploaded, you can configure an ApsaraVideo VOD callback. For more information, refer to <a href="https://help.aliyun.com/document_detail/67214.html">HTTP callbacks</a> and <a href="https://help.aliyun.com/document_detail/57337.html">Video snapshot completion event</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string CoverURL { get; set; }
 
             /// <summary>
-            /// <para>The time when the audio or video file was created. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the audio or video file was created. The time follows the ISO 8601 standard in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-06-26T06:38:48Z</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaType { get; set; }
 
             /// <summary>
-            /// <para>The status of the audio or video file. For more information about the valid values and descriptions, refer to <a href="~~52839#title-vqg-8cz-7p8~~">Status: Audio and video status</a>.</para>
+            /// <para>The status of the audio or video file. For more information about the valid values and descriptions, refer to <a href="~~52839#title-vqg-8cz-7p8~~">Status: media status</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -206,17 +206,17 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage class of the media asset. Valid values:</para>
+            /// <para>The media storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Standard</b>: Standard.</description></item>
-            /// <item><description><b>IA</b>: Infrequent Access.</description></item>
-            /// <item><description><b>Archive</b>: Archive.</description></item>
-            /// <item><description><b>ColdArchive</b>: Cold Archive.</description></item>
-            /// <item><description><b>SourceIA</b>: Infrequent Access for mezzanine files.</description></item>
-            /// <item><description><b>SourceArchive</b>: Archive for mezzanine files.</description></item>
-            /// <item><description><b>SourceColdArchive</b>: Cold Archive for mezzanine files.</description></item>
-            /// <item><description><b>Changing</b>: The storage class of the media asset is being changed.</description></item>
-            /// <item><description><b>SourceChanging</b>: The storage class of the mezzanine file is being changed.</description></item>
+            /// <item><description><b>Standard</b>: standard.</description></item>
+            /// <item><description><b>IA</b>: infrequent access for media assets.</description></item>
+            /// <item><description><b>Archive</b>: archive for media assets.</description></item>
+            /// <item><description><b>ColdArchive</b>: cold archive for media assets.</description></item>
+            /// <item><description><b>SourceIA</b>: infrequent access for mezzanine files.</description></item>
+            /// <item><description><b>SourceArchive</b>: archive for mezzanine files.</description></item>
+            /// <item><description><b>SourceColdArchive</b>: cold archive for mezzanine files.</description></item>
+            /// <item><description><b>Changing</b>: the storage type of the media asset is being changed.</description></item>
+            /// <item><description><b>SourceChanging</b>: the storage type of the mezzanine file is being changed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <para>The title of the audio or video file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud VOD</para>
+            /// <para>ApsaraVideo VOD</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The category name.</para>
         /// <list type="bullet">
         /// <item><description>It can be up to 64 bytes in length.</description></item>
-        /// <item><description>It is encoded in UTF-8.</description></item>
+        /// <item><description>It must be encoded in UTF-8.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The ID of the parent category.</para>
-        /// <para>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Category Management</b> &gt; <b>Audio/Video/Image Categories</b> or <b>Short Video Material Categories</b> to view the category ID.</para>
+        /// <para>You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration management</b> &gt; <b>Media asset management configuration</b> &gt; <b>Category management</b> &gt; <b>Audio, video, and image categories</b> or <b>Short video material categories</b> to view the category ID.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>If you specify this parameter, a subcategory is created under the specified parent category. If you do not specify this parameter, a level-1 category is created.</description></item>

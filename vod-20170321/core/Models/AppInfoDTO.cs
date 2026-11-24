@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class AppInfoDTO : TeaModel {
         /// <summary>
         /// <para>The application name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vod-demo-app</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -32,6 +35,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The creation time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-02T03:04:05Z</para>
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
@@ -39,6 +45,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The creation time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-02 03:04:05</para>
         /// </summary>
         [NameInMap("GmtCreate")]
         [Validation(Required=false)]
@@ -46,6 +55,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The update time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-02 03:04:05</para>
         /// </summary>
         [NameInMap("GmtModified")]
         [Validation(Required=false)]
@@ -53,6 +65,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The application ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3ba9c7d21f4e6a80</para>
         /// </summary>
         [NameInMap("ItemId")]
         [Validation(Required=false)]
@@ -60,13 +75,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The update time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-02T03:04:05Z</para>
         /// </summary>
         [NameInMap("ModificationTime")]
         [Validation(Required=false)]
         public string ModificationTime { get; set; }
 
         /// <summary>
-        /// <para>The list of platform information for the application.</para>
+        /// <para>The list of platform information included in the application.</para>
         /// </summary>
         [NameInMap("Platforms")]
         [Validation(Required=false)]
@@ -74,13 +92,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public class AppInfoDTOPlatforms : TeaModel {
             /// <summary>
             /// <para>The platform ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3ba9c7d21f4e6a81</para>
             /// </summary>
             [NameInMap("ItemId")]
             [Validation(Required=false)]
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>The list of licenses.</para>
+            /// <para>The authorization list.</para>
             /// </summary>
             [NameInMap("LicenseItemIds")]
             [Validation(Required=false)]
@@ -88,6 +109,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>The package name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>com.example.vodapp</para>
             /// </summary>
             [NameInMap("PkgName")]
             [Validation(Required=false)]
@@ -95,6 +119,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>The package signature.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8e610rzjg613h0u58v8473d029h7</para>
             /// </summary>
             [NameInMap("PkgSignature")]
             [Validation(Required=false)]
@@ -102,6 +129,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>The platform type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("PlatformType")]
             [Validation(Required=false)]
@@ -109,6 +139,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>The platform type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -118,6 +151,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>The user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2544469002080159</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

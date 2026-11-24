@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
     public class LicenseInstanceAppDTO : TeaModel {
         /// <summary>
         /// <para>appId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0d3f2a7c1b9e4f58</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>beginOn</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-02T03:04:05Z</para>
         /// </summary>
         [NameInMap("BeginOn")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>contractNo</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>782590648253664</para>
         /// </summary>
         [NameInMap("ContractNo")]
         [Validation(Required=false)]
@@ -32,6 +41,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>creationTime</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-02T03:04:05Z</para>
         /// </summary>
         [NameInMap("CreationTime")]
         [Validation(Required=false)]
@@ -39,6 +51,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>expiredOn</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2027-01-02T03:04:05Z</para>
         /// </summary>
         [NameInMap("ExpiredOn")]
         [Validation(Required=false)]
@@ -46,6 +61,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>instanceId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>lsn_9f2a1c7b3d8e4f56</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -53,6 +71,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>itemId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3ba9c7d21f4e6a80</para>
         /// </summary>
         [NameInMap("ItemId")]
         [Validation(Required=false)]
@@ -67,6 +88,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public class LicenseInstanceAppDTOLicenseConfigs : TeaModel {
             /// <summary>
             /// <para>businessType</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Player</para>
             /// </summary>
             [NameInMap("BusinessType")]
             [Validation(Required=false)]
@@ -74,6 +98,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>featureIds</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4326</para>
             /// </summary>
             [NameInMap("FeatureIds")]
             [Validation(Required=false)]
@@ -88,6 +115,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>sdkId</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>150</para>
             /// </summary>
             [NameInMap("SdkId")]
             [Validation(Required=false)]
@@ -95,6 +125,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>sdkName</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VOD Player SDK</para>
             /// </summary>
             [NameInMap("SdkName")]
             [Validation(Required=false)]
@@ -102,6 +135,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>subscription</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Standard_Bundling</para>
             /// </summary>
             [NameInMap("Subscription")]
             [Validation(Required=false)]
@@ -109,6 +145,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>subscriptionImp</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Standard</para>
             /// </summary>
             [NameInMap("SubscriptionImp")]
             [Validation(Required=false)]
@@ -116,6 +155,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
             /// <summary>
             /// <para>subscriptionPkg</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Standard_Bundling</para>
             /// </summary>
             [NameInMap("SubscriptionPkg")]
             [Validation(Required=false)]
@@ -125,6 +167,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>modificationTime</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-02T03:04:05Z</para>
         /// </summary>
         [NameInMap("ModificationTime")]
         [Validation(Required=false)]
@@ -132,6 +177,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>status</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -139,6 +187,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
         /// <summary>
         /// <para>userId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2544469002080159</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

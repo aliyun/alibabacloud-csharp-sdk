@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class UpdateMediaStorageClassRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow modifying the storage class of media assets whose storage duration does not meet the minimum requirement. Valid values:</para>
+        /// <para>Specifies whether to allow the storage class modification for media assets that do not meet the minimum storage duration requirement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: allows the modification.</description></item>
-        /// <item><description><b>false</b> (default): does not allow the modification.</description></item>
+        /// <item><description><b>true</b>: Allowed.</description></item>
+        /// <item><description><b>false</b> (default): Not allowed.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the storage duration of a media asset does not meet the minimum requirement and you force the storage class modification, additional data retrieval fees are incurred.</para>
+        /// <para>If the storage duration of the media asset is insufficient, forcing a storage class modification incurs additional data retrieval fees.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The media asset IDs, which are the audio or video IDs (VideoId). Separate multiple IDs with commas (,). You can specify up to 20 IDs. You can obtain the IDs by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>For audio or video files uploaded in the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Assets</b> &gt; <b>Audio/Video</b> to view the audio or video IDs.</description></item>
-        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Obtain the upload URL and credential for audio and video files</a> operation, the value of the VideoId response parameter is the media asset ID.</description></item>
+        /// <item><description>For audio or video files uploaded through the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Assets</b> &gt; <b>Audio/Video</b> to view the audio or video IDs.</description></item>
+        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">Obtain upload URLs and credentials for audio and video files</a> operation, the value of the VideoId response parameter is the media asset ID.</description></item>
         /// <item><description>After an audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">Search for media asset information</a> operation to query the media asset ID. The value of the VideoId response parameter is the media asset ID.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The restoration priority. This parameter is required only for Cold Archive media assets. If you do not specify this parameter, the default value <b>Standard</b> is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Expedited</b>: Expedited</description></item>
-        /// <item><description><b>Standard</b> (default): Standard</description></item>
-        /// <item><description><b>Bulk</b>: Bulk</description></item>
+        /// <item><description><b>Expedited</b>: Expedited.</description></item>
+        /// <item><description><b>Standard</b> (default): Standard.</description></item>
+        /// <item><description><b>Bulk</b>: Bulk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: Standard</description></item>
-        /// <item><description><b>IA</b>: Infrequent Access (IA)</description></item>
-        /// <item><description><b>Archive</b>: Archive</description></item>
-        /// <item><description><b>ColdArchive</b>: Cold Archive</description></item>
+        /// <item><description><b>Standard</b>: Standard.</description></item>
+        /// <item><description><b>IA</b>: Infrequent Access (IA).</description></item>
+        /// <item><description><b>Archive</b>: Archive.</description></item>
+        /// <item><description><b>ColdArchive</b>: Cold Archive.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

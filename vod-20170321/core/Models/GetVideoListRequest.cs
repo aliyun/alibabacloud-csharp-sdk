@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetVideoListRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID. You can obtain the category ID by using the following methods:</para>
+        /// <para>The category ID. You can obtain the category ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Management Configuration</b> &gt; <b>Category Management</b> to view the category ID.</description></item>
-        /// <item><description>Obtain the value of CateId from the response when you call the <a href="https://help.aliyun.com/document_detail/56401.html">CreateCategory</a> operation.</description></item>
-        /// <item><description>Obtain the value of CateId from the response when you call the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation.</description></item>
+        /// <item><description>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Configuration</b> &gt; <b>Category Management</b> to view the category ID.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/56401.html">Create a category</a> operation to create a category. The category ID is the value of the CateId response parameter.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/56406.html">Get categories and subcategories</a> operation to query categories. The category ID is the value of the CateId response parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public long? CateId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query based on CreationTime. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The end time of the creation time, which must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:59:00Z</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The current page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of custom IDs. Specify one or more custom IDs separated by commas (,). A maximum of 20 IDs are supported.</para>
+        /// <para>The list of custom IDs. You can specify one or more custom IDs separated by commas (,). You can specify up to 20 custom IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123-123,1234-1234</para>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string ReferenceIds { get; set; }
 
         /// <summary>
-        /// <para>The sorting rule of the results. Valid values:</para>
+        /// <para>The sorting method of the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreationTime:Desc</b> (default): sorted by creation time in descending order.</description></item>
-        /// <item><description><b>CreationTime:Asc</b>: sorted by creation time in ascending order.</description></item>
+        /// <item><description><b>CreationTime:Desc</b> (default): Sort by creation time in descending order.</description></item>
+        /// <item><description><b>CreationTime:Asc</b>: Sort by creation time in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query based on CreationTime (creation time). Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The start time of the creation time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-01-11T12:00:00Z</para>
@@ -89,19 +89,19 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The video status. You can specify multiple statuses. Separate multiple statuses with commas (,). Valid values:</para>
+        /// <para>The video status. You can specify multiple statuses separated by commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Uploading</b>: The video is being uploaded.</description></item>
         /// <item><description><b>UploadFail</b>: The video failed to be uploaded.</description></item>
-        /// <item><description><b>UploadSucc</b>: The video has been uploaded.</description></item>
+        /// <item><description><b>UploadSucc</b>: The video is uploaded.</description></item>
         /// <item><description><b>Transcoding</b>: The video is being transcoded.</description></item>
         /// <item><description><b>TranscodeFail</b>: The video failed to be transcoded.</description></item>
         /// <item><description><b>Checking</b>: The video is being reviewed.</description></item>
         /// <item><description><b>Blocked</b>: The video is blocked.</description></item>
-        /// <item><description><b>Normal</b>: The video is in a normal state.</description></item>
+        /// <item><description><b>Normal</b>: The video is normal.</description></item>
         /// <item><description><b>ProduceFail</b>: The video failed to be produced.</description></item>
         /// </list>
-        /// <para>For more information about video statuses and related limits, see <a href="~~52839#section-p7c-jgy-070~~">Status: video status</a>.</para>
+        /// <para>For more information about the definitions and limits of video statuses, refer to <a href="~~52839#section-p7c-jgy-070~~">Status: video status</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Uploading,Normal</para>

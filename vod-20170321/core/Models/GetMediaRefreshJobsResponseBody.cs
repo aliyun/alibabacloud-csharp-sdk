@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaRefreshJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of audio or video purge or prefetch task information.</para>
+        /// <para>The list of audio and video refresh or prefetch task information.</para>
         /// </summary>
         [NameInMap("MediaRefreshJobs")]
         [Validation(Required=false)]
         public List<GetMediaRefreshJobsResponseBodyMediaRefreshJobs> MediaRefreshJobs { get; set; }
         public class GetMediaRefreshJobsResponseBodyMediaRefreshJobs : TeaModel {
             /// <summary>
-            /// <para>The error code. This field is returned when the purge or prefetch task fails to be submitted.</para>
+            /// <para>The error code.
+            /// This field is returned when the refresh or prefetch task fails to be submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PreloadQueueFull</para>
@@ -27,7 +28,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message. This field is returned when the purge or prefetch task fails to be submitted.</para>
+            /// <para>The error message.
+            /// This field is returned when the refresh or prefetch task fails to be submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Preload queue is full, please try again later!</para>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The filtering policy for playback streams. The value is in JSON format and contains the request parameters of the <a href="https://help.aliyun.com/document_detail/431095.html">SubmitMediaRefreshJob</a> operation.</para>
+            /// <para>The filter policy for playback streams. The value is in JSON format and contains the request parameters of the <a href="https://help.aliyun.com/document_detail/431095.html">Submit audio and video refresh or prefetch tasks</a> API operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Formats&quot;:&quot;mp4,m3u8&quot;, &quot;Definitions&quot;:&quot;HD,SD&quot;,  &quot; StreamType&quot;:&quot;video&quot;,  &quot;ResultType&quot;:&quot;Single&quot;,  &quot; SliceFlag&quot;:false, &quot;SliceCount&quot;: 3}</para>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last modified.</para>
+            /// <para>The time when the task was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-21 08:23:22</para>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the audio or video purge or prefetch task.</para>
+            /// <para>The task ID of the audio or video refresh or prefetch task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>41d465e31957****</para>
@@ -89,8 +91,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b>: succeeded</description></item>
-            /// <item><description><b>fail</b>: failed</description></item>
+            /// <item><description><b>success</b>: success</description></item>
+            /// <item><description><b>fail</b>: failure</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The playback URLs that were successfully purged or prefetched.</para>
+            /// <para>The playback URLs that are successfully refreshed or prefetched.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8">https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8</a></para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string SuccessPlayUrls { get; set; }
 
             /// <summary>
-            /// <para>The task IDs for the purge or prefetch of playback URLs. Each URL corresponds to one task ID. You can use the task ID to call the <a href="https://help.aliyun.com/document_detail/69214.html">DescribeVodRefreshTasks</a> operation to query the purge or prefetch status of each playback URL.</para>
+            /// <para>The task IDs for refreshing or prefetching the playback URLs. Each URL corresponds to one task ID. You can use the task ID to call the <a href="https://help.aliyun.com/document_detail/69214.html">DescribeVodRefreshTasks</a> API operation to query the refresh or prefetch status of each playback URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70422****,9524****</para>
@@ -123,7 +125,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Refresh</b>: purge</description></item>
+            /// <item><description><b>Refresh</b>: refresh</description></item>
             /// <item><description><b>Preload</b>: prefetch</description></item>
             /// </list>
             /// 
@@ -135,7 +137,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The UserData information specified when the purge or prefetch task was submitted.</para>
+            /// <para>The UserData information passed when the refresh or prefetch task is submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</para>

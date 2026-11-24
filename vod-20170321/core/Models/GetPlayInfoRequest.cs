@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <summary>
         /// <para>The URL of the live comment mask data. Valid value: <b>danmu</b>.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <c>outputType</c> is set to <c>cdn</c>.</para>
+        /// <para>This parameter takes effect only when OutputType is set to cdn.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <list type="bullet">
         /// <item><description><para>When OutputType is set to <b>cdn</b>:</para>
         /// <list type="bullet">
-        /// <item><description>The playback URL expires periodically only if URL authentication is enabled. Otherwise, the URL remains permanently valid. For more information about how to enable and configure URL authentication, refer to <a href="https://help.aliyun.com/document_detail/86090.html">URL authentication</a>.</description></item>
+        /// <item><description>The playback URL expires periodically only if URL authentication is enabled. Otherwise, the URL is permanently valid. For more information about how to enable and configure URL authentication, refer to <a href="https://help.aliyun.com/document_detail/86090.html">URL authentication</a>.</description></item>
         /// <item><description>Minimum value: <b>1</b>.</description></item>
         /// <item><description>Maximum value: unlimited.</description></item>
         /// <item><description>Default value: If this parameter is not specified, the default validity period configured for URL authentication is used.</description></item>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// </description></item>
         /// <item><description><para>When OutputType is set to <b>oss</b>:</para>
         /// <list type="bullet">
-        /// <item><description>The playback URL expires periodically only if the storage permission is set to private. Otherwise, the URL remains permanently valid.</description></item>
+        /// <item><description>The playback URL expires periodically only if the storage permission is set to private. Otherwise, the URL is permanently valid.</description></item>
         /// <item><description>Minimum value: <b>1</b>.</description></item>
-        /// <item><description>Maximum value: To reduce security risks of the origin server, the maximum value is <b>604800</b> (7 days) when the audio or video file is stored in a VOD bucket, and <b>129600</b> (36 hours) when the file is stored in a user-owned OSS bucket. If the maximum value does not meet your requirements, you can set OutputType to <b>cdn</b> and configure URL authentication to set a longer validity period.</description></item>
+        /// <item><description>Maximum value: To reduce security risks of the origin server, the maximum value is <b>604800</b> (7 days) when the audio or video file is stored in an ApsaraVideo VOD bucket, and <b>129600</b> (36 hours) when the file is stored in a user-owned OSS bucket. If the maximum value does not meet your requirements, you can set OutputType to <b>cdn</b> and configure URL authentication to set a longer validity period.</description></item>
         /// <item><description>Default value: If this parameter is not specified, the value is <b>3600</b>.</description></item>
         /// </list>
         /// </description></item>
@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The definition of the video stream. Separate multiple definitions with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>FD</b>: fluent.</description></item>
-        /// <item><description><b>LD</b>: low definition.</description></item>
-        /// <item><description><b>SD</b>: standard definition.</description></item>
-        /// <item><description><b>HD</b>: high definition.</description></item>
+        /// <item><description><b>LD</b>: standard definition.</description></item>
+        /// <item><description><b>SD</b>: high definition.</description></item>
+        /// <item><description><b>HD</b>: ultra-high definition.</description></item>
         /// <item><description><b>OD</b>: original definition.</description></item>
         /// <item><description><b>2K</b>: 2K.</description></item>
         /// <item><description><b>4K</b>: 4K.</description></item>
-        /// <item><description><b>SQ</b>: standard audio quality.</description></item>
-        /// <item><description><b>HQ</b>: high audio quality.</description></item>
+        /// <item><description><b>SQ</b>: standard sound quality.</description></item>
+        /// <item><description><b>HQ</b>: high sound quality.</description></item>
         /// <item><description><b>AUTO</b>: adaptive bitrate.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>By default, streams of all definitions are retrieved.</description></item>
-        /// <item><description>When you generate a tracing watermark, this parameter is required and must be consistent with the definition configured for tracing watermark transcoding.</description></item>
-        /// <item><description>The AUTO definition is output only when transcoding packaging is configured in the transcoding template. For more information, refer to <a href="~~52839#title-4fk-cg8-gzx~~">PackageSetting: Transcoding packaging settings</a>.</description></item>
+        /// <item><description>When a tracing watermark is generated, this parameter is required and must be consistent with the definition configured for tracing watermark transcoding.</description></item>
+        /// <item><description>The AUTO format is output only when transcoding packaging is configured in the transcoding template. For more information, refer to <a href="~~52839#title-4fk-cg8-gzx~~">PackageSetting: transcoding packaging settings</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>The type of the digital watermark. Valid values:</para>
+        /// <para>The digital watermarking type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>TraceMark: tracing watermark.</description></item>
         /// <item><description>CopyrightMark: copyright watermark.</description></item>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>By default, streams of all formats are retrieved.</description></item>
-        /// <item><description>The mpd format is output only when the <c>dash</c> container format is configured in the transcoding template. For more information, refer to <a href="~~52839#title-7rr-3hj-gy5~~">Container: Container format</a>.</description></item>
+        /// <item><description>The mpd format is output only when the dash container format is configured in the transcoding template. For more information, refer to <a href="~~52839#title-7rr-3hj-gy5~~">Container: container format</a>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -144,8 +144,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         /// <para>The custom playback settings. The value is a JSON string. You can specify the domain name for playback. For more information about how to construct the parameter, refer to <a href="~~86952#section-9g7-s9b-v7z~~">PlayConfig</a>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If PlayConfig is not specified or the <c>PlayDomain</c> field in PlayConfig is not specified, the operation uses the default domain name configured for VOD. If no default domain name is configured, the operation queries domain names in descending order of modification time and uses the most recently modified domain name as the playback domain name. To prevent an unexpected domain name from being returned, we recommend that you configure a default playback domain name. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Storage Management</b> &gt; <b>Manage</b> &gt; <b>Domain names that redirect back-to-origin traffic to this storage address</b> to configure the default playback domain name.</description></item>
-        /// <item><description>When the <c>EncryptType</c> field in PlayConfig is set to <c>AliyunVoDEncryption</c>, the playback URL of the privately encrypted stream is not returned by default to ensure video security. To return the playback URL of the privately encrypted stream, you must also set the <c>ResultType</c> parameter to <c>Multiple</c>.</description></item>
+        /// <item><description>If PlayConfig is not specified or the PlayDomain field in PlayConfig is not specified, the operation uses the default domain name configured in ApsaraVideo VOD by default. If no default domain name is configured, the operation queries domain names in descending order of modification time and uses the most recently modified domain name as the playback domain name. To prevent an unexpected domain name from being returned, we recommend that you configure a default playback domain name. You can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Configuration Management</b> &gt; <b>Media Asset Management Configuration</b> &gt; <b>Storage Management</b> &gt; <b>Manage</b> &gt; <b>Domain Names that Route Back-to-origin Traffic to This Storage Address</b> to configure the default playback domain name.</description></item>
+        /// <item><description>When the EncryptType parameter in PlayConfig is set to AliyunVoDEncryption, the playback URL of the private encrypted stream is not returned by default to ensure video security. To return the playback URL of the private encrypted stream, you must also set the ResultType parameter to Multiple.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string PlayConfig { get; set; }
 
         /// <summary>
-        /// <para>The CDN reauthentication parameter, which is a JSON string. When Type A signing of URL authentication is enabled, you can use this parameter to set the <c>uid</c> and <c>rand</c> fields of the authenticated URL. For more information, refer to <a href="https://help.aliyun.com/document_detail/2249352.html">Type A signing</a>.</para>
+        /// <para>The CDN reauthentication parameter, which is a JSON string. When type A signing of URL authentication is enabled, you can use this parameter to set the uid and rand values of the authenticated URL. For more information, refer to <a href="https://help.aliyun.com/document_detail/2249352.html">Type A signing</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;uid&quot;:&quot;12345&quot;,&quot;rand&quot;:&quot;abckljd&quot;}</para>
@@ -206,10 +206,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string StreamType { get; set; }
 
         /// <summary>
-        /// <para>The custom digital watermark information.</para>
+        /// <para>The custom digital watermarking information.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>DigitalWatermarkType</c> is set to <c>TraceMark</c>, you can use this parameter to set the tracing watermark information for the video and return the video stream that contains the watermark information. Only English letters, digits, and Chinese characters are supported. A maximum of 1,024 characters are supported.</description></item>
-        /// <item><description>When <c>DigitalWatermarkType</c> is set to <c>CopyrightMark</c>, <c>Trace</c> corresponds to the <b>Watermark Text</b> configured when the watermark template is created. You can use this parameter to query and return the video stream with the specified watermark text.</description></item>
+        /// <item><description>When DigitalWatermarkType is set to TraceMark, you can pass this parameter to set the tracing watermark information for the video and return the video stream that contains the watermark information. Only English letters, digits, and Chinese characters are supported. A maximum of 1,024 characters are supported.</description></item>
+        /// <item><description>When DigitalWatermarkType is set to CopyrightMark, Trace corresponds to the <b>Watermark Text</b> set when the watermark template is created. By passing this parameter, you can query and return the video stream with the specified watermark text.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,11 +220,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string Trace { get; set; }
 
         /// <summary>
-        /// <para>The audio or video ID. You can specify only one ID. You can obtain the ID by using one of the following methods:</para>
+        /// <para>The ID of the audio or video file. You can specify only one ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>For audio or video files uploaded in the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Assets</b> &gt; <b>Audio/Video</b> to view the ID.</description></item>
-        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation to upload an audio or video file, the ID is the value of the VideoId response parameter.</description></item>
-        /// <item><description>After an audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the ID. The ID is the value of the VideoId response parameter.</description></item>
+        /// <item><description>For an audio or video file uploaded in the console, log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <b>Media Library</b> &gt; <b>Audio/Video</b> to view the ID.</description></item>
+        /// <item><description>When you upload an audio or video file by calling the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation, the ID is the value of the VideoId response parameter.</description></item>
+        /// <item><description>After an audio or video file is uploaded, you can call the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation to query the ID, which is the value of the VideoId response parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
