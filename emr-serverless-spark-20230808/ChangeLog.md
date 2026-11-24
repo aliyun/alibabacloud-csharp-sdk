@@ -1,3 +1,6 @@
+2026-11-24 Version: 2.5.0
+- Generated csharp 2023-08-08 for emr-serverless-spark.
+
 2026-11-17 Version: 2.4.0
 - Support API ListRegions.
 - Update API CreateLivyCompute: add request parameters body.livyReleaseVersion.

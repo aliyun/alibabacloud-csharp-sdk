@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public UpdateLivyComputeRequestAutoStartConfiguration AutoStartConfiguration { get; set; }
         public class UpdateLivyComputeRequestAutoStartConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically start the gateway after creation.</para>
+            /// <para>Specifies whether to automatically start the gateway after creation. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Yes.</description></item>
             /// <item><description>false: No.</description></item>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public UpdateLivyComputeRequestAutoStopConfiguration AutoStopConfiguration { get; set; }
         public class UpdateLivyComputeRequestAutoStopConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to allow automatic stopping.</para>
+            /// <para>Specifies whether to allow automatic stopping. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Yes.</description></item>
             /// <item><description>false: No.</description></item>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The number of CPU cores for the Livy server.</para>
+        /// <para>The number of CPU cores for the Livy server. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string CpuLimit { get; set; }
 
         /// <summary>
-        /// <para>The Spark DPI engine database engine version number.</para>
+        /// <para>The Spark DPI engine version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-4.3.0 (Spark 3.5.2, Scala 2.12)</para>
@@ -128,6 +128,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Fusion { get; set; }
 
         /// <summary>
+        /// <para>The Livy DPI engine version. This is a new parameter used to replace livyVersion.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.9.0</para>
         /// </summary>
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LivyVersion { get; set; }
 
         /// <summary>
-        /// <para>The memory size of the Livy server.</para>
+        /// <para>The memory size of the Livy server. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>4Gi</description></item>
         /// <item><description>8Gi</description></item>
@@ -192,7 +194,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The network connectivity name.</para>
+        /// <para>The network connection name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -212,7 +214,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string QueueName { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> The Spark DPI engine database engine version number. Use displayReleaseVersion instead.</para>
+        /// <para><b>[Deprecated]</b> The Spark DPI engine version number. Use displayReleaseVersion instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-4.3.0 (Spark 3.5.2, Scala 2.12, Java Runtime)</para>

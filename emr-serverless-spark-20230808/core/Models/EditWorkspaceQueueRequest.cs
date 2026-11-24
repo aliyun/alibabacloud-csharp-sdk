@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<string> GpuSpec { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the subscription GPU quota instance.</para>
+        /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <para>The maximum number of CUs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.5</para>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("maxCu")]
             [Validation(Required=false)]

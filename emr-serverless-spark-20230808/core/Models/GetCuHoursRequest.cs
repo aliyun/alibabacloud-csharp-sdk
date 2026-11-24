@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetCuHoursRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query time range.</para>
+        /// <para>The end time of the query range.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query time range.</para>
+        /// <para>The start time of the query range.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
