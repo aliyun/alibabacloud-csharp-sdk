@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProductRequest : TeaModel {
         /// <summary>
-        /// <para>AliUid.</para>
+        /// <para>AliUid</para>
         /// 
         /// <b>Example:</b>
         /// <para>190********569</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string AliUid { get; set; }
 
         /// <summary>
-        /// <para>The commodity code of the product.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the product draft. In most cases, you do not need to query the product draft. Product drafts are used to query product information before the product is officially listed for sale.</para>
+        /// <para>Specifies whether to query the product draft. Typically, you do not need to query the product draft. Product drafts are used for queries before a product is officially listed for sale.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

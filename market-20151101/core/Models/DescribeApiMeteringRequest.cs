@@ -31,11 +31,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: subscription package.</description></item>
-        /// <item><description>2: resource plan.</description></item>
-        /// </list>
+        /// <para>The type. Valid values: 1: package. 2: resource plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

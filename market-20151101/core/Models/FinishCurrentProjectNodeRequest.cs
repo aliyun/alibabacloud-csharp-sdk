@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>收货地址已提交，请尽快安排发货。</para>
+        /// <para>The shipping address has been submitted. Arrange delivery as soon as possible.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The form content to submit, in JSON format. Example: {&quot;TFD0&quot;:&quot;mr.go&quot;,&quot;TFD1&quot;:&quot;1330010xxxx&quot;,&quot;TFD2&quot;:&quot;Chaoyang District, Wangjing Street, Block x, No. y&quot;}.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;TFD0&quot;: &quot;Mr.Go&quot;,&quot;TFD1&quot;: &quot;1330010xxxx&quot;,&quot;TFD2&quot;: &quot;北京市朝阳区望京街道X区Y号&quot; }</para>
+        /// <para>{&quot;TFD0&quot;: &quot;Mr.Go&quot;,&quot;TFD1&quot;: &quot;1330010xxxx&quot;,&quot;TFD2&quot;: &quot;Wangjing Street, Block X, No. Y, Chaoyang District, Beijing&quot; }</para>
         /// </summary>
         [NameInMap("TemplateForm")]
         [Validation(Required=false)]

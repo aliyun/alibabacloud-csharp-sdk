@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProjectAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e03a9f78-7b40-4fb3-a015-350913e37e3f</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of project attachments.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeProjectAttachmentsResponseBodyResult> Result { get; set; }
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string AttachmentToken { get; set; }
 
             /// <summary>
-            /// <para>The attachment type.</para>
+            /// <para>The type of the attachment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>File</para>
@@ -47,14 +50,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The content text.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The file access URL.</para>
+            /// <para>The access URL of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&OSSAccessKeyId=wI2r*********&Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D">http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&amp;OSSAccessKeyId=wI2r*********&amp;Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D</a></para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? FileLinkGmtExpired { get; set; }
 
             /// <summary>
-            /// <para>The file name.</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f8-test-perview.jpeg</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The file size, in bytes.</para>
+            /// <para>The size of the file (in bytes).</para>
             /// 
             /// <b>Example:</b>
             /// <para>109124</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the process node where the attachment was uploaded.</para>
+            /// <para>The ID of the flow node where the attachment was uploaded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8472</para>
@@ -124,10 +127,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// <para>The node name.</para>
+            /// <para>The name of the node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>等待服务开通</para>
+            /// <para>Waiting for service activation</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -147,7 +150,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The name of the operator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>**科技技术有限公司</para>
+            /// <para>** Technology Co., Ltd</para>
             /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string OperatorRole { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the process node.</para>
+            /// <para>The sequence number of the flow node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -176,7 +179,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
-        /// <para>The success status identifier.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

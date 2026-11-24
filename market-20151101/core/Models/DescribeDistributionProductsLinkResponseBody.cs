@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The name of the promoted product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试商品</para>
+            /// <para>Test product</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

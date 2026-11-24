@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The reason for the audit failure. This parameter is returned when QueryDraft is set to true.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>功能验收不通过</para>
+        /// <para>Feature acceptance failed</para>
         /// </summary>
         [NameInMap("AuditFailMsg")]
         [Validation(Required=false)]
@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <summary>
         /// <para>The audit status. This parameter is returned when QueryDraft is set to true. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>draft: not submitted</description></item>
-        /// <item><description>security_ing: security audit in progress</description></item>
-        /// <item><description>security_fail: security audit failed</description></item>
-        /// <item><description>function_ing: functional audit in progress</description></item>
-        /// <item><description>function_fail: functional audit failed</description></item>
-        /// <item><description>info_ing: product information audit in progress</description></item>
-        /// <item><description>info_fail: product information audit failed</description></item>
-        /// <item><description>success: succeeded.</description></item>
+        /// <item><description>draft: Not submitted.</description></item>
+        /// <item><description>security_ing: Under security audit.</description></item>
+        /// <item><description>security_fail: Security audit failed.</description></item>
+        /// <item><description>function_ing: Under feature audit.</description></item>
+        /// <item><description>function_fail: Feature audit failed.</description></item>
+        /// <item><description>info_ing: Under product information audit.</description></item>
+        /// <item><description>info_fail: Product information audit failed.</description></item>
+        /// <item><description>success: Succeeded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? AuditTime { get; set; }
 
         /// <summary>
-        /// <para>The commodity code of the product.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cmjj01**45</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The detailed description of the product. HTML is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <div>基于阿里云（Ubuntu16.04 64位）系统源码安装，安全、稳定、高效！</div>
+        /// <div>Installed from the source code based on the Alibaba Cloud (Ubuntu 16.04 64-bit) system. Secure, stable, and efficient!</div>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The product category ID.</para>
+        /// <para>The category ID of the product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>523617212</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? FrontCategoryId { get; set; }
 
         /// <summary>
-        /// <para>The time when the product was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1578931200000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The time when the product was last modified.</para>
+        /// <para>The modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1578931200000</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LNMP环境（Ubuntu16.04 Nginx PHP5.3）</para>
+        /// <para>LNMP Environment (Ubuntu 16.04 Nginx PHP 5.3)</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The product rating.</para>
+        /// <para>The product score.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.0</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public DescribeProductResponseBodyShopInfo ShopInfo { get; set; }
         public class DescribeProductResponseBodyShopInfo : TeaModel {
             /// <summary>
-            /// <para>The email address.</para>
+            /// <para>The email addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>46**<a href="mailto:41@example.com">41@example.com</a></para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The shop name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>**科学公司</para>
+            /// <para>**Science Company</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -388,14 +388,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The short description of the product.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>该镜像为LNMP（Ubuntu16.04 64位+Nginx+MySQL5.6+PHP5.3）</para>
+        /// <para>This image is LNMP (Ubuntu 16.04 64-bit + Nginx + MySQL 5.6 + PHP 5.3)</para>
         /// </summary>
         [NameInMap("ShortDescription")]
         [Validation(Required=false)]
         public string ShortDescription { get; set; }
 
         /// <summary>
-        /// <para>Deprecated.</para>
+        /// <para><b>[Deprecated]</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -417,10 +417,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <summary>
         /// <para>The product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>APP: application</description></item>
-        /// <item><description>DOWNLOAD: download</description></item>
-        /// <item><description>MIRROR: image</description></item>
-        /// <item><description>SERVICE: service</description></item>
+        /// <item><description>APP: Application.</description></item>
+        /// <item><description>DOWNLOAD: Download.</description></item>
+        /// <item><description>MIRROR: Image.</description></item>
+        /// <item><description>SERVICE: Service.</description></item>
         /// <item><description>API_SERVICE: API service.</description></item>
         /// </list>
         /// 

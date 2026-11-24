@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;成功&quot;</para>
+        /// <para>&quot;Success&quot;</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

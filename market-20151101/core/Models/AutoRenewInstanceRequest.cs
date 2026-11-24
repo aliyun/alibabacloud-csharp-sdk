@@ -16,6 +16,9 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <item><description>Month: month.</description></item>
         /// <item><description>Year: year.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Month</para>
         /// </summary>
         [NameInMap("AutoRenewCycle")]
         [Validation(Required=false)]
@@ -48,6 +51,9 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// </list>
         /// <para>This parameter is required.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>open</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

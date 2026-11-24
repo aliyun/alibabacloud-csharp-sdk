@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The first-level category name of the product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API市场</para>
+            /// <para>API Marketplace</para>
             /// </summary>
             [NameInMap("FirstCategoryName")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>手机号码在网状态查询</para>
+            /// <para>Mobile phone number online status query</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The second-level category name of the product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>生活服务</para>
+            /// <para>Life services</para>
             /// </summary>
             [NameInMap("SecondCategoryName")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The brief description of the product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>运营商号码状态查询】精准实时空号检测，手机号在网状态查询，返回正常、空号、通话中、在网但不可用、关机、呼叫转移、疑似关机、携号转网、号码错误、停机等多种状态。</para>
+            /// <para>Carrier phone number status query] Provides accurate and real-time detection of empty numbers. You can query the online status of phone numbers, and statuses such as normal, empty, in-call, online but unavailable, powered off, call forwarding, suspected power-off, number portability, wrong number, and suspended are returned.</para>
             /// </summary>
             [NameInMap("ShortDescription")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The name of the promotion service provider.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>深圳市****有限公司</para>
+            /// <para>Shenzhen **** Co., Ltd.</para>
             /// </summary>
             [NameInMap("SupplierName")]
             [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             ///         SAAS_WUYING: application software - Wuying application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API类</para>
+            /// <para>API</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

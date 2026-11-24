@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProjectMessagesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the Alibaba Cloud Marketplace business instance.</para>
+        /// <para>The instance ID of the Alibaba Cloud Marketplace business.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query. Each page contains 20 entries.</para>
+        /// <para>The page number. Each page returns 20 entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

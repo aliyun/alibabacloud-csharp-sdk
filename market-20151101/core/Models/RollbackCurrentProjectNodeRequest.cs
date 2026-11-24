@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The remarks for the rejection reason.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>尊敬的顾客您好，您提交的收货地址存在多个匹配结果，请您核对后再重新提交。</para>
+        /// <para>Dear customer, the shipping address you submitted matches multiple records. Check the address and submit it again.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

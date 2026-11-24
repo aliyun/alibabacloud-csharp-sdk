@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The reason for the remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>等待与仓库确认库存，目前库存显示异常。</para>
+        /// <para>Waiting for the warehouse to confirm the inventory. The inventory is displayed as abnormal.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

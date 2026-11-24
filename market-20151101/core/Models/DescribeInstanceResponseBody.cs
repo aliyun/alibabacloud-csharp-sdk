@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The extended information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;说明&quot;: &quot;如有使用问题，请联系...&quot;}</para>
+        /// <para>{&quot;description&quot;: &quot;If you have any problems, contact us...&quot;}</para>
         /// </summary>
         [NameInMap("ExtendJson")]
         [Validation(Required=false)]
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>***协同办公</para>
+        /// <para>***Collaborative Office</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The service provider name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>*****有限公司</para>
+        /// <para>***** Co., Ltd.</para>
         /// </summary>
         [NameInMap("SupplierName")]
         [Validation(Required=false)]

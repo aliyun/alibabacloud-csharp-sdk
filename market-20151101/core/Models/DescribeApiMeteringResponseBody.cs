@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;成功&quot;</para>
+        /// <para>&quot;Success&quot;</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of results.</para>
+        /// <para>The list of return values.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeApiMeteringResponseBodyResult> Result { get; set; }
         public class DescribeApiMeteringResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud primary key.</para>
+            /// <para>The Alibaba Cloud PK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102277855749****</para>
@@ -110,12 +110,18 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The commodity name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>身份证实名认证-身份证实名</para>
+            /// <para>ID card real-name authentication - ID card real-name</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
+            /// <summary>
+            /// <para>The total API capacity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("TotalCapacity")]
             [Validation(Required=false)]
             public long? TotalCapacity { get; set; }
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The unit.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>次</para>
+            /// <para>Calls</para>
             /// </summary>
             [NameInMap("Unit")]
             [Validation(Required=false)]
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>The result indicator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

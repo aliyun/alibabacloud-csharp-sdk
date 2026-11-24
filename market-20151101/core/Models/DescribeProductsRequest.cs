@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>镜像</para>
+        /// <para>Image</para>
         /// </summary>
         [NameInMap("SearchTerm")]
         [Validation(Required=false)]

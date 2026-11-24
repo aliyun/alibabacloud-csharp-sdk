@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;package_quantity&quot;: { &quot;code&quot;: &quot;package_quantity&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_quantity_package_quantity_10000&quot;, &quot;name&quot;: &quot;10000次&quot;, &quot;value&quot;: &quot;10000&quot; }, &quot;package_version&quot;: { &quot;code&quot;: &quot;package_version&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_version_package_version_yuncode830200000&quot;, &quot;name&quot;: &quot;0元／10000次&quot;, &quot;value&quot;: &quot;yuncode830200000&quot; }, &quot;ord_time&quot;: { &quot;code&quot;: &quot;ord_time&quot;, &quot;globarKey&quot;: &quot;cmapi014302_ord_time_ord_time_6:Month&quot;, &quot;name&quot;: &quot;6个月&quot;, &quot;value&quot;: &quot;6:Month&quot; }, &quot;order_num&quot;: { &quot;code&quot;: &quot;order_num&quot;, &quot;globarKey&quot;: &quot;cmapi014302_order_num_order_num_1&quot;, &quot;name&quot;: &quot;1&quot;, &quot;value&quot;: &quot;1&quot; } }</para>
+        /// <para>{ &quot;package_quantity&quot;: { &quot;code&quot;: &quot;package_quantity&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_quantity_package_quantity_10000&quot;, &quot;name&quot;: &quot;10,000 times&quot;, &quot;value&quot;: &quot;10000&quot; }, &quot;package_version&quot;: { &quot;code&quot;: &quot;package_version&quot;, &quot;globarKey&quot;: &quot;cmapi014302_package_version_package_version_yuncode830200000&quot;, &quot;name&quot;: &quot;0 yuan/10,000 times&quot;, &quot;value&quot;: &quot;yuncode830200000&quot; }, &quot;ord_time&quot;: { &quot;code&quot;: &quot;ord_time&quot;, &quot;globarKey&quot;: &quot;cmapi014302_ord_time_ord_time_6:Month&quot;, &quot;name&quot;: &quot;6 months&quot;, &quot;value&quot;: &quot;6:Month&quot; }, &quot;order_num&quot;: { &quot;code&quot;: &quot;order_num&quot;, &quot;globarKey&quot;: &quot;cmapi014302_order_num_order_num_1&quot;, &quot;name&quot;: &quot;1&quot;, &quot;value&quot;: &quot;1&quot; } }</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The name of the subscribed product.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>saas服务产品</para>
+        /// <para>SaaS service product</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The company name of the seller.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>**科技股份有限公司</para>
+        /// <para>** Technology Co., Ltd.</para>
         /// </summary>
         [NameInMap("SupplierCompanyName")]
         [Validation(Required=false)]

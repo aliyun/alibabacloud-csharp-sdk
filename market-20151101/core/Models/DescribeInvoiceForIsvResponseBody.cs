@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeInvoiceForIsvResponseBody : TeaModel {
         /// <summary>
-        /// <para>The commodity code corresponding to the product.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of instances per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The process node information upon success.</para>
+        /// <para>The information about the successful flow node.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string AliyunPk { get; set; }
 
             /// <summary>
-            /// <para>The supplier invoice remarks.</para>
+            /// <para>The service provider invoice remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("CheckNotice")]
             [Validation(Required=false)]
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string CreateTimeStr { get; set; }
 
             /// <summary>
-            /// <para>The order, bill, or contract numbers.</para>
+            /// <para>The order, bill, or contract number.</para>
             /// </summary>
             [NameInMap("EvaluateList")]
             [Validation(Required=false)]
             public List<DescribeInvoiceForIsvResponseBodyResultEvaluateList> EvaluateList { get; set; }
             public class DescribeInvoiceForIsvResponseBodyResultEvaluateList : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether invoicing is performed by an agent.</para>
+                /// <para>Specifies whether proxy invoicing is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string Amount { get; set; }
 
                 /// <summary>
-                /// <para>The time when the business transaction occurred.</para>
+                /// <para>The time when the transaction occurred.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-01 00:00:00</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string BizTimeStr { get; set; }
 
                 /// <summary>
-                /// <para>The invoicing object ID.</para>
+                /// <para>The ID of the invoicing object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9540765</para>
@@ -164,12 +164,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The order or bill type. Valid values:</para>
+                /// <para>The type of the order or bill. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: order</para>
-                /// </description></item>
-                /// <item><description><para>1: bill</para>
-                /// </description></item>
+                /// <item><description>0: Order.</description></item>
+                /// <item><description>1: Bill.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -180,7 +178,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string OrderType { get; set; }
 
                 /// <summary>
-                /// <para>The order ID.</para>
+                /// <para>The ID of the order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024091610072000****</para>
@@ -200,10 +198,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string ProductCode { get; set; }
 
                 /// <summary>
-                /// <para>The product name. (Deprecated.)</para>
+                /// <para><b>[Deprecated]</b> The product name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>图像识别OCR***</para>
+                /// <para>Image recognition OCR***</para>
                 /// </summary>
                 [NameInMap("ProductName")]
                 [Validation(Required=false)]
@@ -232,7 +230,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             }
 
             /// <summary>
-            /// <para>The invoice application ID. This corresponds to the InvoiceId parameter used when calling the ModifyInvoiceForIsv operation.</para>
+            /// <para>The ID of the invoice application. This corresponds to the InvoiceId parameter when you call the ModifyInvoiceForIsv operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4072040****</para>
@@ -242,7 +240,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The invoice object ID.</para>
+            /// <para>The ID of the invoice object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4072040****</para>
@@ -252,14 +250,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string InvoiceId { get; set; }
 
             /// <summary>
-            /// <para>The invoice sub-collection. (Deprecated.)</para>
+            /// <para><b>[Deprecated]</b> The invoice sub-collection.</para>
             /// </summary>
             [NameInMap("InvoiceList")]
             [Validation(Required=false)]
             public List<DescribeInvoiceForIsvResponseBodyResultInvoiceList> InvoiceList { get; set; }
             public class DescribeInvoiceForIsvResponseBodyResultInvoiceList : TeaModel {
                 /// <summary>
-                /// <para>The invoice object ID.</para>
+                /// <para>The ID of the invoice object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4072040****</para>
@@ -269,7 +267,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The invoicing amount applied for. Unit: CNY.</para>
+                /// <para>The applied invoicing amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>99.99</para>
@@ -281,10 +279,20 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             }
 
             /// <summary>
+            /// <para>The relationship between the invoice title and the customer real-name information. Valid values: <c>REAL_NAME_MATCH</c> (The real-name information is consistent), <c>PERSONAL_APPLY_ENTERPRISE_TITLE</c> (An individual applies for an enterprise title), <c>ENTERPRISE_MULTI_TITLE</c> (Multiple titles for an enterprise), <c>MASTER_ACCOUNT_OPERATION</c> (Operated by the main account), and <c>OTHER</c> (Other). If not provided, the value is null.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>REAL_NAME_MATCH</para>
+            /// </summary>
+            [NameInMap("InvoiceTitleRelation")]
+            [Validation(Required=false)]
+            public string InvoiceTitleRelation { get; set; }
+
+            /// <summary>
             /// <para>The invoice issuance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: paper</description></item>
-            /// <item><description>1: electronic</description></item>
+            /// <item><description>0: Paper.</description></item>
+            /// <item><description>1: Electronic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -295,7 +303,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string MaterialType { get; set; }
 
             /// <summary>
-            /// <para>The time when the order status was modified (GMT).</para>
+            /// <para>The time when the order status was modified. The time is displayed in GMT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-04T09:43:18+08:00</para>
@@ -305,7 +313,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The invoice modification time.</para>
+            /// <para>The time when the invoice was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01 00:00:00</para>
@@ -325,14 +333,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string Price { get; set; }
 
             /// <summary>
-            /// <para>The invoice applicant user information.</para>
+            /// <para>The user information of the invoice applicant.</para>
             /// </summary>
             [NameInMap("ReceiptUserInfoDto")]
             [Validation(Required=false)]
             public DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto ReceiptUserInfoDto { get; set; }
             public class DescribeInvoiceForIsvResponseBodyResultReceiptUserInfoDto : TeaModel {
                 /// <summary>
-                /// <para>The bank account number.</para>
+                /// <para>The bank account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>000000</para>
@@ -342,7 +350,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string BankAccount { get; set; }
 
                 /// <summary>
-                /// <para>The bank name.</para>
+                /// <para>The name of the bank.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>111111</para>
@@ -355,14 +363,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 /// <para>The registered address.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>杭州市****</para>
+                /// <para>Hangzhou ****</para>
                 /// </summary>
                 [NameInMap("RegAddress")]
                 [Validation(Required=false)]
                 public string RegAddress { get; set; }
 
                 /// <summary>
-                /// <para>The registered phone number.</para>
+                /// <para>The registered landline number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0571-****</para>
@@ -384,7 +392,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             }
 
             /// <summary>
-            /// <para>The invoice status. Valid values: 0: pending invoicing. 1: invoiced.</para>
+            /// <para>The invoice status. Valid values: 0: Pending. 1: Invoiced.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -397,7 +405,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The invoice title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>阿里云计算有限公司</para>
+            /// <para>Alibaba Cloud Computing Ltd</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -406,8 +414,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <summary>
             /// <para>The invoice type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>2: general digital electronic invoice</description></item>
-            /// <item><description>3: special digital electronic invoice</description></item>
+            /// <item><description>2: Digital electronic general invoice.</description></item>
+            /// <item><description>3: Digital electronic special invoice.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -428,7 +436,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 /// <para>The recipient.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("Addressee")]
                 [Validation(Required=false)]
@@ -445,7 +453,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string AliyunPk { get; set; }
 
                 /// <summary>
-                /// <para>Deprecated.</para>
+                /// <para><b>[Deprecated]</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -458,7 +466,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 /// <para>The delivery address.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>杭州市****</para>
+                /// <para>Hangzhou ****</para>
                 /// </summary>
                 [NameInMap("DeliveryAddress")]
                 [Validation(Required=false)]
@@ -468,7 +476,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 /// <para>The email address.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para><a href="mailto:demo@example.com">demo@example.com</a></para>
                 /// </summary>
                 [NameInMap("Emails")]
                 [Validation(Required=false)]
@@ -500,7 +508,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The user invoice remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("UserNotice")]
             [Validation(Required=false)]
@@ -509,7 +517,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
-        /// <para>The result indicator.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class PushTimesUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authentication error message.</para>
+        /// <para>The authentication error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public bool? ForceFatal { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public bool? Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

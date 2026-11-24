@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The name of the Cloud Marketplace product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>公司宝****记账</para>
+            /// <para>Gongsibao**** accounting</para>
             /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The name of the Cloud Marketplace product SKU.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>小***纳税人</para>
+            /// <para>Small*** taxpayer</para>
             /// </summary>
             [NameInMap("ProductSkuName")]
             [Validation(Required=false)]

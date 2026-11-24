@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;package_version&quot;:{&quot;code&quot;:&quot;package_version&quot;,&quot;globarKey&quot;:&quot;cmgj0<em><em><b><b>8_package_version_package_version_yuncode4176</b></b></em>1&quot;,&quot;name&quot;:&quot;0.01&quot;,&quot;value&quot;:&quot;yuncode4176</em><b><b>1&quot;},&quot;ord_time&quot;:{&quot;code&quot;:&quot;ord_time&quot;,&quot;globarKey&quot;:&quot;cmgj0</b></b><b>8_ord_time_ord_time_1:Month&quot;,&quot;name&quot;:&quot;1个月&quot;,&quot;value&quot;:&quot;1:Month&quot;},&quot;order_num&quot;:{&quot;code&quot;:&quot;order_num&quot;,&quot;globarKey&quot;:&quot;cmgj0</b>****8_order_num_order_num_1&quot;,&quot;name&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;}}</para>
+        /// <para>{&quot;package_version&quot;:{&quot;code&quot;:&quot;package_version&quot;,&quot;globarKey&quot;:&quot;cmgj0<em><em><b><b>8_package_version_package_version_yuncode4176</b></b></em>1&quot;,&quot;name&quot;:&quot;0.01&quot;,&quot;value&quot;:&quot;yuncode4176</em><b><b>1&quot;},&quot;ord_time&quot;:{&quot;code&quot;:&quot;ord_time&quot;,&quot;globarKey&quot;:&quot;cmgj0</b></b><b>8_ord_time_ord_time_1:Month&quot;,&quot;name&quot;:&quot;1 month&quot;,&quot;value&quot;:&quot;1:Month&quot;},&quot;order_num&quot;:{&quot;code&quot;:&quot;order_num&quot;,&quot;globarKey&quot;:&quot;cmgj0</b>****8_order_num_order_num_1&quot;,&quot;name&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;}}</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The name of the subscribed product.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>saas服务产品</para>
+        /// <para>SaaS service product</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]

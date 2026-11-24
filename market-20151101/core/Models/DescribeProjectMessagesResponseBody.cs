@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of project messages.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeProjectMessagesResponseBodyResult> Result { get; set; }
@@ -27,14 +30,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The content of the message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>尊敬的客户您好，我们已经为您上传了方案，请您查阅，然后尽快将您的意见反馈给我们。</para>
+            /// <para>Dear customer, we have uploaded the solution for you. Please review it and provide your feedback as soon as possible</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time when the message was created, in UNIX timestamp format.</para>
+            /// <para>The time when the message was created. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1589015560000</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud UID of the user who left the message.</para>
+            /// <para>The Alibaba Cloud UID of the message sender.</para>
             /// 
             /// <b>Example:</b>
             /// <para>452611111****</para>
@@ -54,10 +57,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? Operator { get; set; }
 
             /// <summary>
-            /// <para>The name of the user who left the message.</para>
+            /// <para>The name of the message sender.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>***科技技术有限公司</para>
+            /// <para>*** Technology Co., Ltd</para>
             /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
@@ -66,9 +69,9 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <summary>
             /// <para>The role of the operator. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>System: system.</description></item>
-            /// <item><description>Custom: customer.</description></item>
-            /// <item><description>Provider: service provider.</description></item>
+            /// <item><description>System: The system.</description></item>
+            /// <item><description>Custom: The customer.</description></item>
+            /// <item><description>Provider: The service provider.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

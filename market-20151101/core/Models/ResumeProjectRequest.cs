@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         /// <para>The reason for the remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>仓库库存已补充，可安排发货。</para>
+        /// <para>The warehouse inventory has been replenished. Delivery can be arranged.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

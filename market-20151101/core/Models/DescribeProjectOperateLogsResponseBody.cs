@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The description of the operation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>进入分配服务商操作人</para>
+            /// <para>Entered the service provider assignment step</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             /// <para>The name of the operator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>系统</para>
+            /// <para>System</para>
             /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
