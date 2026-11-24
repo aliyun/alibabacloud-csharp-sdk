@@ -17,8 +17,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeGatewayListResponseBodyItems> Items { get; set; }
         public class DescribeGatewayListResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The cumulative expiration time of the smart routing benefit. The time follows the ISO 8601 standard and is displayed in UTC. If smart routing is not enabled, this parameter may be omitted or set to null.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-12-09T06:43:33Z</para>
+            /// </summary>
+            [NameInMap("AutoExpireTime")]
+            [Validation(Required=false)]
+            public string AutoExpireTime { get; set; }
+
+            /// <summary>
             /// <para>The creation time.</para>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-14T05:58:42Z</para>
@@ -43,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <item><description>If the billing method of the cluster is subscription, the actual expiration time is returned.</description></item>
             /// <item><description>If the billing method of the cluster is pay-as-you-go, an empty value is returned.</description></item>
             /// </list>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2028-09-01T16:00:00Z</para>
@@ -79,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The gateway description.</para>
+            /// <para>The description of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxxx</para>
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The last modification time.</para>
-            /// <para>The time is in ISO 8601 format in UTC (format: YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T09:31:37Z</para>
@@ -124,10 +134,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether smart routing is enabled for the instance. This value is returned by ApsaraDB based on the benefit validity period. A value of true does not indicate that the data plane is healthy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("SmartRoutingEnabled")]
+            [Validation(Required=false)]
+            public bool? SmartRoutingEnabled { get; set; }
+
+            /// <summary>
             /// <para>The application status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CREATE: being created.</description></item>
-            /// <item><description>ACTIVATION: running.</description></item>
+            /// <item><description>CREATE: creating</description></item>
+            /// <item><description>ACTIVATION: running</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-wz9u0v2yuskt1gth3uuju</para>
@@ -148,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>The ID of the virtual private cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-****************</para>

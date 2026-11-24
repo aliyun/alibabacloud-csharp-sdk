@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The specification code.</para>
+        /// <para>The cumulative expiration time of the smart routing privilege in UTC and ISO 8601 format. This parameter may be omitted or null if smart routing is not enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-12-09T06:43:33Z</para>
+        /// </summary>
+        [NameInMap("AutoExpireTime")]
+        [Validation(Required=false)]
+        public string AutoExpireTime { get; set; }
+
+        /// <summary>
+        /// <para>The instance type code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polar.app.g2.medium</para>
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The creation time.</para>
-        /// <para>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-02-24T11:57:54Z</para>
@@ -58,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeGatewayAttributeResponseBodyEndpoints> Endpoints { get; set; }
         public class DescribeGatewayAttributeResponseBodyEndpoints : TeaModel {
             /// <summary>
-            /// <para>The endpoint address.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxx.polardbaigateway.pre.rds.aliyuncs.com</para>
@@ -68,7 +78,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The ID of the endpoint node.</para>
+            /// <para>The ID of the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -78,7 +88,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EndpointId { get; set; }
 
             /// <summary>
-            /// <para>The gateway instance ID.</para>
+            /// <para>The instance ID of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxxxx</para>
@@ -88,10 +98,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The type of the endpoint address. Valid values:</para>
+            /// <para>The endpoint type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Private: VPC address</description></item>
-            /// <item><description>Public: Internet address</description></item>
+            /// <item><description>Public: public network address</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The expiration time.</para>
         /// <para>This parameter is empty when the billing method is Postpaid.</para>
-        /// <para>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-04-22T16:00:00Z</para>
@@ -148,10 +158,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Indicates whether the cluster has expired. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The cluster has expired.</description></item>
+        /// <item><description>false: The cluster has not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +170,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Expired { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The instance ID of the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-xxxxxxx</para>
@@ -193,7 +201,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The last modification time.</para>
-        /// <para>The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</para>
+        /// <para>The time follows the ISO 8601 standard in UTC (YYYY-MM-DDTHH:mm:ssZ).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-07T02:19:55Z</para>
@@ -247,7 +255,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunningVersion { get; set; }
 
         /// <summary>
-        /// <para>The application-level whitelist.</para>
+        /// <para>The application-level IP whitelist.</para>
         /// </summary>
         [NameInMap("SecurityIPArrays")]
         [Validation(Required=false)]
@@ -286,11 +294,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the semantic cache is enabled. If the semantic cache is disabled or has never been enabled, the value is false.</para>
+        /// <para>Indicates whether semantic caching is enabled. If it is disabled or has never been enabled, the value is false.</para>
         /// </summary>
         [NameInMap("SemanticCacheEnabled")]
         [Validation(Required=false)]
         public bool? SemanticCacheEnabled { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether smart routing is enabled for the instance. The value is returned by ApsaraDB based on the validity period of the privilege. A value of true does not indicate that the data plane is healthy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("SmartRoutingEnabled")]
+        [Validation(Required=false)]
+        public bool? SmartRoutingEnabled { get; set; }
 
         /// <summary>
         /// <para>The application status. Valid values:</para>

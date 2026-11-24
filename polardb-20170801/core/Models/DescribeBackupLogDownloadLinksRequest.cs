@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupLogDownloadLinksRequest : TeaModel {
         /// <summary>
-        /// <para>The redo log backup IDs.</para>
+        /// <para>The physical log backup IDs.</para>
         /// <remarks>
-        /// <para>First, invoke DescribeBackupLogs to obtain valid IDs. This parameter is required when you invoke the operation. If omitted, an InvalidArchiveLogIds.Malformed error (HTTP 400) is returned.</para>
+        /// <para>Call DescribeBackupLogs to obtain valid IDs. This parameter is required when you call the operation. If you omit this parameter, the InvalidArchiveLogIds.Malformed error (HTTP 400) is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>This parameter is required for the call. If omitted, an InvalidDBClusterId.Malformed error (HTTP 400) is returned.</para>
+        /// <para>This parameter is required when you call the operation. If you omit this parameter, the InvalidDBClusterId.Malformed error (HTTP 400) is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the download links, in hours. Valid values: 1 to 596523.</para>
+        /// <para>The validity period of the download link, in hours. Valid values: 1 to 596523.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

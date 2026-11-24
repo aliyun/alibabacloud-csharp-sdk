@@ -42,6 +42,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Config { get; set; }
 
             /// <summary>
+            /// <para>The ID of the gateway instance to which the model API belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pg-2ze3x6i1d7g5rto28</para>
+            /// </summary>
+            [NameInMap("CustinsName")]
+            [Validation(Required=false)]
+            public string CustinsName { get; set; }
+
+            /// <summary>
             /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
@@ -50,6 +60,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("GmtCreated")]
             [Validation(Required=false)]
             public string GmtCreated { get; set; }
+
+            /// <summary>
+            /// <para>The modification time of the model API.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-11-09T06:43:33Z</para>
+            /// </summary>
+            [NameInMap("GmtModified")]
+            [Validation(Required=false)]
+            public string GmtModified { get; set; }
 
             /// <summary>
             /// <para>The model API IDs.</para>
@@ -62,7 +82,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelApiId { get; set; }
 
             /// <summary>
-            /// <para>The name of the model API.</para>
+            /// <para>The model name mappings, which is a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. If not configured, this parameter is empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;}]</para>
+            /// </summary>
+            [NameInMap("ModelMappings")]
+            [Validation(Required=false)]
+            public string ModelMappings { get; set; }
+
+            /// <summary>
+            /// <para>The intelligent routing candidate list, which is a JSON object string in the format of {&quot;AllowedModels&quot;:[&quot;candidate model name&quot;]}. If not configured, this parameter is empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</para>
+            /// </summary>
+            [NameInMap("ModelRouting")]
+            [Validation(Required=false)]
+            public string ModelRouting { get; set; }
+
+            /// <summary>
+            /// <para>The model API name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -98,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The number of input tokens.</para>
+            /// <para>The number of input points.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -108,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RecordInput { get; set; }
 
             /// <summary>
-            /// <para>The number of output tokens.</para>
+            /// <para>The number of output points.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -151,7 +191,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RouteRules { get; set; }
 
             /// <summary>
-            /// <para>The status of the model API.</para>
+            /// <para>The model API status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enable</para>
@@ -173,7 +213,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -183,8 +223,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
-        /// <para>Default value: <b>30</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -204,7 +243,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
+
+        /// <summary>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

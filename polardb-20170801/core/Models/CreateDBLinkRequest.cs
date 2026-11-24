@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBLinkRequest : TeaModel {
         /// <summary>
-        /// <para>A client token that is used to ensure the idempotence of the request. The client generates the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and must not exceed 64 ASCII characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the token on the client. The token must be unique across different requests and is case-sensitive. It can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
@@ -36,12 +36,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the DBLink.</para>
         /// <list type="bullet">
-        /// <item><description><para>It must contain lowercase letters, and can also contain digits and underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
-        /// </description></item>
-        /// <item><description><para>It must be no more than 64 characters in length.</para>
-        /// </description></item>
+        /// <item><description>It can contain lowercase letters, digits, and underscores (_), and must contain at least one lowercase letter.</description></item>
+        /// <item><description>It must start with a letter and end with a letter or a digit.</description></item>
+        /// <item><description>It can be up to 64 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the details of regions.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region details.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -94,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the source database.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query the databases in the PolarDB cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The account of the destination database.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173549.html">DescribeAccounts</a> operation to query the database accounts of a PolarDB cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173549.html">DescribeAccounts</a> operation to query the database accounts of the PolarDB cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -123,10 +120,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The ID of the destination cluster for the DBLink.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>If the destination is a self-managed Oracle database that runs on an ECS instance, set this parameter to <c>null</c>.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query the list of PolarDB clusters.</para>
-        /// </description></item>
+        /// <item><description>If the destination is a self-managed Oracle database on an ECS instance, set this parameter to <c>null</c>.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query the list of PolarDB clusters.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -140,7 +135,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the destination database.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query information about databases in a PolarDB cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173558.html">DescribeDatabases</a> operation to query the databases in the PolarDB cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -152,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetDBName { get; set; }
 
         /// <summary>
-        /// <para>The password for the destination database account.</para>
+        /// <para>The password of the destination database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetDBPasswd { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the self-managed Oracle database that runs on an ECS instance.</para>
+        /// <para>The IP address of the self-managed Oracle database on the ECS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.<b>.</b>.46</para>
@@ -173,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetIp { get; set; }
 
         /// <summary>
-        /// <para>The port number of the self-managed Oracle database that runs on an ECS instance.</para>
+        /// <para>The port number of the self-managed Oracle database on the ECS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1521</para>
@@ -183,9 +178,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The ID of the VPC.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the details of VPCs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query VPC details.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

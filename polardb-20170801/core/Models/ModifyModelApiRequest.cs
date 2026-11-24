@@ -56,7 +56,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>embedding</b></description></item>
         /// <item><description><b>rerank</b></description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -66,8 +65,37 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
+        /// <para>The model name mappings, specified as a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. If you do not specify this parameter, the current mappings are retained. If you specify &quot;[]&quot;, the mappings are cleared. The Source field is matched in a case-insensitive manner and must be unique.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;},{&quot;Source&quot;:&quot;client-model-b&quot;,&quot;Target&quot;:&quot;upstream-model-b&quot;}]</para>
+        /// </summary>
+        [NameInMap("ModelMappings")]
+        [Validation(Required=false)]
+        public string ModelMappings { get; set; }
+
+        /// <summary>
+        /// <para>The intelligent routing candidate list, specified as a JSON object string in the format of {&quot;AllowedModels&quot;:[&quot;candidate model name&quot;]}. If you do not specify this parameter, the current list is retained. If you specify this parameter, the existing list is fully replaced with the new list. You cannot use an empty list to disable the feature. Saving candidates does not enable the feature. You must call EnableModelRouting first.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</para>
+        /// </summary>
+        [NameInMap("ModelRouting")]
+        [Validation(Required=false)]
+        public string ModelRouting { get; set; }
+
+        /// <summary>
+        /// <para>The name of the model API. This parameter is modifiable. If you do not specify this parameter, the original name is retained.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>jev-chat-api</para>
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// <para>The API path prefix.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/test</para>
@@ -84,7 +112,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>bailian</b></description></item>
         /// <item><description><b>vllm</b></description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>openai</para>
@@ -124,8 +151,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of routing rules, formatted as a JSON array string. Usage notes: Correct the value of FallbackMode in the RouteRules parameter example by replacing it with a valid value or removing the field, and add the list of valid values and their meanings for the FallbackMode subfield to the description of RouteRules.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The list of routing rules, specified as a JSON array string. Usage note: Correct the value of FallbackMode in the RouteRules parameter example by replacing it with a valid value or removing the field, and add the list of valid values and their descriptions for the FallbackMode subfield in the description of RouteRules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[

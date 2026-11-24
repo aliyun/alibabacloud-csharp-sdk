@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateCostRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to bypass the quota check. This parameter is optional and has no default value. If omitted, it is not passed through. Both false and true are passed through as-is.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("BypassQuotaCheck")]
+        [Validation(Required=false)]
+        public bool? BypassQuotaCheck { get; set; }
+
+        /// <summary>
         /// <para>The cache read cost points per million tokens. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CacheCreationCostPointsPerMillion { get; set; }
 
         /// <summary>
-        /// <para>The effective start time in the yyyy-MM-dd HH:mm:ss format. If this parameter is not specified, the rule takes effect immediately.</para>
+        /// <para>The effective start time in the yyyy-MM-dd HH:mm:ss format. If this parameter is not provided, the rule takes effect immediately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-14 00:00:00</para>
@@ -101,7 +111,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InputCostPointsPerMillion { get; set; }
 
         /// <summary>
-        /// <para>The tiered price for input tokens (non-cumulative). The value is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]. If this parameter is specified, it takes precedence over InputCostPointsPerMillion. An empty array [] is not allowed.</para>
+        /// <para>The input token tier. An empty string indicates the default tier. If this parameter is omitted, it is processed by the backend.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0-32K</para>
+        /// </summary>
+        [NameInMap("InputTokenTier")]
+        [Validation(Required=false)]
+        public string InputTokenTier { get; set; }
+
+        /// <summary>
+        /// <para>The tiered price for input tokens (non-cumulative). The value is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]. If this parameter is provided, it takes precedence over InputCostPointsPerMillion. An empty array [] is not allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1000&quot;},{&quot;Tier&quot;:&quot;32K-64K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1800&quot;}]</para>

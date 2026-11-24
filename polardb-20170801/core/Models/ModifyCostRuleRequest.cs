@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyCostRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to bypass the quota check. This parameter is optional and has no default value. If omitted, it is not passed through. Both false and true are passed through as-is.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("BypassQuotaCheck")]
+        [Validation(Required=false)]
+        public bool? BypassQuotaCheck { get; set; }
+
+        /// <summary>
         /// <para>The cache cost points per million tokens. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CacheCreationCostPointsPerMillion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cost rule.</para>
+        /// <para>The cost rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +92,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InputCostPointsPerMillion { get; set; }
 
         /// <summary>
-        /// <para>The input token tiered price (non-cumulative) specified as a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]. A non-empty value replaces all existing tiers. If this parameter is not specified or is set to an empty string, the original tiers are retained. An empty array [] is not allowed.</para>
+        /// <para>The tiered price for input tokens (non-cumulative). This parameter is a JSON array character string. Each element contains Tier and InputCostPointsPerMillion. Valid values for Tier: &quot;&quot; (default tier), 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+. Example: [{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]. If this parameter is not empty, all tiers are replaced. If this parameter is not specified or an empty string is passed, the original tiers are retained. An empty array [] is not allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Tier&quot;:&quot;0-32K&quot;,&quot;InputCostPointsPerMillion&quot;:&quot;1200&quot;}]</para>
@@ -103,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model service.</para>
+        /// <para>The model service ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

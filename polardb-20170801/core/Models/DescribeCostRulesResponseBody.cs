@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CostRuleId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The effective end time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-01T00:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EffectiveEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the effective period. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The effective start time. The format is YYYY-MM-DDTHH:mm:ssZ (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01T00:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EffectiveStartTime { get; set; }
 
             /// <summary>
-            /// <para>The type of the effective target.</para>
+            /// <para>The effective target type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>global</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EffectiveTargetType { get; set; }
 
             /// <summary>
-            /// <para>The value of the effective target.</para>
+            /// <para>The effective target value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ExplicitCacheCostPointsPerMillion { get; set; }
 
             /// <summary>
-            /// <para>The time when the cost rule was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-04T16:09:29+08:00</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the cost rule was last updated.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16 16:46:20</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeCostRulesResponseBodyItemsInputTokenTiers> InputTokenTiers { get; set; }
             public class DescribeCostRulesResponseBodyItemsInputTokenTiers : TeaModel {
                 /// <summary>
-                /// <para>The input cost points per million tokens for the tier.</para>
+                /// <para>The input cost points per million tokens for this tier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</para>
+        /// <para>The number of records per page. Valid values: 30, 50, and 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -278,7 +278,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
+        [NameInMap("TotalPages")]
+        [Validation(Required=false)]
+        public int? TotalPages { get; set; }
+
+        /// <summary>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey ID for the bucket.</para>
+            /// <para>The AccessKey ID of the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LTAIExampleBucketAccessKeyId</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BucketAccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret for the bucket.</para>
+            /// <para>The AccessKey secret of the bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ExampleBucketAccessKeySecret123</para>

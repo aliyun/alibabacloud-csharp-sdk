@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ForceModel { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID. You can obtain this ID from the GwClusterId parameter returned by the CreateGateway operation.</para>
+        /// <para>The ID of the gateway instance. You can obtain this ID from the GwClusterId value returned by the CreateGateway operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>embedding</b></description></item>
         /// <item><description><b>rerank</b></description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -65,8 +64,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
+        /// <para>The model name mappings, specified as a JSON array string. Each element is in the format of {&quot;Source&quot;:&quot;client model name&quot;,&quot;Target&quot;:&quot;upstream model name&quot;}. The Source parameter is matched in a case-insensitive manner and must be unique. The Target parameter retains its original case when forwarded. Both parameters cannot be empty and cannot contain leading or trailing spaces.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Source&quot;:&quot;client-model-a&quot;,&quot;Target&quot;:&quot;upstream-model-a&quot;},{&quot;Source&quot;:&quot;client-model-b&quot;,&quot;Target&quot;:&quot;upstream-model-b&quot;}]</para>
+        /// </summary>
+        [NameInMap("ModelMappings")]
+        [Validation(Required=false)]
+        public string ModelMappings { get; set; }
+
+        /// <summary>
+        /// <para>The intelligent routing candidate list, specified as a JSON object string. Currently, it only contains AllowedModels, which is a non-empty array of unique model names. The order of the array determines the candidate order. Do not pass the Enabled, cost, or quality tier parameters. Saving candidates does not enable the feature. You must first call the EnableModelRouting operation to obtain the gateway entitlements.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;AllowedModels&quot;:[&quot;deepseek-v4-pro&quot;,&quot;glm-5.3&quot;,&quot;glm-5.3-flash&quot;]}</para>
+        /// </summary>
+        [NameInMap("ModelRouting")]
+        [Validation(Required=false)]
+        public string ModelRouting { get; set; }
+
+        /// <summary>
         /// <para>The name of the model API.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -77,7 +95,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The API path prefix.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/test</para>
@@ -94,7 +111,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description><b>bailian</b></description></item>
         /// <item><description><b>vllm</b></description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>openai</para>
@@ -135,7 +151,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The list of routing rules, specified as a JSON array string.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[

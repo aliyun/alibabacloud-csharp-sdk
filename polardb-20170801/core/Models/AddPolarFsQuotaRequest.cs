@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddPolarFsQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the PolarDB instance on which the application depends.</para>
+        /// <para>The PolarDB instance ID that the application depends on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Polarlakebase instance.</para>
+        /// <para>The Polarlakebase instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<AddPolarFsQuotaRequestQuotas> Quotas { get; set; }
         public class AddPolarFsQuotaRequestQuotas : TeaModel {
             /// <summary>
-            /// <para>The time to live (TTL) for the access time. Unit: seconds.</para>
+            /// <para>The time-to-live (TTL) for the access time. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7200</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? AccessTTL { get; set; }
 
             /// <summary>
-            /// <para>The TTL for the change time. Unit: seconds.</para>
+            /// <para>The time-to-live (TTL) for the change time. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7200</para>
@@ -69,12 +69,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the rule. Valid values:</para>
+            /// <para>Specifies whether the rule is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>True</b>: The rule immediately applies to new items. This is the default value.</para>
-            /// </description></item>
-            /// <item><description><para><b>False</b>: The rule does not apply to new items.</para>
-            /// </description></item>
+            /// <item><description><b>True</b>: New events take effect immediately for new resources. This is the default value.</description></item>
+            /// <item><description><b>False</b>: New events do not take effect for new resources.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,9 +83,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The rule to exclude specific paths from matching.</para>
+            /// <para>The matching rule used to exclude specific paths.</para>
             /// <list type="bullet">
-            /// <item><description>A path pattern that starts with a forward slash (/). Supports glob syntax, including <c>*</c>, <c>?</c>, and <c>**</c>.</description></item>
+            /// <item><description>A path pattern that starts with <c>/</c>. Glob syntax such as <c>*</c>, <c>?</c>, and <c>**</c> is supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Exclude { get; set; }
 
             /// <summary>
-            /// <para>The limit on the number of files for a user in the directory.</para>
+            /// <para>The maximum number of files allowed in the directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -108,9 +106,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? FileCountLimit { get; set; }
 
             /// <summary>
-            /// <para>The wildcard pattern to match paths.</para>
+            /// <para>The wildcard pattern used to match paths.</para>
             /// <list type="bullet">
-            /// <item><description>A path pattern that starts with a forward slash (/). Supports glob syntax, including <c>*</c>, <c>?</c>, and <c>**</c>.</description></item>
+            /// <item><description>A path pattern that starts with <c>/</c>. Glob syntax such as <c>*</c>, <c>?</c>, and <c>**</c> is supported.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -143,7 +141,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The total size limit for files in the directory. Unit: GB.</para>
+            /// <para>The maximum total capacity of files in the directory. Unit: GB.</para>
             /// <list type="bullet">
             /// <item><description>Note: The value must be at least 1 GB.</description></item>
             /// </list>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationAgentRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the Agent to attach.</para>
+        /// <para>The instance ID of the agent to attach.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Squad application.</para>
+        /// <para>The ID of the squad application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

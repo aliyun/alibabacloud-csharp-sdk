@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the O&amp;M events to cancel in batches. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the O&amp;M events to be canceled in batches. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2355,2352</para>

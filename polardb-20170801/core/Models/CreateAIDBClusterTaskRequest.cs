@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The data service mode. A value of custom indicates that custom OSS is used. A value of cold_storage indicates that cold storage is used.</para>
+        /// <para>The data service mode. custom indicates that custom Object Storage Service (OSS) is used, and cold_storage indicates that cold storage is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cold_storage</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the model.</para>
         /// <list type="bullet">
-        /// <item><description><b>For a preset model, specify the selected model name.</b></description></item>
+        /// <item><description><b>For a preset model, specify the name of the selected model.</b></description></item>
         /// <item><description><b>For a custom model, specify the path of the model (the trained model in a cold storage instance).</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The runtime parameters in JSON string format.</para>
+        /// <para>The runtime parameters, specified as a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunningParameter { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group. This parameter is actually required. If it is not provided, the service returns InvalidEcsSecurityGroupId.Malformed (400).</para>
+        /// <para>The ID of the security group. This parameter is required. If you do not specify this parameter, the service returns InvalidEcsSecurityGroupId.Malformed (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp**************</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TuneArch { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC). This parameter is actually required. If it is not provided, the service returns InvalidVpcId.Malformed (400).</para>
+        /// <para>The ID of the virtual private cloud (VPC). This parameter is required. If you do not specify this parameter, the service returns InvalidVpcId.Malformed (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. This parameter is actually required and must belong to the VPC specified by VPCId.</para>
+        /// <para>The ID of the vSwitch. This parameter is required and the vSwitch must belong to the VPC specified by VPCId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-*********************</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCostRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cost rule.</para>
+        /// <para>The cost rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cr-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CostRuleId { get; set; }
 
         /// <summary>
-        /// <para>The effective target type used to filter the results. Valid values: global, consumerGroup, and consumer.</para>
+        /// <para>The effective target type. Valid values: global, consumerGroup, and consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EffectiveTargetType { get; set; }
 
         /// <summary>
-        /// <para>The effective target value used to filter the results.</para>
+        /// <para>The effective target value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The input token tier used to filter the results. Returns rules that include this tier. Valid values: 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</para>
+        /// <para>The input token tier used for filtering. Returns rules that include this tier. An empty string filters the default tier. Valid values: 0-32K, 32K-64K, 64K-128K, 128K-256K, 256K-512K, 512K-1M, and 1M+.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0-32K</para>

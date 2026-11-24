@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationAgentRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Squad application.</para>
+        /// <para>The ID of the squad application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-xxx</para>

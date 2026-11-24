@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AnswerKnowledgeBaseRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the knowledge base. To obtain the ID, first call CreateKnowledgeSpace to create a knowledge space, use the returned KnowledgeSpaceId to call CreateKnowledgeBase, and then use the KnowledgeBaseId returned by CreateKnowledgeBase. Separate multiple knowledge base IDs with commas.</para>
+        /// <para>The unique identifier of the knowledge base. To obtain this ID, call CreateKnowledgeSpace to create a knowledge space, use the returned KnowledgeSpaceId to call CreateKnowledgeBase, and then use the KnowledgeBaseId returned by CreateKnowledgeBase. You can specify up to 50 knowledge base IDs separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Summarize this year\&quot;s financial report</para>
+        /// <para>Summarize the financial report for this year</para>
         /// </summary>
         [NameInMap("QueryText")]
         [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The number of results to recall.</para>
+        /// <para>The number of results to recall during retrieval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

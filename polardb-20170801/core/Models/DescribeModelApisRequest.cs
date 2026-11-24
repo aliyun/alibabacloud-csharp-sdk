@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the model API.</para>
+        /// <para>The model API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The status of the model API.</para>
+        /// <para>The model API status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>

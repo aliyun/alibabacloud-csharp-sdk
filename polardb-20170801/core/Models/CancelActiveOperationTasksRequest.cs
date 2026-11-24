@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required. You can call the DescribeRegions operation to query the region ID. If you leave this parameter empty, the system queries scheduled tasks in all regions under the current account by default.</para>
+        /// <para>The region ID. This parameter is required. You can call the DescribeRegions operation to query the region ID. If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the O&amp;M events to cancel in batches. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the O&amp;M events to be canceled in batches. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

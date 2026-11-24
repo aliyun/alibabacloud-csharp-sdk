@@ -837,7 +837,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
+        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before calling this operation, ensure that a running PolarDB cluster, a valid OSS bucket in the same region, and a basic PolarFS instance with acceleration enabled are available. The bucket address format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to cold instances or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -892,7 +892,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
+        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before calling this operation, ensure that a running PolarDB cluster, a valid OSS bucket in the same region, and a basic PolarFS instance with acceleration enabled are available. The bucket address format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to cold instances or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -947,7 +947,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
+        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before calling this operation, ensure that a running PolarDB cluster, a valid OSS bucket in the same region, and a basic PolarFS instance with acceleration enabled are available. The bucket address format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to cold instances or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -970,7 +970,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before you call this operation, make sure that you have a running PolarDB cluster, a valid OSS bucket in the same region, and a PolarFS instance of the basic type with acceleration enabled. The bucket endpoint format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to instances of the cold type or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
+        /// <para>Adds a transparent acceleration path for a PolarFS instance. Before calling this operation, ensure that a running PolarDB cluster, a valid OSS bucket in the same region, and a basic PolarFS instance with acceleration enabled are available. The bucket address format is {bucket-name}.oss-{regionId}-internal.aliyuncs.com. This operation is not applicable to cold instances or instances with acceleration disabled. You can call the DescribePolarFs and DescribePolarFsAttribute operations to verify the instance type and acceleration status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -993,14 +993,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</description></item>
-        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</description></item>
-        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields, such as <c>Description</c> and <c>Exclude</c>, are optional.</description></item>
-        /// <item><description>To define the quota limit, specify at least one of the following parameters: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, or <c>ChangeTTL</c>.</description></item>
-        /// <item><description>The <c>Priority</c> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</description></item>
-        /// <item><description>The <c>Enabled</c> field determines whether the rule takes effect immediately. The default value is true.</description></item>
+        /// <item><description>This operation adds a new PathPolicy (quota rule) to a specified Polarlakebase instance.</description></item>
+        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a rule to be added. You can add up to 11 rules at a time.</description></item>
+        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields such as <c>Description</c> and <c>Exclude</c> are optional.</description></item>
+        /// <item><description>You must specify at least one of the following fields to define the quota limit: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, and <c>ChangeTTL</c>.</description></item>
+        /// <item><description>The <c>Priority</c> field specifies the priority of the rule. A larger value indicates a higher priority. Default value: 0.</description></item>
+        /// <item><description>The <c>Enabled</c> field specifies whether the rule takes effect immediately. Default value: true, which indicates that the rule takes effect immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1056,14 +1056,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</description></item>
-        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</description></item>
-        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields, such as <c>Description</c> and <c>Exclude</c>, are optional.</description></item>
-        /// <item><description>To define the quota limit, specify at least one of the following parameters: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, or <c>ChangeTTL</c>.</description></item>
-        /// <item><description>The <c>Priority</c> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</description></item>
-        /// <item><description>The <c>Enabled</c> field determines whether the rule takes effect immediately. The default value is true.</description></item>
+        /// <item><description>This operation adds a new PathPolicy (quota rule) to a specified Polarlakebase instance.</description></item>
+        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a rule to be added. You can add up to 11 rules at a time.</description></item>
+        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields such as <c>Description</c> and <c>Exclude</c> are optional.</description></item>
+        /// <item><description>You must specify at least one of the following fields to define the quota limit: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, and <c>ChangeTTL</c>.</description></item>
+        /// <item><description>The <c>Priority</c> field specifies the priority of the rule. A larger value indicates a higher priority. Default value: 0.</description></item>
+        /// <item><description>The <c>Enabled</c> field specifies whether the rule takes effect immediately. Default value: true, which indicates that the rule takes effect immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1119,14 +1119,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</description></item>
-        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</description></item>
-        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields, such as <c>Description</c> and <c>Exclude</c>, are optional.</description></item>
-        /// <item><description>To define the quota limit, specify at least one of the following parameters: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, or <c>ChangeTTL</c>.</description></item>
-        /// <item><description>The <c>Priority</c> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</description></item>
-        /// <item><description>The <c>Enabled</c> field determines whether the rule takes effect immediately. The default value is true.</description></item>
+        /// <item><description>This operation adds a new PathPolicy (quota rule) to a specified Polarlakebase instance.</description></item>
+        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a rule to be added. You can add up to 11 rules at a time.</description></item>
+        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields such as <c>Description</c> and <c>Exclude</c> are optional.</description></item>
+        /// <item><description>You must specify at least one of the following fields to define the quota limit: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, and <c>ChangeTTL</c>.</description></item>
+        /// <item><description>The <c>Priority</c> field specifies the priority of the rule. A larger value indicates a higher priority. Default value: 0.</description></item>
+        /// <item><description>The <c>Enabled</c> field specifies whether the rule takes effect immediately. Default value: true, which indicates that the rule takes effect immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1150,14 +1150,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</description></item>
-        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</description></item>
-        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields, such as <c>Description</c> and <c>Exclude</c>, are optional.</description></item>
-        /// <item><description>To define the quota limit, specify at least one of the following parameters: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, or <c>ChangeTTL</c>.</description></item>
-        /// <item><description>The <c>Priority</c> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</description></item>
-        /// <item><description>The <c>Enabled</c> field determines whether the rule takes effect immediately. The default value is true.</description></item>
+        /// <item><description>This operation adds a new PathPolicy (quota rule) to a specified Polarlakebase instance.</description></item>
+        /// <item><description>The <c>Quotas</c> parameter is a list. Each element represents a rule to be added. You can add up to 11 rules at a time.</description></item>
+        /// <item><description>Each rule must include the <c>Name</c> and <c>Include</c> fields. Other fields such as <c>Description</c> and <c>Exclude</c> are optional.</description></item>
+        /// <item><description>You must specify at least one of the following fields to define the quota limit: <c>SizeLimit</c>, <c>FileCountLimit</c>, <c>AccessTTL</c>, and <c>ChangeTTL</c>.</description></item>
+        /// <item><description>The <c>Priority</c> field specifies the priority of the rule. A larger value indicates a higher priority. Default value: 0.</description></item>
+        /// <item><description>The <c>Enabled</c> field specifies whether the rule takes effect immediately. Default value: true, which indicates that the rule takes effect immediately.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1488,7 +1488,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Answers a single-turn question based on a knowledge base.</para>
+        /// <para>Performs single-turn question answering based on a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1570,7 +1570,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Answers a single-turn question based on a knowledge base.</para>
+        /// <para>Performs single-turn question answering based on a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1652,7 +1652,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Answers a single-turn question based on a knowledge base.</para>
+        /// <para>Performs single-turn question answering based on a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1670,7 +1670,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Answers a single-turn question based on a knowledge base.</para>
+        /// <para>Performs single-turn question answering based on a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5017,9 +5017,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</para>
+        /// <para>Closes a PolarDB for AI task. Prerequisites: The category of the destination cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before you close the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to close the task. However, you must still confirm that the task is enabled and its status is 1.</para>
         /// <h2>Prerequisites</h2>
-        /// <para>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
+        /// <para>Supplement the prerequisite workflow in the detailed description of CloseAITask (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be Status=1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5086,9 +5086,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</para>
+        /// <para>Closes a PolarDB for AI task. Prerequisites: The category of the destination cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before you close the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to close the task. However, you must still confirm that the task is enabled and its status is 1.</para>
         /// <h2>Prerequisites</h2>
-        /// <para>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
+        /// <para>Supplement the prerequisite workflow in the detailed description of CloseAITask (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be Status=1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5155,9 +5155,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</para>
+        /// <para>Closes a PolarDB for AI task. Prerequisites: The category of the destination cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before you close the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to close the task. However, you must still confirm that the task is enabled and its status is 1.</para>
         /// <h2>Prerequisites</h2>
-        /// <para>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
+        /// <para>Supplement the prerequisite workflow in the detailed description of CloseAITask (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be Status=1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5180,9 +5180,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a PolarDB for AI task. Prerequisites: The Category of the target cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before disabling the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to disable the task, but you must still confirm that the task is enabled and its status is 1.</para>
+        /// <para>Closes a PolarDB for AI task. Prerequisites: The category of the destination cluster must be Normal (SENormal is not supported), and the AI task must have been enabled by calling OpenAITask. Call DescribeAITaskStatus to confirm that Status is 1 before you close the task. For the paid DLNode path, you must first call CreateDBNodes and set DBNodeType to DLNode to create an AI node, and then call OpenAITask. For the free trial path, if a trial AI node is already available, you do not need to create an additional paid DLNode to close the task. However, you must still confirm that the task is enabled and its status is 1.</para>
         /// <h2>Prerequisites</h2>
-        /// <para>In the detailed description of CloseAITask, supplement the prerequisite workflow (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be 1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
+        /// <para>Supplement the prerequisite workflow in the detailed description of CloseAITask (CreateDBNodes(DBNodeType=DLNode) → OpenAITask → CloseAITask). Explicitly state that the cluster must be of the Normal category and the AI task status must be Status=1 (which can be queried by calling DescribeAITaskStatus). Distinguish the applicability of this API between the free trial AI node path and the paid DLNode path.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6629,7 +6629,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
+        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. Clusters of the maas type are not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6680,7 +6680,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
+        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. Clusters of the maas type are not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6731,7 +6731,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
+        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. Clusters of the maas type are not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6754,7 +6754,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. The maas type is not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
+        /// <para>Creates a node for an AI cluster. This operation is applicable only to clusters whose AiNodeType is vnode or container. Clusters of the maas type are not supported. You can call the DescribeAIDBClusters operation to view the AiNodeType of the target cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8644,7 +8644,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an Agent to a Squad.</para>
+        /// <para>Associates an agent with a squad.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8694,7 +8694,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an Agent to a Squad.</para>
+        /// <para>Associates an agent with a squad.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8744,7 +8744,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an Agent to a Squad.</para>
+        /// <para>Associates an agent with a squad.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8762,7 +8762,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an Agent to a Squad.</para>
+        /// <para>Associates an agent with a squad.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10457,6 +10457,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BypassQuotaCheck))
+            {
+                query["BypassQuotaCheck"] = request.BypassQuotaCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCostPointsPerMillion))
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
@@ -10492,6 +10496,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputCostPointsPerMillion))
             {
                 query["InputCostPointsPerMillion"] = request.InputCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTier))
+            {
+                query["InputTokenTier"] = request.InputTokenTier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTiers))
             {
@@ -10555,6 +10563,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BypassQuotaCheck))
+            {
+                query["BypassQuotaCheck"] = request.BypassQuotaCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCostPointsPerMillion))
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
@@ -10590,6 +10602,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputCostPointsPerMillion))
             {
                 query["InputCostPointsPerMillion"] = request.InputCostPointsPerMillion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTier))
+            {
+                query["InputTokenTier"] = request.InputTokenTier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputTokenTiers))
             {
@@ -11888,12 +11904,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cluster endpoint for an edge cluster.</para>
+        /// <para>Creates a custom cluster endpoint for an edge cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</para>
+        /// <para>Before you begin: This operation applies only to Edge Node Service (ENS) edge cloud clusters and is not applicable to standard PolarDB clusters. Currently, the CreateDBClusterZonal operation is unavailable. To create an edge cluster, apply through ENS or MyBase infrastructure, or call CreateDBCluster with CloudProvider set to ENS, and then call DescribeDBClustersZonal to obtain the edge cluster ID. Operation description: Prerequisites for edge cloud clusters: This API applies only to ENS edge cloud clusters and is not applicable to standard PolarDB clusters. It provides an overview of edge clouds, activation methods, and instructions on how to obtain the edge cluster ID, noting that the CreateDBClusterZonal API is currently unavailable and clusters must be created through alternative methods.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11991,12 +12007,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cluster endpoint for an edge cluster.</para>
+        /// <para>Creates a custom cluster endpoint for an edge cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</para>
+        /// <para>Before you begin: This operation applies only to Edge Node Service (ENS) edge cloud clusters and is not applicable to standard PolarDB clusters. Currently, the CreateDBClusterZonal operation is unavailable. To create an edge cluster, apply through ENS or MyBase infrastructure, or call CreateDBCluster with CloudProvider set to ENS, and then call DescribeDBClustersZonal to obtain the edge cluster ID. Operation description: Prerequisites for edge cloud clusters: This API applies only to ENS edge cloud clusters and is not applicable to standard PolarDB clusters. It provides an overview of edge clouds, activation methods, and instructions on how to obtain the edge cluster ID, noting that the CreateDBClusterZonal API is currently unavailable and clusters must be created through alternative methods.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12094,12 +12110,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cluster endpoint for an edge cluster.</para>
+        /// <para>Creates a custom cluster endpoint for an edge cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</para>
+        /// <para>Before you begin: This operation applies only to Edge Node Service (ENS) edge cloud clusters and is not applicable to standard PolarDB clusters. Currently, the CreateDBClusterZonal operation is unavailable. To create an edge cluster, apply through ENS or MyBase infrastructure, or call CreateDBCluster with CloudProvider set to ENS, and then call DescribeDBClustersZonal to obtain the edge cluster ID. Operation description: Prerequisites for edge cloud clusters: This API applies only to ENS edge cloud clusters and is not applicable to standard PolarDB clusters. It provides an overview of edge clouds, activation methods, and instructions on how to obtain the edge cluster ID, noting that the CreateDBClusterZonal API is currently unavailable and clusters must be created through alternative methods.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12117,12 +12133,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cluster endpoint for an edge cluster.</para>
+        /// <para>Creates a custom cluster endpoint for an edge cloud cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: This operation applies only to PolarDB on ENS clusters and does not apply to standard PolarDB clusters. The CreateDBClusterZonal operation is currently unavailable. To create an edge cluster, apply through the ENS or MyBase infrastructure, or call the CreateDBCluster operation with CloudProvider set to ENS. Then, call the DescribeDBClustersZonal operation to obtain the edge cluster ID. Usage notes: This operation applies only to PolarDB on ENS clusters. It outlines the concepts of edge clouds, activation methods, and how to obtain the edge cluster ID, noting that the CreateDBClusterZonal operation is unavailable and clusters must be created through alternative methods.</para>
+        /// <para>Before you begin: This operation applies only to Edge Node Service (ENS) edge cloud clusters and is not applicable to standard PolarDB clusters. Currently, the CreateDBClusterZonal operation is unavailable. To create an edge cluster, apply through ENS or MyBase infrastructure, or call CreateDBCluster with CloudProvider set to ENS, and then call DescribeDBClustersZonal to obtain the edge cluster ID. Operation description: Prerequisites for edge cloud clusters: This API applies only to ENS edge cloud clusters and is not applicable to standard PolarDB clusters. It provides an overview of edge clouds, activation methods, and instructions on how to obtain the edge cluster ID, noting that the CreateDBClusterZonal API is currently unavailable and clusters must be created through alternative methods.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12373,15 +12389,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster and a self-managed PostgreSQL database on an ECS instance. You can use a DBLink to query data across clusters.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster supports a maximum of 10 DBLinks.</para>
-        /// </description></item>
-        /// <item><description><para>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</para>
-        /// </description></item>
-        /// <item><description><para>The source cluster and the destination cluster or destination ECS instance must be in the same region.</para>
-        /// </description></item>
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>Both the source and destination clusters of a DBLink consume one DBLink quota.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -12494,15 +12507,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster and a self-managed PostgreSQL database on an ECS instance. You can use a DBLink to query data across clusters.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster supports a maximum of 10 DBLinks.</para>
-        /// </description></item>
-        /// <item><description><para>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</para>
-        /// </description></item>
-        /// <item><description><para>The source cluster and the destination cluster or destination ECS instance must be in the same region.</para>
-        /// </description></item>
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>Both the source and destination clusters of a DBLink consume one DBLink quota.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -12615,15 +12625,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster and a self-managed PostgreSQL database on an ECS instance. You can use a DBLink to query data across clusters.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster supports a maximum of 10 DBLinks.</para>
-        /// </description></item>
-        /// <item><description><para>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</para>
-        /// </description></item>
-        /// <item><description><para>The source cluster and the destination cluster or destination ECS instance must be in the same region.</para>
-        /// </description></item>
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>Both the source and destination clusters of a DBLink consume one DBLink quota.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -12648,15 +12655,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</para>
+        /// <para>A DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster and a self-managed PostgreSQL database on an ECS instance. You can use a DBLink to query data across clusters.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster supports a maximum of 10 DBLinks.</para>
-        /// </description></item>
-        /// <item><description><para>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</para>
-        /// </description></item>
-        /// <item><description><para>The source cluster and the destination cluster or destination ECS instance must be in the same region.</para>
-        /// </description></item>
+        /// <item><description>You can create up to 10 DBLinks for a cluster.</description></item>
+        /// <item><description>Both the source and destination clusters of a DBLink consume one DBLink quota.</description></item>
+        /// <item><description>The source cluster and the destination cluster or destination ECS instance must be in the same region.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -13552,14 +13556,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database for an ApsaraDB for PolarDB edge cluster.</para>
+        /// <para>Creates an ApsaraDB PolarDB edge database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
+        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call the DescribeDBClustersZonal operation to query edge clusters in ENS dedicated regions, or call the CreateDBCluster operation with CloudProvider set to ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
+        /// <para>Append the complete dependency chain for creating an ENS cluster to the detailed_description of the CreateDatabaseZonal API. Specify that you must first create a VPC and a vSwitch in an edge region by using the ENS API, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13649,14 +13653,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database for an ApsaraDB for PolarDB edge cluster.</para>
+        /// <para>Creates an ApsaraDB PolarDB edge database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
+        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call the DescribeDBClustersZonal operation to query edge clusters in ENS dedicated regions, or call the CreateDBCluster operation with CloudProvider set to ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
+        /// <para>Append the complete dependency chain for creating an ENS cluster to the detailed_description of the CreateDatabaseZonal API. Specify that you must first create a VPC and a vSwitch in an edge region by using the ENS API, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13746,14 +13750,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database for an ApsaraDB for PolarDB edge cluster.</para>
+        /// <para>Creates an ApsaraDB PolarDB edge database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
+        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call the DescribeDBClustersZonal operation to query edge clusters in ENS dedicated regions, or call the CreateDBCluster operation with CloudProvider set to ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
+        /// <para>Append the complete dependency chain for creating an ENS cluster to the detailed_description of the CreateDatabaseZonal API. Specify that you must first create a VPC and a vSwitch in an edge region by using the ENS API, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13771,14 +13775,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database for an ApsaraDB for PolarDB edge cluster.</para>
+        /// <para>Creates an ApsaraDB PolarDB edge database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call DescribeDBClustersZonal to query edge clusters in ENS dedicated regions, or call CreateDBCluster with CloudProvider=ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
+        /// <para>Prerequisites: The DBClusterId must be the ID of a PolarDB on ENS cluster. You can call the DescribeDBClustersZonal operation to query edge clusters in ENS dedicated regions, or call the CreateDBCluster operation with CloudProvider set to ENS to create an edge cluster, and then call CreateDatabaseZonal.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Append the complete dependency chain description for ENS cluster creation to the detailed_description of the CreateDatabaseZonal API. Specify that you must first use the ENS product API to create a VPC and a vSwitch in an edge region, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
+        /// <para>Append the complete dependency chain for creating an ENS cluster to the detailed_description of the CreateDatabaseZonal API. Specify that you must first create a VPC and a vSwitch in an edge region by using the ENS API, then create an ENS cluster, and finally call CreateDatabaseZonal.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15577,7 +15581,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15700,7 +15704,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15823,7 +15827,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15846,7 +15850,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the service activation status in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the VPC DescribeVpcs and DescribeVSwitches operations, query security groups by calling the ECS DescribeSecurityGroups operation, and query buckets by calling the OSS ListBuckets operation. If the resources do not exist, create them in the corresponding services first.</para>
+        /// <para>Prerequisites: You must activate the PrivateLink service in your current account before calling this operation. If the service is not activated, the operation returns the PrivateLinkService.NotOpen (400) error. You can check the activation status of the service in the PrivateLink console. Before creating a knowledge space, you must also prepare a VpcId, VSwitchId, SecurityGroupId, and OSSBucket. You can query VPCs and vSwitches by calling the DescribeVpcs and DescribeVSwitches operations of VPC, query security groups by calling the DescribeSecurityGroups operation of ECS, and query buckets by calling the ListBuckets operation of OSS. If the resources do not exist, create them in the corresponding services first.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16209,6 +16213,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ModelCategory"] = request.ModelCategory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMappings))
+            {
+                query["ModelMappings"] = request.ModelMappings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelRouting))
+            {
+                query["ModelRouting"] = request.ModelRouting;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -16290,6 +16302,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCategory))
             {
                 query["ModelCategory"] = request.ModelCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMappings))
+            {
+                query["ModelMappings"] = request.ModelMappings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelRouting))
+            {
+                query["ModelRouting"] = request.ModelRouting;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -17863,6 +17883,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Uploads a skill.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
+        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
+        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreatePolarClawSkillRequest
         /// </param>
@@ -17940,6 +17970,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <summary>
         /// <para>Uploads a skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
+        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
+        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolarClawSkillRequest
@@ -18019,6 +18059,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Uploads a skill.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
+        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
+        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreatePolarClawSkillRequest
         /// </param>
@@ -18036,6 +18086,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <summary>
         /// <para>Uploads a skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>已创建 PolarClaw 应用：技能将上传到该应用。可调用 DescribeApplications 并将 ApplicationTypes 设置为 polardb_polarclaw 查询应用列表，获取应用 ID。</description></item>
+        /// <item><description>技能文件已存放在 OSS Bucket 中：OSSBucket 必须是真实存在、且与应用处于同一地域的 Bucket，Bucket 所在地域可通过 BucketRegionId 指定。</description></item>
+        /// <item><description>OSSPrefix 为技能文件在 Bucket 中的对象前缀。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePolarClawSkillRequest
@@ -18860,15 +18920,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
+        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -18933,15 +18994,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
+        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -19006,15 +19068,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
+        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -19039,15 +19102,16 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set the maximum CPU quota percentage available to the rule by using MaxCpu, or set the maximum number of CPU cores available to the rule by using CpuCount. When you create a rule, you must specify either MaxCpu or CpuCount, but not both.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can specify the maximum CPU quota percentage for the rule by using MaxCpu or the maximum number of CPU cores by using CpuCount.
+        /// You must specify exactly one of the MaxCpu and CpuCount parameters when you create a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the creation, modification, deletion, binding, and unbinding of resource control rules, but does not support querying Resource Control CPU utilization.</para>
+        /// <para>Resource Control limits the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding rules, but does not support querying CPU utilization for Resource Control.</para>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>Applies only to PolarDB for MySQL Cluster Edition that supports Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
         /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
         /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
         /// <item><description>The maximum value of CpuCount is determined by the resource_control_cpu_count_limit kernel parameter of the target cluster.<remarks>
@@ -37424,12 +37488,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download links of redo log backups.</para>
+        /// <para>Queries the download links for physical log backups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</para>
+        /// <para>Before you begin: Log backup is enabled for the target cluster, and the required physical logs are archived. Invoke DescribeBackupLogs to query valid physical log backup IDs, and then invoke this operation with the cluster ID and log backup ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37479,12 +37543,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download links of redo log backups.</para>
+        /// <para>Queries the download links for physical log backups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</para>
+        /// <para>Before you begin: Log backup is enabled for the target cluster, and the required physical logs are archived. Invoke DescribeBackupLogs to query valid physical log backup IDs, and then invoke this operation with the cluster ID and log backup ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37534,12 +37598,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download links of redo log backups.</para>
+        /// <para>Queries the download links for physical log backups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</para>
+        /// <para>Before you begin: Log backup is enabled for the target cluster, and the required physical logs are archived. Invoke DescribeBackupLogs to query valid physical log backup IDs, and then invoke this operation with the cluster ID and log backup ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37557,12 +37621,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download links of redo log backups.</para>
+        /// <para>Queries the download links for physical log backups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you begin: Log backup is enabled for the destination cluster, and the required physical logs are archived. First, call DescribeBackupLogs to query valid redo log backup IDs, and then call this operation by using the cluster ID and the redo log backup IDs.</para>
+        /// <para>Before you begin: Log backup is enabled for the target cluster, and the required physical logs are archived. Invoke DescribeBackupLogs to query valid physical log backup IDs, and then invoke this operation with the cluster ID and log backup ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -75665,6 +75729,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BypassQuotaCheck))
+            {
+                query["BypassQuotaCheck"] = request.BypassQuotaCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCostPointsPerMillion))
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
@@ -75755,6 +75823,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BypassQuotaCheck))
+            {
+                query["BypassQuotaCheck"] = request.BypassQuotaCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CacheCostPointsPerMillion))
             {
                 query["CacheCostPointsPerMillion"] = request.CacheCostPointsPerMillion;
@@ -85129,6 +85201,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["ModelCategory"] = request.ModelCategory;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMappings))
+            {
+                query["ModelMappings"] = request.ModelMappings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelRouting))
+            {
+                query["ModelRouting"] = request.ModelRouting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathPrefix))
             {
                 query["PathPrefix"] = request.PathPrefix;
@@ -85206,6 +85290,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCategory))
             {
                 query["ModelCategory"] = request.ModelCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelMappings))
+            {
+                query["ModelMappings"] = request.ModelMappings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelRouting))
+            {
+                query["ModelRouting"] = request.ModelRouting;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PathPrefix))
             {
@@ -88953,9 +89049,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
+        /// <para>Registers an uploaded file to a knowledge base. Before you begin: activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</para>
+        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the API operations for each step.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -89010,9 +89106,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
+        /// <para>Registers an uploaded file to a knowledge base. Before you begin: activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</para>
+        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the API operations for each step.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -89067,9 +89163,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
+        /// <para>Registers an uploaded file to a knowledge base. Before you begin: activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</para>
+        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the API operations for each step.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -89092,9 +89188,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Registers an uploaded file to a knowledge base. Before you begin, activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
+        /// <para>Registers an uploaded file to a knowledge base. Before you begin: activate the PrivateLink service, create a knowledge space and a knowledge base, upload the file to OSS, and then call this operation by using the knowledge base ID and the OSS object key of the file.</para>
         /// <h2>Before you begin</h2>
-        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the corresponding API operations for each step.</para>
+        /// <para>Note: The complete dependency chain is as follows: 1) Activate the PrivateLink service. 2) Call CreateKnowledgeSpace to create a knowledge space. 3) Call CreateKnowledgeBase to create a knowledge base. 4) Upload the file to the associated OSS bucket. Include links to the API operations for each step.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -91867,6 +91963,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Restarts a node of an edge cluster for PolarDB on ENS.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <para>本接口用于重启边缘云（ENS）PolarDB 集群的节点。边缘云集群需通过 CreateDBCluster 创建，并将 CloudProvider 设置为 ENS；可通过 DescribeDBClustersZonal 查询当前账号下的边缘云集群及其节点，通过 DescribeEdgeCloudRegion 查询可用的边缘云地域、中心管控地域（CentralControlRegionId）及备用边缘云地域。</para>
+        /// <h2>地域说明</h2>
+        /// <para>本接口 spec 未声明、也不转发 RegionId 参数；但通过 SDK 或 OpenAPI 调用时仍需指定地域，请使用 DescribeEdgeCloudRegion 返回的中心管控地域 ID，以完成 endpoint 路由；未指定地域时 SDK 无法构建正确的区域化 endpoint。若研发确认该接口为非地域化接口、调用时无需地域路由，则以研发结论为准。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RestartDBNodeZonalRequest
         /// </param>
@@ -91932,6 +92036,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <summary>
         /// <para>Restarts a node of an edge cluster for PolarDB on ENS.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <para>本接口用于重启边缘云（ENS）PolarDB 集群的节点。边缘云集群需通过 CreateDBCluster 创建，并将 CloudProvider 设置为 ENS；可通过 DescribeDBClustersZonal 查询当前账号下的边缘云集群及其节点，通过 DescribeEdgeCloudRegion 查询可用的边缘云地域、中心管控地域（CentralControlRegionId）及备用边缘云地域。</para>
+        /// <h2>地域说明</h2>
+        /// <para>本接口 spec 未声明、也不转发 RegionId 参数；但通过 SDK 或 OpenAPI 调用时仍需指定地域，请使用 DescribeEdgeCloudRegion 返回的中心管控地域 ID，以完成 endpoint 路由；未指定地域时 SDK 无法构建正确的区域化 endpoint。若研发确认该接口为非地域化接口、调用时无需地域路由，则以研发结论为准。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestartDBNodeZonalRequest
@@ -91999,6 +92111,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>Restarts a node of an edge cluster for PolarDB on ENS.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <para>本接口用于重启边缘云（ENS）PolarDB 集群的节点。边缘云集群需通过 CreateDBCluster 创建，并将 CloudProvider 设置为 ENS；可通过 DescribeDBClustersZonal 查询当前账号下的边缘云集群及其节点，通过 DescribeEdgeCloudRegion 查询可用的边缘云地域、中心管控地域（CentralControlRegionId）及备用边缘云地域。</para>
+        /// <h2>地域说明</h2>
+        /// <para>本接口 spec 未声明、也不转发 RegionId 参数；但通过 SDK 或 OpenAPI 调用时仍需指定地域，请使用 DescribeEdgeCloudRegion 返回的中心管控地域 ID，以完成 endpoint 路由；未指定地域时 SDK 无法构建正确的区域化 endpoint。若研发确认该接口为非地域化接口、调用时无需地域路由，则以研发结论为准。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RestartDBNodeZonalRequest
         /// </param>
@@ -92016,6 +92136,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <summary>
         /// <para>Restarts a node of an edge cluster for PolarDB on ENS.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>前提条件</h2>
+        /// <para>本接口用于重启边缘云（ENS）PolarDB 集群的节点。边缘云集群需通过 CreateDBCluster 创建，并将 CloudProvider 设置为 ENS；可通过 DescribeDBClustersZonal 查询当前账号下的边缘云集群及其节点，通过 DescribeEdgeCloudRegion 查询可用的边缘云地域、中心管控地域（CentralControlRegionId）及备用边缘云地域。</para>
+        /// <h2>地域说明</h2>
+        /// <para>本接口 spec 未声明、也不转发 RegionId 参数；但通过 SDK 或 OpenAPI 调用时仍需指定地域，请使用 DescribeEdgeCloudRegion 返回的中心管控地域 ID，以完成 endpoint 路由；未指定地域时 SDK 无法构建正确的区域化 endpoint。若研发确认该接口为非地域化接口、调用时无需地域路由，则以研发结论为准。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestartDBNodeZonalRequest

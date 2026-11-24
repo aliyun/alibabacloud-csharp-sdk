@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ActivateAt { get; set; }
 
         /// <summary>
-        /// <para>The content of the activation code. Decode the Base64-encoded content and save it to the license.lic file for PolarDB to read during startup.</para>
+        /// <para>The content of the activation code. Decode this content by using Base64 and save it to the license.lic file for PolarDB to read during startup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAEAA******AAA=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code expires.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2054-10-09 16:46:20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireAt { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code was updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>

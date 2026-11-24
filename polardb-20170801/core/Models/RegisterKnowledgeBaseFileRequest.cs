@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge base. Create a knowledge space first, then create a knowledge base, and obtain this ID from the creation result.</para>
+        /// <para>The knowledge base ID. Create a knowledge space first, then create a knowledge base, and obtain this ID from the creation result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
