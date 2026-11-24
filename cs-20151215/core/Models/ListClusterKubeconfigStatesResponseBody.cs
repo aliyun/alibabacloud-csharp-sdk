@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The account state.</para>
+            /// <para>The account status.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Active: The account is active.</description></item>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the KubeConfig client certificate. The time is displayed in ISO 8601 format and includes time zone information.</para>
+            /// <para>The expiration time of the KubeConfig client certificate. The time is in ISO 8601 format and includes time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2027-07-15T01:32:20Z</para>
@@ -128,12 +128,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CertExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the KubeConfig client certificate.</para>
+            /// <para>The status of the KubeConfig client certificate.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Unexpired: The certificate is not expired.</description></item>
-            /// <item><description>Expired: The certificate is expired.</description></item>
-            /// <item><description>Unknown: The certificate state is unknown (abnormal state).</description></item>
+            /// <item><description>Unexpired: The certificate has not expired.</description></item>
+            /// <item><description>Expired: The certificate has expired.</description></item>
+            /// <item><description>Unknown: The status is unknown, which indicates an exception.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,8 +164,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para>Specifies whether the content is consistent with the default cluster role template.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The content is consistent with the default cluster role template.</description></item>
-                /// <item><description>false: The content is inconsistent with the default cluster role template.</description></item>
+                /// <item><description>true: Consistent.</description></item>
+                /// <item><description>false: Inconsistent.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("is_default_template")]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CurrentStage { get; set; }
 
         /// <summary>
-        /// <para>The task fault information.</para>
+        /// <para>The error message of the node fault.</para>
         /// </summary>
         [NameInMap("error")]
         [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The information about the task stage.</para>
+            /// <para>The message of the task stage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success to xxxxx</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The task execution target.</para>
+        /// <para>The execution target of the task.</para>
         /// </summary>
         [NameInMap("target")]
         [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The type of the task execution target.</para>
+            /// <para>The object type of the execute target of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTaskInfoResponseBodyTaskResult> TaskResult { get; set; }
         public class DescribeTaskInfoResponseBodyTaskResult : TeaModel {
             /// <summary>
-            /// <para>The resource operated by the task. For example, if the operated resource during a scale-out is an instance, this value is the instance ID.</para>
+            /// <para>The resource operated by the task. For example, if the operated resource during scale-out is an instance, this value is the instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxx</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <list type="bullet">
             /// <item><description><c>success</c>: The scale-out succeeded.</description></item>
             /// <item><description><c>failed</c>: The scale-out failed.</description></item>
-            /// <item><description><c>initial</c>: The scale-out is being initialized.</description></item>
+            /// <item><description><c>initial</c>: The resource is being initialized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The resource subtype that can be associated with the self-healing rule.</para>
+        /// <para>The subtype of resource that the self-healing rule can be associated with.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ess</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceSubType { get; set; }
 
         /// <summary>
-        /// <para>The resource type that can be associated with the self-healing rule.</para>
+        /// <para>The type of resource that the self-healing rule can be associated with.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nodepool</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<CreateAutoRepairPolicyRequestRules> Rules { get; set; }
         public class CreateAutoRepairPolicyRequestRules : TeaModel {
             /// <summary>
-            /// <para>The list of identified incidents.</para>
+            /// <para>The list of identified faults.</para>
             /// </summary>
             [NameInMap("incidents")]
             [Validation(Required=false)]
             public List<CreateAutoRepairPolicyRequestRulesIncidents> Incidents { get; set; }
             public class CreateAutoRepairPolicyRequestRulesIncidents : TeaModel {
                 /// <summary>
-                /// <para>The name of the incident.</para>
+                /// <para>The name of the fault.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node.FaultNeedReboot.HOST</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the incident.</para>
+                /// <para>The type of the fault.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>system</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public Dictionary<string, object> Config { get; set; }
 
                 /// <summary>
-                /// <para>The configuration for the manual intervention procedure.</para>
+                /// <para>The manual intervention configuration for the procedure.</para>
                 /// </summary>
                 [NameInMap("intervention")]
                 [Validation(Required=false)]
                 public CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention Intervention { get; set; }
                 public class CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention : TeaModel {
                     /// <summary>
-                    /// <para>The label configuration for authorization confirmation. Adding the following labels to the node indicates that you authorize ACK to execute the operations in this stage. After completing the operations in this stage, ACK automatically removes the authorization inquiry and confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the actions in this stage and subsequent stages, and the node may remain in a damaged state.</para>
+                    /// <para>The label configuration for authorization confirmation. Adding the following labels to the node indicates that you authorize ACK to execute the operations in this stage. After completing the operations in this stage, ACK automatically removes the authorization inquiry and confirmation labels for this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the actions in this stage and subsequent stages, and the node may remain in an impaired state.</para>
                     /// </summary>
                     [NameInMap("approved_label")]
                     [Validation(Required=false)]

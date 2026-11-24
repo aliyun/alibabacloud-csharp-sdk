@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Specifies whether to restart the instance.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether to allow restarting instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListNodePoolComponentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node components.</para>
+        /// <para>The list of node components.</para>
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<ListNodePoolComponentsResponseBodyComponents> Components { get; set; }
         public class ListNodePoolComponentsResponseBodyComponents : TeaModel {
             /// <summary>
-            /// <para>The parameter schema of the node component, including custom parameters and system parameters.</para>
+            /// <para>The configuration schema of the node component, including custom parameters and system parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;{\&quot;$schema\&quot;: \&quot;\&quot;,\&quot;properties\&quot;: {}&quot;</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results per page. Default value: 200.</para>
+        /// <para>The maximum number of results to return. Default value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5c0a1c0f91c14c6****</para>

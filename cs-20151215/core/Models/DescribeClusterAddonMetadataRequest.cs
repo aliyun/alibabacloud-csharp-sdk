@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAddonMetadataRequest : TeaModel {
         /// <summary>
-        /// <para>The component version.</para>
+        /// <para>The version of the add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.8.4.1</para>

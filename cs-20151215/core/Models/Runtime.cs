@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The container runtime version. By default, the latest version is used. For more information about the release notes, see <a href="https://help.aliyun.com/document_detail/207829.html">Container runtime release notes</a>.</para>
+        /// <para>The container runtime version. Default value: the latest version. For more information, see <a href="https://help.aliyun.com/document_detail/207829.html">Runtime release notes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.6.20</para>

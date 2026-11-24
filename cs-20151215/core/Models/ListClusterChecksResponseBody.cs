@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterChecksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of checks.</para>
+        /// <para>The check list.</para>
         /// </summary>
         [NameInMap("checks")]
         [Validation(Required=false)]

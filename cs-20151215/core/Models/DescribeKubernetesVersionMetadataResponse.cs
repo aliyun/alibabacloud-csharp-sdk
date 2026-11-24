@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public Dictionary<string, object> Capabilities { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Kubernetes version can be created.</para>
+            /// <para>Specifies whether the Kubernetes version is available for cluster creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>The category of the image. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>system</c>: public images</description></item>
-                /// <item><description><c>self</c>: custom images</description></item>
-                /// <item><description><c>others</c>: public images from other users</description></item>
-                /// <item><description><c>marketplace</c>: marketplace images</description></item>
+                /// <item><description><c>system</c>: public image</description></item>
+                /// <item><description><c>self</c>: custom image</description></item>
+                /// <item><description><c>others</c>: shared image</description></item>
+                /// <item><description><c>marketplace</c>: Alibaba Cloud Marketplace image</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// <para>The operating system distribution type. Use this field to specify the node operating system. Valid values:</para>
+                /// <para>The type of the operating system distribution. Use this field to specify the operating system for nodes. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>CentOS</c></description></item>
                 /// <item><description><c>AliyunLinux</c></description></item>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// <para>The operating system type. Valid values:</para>
+                /// <para>The type of the operating system. Examples:</para>
                 /// <list type="bullet">
                 /// <item><description><c>Windows</c></description></item>
                 /// <item><description><c>Linux</c></description></item>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The metadata information of the Kubernetes version.</para>
+            /// <para>The metadata of the Kubernetes version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -212,10 +212,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// <para>The support policy required to obtain this patch version. The value is case-sensitive. Valid values:</para>
+            /// <para>The support policy required to obtain the patch version. The values are case-sensitive. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Standard: regular patch versions</description></item>
-            /// <item><description>Extended: patch versions exclusive to the extended support period, which include backported CVE and critical bug fixes. Only clusters with extended support enabled can be upgraded to these versions.
+            /// <item><description>Standard: regular patch version</description></item>
+            /// <item><description>Extended: patch version exclusive to the extended support period, which includes backported CVE and critical bug fixes, and is only available for clusters with extended support enabled
             /// This field always has a value. It shares the same name and value range as the support_policy of the cluster. You can directly compare the policy enabled for the cluster with the policy required for this version.</description></item>
             /// </list>
             /// 
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> UpgradableVersions { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes version released by ACK. For more version information, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</para>
+            /// <para>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.31.1-aliyun.1</para>

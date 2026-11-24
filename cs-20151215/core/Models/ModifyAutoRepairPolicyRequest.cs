@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<ModifyAutoRepairPolicyRequestRulesRepairProcedure> RepairProcedure { get; set; }
             public class ModifyAutoRepairPolicyRequestRulesRepairProcedure : TeaModel {
                 /// <summary>
-                /// <para>The parameter settings of the flow.</para>
+                /// <para>The parameter settings for the flow.</para>
                 /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention Intervention { get; set; }
                 public class ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention : TeaModel {
                     /// <summary>
-                    /// <para>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</para>
+                    /// <para>The label configuration for authorization confirmation. Adding the following labels to the node authorizes ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and confirmation labels for this stage. If you do not promptly add the following labels to grant authorization, ACK does not execute the action for this stage or subsequent actions, and the node may remain in an impaired state.</para>
                     /// </summary>
                     [NameInMap("approved_label")]
                     [Validation(Required=false)]
                     public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel ApprovedLabel { get; set; }
                     public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel : TeaModel {
                         /// <summary>
-                        /// <para>The key of the label.</para>
+                        /// <para>The <c>key</c> of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the label.</para>
+                        /// <para>The <c>value</c> of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>approved</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel InquiringLabel { get; set; }
                     public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel : TeaModel {
                         /// <summary>
-                        /// <para>The key of the label.</para>
+                        /// <para>The <c>key</c> of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the label.</para>
+                        /// <para>The <c>value</c> of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>inquiring</para>

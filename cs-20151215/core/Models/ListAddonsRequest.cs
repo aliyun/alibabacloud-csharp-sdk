@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListAddonsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID. If this parameter is specified, the system queries the available components for the specified cluster and ignores other parameters.</para>
+        /// <para>The cluster ID. If this parameter is specified, the system queries the list of available add-ons for the cluster and ignores other parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c02b3e03be10643e8a644a843ffcb****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The cluster specification. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
+        /// <para>The cluster specifications. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>The region. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
+        /// <para>The region ID. If cluster_id is specified, this parameter is ignored. The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

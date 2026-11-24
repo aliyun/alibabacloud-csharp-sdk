@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the KubeConfig. Format: UTC time in RFC 3339 format.</para>
+        /// <para>The expiration time of the KubeConfig. The time is displayed in UTC and follows the RFC 3339 standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2028-04-09T06:20:47Z</para>

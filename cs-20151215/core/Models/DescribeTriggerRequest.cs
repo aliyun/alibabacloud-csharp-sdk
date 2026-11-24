@@ -34,11 +34,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deployment</c>: Triggers for stateless applications.</description></item>
-        /// <item><description><c>application</c>: Triggers for Application Center applications.
-        /// Default value: <c>deployment</c>.
-        /// If you do not specify the trigger type, the query results are not filtered by trigger type.</description></item>
+        /// <item><description><para><c>deployment</c>: The trigger for stateless applications. </para>
+        /// </description></item>
+        /// <item><description><para><c>application</c>: The trigger for Hybrid Cloud Application Center applications.</para>
+        /// </description></item>
         /// </list>
+        /// <para>Default value: <c>deployment</c>.</para>
+        /// <para>If you do not specify the trigger type, the query results are not filtered by trigger type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deployment</para>
@@ -48,9 +50,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The trigger action. Valid values:
-        /// <c>redeploy</c>: Redeploys the application.
-        /// If you do not specify the trigger action, the query results are not filtered by trigger action.</para>
+        /// <para>The trigger action. Valid values:</para>
+        /// <para><c>redeploy</c>: Redeploys the application.</para>
+        /// <para>If you do not specify the trigger action, the query results are not filtered by trigger action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redeploy</para>

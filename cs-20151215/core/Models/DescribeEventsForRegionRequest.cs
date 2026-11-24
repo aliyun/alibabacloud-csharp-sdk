@@ -21,13 +21,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The maximum number of results to return for a single request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("max_results")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. The value is the next_token parameter value returned by the previous API call.</para>
+        /// <para>The pagination token. Set the value to the next_token value returned by the previous API call.</para>
         /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
+        /// <para>The maximum number of results to display per page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 50.</para>
         /// 

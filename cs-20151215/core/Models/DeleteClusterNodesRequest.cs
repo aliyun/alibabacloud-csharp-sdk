@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically drain pods from the nodes. Valid values:</para>
+        /// <para>Specifies whether to automatically drain the pods on the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Automatically drains pods from the nodes.</description></item>
-        /// <item><description><c>false</c>: Does not automatically drain pods from the nodes.</description></item>
+        /// <item><description><c>true</c>: Automatically drains the pods on the node.</description></item>
+        /// <item><description><c>false</c>: Does not automatically drain the pods on the node.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -45,12 +45,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to release the associated ECS instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Releases the associated ECS instances.</description></item>
-        /// <item><description><c>false</c>: Retains the associated ECS instances.</description></item>
+        /// <item><description><c>true</c>: Releases the ECS instances.</description></item>
+        /// <item><description><c>false</c>: Retains the ECS instances.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// <remarks>
-        /// <para>When a node is a subscription instance, you cannot release the associated ECS instance.</para>
+        /// <para>You cannot release the ECS instance if the node is a subscription instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterAddonInstanceResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Helm release instance information corresponding to the component.</para>
+        /// <para>The information about the Helm release instance corresponding to the component.</para>
         /// </summary>
         [NameInMap("helm_release")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the object belongs.</para>
+            /// <para>The namespace of the object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kube-system</para>

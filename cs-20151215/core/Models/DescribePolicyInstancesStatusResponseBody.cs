@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, object> InstancesSeverityCount { get; set; }
 
         /// <summary>
-        /// <para>The list of policy instance counts by policy type.</para>
+        /// <para>The list of policy instance counts for different policy types.</para>
         /// </summary>
         [NameInMap("policy_instances")]
         [Validation(Required=false)]
         public List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> PolicyInstances { get; set; }
         public class DescribePolicyInstancesStatusResponseBodyPolicyInstances : TeaModel {
             /// <summary>
-            /// <para>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</para>
+            /// <para>The policy type. For supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>compliance</para>

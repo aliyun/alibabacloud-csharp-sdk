@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<UpgradeClusterAddonsRequestBody> Body { get; set; }
         public class UpgradeClusterAddonsRequestBody : TeaModel {
             /// <summary>
-            /// <para>The component name.</para>
+            /// <para>The name of the add-on.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ComponentName { get; set; }
 
             /// <summary>
-            /// <para>The custom component parameters, encoded as a JSON string.</para>
+            /// <para>The custom parameters of the add-on, encoded as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;CpuRequest&quot;:&quot;800m&quot;}</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The target version to upgrade to. You can call the <c>DescribeAddon</c> operation to query the upgradable versions of a component.</para>
+            /// <para>The target version to which the add-on is upgraded. You can call the DescribeAddon operation to view the upgradable versions of the add-on.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NextVersion { get; set; }
 
             /// <summary>
-            /// <para>The component upgrade policy. Valid values:</para>
+            /// <para>The upgrade policy for the add-on. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>overwrite: overwrite upgrade.</description></item>
-            /// <item><description>canary: canary upgrade.</description></item>
+            /// <item><description>overwrite: Overwrite.</description></item>
+            /// <item><description>canary: Canary.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The current component version.</para>
+            /// <para>The current version of the add-on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1.11.3.2-f57ea7ed6-aliyun</para>

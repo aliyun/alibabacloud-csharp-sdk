@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to remove nodes concurrently. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Nodes are removed from the scaling group concurrently.</description></item>
-        /// <item><description>false: Nodes are removed from the scaling group sequentially.</description></item>
+        /// <item><description>true: Nodes are concurrently removed from the scaling group.</description></item>
+        /// <item><description>false: Nodes are sequentially removed from the scaling group.
+        /// Default value: false.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to drain the nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Drain the nodes.</description></item>
-        /// <item><description>false: Do not drain the nodes.</description></item>
+        /// <item><description>true: Drains the nodes.</description></item>
+        /// <item><description>false: Does not drain the nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b></para>
-        /// <para>The list of nodes to be removed.</para>
+        /// <para><b>[Deprecated]</b> The list of removed nodes.</para>
         /// <remarks>
-        /// <para>Danger: This parameter is deprecated. Use <c>instance_ids</c> instead.</danger></para>
+        /// <para>Danger: This parameter is deprecated. Use instance_ids instead.</danger></para>
         /// </remarks>
         /// </summary>
         [NameInMap("nodes")]
@@ -72,10 +71,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether automatic release the nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Release the nodes.</description></item>
-        /// <item><description>false: Do not release the nodes.</description></item>
+        /// <item><description>true: Releases the nodes.</description></item>
+        /// <item><description>false: Does not release the nodes.</description></item>
         /// </list>
-        /// <para>Removing nodes does not automatically release subscription nodes. Automatic release subscription nodes, <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change the billing method of the nodes from subscription to pay-as-you-go</a>, and then log on to the ECS console automatic release them.</para>
+        /// <para>Removing nodes does not automatically release subscription nodes. Automatic release subscription nodes, <a href="https://www.alibabacloud.com/help/en/ecs/change-the-billing-method-of-an-instance-from-subscription-to-pay-as-you-go-1">change the billing method of the nodes from subscription to pay-as-you-go</a> and then log on to the ECS console automatic release them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to automatically mount the data disk.</para>
+        /// <para>Specifies whether to mount the data cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? AutoFormat { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic snapshot policy. The system performs automatic backup for a cloud disk based on the specified automatic snapshot policy.</para>
-        /// <para>By default, this parameter is empty, which indicates that automatic backup is disabled.</para>
+        /// <para>The ID of the automatic snapshot policy. The cloud disk is automatically backed up based on the snapshot policy.</para>
+        /// <para>Default value: empty, which indicates that automatic backup is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-2zej1nogjvovnz4z****</para>
@@ -34,12 +34,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the burst feature for the data disk. Valid values:</para>
+        /// <para>Specifies whether to enable performance burst for the data cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables the burst feature.</description></item>
-        /// <item><description><c>false</c>: disables the burst feature for the data disk.</description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
-        /// <para>This parameter is available only if <c>DiskCategory</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -49,18 +49,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>The category of data disk. Valid values:</para>
+        /// <para>The type of the data cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>cloud</c>: basic disk.</description></item>
-        /// <item><description><c>cloud_efficiency</c>: ultra disk</description></item>
-        /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-        /// <item><description><c>cloud_essd</c>: Enterprise ESSD (ESSD).</description></item>
-        /// <item><description><c>cloud_auto</c>: ESSD AutoPL disk.</description></item>
-        /// <item><description><c>cloud_essd_entry</c>: ESSD Entry disk.</description></item>
-        /// <item><description><c>elastic_ephemeral_disk_premium</c>: premium elastic ephemeral disk.</description></item>
-        /// <item><description><c>elastic_ephemeral_disk_standard</c>: standard elastic ephemeral disk.</description></item>
+        /// <item><description>cloud: Basic cloud disk.</description></item>
+        /// <item><description>cloud_efficiency: Ultra disk.</description></item>
+        /// <item><description>cloud_ssd: Standard SSD.</description></item>
+        /// <item><description>cloud_essd: ESSD.</description></item>
+        /// <item><description>cloud_auto: ESSD AutoPL cloud disk.</description></item>
+        /// <item><description>cloud_essd_entry: ESSD Entry cloud disk.</description></item>
+        /// <item><description>elastic_ephemeral_disk_premium: Premium elastic ephemeral disk.</description></item>
+        /// <item><description>elastic_ephemeral_disk_standard: Standard elastic ephemeral disk.</description></item>
         /// </list>
-        /// <para>Default value: <c>cloud_efficiency</c>.</para>
+        /// <para>Default value: cloud_efficiency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The mount target of the data disk. If you do not specify this parameter, the system automatically assigns a mount target when you create an Elastic Compute Service (ECS) instance. Valid values: /dev/xvdb to /dev/xvdz.</para>
+        /// <para>The mount point of the data cloud disk. If you do not specify this parameter, the system will allocate a mount point by default during the automatic creation of an ECS instance. The mount point starts from /dev/xvdb and ends at /dev/xvdz.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/dev/xvdb</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Device { get; set; }
 
         /// <summary>
-        /// <para>The data disk name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the data cloud disk. The name must be 2 to 128 characters in length and can contain letters and Chinese characters. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DataDiskName</para>
@@ -90,12 +90,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to encrypt the data disk. Valid values:</para>
+        /// <para>Specifies whether to encrypt the data cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: encrypts the data disk.</description></item>
-        /// <item><description><c>false</c>: does not encrypt the data disk.</description></item>
+        /// <item><description>true: Encrypts the data cloud disk.</description></item>
+        /// <item><description>false: Does not encrypt the data cloud disk.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The file system that is mounted. This parameter takes effect only if auto_format is set to true. Valid values: ext4 and xfs.</para>
+        /// <para>The type of the file system to be mounted. This parameter takes effect only when auto_format is set to true. Valid values: ext4 and xfs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ext4</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string FileSystem { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Key Management Service (KMS) key that is used to encrypt the data disk.</para>
+        /// <para>The ID of the Key Management Service (KMS) key used to encrypt the data cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The path to which the data disk is mounted. You must specify a valid path.</para>
+        /// <para>The mount path. It must be a valid file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/mnt/path1</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string MountTarget { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the data disk. This parameter takes effect only for an ESSD. This parameter is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+        /// <para>The performance level of the node data cloud disk. This parameter takes effect only for ESSDs, not standard SSDs. The performance level is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -151,8 +151,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The preset IOPS of the data disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
-        /// <para>This parameter is available only if <c>DiskCategory</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para>The provisioned read and write IOPS of the data cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.
+        /// Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</para>
+        /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -162,9 +163,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ProvisionedIops { get; set; }
 
         /// <summary>
-        /// <para>The size of the data disk. Unit: GiB.</para>
+        /// <para>The size of the data cloud disk. Unit: GiB.</para>
         /// <para>Valid values: 40 to 32768.</para>
-        /// <para>Default value: <c>120</c>.</para>
+        /// <para>Default value: 120.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -174,7 +175,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot that you want to use to create the data disk. If this parameter is specified, the specified size of the data disk is ignored. The size of the disk equals the size of the specified snapshot. If the snapshot was created on or before July 15, 2013, the API request is rejected and the InvalidSnapshot.TooOld message is returned.</para>
+        /// <para>The ID of the snapshot used to create the data cloud disk. If you specify this parameter, the DataDisks.Size parameter is ignored, and the actual size of the created disk is the same as the size of the specified snapshot. If the snapshot was created on or before July 15, 2013, the call is rejected and the InvalidSnapshot.TooOld error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-280s7****</para>

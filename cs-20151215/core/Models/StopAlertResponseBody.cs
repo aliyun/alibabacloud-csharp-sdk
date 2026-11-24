@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The execution status.</para>
+        /// <para>The execution status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>True: The execution succeeded.</description></item>
         /// <item><description>False: The execution failed.</description></item>

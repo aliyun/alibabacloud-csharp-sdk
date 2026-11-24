@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class HibernateClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>49511F2D-D56A-5C24-B9AE-C8491E09B***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>T-67d7ec016ce37c0106000***</para>
         /// </summary>

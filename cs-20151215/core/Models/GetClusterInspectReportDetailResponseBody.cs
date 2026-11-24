@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CheckItemUid { get; set; }
 
             /// <summary>
-            /// <para>The description of the check item.</para>
+            /// <para>The description of the inspection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cluster API Server load balancer instance failures affect cluster availability. Check whether the load balancer instance status is normal.</para>
+            /// <para>API server load balancer instance failures in the cluster affect cluster availability. Check whether the load balancer instance status is normal.</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The name of the check item.</para>
+            /// <para>The name of the inspection item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Abnormal API server CLB instance status</para>
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The check result. Valid values:</para>
+            /// <para>The inspection result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The check item is abnormal.</description></item>
-            /// <item><description>false: The check item is normal.</description></item>
-            /// <item><description>disable: The check item is disabled.</description></item>
+            /// <item><description>true: the inspection item is abnormal</description></item>
+            /// <item><description>false: the inspection item is normal</description></item>
+            /// <item><description>disable: the inspection item is disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the check target.</para>
+            /// <para>The resource type of the inspection target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLB</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The list of check targets.</para>
+            /// <para>The list of inspection targets.</para>
             /// </summary>
             [NameInMap("targets")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The completion time of the inspection report in ISO 8601 format with time zone information.</para>
+        /// <para>The end time of the inspection report in ISO 8601 format, including the time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-18T19:41:12.778433+08:00</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the inspection report in ISO 8601 format with time zone information.</para>
+        /// <para>The start time of the inspection report in ISO 8601 format, including the time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-18T19:40:16.778333+08:00</para>
@@ -176,8 +176,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The generation status of the inspection report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>completed: The generation is completed.</description></item>
-        /// <item><description>running: The generation is in progress.</description></item>
+        /// <item><description>completed: Completed.</description></item>
+        /// <item><description>running: In progress.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public GetClusterInspectReportDetailResponseBodySummary Summary { get; set; }
         public class GetClusterInspectReportDetailResponseBodySummary : TeaModel {
             /// <summary>
-            /// <para>The number of check items whose result is advice.</para>
+            /// <para>The number of inspection items whose result is advice.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? AdviceCount { get; set; }
 
             /// <summary>
-            /// <para>The status code of the check task result.</para>
+            /// <para>The status code of the inspection task result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>warning</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The number of check items whose result is error.</para>
+            /// <para>The number of inspection items whose result is error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? ErrorCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items whose result is normal.</para>
+            /// <para>The number of inspection items whose result is normal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? NormalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items whose result is warning.</para>
+            /// <para>The number of inspection items whose result is warning.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

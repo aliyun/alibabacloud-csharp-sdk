@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DeleteAlertContactGroupResponseBody> Body { get; set; }
         public class DeleteAlertContactGroupResponseBody : TeaModel {
             /// <summary>
-            /// <para>The deletion status.</para>
+            /// <para>The deletion status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Deletion succeeded.</description></item>
-            /// <item><description>false: Deletion failed.</description></item>
+            /// <item><description>true: The deletion succeeded.</description></item>
+            /// <item><description>false: The deletion failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

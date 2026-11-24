@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The resource information. For more information about the source information of resources, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</para>
+            /// <para>The resource metadata. For more information about the source information of resources, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;Id\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Name\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::RAM::Role\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2025-04-10T06:21:17\&quot;,\&quot;PhysicalId\&quot;:\&quot;KubernetesWorkerRole-7e611193-225f-40f6-bc3c-ea8633******\&quot;}</para>
@@ -75,12 +75,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The resource state. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>CREATE_COMPLETE</c>: The resource is created.</description></item>
-            /// <item><description><c>CREATE_FAILED</c>: The resource fails to be created.</description></item>
+            /// <item><description><c>CREATE_FAILED</c>: The resource failed to be created.</description></item>
             /// <item><description><c>CREATE_IN_PROGRESS</c>: The resource is being created.</description></item>
-            /// <item><description><c>DELETE_FAILED</c>: The resource fails to be deleted.</description></item>
+            /// <item><description><c>DELETE_FAILED</c>: The resource failed to be deleted.</description></item>
             /// <item><description><c>DELETE_IN_PROGRESS</c>: The resource is being deleted.</description></item>
             /// <item><description><c>ROLLBACK_COMPLETE</c>: The rollback is successful.</description></item>
-            /// <item><description><c>ROLLBACK_FAILED</c>: The rollback fails.</description></item>
+            /// <item><description><c>ROLLBACK_FAILED</c>: The rollback failed.</description></item>
             /// <item><description><c>ROLLBACK_IN_PROGRESS</c>: The rollback is in progress.</description></item>
             /// </list>
             /// 
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the resource is created by ACK. Valid values:</para>
+            /// <para>Specifies whether the resource is created by ACK:</para>
             /// <list type="bullet">
             /// <item><description>1: The resource is created by ACK.</description></item>
             /// <item><description>0: The resource is an existing resource.</description></item>
@@ -191,10 +191,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribeClusterResourcesResponseBodyDeleteBehavior DeleteBehavior { get; set; }
             public class DescribeClusterResourcesResponseBodyDeleteBehavior : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether the resource is deleted by default when the cluster is deleted. Valid values:</para>
+                /// <para>Specifies whether the resource is deleted by default when the cluster is deleted.</para>
                 /// <list type="bullet">
-                /// <item><description>true: The resource is deleted by default.</description></item>
-                /// <item><description>false: The resource is not deleted.</description></item>
+                /// <item><description><para>true: The resource is deleted by default.</para>
+                /// </description></item>
+                /// <item><description><para>false: The resource is not deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -205,10 +207,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? DeleteByDefault { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the default behavior returned in <c>delete_by_default</c> can be changed. Valid values:</para>
+                /// <para>Specifies whether the default behavior returned in <c>delete_by_default</c> can be changed.</para>
                 /// <list type="bullet">
-                /// <item><description>true: The default behavior can be changed.</description></item>
-                /// <item><description>false: The default behavior cannot be changed.</description></item>
+                /// <item><description><para>true: The default behavior can be changed.</para>
+                /// </description></item>
+                /// <item><description><para>false: The default behavior cannot be changed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -221,7 +225,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The type of the creator of the resource. Valid values:</para>
+            /// <para>The type of the resource creator. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>user: The resource is created by the user.</description></item>
             /// <item><description>system: The resource is created by the ACK control system.</description></item>

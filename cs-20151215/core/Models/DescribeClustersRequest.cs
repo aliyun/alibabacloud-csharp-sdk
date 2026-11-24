@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The cluster name used for fuzzy matching.</para>
+        /// <para>Performs a fuzzy match based on the cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

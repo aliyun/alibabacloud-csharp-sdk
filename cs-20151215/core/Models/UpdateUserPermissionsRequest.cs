@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class UpdateUserPermissionsRequestBody : TeaModel {
             /// <summary>
             /// <para>The ID of the target cluster for authorization.</para>
-            /// <para>This parameter is not required when the role_type parameter is set to <c>all-clusters</c>.</para>
+            /// <para>This parameter is not required when the role_type parameter is set to all-clusters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c796c60***</para>
@@ -29,6 +29,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>Specifies whether the authorization is a custom authorization, which means the role_name parameter uses a custom ClusterRole name.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: The authorized role is a custom cluster role.</para>
             /// </description></item>
@@ -45,6 +46,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>Specifies whether the authorization is for a RAM role.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: The authorization is for a RAM role.</para>
             /// </description></item>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsRamRole { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace. This parameter is empty by default when the authorization is at the cluster level.</para>
+            /// <para>The namespace name. This parameter is empty by default when the authorization is at the cluster level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -72,17 +74,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The preset role name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>: administrator.</description></item>
-            /// <item><description><c>admin-view</c>: read-only administrator.</description></item>
-            /// <item><description><c>ops</c>: O&amp;M engineer.</description></item>
-            /// <item><description><c>dev</c>: developer.</description></item>
-            /// <item><description><c>restricted</c>: restricted user.</description></item>
-            /// <item><description>A custom ClusterRole name.</description></item>
+            /// <item><description>admin: administrator</description></item>
+            /// <item><description>admin-view: read-only administrator</description></item>
+            /// <item><description>ops: O&amp;M engineer</description></item>
+            /// <item><description>dev: developer</description></item>
+            /// <item><description>restricted: restricted user</description></item>
+            /// <item><description>a custom ClusterRole name</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>, <c>admin-view</c>, and <c>ops</c>: Authorization at the <b>namespace level</b> is not supported.</description></item>
-            /// <item><description><c>admin-view</c>: Authorization at the <b>all-clusters level</b> is not supported.</description></item>
+            /// <item><description>admin, admin-view, and ops: Authorization at the <b>namespace level</b> is not supported.</description></item>
+            /// <item><description>admin-view: Authorization at the <b>all-clusters level</b> is not supported.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -96,9 +98,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The authorization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cluster</c>: cluster level.</description></item>
-            /// <item><description><c>namespace</c>: namespace level.</description></item>
-            /// <item><description><c>all-clusters</c>: all-clusters level.</description></item>
+            /// <item><description>cluster: cluster level.</description></item>
+            /// <item><description>namespace: namespace level.</description></item>
+            /// <item><description>all-clusters: all-clusters level.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,9 +115,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The authorization mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>apply</c>: Fully updates permissions. The operation to fully update the cluster authorization information of a RAM user or RAM role overwrites the existing cluster permissions of the target RAM user or RAM role. The request must include all permission configurations that you want to grant to the target RAM user or RAM role.</description></item>
-        /// <item><description><c>delete</c>: Deletes permissions. Only the cluster authorization information specified in the request is deleted. Other cluster permissions of the RAM user or RAM role are not affected.</description></item>
-        /// <item><description><c>patch</c>: Adds permissions. Only the cluster authorization information specified in the request is added. Other cluster permissions of the RAM user or RAM role are not affected.</description></item>
+        /// <item><description><c>apply</c>: Fully updates permissions. This operation overwrites the existing cluster permissions of the target RAM user or RAM role. The request must include all permission configurations that you want to grant to the target RAM user or RAM role.</description></item>
+        /// <item><description><c>delete</c>: Deletes permissions. This operation deletes only the cluster authorization information specified in the request and does not affect other cluster permissions of the RAM user or RAM role.</description></item>
+        /// <item><description><c>patch</c>: Adds permissions. This operation adds only the cluster authorization information specified in the request and does not affect other cluster permissions of the RAM user or RAM role.</description></item>
         /// </list>
         /// <para>Default value: <c>apply</c>.</para>
         /// 

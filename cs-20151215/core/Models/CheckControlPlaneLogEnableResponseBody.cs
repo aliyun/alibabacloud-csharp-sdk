@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Aliuid { get; set; }
 
         /// <summary>
-        /// <para>The list of components for which control plane logging is currently enabled.</para>
+        /// <para>The list of components for which control plane logging is enabled.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("components")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Components { get; set; }
 
         /// <summary>
-        /// <para>The name of the SLS project where control plane component logs are stored.</para>
+        /// <para>The name of the Simple Log Service (SLS) project where the logs of control plane components are stored.</para>
         /// <para>Default value: k8s-log-$ClusterId.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAddonInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The add-on configuration.</para>
+        /// <para>The configuration of the add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The add-on name.</para>
+        /// <para>The name of the add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>terway-eniip</para>
@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The add-on state. Valid values:</para>
+        /// <para>The state of the add-on. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>initial: Installing.</description></item>
-        /// <item><description>active: Installed.</description></item>
-        /// <item><description>unhealthy: Abnormal.</description></item>
-        /// <item><description>upgrading: Upgrading.</description></item>
-        /// <item><description>updating: Updating.</description></item>
-        /// <item><description>deleting: Uninstalling.</description></item>
-        /// <item><description>deleted: Deleted.</description></item>
+        /// <item><description>initial: The add-on is being installed.</description></item>
+        /// <item><description>active: The add-on is installed.</description></item>
+        /// <item><description>unhealthy: The add-on is in an abnormal state.</description></item>
+        /// <item><description>upgrading: The add-on is being upgraded.</description></item>
+        /// <item><description>updating: The add-on is being updated.</description></item>
+        /// <item><description>deleting: The add-on is being uninstalled.</description></item>
+        /// <item><description>deleted: The add-on is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The add-on version.</para>
+        /// <para>The version of the add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1.4.3</para>

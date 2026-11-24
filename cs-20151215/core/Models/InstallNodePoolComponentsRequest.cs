@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public Dictionary<string, object> CustomConfig { get; set; }
 
                 /// <summary>
-                /// <para>The environment variables for the node component.</para>
+                /// <para>The environment variables of the node component.</para>
                 /// </summary>
                 [NameInMap("envs")]
                 [Validation(Required=false)]

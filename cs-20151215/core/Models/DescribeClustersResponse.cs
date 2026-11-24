@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DataDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The data disk size of the node.</para>
+            /// <para>The size of the data disk for the node.</para>
             /// </summary>
             [NameInMap("data_disk_size")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InitVersion { get; set; }
 
             /// <summary>
-            /// <para>The access address of the cluster API server, including the internal network access address and the public network access address.</para>
+            /// <para>The access endpoint of the cluster API server, including the internal network access endpoint and the public network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;api_server_endpoint&quot;:&quot;&quot;,&quot;intranet_api_server_endpoint&quot;:&quot;<a href="https://192.0.2.10:6443%22%7D">https://192.0.2.10:6443&quot;}</a></para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NetworkMode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Private Zone is enabled for the cluster. Default value: false.</para>
+            /// <para>Indicates whether PrivateZone is enabled for the cluster. Default value: false.</para>
             /// </summary>
             [NameInMap("private_zone")]
             [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The current number of nodes in the cluster, including master and worker nodes.</para>
+            /// <para>The current number of nodes in the cluster, including master nodes and worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The state of the cluster.</para>
+            /// <para>The running state of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The subnet CIDR of the cluster.</para>
+            /// <para>The subnet CIDR block of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.0.0/16</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Updated { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID of the cluster.</para>
+            /// <para>The virtual private cloud (VPC) ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-a1b2c3d4e5f6g7h8i9j0k</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch CIDR.</para>
+            /// <para>The CIDR block of the vSwitch.</para>
             /// </summary>
             [NameInMap("vswitch_cidr")]
             [Validation(Required=false)]
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VswitchId { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role used by the worker nodes.</para>
+            /// <para>The name of the Resource Access Management (RAM) role used by the worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example-worker-ram-role</para>

@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The object associated with the event.</para>
+            /// <para>The operation object associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>npdd89dc2b76c04f14b06774883b******</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The start time of the event. The time is in ISO 8601 format and includes time zone information.</para>
+            /// <para>The start time of the event in ISO 8601 format, including the time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-14T10:00:56+08:00</para>
@@ -108,22 +108,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cluster_create: cluster creation</description></item>
-            /// <item><description>cluster_scaleout: cluster scale-out</description></item>
-            /// <item><description>cluster_attach: addition of existing nodes</description></item>
-            /// <item><description>cluster_delete: cluster deletion</description></item>
-            /// <item><description>cluster_upgrade: cluster upgrade</description></item>
-            /// <item><description>cluster_migrate: cluster migration</description></item>
-            /// <item><description>cluster_node_delete: node removal</description></item>
-            /// <item><description>cluster_node_drain: node draining</description></item>
-            /// <item><description>cluster_modify: cluster modification</description></item>
-            /// <item><description>cluster_configuration_modify: cluster management configuration modification</description></item>
-            /// <item><description>cluster_addon_install: add-on installation</description></item>
-            /// <item><description>cluster_addon_upgrade: add-on upgrade</description></item>
-            /// <item><description>cluster_addon_uninstall: add-on uninstallation</description></item>
-            /// <item><description>runtime_upgrade: runtime upgrade</description></item>
-            /// <item><description>nodepool_upgrade: node pool upgrade</description></item>
-            /// <item><description>nodepool_update: node pool update</description></item>
+            /// <item><description>cluster_create: Cluster creation.</description></item>
+            /// <item><description>cluster_scaleout: Cluster scale-out.</description></item>
+            /// <item><description>cluster_attach: Addition of existing nodes.</description></item>
+            /// <item><description>cluster_delete: Cluster deletion.</description></item>
+            /// <item><description>cluster_upgrade: Cluster upgrade.</description></item>
+            /// <item><description>cluster_migrate: Cluster migration.</description></item>
+            /// <item><description>cluster_node_delete: Node removal.</description></item>
+            /// <item><description>cluster_node_drain: Node draining.</description></item>
+            /// <item><description>cluster_modify: Cluster modification.</description></item>
+            /// <item><description>cluster_configuration_modify: Cluster management configuration modification.</description></item>
+            /// <item><description>cluster_addon_install: Add-on installation.</description></item>
+            /// <item><description>cluster_addon_upgrade: Add-on upgrade.</description></item>
+            /// <item><description>cluster_addon_uninstall: Add-on uninstallation.</description></item>
+            /// <item><description>runtime_upgrade: Runtime upgrade.</description></item>
+            /// <item><description>nodepool_upgrade: Node pool upgrade.</description></item>
+            /// <item><description>nodepool_update: Node pool update.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results to display on each page.</para>
+            /// <para>The maximum number of results to return per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>

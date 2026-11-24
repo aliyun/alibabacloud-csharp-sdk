@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<CreateNodePoolComponentInstancesRequestComponents> Components { get; set; }
         public class CreateNodePoolComponentInstancesRequestComponents : TeaModel {
             /// <summary>
-            /// <para>The configuration of the component.</para>
+            /// <para>The component configuration.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public List<CreateNodePoolComponentInstancesRequestComponentsConfigEnvs> Envs { get; set; }
                 public class CreateNodePoolComponentInstancesRequestComponentsConfigEnvs : TeaModel {
                     /// <summary>
-                    /// <para>The name of the environment variable.</para>
+                    /// <para>The environment variable name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LOG_LEVEL</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the environment variable.</para>
+                    /// <para>The environment variable value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>info</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The name of the component.</para>
+            /// <para>The component name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The version of the component.</para>
+            /// <para>The component version.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of parallel updates per batch. Default value: 1.</para>
+            /// <para>The maximum number of parallel operations per batch. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</para>
+            /// <para>The automatic pause policy during the node upgrade. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>

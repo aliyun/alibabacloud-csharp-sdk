@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Protection { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0527ac9a-c899-4341-a21a-xxxxxxxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of resources for which the deletion protection status is updated.</para>
+        /// <para>The list of resources whose deletion protection status is updated.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]

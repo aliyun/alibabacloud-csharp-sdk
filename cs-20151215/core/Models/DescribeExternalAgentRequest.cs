@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The agent permission mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>admin: Administrator mode. The agent has all permissions.</description></item>
-        /// <item><description>restricted: Restricted mode. The agent has only partial permissions.</description></item>
+        /// <item><description>admin: the administrator mode, which grants all permissions.</description></item>
+        /// <item><description>restricted: the restricted mode, which grants only specific permissions.</description></item>
         /// </list>
         /// <para>Default value: admin.</para>
         /// 
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to obtain internal network access credentials. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Obtains only internal network connection credentials.</description></item>
-        /// <item><description><c>false</c>: Obtains only public network connection credentials.</description></item>
+        /// <item><description><c>true</c>: obtains only internal network connection credentials.</description></item>
+        /// <item><description><c>false</c>: obtains only public network connection credentials.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 

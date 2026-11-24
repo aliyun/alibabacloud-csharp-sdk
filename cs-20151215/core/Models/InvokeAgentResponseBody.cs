@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The tool output text for the TOOL_CALL_RESULT event. The text may be truncated.</para>
+        /// <para>The tool output text for the TOOL_CALL_RESULT event, which may be truncated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>done</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ExpiresAt { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the interrupt. It is used as resume[].interruptId when resuming the run.</para>
+                /// <para>The interrupt ID, which is used as resume[].interruptId when resuming the run.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para>The approval description or follow-up question text displayed to the user.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Proceed with execution?</para>
+                /// <para>Do you want to proceed?</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The optional extension information of the interrupt. It cannot replace tool events.</para>
+                /// <para>The optional extension information of the interrupt, which cannot replace tool events.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public Dictionary<string, object> ResponseSchema { get; set; }
 
                 /// <summary>
-                /// <para>The optional associated tool invoke ID. It is the same as the toolCallId of the preceding TOOL_CALL_START event.</para>
+                /// <para>The optional associated tool invoke ID, which is the same as the toolCallId of the preceding TOOL_CALL_START event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>call-1</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The outcome type. A value of success indicates normal completion. A value of interrupt indicates waiting for a response, in which case the interrupts array contains at least one item.</para>
+            /// <para>The outcome type. A value of success indicates normal completion, and interrupt indicates waiting for a response. When the value is interrupt, the interrupts array contains at least one item.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The thread snapshot for the STATE_SNAPSHOT event, including sessionId and requestId.</para>
+        /// <para>The session snapshot for the STATE_SNAPSHOT event, which includes sessionId and requestId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;abcdef0123456789abcdef0123456789&quot;,&quot;requestId&quot;:&quot;req-1&quot;}</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public object Snapshot { get; set; }
 
         /// <summary>
-        /// <para>The thread ID for RUN_STARTED and RUN_FINISHED events. It is consistent with the request and the thread snapshot.</para>
+        /// <para>The thread ID for RUN_STARTED and RUN_FINISHED events. It is consistent with the request and the session snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abcdef0123456789abcdef0123456789</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The extension value of the CUSTOM event. It can be any JSON object or null.</para>
+        /// <para>The extension value of the CUSTOM event, which can be any JSON object or null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;reference&quot;:null,&quot;actions&quot;:[],&quot;messageId&quot;:null}</para>

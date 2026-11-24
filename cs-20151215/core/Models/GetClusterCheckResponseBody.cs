@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, List<Dictionary<string, object>>> CheckItems { get; set; }
 
         /// <summary>
-        /// <para>The creation time in ISO 8601 format with time zone information.</para>
+        /// <para>The creation time in ISO 8601 format, including the time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-16T08:31:20.292030178Z</para>

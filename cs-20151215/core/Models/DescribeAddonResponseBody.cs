@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Indicates whether the component can be upgraded to this version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Supported.</description></item>
-            /// <item><description>false: Not supported.</description></item>
+            /// <item><description>true: The component can be upgraded to this version.</description></item>
+            /// <item><description>false: The component cannot be upgraded to this version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

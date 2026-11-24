@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeUserQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The managed cluster quota. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
+        /// <para>The quota for managed clusters. The default value is 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? AmkClusterQuota { get; set; }
 
         /// <summary>
-        /// <para>The ASK cluster quota. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
+        /// <para>The quota for ASK clusters. The default value is 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? AskClusterQuota { get; set; }
 
         /// <summary>
-        /// <para>The node pool quota per cluster. Default value: 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
+        /// <para>The node pool quota per cluster. The default value is 20. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ClusterNodepoolQuota { get; set; }
 
         /// <summary>
-        /// <para>The total cluster quota per account. Default value: 50. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
+        /// <para>The total cluster quota per account. The default value is 50. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The node quota per cluster. Default value: 100. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
+        /// <para>The node quota per cluster. The default value is 100. To increase the quota, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

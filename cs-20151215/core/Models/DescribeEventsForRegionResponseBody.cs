@@ -119,6 +119,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The pagination token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>242x17815i414s****78ev616v3wd38o</para>
         /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results to return per page.</para>
+            /// <para>The maximum number of results to display per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>

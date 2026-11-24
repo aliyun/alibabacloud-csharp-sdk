@@ -52,7 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The trigger project name. It consists of the namespace and name of the application, in the <c>${namespace}/${name}</c> format. Example: default/test-app.</para>
+            /// <para>The trigger project name.</para>
+            /// <para>It consists of the namespace and application name, in the format of <c>${namespace}/${name}</c>. Example: default/test-app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/test-app</para>
@@ -62,11 +63,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The trigger type. Valid values:</para>
+            /// <para>The trigger type.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>deployment</c>: the trigger for stateless applications. </para>
+            /// <item><description><para><c>deployment</c>: The trigger for stateless applications. </para>
             /// </description></item>
-            /// <item><description><para><c>application</c>: the trigger for applications in the Hybrid Cloud Application Center.</para>
+            /// <item><description><para><c>application</c>: The trigger for applications in the Application Center.</para>
             /// </description></item>
             /// </list>
             /// <para>Default value: <c>deployment</c>.</para>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The trigger action. Valid values:</para>
-            /// <para><c>redeploy</c>: redeploys the resources defined in project_id.</para>
+            /// <para><c>redeploy</c>: Redeploys the resources defined in project_id.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redeploy</para>

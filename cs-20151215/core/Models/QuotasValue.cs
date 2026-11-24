@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string OperationCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the quota can be adjusted.</para>
+        /// <para>Specifies whether the quota can be adjusted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

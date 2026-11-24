@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyNodePoolNodeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The containerd runtime configuration.</para>
+        /// <para>The containerd runtime configurations.</para>
         /// </summary>
         [NameInMap("containerd_config")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public KubeletConfig KubeletConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes to upgrade.</para>
+        /// <para>The list of specified nodes to upgrade.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
         public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
             /// <summary>
-            /// <para>The hugepage configuration.</para>
+            /// <para>The hugepage configurations.</para>
             /// </summary>
             [NameInMap("hugepage")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ModifyNodePoolNodeConfigRequestRollingPolicy RollingPolicy { get; set; }
         public class ModifyNodePoolNodeConfigRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// <para>The maximum number of nodes that are allowed to fail during a rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
-            /// <para>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</para>
-            /// <para>Valid values: [1,10].</para>
+            /// <para>Nodes in the node pool are updated in batches. This parameter specifies the maximum number of nodes that can be updated in parallel in each batch.</para>
+            /// <para>Valid values: 1 to 10.</para>
             /// <para>Default value: 10.</para>
             /// 
             /// <b>Example:</b>

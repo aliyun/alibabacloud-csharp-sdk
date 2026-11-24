@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the temporary kubeconfig file, in minutes. Valid values: 15 to 4320.</para>
+        /// <para>The validity period of the temporary kubeconfig. Unit: minutes. Valid values: 15 to 4320.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically determines a longer validity period. You can determine the specific expiration time based on the value of the <c>expiration</c> field in the response.</para>
+        /// <para>If you do not specify this parameter, the system automatically determines a longer validity period. The specific expiration time is determined by the value of the expiration field in the response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

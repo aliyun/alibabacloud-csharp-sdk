@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterAddonInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The custom parameter settings of the add-on.</para>
+        /// <para>The custom parameter settings of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sls_project_name&quot;:&quot;&quot;}</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The log feature status of the add-on.</para>
+        /// <para>The logging status of the component.</para>
         /// </summary>
         [NameInMap("logging")]
         [Validation(Required=false)]
         public GetClusterAddonInstanceResponseBodyLogging Logging { get; set; }
         public class GetClusterAddonInstanceResponseBodyLogging : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the add-on supports the log feature. Valid values:</para>
+            /// <para>Indicates whether the component supports the logging feature. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: Supported.</para>
             /// </description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Capable { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the log feature is enabled. Valid values:</para>
+            /// <para>Indicates whether the logging feature is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: Enabled.</para>
             /// </description></item>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The Log Service project used by the add-on log feature.</para>
+            /// <para>The log project used by the component logging feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-c02b3e03be10643e8a644a843ffcb****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LogProject { get; set; }
 
             /// <summary>
-            /// <para>The Logstore used by the add-on log feature.</para>
+            /// <para>The Logstore used by the component logging feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-logstore</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The name of the add-on instance.</para>
+        /// <para>The name of the component instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack-node-problem-detector</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The state of the add-on. Valid values:</para>
+        /// <para>The component state. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>active: Installed.</description></item>
         /// <item><description>updating: Updating.</description></item>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The version of the add-on instance.</para>
+        /// <para>The version of the component instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.16</para>

@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public string PolicyDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The Policy Name.</para>
+                    /// <para>The policy name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACKNamespacesDeleteProtection</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public string PolicyDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The Policy Name.</para>
+                    /// <para>The policy name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACKRestrictALBCreation</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LogProject { get; set; }
 
             /// <summary>
-            /// <para>The Logstore that stores the policy action information.</para>
+            /// <para>The log store that stores the policy action information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>policyadmit-clusterid</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LogStore { get; set; }
 
             /// <summary>
-            /// <para>The log information about policy violations.</para>
+            /// <para>The log information of policy violations.</para>
             /// </summary>
             [NameInMap("logs")]
             [Validation(Required=false)]
@@ -249,8 +249,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>The action taken by the policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>warn: Generates an alert for the policy violation but does not intercept the request.</description></item>
-                /// <item><description>deny: Intercepts the request that violates the policy.</description></item>
+                /// <item><description>warn: Alerts on policy violations but does not intercept the requests.</description></item>
+                /// <item><description>deny: Intercepts requests that violate the policy.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ConstraintGroup { get; set; }
 
                 /// <summary>
-                /// <para>The corresponding Policy Name in policy management.</para>
+                /// <para>The policy name in policy management.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACKNamespacesDeleteProtection</para>
@@ -395,8 +395,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The status of the query result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Complete</c>: The query is complete and the returned result is complete.</description></item>
-            /// <item><description><c>Incomplete</c>: The query is complete but the returned result is incomplete. You must repeat the request to obtain the complete result.</description></item>
+            /// <item><description><c>Complete</c>: The query is complete, and the returned result is complete.</description></item>
+            /// <item><description><c>Incomplete</c>: The query is complete, but the returned result is incomplete. You must repeat the request to obtain the complete result.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -409,14 +409,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The counts of enabled policies at different severity levels in the cluster.</para>
+        /// <para>The counts of enabled policies at different severity levels in the current cluster.</para>
         /// </summary>
         [NameInMap("on_state")]
         [Validation(Required=false)]
         public List<DescribePolicyGovernanceInClusterResponseBodyOnState> OnState { get; set; }
         public class DescribePolicyGovernanceInClusterResponseBodyOnState : TeaModel {
             /// <summary>
-            /// <para>The number of enabled policy types.</para>
+            /// <para>The count of currently enabled policy types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? EnabledCount { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the policy governance.</para>
+            /// <para>The policy governance severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>

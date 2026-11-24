@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled. Valid values:</para>
+            /// <para>Specifies whether deletion protection is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>

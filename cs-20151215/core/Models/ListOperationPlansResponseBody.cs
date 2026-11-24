@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the execution plan.</para>
+            /// <para>The time when the execution plan was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T20:01:22+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The expected end time in ISO 8601 format, including time zone information.</para>
+            /// <para>The expected end time in ISO 8601 format, including the time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-22T18:00:00+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PlanId { get; set; }
 
             /// <summary>
-            /// <para>The expected start time in ISO 8601 format, including time zone information.</para>
+            /// <para>The expected start time in ISO 8601 format, including the time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-22T15:18:00+08:00</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class Tag : TeaModel {
         /// <summary>
-        /// <para>The tag <c>key</c>.</para>
+        /// <para>The tag key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The tag <c>value</c>.</para>
+        /// <para>The tag value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod</para>

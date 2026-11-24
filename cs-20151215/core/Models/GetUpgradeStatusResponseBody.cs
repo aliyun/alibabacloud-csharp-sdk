@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the precheck report.</para>
+        /// <para>The precheck report ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>be4c8eb72de94d459ea7ace7c811d119</para>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The current upgrade status of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>success</c>: Upgrade succeeded.</description></item>
-        /// <item><description><c>fail</c>: Upgrade failed.</description></item>
-        /// <item><description><c>pause</c>: Upgrade paused.</description></item>
-        /// <item><description><c>running</c>: Upgrade in progress.</description></item>
+        /// <item><description><c>success</c>: The upgrade succeeded.</description></item>
+        /// <item><description><c>fail</c>: The upgrade failed.</description></item>
+        /// <item><description><c>pause</c>: The upgrade is paused.</description></item>
+        /// <item><description><c>running</c>: The upgrade is in progress.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>prechecking</c>: Prechecking.</description></item>
         /// <item><description><c>upgrading</c>: Upgrading.</description></item>
         /// <item><description><c>pause</c>: Paused.</description></item>
-        /// <item><description><c>success</c>: Upgrade succeeded.</description></item>
+        /// <item><description><c>success</c>: The upgrade succeeded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

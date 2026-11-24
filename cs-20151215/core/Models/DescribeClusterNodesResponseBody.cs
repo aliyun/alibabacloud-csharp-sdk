@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClusterNodesResponseBodyNodes> Nodes { get; set; }
         public class DescribeClusterNodesResponseBodyNodes : TeaModel {
             /// <summary>
-            /// <para>The time when the node was created. The time follows the ISO 8601 standard and includes the time zone.</para>
+            /// <para>The time when the node was created. The time is displayed in ISO 8601 format and includes the time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-16T07:28:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The time when the node expires. The time follows the ISO 8601 standard and includes the time zone.</para>
+            /// <para>The time when the node expires. The time is displayed in ISO 8601 format and includes the time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2099-12-31T15:59:00Z</para>
@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The role of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Master: the master node of the cluster.</description></item>
-            /// <item><description>Worker: the worker node of the cluster.</description></item>
+            /// <item><description>Master: master node in the cluster.</description></item>
+            /// <item><description>Worker: worker node in the cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,11 +117,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The ECS instance status of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Pending</c>: the instance is being created.</description></item>
-            /// <item><description><c>Running</c>: the instance is running.</description></item>
-            /// <item><description><c>Starting</c>: the instance is starting.</description></item>
-            /// <item><description><c>Stopping</c>: the instance is stopping.</description></item>
-            /// <item><description><c>Stopped</c>: the instance is stopped.</description></item>
+            /// <item><description><c>Pending</c>: being created.</description></item>
+            /// <item><description><c>Running</c>: running.</description></item>
+            /// <item><description><c>Starting</c>: starting.</description></item>
+            /// <item><description><c>Stopping</c>: stopping.</description></item>
+            /// <item><description><c>Stopped</c>: stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,10 +159,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> IpAddress { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the node is an Alibaba Cloud instance. Valid values:</para>
+            /// <para>Indicates whether the node is an Alibaba Cloud instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: the node is an Alibaba Cloud instance.</description></item>
-            /// <item><description><c>false</c>: the node is not an Alibaba Cloud instance.</description></item>
+            /// <item><description><c>true</c>: yes.</description></item>
+            /// <item><description><c>false</c>: no.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsAliyunNode { get; set; }
 
             /// <summary>
-            /// <para>The name of the node, which is the node identifier in the cluster.</para>
+            /// <para>The name of the node. This name is used as the node identifier in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chengdu.192.168xx.xx</para>
@@ -183,12 +183,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the node is ready. Valid values:</para>
+            /// <para>Indicates whether the node is ready. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Ready</c>: the node is ready.</description></item>
-            /// <item><description><c>NotReady</c>: the node is not ready.</description></item>
-            /// <item><description><c>Unknown</c>: the status is unknown.</description></item>
-            /// <item><description><c>Offline</c>: the node is offline.</description></item>
+            /// <item><description><c>Ready</c>: ready.</description></item>
+            /// <item><description><c>NotReady</c>: not ready.</description></item>
+            /// <item><description><c>Unknown</c>: unknown.</description></item>
+            /// <item><description><c>Offline</c>: offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodepoolId { get; set; }
 
             /// <summary>
-            /// <para>The method used to initialize the node, such as manual creation or creation by Resource Orchestration Service (ROS).</para>
+            /// <para>The method used to initialize the node, such as manual creation or creation by using Resource Orchestration Service (ROS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ess</para>
@@ -221,9 +221,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The type of the spot instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoSpot: the instance is not a spot instance.</description></item>
-            /// <item><description>SpotWithPriceLimit: the instance is a spot instance with a maximum price limit.</description></item>
-            /// <item><description>SpotAsPriceGo: the instance is a spot instance whose price is automatically set based on the current market price.</description></item>
+            /// <item><description>NoSpot: non-spot instance.</description></item>
+            /// <item><description>SpotWithPriceLimit: spot instance with a maximum price limit.</description></item>
+            /// <item><description>SpotAsPriceGo: spot instance whose price is automatically set based on the current market price.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -236,11 +236,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The running state of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>pending</c>: the node is being created.</description></item>
-            /// <item><description><c>running</c>: the node is running.</description></item>
-            /// <item><description><c>starting</c>: the node is starting.</description></item>
-            /// <item><description><c>stopping</c>: the node is stopping.</description></item>
-            /// <item><description><c>stopped</c>: the node is stopped.</description></item>
+            /// <item><description><c>pending</c>: being created.</description></item>
+            /// <item><description><c>running</c>: running.</description></item>
+            /// <item><description><c>starting</c>: starting.</description></item>
+            /// <item><description><c>stopping</c>: stopping.</description></item>
+            /// <item><description><c>stopped</c>: stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of records to return per page.</para>
+            /// <para>The maximum number of entries that can be displayed on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

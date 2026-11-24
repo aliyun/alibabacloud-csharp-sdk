@@ -102,9 +102,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicySeverity { get; set; }
 
             /// <summary>
-            /// <para>The enforcement scope of the policy instance.</para>
-            /// <para>A value of &quot;*&quot; indicates all namespaces in the cluster.</para>
-            /// <para>Otherwise, the names of the target namespaces are returned, separated by commas (,).</para>
+            /// <para>The enforcement scope of the policy instance. A value of &quot;*&quot; indicates all namespaces in the cluster. Otherwise, the names of the target namespaces are returned, separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -173,7 +171,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para><b>[Deprecated]</b> The number of processed violations in the cluster. Do not use this parameter.</para>
+            /// <para><b>[Deprecated]</b> The count of processed violations in the cluster. Do not use this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

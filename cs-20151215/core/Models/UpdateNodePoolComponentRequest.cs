@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</para>
+        /// <para>Specifies whether to disable rolling updates. Default value: false. Updating the baseline configuration synchronously triggers a rolling update on nodes.</para>
         /// </summary>
         [NameInMap("disableRolling")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes to include in the rolling update. By default, all nodes are included.</para>
+        /// <para>The list of nodes to perform the rolling update on. Default value: all nodes.</para>
         /// </summary>
         [NameInMap("nodeNames")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public UpdateNodePoolComponentRequestRollingPolicy RollingPolicy { get; set; }
         public class UpdateNodePoolComponentRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The interval between batches during the upgrade, in seconds.</para>
+            /// <para>The upgrade interval between batches, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can fail during the rolling update. Default value: 0, which means the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// <para>The maximum number of nodes allowed to fail during the rolling update. Default value: 0, which means the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</para>
+            /// <para>The maximum number of parallel updates per batch. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The automatic pause policy during node upgrades.</para>
+            /// <para>The automatic pause policy during the node upgrade process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>

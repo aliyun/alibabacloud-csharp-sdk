@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The inspection report summary.</para>
+            /// <para>The summary of the inspection report.</para>
             /// </summary>
             [NameInMap("summary")]
             [Validation(Required=false)]

@@ -10,13 +10,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListUserKubeConfigStatesRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Valid values: an integer greater than or equal to 1.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 1.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The page number.</para>
+        /// <para>Valid values: an integer greater than or equal to 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -26,13 +22,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results to return per page.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Valid values: 1 to 100.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 50.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

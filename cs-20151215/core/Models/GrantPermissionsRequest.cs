@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<GrantPermissionsRequestBody> Body { get; set; }
         public class GrantPermissionsRequestBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the target cluster for authorization.</para>
+            /// <para>The ID of the target cluster.</para>
             /// <list type="bullet">
-            /// <item><description>If the <c>role_type</c> parameter is set to <c>all-clusters</c>, set this parameter to an empty string.</description></item>
+            /// <item><description>If the value of the <c>role_type</c> parameter is <c>all-clusters</c>, set this parameter to an empty string.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Cluster { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the authorization is a custom authorization (the <c>role_name</c> parameter uses a custom ClusterRole name).</para>
+            /// <para>Specifies whether the authorization is custom. For custom authorizations, the <c>role_name</c> parameter uses a custom ClusterRole name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Notice: </para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>, <c>admin-view</c>, <c>ops</c>: cannot be granted at the namespace level.</description></item>
-            /// <item><description><c>admin-view</c>: cannot be granted at the all-clusters level.</description></item>
+            /// <item><description><c>admin</c>, <c>admin-view</c>, and <c>ops</c>: Namespace-level authorization is not supported.</description></item>
+            /// <item><description><c>admin-view</c>: Cluster-wide authorization is currently not supported.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <list type="bullet">
             /// <item><description><c>cluster</c>: cluster level.</description></item>
             /// <item><description><c>namespace</c>: namespace level.</description></item>
-            /// <item><description><c>all-clusters</c>: all-clusters level.</description></item>
+            /// <item><description><c>all-clusters</c>: all clusters.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

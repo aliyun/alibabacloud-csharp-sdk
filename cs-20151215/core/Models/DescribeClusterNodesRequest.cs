@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The list of node IP addresses used for filtering. Separate multiple values with commas (,).</para>
+        /// <para>The list of node IP addresses. Separate multiple values with commas (,). This parameter is used to filter nodes by IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodeIps { get; set; }
 
         /// <summary>
-        /// <para>The node labels used for filtering. Specify the labels as key=value pairs separated by commas (,). Multiple labels are evaluated with the AND operator. Only nodes that match all specified labels are returned.</para>
+        /// <para>The labels used to filter nodes. Specify the labels as key=value pairs separated by commas (,). Multiple labels are evaluated by using the logical AND operator. Only nodes that match all specified labels are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nodeLabels=app=nginx,env=prod</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodeLabels { get; set; }
 
         /// <summary>
-        /// <para>The list of node names used for filtering. Separate multiple values with commas (,).</para>
+        /// <para>The list of node names. Separate multiple values with commas (,). This parameter is used to filter nodes by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou.192.168.0.1</para>
@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current query.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The page number of the current query.
+        /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return per page. Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100.
+        /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -82,15 +82,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The running states of the cluster nodes used for filtering. Valid values:</para>
+        /// <para>The state of the cluster nodes. This parameter is used to filter nodes by their running state. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>all</c>: does not filter nodes by running state and queries nodes in all states.</description></item>
-        /// <item><description><c>running</c>: the cluster nodes that are running.</description></item>
-        /// <item><description><c>removing</c>: the cluster nodes that are being removed.</description></item>
-        /// <item><description><c>initial</c>: the cluster nodes that are being initialized.</description></item>
-        /// <item><description><c>failed</c>: the cluster nodes that failed to be created.</description></item>
+        /// <item><description><c>all</c>: all nodes.</description></item>
+        /// <item><description><c>running</c>: running nodes.</description></item>
+        /// <item><description><c>removing</c>: nodes that are being removed.</description></item>
+        /// <item><description><c>initial</c>: nodes that are being initialized.</description></item>
+        /// <item><description><c>failed</c>: nodes that failed to be created.
+        /// Default value: <c>all</c>.</description></item>
         /// </list>
-        /// <para>Default value: <c>all</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>

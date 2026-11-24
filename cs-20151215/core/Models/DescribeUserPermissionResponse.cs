@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeUserPermissionResponseBody> Body { get; set; }
         public class DescribeUserPermissionResponseBody : TeaModel {
             /// <summary>
-            /// <para>The cluster access configuration. The format varies based on the authorization scope:</para>
+            /// <para>The cluster access configuration. The format is as follows:</para>
             /// <list type="bullet">
-            /// <item><description>Cluster-level authorization: <c>{cluster_id}</c>.</description></item>
-            /// <item><description>Namespace-level authorization: <c>{cluster_id}/{namespace}</c>.</description></item>
-            /// <item><description>All-cluster authorization: <c>all-clusters</c>.</description></item>
+            /// <item><description>For cluster-level authorization, the format is <c>{cluster_id}</c>.</description></item>
+            /// <item><description>For namespace-level authorization, the format is <c>{cluster_id}/{namespace}</c>.</description></item>
+            /// <item><description>For authorization across all clusters, the value is fixed as <c>all-clusters</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The authorization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cluster</c>: cluster-level.</description></item>
-            /// <item><description><c>namespace</c>: namespace-level.</description></item>
-            /// <item><description><c>console</c>: all-cluster-level authorization.</description></item>
+            /// <item><description><c>cluster</c>: cluster level.</description></item>
+            /// <item><description><c>namespace</c>: namespace level.</description></item>
+            /// <item><description><c>console</c>: authorization across all clusters.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The custom role name. When a custom role is authorized, this field specifies the name of the custom cluster management role.</para>
+            /// <para>The name of the custom role. When a custom role is authorized, this field specifies the name of the custom cluster management role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>terway-pod-reader</para>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The preset role type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>: Administrator.</description></item>
+            /// <item><description><c>admin</c>: administrator.</description></item>
             /// <item><description><c>ops</c>: O&amp;M engineer.</description></item>
-            /// <item><description><c>dev</c>: Developer.</description></item>
-            /// <item><description><c>restricted</c>: Restricted user.</description></item>
-            /// <item><description><c>custom</c>: Custom cluster management role.</description></item>
+            /// <item><description><c>dev</c>: developer.</description></item>
+            /// <item><description><c>restricted</c>: restricted user.</description></item>
+            /// <item><description><c>custom</c>: custom cluster management role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RoleType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the authorization belongs to the cluster creator. Valid values:</para>
+            /// <para>Indicates whether the authorization is granted to the cluster creator. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>0</c>: The authorization record does not belong to the cluster creator.</description></item>
-            /// <item><description><c>1</c>: The authorization record represents the administrator permissions of the cluster creator.</description></item>
+            /// <item><description><c>1</c>: The authorization record grants administrator permissions to the cluster creator.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? IsOwner { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the authorization is for a RAM role. Valid values:</para>
+            /// <para>Indicates whether the authorization is granted to a RAM role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>0</c>: The record is not a RAM role authorization.</description></item>
-            /// <item><description><c>1</c>: The record is a RAM role authorization.</description></item>
+            /// <item><description><c>0</c>: The current record is not a RAM role authorization.</description></item>
+            /// <item><description><c>1</c>: The current record is a RAM role authorization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

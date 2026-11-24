@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class InstanceMetadataOptions : TeaModel {
         /// <summary>
-        /// <para>The ECS instance metadata access mode configuration. Valid values:</para>
+        /// <para>The access mode configuration for ECS instance metadata. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>optional</c>: Compatible with both normal mode and hardened mode.</description></item>
-        /// <item><description><c>required</c>: Enables hardened mode only (IMDSv2). After this mode is enabled, applications in the node cannot access ECS instance metadata in normal mode.</description></item>
+        /// <item><description><c>required</c>: Enables hardened mode only (IMDSv2). After this mode is enabled, applications on the node cannot access ECS instance metadata in normal mode.</description></item>
         /// </list>
         /// <para>Default value: <c>optional</c>.</para>
         /// <remarks>
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is currently available only by whitelist. To use this parameter, submit a ticket.</description></item>
+        /// <item><description>This parameter is currently available only to whitelisted users. To use this parameter, submit a ticket.</description></item>
         /// <item><description>Only ACK managed clusters of version 1.28 and later support this parameter.</description></item>
         /// </list>
         /// <remarks>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The cluster type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
-        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster, including ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</description></item>
+        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster, including ACK Pro clusters, ACK basic clusters, ACK Serverless Pro clusters, ACK Serverless basic clusters, ACK Edge Pro clusters, and ACK Edge basic clusters.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The Kubernetes version of the cluster, which is consistent with the Kubernetes community baseline version. We recommend that you select the latest version. If you do not specify this parameter, the latest version is used by default.</para>
-        /// <para>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes versions</a>.</para>
+        /// <para>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes releases</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.32.1-aliyun.1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description><c>supported</c>: queries supported versions.</description></item>
         /// <item><description><c>creatable</c>: queries versions available for cluster creation.</description></item>
         /// </list>
-        /// <para>If you specify KubernetesVersion, the query mode is ignored.</para>
+        /// <para>If you specify <c>KubernetesVersion</c>, the query mode is ignored.</para>
         /// <para>If you do not specify a query mode, versions available for cluster creation are returned by default.</para>
         /// 
         /// <b>Example:</b>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The cluster profile used to differentiate cluster scenarios. Valid values:</para>
+        /// <para>The cluster profile that indicates the scenario. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>Default</c>: non-edge cluster.</description></item>
-        /// <item><description><c>Edge</c>: edge cluster.</description></item>
+        /// <item><description><c>Default</c>: non-edge scenario cluster.</description></item>
+        /// <item><description><c>Edge</c>: edge scenario cluster.</description></item>
         /// <item><description><c>Serverless</c>: ASK cluster.</description></item>
         /// </list>
         /// <para>Default value: <c>Default</c>.</para>
@@ -95,12 +95,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The version support policy. The value is case-sensitive. Valid values:</para>
+        /// <para>The version support policy. The values are case-sensitive. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Standard: standard support. This is the default value.</description></item>
         /// <item><description>Extended: extended support.
-        /// If you set this parameter to Extended: when Mode is set to <c>supported</c>, versions in the extended support period are additionally returned; when Mode is set to <c>creatable</c>, the latest extended support patch version of the major version in the extended support period is additionally returned; upgradable_versions returns the extended support patch versions of the major version.
-        /// Extended support applies only to ACK Pro managed clusters (where ClusterSpec is set to <c>ack.pro.*</c> and Profile is set to <c>Default</c>). Other cluster types (ACK Standard, ACS, ACK Edge managed, and ACK dedicated clusters) do not support extended support. If you specify a version in the extended support period to create or upgrade these clusters, the request will be rejected.</description></item>
+        /// When this parameter is set to Extended: if Mode is set to supported, versions in the extended support period are additionally returned; if Mode is set to creatable, the latest extended support patch version of the major version in the extended support period is additionally returned; upgradable_versions returns the extended support patch versions of the major version.
+        /// Extended support applies only to ACK Pro managed clusters (ClusterSpec is set to ack.pro.* and Profile is set to Default). Other cluster types (ACK standard clusters, ACS clusters, ACK Edge managed clusters, and ACK dedicated clusters) do not support extended support. If you specify a version in the extended support period to create or upgrade these clusters, the request will be rejected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

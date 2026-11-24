@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> AllowedUnsafeSysctls { get; set; }
 
         /// <summary>
-        /// <para>The list of IP addresses for the cluster DNS servers.</para>
+        /// <para>The list of IP addresses of cluster DNS servers.</para>
         /// </summary>
         [NameInMap("clusterDNS")]
         [Validation(Required=false)]
         public List<string> ClusterDNS { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of log files that can exist per container.</para>
+        /// <para>The maximum number of log files that can exist for each container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ContainerLogMaxFiles { get; set; }
 
         /// <summary>
-        /// <para>The maximum size a log file can reach before log rotation is performed.</para>
+        /// <para>The maximum size that a log file can reach before it is rotated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10Mi</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ContainerLogMaxSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of concurrent workers for log rotation operations.</para>
+        /// <para>Specifies the maximum number of concurrent workers required to perform log rotation operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? ContainerLogMaxWorkers { get; set; }
 
         /// <summary>
-        /// <para>The interval for monitoring container logs to perform log rotation.</para>
+        /// <para>Specifies the duration for monitoring container logs to perform log rotation operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10s</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ContainerLogMonitorInterval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable CPU CFS quota enforcement.</para>
+        /// <para>The switch for CPU CFS quota enforcement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CpuManagerPolicy { get; set; }
 
         /// <summary>
-        /// <para>The maximum burst size for event records.</para>
+        /// <para>The burst limit for the number of event records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? EventBurst { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of events that can be generated per second.</para>
+        /// <para>The number of events that can be generated per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? EventRecordQPS { get; set; }
 
         /// <summary>
-        /// <para>The set of hard eviction thresholds that trigger pod eviction.</para>
+        /// <para>The set of hard thresholds that trigger pod eviction.</para>
         /// </summary>
         [NameInMap("evictionHard")]
         [Validation(Required=false)]
@@ -128,21 +128,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, object> EvictionSoft { get; set; }
 
         /// <summary>
-        /// <para>The set of eviction grace periods.</para>
+        /// <para>The set of soft eviction grace periods.</para>
         /// </summary>
         [NameInMap("evictionSoftGracePeriod")]
         [Validation(Required=false)]
         public Dictionary<string, object> EvictionSoftGracePeriod { get; set; }
 
         /// <summary>
-        /// <para>The feature gates configuration used to enable experimental features.</para>
+        /// <para>The feature gates used to enable experimental features.</para>
         /// </summary>
         [NameInMap("featureGates")]
         [Validation(Required=false)]
         public Dictionary<string, object> FeatureGates { get; set; }
 
         /// <summary>
-        /// <para>The threshold above which image garbage collection runs continuously.</para>
+        /// <para>The threshold above which image garbage collection is continuously performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? ImageGCLowThresholdPercent { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of burst requests sent to the API server per second.</para>
+        /// <para>The burst limit for the number of requests sent to the API server per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? KubeAPIBurst { get; set; }
 
         /// <summary>
-        /// <para>The number of queries per second when communicating with the API server.</para>
+        /// <para>The number of queries per second for communication with the API server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? KubeAPIQPS { get; set; }
 
         /// <summary>
-        /// <para>The resource configuration reserved for Kubernetes system components.</para>
+        /// <para>The resource configuration reserved for the Kubernetes system.</para>
         /// </summary>
         [NameInMap("kubeReserved")]
         [Validation(Required=false)]
         public Dictionary<string, object> KubeReserved { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of pods that can run on the node.</para>
+        /// <para>The maximum number of running pods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? MaxPods { get; set; }
 
         /// <summary>
-        /// <para>The policy used by the memory management manager.</para>
+        /// <para>The memory management policy to use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>none</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? ReadOnlyPort { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of burst image pulls.</para>
+        /// <para>The burst limit for the number of image pulls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<KubeletConfigReservedMemory> ReservedMemory { get; set; }
         public class KubeletConfigReservedMemory : TeaModel {
             /// <summary>
-            /// <para>The memory resources limit.</para>
+            /// <para>The limits on memory resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;memory&quot;: &quot;1Gi&quot;}</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to pull images one at a time.</para>
+        /// <para>Specifies whether to pull images one by one.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -288,11 +288,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SerializeImagePulls { get; set; }
 
         /// <summary>
-        /// <para>Enables automatic issuance and rotation of kubelet server certificates. When enabled, you must also set &quot;RotateKubeletServerCertificate&quot;: true in the kubelet featureGates configuration.</para>
+        /// <para>Enables the automatic issuance and rotation of Kubelet server certificates. When enabled, you must also configure &quot;RotateKubeletServerCertificate&quot;: true in the featureGates of the Kubelet.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Available only for clusters running version 1.30 or later.</description></item>
-        /// <item><description>For clusters running version 1.30 to v1.33, submit a ticket to apply for this feature.</description></item>
+        /// <item><description>Only applicable to clusters of version 1.30 and later.</description></item>
+        /// <item><description>Clusters of versions 1.30 to v1.33 must commit a ticket to apply.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, object> SystemReserved { get; set; }
 
         /// <summary>
-        /// <para>The Policy Name of the topology management manager to use.</para>
+        /// <para>The topology manager policy name to use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>restricted</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string TopologyManagerPolicy { get; set; }
 
         /// <summary>
-        /// <para>The versioned configuration for the OpenTelemetry tracing client.</para>
+        /// <para>The versioned configuration information for OpenTelemetry tracing client settings.</para>
         /// </summary>
         [NameInMap("tracing")]
         [Validation(Required=false)]

@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The scheduling policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>NoSchedule</c>: Not tolerated. This affects only the scheduling process. Already scheduled pods are not affected. This applies only to newly added pods.</para>
+        /// <item><description><para><c>NoSchedule</c>: Not tolerated. It affects only the scheduling process and applies only to newly added pods. Already scheduled pods are not affected.</para>
         /// </description></item>
-        /// <item><description><para><c>NoExecute</c>: Not tolerated. When the taint changes, the pod is evicted.</para>
+        /// <item><description><para><c>NoExecute</c>: Not tolerated. Pods are evicted when the taint changes.</para>
         /// </description></item>
-        /// <item><description><para><c>PreferNoSchedule</c>: Soft constraint. Existing pods on the node are not affected. The scheduler tries to avoid scheduling pods that do not tolerate the taint to the node.</para>
+        /// <item><description><para><c>PreferNoSchedule</c>: Soft constraint. Existing pods on the node are not affected. The system tries to avoid scheduling pods that do not meet the requirements to the node.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: <c>NoSchedule</c>.</para>

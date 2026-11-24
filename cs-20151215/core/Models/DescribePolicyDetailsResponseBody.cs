@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>enforce</c>: Blocks non-compliant deployments.</description></item>
-        /// <item><description><c>inform</c>: Triggers alerts.</description></item>
+        /// <item><description><c>inform</c>: Generates alerts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the rule is deleted. Valid values:</para>
+        /// <para>Specifies whether the rule is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Not deleted.</description></item>
-        /// <item><description>1: Deleted.</description></item>
+        /// <item><description>0: The rule is not deleted.</description></item>
+        /// <item><description>1: The rule is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether policy configuration is required. Valid values: </para>
+        /// <para>Specifies whether policy configuration is required. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: Parameter settings are required.</description></item>
         /// <item><description>1: No parameter settings are required.</description></item>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The governance severity of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>high</c>: High-risk.</description></item>
-        /// <item><description><c>medium</c>: Medium-risk.</description></item>
-        /// <item><description><c>low</c>: Low-risk.</description></item>
+        /// <item><description><c>high</c>: High risk.</description></item>
+        /// <item><description><c>medium</c>: Medium risk.</description></item>
+        /// <item><description><c>low</c>: Low risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

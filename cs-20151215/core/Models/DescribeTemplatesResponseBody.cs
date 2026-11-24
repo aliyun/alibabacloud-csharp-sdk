@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
-            /// <para>The access permissions of the deployment template. Valid values:</para>
+            /// <para>The access permissions of the user deployment template. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>private</c>: Private.</description></item>
             /// <item><description><c>public</c>: Public.</description></item>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The tags of the orchestration template. If no tag is explicitly specified, the template name is used as the default tag.</para>
+            /// <para>The tags of the orchestration template. If not explicitly specified, the default value is the template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kubernetes</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The content of the orchestration template in YAML format.</para>
+            /// <para>The content of the template in YAML format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment-basic\n  labels:\n    app: nginx\nspec:\n  replicas: 2\n  selector:\n    matchLabels:\n      app: nginx\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: busybox:latest\n        ports:\n        - containerPort: 80</para>
@@ -131,11 +131,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Template { get; set; }
 
             /// <summary>
-            /// <para>The templatetype. Valid values:</para>
+            /// <para>The templatetype.</para>
             /// <list type="bullet">
             /// <item><description><para><c>kubernetes</c>: The template is displayed on the Orchestration Templates page in the console.</para>
             /// </description></item>
-            /// <item><description><para>If this parameter is left empty or set to other values: The template is not displayed on the Orchestration Templates page in the console.</para>
+            /// <item><description><para>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent template associated with the orchestration template. This ID is used to implement the multi-version feature for templates. Different versions of the same template share the same <c>template_with_hist_id</c> value.</para>
+            /// <para>The ID of the parent template associated with the template. This parameter is used to implement the multi-version feature for templates. Different versions of the same template share the same <c>template_with_hist_id</c> value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ad81d115-7c8b-47e7-a222-9c28d7******</para>

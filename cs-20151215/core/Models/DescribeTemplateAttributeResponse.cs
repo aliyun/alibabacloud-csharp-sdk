@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTemplateAttributeResponseBody> Body { get; set; }
         public class DescribeTemplateAttributeResponseBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the orchestration template. A new template ID is generated each time the template is modified.</para>
+            /// <para>The ID of the orchestration template. This ID changes every time the template is modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>72d20cf8-a533-4ea9-a10d-e7630d3d****</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? EnableFilter { get; set; }
 
         /// <summary>
-        /// <para>The query language. Valid values:</para>
+        /// <para>The query language.</para>
         /// <list type="bullet">
         /// <item><description>zh_CN</description></item>
         /// <item><description>en_US</description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The object type. Only check items that match the object type are returned.</para>
+        /// <para>The inspection object type. Only inspection items that match the specified object type are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NodePool</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the node, which identifies the node in the cluster.</para>
+            /// <para>The node name, which identifies the node in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou.192.168.x.x</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public List<string> CveList { get; set; }
 
                 /// <summary>
-                /// <para>The name of the vulnerability.</para>
+                /// <para>The vulnerability name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oval:com.redhat.rhsa:def:20193197</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Necessity { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a restart is required.</para>
+                /// <para>Specifies whether a restart is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> PackageList { get; set; }
                 public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : TeaModel {
                     /// <summary>
-                    /// <para>The name of the package.</para>
+                    /// <para>The package name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>WebLogic</para>
@@ -114,10 +114,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the Security Center CVE fix service is purchased. Valid values:</para>
+        /// <para>Specifies whether the Security Center CVE fix service is purchased.</para>
         /// <list type="bullet">
-        /// <item><description>true: Purchased.</description></item>
-        /// <item><description>false: Not purchased.</description></item>
+        /// <item><description><para>true: Purchased.</para>
+        /// </description></item>
+        /// <item><description><para>false: Not purchased.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

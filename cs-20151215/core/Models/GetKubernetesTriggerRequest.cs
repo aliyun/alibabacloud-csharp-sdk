@@ -34,11 +34,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deployment</c>: The trigger for stateless applications.</description></item>
-        /// <item><description><c>application</c>: The trigger for application center applications.
-        /// Default value: <c>deployment</c>.
-        /// If the trigger type is not specified, the query results are not filtered by trigger type.</description></item>
+        /// <item><description><para><c>deployment</c>: triggers for stateless applications </para>
+        /// </description></item>
+        /// <item><description><para><c>application</c>: triggers for applications in the Application Center</para>
+        /// </description></item>
         /// </list>
+        /// <para>Default value: <c>deployment</c>.</para>
+        /// <para>If you do not specify the trigger type, the query results are not filtered by trigger type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deployment</para>
@@ -50,9 +52,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The trigger action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>redeploy</c>: Redeploys the resources defined in <c>project_id</c>.
-        /// If the trigger action is not specified, the query results are not filtered by trigger action.</description></item>
+        /// <item><description><c>redeploy</c>: redeploys the resources defined in <c>project_id</c></description></item>
         /// </list>
+        /// <para>If you do not specify the trigger action, the query results are not filtered by trigger action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redeploy</para>

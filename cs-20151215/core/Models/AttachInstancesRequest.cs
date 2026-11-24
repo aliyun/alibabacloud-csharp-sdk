@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class AttachInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The CPU management policy for the node. The following two policies are supported when the cluster version is 1.12.6 or later:</para>
+        /// <para>The CPU management policy for the node. The following policies are supported if the cluster version is 1.12.6 or later. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>static</c>: allows you to enhance CPU affinity and exclusivity for pods with specific resource characteristics on the node.</description></item>
-        /// <item><description><c>none</c>: uses the existing default CPU affinity policy.</description></item>
+        /// <item><description>static: allows you to enhance CPU affinity and exclusivity for pods with specific resource characteristics on the node.</description></item>
+        /// <item><description>none: uses the existing default CPU affinity policy.</description></item>
         /// </list>
-        /// <para>Default value: <c>none</c>.</para>
+        /// <para>Default value: none.</para>
         /// <remarks>
         /// <para>This parameter is not supported if nodepool_id is specified.</para>
         /// </remarks>
@@ -27,18 +27,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string CpuPolicy { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>Specifies whether to store container data and images on a data cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: stores container data and images on a data cloud disk.</description></item>
-        /// <item><description><c>false</c>: does not store container data and images on a data cloud disk.</description></item>
+        /// <item><description>true: stores container data and images on a data cloud disk.</description></item>
+        /// <item><description>false: does not store container data and images on a data cloud disk.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: false.</para>
         /// <para>Data cloud disk mounting rules:</para>
         /// <list type="bullet">
         /// <item><description>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the /var/lib/docker and /var/lib/kubelet directories, which are the default data directories for the Docker container runtime and kubelet component.</description></item>
         /// <item><description>If the ECS instance does not have data cloud disks attached, no new data cloud disk is attached.<remarks>
-        /// <para>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, the existing data on the data cloud disks will be lost. Back up your data first.</para>
+        /// <para>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, the existing data on the data cloud disks will be lost. Back up your data in advance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -48,7 +50,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </summary>
         [NameInMap("format_disk")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? FormatDisk { get; set; }
+
+        /// <summary>
+        /// <para>The disk formatting method. This parameter is mutually exclusive with format_disk.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NodePoolDiskConfig</para>
+        /// </summary>
+        [NameInMap("format_disk_option")]
+        [Validation(Required=false)]
+        public string FormatDiskOption { get; set; }
 
         /// <summary>
         /// <para>The custom image ID.</para>
@@ -78,12 +91,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether the node to be added is an edge node, namely an ENS node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The node to be added is an edge node.</description></item>
-        /// <item><description><c>false</c>: The node to be added is not an edge node.</description></item>
+        /// <item><description>true: The node to be added is an edge node.</description></item>
+        /// <item><description>false: The node to be added is not an edge node.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>If the node is an edge node, you must set this parameter to <c>true</c> to identify the node type as an ENS node.</para>
+        /// <para>If the node is an edge node, you must set this parameter to true to identify the node type as an ENS node.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,10 +109,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to retain the original instance name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: retains the instance name.</description></item>
-        /// <item><description><c>false</c>: does not retain the instance name.</description></item>
+        /// <item><description>true: retains the instance name.</description></item>
+        /// <item><description>false: does not retain the instance name.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>.</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -109,7 +122,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair for the instances to be added. You can specify either the key_pair or password parameter, or leave both empty.</para>
+        /// <para>The name of the key pair for the instances to be added. You can specify either key_pair or password, or leave both empty.</para>
         /// <remarks>
         /// <para>This parameter is not supported if nodepool_id is specified.</para>
         /// </remarks>
@@ -132,11 +145,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// <para>The SSH logon password for the instances to be added. You can specify either the key_pair or password parameter, or leave both empty.</para>
+        /// <para>The SSH logon password for the instances to be added. You can specify either key_pair or password, or leave both empty.</para>
         /// <para>The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password must be 8 to 30 characters in length.</description></item>
-        /// <item><description>The password must contain uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The password is 8 to 30 characters in length.</description></item>
+        /// <item><description>The password contains uppercase letters, lowercase letters, digits, and special characters.</description></item>
         /// <item><description>The password cannot contain backslashes (\) or double quotation marks (&quot;).</description></item>
         /// </list>
         /// <para>For security purposes, the password is encrypted during transmission.</para>
@@ -180,7 +193,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <item><description>A label is a case-sensitive key-value pair. You can configure up to 20 labels.</description></item>
         /// <item><description>Label keys must be unique and can be up to 64 characters in length.</description></item>
         /// <item><description>Label values can be empty and can be up to 128 characters in length.</description></item>
-        /// <item><description>Label keys and values cannot start with <c>aliyun</c>, <c>acs:</c>, <c>https://</c>, or <c>http://</c>.</description></item>
+        /// <item><description>Label keys and values cannot start with aliyun, acs:, https://, or http://.</description></item>
         /// </list>
         /// <para>For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</para>
         /// <remarks>

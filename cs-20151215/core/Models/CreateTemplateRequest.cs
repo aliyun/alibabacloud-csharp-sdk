@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the template. </para>
-        /// <para>Naming rules: The name must be 1 to 63 characters in length, and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</para>
+        /// <para>The name of the template. The name must be 1 to 63 characters in length and can contain digits, Chinese characters, letters, and hyphens (-). It cannot start with a hyphen (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,14 +52,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Template { get; set; }
 
         /// <summary>
-        /// <para>The templatetype.</para>
+        /// <para>The template type.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set this parameter to <c>kubernetes</c>, the template is displayed on the Orchestration Templates page in the console.</para>
+        /// <item><description><para>If the value is <c>kubernetes</c>, the template is displayed on the Orchestration Templates page in the console.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify this parameter or set it to another value, the template is not displayed on the Orchestration Templates page in the console.</para>
+        /// <item><description><para>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
         /// </description></item>
         /// </list>
-        /// <para>Recommended Settings: <c>kubernetes</c>.</para>
+        /// <para>Set this parameter to <c>kubernetes</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes</para>

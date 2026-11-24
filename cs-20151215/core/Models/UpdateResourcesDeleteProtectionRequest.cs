@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The type of the resource to update. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>namespaces: namespace.</para>
+        /// <item><description><para>namespaces: namespace</para>
         /// </description></item>
-        /// <item><description><para>services: service.</para>
+        /// <item><description><para>services: service</para>
         /// </description></item>
         /// </list>
         /// 
