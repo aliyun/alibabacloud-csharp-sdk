@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class AssetOptimizeLiteRequest : TeaModel {
         /// <summary>
-        /// <para>The custom glossary for term intervention.</para>
+        /// <para>The intervention glossary.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? NeedTrans { get; set; }
 
         /// <summary>
-        /// <para>The product URL.</para>
+        /// <para>The product link URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

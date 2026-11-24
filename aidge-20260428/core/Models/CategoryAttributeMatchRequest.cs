@@ -13,28 +13,25 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>The product details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Silk, new spring style</para>
+        /// <para>Silk, spring new arrival</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The product image URLs. A maximum of 10 images are supported.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><a href="https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg">https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg</a></para>
+        /// <para>The URLs of the product images. Up to 10 images are supported.</para>
         /// </summary>
         [NameInMap("ImageUrl")]
         [Validation(Required=false)]
         public List<string> ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The product attributes that describe the product characteristics.</para>
+        /// <para>The product attributes and feature descriptions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For example, the material of the product. Enter the attribute name and attribute value</para>
+        /// <para>For example, the material of the product. Enter the product attribute name and attribute content</para>
         /// </summary>
         [NameInMap("ItemSpec")]
         [Validation(Required=false)]
@@ -45,14 +42,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0:0:Color:Black (without locator);0:1:Color:Smart Locator (without collar);0:2:Color:Range Locator (without collar);0:3:Color:Blue (without locator);0:4:Color:Orange (without locator);0:5:Color:Pink (without locator);0:6:Color:Red (without locator);0:7:Color:Yellow (without locator);0:8:Color:Purple (without locator)</para>
+        /// <para>0:0:Color:Black (without tracker);0:1:Color:Smart tracking (without collar);0:2:Color:Range tracking (without collar);0:3:Color:Blue (without tracker);0:4:Color:Orange (without tracker);0:5:Color:Pink (without tracker);0:6:Color:Red (without tracker);0:7:Color:Yellow (without tracker);0:8:Color:Purple (without tracker)</para>
         /// </summary>
         [NameInMap("Sku")]
         [Validation(Required=false)]
         public string Sku { get; set; }
 
         /// <summary>
-        /// <para>The product category on the source platform.</para>
+        /// <para>The product category.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +60,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceCategory { get; set; }
 
         /// <summary>
-        /// <para>The source platform from which the product originates.</para>
+        /// <para>The source platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +71,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourcePlatform { get; set; }
 
         /// <summary>
-        /// <para>The target listing platform. Currently, only temu is supported.</para>
+        /// <para>The target platform for product listing. Currently, only TEMU is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +86,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Women\&quot;s New Spring Clothing</para>
+        /// <para>Women\&quot;s spring new clothing</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

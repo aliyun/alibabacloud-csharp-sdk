@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class TextCorrectRequest : TeaModel {
         /// <summary>
-        /// <para>The source language code. This parameter is required. You can set this parameter to auto for automatic language detection. 14 languages are supported.</para>
+        /// <para>The language code of the source text. This parameter is required. You can set this parameter to auto for automatic language detection. 14 languages are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>The text to correct. This parameter is required.</para>
+        /// <para>The text to be corrected. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

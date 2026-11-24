@@ -58,7 +58,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public List<MerchandiseSceneDetectionResponseBodyDataResultGroundingRegions> Regions { get; set; }
                     public class MerchandiseSceneDetectionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
-                        /// <para>The 2D bounding box in the format of [top-left x, top-left y, bottom-right x, bottom-right y]. Valid values: 0 to 1000. The left coordinate must be less than the right coordinate, and the top coordinate must be less than the bottom coordinate.</para>
+                        /// <para>The 2D bounding box in the format of [top-left X, top-left Y, bottom-right X, bottom-right Y]. Values range from 0 to 1000. Left &lt; right, and top &lt; bottom.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>[0,130,1000,850]</para>
                         /// </summary>
                         [NameInMap("Bbox_2d")]
                         [Validation(Required=false)]
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The recognized text.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Multi-tier product display shelf</para>
+                        /// <para>Multi-layer product display shelf</para>
                         /// </summary>
                         [NameInMap("Text")]
                         [Validation(Required=false)]
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public double? AreaRate { get; set; }
 
                     /// <summary>
-                    /// <para>Optional. The purity metric for proprietary products. The specific business criteria are subject to the recognition service.</para>
+                    /// <para>Optional. The purity metric for proprietary products. The specific business definition is subject to the recognition service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -129,14 +132,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     /// <para>The display name of the scene. If omitted, the value is an empty string.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Air-cooled display cabinet</para>
+                    /// <para>Refrigerated display cabinet</para>
                     /// </summary>
                     [NameInMap("SceneActualName")]
                     [Validation(Required=false)]
                     public string SceneActualName { get; set; }
 
                     /// <summary>
-                    /// <para>The center point of the scene, which retains the original normalized coordinates. If omitted, the value is an empty array.</para>
+                    /// <para>The center point of the scene. The original normalized coordinates are retained. If omitted, the value is an empty array.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>[0.501,0.493]</para>
                     /// </summary>
                     [NameInMap("SceneCenter")]
                     [Validation(Required=false)]
@@ -150,7 +156,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public List<MerchandiseSceneDetectionResponseBodyDataResultScenesSceneLocation> SceneLocation { get; set; }
                     public class MerchandiseSceneDetectionResponseBodyDataResultScenesSceneLocation : TeaModel {
                         /// <summary>
-                        /// <para>The x-coordinate of the region point.</para>
+                        /// <para>The X-coordinate of the region point.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.431</para>
@@ -160,7 +166,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public double? X { get; set; }
 
                         /// <summary>
-                        /// <para>The y-coordinate of the region point.</para>
+                        /// <para>The Y-coordinate of the region point.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.973</para>
@@ -172,7 +178,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     }
 
                     /// <summary>
-                    /// <para>The scene identifier. This parameter is required and cannot be empty.</para>
+                    /// <para>The scene identifier. This field is required and cannot be empty.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>yl_cj_lfg</para>
@@ -182,7 +188,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string SceneName { get; set; }
 
                     /// <summary>
-                    /// <para>Optional. The shelf distribution proportion metric. The specific business criteria are subject to the recognition service.</para>
+                    /// <para>Optional. The shelf distribution proportion metric. The specific business definition is subject to the recognition service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -194,7 +200,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>Fixed value: scene.</para>
+                /// <para>The type. Fixed to scene.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>scene</para>
@@ -218,7 +224,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
+        /// <para>The return message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RagId { get; set; }
 
         /// <summary>
-        /// <para>The records to update. A maximum of 500 records can be specified.</para>
+        /// <para>The records to be modified. A maximum of 500 records can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Records")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<UpdateDisplayKnowledgeRequestRecords> Records { get; set; }
         public class UpdateDisplayKnowledgeRequestRecords : TeaModel {
             /// <summary>
-            /// <para>The HTTP or HTTPS URL of the product image.</para>
+            /// <para>The HTTP(S) URL of the product image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx/96f21ebdaeeba27a.jpg">https://xxxx/96f21ebdaeeba27a.jpg</a></para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public long? RecordId { get; set; }
 
             /// <summary>
-            /// <para>The SKU ID. If this parameter is not empty, the original value is overwritten.</para>
+            /// <para>The SKU ID. If specified, this value overwrites the original value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sku-001</para>

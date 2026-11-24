@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public MerchandisePriceTagDetectionResponseBodyDataResult Result { get; set; }
             public class MerchandisePriceTagDetectionResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The localization information.</para>
+                /// <para>The grounding information.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string Coverage { get; set; }
 
                     /// <summary>
-                    /// <para>The region list.</para>
+                    /// <para>The list of regions.</para>
                     /// </summary>
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>The price tag list. This can be an empty array if no price tags are recognized under normal conditions.</para>
+                /// <para>The list of price tags. This can be an empty array if no price tags are recognized under normal conditions.</para>
                 /// </summary>
                 [NameInMap("PriceTags")]
                 [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string OriginalPrice { get; set; }
 
                     /// <summary>
-                    /// <para>The selling price, retained as a string to avoid being parsed as a reserved word or reserved character.</para>
+                    /// <para>The selling price, retained as a character string.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5.50</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string Price { get; set; }
 
                     /// <summary>
-                    /// <para>The associated product code.</para>
+                    /// <para>The code of the associated product.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>001</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string SkuCode { get; set; }
 
                     /// <summary>
-                    /// <para>The associated product name.</para>
+                    /// <para>The name of the associated product.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sku_test</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>The value is fixed to priceTag.</para>
+                /// <para>The fixed value priceTag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>priceTag</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The return message or failure description.</para>
+        /// <para>The response message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

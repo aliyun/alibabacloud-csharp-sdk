@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationPlusAsyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code for the submission call. A successful call returns success.</para>
+        /// <para>The response code for the submission call. A value of success indicates a successful call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submission result of the asynchronous task for the Plus edition of image translation.</para>
+        /// <para>The submission result of the Image Translation Plus asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationPlusAsyncResponseBodyData Data { get; set; }
         public class ImageTranslationPlusAsyncResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The identifier of the asynchronous task, which is used for result queries and notification association. Do not use the example prefix as a business validation rule.</para>
+            /// <para>The identifier of the asynchronous task. It is used for result queries and notification association. Do not use the example prefix as a business validation rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TID_550e8400-e29b-41d4-a716-446655440000</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message, such as \&quot;The content contains sensitive data. Try another input.\&quot;</para>
+        /// <para>The error message, such as &quot;The content contains sensitive data. Try another input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, which is used for troubleshooting and tracing analysis.</para>
+        /// <para>The unique identity of the request. It is used for troubleshooting and Tracing Analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the submission call is successful. This does not indicate that the translation is complete. A value of true indicates success, and a value of false indicates failure.</para>
+        /// <para>Indicates whether the submission call is successful. This does not mean that the translation is completed. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

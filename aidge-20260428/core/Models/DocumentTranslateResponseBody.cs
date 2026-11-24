@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public DocumentTranslateResponseBodyData Data { get; set; }
         public class DocumentTranslateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</para>
+            /// <para>The unique identifier of the asynchronous task, which is used to query the task status and results later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6071a030-5c92-9df1-96d0-44952343439a</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message, such as &quot;The parameters contain sensitive information. Try other input.&quot;
-        /// This parameter is not returned if the call is successful.</para>
+        /// <para>The error message, such as &quot;The parameter contains sensitive information. Try another input.&quot;
+        /// This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identity of the request. Use this ID for troubleshooting and Tracing Analysis.</para>
+        /// <para>The unique identity of the request, which is used for troubleshooting and Tracing Analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</para>
@@ -60,7 +60,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. true: The call is successful. false: The call failed.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

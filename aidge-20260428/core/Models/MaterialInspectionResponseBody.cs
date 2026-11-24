@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class MaterialInspectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public MaterialInspectionResponseBodyDataResult Result { get; set; }
             public class MaterialInspectionResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</para>
+                /// <para>The natural language summary, such as &quot;1 rule: 1 PASS, all detection items are compliant&quot;.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1 rule: 1 PASS, all inspection items are compliant</para>
+                /// <para>1 rule: 1 PASS, all detection items are compliant</para>
                 /// </summary>
                 [NameInMap("Evidence")]
                 [Validation(Required=false)]
                 public string Evidence { get; set; }
 
                 /// <summary>
-                /// <para>The overall determination result. Valid values: PASS and FAIL.</para>
+                /// <para>The overall judgment. Valid values: PASS, FAIL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PASS</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string OverallResult { get; set; }
 
                 /// <summary>
-                /// <para>The request ID returned as-is from the request.</para>
+                /// <para>The request ID returned as-is.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>req-001</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<MaterialInspectionResponseBodyDataResultSteps> Steps { get; set; }
                 public class MaterialInspectionResponseBodyDataResultSteps : TeaModel {
                     /// <summary>
-                    /// <para>The determination result of the step. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</para>
+                    /// <para>The judgment result. Valid values: PASS, FAIL, UNABLE_TO_JUDGE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PASS</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     /// <para>The step ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>XXX</para>
+                    /// <para>S1</para>
                     /// </summary>
                     [NameInMap("StepId")]
                     [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information. The key is the usage metric name and the value is the count.</para>
+            /// <para>The usage information. The key is the usage name and the value is the count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessingCount&quot;:1}</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

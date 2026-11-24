@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the reference image. This parameter is optional. If a non-empty value is specified, multi-image differential comparison is performed.</para>
+        /// <para>The URL of the reference image. This parameter is optional. If it is not empty, multi-image difference comparison is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/reference.jpg">https://example.com/reference.jpg</a></para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The business request identity. This parameter is optional. The value is returned as-is in the response for Tracing Analysis purposes.</para>
+        /// <para>The business request identity. This parameter is optional and is returned as-is to facilitate Tracing Analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req-2026-06-04-001</para>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ReqId { get; set; }
 
         /// <summary>
-        /// <para>The rule prompt in natural language.</para>
+        /// <para>The rule prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The door-shaped display stand must be placed in the entrance area; the functional card stand must be placed on the counter surface</para>
+        /// <para>Door display stands must be placed in the entrance area; functional table cards must be placed on the middle counter surface</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

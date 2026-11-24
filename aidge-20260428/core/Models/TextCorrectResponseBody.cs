@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class TextCorrectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The value &quot;success&quot; is returned if the call is successful.</para>
+        /// <para>The response code. &quot;success&quot; is returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. The value &quot;Success&quot; is returned if the call is successful. If an error occurs, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
+        /// <para>The error message. &quot;Success&quot; is returned for successful calls. For failed calls, a specific error message is returned, such as &quot;The parameter contains sensitive information. Please try another input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, which is used to uniquely identify a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32882AD0-50D1-1D90-A221-3987325EC03E</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The floor display area inference result.</para>
+        /// <para>The inference result of the floor display area.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The downstream HTTP status code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OK</para>
+            /// <para>200</para>
             /// </summary>
             [NameInMap("HttpStatus")]
             [Validation(Required=false)]
             public int? HttpStatus { get; set; }
 
             /// <summary>
-            /// <para>The downstream call latency, in milliseconds.</para>
+            /// <para>The duration of the downstream call, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public DiduiAreaDeductionResponseBodyDataResult Result { get; set; }
             public class DiduiAreaDeductionResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The stage 4 area label.</para>
+                /// <para>The Stage 4 area label.</para>
                 /// </summary>
                 [NameInMap("Stage4AreaLabel")]
                 [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public double? AreaM2 { get; set; }
 
                     /// <summary>
-                    /// <para>The left edge length, in meters.</para>
+                    /// <para>The length of the left boundary, in meters.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.025</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public double? LeftEdgeM { get; set; }
 
                     /// <summary>
-                    /// <para>The right edge length, in meters.</para>
+                    /// <para>The length of the right boundary, in meters.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.419</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the workflow execution is successful.</para>
+            /// <para>The business status of the workflow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>

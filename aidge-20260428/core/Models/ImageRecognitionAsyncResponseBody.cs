@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The struct information of the returned recognition result.</para>
+        /// <para>The returned data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRecognitionAsyncResponseBodyData Data { get; set; }
         public class ImageRecognitionAsyncResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task ID used to query the result of the asynchronous task.</para>
+            /// <para>The task ID used to query the asynchronous task result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TID_550e8400-e29b-41d4-a716-446655440000</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message, such as &quot;The parameter contains sensitive information. Try another input.&quot;</para>
+        /// <para>The error message, such as \&quot;The parameter contains sensitive information. Try another input.\&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to identify a unique request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -59,11 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: successful</description></item>
-        /// <item><description>false: failed</description></item>
-        /// </list>
+        /// <para>Indicates whether the call is successful. Valid values: true: Successful. false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

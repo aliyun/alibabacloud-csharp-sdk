@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submit status result data, which contains the asynchronous task ID.</para>
+        /// <para>The asynchronous submit result data, which includes the asynchronous task ID.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PackageWeightSizeCheckResponseBodyData Data { get; set; }
         public class PackageWeightSizeCheckResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID used to query the review result later by calling QueryAsyncTaskResult.</para>
+            /// <para>The asynchronous task ID, which is used to query the audit result by calling QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a8323ada-a196-9061-976f-90e38b27323a</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls.</para>
+        /// <para>The error message. Success is returned for successful calls, and specific error information is returned for failed calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, which is used to identify a unique request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F93D82E4-D0B6-1043-AC58-282597BC3C10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

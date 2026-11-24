@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRecognitionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The URL of the image to recognize.</para>
+        /// <para>The URL of the image to be recognized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The element types to detect on the non-subject area of the image (1: watermark, 2: logo, 3: text, 4: text-containing color block). You can select multiple element types. This parameter and ObjectDetectElements cannot both be empty.</para>
+        /// <para>Specifies the elements to detect on the non-subject area of the image. Valid values: 1 for watermark, 2 for logo, 3 for text, and 4 for text-containing color block. You can specify multiple element types. This parameter and ObjectDetectElements cannot be empty at the same time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2,3,4]</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string NonObjectDetectElementsShrink { get; set; }
 
         /// <summary>
-        /// <para>The element types to detect on the image subject (1: watermark, 2: logo, 3: text, 4: text-containing color block). You can select multiple element types.</para>
+        /// <para>Specifies the elements to detect on the image subject. Valid values: 1 for watermark, 2 for logo, 3 for text, and 4 for text-containing color block. You can specify multiple element types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2,3,4]</para>
@@ -41,7 +41,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ObjectDetectElementsShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return border pixel information. Valid values: 1 (return) and 0 (do not return).</para>
+        /// <para>Specifies whether to return border pixel information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Return border pixel information.</description></item>
+        /// <item><description>0: Do not return border pixel information.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +55,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnBorderPixel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return text information. Valid values: 1 (return) and 0 (do not return).</para>
+        /// <para>Specifies whether to return text information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Return text information.</description></item>
+        /// <item><description>0: Do not return text information.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +69,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnCharacter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return text attribute information. Valid values: 1 (return) and 0 (do not return).</para>
+        /// <para>Specifies whether to return text property information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Return text property information.</description></item>
+        /// <item><description>0: Do not return text property information.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -71,7 +83,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnCharacterProp { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the product count. Valid values: 1 (return) and 0 (do not return).</para>
+        /// <para>Specifies whether to return the product quantity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Return the product quantity.</description></item>
+        /// <item><description>0: Do not return the product quantity.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +97,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnProductNum { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return product attribute information. Valid values: 1 (return) and 0 (do not return).</para>
+        /// <para>Specifies whether to return product property information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Return product property information.</description></item>
+        /// <item><description>0: Do not return product property information.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

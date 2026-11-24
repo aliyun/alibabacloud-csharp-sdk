@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class LanguageDetectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code documentation.</para>
+        /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The language identification result data, including the detected language and usage information.</para>
+        /// <para>The language detection result data, which includes the detected language and usage information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public LanguageDetectResponseBodyData Data { get; set; }
         public class LanguageDetectResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The detected language code.</para>
+            /// <para>The code of the detected language.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string DetectedLanguage { get; set; }
 
             /// <summary>
-            /// <para>The usage information, including the number of input characters.</para>
+            /// <para>The usage information, which includes the number of input characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;InputCharacterCount&quot;:4}</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
+        /// <para>The error message. &quot;Success&quot; is returned for normal calls. For exceptions, a specific error message is returned, such as &quot;The parameter contains sensitive information. Try another input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, which is used to uniquely identify a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42542C6C-F2A4-1B2B-8EFF-130C8FD06F54</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

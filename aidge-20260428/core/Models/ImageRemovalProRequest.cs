@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRemovalProRequest : TeaModel {
         /// <summary>
-        /// <para>The call type. Valid values:</para>
+        /// <para>Specifies the invocation type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Asynchronous.</description></item>
-        /// <item><description>false: Synchronous.</description></item>
+        /// <item><description>false: Synchronous.
+        /// Default value: false.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? Async { get; set; }
 
         /// <summary>
-        /// <para>The URL of the image to process.</para>
+        /// <para>The URL of the image to be processed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

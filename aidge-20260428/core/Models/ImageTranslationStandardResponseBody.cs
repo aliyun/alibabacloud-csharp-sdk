@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationStandardResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
+        /// <para>The response code. A value of 200 indicates a successful call. For other response codes, see the error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<string> Font { get; set; }
 
                 /// <summary>
-                /// <para>The product area rectangles.</para>
+                /// <para>The product area rectangle.</para>
                 /// </summary>
                 [NameInMap("GoodsRects")]
                 [Validation(Required=false)]
@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public class ImageTranslationStandardResponseBodyDataEditInfoGoodsRects : TeaModel {
                     /// <summary>
                     /// <para>The rotation angle.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Degree")]
                     [Validation(Required=false)]
@@ -59,6 +62,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                     /// <summary>
                     /// <para>The height.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Height")]
                     [Validation(Required=false)]
@@ -66,6 +72,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                     /// <summary>
                     /// <para>The left coordinate.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Left")]
                     [Validation(Required=false)]
@@ -73,6 +82,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                     /// <summary>
                     /// <para>The top coordinate.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Top")]
                     [Validation(Required=false)]
@@ -80,6 +92,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                     /// <summary>
                     /// <para>The width.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("Width")]
                     [Validation(Required=false)]
@@ -108,7 +123,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<string> Languages { get; set; }
 
                 /// <summary>
-                /// <para>The original image URL.</para>
+                /// <para>The URL of the original image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></para>
@@ -118,7 +133,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string PictUrl { get; set; }
 
                 /// <summary>
-                /// <para>The repaired image URL.</para>
+                /// <para>The URL of the repaired image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png</a></para>
@@ -260,6 +275,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsImageRect : TeaModel {
                             /// <summary>
                             /// <para>The rotation angle.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("Degree")]
                             [Validation(Required=false)]
@@ -267,6 +285,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The height.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>54</para>
                             /// </summary>
                             [NameInMap("Height")]
                             [Validation(Required=false)]
@@ -274,6 +295,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The left coordinate.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>43</para>
                             /// </summary>
                             [NameInMap("Left")]
                             [Validation(Required=false)]
@@ -281,6 +305,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The top coordinate.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>83</para>
                             /// </summary>
                             [NameInMap("Top")]
                             [Validation(Required=false)]
@@ -288,6 +315,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The width.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>418</para>
                             /// </summary>
                             [NameInMap("Width")]
                             [Validation(Required=false)]
@@ -324,6 +354,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public class ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsTextRect : TeaModel {
                             /// <summary>
                             /// <para>The rotation angle.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>0</para>
                             /// </summary>
                             [NameInMap("Degree")]
                             [Validation(Required=false)]
@@ -331,6 +364,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The height.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>30</para>
                             /// </summary>
                             [NameInMap("Height")]
                             [Validation(Required=false)]
@@ -338,6 +374,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The left coordinate.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>8</para>
                             /// </summary>
                             [NameInMap("Left")]
                             [Validation(Required=false)]
@@ -345,6 +384,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The top coordinate.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>95</para>
                             /// </summary>
                             [NameInMap("Top")]
                             [Validation(Required=false)]
@@ -352,6 +394,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                             /// <summary>
                             /// <para>The width.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>488</para>
                             /// </summary>
                             [NameInMap("Width")]
                             [Validation(Required=false)]
@@ -373,7 +418,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The text value.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Solid Wood Wardrobe</para>
+                        /// <para>Solid wood wardrobe</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -428,7 +473,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</para>
+        /// <para>The error message. &quot;Success&quot; is returned for a successful call, and specific error details are returned when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -438,7 +483,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CEC4D94-905A-1ED1-A7B4-1BFEFFB3D850</para>
@@ -448,7 +493,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

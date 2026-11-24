@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRemovalProResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The Intelligent Eraser Pro result.</para>
+        /// <para>The result of Intelligent removal Pro.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemovalProResponseBodyData Data { get; set; }
         public class ImageRemovalProResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the erasure result image. This parameter is returned in synchronous mode.</para>
+            /// <para>The URL of the processed image. This parameter is returned in synchronous mode.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&Expires=4999655814&Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D">https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&amp;Expires=4999655814&amp;Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D</a></para>
+            /// <para><a href="https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGj****ixZgHLc3bV&Expires=4999655814&Signature=shvGNDmkyv9MLT*****OxYglJCpAE%3D">https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGj****ixZgHLc3bV&amp;Expires=4999655814&amp;Signature=shvGNDmkyv9MLT*****OxYglJCpAE%3D</a></para>
             /// </summary>
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous task ID. This parameter is returned in asynchronous mode and is used to query task results.</para>
+            /// <para>The ID of the asynchronous task. This parameter is returned in asynchronous mode and is used to query the task result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ed9d8504-6141-9fbb-8345-4fa36433483f</para>
@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>The usage details. This parameter is returned in synchronous mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

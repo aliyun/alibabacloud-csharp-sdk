@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationStandardAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The business order ID of the caller. It is recorded upon acceptance and returned as-is when querying the asynchronous task result.</para>
+        /// <para>The business order ID of the caller. This ID is recorded upon acceptance and returned as-is when querying the asynchronous task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>order-20260928-001</para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the translation of the product area.</para>
+        /// <para>Specifies whether to include translation for the product area.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IncludingProductArea")]
         [Validation(Required=false)]
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate the brand text in the product area.</para>
+        /// <para>Specifies whether to translate brand text in the product area.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("TranslatingBrandInTheProduct")]
         [Validation(Required=false)]

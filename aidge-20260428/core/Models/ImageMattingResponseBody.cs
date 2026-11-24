@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public ImageMattingResponseBodyData Data { get; set; }
         public class ImageMattingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The height of the result image in pixels.</para>
+            /// <para>The height of the result image, in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? Height { get; set; }
 
             /// <summary>
-            /// <para>The URL of the image matting result.</para>
+            /// <para>The URL of the matting result image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The quality score of the image matting result.</para>
+            /// <para>The matting quality score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.11</para>
@@ -55,6 +55,27 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             [NameInMap("Score")]
             [Validation(Required=false)]
             public double? Score { get; set; }
+
+            /// <summary>
+            /// <para>The returned layer information, which includes the original image URL, the matting result URL, and the matting area information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;origin_url&quot;: &quot;xxx&quot;,
+            ///                     &quot;score&quot;: &quot;xxx&quot;,
+            ///                     &quot;file&quot;: &quot;xxxx&quot;,
+            ///                     &quot;extra_info&quot;: &quot;&quot;,
+            ///                     &quot;pass&quot;: &quot;xx&quot;,
+            ///                     &quot;bbox&quot;: &quot;xxx&quot;,
+            ///                     &quot;plain_url&quot;: &quot;xxxxxx&quot;,
+            ///                     &quot;image_shape&quot;: [
+            ///                         xxx,
+            ///                         xxx
+            ///                     ],
+            ///                     &quot;url&quot;: &quot;xxx&quot;</para>
+            /// </summary>
+            [NameInMap("StructData")]
+            [Validation(Required=false)]
+            public object StructData { get; set; }
 
             /// <summary>
             /// <para>The usage information.</para>
@@ -67,7 +88,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public Dictionary<string, long?> UsageMap { get; set; }
 
             /// <summary>
-            /// <para>The width of the result image in pixels.</para>
+            /// <para>The width of the result image, in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class SizeChartExtractAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The business order number of the caller. It is recorded when the request is accepted and returned as is when you query the asynchronous task result.</para>
+        /// <para>The business order number of the caller. It is recorded upon acceptance and returned as-is when you query the asynchronous task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>order-20260928-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The list of column names to extract, such as Size, Bust, and Length.</para>
+        /// <para>The list of column names to be extracted, such as Size, Bust, and Length.</para>
         /// </summary>
         [NameInMap("ColumnNameList")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The output language format. If you do not specify this parameter, the original language is used. If the original image language is Chinese or English, specifying en outputs English, and specifying cn outputs Chinese.</para>
+        /// <para>The output language format. If you do not specify this parameter, the original language is used. If the original language of the image is Chinese or English, specifying en outputs English, and specifying cn outputs Chinese.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

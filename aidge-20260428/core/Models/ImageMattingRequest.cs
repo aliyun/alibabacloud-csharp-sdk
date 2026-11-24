@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <summary>
         /// <para>Specifies the background type of the returned image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WHITE_BACKGROUND: white background.</description></item>
-        /// <item><description>TRANSPARENT: transparent background.</description></item>
+        /// <item><description>WHITE_BACKGROUND: White background.</description></item>
+        /// <item><description>TRANSPARENT: Transparent background.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BgColor { get; set; }
 
         /// <summary>
-        /// <para>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels. The file size cannot exceed 10 MB.<br><b>Example</b>: <c>&quot;https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg&quot;</c></para>
+        /// <para>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.<br><b>Example</b>: <c>&quot;https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg&quot;</c></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The target image height in pixels.</para>
+        /// <para>The target height of the image, in pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? TargetHeight { get; set; }
 
         /// <summary>
-        /// <para>The target image width in pixels.</para>
+        /// <para>The target width of the image, in pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>

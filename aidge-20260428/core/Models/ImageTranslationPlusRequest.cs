@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate text on the product body. This parameter is optional. Default value: false.</para>
+        /// <para>Specifies whether to translate the text on the product subject. This parameter is optional. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate brand text on the product. This parameter is optional. Default value: false.</para>
+        /// <para>Specifies whether to translate the text on the brand. This parameter is optional. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>Specifies whether to use the image translation editor protocol. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("UseImageEditor")]
         [Validation(Required=false)]

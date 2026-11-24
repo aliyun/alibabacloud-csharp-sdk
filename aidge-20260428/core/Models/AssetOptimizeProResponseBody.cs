@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class AssetOptimizeProResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The value &quot;success&quot; is returned for a successful call.</para>
+        /// <para>The status code. A value of success indicates a successful call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submit result of the asynchronous task, which contains the asynchronous task ID.</para>
+        /// <para>The submission result of the asynchronous task, which includes the asynchronous task ID.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AssetOptimizeProResponseBodyData Data { get; set; }
         public class AssetOptimizeProResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID. Use this ID to query the processing result by calling QueryAsyncTaskResult.</para>
+            /// <para>The ID of the asynchronous task, which is used to query the processing result by calling QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080345d-b28a-9e2e-9ad7-370f8e236949</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. The value &quot;Success&quot; is returned for a successful call.</para>
+        /// <para>The error message. A value of Success is returned for a successful call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, which is used to identify a unique request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FCCA90A-A7A4-1D37-88C3-C17549886E70</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

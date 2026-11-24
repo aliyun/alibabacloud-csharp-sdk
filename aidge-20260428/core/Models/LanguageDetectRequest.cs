@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class LanguageDetectRequest : TeaModel {
         /// <summary>
-        /// <para>The detection scenario. Default value: common. If you are identifying search phrases, set this parameter to query. If an incorrect value is specified or this parameter is left empty, the common general identification mode is used. Note: pass query in lowercase.</para>
+        /// <para>The detection scenario. Default value: common. For search phrase scenarios, set this parameter to query. If an invalid value is specified or this parameter is left empty, the common general detection scenario is used. Note: The value query must be in lowercase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>query</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The source text to identify. This parameter is required.</para>
+        /// <para>The source text to be detected. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample text</para>
+        /// <para>Test text</para>
         /// </summary>
         [NameInMap("SourceText")]
         [Validation(Required=false)]

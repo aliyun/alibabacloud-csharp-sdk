@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class PrepaidTextTranslateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The value &quot;success&quot; is returned for successful calls.</para>
+        /// <para>The response code. success is returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The translation result data, including the translation list and usage information.</para>
+        /// <para>The translation result data, which includes the translation list and usage information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PrepaidTextTranslateResponseBodyData Data { get; set; }
         public class PrepaidTextTranslateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The translation result list. Each element corresponds to a translation result for an entry in the input text list.</para>
+            /// <para>The list of translation results. Each element corresponds to a translation result for an item in the input text list.</para>
             /// </summary>
             [NameInMap("Translations")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 /// <para>The translated text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Hello World</para>
+                /// <para>Hello world</para>
                 /// </summary>
                 [NameInMap("TranslatedText")]
                 [Validation(Required=false)]
@@ -66,7 +66,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information, including the input character count.</para>
+            /// <para>The usage information, which includes the number of input characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;InputCharacterCount&quot;:5}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
+        /// <para>The error message. Success is returned for successful calls. If an exception occurs, a specific error message is returned, such as \&quot;The parameter contains sensitive information. Try another input.\&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used to uniquely identify a request.</para>
+        /// <para>The ID of the request, which is used to identify a unique request call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

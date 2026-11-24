@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public int? AttrId { get; set; }
 
                 /// <summary>
-                /// <para>The matching confidence score, ranging from 0 to 100.</para>
+                /// <para>The matching confidence level. Valid values: 0 to 100.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string InputType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the attribute is successfully matched. Valid values: true and false.</para>
+                /// <para>Indicates whether the attribute is matched successfully. Valid values: true and false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string NameEn { get; set; }
 
                 /// <summary>
-                /// <para>The explanation for the matching result.</para>
+                /// <para>The description of the matching reason.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a_reason</para>
@@ -112,6 +112,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
                 /// <summary>
                 /// <para>The list of selected attribute value IDs, such as [30127,30128\].</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[30127,30128]</para>
                 /// </summary>
                 [NameInMap("SelectedVids")]
                 [Validation(Required=false)]
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The category ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>FC-F3A8A2802D10606D</para>
+            /// <para>1516</para>
             /// </summary>
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
@@ -133,24 +136,24 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cat Collars</para>
+            /// <para>Cat collar</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The full path of the category, separated by &quot;/&quot;.</para>
+            /// <para>The full path of the category, separated by forward slashes (/).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Pet Supplies/Cat Supplies/Cat Charms, Collars &amp; Leashes/Cat Collars</para>
+            /// <para>Pet Supplies/Cat Supplies/Cat Pendants, Collars, and Leashes/Cat Collar</para>
             /// </summary>
             [NameInMap("CategoryPath")]
             [Validation(Required=false)]
             public string CategoryPath { get; set; }
 
             /// <summary>
-            /// <para>The number of attributes that are successfully filled.</para>
+            /// <para>The number of successfully filled attributes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -160,7 +163,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? FilledCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the attribute is successfully matched. Valid values: true and false.</para>
+            /// <para>Indicates whether the attribute is matched successfully. Valid values: true and false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -187,7 +190,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public CategoryAttributeMatchResponseBodyDataUsageMap UsageMap { get; set; }
             public class CategoryAttributeMatchResponseBodyDataUsageMap : TeaModel {
                 /// <summary>
-                /// <para>The number of processing times.</para>
+                /// <para>The processing count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

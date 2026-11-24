@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The deletion results for the display knowledge base content.</para>
+        /// <para>The deletion result of the display knowledge base content.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The status of the knowledge base.</para>
+            /// <para>The knowledge base status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATING</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string RagId { get; set; }
 
             /// <summary>
-            /// <para>The number of visible records after the deletion.</para>
+            /// <para>The number of visible records after deletion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The cause of the failure.</para>
+                /// <para>The reason for the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public long? RecordId { get; set; }
 
                 /// <summary>
-                /// <para>The SKU ID. This field is empty for deletion results.</para>
+                /// <para>The SKU ID. This parameter is empty in deletion results.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sku-001</para>
@@ -154,17 +154,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string SkuId { get; set; }
 
                 /// <summary>
-                /// <para>The record status. This field is empty for deletion results.</para>
+                /// <para>The record status. This parameter is empty in deletion results.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Empty for the deletion API</para>
+                /// <para>Empty for deletion operations</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the deletion is successful.</para>
+                /// <para>Indicates whether the operation is successful.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous task ID. This field is empty for synchronous API operations.</para>
+            /// <para>The asynchronous task ID. This parameter is empty for synchronous API operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-xxxxx</para>
@@ -196,7 +196,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The usage information. This field is empty for free API operations.</para>
+            /// <para>The usage information. This parameter is empty for free API operations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -205,7 +208,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
+        /// <para>The returned message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

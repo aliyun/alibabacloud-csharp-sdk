@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BgColor { get; set; }
 
         /// <summary>
-        /// <para>The business order ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</para>
+        /// <para>The business order number of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>order-20260928-001</para>

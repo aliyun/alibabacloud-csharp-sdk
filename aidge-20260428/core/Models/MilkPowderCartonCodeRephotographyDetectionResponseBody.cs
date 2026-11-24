@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResult Result { get; set; }
             public class MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The supplementary element grounding results.</para>
+                /// <para>The supplementary element localization result.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
                 public MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGrounding Grounding { get; set; }
                 public class MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGrounding : TeaModel {
                     /// <summary>
-                    /// <para>The coverage of the grounding. Valid values:</para>
+                    /// <para>The coverage. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><c>complete</c>: The relevant visible targets are complete.</description></item>
                     /// <item><description><c>partial</c>: Only some targets are valid or recognizable.</description></item>
@@ -55,21 +55,26 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string Coverage { get; set; }
 
                     /// <summary>
-                    /// <para>The array of targets, which contains up to 12 items. This array can be empty if no relevant targets are found.</para>
+                    /// <para>The target array. It contains up to 12 items. It can be empty if no relevant targets are found.</para>
                     /// </summary>
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
                     public List<MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGroundingRegions> Regions { get; set; }
                     public class MilkPowderCartonCodeRephotographyDetectionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
-                        /// <para>The coordinates of the bounding box in the <c>[top-left x, top-left y, bottom-right x, bottom-right y]</c> format. The value range is 0 to 1000. The left value must be less than the right value, and the top value must be less than the bottom value.</para>
+                        /// <para>The bounding box coordinates.</para>
+                        /// <list type="bullet">
+                        /// <item><description><c>[top-left x, top-left y, bottom-right x, bottom-right y]</c></description></item>
+                        /// <item><description>Value range: 0–1000.</description></item>
+                        /// <item><description>Left &lt; right, top &lt; bottom.</description></item>
+                        /// </list>
                         /// </summary>
                         [NameInMap("Bbox2d")]
                         [Validation(Required=false)]
                         public List<float?> Bbox2d { get; set; }
 
                         /// <summary>
-                        /// <para>The category of the target. For enumerated values, see the following table.</para>
+                        /// <para>The target category. For valid values, see the following table.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>milk_powder</para>
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The confirmed short name or text, which contains up to 24 characters. This field is an empty string if the text is unclear.</para>
+                        /// <para>The recognized text. It contains up to 24 characters of a confirmed short name or text. It is an empty string if the text is unclear.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Milk powder</para>
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the image is recaptured.</para>
+                /// <para>Indicates whether the image is a recapture.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -103,7 +108,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public bool? IsFake { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the image is suspected to be recaptured.</para>
+                /// <para>Indicates whether the image is suspected to be a recapture.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -128,7 +133,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public int? PhotoStatus { get; set; }
 
                 /// <summary>
-                /// <para>The confidence score for recapture detection.</para>
+                /// <para>The recapture confidence score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.89</para>
@@ -138,7 +143,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public float? Score { get; set; }
 
                 /// <summary>
-                /// <para>The detection type. The value is fixed to <c>boxCode</c>.</para>
+                /// <para>The detection type. Fixed to <c>boxCode</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>boxCode</para>
@@ -150,7 +155,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information. The value is <c>{&quot;ProcessingCount&quot;:1}</c> if the call is successful, or an empty object if the call fails.</para>
+            /// <para>The usage information. It is <c>{&quot;ProcessingCount&quot;:1}</c> if the call is successful, or an empty object if the call fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessingCount&quot;:1}</para>
@@ -162,7 +167,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The returned message or failure description.</para>
+        /// <para>The response message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

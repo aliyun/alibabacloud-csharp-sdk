@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationPlusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task submit status.</para>
+        /// <para>The submission result of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationPlusResponseBodyData Data { get; set; }
         public class ImageTranslationPlusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult operation.</para>
+            /// <para>The ID of the asynchronous task. You can use this ID to poll the result by calling the queryTaskResult operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-abc123</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -59,11 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

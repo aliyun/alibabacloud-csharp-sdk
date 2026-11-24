@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public AiTryOnResponseBodyData Data { get; set; }
         public class AiTryOnResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The height of the result image in pixels.</para>
+            /// <para>The actual height of the generated image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1360</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageHeight { get; set; }
 
             /// <summary>
-            /// <para>The URL of the virtual try-on result image.</para>
+            /// <para>The recognition result of a single image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/virtual-try-on-result.png">https://example.com/virtual-try-on-result.png</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The width of the result image in pixels.</para>
+            /// <para>The actual width of the generated image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>768</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageWidth { get; set; }
 
             /// <summary>
-            /// <para>The usage details.</para>
+            /// <para>The usage field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessedImageCount&quot;:1,&quot;Resolution&quot;:&quot;1K&quot;}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public long? ProcessedImageCount { get; set; }
 
                 /// <summary>
-                /// <para>The resolution of the processed images.</para>
+                /// <para>The image resolution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1K</para>
@@ -111,11 +111,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

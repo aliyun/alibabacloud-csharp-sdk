@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VideoGenerationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of success indicates that the call is successful, and a value of failed indicates that the call fails.</para>
+        /// <para>The response code. This parameter is not returned for successful calls. A value of success indicates a successful call, and a value of failed indicates a failed call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>The metering and usage information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessedVideoDurationSeconds&quot;:10}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -46,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The returned message. An error message is returned when the call fails.</para>
+        /// <para>The return message. This parameter is not returned for successful calls. An error message is returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

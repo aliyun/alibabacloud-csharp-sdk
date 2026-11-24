@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationProResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
+        /// <para>The response code. A value of 200 indicates that the call is successful. For other response codes, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The translation result data. ResultList contains the URLs of the translation results. GenFiles contains EditInfo, which includes the recognized text information.</para>
+        /// <para>The translation result data. ResultList contains the URLs of the translation results, and EditInfo in GenFiles contains the recognized text information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationProResponseBodyData Data { get; set; }
         public class ImageTranslationProResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The editor protocol, which contains translation result files and editing information.</para>
+            /// <para>The editor protocol, including the translation result files and editing information.</para>
             /// </summary>
             [NameInMap("GenFiles")]
             [Validation(Required=false)]
             public List<ImageTranslationProResponseBodyDataGenFiles> GenFiles { get; set; }
             public class ImageTranslationProResponseBodyDataGenFiles : TeaModel {
                 /// <summary>
-                /// <para>The editor information, which contains recognized information such as text areas, product areas, and fonts.</para>
+                /// <para>The editor information, including recognition information such as text areas, product areas, and fonts.</para>
                 /// </summary>
                 [NameInMap("EditInfo")]
                 [Validation(Required=false)]
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public List<string> Font { get; set; }
 
                     /// <summary>
-                    /// <para>The coordinate information of the product bounding box area.</para>
+                    /// <para>The coordinate information of the product bounding box.</para>
                     /// </summary>
                     [NameInMap("GoodsRects")]
                     [Validation(Required=false)]
                     public ImageTranslationProResponseBodyDataGenFilesEditInfoGoodsRects GoodsRects { get; set; }
                     public class ImageTranslationProResponseBodyDataGenFilesEditInfoGoodsRects : TeaModel {
                         /// <summary>
-                        /// <para>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</para>
+                        /// <para>The rotation angle of the text box in degrees. A value of less than 1 indicates a horizontal text box.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public List<string> Languages { get; set; }
 
                     /// <summary>
-                    /// <para>The URL of the image after all text has been inpainted.</para>
+                    /// <para>The URL of the image with all text removed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png</a></para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public List<string> ResultImageIds { get; set; }
 
                     /// <summary>
-                    /// <para>The list of text boxes, which contains information about all recognized text areas.</para>
+                    /// <para>The list of text boxes, including information about all recognized text areas.</para>
                     /// </summary>
                     [NameInMap("TextAreas")]
                     [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The original text before translation.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>萌趣造型·清脆响铃</para>
+                        /// <para>Cute design and crisp bell</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public int? Fontsize { get; set; }
 
                         /// <summary>
-                        /// <para>The horizontal layout mode. Valid values: center, left, right.</para>
+                        /// <para>The horizontal layout. Valid values: center, left, and right.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>left</para>
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public int? LineCount { get; set; }
 
                         /// <summary>
-                        /// <para>The list of translated texts. Each element corresponds to the translation result for a target language.</para>
+                        /// <para>The list of translated texts. Each element corresponds to the translation result in a target language.</para>
                         /// </summary>
                         [NameInMap("Texts")]
                         [Validation(Required=false)]
                         public List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts> Texts { get; set; }
                         public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts : TeaModel {
                             /// <summary>
-                            /// <para>The text color after translation.</para>
+                            /// <para>The color of the translated text.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>#515151</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             public int? Fontsize { get; set; }
 
                             /// <summary>
-                            /// <para>The horizontal layout mode. Valid values: center, left, right.</para>
+                            /// <para>The horizontal layout. Valid values: center, left, and right.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>center</para>
@@ -225,14 +225,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             public string HorizontalLayout { get; set; }
 
                             /// <summary>
-                            /// <para>The coordinates of the image repair area.</para>
+                            /// <para>The coordinates of the image inpainting area.</para>
                             /// </summary>
                             [NameInMap("ImageRect")]
                             [Validation(Required=false)]
                             public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsImageRect ImageRect { get; set; }
                             public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsImageRect : TeaModel {
                                 /// <summary>
-                                /// <para>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</para>
+                                /// <para>The rotation angle of the text box in degrees. A value of less than 1 indicates a horizontal text box.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>0</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             }
 
                             /// <summary>
-                            /// <para>The target language code for translation.</para>
+                            /// <para>The code of the target language for translation.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>en</para>
@@ -304,14 +304,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             public int? LineCount { get; set; }
 
                             /// <summary>
-                            /// <para>The coordinates of the text box area.</para>
+                            /// <para>The coordinates of the text box.</para>
                             /// </summary>
                             [NameInMap("TextRect")]
                             [Validation(Required=false)]
                             public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect TextRect { get; set; }
                             public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect : TeaModel {
                                 /// <summary>
-                                /// <para>The rotation angle of the text box, in degrees. A value less than 1 indicates a horizontal text box.</para>
+                                /// <para>The rotation angle of the text box in degrees. A value of less than 1 indicates a horizontal text box.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>0</para>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             }
 
                             /// <summary>
-                            /// <para>Indicates whether the TextItem is valid. The TextItem is invalid if this value does not exist or is set to false.</para>
+                            /// <para>Indicates whether the text item is valid. If this value does not exist or is set to false, the item is invalid.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>true</para>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             public string Value { get; set; }
 
                             /// <summary>
-                            /// <para>The vertical layout mode. Valid values: center, top, and down.</para>
+                            /// <para>The vertical layout. Valid values: center, top, and down.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>center</para>
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         }
 
                         /// <summary>
-                        /// <para>The vertical layout mode. Valid values: center, top, and down.</para>
+                        /// <para>The vertical layout. Valid values: center, top, and down.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>center</para>
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<ImageTranslationProResponseBodyDataResultList> ResultList { get; set; }
             public class ImageTranslationProResponseBodyDataResultList : TeaModel {
                 /// <summary>
-                /// <para>The URL of the translated result image.</para>
+                /// <para>The URL of the translated image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></para>
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The asynchronous task ID. This parameter is not returned for synchronous calls.</para>
+            /// <para>The ID of the asynchronous task. This parameter is not returned for synchronous calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc123-task-id</para>
@@ -489,7 +489,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The usage information, such as the number of processed images.</para>
+            /// <para>The usage information, including the number of processed images.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -498,7 +501,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. &quot;Success&quot; is returned if the call is successful. A specific error message is returned if the call fails, such as &quot;The content contains sensitive data. Try other input.&quot;</para>
+        /// <para>The error message. &quot;Success&quot; is returned for a normal call. For an abnormal call, a specific error message is returned, such as &quot;The content contains sensitive data. Try another input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -508,7 +511,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61785C32-80C2-19A3-9E55-2C3702C84B40</para>
@@ -518,11 +521,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

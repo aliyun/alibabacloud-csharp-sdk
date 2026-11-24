@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The knowledge base status.</para>
+            /// <para>The status of the knowledge base.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATING-Updating
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string RagId { get; set; }
 
             /// <summary>
-            /// <para>The processing results for each record.</para>
+            /// <para>The processing result of each record.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
             public List<AddDisplayKnowledgeResponseBodyDataResults> Results { get; set; }
             public class AddDisplayKnowledgeResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// <para>The failure error code.</para>
+                /// <para>The error code for the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The failure reason.</para>
+                /// <para>The reason for the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The deviceName format is incorrect.</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The index in the original request array.</para>
+                /// <para>The index of the original request array.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string SkuId { get; set; }
 
                 /// <summary>
-                /// <para>The record status.</para>
+                /// <para>The status of the record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UPDATING-Updating
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the record is accepted.</para>
+                /// <para>Indicates whether the record was accepted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the business processing is successful.</para>
+            /// <para>Indicates whether the business processing was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -191,6 +191,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>The usage information. This parameter is empty for free API operations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -219,7 +222,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

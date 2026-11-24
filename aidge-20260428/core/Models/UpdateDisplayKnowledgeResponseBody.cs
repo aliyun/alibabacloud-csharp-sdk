@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The update result of the display knowledge base content.</para>
+        /// <para>The content modification result of the display knowledge base.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string RagId { get; set; }
 
             /// <summary>
-            /// <para>The processing results for each record.</para>
+            /// <para>The processing result of each record.</para>
             /// </summary>
             [NameInMap("Results")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The cause of the failure.</para>
+                /// <para>The reason for the failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous task ID. This parameter is empty for synchronous API operations.</para>
+            /// <para>The asynchronous task ID. This field is empty for synchronous API operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ed9d8504-6141-9fbb-8345-4fa36433483f</para>
@@ -186,7 +186,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The usage information. This parameter is empty for free API operations.</para>
+            /// <para>The usage information. This field is empty for free API operations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -195,7 +198,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
+        /// <para>The returned message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

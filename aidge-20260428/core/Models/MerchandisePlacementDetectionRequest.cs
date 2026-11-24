@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class MerchandisePlacementDetectionRequest : TeaModel {
         /// <summary>
-        /// <para>Specify this parameter to use a custom API version. If you created a custom API during the trial phase, you can find the corresponding ApiId in the product console under Intelligent Inspection &gt; API Management &gt; My API.</para>
+        /// <para>The ID of the custom API. Pass this parameter if you need to specify a custom version of the API. If you created a custom API during the trial phase, you can query the ApiId of the corresponding feature in the product console by choosing Intelligent Inspection &gt; API Management &gt; My APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api_xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the original shelf or floor stack image to be recognized (accessible over the Internet or through OSS).</para>
+        /// <para>The URL of the original shelf or floor display image to be recognized. The URL must be accessible over the Internet or from OSS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the customer-specific SKU vector library, which determines which library is used for retrieval. The library must be created in advance through the library creation process.</para>
+        /// <para>The ID of the customer-specific SKU vector database, which determines the database used for retrieval. The database must be created through the database creation process in advance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rag_xxx</para>
@@ -41,20 +41,20 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RagId { get; set; }
 
         /// <summary>
-        /// <para>The custom rule. Enter a detection prompt as the workflow input parameter rule. When this parameter is specified, the type parameter is not required (a dedicated rule branch is used). If Rule is empty, you must specify Type to start detection.</para>
+        /// <para>The custom rule. You can enter a detection prompt, which is passed as the <c>rule</c> input parameter to the workflow. If this parameter is specified, the <c>type</c> parameter is not required and the independent rule branch is used. If this parameter is left empty, you must specify the <c>type</c> parameter to start detection.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Please identify all visible beverage products in the image and return only a JSON array. Output format example: [{&quot;bbox_2d&quot;:[100,200,250,600],&quot;sku_name&quot;:&quot;Coca-Cola&quot;}]</para>
+        /// <para>Identify all visible beverage products in the image and return only a JSON array. Output format example: [{&quot;bbox_2d&quot;:[100,200,250,600],&quot;sku_name&quot;:&quot;Coca-Cola&quot;}]</para>
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The business type (reserved for future routing by business line). The current release supports skincare &amp; lotion.</para>
+        /// <para>The business type. This parameter is reserved for future routing based on business lines. Currently, only skincare products are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>水乳</para>
+        /// <para>Skincare</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

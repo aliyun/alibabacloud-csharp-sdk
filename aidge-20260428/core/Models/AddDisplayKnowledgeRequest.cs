@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<AddDisplayKnowledgeRequestRecords> Records { get; set; }
         public class AddDisplayKnowledgeRequestRecords : TeaModel {
             /// <summary>
-            /// <para>The HTTP(S) URL of the product image.</para>
+            /// <para>The HTTP or HTTPS URL of the product image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx/img_1784599244373_9c2309a0.jpg">https://xxxx/img_1784599244373_9c2309a0.jpg</a></para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The SKU ID. If this parameter is left empty, the platform generates the ID.</para>
+            /// <para>The SKU ID. If this parameter is left empty, the platform generates an ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sku-001</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The SKU name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Product front image</para>
+            /// <para>Front image of the product</para>
             /// </summary>
             [NameInMap("SkuName")]
             [Validation(Required=false)]

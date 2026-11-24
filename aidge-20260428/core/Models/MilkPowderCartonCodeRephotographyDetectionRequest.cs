@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class MilkPowderCartonCodeRephotographyDetectionRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTP(S) URL of the image to be analyzed.</para>
+        /// <para>The HTTP or HTTPS URL of the image to be analyzed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

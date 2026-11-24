@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRecognitionAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID of the caller. It is recorded upon acceptance and returned as is when you query the result of the asynchronous task.</para>
+        /// <para>The business order number of the caller. It is recorded upon acceptance and returned as is when querying the asynchronous task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>order-20260928-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The image URL. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size cannot exceed 10 MB.</para>
+        /// <para>The URL of the image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels, and the file size must not exceed 10 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,40 +31,27 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The types of elements to detect outside the image subject. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: watermark</description></item>
-        /// <item><description>2: logo</description></item>
-        /// <item><description>3: text</description></item>
-        /// <item><description>4: text-containing color block
-        /// You can specify multiple values. This parameter and ObjectDetectElements cannot be empty at the same time.</description></item>
-        /// </list>
+        /// <para>Specifies the types of elements to detect outside the image subject. Valid values: 1: Watermark. 2: Logo. 3: Text. 4: Text-containing color block. You can specify multiple values. This parameter and ObjectDetectElements cannot be empty at the same time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[1,2,3,4]</para>
         /// </summary>
         [NameInMap("NonObjectDetectElements")]
         [Validation(Required=false)]
         public List<int?> NonObjectDetectElements { get; set; }
 
         /// <summary>
-        /// <para>The types of elements to detect on the image subject. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: watermark</description></item>
-        /// <item><description>2: logo</description></item>
-        /// <item><description>3: text</description></item>
-        /// <item><description>4: text-containing color block
-        /// You can specify multiple values.</description></item>
-        /// </list>
+        /// <para>Specifies the types of elements to detect on the image subject. Valid values: 1: Watermark. 2: Logo. 3: Text. 4: Text-containing color block. You can specify multiple values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[1,2,3,4]</para>
         /// </summary>
         [NameInMap("ObjectDetectElements")]
         [Validation(Required=false)]
         public List<int?> ObjectDetectElements { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the marginalization distance of the subject. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: yes</description></item>
-        /// <item><description>0: no
-        /// Default value: 0.</description></item>
-        /// </list>
+        /// <para>Specifies whether to return the marginalization distance of the subject. Valid values: 1: Yes. 0: No. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,12 +61,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnBorderPixel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the OCR result of the text in the recognized area. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: yes</description></item>
-        /// <item><description>0: no
-        /// Default value: 0.</description></item>
-        /// </list>
+        /// <para>Specifies whether to return the OCR results of the text in the recognized area. Valid values: 1: Yes. 0: No. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,17 +71,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnCharacter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the text proportion. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: yes</description></item>
-        /// <item><description>0: no
-        /// Default value: 0.
-        /// This parameter takes effect only when the following two conditions are met:</description></item>
-        /// </list>
-        /// <ol>
-        /// <item><description>ReturnCharacter is set to 1.</description></item>
-        /// <item><description>ObjectDetectElements or NonObjectDetectElements is set to 3, which means text needs to be recognized.</description></item>
-        /// </ol>
+        /// <para>Specifies whether to return the text proportion. Valid values: 1: Yes. 0: No. Default value: 0. This parameter takes effect only when the following two conditions are met: 1. ReturnCharacter is set to 1. 2. ObjectDetectElements or NonObjectDetectElements is set to 3, which means text recognition is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,12 +81,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnCharacterProp { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the number of subjects. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: yes</description></item>
-        /// <item><description>0: no
-        /// Default value: 0.</description></item>
-        /// </list>
+        /// <para>Specifies whether to return the number of subjects. Valid values: 1: Yes. 0: No. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -124,12 +91,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? ReturnProductNum { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the area proportion of the subject. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: yes</description></item>
-        /// <item><description>0: no
-        /// Default value: 0.</description></item>
-        /// </list>
+        /// <para>Specifies whether to return the area proportion of the subject. Valid values: 1: Yes. 0: No. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

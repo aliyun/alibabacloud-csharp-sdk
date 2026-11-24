@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRemovalProAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The business order ID of the caller. This ID is recorded when the request is accepted and returned as-is when you query the asynchronous task result.</para>
+        /// <para>The business order ID of the caller. It is recorded upon acceptance and returned as is when querying the asynchronous task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>order-20260928-001</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the original image. The image must be in the JPG, JPEG, PNG, BMP, or WEBP format.
-        /// · Resolution: 256×256 to 3000×3000. File size: ≤ 10 MB.</para>
+        /// <para>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256×256 and 3000×3000, and the file size must be less than or equal to 10 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

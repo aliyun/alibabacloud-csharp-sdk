@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The detection result of product display detection Pro.</para>
+        /// <para>The detection results of the Pro edition.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? BoxCount { get; set; }
 
             /// <summary>
-            /// <para>The list of per-box detection details.</para>
+            /// <para>The list of detection details for each bounding box.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<MerchandisePlacementDetectionProResponseBodyDataData> Data { get; set; }
             public class MerchandisePlacementDetectionProResponseBodyDataData : TeaModel {
                 /// <summary>
-                /// <para>The normalized bounding box coordinates [x1,y1,x2,y2], with values in the range 0–1000.</para>
+                /// <para>The normalized bounding box coordinates in the [x1,y1,x2,y2] format. Valid values: 0 to 1000.</para>
                 /// </summary>
                 [NameInMap("Bbox2d")]
                 [Validation(Required=false)]
                 public List<int?> Bbox2d { get; set; }
 
                 /// <summary>
-                /// <para>The detected product name. The value is unknown if the name cannot be determined.</para>
+                /// <para>The recognized product name. If the name cannot be determined, the value is unknown.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>unknown</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string DetectedSkuName { get; set; }
 
                 /// <summary>
-                /// <para>The bounding box index, starting from 1.</para>
+                /// <para>The index of the bounding box, starting from 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
+        /// <para>The return message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

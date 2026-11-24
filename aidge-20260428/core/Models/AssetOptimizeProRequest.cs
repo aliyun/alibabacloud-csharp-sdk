@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class AssetOptimizeProRequest : TeaModel {
         /// <summary>
-        /// <para>The list of column names to recognize in size chart images. Optional.</para>
+        /// <para>The list of column names to be recognized in the size chart. Optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;Bust&quot;,&quot;Waist&quot;,&quot;Hip&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<string> ColumnNameList { get; set; }
 
         /// <summary>
-        /// <para>The glossary ID. Optional. Create a glossary in the console and provide its ID. If left empty, translation results are not modified by any glossary.</para>
+        /// <para>The ID of the intervention glossary. Optional. You must create the glossary in the console and provide its ID. If this parameter is left empty, the translation results are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate text on the product subject area of images. Setting this to false helps protect embedded information such as product names from being translated. Default value: false.</para>
+        /// <para>Specifies whether to translate the text on the main subject of the image. This helps protect embedded information such as product names from being translated. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IncludingProductArea { get; set; }
 
         /// <summary>
-        /// <para>The output language format for size chart images. If not specified, the original format is used. Set to en for English output or cn for Chinese output.</para>
+        /// <para>The output language format for the size chart. If this parameter is left empty, the original language is used. Set this parameter to en for English output or cn for Chinese output.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string LanguageModel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether translation is required (true/false). If set to true, SourceLanguage and TargetLanguage are required.</para>
+        /// <para>Specifies whether translation is required. Valid values: true and false. If this parameter is set to true, SourceLanguage and TargetLanguage are required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? NeedTrans { get; set; }
 
         /// <summary>
-        /// <para>The product URL. This parameter is required. Only 1688 product links are supported.</para>
+        /// <para>The product URL. Required. Only 1688 product links are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ProductUrl { get; set; }
 
         /// <summary>
-        /// <para>The source language code. Optional. For supported language pairs, refer to the supported translation language list. This parameter is required if NeedTrans is set to true.</para>
+        /// <para>The source language code. Optional. For supported language pairs, refer to the list of supported translation language pairs. Required if NeedTrans is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourcePlatform { get; set; }
 
         /// <summary>
-        /// <para>The target language code. Optional. For supported language pairs, refer to the supported translation language list. This parameter is required if NeedTrans is set to true.</para>
+        /// <para>The target language code. Optional. For supported language pairs, refer to the list of supported translation language pairs. Required if NeedTrans is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The target listing platform. Only temu is supported.</para>
+        /// <para>The target platform for listing. Only TEMU is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetPlatform { get; set; }
 
         /// <summary>
-        /// <para>The confidence threshold for size chart detection. Default value: 0.4. A value of 0 treats all images as size charts. A value of 1 treats no images as size charts.</para>
+        /// <para>The confidence threshold for size chart detection. Default value: 0.4. If this parameter is set to 0, all images are considered size charts. If this parameter is set to 1, no images are considered size charts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.4</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public double? Threshold { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate brand names on images. Optional. Default value: false. Setting this to false helps protect brand name information from being translated.</para>
+        /// <para>Specifies whether to translate the brand name in the image. Optional. Default value: false. This helps protect brand name information from being translated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class SizeChartDetectRequest : TeaModel {
         /// <summary>
-        /// <para>The URL of the image to detect.</para>
+        /// <para>The URL of the image to be detected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

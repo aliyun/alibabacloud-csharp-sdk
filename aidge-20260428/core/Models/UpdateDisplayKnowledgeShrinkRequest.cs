@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RagId { get; set; }
 
         /// <summary>
-        /// <para>The records to update. A maximum of 500 records can be specified.</para>
+        /// <para>The records to be modified. A maximum of 500 records can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Records")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VisionFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The value &quot;success&quot; is returned for a successful call.</para>
+        /// <para>The status code. If the call is successful, success is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task submit status data, which contains the asynchronous task ID.</para>
+        /// <para>The submission result of the asynchronous task, which includes the asynchronous task ID.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VisionFlowResponseBodyData Data { get; set; }
         public class VisionFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID, used to query processing results later through QueryAsyncTaskResult.</para>
+            /// <para>The ID of the asynchronous task. You can use this ID to call QueryAsyncTaskResult to query the processing result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e4c48e88-3c34-91e3-ab8a-08484dc4d402</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. The value &quot;Success&quot; is returned for a successful call.</para>
+        /// <para>The error message. If the call is successful, Success is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used to uniquely identify a single request.</para>
+        /// <para>The ID of the request. It is used to identify a unique request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F3E65785-0180-1227-91B0-2F5F52F679FB</para>

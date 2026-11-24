@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class GeneralRephotographyDetectionRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTPS URL of the original image to recognize. The URL must be accessible and must not contain whitespace or URL-embedded usernames or passwords.</para>
+        /// <para>The HTTPS URL of the original image to be recognized. The URL must be accessible and cannot contain spaces or URL usernames and passwords.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

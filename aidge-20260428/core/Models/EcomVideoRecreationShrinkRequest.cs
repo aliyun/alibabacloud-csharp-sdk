@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>The output specifications for the generated video.</para>
+        /// <para>The output specifications for the final video.</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]

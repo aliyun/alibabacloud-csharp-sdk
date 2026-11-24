@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submit status of the asynchronous task.</para>
+        /// <para>The submission result of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DiduiAreaDeductionProResponseBodyData Data { get; set; }
         public class DiduiAreaDeductionProResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the asynchronous task, which is used to call QueryAsyncTaskResult to query the task result.</para>
+            /// <para>The ID of the asynchronous task used for querying with QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task_778xxxxxxxxxxx</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
+        /// <para>The returned message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Task submitted</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

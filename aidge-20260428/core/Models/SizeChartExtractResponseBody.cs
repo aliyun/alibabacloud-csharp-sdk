@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class SizeChartExtractResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The size chart extraction result.</para>
+        /// <para>The size chart extraction results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SizeChartExtractResponseBodyData Data { get; set; }
         public class SizeChartExtractResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID, which is used to query the result later.</para>
+            /// <para>The ID of the asynchronous task. You can use this ID to query the task results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-xxxxx</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

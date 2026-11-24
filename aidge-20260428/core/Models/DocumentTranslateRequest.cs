@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class DocumentTranslateRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the document. Valid values: PDF and word.<br>Supported capacity limits:  </para>
-        /// <list type="bullet">
-        /// <item><description>Word: 200 MB or 100 pages </description></item>
-        /// <item><description>PDF: 200 MB or 100 pages  </description></item>
-        /// <item><description>Maximum size per file: 200 MB</description></item>
-        /// </list>
+        /// <para>Supports PDF, WORD, and EXCEL formats. Use uppercase letters for the input parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,7 +21,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The glossary ID. Specify this parameter when you need the glossary feature. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection and similar scenarios.</para>
+        /// <para>● Specify the intervention glossary ID when the intervention feature is required.<br>● Supports custom translation results, including:<br>○ Do-not-translate (ABC-ABC).<br>○ Specified translation (ABC-DEF).<br>○ Translation omission (ABC-null).
+        /// Commonly used in scenarios such as brand word protection.<br>Example value: &quot;glossary_1&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -36,7 +32,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>The target language. The language code uses the two-letter ISO 639-1 standard.</para>
+        /// <para>The target language.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,11 +43,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The OSS URL of the document to be translated.</para>
+        /// <para>The OSS URL path of the document to be translated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&OSSAccessKeyId=LTAI5tE8X3gEy66SRU1V8dig&Signature=8niQY2HtMQY7h05zmSUdyORML9E%3D">https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&amp;OSSAccessKeyId=LTAI5tE8X3gEy66SRU1V8dig&amp;Signature=8niQY2HtMQY7h05zmSUdyORML9E%3D</a></para>
+        /// <para><a href="https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&OSSAccessKeyId=LTAI5tE8X3****6SRU1V8dig&Signature=8niQY2HtMQY7h****SUdyORML9E%3D">https://aib-innovation-oss.oss-accelerate.aliyuncs.com/AI_Business/38dao/testdemo.pdf?Expires=3356578313&amp;OSSAccessKeyId=LTAI5tE8X3****6SRU1V8dig&amp;Signature=8niQY2HtMQY7h****SUdyORML9E%3D</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

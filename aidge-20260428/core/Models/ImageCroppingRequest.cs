@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageCroppingRequest : TeaModel {
         /// <summary>
-        /// <para>The URL of the image to process.</para>
+        /// <para>The URL of the image to be processed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

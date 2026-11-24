@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class MerchandisePlacementDetectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned for successful calls.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The display detection result.</para>
+        /// <para>The display detection results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MerchandisePlacementDetectionResponseBodyData Data { get; set; }
         public class MerchandisePlacementDetectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of valid detection boxes.</para>
+            /// <para>The number of valid bounding boxes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -37,31 +37,31 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? BoxCount { get; set; }
 
             /// <summary>
-            /// <para>The list of retrieval details for each detection box.</para>
+            /// <para>The list of retrieval details for each bounding box.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<MerchandisePlacementDetectionResponseBodyDataData> Data { get; set; }
             public class MerchandisePlacementDetectionResponseBodyDataData : TeaModel {
                 /// <summary>
-                /// <para>The detection box position coordinates in the format [x1,y1,x2,y2].</para>
+                /// <para>The coordinates of the bounding box in the [x1,y1,x2,y2] format.</para>
                 /// </summary>
                 [NameInMap("Bbox")]
                 [Validation(Required=false)]
                 public List<float?> Bbox { get; set; }
 
                 /// <summary>
-                /// <para>The failure reason for a single detection box. The value is null if the detection is successful.</para>
+                /// <para>The reason why the bounding box processing failed. This parameter is null if the processing is successful.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;embedding failed&quot;</para>
+                /// <para>Embedding failed</para>
                 /// </summary>
                 [NameInMap("Error")]
                 [Validation(Required=false)]
                 public string Error { get; set; }
 
                 /// <summary>
-                /// <para>The index of the detection box.</para>
+                /// <para>The index of the bounding box.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public int? Idx { get; set; }
 
                 /// <summary>
-                /// <para>The top-1 recalled product for the detection box.</para>
+                /// <para>The top-1 retrieved product for the bounding box.</para>
                 /// </summary>
                 [NameInMap("Top1")]
                 [Validation(Required=false)]
                 public MerchandisePlacementDetectionResponseBodyDataDataTop1 Top1 { get; set; }
                 public class MerchandisePlacementDetectionResponseBodyDataDataTop1 : TeaModel {
                     /// <summary>
-                    /// <para>The similarity score, ranging from 0 to 1.</para>
+                    /// <para>The similarity score, which ranges from 0 to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.53</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public float? Score { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the recalled product.</para>
+                    /// <para>The ID of the retrieved product.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string SkuId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the recalled product.</para>
+                    /// <para>The name of the retrieved product.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>光明牛奶500ml</para>
+                    /// <para>Bright Dairy Milk 500ml</para>
                     /// </summary>
                     [NameInMap("SkuName")]
                     [Validation(Required=false)]
@@ -110,14 +110,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>The list of top-K recalled products for the detection box.</para>
+                /// <para>The list of top-K retrieved products for the bounding box.</para>
                 /// </summary>
                 [NameInMap("Topk")]
                 [Validation(Required=false)]
                 public List<MerchandisePlacementDetectionResponseBodyDataDataTopk> Topk { get; set; }
                 public class MerchandisePlacementDetectionResponseBodyDataDataTopk : TeaModel {
                     /// <summary>
-                    /// <para>The recall rank.</para>
+                    /// <para>The retrieval rank.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public int? Rank { get; set; }
 
                     /// <summary>
-                    /// <para>The similarity score, ranging from 0 to 1.</para>
+                    /// <para>The similarity score, which ranges from 0 to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.82</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public float? Score { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the recalled product.</para>
+                    /// <para>The ID of the retrieved product.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -147,10 +147,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string SkuId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the recalled product.</para>
+                    /// <para>The name of the retrieved product.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>光明牛奶500ml</para>
+                    /// <para>Bright Dairy Milk 500ml</para>
                     /// </summary>
                     [NameInMap("SkuName")]
                     [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information, where the key is the usage name and the value is the count.</para>
+            /// <para>The usage information. The key is the usage metric name and the value is the count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessingCount&quot;:1}</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned for successful calls.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

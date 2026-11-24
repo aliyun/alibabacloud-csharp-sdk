@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class DiduiAreaDeductionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of products and their detection boxes.</para>
+        /// <para>The list of products and bounding boxes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Products")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ProductsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the customer-specific SKU vector database that determines which database is used for recall. The database must be created in advance through the database creation process.</para>
+        /// <para>The ID of the customer-specific SKU vector database, which determines the database used for retrieval. The database must be created through the database creation process in advance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rag_xxx</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RagId { get; set; }
 
         /// <summary>
-        /// <para>The optional business request ID used for Tracing Analysis.</para>
+        /// <para>The optional business request ID, which is used for Tracing Analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>didui-request-001</para>

@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public List<MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGroundingRegions> Regions { get; set; }
                     public class MilkPowderCanBottomCodeRephotographyDetectionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
-                        /// <para>The bounding box coordinates in the format of <c>[top-left x, top-left y, bottom-right x, bottom-right y]</c>. Valid values: 0 to 1000. The left value must be less than the right value, and the top value must be less than the bottom value.</para>
+                        /// <para>The bounding box coordinates in the format of <c>[top-left x, top-left y, bottom-right x, bottom-right y]</c>. The values range from 0 to 1000. The left coordinate is less than the right coordinate, and the top coordinate is less than the bottom coordinate.</para>
                         /// </summary>
                         [NameInMap("Bbox2d")]
                         [Validation(Required=false)]
                         public List<float?> Bbox2d { get; set; }
 
                         /// <summary>
-                        /// <para>The target category. For valid values, see the following table.</para>
+                        /// <para>The target category. For enumerations, see the following table.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>milk_powder</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether the image is recaptured.</para>
+                /// <para>Indicates whether the image is a recapture.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public bool? IsFake { get; set; }
 
                 /// <summary>
-                /// <para>The detection type. The value is fixed to canBottom.</para>
+                /// <para>The detection type. Fixed to canBottom.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>canBottom</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information. If the call is successful, the value is <c>{&quot;ProcessingCount&quot;:1}</c>. If the call fails, an empty object is returned.</para>
+            /// <para>The usage information. If the call is successful, the value is <c>{&quot;ProcessingCount&quot;:1}</c>. If the call fails, the value is an empty object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessingCount&quot;:1}</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
+        /// <para>The return message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the call is successful. A valid business conclusion does not mean that the review is passed.</para>
+        /// <para>Indicates whether the call is successful. A valid business conclusion does not mean the review is passed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,38 +10,38 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class CategoryMatchRequest : TeaModel {
         /// <summary>
-        /// <para>The product description.</para>
+        /// <para>The product details.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Silk, Spring New Arrival</para>
+        /// <para>Silk, spring new arrival</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The product attributes that describe the characteristics of the product, such as material. Provide the attribute names and values.</para>
+        /// <para>The product attributes and feature descriptions, such as the product material. Specify the attribute names and values.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Material:Polyester,Target Audience:General,Brand:AMASON PET</para>
+        /// <para>Material:Polyester,Target audience:Universal,Brand:AMASON PET</para>
         /// </summary>
         [NameInMap("ItemSpec")]
         [Validation(Required=false)]
         public string ItemSpec { get; set; }
 
         /// <summary>
-        /// <para>The SKU title of the product.</para>
+        /// <para>The product SKU title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0:0:Color:Black(without locator);0:1:Color:Smart Locator(without collar);0:2:Color:Range Locator(without collar);0:3:Color:Blue(without locator);0:4:Color:Orange(without locator);0:5:Color:Pink(without locator);0:6:Color:Red(without locator);0:7:Color:Yellow(without locator);0:8:Color:Purple(without locator)</para>
+        /// <para>0:0:Color:Black (without tracker);0:1:Color:Smart tracking (without collar);0:2:Color:Range tracking (without collar);0:3:Color:Blue (without tracker);0:4:Color:Orange (without tracker);0:5:Color:Pink (without tracker);0:6:Color:Red (without tracker);0:7:Color:Yellow (without tracker);0:8:Color:Purple (without tracker)</para>
         /// </summary>
         [NameInMap("Sku")]
         [Validation(Required=false)]
         public string Sku { get; set; }
 
         /// <summary>
-        /// <para>The product category on the source platform.</para>
+        /// <para>The product category.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceCategory { get; set; }
 
         /// <summary>
-        /// <para>The source platform from which products are sourced.</para>
+        /// <para>The source platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourcePlatform { get; set; }
 
         /// <summary>
-        /// <para>The target listing platform. Currently, only temu is supported.</para>
+        /// <para>The target platform. Currently, only TEMU is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Women\&quot;s Spring New Arrival Clothing</para>
+        /// <para>Women\&quot;s spring new arrival clothing</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

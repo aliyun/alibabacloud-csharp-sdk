@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The knowledge base status.</para>
+            /// <para>The status of the knowledge base.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE - Available</para>
@@ -94,20 +94,20 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<QueryDisplayKnowledgeResponseBodyDataRecords> Records { get; set; }
             public class QueryDisplayKnowledgeResponseBodyDataRecords : TeaModel {
                 /// <summary>
-                /// <para>The description of the failure cause. This parameter is returned only when the status is FAILED.</para>
+                /// <para>The failure reason description. This parameter is returned only when the status is FAILED.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Image is inaccessible</para>
+                /// <para>Image not accessible</para>
                 /// </summary>
                 [NameInMap("FailureMessage")]
                 [Validation(Required=false)]
                 public string FailureMessage { get; set; }
 
                 /// <summary>
-                /// <para>The code of the failure cause. This parameter is returned only when the status is FAILED.</para>
+                /// <para>The failure reason code. This parameter is returned only when the status is FAILED.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Image is inaccessible</para>
+                /// <para>Image not accessible</para>
                 /// </summary>
                 [NameInMap("FailureReason")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The 24-hour signed URL of the transferred image.</para>
+                /// <para>The signed URL of the transferred image, valid for 24 hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxx/2190149752-0-cib.jpg">https://xxx/2190149752-0-cib.jpg</a></para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the business processing is successful.</para>
+            /// <para>Indicates whether the business processing was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -229,6 +229,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>The usage information. This parameter is empty for free API operations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessingCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -257,7 +260,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

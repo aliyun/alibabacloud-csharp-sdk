@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public MerchandisePlacementDetectionLiteResponseBodyDataResult Result { get; set; }
             public class MerchandisePlacementDetectionLiteResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The supplementary element grounding results.</para>
+                /// <para>The supplementary element grounding result.</para>
                 /// </summary>
                 [NameInMap("Grounding")]
                 [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     /// <list type="bullet">
                     /// <item><description>complete: The relevant visible targets are complete.</description></item>
                     /// <item><description>partial: Only some targets are valid or recognizable.</description></item>
-                    /// <item><description>Empty string: No valid supplementary grounding results are obtained.</description></item>
+                    /// <item><description>Empty string: No valid supplementary grounding result is obtained.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string Coverage { get; set; }
 
                     /// <summary>
-                    /// <para>The target array, which contains up to 12 items. This array can be empty when no relevant targets are found.</para>
+                    /// <para>The target array, which contains up to 12 items. This array can be empty when no relevant targets exist.</para>
                     /// </summary>
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The confirmable short name or text of up to 24 characters. This field is an empty string when the text is unclear.</para>
+                        /// <para>The confirmable short name or text of up to 24 characters. This is an empty string when the text is unclear.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5.50</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The right coordinate.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>(\&quot;874\&quot;)</para>
+                        /// <para>874</para>
                         /// </summary>
                         [NameInMap("Right")]
                         [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<string> SkuIds { get; set; }
 
                 /// <summary>
-                /// <para>The result type, which is fixed to sku.</para>
+                /// <para>The type, which is fixed to sku.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sku</para>
@@ -181,7 +181,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage map. The value is {&quot;ProcessingCount&quot;:1} for a successful call, and an empty object for a failed call.</para>
+            /// <para>The usage map. The value is {&quot;ProcessingCount&quot;:1} if the call is successful, or an empty object if the call fails.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessingCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -190,7 +193,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The response message or failure description.</para>
+        /// <para>The return message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

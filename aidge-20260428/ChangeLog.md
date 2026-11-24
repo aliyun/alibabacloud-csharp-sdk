@@ -1,3 +1,18 @@
+2026-11-24 Version: 6.0.0
+- Support API GenerateProductContent.
+- Support API ImageUpscale.
+- Support API ProductVideoGeneration.
+- Support API RealtimeSpeechTranslation.
+- Support API VacancyDetection.
+- Update API AiTryOn: add request parameters Mode.
+- Update API AiTryOn: add request parameters ModelTemplateUrl.
+- Update API AiTryOn: add request parameters PoseTemplateUrl.
+- Update API AiTryOn: add request parameters Ratio.
+- Update API AiTryOn: add request parameters TryonType.
+- Update API GeneralRephotographyDetection: delete response parameters Body.Data.Result.Grounding.
+- Update API ImageMatting: add response parameters Body.Data.StructData.
+
+
 2026-10-21 Version: 5.10.4
 - Generated csharp 2026-04-28 for Aidge.
 

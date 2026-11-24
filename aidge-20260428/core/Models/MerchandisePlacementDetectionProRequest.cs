@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class MerchandisePlacementDetectionProRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTPS URL of the display image to detect.</para>
+        /// <para>The HTTPS URL of the display image to be detected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,20 +21,20 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The detection rule. When non-empty, this value takes priority as the model prompt.</para>
+        /// <para>The detection rule. If this parameter is not empty, it takes precedence as the model prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Identify all Genki Forest beverages on the shelf and mark their positions</para>
+        /// <para>Recognize all Genki Forest beverages on the shelf and draw bounding boxes around their positions</para>
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The product type. This parameter must be set to Genki Forest when Rule is empty.</para>
+        /// <para>The product type. If the Rule parameter is empty, you must set this parameter to Genki Forest.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>元气森林</para>
+        /// <para>Genki Forest</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<VideoGenerationRequestInputAssetBindings> AssetBindings { get; set; }
             public class VideoGenerationRequestInputAssetBindings : TeaModel {
                 /// <summary>
-                /// <para>The asset index, such as 0, 1, 2, or 3, which must be consistent with the number of the image URL.</para>
+                /// <para>The asset index, such as 0, 1, 2, or 3, which must be consistent with the index of the image URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -37,32 +37,33 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 /// <summary>
                 /// <para>The description of the image. Examples:   </para>
                 /// <ol>
-                /// <item><description>Description for look_reference: Front full-body outfit reference image of the person.   </description></item>
-                /// <item><description>Description for scene_reference: Specified clothing display scene.   </description></item>
-                /// <item><description>Description for garment_reference:<br>● Front of the top;<br>● Back of the bottom;<br>● Side of the shoes.</description></item>
+                /// <item><description>Description for look_reference: front full-body try-on reference image of the person.   </description></item>
+                /// <item><description>Description for scene_reference: specified apparel showcase scene.   </description></item>
+                /// <item><description>Description for garment_reference:</description></item>
                 /// </ol>
+                /// <list type="bullet">
+                /// <item><description>Front view of the top.   </description></item>
+                /// <item><description>Back view of the bottom.   </description></item>
+                /// <item><description>Side view of the shoes.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para>Front full-body try-on reference image of the person</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Specifies the asset usage. Valid values:   </para>
+                /// <para>The asset slot. Select one of the following three values: look_reference, scene_reference, or garment_reference.<br>Description:   </para>
                 /// <list type="bullet">
-                /// <item><description>look_reference: Corresponds to the full outfit effect image of the person wearing the clothes (overall visual).   </description></item>
-                /// <item><description>scene_reference: Corresponds to the scene reference image (usually the cover main image).   </description></item>
-                /// <item><description>garment_reference: Corresponds to all product detail images (including front, back, and side of clothes, shoes, skirts, and other partial close-ups).</description></item>
+                /// <item><description>look_reference: corresponds to the full-body try-on effect image of the person (overall visual).   </description></item>
+                /// <item><description>scene_reference: corresponds to the scene reference image (usually the cover main image).   </description></item>
+                /// <item><description>garment_reference: corresponds to all product detail images (including front, back, and side views of clothes, shoes, skirts, and other partial close-ups).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para>look_reference</para>
                 /// </summary>
                 [NameInMap("Slot")]
                 [Validation(Required=false)]
@@ -72,6 +73,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>The extended information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public VideoGenerationRequestIntent Intent { get; set; }
         public class VideoGenerationRequestIntent : TeaModel {
             /// <summary>
-            /// <para>The delivery channel.</para>
+            /// <para>The placement channel.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -118,14 +122,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>Specifies the business goal. Valid values:</para>
+            /// <para>The business goal. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>camera_motion: Camera movement mode. Generates videos based on a fixed 360-degree camera movement logic.</para>
-            /// </description></item>
-            /// <item><description><para>scripted_video: Scripted mode. Provides a script or prompt, and the system generates the video according to the script.</para>
-            /// </description></item>
-            /// <item><description><para>auto_video: Unscripted mode. Does not provide a script, and the system automatically plans the script and generates the video.</para>
-            /// </description></item>
+            /// <item><description>camera_motion: camera movement mode. Generates the video based on a fixed 360° camera movement logic.</description></item>
+            /// <item><description>scripted_video: scripted mode. Generates the video based on the provided script or prompt.</description></item>
+            /// <item><description>auto_video: scriptless mode. Automatically plans the script and generates the video without a provided script.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,7 +168,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public VideoGenerationRequestOutput Output { get; set; }
         public class VideoGenerationRequestOutput : TeaModel {
             /// <summary>
-            /// <para>The video duration varies by Intent.goal: auto_video supports 5 to 15 seconds, scripted_video supports 5 to 30 seconds, and camera_motion generates a fixed 10-second video and returns two 5-second videos.</para>
+            /// <para>The video duration, which varies based on Intent.goal: auto_video supports 5 to 15 seconds, scripted_video supports 5 to 30 seconds, and camera_motion generates a fixed 10-second video and returns two 5-second videos.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -189,7 +190,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Quality { get; set; }
 
             /// <summary>
-            /// <para>The aspect ratio varies by Intent.goal: auto_video and scripted_video only support 9:16, and camera_motion only supports 3:4.</para>
+            /// <para>The aspect ratio, which varies based on Intent.goal: auto_video and scripted_video only support 9:16, and camera_motion only supports 3:4.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9:16</para>

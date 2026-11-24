@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class SubmitProductMatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submit result of the matching product identification asynchronous task.</para>
+        /// <para>The submission result of the asynchronous task for identical product recognition.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitProductMatchResponseBodyData Data { get; set; }
         public class SubmitProductMatchResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task acceptance time in ISO 8601 UTC format.</para>
+            /// <para>The time when the task was accepted, in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-20T09:30:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string SubmittedAt { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous task ID used for QueryAsyncTaskResult queries.</para>
+            /// <para>The asynchronous task ID used to query the task result by calling QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b7ea15cb609f47b7999d2d68dfbf3c90</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -69,11 +69,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call was successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

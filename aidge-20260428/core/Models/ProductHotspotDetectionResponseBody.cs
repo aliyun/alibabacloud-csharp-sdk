@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The product hotzone recognition result.</para>
+        /// <para>The product hot zone recognition results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ProductHotspotDetectionResponseBodyData Data { get; set; }
         public class ProductHotspotDetectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of detected products and their bounding boxes.</para>
+            /// <para>The list of recognized products and detection boxes.</para>
             /// </summary>
             [NameInMap("Products")]
             [Validation(Required=false)]
             public List<ProductHotspotDetectionResponseBodyDataProducts> Products { get; set; }
             public class ProductHotspotDetectionResponseBodyDataProducts : TeaModel {
                 /// <summary>
-                /// <para>The bounding boxes of the detected product instances.</para>
+                /// <para>The detection boxes for product instances.</para>
                 /// </summary>
                 [NameInMap("Boxes")]
                 [Validation(Required=false)]
                 public List<ProductHotspotDetectionResponseBodyDataProductsBoxes> Boxes { get; set; }
                 public class ProductHotspotDetectionResponseBodyDataProductsBoxes : TeaModel {
                     /// <summary>
-                    /// <para>The bottom boundary of the bounding box.</para>
+                    /// <para>The bottom boundary of the detection box.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>947</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public double? Bottom { get; set; }
 
                     /// <summary>
-                    /// <para>The left boundary of the bounding box.</para>
+                    /// <para>The left boundary of the detection box.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>280</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public double? Left { get; set; }
 
                     /// <summary>
-                    /// <para>The right boundary of the bounding box.</para>
+                    /// <para>The right boundary of the detection box.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>743</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public double? Right { get; set; }
 
                     /// <summary>
-                    /// <para>The top boundary of the bounding box.</para>
+                    /// <para>The top boundary of the detection box.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>965</para>

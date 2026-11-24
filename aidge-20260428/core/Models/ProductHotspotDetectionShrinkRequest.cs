@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ProductHotspotDetectionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTPS URLs of reference images that define the SKU whitelist. A maximum of 20 images are supported.</para>
+        /// <para>The HTTPS URLs of the reference images that define the SKU whitelist. A maximum of 20 images are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReferenceImageUrls")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ReferenceImageUrlsShrink { get; set; }
 
         /// <summary>
-        /// <para>The unique business ID for this single-scene call.</para>
+        /// <para>The unique business ID for the single-scene call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hotspot-request-001</para>

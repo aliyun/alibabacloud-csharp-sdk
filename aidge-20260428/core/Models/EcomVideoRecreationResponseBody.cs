@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the submission is successful.</para>
+        /// <para>Indicates whether the submission was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

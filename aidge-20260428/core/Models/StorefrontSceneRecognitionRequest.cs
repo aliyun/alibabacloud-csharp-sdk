@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class StorefrontSceneRecognitionRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTP(S) URL of the image to be reviewed.</para>
+        /// <para>The HTTP(S) URL of the image to be checked.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

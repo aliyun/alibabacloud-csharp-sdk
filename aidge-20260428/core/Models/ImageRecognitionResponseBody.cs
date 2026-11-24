@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRecognitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public ImageRecognitionResponseBodyData Data { get; set; }
         public class ImageRecognitionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The border pixel information, returned as a comma-separated string.</para>
+            /// <para>The border pixel information, which is a comma-separated string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8,10,0,1,330,330</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public bool? ObjWatermark { get; set; }
 
             /// <summary>
-            /// <para>The number of products.</para>
+            /// <para>The product quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class SubmitProductMatchRequest : TeaModel {
         /// <summary>
-        /// <para>The product brand. If this value is not specified, the system attempts to extract the brand from the shop name.</para>
+        /// <para>The product brand. If this parameter is not specified, the system attempts to extract the brand from the shop name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FILA</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BrandName { get; set; }
 
         /// <summary>
-        /// <para>The Miaojie product category. Currently used for extension and auditing purposes.</para>
+        /// <para>The Miaojie product category. It is currently used for extension and auditing.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Children\&quot;s Shoes</para>
+        /// <para>Kids Shoes</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ProductUrl { get; set; }
 
         /// <summary>
-        /// <para>The shop name. This value is also used as the extraction source when the brand name is missing.</para>
+        /// <para>The shop name. It also serves as the extraction source when the brand name is missing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FILA斐乐官方旗舰店</para>
+        /// <para>FILA Official Flagship Store</para>
         /// </summary>
         [NameInMap("ShopName")]
         [Validation(Required=false)]

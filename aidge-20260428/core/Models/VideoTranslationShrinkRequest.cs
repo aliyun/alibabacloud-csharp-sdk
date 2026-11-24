@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VideoTranslationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of translation features. Valid values: speech and visual. You can select both. At least one feature is required. Duplicate values are not accepted.</para>
+        /// <para>The list of translation features. Valid values: <c>speech</c> and <c>visual</c>. You can select both. At least one feature must be specified. Duplicate values are not accepted.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Capabilities")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string CapabilitiesShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable quality inspection for on-screen text processing. Effective only when visual is included and this parameter is explicitly set to true. If only speech is selected, this parameter is ignored, no quality inspection is performed, no quality inspection fields are returned, and no error is reported due to this parameter. Enabling quality inspection may increase the processing time. Do not enable it unless necessary. Default value: false.</para>
+        /// <para>Specifies whether to enable the quality check for on-screen text processing. This parameter takes effect only when <c>visual</c> is included and explicitly set to <c>true</c>. If only <c>speech</c> is selected, this parameter is ignored, no quality check is performed, no quality check fields are returned, and no error is reported due to this parameter. Enabling the quality check may increase the processing time. Do not enable it unless necessary. Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -28,7 +28,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? EnableQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>Applicable only when visual is included. Specifies whether to erase on-screen text without translation. Valid values: true: erases on-screen text without translation. false: translates on-screen text. Default value: false.</para>
+        /// <para>Specifies whether to only erase on-screen text without translation. This parameter is valid only when <c>visual</c> is included. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Erases the on-screen text without translation.</description></item>
+        /// <item><description><c>false</c>: Translates the on-screen text.
+        /// Default value: <c>false</c>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,7 +43,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? EraseOnly { get; set; }
 
         /// <summary>
-        /// <para>Applicable only when visual is included. Specifies whether to erase brand logos. Valid values: true: erases brand logos. false: retains brand logos. Default value: false. This parameter is independent of EraseOnly.</para>
+        /// <para>Specifies whether to erase brand logos. This parameter is valid only when <c>visual</c> is included. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Erases brand logos.</description></item>
+        /// <item><description><c>false</c>: Retains brand logos.
+        /// Default value: <c>false</c>. This parameter is independent of <c>EraseOnly</c>.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -58,7 +68,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>Applicable only when speech is included. Valid values: erase: erases the original subtitles only. replace: replaces the original subtitles with translated subtitles, which means erasing the original subtitles and adding subtitles synchronized with the translated speech. If not specified, the original subtitles are not processed, which means neither erasing the original subtitles nor adding new subtitles.</para>
+        /// <para>The subtitle processing mode. This parameter is valid only when <c>speech</c> is included. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>erase</c>: Erases only the original subtitles.</description></item>
+        /// <item><description><c>replace</c>: Replaces the original subtitles with translated subtitles. This erases the original subtitles and adds subtitles synchronized with the translated speech.</description></item>
+        /// <item><description>If this parameter is not specified, the original subtitles are not processed. This means the original subtitles are not erased and no new subtitles are added.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>replace</para>
@@ -68,7 +83,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SubtitleMode { get; set; }
 
         /// <summary>
-        /// <para>Required when speech is included. Optional when only visual is included and EraseOnly is set to true. If specified in this case, it is ignored. Required in other cases.</para>
+        /// <para>The target language. This parameter is required when <c>speech</c> is included. If only <c>visual</c> is included and <c>EraseOnly</c> is set to true, this parameter is optional and will be ignored if provided. In other cases, this parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -78,7 +93,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The video URL. Supported formats: MP4 and MOV. Maximum size: 200 MB.</para>
+        /// <para>The URL of the video. Supported formats: MP4 and MOV. Maximum size: 200 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

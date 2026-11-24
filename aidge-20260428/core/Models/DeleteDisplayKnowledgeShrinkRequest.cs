@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RagId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the records to delete. You can specify up to 500 record IDs.</para>
+        /// <para>The IDs of the records to be deleted. A maximum of 500 records can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RecordIds")]

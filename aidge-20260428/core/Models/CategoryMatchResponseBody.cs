@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class CategoryMatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The value &quot;success&quot; is returned for successful calls.</para>
+        /// <para>The status code. Returns &quot;success&quot; for normal calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public CategoryMatchResponseBodyData Data { get; set; }
         public class CategoryMatchResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the matched category.</para>
+            /// <para>The matched category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1522</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the matched category.</para>
+            /// <para>The matched category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>位置和活动跟踪器</para>
+            /// <para>Location and Activity Trackers</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The full path of the category, separated by forward slashes (/).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>宠物用品/猫用品/猫挂饰、项圈、牵引带/位置和活动跟踪器</para>
+            /// <para>Pet Supplies/Cat Supplies/Cat Collars, Harnesses and Leashes/Location and Activity Trackers</para>
             /// </summary>
             [NameInMap("CategoryPath")]
             [Validation(Required=false)]
             public string CategoryPath { get; set; }
 
             /// <summary>
-            /// <para>The match confidence score. Valid values: 0 to 100.</para>
+            /// <para>The matching confidence score, ranging from 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>96</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? Confidence { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the category matching is successful.</para>
+            /// <para>Indicates whether the matching is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public bool? MatchSuccessful { get; set; }
 
             /// <summary>
-            /// <para>The reason for the category match.</para>
+            /// <para>The matching reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The core product is a cat collar with AirTag positioning functionality, belonging to the \&quot;Location and Activity Trackers\&quot; category. The leaf node semantically matches its tracking functionality and cat-use attributes precisely</para>
+            /// <para>The core of the product is a cat collar with AirTag tracking functionality, which belongs to the \&quot;Location and Activity Trackers\&quot; category. The leaf node semantics precisely match its tracking function and cat-specific attributes</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>The usage information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;ProcessingCount&quot;:1}</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. The value &quot;Success&quot; is returned for successful calls.</para>
+        /// <para>The error message. Returns &quot;Success&quot; for normal calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, which identifies a unique request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2157065A-D6C8-1F3E-A4D0-B1234567890</para>
@@ -116,7 +119,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

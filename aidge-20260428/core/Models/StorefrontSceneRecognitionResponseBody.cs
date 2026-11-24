@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public StorefrontSceneRecognitionResponseBodyData Data { get; set; }
         public class StorefrontSceneRecognitionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The scene recognition result details.</para>
+            /// <para>The details of the scene recognition result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     /// <para>The non-empty category name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>oppo vivo smartphone specialty store</para>
+                    /// <para>OPPO VIVO Smartphone Store</para>
                     /// </summary>
                     [NameInMap("Clazz")]
                     [Validation(Required=false)]
                     public string Clazz { get; set; }
 
                     /// <summary>
-                    /// <para>A finite numerical value. The source document does not specify a value range.</para>
+                    /// <para>A finite numeric value. The value range is not specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.99</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string Coverage { get; set; }
 
                     /// <summary>
-                    /// <para>The region list.</para>
+                    /// <para>The list of regions.</para>
                     /// </summary>
                     [NameInMap("Regions")]
                     [Validation(Required=false)]
@@ -88,6 +88,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public class StorefrontSceneRecognitionResponseBodyDataResultGroundingRegions : TeaModel {
                         /// <summary>
                         /// <para>The bounding box coordinates.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>[0,0,456,398]</para>
                         /// </summary>
                         [NameInMap("Bbox2d")]
                         [Validation(Required=false)]
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>The non-empty scene classification array.</para>
+                /// <para>The non-empty array of scene classifications.</para>
                 /// </summary>
                 [NameInMap("Scenes")]
                 [Validation(Required=false)]
@@ -139,7 +142,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The returned message or failure description.</para>
+        /// <para>The response message or failure description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
