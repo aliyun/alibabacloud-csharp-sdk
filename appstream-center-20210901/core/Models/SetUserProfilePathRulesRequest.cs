@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The JSON array string that contains the complete list of rules. Each item uses <c>blackPath</c> to specify the excluded path and <c>whitePaths</c> to specify the relative paths that still require roaming within the excluded directory. The path type <c>file</c> indicates a file, and <c>folder</c> indicates a directory.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;blackPath&quot;:{&quot;path&quot;:&quot;AppData\\Local&quot;,&quot;type&quot;:&quot;folder&quot;},&quot;whitePaths&quot;:[{&quot;path&quot;:&quot;.\\Microsoft\\Office&quot;,&quot;type&quot;:&quot;folder&quot;}]}]</para>
+        /// <para>[{&quot;blackPath&quot;:{&quot;path&quot;:&quot;AppData\Local&quot;,&quot;type&quot;:&quot;folder&quot;},&quot;whitePaths&quot;:[{&quot;path&quot;:&quot;.\Microsoft\Office&quot;,&quot;type&quot;:&quot;folder&quot;}]}]</para>
         /// </summary>
         [NameInMap("UserProfilePathRules")]
         [Validation(Required=false)]

@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("BizType")]
+        [Validation(Required=false)]
+        public int? BizType { get; set; }
+
+        /// <summary>
         /// <para>The billing type.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +68,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? GpuMemory { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>RTX 5880</para>
+        /// </summary>
+        [NameInMap("GpuSpec")]
+        [Validation(Required=false)]
+        public string GpuSpec { get; set; }
+
+        /// <summary>
         /// <para>The current specification of the instance for specification change.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +104,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>demo-model</para>
+        /// </summary>
+        [NameInMap("ModelId")]
+        [Validation(Required=false)]
+        public string ModelId { get; set; }
 
         /// <summary>
         /// <para>The resource specification type to query. If this parameter is not specified, all specification types are returned.</para>

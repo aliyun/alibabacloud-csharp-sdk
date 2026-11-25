@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Cpu { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>49152</para>
+            /// </summary>
+            [NameInMap("EcsGpuMemory")]
+            [Validation(Required=false)]
+            public int? EcsGpuMemory { get; set; }
+
+            /// <summary>
             /// <para>The number of GPUs.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +53,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("GpuMemory")]
             [Validation(Required=false)]
             public long? GpuMemory { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>RTX 5880</para>
+            /// </summary>
+            [NameInMap("GpuSpec")]
+            [Validation(Required=false)]
+            public string GpuSpec { get; set; }
 
             /// <summary>
             /// <para>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected at the same time, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</para>
@@ -113,6 +129,156 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("NodeTypeName")]
             [Validation(Required=false)]
             public string NodeTypeName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
+            /// </summary>
+            [NameInMap("RequestId")]
+            [Validation(Required=false)]
+            public string RequestId { get; set; }
+
+            [NameInMap("WuyingServerModelMetaInfo")]
+            [Validation(Required=false)]
+            public ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo WuyingServerModelMetaInfo { get; set; }
+            public class ListNodeInstanceTypeResponseBodyNodeInstanceTypeModelsWuyingServerModelMetaInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vLLM</para>
+                /// </summary>
+                [NameInMap("DefaultInferenceEngine")]
+                [Validation(Required=false)]
+                public string DefaultInferenceEngine { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>支持文本生成</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.5</para>
+                /// </summary>
+                [NameInMap("FirstTokenLatencySeconds")]
+                [Validation(Required=false)]
+                public double? FirstTokenLatencySeconds { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>m-example-image</para>
+                /// </summary>
+                [NameInMap("ImageId")]
+                [Validation(Required=false)]
+                public string ImageId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[&quot;text&quot;]</para>
+                /// </summary>
+                [NameInMap("InputModalities")]
+                [Validation(Required=false)]
+                public List<string> InputModalities { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>500</para>
+                /// </summary>
+                [NameInMap("MachineInputTokensPerSecond")]
+                [Validation(Required=false)]
+                public long? MachineInputTokensPerSecond { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>70</para>
+                /// </summary>
+                [NameInMap("MachineOutputTokensPerSecond")]
+                [Validation(Required=false)]
+                public long? MachineOutputTokensPerSecond { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>32768</para>
+                /// </summary>
+                [NameInMap("MaxModelLen")]
+                [Validation(Required=false)]
+                public long? MaxModelLen { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>65536</para>
+                /// </summary>
+                [NameInMap("MaxModelLenMax")]
+                [Validation(Required=false)]
+                public long? MaxModelLenMax { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
+                [NameInMap("MaxModelLenMin")]
+                [Validation(Required=false)]
+                public long? MaxModelLenMin { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>16</para>
+                /// </summary>
+                [NameInMap("MaxNumSeqsMax")]
+                [Validation(Required=false)]
+                public int? MaxNumSeqsMax { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("MaxNumSeqsMin")]
+                [Validation(Required=false)]
+                public int? MaxNumSeqsMin { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>demo-model</para>
+                /// </summary>
+                [NameInMap("ModelId")]
+                [Validation(Required=false)]
+                public string ModelId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>示例模型</para>
+                /// </summary>
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
+                public string ModelName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[&quot;text&quot;]</para>
+                /// </summary>
+                [NameInMap("OutputModalities")]
+                [Validation(Required=false)]
+                public List<string> OutputModalities { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("Recommended")]
+                [Validation(Required=false)]
+                public bool? Recommended { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8</para>
+                /// </summary>
+                [NameInMap("RecommendedMaxNumSeqs")]
+                [Validation(Required=false)]
+                public int? RecommendedMaxNumSeqs { get; set; }
+
+            }
 
         }
 

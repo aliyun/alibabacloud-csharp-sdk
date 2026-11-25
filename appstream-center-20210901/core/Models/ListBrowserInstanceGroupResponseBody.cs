@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the browser instance group. The time follows the RFC 3339 standard in the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss.SSSXXX</c> format, which includes milliseconds and time zone offsets. The actual response uses the UTC offset <c>+00:00</c>.</para>
+            /// <para>The creation time of the browser instance group. The time follows the RFC 3339 standard in the <c>yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX</c> format, which includes milliseconds and time zone offsets. The actual response uses the UTC offset <c>+00:00</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-21T07:00:39.000+00:00</para>

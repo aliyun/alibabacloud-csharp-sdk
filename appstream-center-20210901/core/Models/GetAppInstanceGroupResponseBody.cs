@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the delivery group. The time is in ISO 8601 format, including milliseconds and time zone offset. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX.</para>
+            /// <para>The expiration time of the delivery group. The time is in ISO 8601 format, including milliseconds and time zone offset. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSSXXX.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-24T16:00:00.000+00:00</para>

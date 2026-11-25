@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <para>The property key for the driver list is DRIVER_LIST, and the value is a JSON string of an array of driver IDs. We recommend that you specify drivers by using DriverIdList. <b>If both DriverIdList and PropertyMap.DRIVER_LIST are specified, DriverIdList takes precedence.</b> Specify other extended properties only when you have confirmed their purposes and values.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;DRIVER_LIST&quot;:&quot;[\&quot;6d4af751-f522-40d7-ab6c-4a0ae587****\&quot;,\&quot;b5bdf6c0-41de-4878-8963-e8324106****\&quot;]&quot;}</para>
+        /// <para>{&quot;DRIVER_LIST&quot;:&quot;[&quot;6d4af751-f522-40d7-ab6c-4a0ae587****&quot;,&quot;b5bdf6c0-41de-4878-8963-e8324106****&quot;]&quot;}</para>
         /// </summary>
         [NameInMap("PropertyMap")]
         [Validation(Required=false)]

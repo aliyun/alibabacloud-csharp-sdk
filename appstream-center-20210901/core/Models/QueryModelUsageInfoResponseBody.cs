@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class QueryModelUsageInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The model usage summary corresponding to the selected business, statistical window, and model type. If no statistical results are available for <c>24h</c> or <c>1d</c> queries without specified start and end dates, each metric returns 0. If no statistical results are available for other windows or custom date ranges, no valid metric values are provided. In this case, do not treat it as zero usage.</para>
+        /// <para>The model usage summary for the selected business, statistical window, and model type. If no statistical results are available for <c>24h</c> or <c>1d</c> queries without specified start and end dates, each metric returns 0. If no statistical results are available for other windows or custom date ranges, no valid metric values are provided. In this case, do not treat the usage as zero.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ActiveModelCount&quot;:10,&quot;CallCount&quot;:13280,&quot;PointsConsumption&quot;:120}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public QueryModelUsageInfoResponseBodyData Data { get; set; }
         public class QueryModelUsageInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of distinct models that have been called at least once within the query range. Unit: models. The value is deduplicated by model code. It may not be equal to <c>TotalCount</c> in the model usage list, because the latter may also include models that have not been called within the current query range.</para>
+            /// <para>The number of distinct models that have been called at least once within the query range. Unit: models. The value is deduplicated by model code. It may not be equal to the <c>TotalCount</c> of the model usage list, which may also include models that have not been called within the current query range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The unique identifier of the current request, which is used to locate and troubleshoot request issues.</para>
+        /// <para>The unique identifier of the request, which is used to locate and troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

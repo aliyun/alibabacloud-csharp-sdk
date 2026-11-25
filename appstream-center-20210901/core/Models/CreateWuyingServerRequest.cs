@@ -236,6 +236,90 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public float? MaxPrice { get; set; }
 
         /// <summary>
+        /// <para>模型和运行配置。创建 WuyingModelServer 产品时必填。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;ModelId&quot;:&quot;demo-model&quot;,&quot;ModelAccessMethod&quot;:&quot;Lan&quot;,&quot;ServerRunConfig&quot;:{&quot;SettingMode&quot;:&quot;Basic&quot;,&quot;MaxModelLen&quot;:16384,&quot;MaxNumSeqs&quot;:4}}</para>
+        /// </summary>
+        [NameInMap("ModelConfig")]
+        [Validation(Required=false)]
+        public CreateWuyingServerRequestModelConfig ModelConfig { get; set; }
+        public class CreateWuyingServerRequestModelConfig : TeaModel {
+            /// <summary>
+            /// <para>模型接入方式。Normal 为普通接入，Lan 为局域网接入，省略时取 Normal。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Lan</para>
+            /// </summary>
+            [NameInMap("ModelAccessMethod")]
+            [Validation(Required=false)]
+            public string ModelAccessMethod { get; set; }
+
+            /// <summary>
+            /// <para>模型目录中的真实模型 ID。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo-model</para>
+            /// </summary>
+            [NameInMap("ModelId")]
+            [Validation(Required=false)]
+            public string ModelId { get; set; }
+
+            /// <summary>
+            /// <para>租户自定义模型 ID，省略时使用真实模型 ID。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo-model</para>
+            /// </summary>
+            [NameInMap("ServedModelName")]
+            [Validation(Required=false)]
+            public string ServedModelName { get; set; }
+
+            /// <summary>
+            /// <para>模型运行配置。可传空对象以使用全部默认值。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;SettingMode&quot;:&quot;Basic&quot;,&quot;MaxModelLen&quot;:16384,&quot;MaxNumSeqs&quot;:4}</para>
+            /// </summary>
+            [NameInMap("ServerRunConfig")]
+            [Validation(Required=false)]
+            public CreateWuyingServerRequestModelConfigServerRunConfig ServerRunConfig { get; set; }
+            public class CreateWuyingServerRequestModelConfigServerRunConfig : TeaModel {
+                /// <summary>
+                /// <para>最大上下文，单位 Token。省略时使用所选规格的默认值。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>16384</para>
+                /// </summary>
+                [NameInMap("MaxModelLen")]
+                [Validation(Required=false)]
+                public long? MaxModelLen { get; set; }
+
+                /// <summary>
+                /// <para>最大并发序列数。省略时使用所选规格的推荐值。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4</para>
+                /// </summary>
+                [NameInMap("MaxNumSeqs")]
+                [Validation(Required=false)]
+                public int? MaxNumSeqs { get; set; }
+
+                /// <summary>
+                /// <para>设置方式。Basic 为基本设置，CustomStartupCommand 为自定义启动命令。省略或传 null 时取 Basic。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Basic</para>
+                /// </summary>
+                [NameInMap("SettingMode")]
+                [Validation(Required=false)]
+                public string SettingMode { get; set; }
+
+            }
+
+        }
+
+        /// <summary>
         /// <para>The type of the network policy (invitational preview).</para>
         /// 
         /// <b>Example:</b>
@@ -261,7 +345,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The logon password of the workstation. <b>This parameter is required when you create a workstation by calling this operation.</b> If this parameter is not specified, InvalidParameter.password is returned.</para>
         /// <para>The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Spaces, Chinese characters, backslashes, and double quotation marks are not supported. The supported special characters are:</para>
-        /// <pre><code class="language-text">()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
+        /// <pre><code class="language-text">()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
         /// </c></pre>
         /// <para>The password of a Windows workstation cannot start with a forward slash /.</para>
         /// 
@@ -303,6 +387,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
+
+        /// <summary>
+        /// <para>工作站产品类型。创建无影 AI 模型工作站时传 WuyingModelServer。省略时默认使用 WuyingServer。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>WuyingModelServer</para>
+        /// </summary>
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public string ProductType { get; set; }
 
         /// <summary>
         /// <para>The ID of the discount.</para>

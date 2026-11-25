@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the app instance group. The time is displayed in the ISO 8601 date and time format, including milliseconds and time zone offset. Format template: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX.</para>
+            /// <para>The expiration time of the app instance group. The time is displayed in the ISO 8601 date and time format, including milliseconds and time zone offset. Format template: yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSSXXX.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-27T16:00:00.000+00:00</para>
@@ -681,7 +681,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ScalingUsageThreshold { get; set; }
 
             /// <summary>
-            /// <para>The session disconnection retention period, in minutes. After an end user\&quot;s session is disconnected, the session is retained for the specified period before being logged off. To retain the session indefinitely, set this parameter to <c>-1</c>. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
+            /// <para>The session disconnection retention period, in minutes. After an end user&quot;s session is disconnected, the session is retained for the specified period before being logged off. To retain the session indefinitely, set this parameter to <c>-1</c>. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>

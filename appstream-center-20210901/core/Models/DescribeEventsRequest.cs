@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. <b>Required</b>. Specify the time in the ISO 8601 standard: <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss</c>. You can include three digits for milliseconds and use <c>Z</c> or <c>±HH:mm</c> to specify the time zone. We recommend that you always include the time zone offset. The query includes this exact time, and the start time must be earlier than or equal to the <c>EndTime</c>. The service retains and retrieves only events that occurred within 30 days before the call time.</para>
+        /// <para>The start time of the query. <b>Required</b>. Specify the time in the ISO 8601 standard: <c>yyyy-MM-dd\&quot;T\&quot;HH:mm:ss</c>. You can include three digits for milliseconds and use <c>Z</c> or <c>±HH:mm</c> to specify the time zone. We recommend that you always include the time zone offset. The query includes this exact time, and the start time must be earlier than or equal to the <c>EndTime</c>. The service retains and retrieves only events that occurred within 30 days before the call time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

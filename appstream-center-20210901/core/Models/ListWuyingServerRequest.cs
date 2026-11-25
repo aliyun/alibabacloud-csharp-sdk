@@ -100,6 +100,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例</para>
+        /// </summary>
+        [NameInMap("ModelName")]
+        [Validation(Required=false)]
+        public string ModelName { get; set; }
+
+        /// <summary>
         /// <para>The internal IP address.</para>
         /// 
         /// <b>Example:</b>

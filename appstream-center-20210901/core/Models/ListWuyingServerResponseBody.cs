@@ -446,6 +446,92 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            [NameInMap("ServerModelInfo")]
+            [Validation(Required=false)]
+            public ListWuyingServerResponseBodyWuyingServerListServerModelInfo ServerModelInfo { get; set; }
+            public class ListWuyingServerResponseBodyWuyingServerListServerModelInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vLLM</para>
+                /// </summary>
+                [NameInMap("InferenceEngine")]
+                [Validation(Required=false)]
+                public string InferenceEngine { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[&quot;text&quot;]</para>
+                /// </summary>
+                [NameInMap("InputModalities")]
+                [Validation(Required=false)]
+                public List<string> InputModalities { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>16384</para>
+                /// </summary>
+                [NameInMap("MaxModelLen")]
+                [Validation(Required=false)]
+                public long? MaxModelLen { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>4</para>
+                /// </summary>
+                [NameInMap("MaxNumSeqs")]
+                [Validation(Required=false)]
+                public int? MaxNumSeqs { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Lan</para>
+                /// </summary>
+                [NameInMap("ModelAccessMethod")]
+                [Validation(Required=false)]
+                public string ModelAccessMethod { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>demo-model</para>
+                /// </summary>
+                [NameInMap("ModelId")]
+                [Validation(Required=false)]
+                public string ModelId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>示例模型</para>
+                /// </summary>
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
+                public string ModelName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Running</para>
+                /// </summary>
+                [NameInMap("ModelServiceInferenceStatus")]
+                [Validation(Required=false)]
+                public string ModelServiceInferenceStatus { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[&quot;text&quot;]</para>
+                /// </summary>
+                [NameInMap("OutputModalities")]
+                [Validation(Required=false)]
+                public List<string> OutputModalities { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>demo-model</para>
+                /// </summary>
+                [NameInMap("ServedModelName")]
+                [Validation(Required=false)]
+                public string ServedModelName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The list of sessions.</para>
             /// </summary>

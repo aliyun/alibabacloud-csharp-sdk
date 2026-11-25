@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProviderName { get; set; }
 
             /// <summary>
-            /// <para>The URL of the provider\&quot;s official website, which directs users to obtain an API key.</para>
+            /// <para>The URL of the provider&quot;s official website, which directs users to obtain an API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://test">https://test</a></para>
