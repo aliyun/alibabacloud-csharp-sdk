@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Failed to evaluate filter expression in node \&quot;node-1\&quot;: column \&quot;score\&quot; does not exist.</para>
+            /// <para>Failed to evaluate filter expression in node &quot;node-1&quot;: column &quot;score&quot; does not exist.</para>
             /// </summary>
             [NameInMap("errorMessage")]
             [Validation(Required=false)]

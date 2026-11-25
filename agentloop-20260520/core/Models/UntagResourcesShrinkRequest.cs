@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all custom tags. Valid values: true, false, and an empty string. If this parameter is not specified or is set to an empty string, the value is treated as false. The value true takes effect only when the tagKey parameter is not specified or is an empty array.</para>
+        /// <para>Specifies whether to disassociate all user-defined tags. Valid values: true, false, and an empty string. If this parameter is not specified or is set to an empty string, it is treated as false. The value true indicates that all tags are disassociated only when the tagKey parameter is not specified or is an empty array.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to agentspace.</para>
+        /// <para>The resource type. The value is fixed to agentspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tag keys to remove. You can specify up to 20 tag keys. The tag keys must be unique. If this parameter is not empty, it takes precedence over the all parameter.</para>
+        /// <para>The list of tag keys to disassociate. You can specify up to 20 tag keys, and they must be unique. If this parameter is not empty, it takes precedence over the all parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;key1&quot;, &quot;key2&quot;, &quot;key3&quot;]</para>

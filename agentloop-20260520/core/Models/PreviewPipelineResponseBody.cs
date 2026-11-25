@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The collection of sample rows. This array of maps includes only the first N rows (up to 5 rows by default) and does not reflect the complete write plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;type\&quot;: \&quot;saturation\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;load\&quot;, \&quot;value\&quot;: 0}, {\&quot;type\&quot;: \&quot;latency\&quot;, \&quot;value\&quot;: 1}, {\&quot;type\&quot;: \&quot;error\&quot;, \&quot;value\&quot;: 0}]</para>
+        /// <para>[{&quot;type&quot;: &quot;saturation&quot;, &quot;value&quot;: 0}, {&quot;type&quot;: &quot;load&quot;, &quot;value&quot;: 0}, {&quot;type&quot;: &quot;latency&quot;, &quot;value&quot;: 1}, {&quot;type&quot;: &quot;error&quot;, &quot;value&quot;: 0}]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

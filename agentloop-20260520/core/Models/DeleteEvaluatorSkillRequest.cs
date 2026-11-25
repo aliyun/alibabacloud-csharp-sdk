@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string AgentSpace { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
+        [NameInMap("evaluatorVersion")]
+        [Validation(Required=false)]
+        public string EvaluatorVersion { get; set; }
+
     }
 
 }

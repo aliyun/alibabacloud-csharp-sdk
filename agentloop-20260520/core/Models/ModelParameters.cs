@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The response content format, which defaults to text if not specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;type&quot;:&quot;json_schema&quot;,&quot;jsonSchema&quot;:{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;answer\&quot;:{\&quot;type\&quot;:\&quot;string\&quot;}},\&quot;required\&quot;:[\&quot;answer\&quot;]}&quot;}}</para>
+        /// <para>{&quot;type&quot;:&quot;json_schema&quot;,&quot;jsonSchema&quot;:{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;answer&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;answer&quot;]}&quot;}}</para>
         /// </summary>
         [NameInMap("responseFormat")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The JSON Schema constraint, which is required when the type is json_schema.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{\&quot;type\&quot;:\&quot;object\&quot;,\&quot;properties\&quot;:{\&quot;answer\&quot;:{\&quot;type\&quot;:\&quot;string\&quot;}},\&quot;required\&quot;:[\&quot;answer\&quot;]}&quot;}</para>
+            /// <para>{&quot;name&quot;:&quot;answer&quot;,&quot;strict&quot;:true,&quot;schema&quot;:&quot;{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;answer&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;answer&quot;]}&quot;}</para>
             /// </summary>
             [NameInMap("jsonSchema")]
             [Validation(Required=false)]

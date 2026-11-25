@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The data query filter conditions that take effect together with the evaluator-level filters.query. For trace scenarios, you can specify filter expressions such as service name, environment, and tags.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>serviceName=\&quot;checkout-service\&quot;</para>
+        /// <para>serviceName=&quot;checkout-service&quot;</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]

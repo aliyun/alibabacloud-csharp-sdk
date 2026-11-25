@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token. An empty value indicates that no additional pages exist.</para>
+        /// <para>The pagination token. If no next page exists, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJsYXN0SWQiOjEyMH0=</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value. If this parameter is omitted, the system matches resources that have the specified key. An empty string exactly matches an empty value. Null values are not allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         /// <para>The subset of the pipeline where clause, which is pushed down to SQL.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>appId = \&quot;crm-service\&quot;</para>
+                        /// <para>appId = &quot;crm-service&quot;</para>
                         /// </summary>
                         [NameInMap("where")]
                         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListTagResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token. An empty value indicates that no additional pages exist.</para>
+        /// <para>The pagination token. If no next page exists, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJuZXh0IjoiNDAifQ==</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag filter conditions. Multiple conditions are combined with the AND operator. At least one of resourceId and tag must be specified.</para>
+        /// <para>The tag filter conditions. Multiple conditions are combined by using the AND operator. At least one of resourceId and tag must be specified.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

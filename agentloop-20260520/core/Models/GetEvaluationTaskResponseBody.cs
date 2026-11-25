@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The filter conditions for evaluation data. The backend returns this value as a JSON string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</para>
+        /// <para>{&quot;query&quot;:&quot;serviceName=&quot;checkout-service&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</para>
         /// </summary>
         [NameInMap("dataFilter")]
         [Validation(Required=false)]

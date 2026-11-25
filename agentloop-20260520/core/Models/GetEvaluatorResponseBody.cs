@@ -130,6 +130,72 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public Dictionary<string, object> Properties { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("selectable")]
+            [Validation(Required=false)]
+            public bool? Selectable { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;displayName&quot;:&quot;事实核查&quot;,&quot;description&quot;:&quot;核对回答中的事实依据&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1770386951147366810&quot;}]</para>
+            /// </summary>
+            [NameInMap("skills")]
+            [Validation(Required=false)]
+            public List<GetEvaluatorResponseBodyEvaluatorSkills> Skills { get; set; }
+            public class GetEvaluatorResponseBodyEvaluatorSkills : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1770386951147366810</para>
+                /// </summary>
+                [NameInMap("currentVersion")]
+                [Validation(Required=false)]
+                public string CurrentVersion { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>核对回答中的事实依据</para>
+                /// </summary>
+                [NameInMap("description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>事实核查</para>
+                /// </summary>
+                [NameInMap("displayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>fact-check</para>
+                /// </summary>
+                [NameInMap("skillName")]
+                [Validation(Required=false)]
+                public string SkillName { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PUBLISHED</para>
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
             /// <para>The evaluator type.</para>
             /// 
             /// <b>Example:</b>
@@ -168,6 +234,30 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 [NameInMap("createdAt")]
                 [Validation(Required=false)]
                 public long? CreatedAt { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("selectable")]
+                [Validation(Required=false)]
+                public bool? Selectable { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>PUBLISHED</para>
+                /// </summary>
+                [NameInMap("status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1795478400</para>
+                /// </summary>
+                [NameInMap("updatedAt")]
+                [Validation(Required=false)]
+                public long? UpdatedAt { get; set; }
 
                 /// <summary>
                 /// <para>The version number.</para>

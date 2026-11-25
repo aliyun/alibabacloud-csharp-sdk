@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. Up to 20 tag key-value pairs are supported at a time.</para>
+        /// <para>The list of tags. You can specify up to 20 tag key-value pairs at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Format requirements:</para>
+            /// <para>The tag key. Format requirements are as follows:</para>
             /// <list type="bullet">
             /// <item><description>The length must be 1 to 128 characters.</description></item>
-            /// <item><description>The key cannot contain &quot;http://&quot; or &quot;https://&quot;.</description></item>
-            /// <item><description>The key cannot start with &quot;acs:&quot; or &quot;aliyun&quot;.</description></item>
+            /// <item><description>It cannot contain &quot;http://&quot; or &quot;https://&quot;.</description></item>
+            /// <item><description>It cannot start with &quot;acs:&quot; or &quot;aliyun&quot;.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Format requirements:</para>
+            /// <para>The tag value. Format requirements are as follows:</para>
             /// <list type="bullet">
             /// <item><description>The length must be 1 to 128 characters.</description></item>
-            /// <item><description>The value cannot contain &quot;http://&quot; or &quot;https://&quot;.</description></item>
+            /// <item><description>It cannot contain &quot;http://&quot; or &quot;https://&quot;.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

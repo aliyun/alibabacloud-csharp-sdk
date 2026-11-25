@@ -100,6 +100,22 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public Dictionary<string, object> Properties { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("selectable")]
+            [Validation(Required=false)]
+            public bool? Selectable { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PUBLISHED</para>
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
             /// <para>The evaluator type.</para>
             /// 
             /// <b>Example:</b>

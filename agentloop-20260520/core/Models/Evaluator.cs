@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The evaluator-level data filter conditions. These take effect together with the task-level dataFilter.query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;}</para>
+        /// <para>{&quot;query&quot;:&quot;serviceName=&quot;checkout-service&quot;&quot;}</para>
         /// </summary>
         [NameInMap("filters")]
         [Validation(Required=false)]

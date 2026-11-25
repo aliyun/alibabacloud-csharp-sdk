@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("createVersion")]
+        [Validation(Required=false)]
+        public bool? CreateVersion { get; set; }
+
+        /// <summary>
         /// <para>The evaluator description.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +66,85 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [NameInMap("properties")]
         [Validation(Required=false)]
         public Dictionary<string, object> Properties { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]}]</para>
+        /// </summary>
+        [NameInMap("skills")]
+        [Validation(Required=false)]
+        public List<UpdateEvaluatorRequestSkills> Skills { get; set; }
+        public class UpdateEvaluatorRequestSkills : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>核对回答中的事实依据</para>
+            /// </summary>
+            [NameInMap("description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>事实核查</para>
+            /// </summary>
+            [NameInMap("displayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]</para>
+            /// </summary>
+            [NameInMap("files")]
+            [Validation(Required=false)]
+            public List<UpdateEvaluatorRequestSkillsFiles> Files { get; set; }
+            public class UpdateEvaluatorRequestSkillsFiles : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <hr>
+                /// <h2>name: fact-check
+                /// description: 核对回答中的事实依据</h2>
+                /// <para>逐项核对回答中的事实，并列出依据。</para>
+                /// </summary>
+                [NameInMap("content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>SKILL.md</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>fact-check</para>
+            /// </summary>
+            [NameInMap("skillName")]
+            [Validation(Required=false)]
+            public string SkillName { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DRAFT</para>
+        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
         /// <summary>
         /// <para>The new version number. A new version is created when this parameter is specified.</para>

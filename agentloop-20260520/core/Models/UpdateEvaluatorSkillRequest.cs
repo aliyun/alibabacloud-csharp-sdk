@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
+        [NameInMap("evaluatorVersion")]
+        [Validation(Required=false)]
+        public string EvaluatorVersion { get; set; }
+
+        /// <summary>
         /// <para>The list of skill files. If specified, the content of the skill files is updated.</para>
         /// 
         /// <b>Example:</b>

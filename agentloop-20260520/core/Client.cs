@@ -1391,6 +1391,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["properties"] = request.Properties;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skills))
+            {
+                body["skills"] = request.Skills;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
@@ -1478,6 +1486,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Properties))
             {
                 body["properties"] = request.Properties;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skills))
+            {
+                body["skills"] = request.Skills;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -1593,6 +1609,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                body["evaluatorVersion"] = request.EvaluatorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
             {
                 body["files"] = request.Files;
@@ -1664,6 +1684,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                body["evaluatorVersion"] = request.EvaluatorVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
             {
@@ -2178,6 +2202,184 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateExperimentRunWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a synchronous multimodal evaluation on a single image or audio/video file and directly returns the score.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModalTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModalTaskResponse
+        /// </returns>
+        public CreateMultiModalTaskResponse CreateMultiModalTaskWithOptions(CreateMultiModalTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpace))
+            {
+                body["agentSpace"] = request.AgentSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Args))
+            {
+                body["args"] = request.Args;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
+            {
+                body["arn"] = request.Arn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorRef))
+            {
+                body["evaluatorRef"] = request.EvaluatorRef;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegion))
+            {
+                body["ossRegion"] = request.OssRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["taskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiModalTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/media-processings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiModalTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a synchronous multimodal evaluation on a single image or audio/video file and directly returns the score.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModalTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModalTaskResponse
+        /// </returns>
+        public async Task<CreateMultiModalTaskResponse> CreateMultiModalTaskWithOptionsAsync(CreateMultiModalTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpace))
+            {
+                body["agentSpace"] = request.AgentSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Args))
+            {
+                body["args"] = request.Args;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arn))
+            {
+                body["arn"] = request.Arn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorRef))
+            {
+                body["evaluatorRef"] = request.EvaluatorRef;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegion))
+            {
+                body["ossRegion"] = request.OssRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
+            {
+                body["prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["taskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiModalTask",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/media-processings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiModalTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a synchronous multimodal evaluation on a single image or audio/video file and directly returns the score.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModalTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModalTaskResponse
+        /// </returns>
+        public CreateMultiModalTaskResponse CreateMultiModalTask(CreateMultiModalTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateMultiModalTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a synchronous multimodal evaluation on a single image or audio/video file and directly returns the score.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModalTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModalTaskResponse
+        /// </returns>
+        public async Task<CreateMultiModalTaskResponse> CreateMultiModalTaskAsync(CreateMultiModalTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateMultiModalTaskWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3700,6 +3902,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 query["agentSpace"] = request.AgentSpace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                query["evaluatorVersion"] = request.EvaluatorVersion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3745,6 +3951,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpace))
             {
                 query["agentSpace"] = request.AgentSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                query["evaluatorVersion"] = request.EvaluatorVersion;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5568,6 +5778,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 query["agentSpace"] = request.AgentSpace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                query["evaluatorVersion"] = request.EvaluatorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
                 query["version"] = request.Version;
@@ -5617,6 +5831,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpace))
             {
                 query["agentSpace"] = request.AgentSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                query["evaluatorVersion"] = request.EvaluatorVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
@@ -7758,6 +7976,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 query["agentSpace"] = request.AgentSpace;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                query["evaluatorVersion"] = request.EvaluatorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -7811,6 +8033,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpace))
             {
                 query["agentSpace"] = request.AgentSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                query["evaluatorVersion"] = request.EvaluatorVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -10362,7 +10588,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags.</para>
+        /// <para>Disassociates tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10430,7 +10656,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags.</para>
+        /// <para>Disassociates tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10498,7 +10724,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags.</para>
+        /// <para>Disassociates tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10517,7 +10743,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags.</para>
+        /// <para>Disassociates tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11387,6 +11613,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["config"] = request.Config;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateVersion))
+            {
+                body["createVersion"] = request.CreateVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -11398,6 +11628,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Properties))
             {
                 body["properties"] = request.Properties;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skills))
+            {
+                body["skills"] = request.Skills;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
@@ -11463,6 +11701,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["config"] = request.Config;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateVersion))
+            {
+                body["createVersion"] = request.CreateVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -11474,6 +11716,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Properties))
             {
                 body["properties"] = request.Properties;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skills))
+            {
+                body["skills"] = request.Skills;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
             {
@@ -11585,6 +11835,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                body["evaluatorVersion"] = request.EvaluatorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
             {
                 body["files"] = request.Files;
@@ -11653,6 +11907,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["enable"] = request.Enable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluatorVersion))
+            {
+                body["evaluatorVersion"] = request.EvaluatorVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Files))
             {
                 body["files"] = request.Files;
@@ -11714,6 +11972,180 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateEvaluatorSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of an evaluator version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEvaluatorVersionStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEvaluatorVersionStatusResponse
+        /// </returns>
+        public UpdateEvaluatorVersionStatusResponse UpdateEvaluatorVersionStatusWithOptions(string agentSpace, string name, UpdateEvaluatorVersionStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedStatus))
+            {
+                body["expectedStatus"] = request.ExpectedStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["versionDescription"] = request.VersionDescription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEvaluatorVersionStatus",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/evaluators/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/version-status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEvaluatorVersionStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of an evaluator version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEvaluatorVersionStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEvaluatorVersionStatusResponse
+        /// </returns>
+        public async Task<UpdateEvaluatorVersionStatusResponse> UpdateEvaluatorVersionStatusWithOptionsAsync(string agentSpace, string name, UpdateEvaluatorVersionStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedStatus))
+            {
+                body["expectedStatus"] = request.ExpectedStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
+            {
+                body["versionDescription"] = request.VersionDescription;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEvaluatorVersionStatus",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/evaluators/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/version-status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEvaluatorVersionStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of an evaluator version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEvaluatorVersionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEvaluatorVersionStatusResponse
+        /// </returns>
+        public UpdateEvaluatorVersionStatusResponse UpdateEvaluatorVersionStatus(string agentSpace, string name, UpdateEvaluatorVersionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateEvaluatorVersionStatusWithOptions(agentSpace, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of an evaluator version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Publishes a saved evaluator draft, takes a published version offline, or brings an offline version back online.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateEvaluatorVersionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEvaluatorVersionStatusResponse
+        /// </returns>
+        public async Task<UpdateEvaluatorVersionStatusResponse> UpdateEvaluatorVersionStatusAsync(string agentSpace, string name, UpdateEvaluatorVersionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateEvaluatorVersionStatusWithOptionsAsync(agentSpace, name, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

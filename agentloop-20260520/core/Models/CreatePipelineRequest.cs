@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
-                    /// <item><description>| where intent = \&quot;refund\&quot;</description></item>
+                    /// <item><description>| where intent = &quot;refund&quot;</description></item>
                     /// </list>
                     /// </summary>
                     [NameInMap("expression")]
@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The Dataset datasource config under the current AgentSpace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = \&quot;pending\&quot;&quot;}</para>
+            /// <para>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = &quot;pending&quot;&quot;}</para>
             /// </summary>
             [NameInMap("dataset")]
             [Validation(Required=false)]
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 /// <para>The data filter condition for the dataset.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>status = \&quot;pending\&quot;</para>
+                /// <para>status = &quot;pending&quot;</para>
                 /// </summary>
                 [NameInMap("filter")]
                 [Validation(Required=false)]

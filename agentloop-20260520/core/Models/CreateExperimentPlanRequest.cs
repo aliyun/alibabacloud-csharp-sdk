@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The custom query SQL clause in partial dataset mode. This parameter can be used when <c>selectedItemIds</c> is empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>status=\&quot;OK\&quot;</para>
+        /// <para>status=&quot;OK&quot;</para>
         /// </summary>
         [NameInMap("querySql")]
         [Validation(Required=false)]

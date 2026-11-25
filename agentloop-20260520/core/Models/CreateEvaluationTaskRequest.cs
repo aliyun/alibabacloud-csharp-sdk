@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The evaluation data filter conditions. Supports a JSON object or JSON string. Common fields include <c>query</c>, <c>provided</c>, <c>maxRecords</c>, and <c>samplingRate</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</para>
+        /// <para>{&quot;query&quot;:&quot;serviceName=&quot;checkout-service&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</para>
         /// </summary>
         [NameInMap("dataFilter")]
         [Validation(Required=false)]
