@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The equivalent null value count.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>\\N</para>
+            /// <para>\N</para>
             /// </summary>
             [NameInMap("DefaultNullCount")]
             [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The equivalent null value rate.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>\\N</para>
+            /// <para>\N</para>
             /// </summary>
             [NameInMap("DefaultNullRate")]
             [Validation(Required=false)]

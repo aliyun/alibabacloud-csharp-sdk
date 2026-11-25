@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateFeatureConsistencyCheckJobConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The feature consistency check job configuration ID.</para>
+        /// <para>The ID of the feature consistency check job configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

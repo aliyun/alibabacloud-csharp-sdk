@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? Realtime { get; set; }
 
         /// <summary>
-        /// <para>The scene ID. You can call the <a href="%5C(~~2402581~~%5C)">ListScenes</a> operation to obtain this ID.</para>
+        /// <para>The scene ID. You can call the <a href="(~~2402581~~)">ListScenes</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetTrafficControlTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The behavior table ID.</para>
+        /// <para>The ID of the behavior table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<string> EffectiveSceneNames { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. The format is YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-04-25</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task has ever been published.</para>
+        /// <para>Specifies whether it has ever been published.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -102,6 +102,26 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("ExecutionTime")]
         [Validation(Required=false)]
         public string ExecutionTime { get; set; }
+
+        /// <summary>
+        /// <para>The information about whether Flink jobs have expired in each environment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;&quot;}</para>
+        /// </summary>
+        [NameInMap("FlinkJobOutdated")]
+        [Validation(Required=false)]
+        public string FlinkJobOutdated { get; set; }
+
+        /// <summary>
+        /// <para>The information about Flink jobs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;&quot;}</para>
+        /// </summary>
+        [NameInMap("FlinkJobs")]
+        [Validation(Required=false)]
+        public string FlinkJobs { get; set; }
 
         /// <summary>
         /// <para>The Flink resource ID.</para>
@@ -124,7 +144,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FlinkResourceName { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The format is ISO 8601, with Z representing the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-11T02:27:38.208Z</para>
@@ -134,7 +154,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The last modification time.</para>
+        /// <para>The update time. The format is ISO 8601, with Z representing the UTC time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-11T02:27:38.208Z</para>
@@ -144,7 +164,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The item conditions in array format.</para>
+        /// <para>The item condition, set in array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
@@ -154,7 +174,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionArray { get; set; }
 
         /// <summary>
-        /// <para>The item conditions in expression format.</para>
+        /// <para>The item condition, set in expression format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>status=1</para>
@@ -174,7 +194,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionType { get; set; }
 
         /// <summary>
-        /// <para>The item table ID.</para>
+        /// <para>The ID of the item table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -204,7 +224,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PreExperimentIds { get; set; }
 
         /// <summary>
-        /// <para>The staging environment status.</para>
+        /// <para>The status in the staging environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -224,7 +244,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ProdExperimentIds { get; set; }
 
         /// <summary>
-        /// <para>The production environment status.</para>
+        /// <para>The status in the production environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -281,7 +301,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<int?> ServiceIds { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. The format is YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-25</para>
@@ -291,7 +311,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The behavior statistics conditions in array format.</para>
+        /// <para>The array-format condition for behavior statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</para>
@@ -301,7 +321,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StatisBehaviorConditionArray { get; set; }
 
         /// <summary>
-        /// <para>The behavior statistics conditions in expression format.</para>
+        /// <para>The expression-format condition for behavior statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>click=30</para>
@@ -311,7 +331,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StatisBehaviorConditionExpress { get; set; }
 
         /// <summary>
-        /// <para>The behavior statistics condition type.</para>
+        /// <para>The condition type for behavior statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Array</para>
@@ -328,7 +348,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public List<GetTrafficControlTaskResponseBodyTrafficControlTargets> TrafficControlTargets { get; set; }
         public class GetTrafficControlTaskResponseBodyTrafficControlTargets : TeaModel {
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. The format is YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-25</para>
@@ -348,7 +368,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Event { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The format is ISO 8601, with Z representing the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-25T06:04:28.441Z</para>
@@ -358,7 +378,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The update time. The format is ISO 8601, with Z representing the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-25T06:04:28.441Z</para>
@@ -368,7 +388,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The item conditions in array format.</para>
+            /// <para>The item condition, set in array format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
@@ -378,7 +398,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionArray { get; set; }
 
             /// <summary>
-            /// <para>The item conditions in expression format.</para>
+            /// <para>The item condition, set in expression format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>status=1</para>
@@ -398,7 +418,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionType { get; set; }
 
             /// <summary>
-            /// <para>The name of the control target.</para>
+            /// <para>The control target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>target-1</para>
@@ -408,7 +428,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is a new product regulation.</para>
+            /// <para>Specifies whether the control applies to new products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -418,7 +438,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public bool? NewProductRegulation { get; set; }
 
             /// <summary>
-            /// <para>The recall Policy Name.</para>
+            /// <para>The recall policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>recall-1</para>
@@ -428,7 +448,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string RecallName { get; set; }
 
             /// <summary>
-            /// <para>The split configuration of the control target.</para>
+            /// <para>The split parts of the control target.</para>
             /// </summary>
             [NameInMap("SplitParts")]
             [Validation(Required=false)]
@@ -442,7 +462,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public List<int?> SetPoints { get; set; }
 
                 /// <summary>
-                /// <para>The list of control target set values.</para>
+                /// <para>The list of set values for the control target.</para>
                 /// </summary>
                 [NameInMap("SetValues")]
                 [Validation(Required=false)]
@@ -458,7 +478,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The format is YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-25</para>
@@ -540,7 +560,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TrafficControlTaskId { get; set; }
 
         /// <summary>
-        /// <para>The target user group conditions in array format.</para>
+        /// <para>The array-format condition of the target user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</para>
@@ -550,7 +570,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string UserConditionArray { get; set; }
 
         /// <summary>
-        /// <para>The target user group conditions in expression format.</para>
+        /// <para>The expression-format condition of the target user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</para>
@@ -560,7 +580,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string UserConditionExpress { get; set; }
 
         /// <summary>
-        /// <para>The condition type for the target user group.</para>
+        /// <para>The condition type of the target user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Array</para>
@@ -570,7 +590,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string UserConditionType { get; set; }
 
         /// <summary>
-        /// <para>The user table ID.</para>
+        /// <para>The ID of the user table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

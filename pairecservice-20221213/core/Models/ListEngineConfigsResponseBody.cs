@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListEngineConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of engine configurations.</para>
+        /// <para>The engine configurations.</para>
         /// </summary>
         [NameInMap("EngineConfigs")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The engine configuration ID.</para>
+            /// <para>The ID of the engine configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -49,12 +49,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The runtime environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Daily: Daily environment.</para>
-            /// </description></item>
-            /// <item><description><para>Pre: Pre-release environment.</para>
-            /// </description></item>
-            /// <item><description><para>Prod: Production environment.</para>
-            /// </description></item>
+            /// <item><description>Daily: Daily environment.</description></item>
+            /// <item><description>Pre: Staging environment.</description></item>
+            /// <item><description>Prod: Production environment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +92,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtReleasedTime { get; set; }
 
             /// <summary>
-            /// <para>The engine configuration name.</para>
+            /// <para>The name of the engine configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>engine_config_v1</para>
@@ -105,7 +102,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The scene ID.</para>
+            /// <para>The scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,10 +114,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Released: Released.</para>
-            /// </description></item>
-            /// <item><description><para>UnReleased: Not released.</para>
-            /// </description></item>
+            /// <item><description>Released: Released.</description></item>
+            /// <item><description>UnReleased: Unreleased.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +126,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The engine configuration type.</para>
+            /// <para>The type of the engine configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -163,7 +158,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

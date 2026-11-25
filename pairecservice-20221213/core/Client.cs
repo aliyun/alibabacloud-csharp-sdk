@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "PaiRecService";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("pairecservice", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -909,13 +912,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified recall management service is working properly.</para>
+        /// <para>Checks whether the specified recall management service is working properly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// <para>This operation allows you to check the status or performance of a specific recall management service by providing the recall management service ID and related parameters. Ensure that the <c>InstanceId</c> field is correct to point to the right instance. To test a specific version of the service, provide <c>RecallManagementServiceVersionId</c>. Additionally, you can further customize the request by using parameters such as <c>Recalls</c>, <c>ContextParams</c>, <c>ExposureList</c>, and <c>RetainFields</c> to more accurately simulate real-world scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -985,13 +988,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified recall management service is working properly.</para>
+        /// <para>Checks whether the specified recall management service is working properly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// <para>This operation allows you to check the status or performance of a specific recall management service by providing the recall management service ID and related parameters. Ensure that the <c>InstanceId</c> field is correct to point to the right instance. To test a specific version of the service, provide <c>RecallManagementServiceVersionId</c>. Additionally, you can further customize the request by using parameters such as <c>Recalls</c>, <c>ContextParams</c>, <c>ExposureList</c>, and <c>RetainFields</c> to more accurately simulate real-world scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1061,13 +1064,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified recall management service is working properly.</para>
+        /// <para>Checks whether the specified recall management service is working properly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// <para>This operation allows you to check the status or performance of a specific recall management service by providing the recall management service ID and related parameters. Ensure that the <c>InstanceId</c> field is correct to point to the right instance. To test a specific version of the service, provide <c>RecallManagementServiceVersionId</c>. Additionally, you can further customize the request by using parameters such as <c>Recalls</c>, <c>ContextParams</c>, <c>ExposureList</c>, and <c>RetainFields</c> to more accurately simulate real-world scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1086,13 +1089,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified recall management service is working properly.</para>
+        /// <para>Checks whether the specified recall management service is working properly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</para>
+        /// <para>This operation allows you to check the status or performance of a specific recall management service by providing the recall management service ID and related parameters. Ensure that the <c>InstanceId</c> field is correct to point to the right instance. To test a specific version of the service, provide <c>RecallManagementServiceVersionId</c>. Additionally, you can further customize the request by using parameters such as <c>Recalls</c>, <c>ContextParams</c>, <c>ExposureList</c>, and <c>RetainFields</c> to more accurately simulate real-world scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4251,7 +4254,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure a feature consistency check task.</para>
+        /// <para>Creates a feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4481,7 +4484,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure a feature consistency check task.</para>
+        /// <para>Creates a feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4711,7 +4714,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure a feature consistency check task.</para>
+        /// <para>Creates a feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4730,7 +4733,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure a feature consistency check task.</para>
+        /// <para>Creates a feature consistency check job configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16204,12 +16207,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</description></item>
-        /// <item><description>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</description></item>
-        /// <item><description>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</description></item>
-        /// <item><description>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c> and <c>InstanceId</c> are required parameters used to specify the task ID and instance ID to query, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>Environment</c>, <c>Version</c>, and <c>ControlTargetFilter</c> can help further refine the request to retrieve more specific task data or version information.</description></item>
+        /// <item><description>Check the returned data structure, especially the <c>TrafficControlTargets</c> section, which contains multiple control targets and their related attributes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16277,12 +16280,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</description></item>
-        /// <item><description>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</description></item>
-        /// <item><description>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</description></item>
-        /// <item><description>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c> and <c>InstanceId</c> are required parameters used to specify the task ID and instance ID to query, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>Environment</c>, <c>Version</c>, and <c>ControlTargetFilter</c> can help further refine the request to retrieve more specific task data or version information.</description></item>
+        /// <item><description>Check the returned data structure, especially the <c>TrafficControlTargets</c> section, which contains multiple control targets and their related attributes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16350,12 +16353,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</description></item>
-        /// <item><description>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</description></item>
-        /// <item><description>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</description></item>
-        /// <item><description>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c> and <c>InstanceId</c> are required parameters used to specify the task ID and instance ID to query, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>Environment</c>, <c>Version</c>, and <c>ControlTargetFilter</c> can help further refine the request to retrieve more specific task data or version information.</description></item>
+        /// <item><description>Check the returned data structure, especially the <c>TrafficControlTargets</c> section, which contains multiple control targets and their related attributes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16380,12 +16383,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</description></item>
-        /// <item><description>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</description></item>
-        /// <item><description>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</description></item>
-        /// <item><description>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</description></item>
+        /// <item><description><c>TrafficControlTaskId</c> and <c>InstanceId</c> are required parameters used to specify the task ID and instance ID to query, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>Environment</c>, <c>Version</c>, and <c>ControlTargetFilter</c> can help further refine the request to retrieve more specific task data or version information.</description></item>
+        /// <item><description>Check the returned data structure, especially the <c>TrafficControlTargets</c> section, which contains multiple control targets and their related attributes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18019,7 +18022,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18093,7 +18096,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18167,7 +18170,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18186,7 +18189,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of engine configurations.</para>
+        /// <para>Retrieves the engine configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19319,13 +19322,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tables in a specified instance and data source.</para>
+        /// <para>Queries all data tables under a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
+        /// <para>By providing the instance ID (InstanceId) and the data source ID (ResourceId), you can retrieve a list of all data tables under the data source. The optional <c>MaxcomputeSchema</c> parameter allows you to specify the MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19349,6 +19352,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["MaxcomputeSchema"] = request.MaxcomputeSchema;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableType))
+            {
+                query["TableType"] = request.TableType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -19371,13 +19378,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tables in a specified instance and data source.</para>
+        /// <para>Queries all data tables under a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
+        /// <para>By providing the instance ID (InstanceId) and the data source ID (ResourceId), you can retrieve a list of all data tables under the data source. The optional <c>MaxcomputeSchema</c> parameter allows you to specify the MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19401,6 +19408,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 query["MaxcomputeSchema"] = request.MaxcomputeSchema;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableType))
+            {
+                query["TableType"] = request.TableType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -19423,13 +19434,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tables in a specified instance and data source.</para>
+        /// <para>Queries all data tables under a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
+        /// <para>By providing the instance ID (InstanceId) and the data source ID (ResourceId), you can retrieve a list of all data tables under the data source. The optional <c>MaxcomputeSchema</c> parameter allows you to specify the MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19448,13 +19459,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all tables in a specified instance and data source.</para>
+        /// <para>Queries all data tables under a specified instance and data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <c>MaxcomputeSchema</c> parameter to specify a MaxCompute schema to further filter the results.</para>
+        /// <para>By providing the instance ID (InstanceId) and the data source ID (ResourceId), you can retrieve a list of all data tables under the data source. The optional <c>MaxcomputeSchema</c> parameter allows you to specify the MaxCompute schema to further filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22417,17 +22428,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries the traffic control tasks that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
-        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
-        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
-        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional criteria.</description></item>
+        /// <item><description>You can use different query parameters for filtering and sorting the returned list of nodes.</description></item>
+        /// <item><description>Paged query is supported. You can also retrieve all data at once without paging.</description></item>
+        /// <item><description>Note: <c>InstanceId</c> is required. All other parameters are options. Specify them as needed to obtain more accurate results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22522,17 +22533,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries the traffic control tasks that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
-        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
-        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
-        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional criteria.</description></item>
+        /// <item><description>You can use different query parameters for filtering and sorting the returned list of nodes.</description></item>
+        /// <item><description>Paged query is supported. You can also retrieve all data at once without paging.</description></item>
+        /// <item><description>Note: <c>InstanceId</c> is required. All other parameters are options. Specify them as needed to obtain more accurate results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22627,17 +22638,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries the traffic control tasks that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
-        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
-        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
-        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional criteria.</description></item>
+        /// <item><description>You can use different query parameters for filtering and sorting the returned list of nodes.</description></item>
+        /// <item><description>Paged query is supported. You can also retrieve all data at once without paging.</description></item>
+        /// <item><description>Note: <c>InstanceId</c> is required. All other parameters are options. Specify them as needed to obtain more accurate results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22657,17 +22668,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic control tasks that meet specified conditions.</para>
+        /// <para>Queries the traffic control tasks that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</description></item>
-        /// <item><description>You can filter the returned nodes and apply sorting by specifying different query parameters.</description></item>
-        /// <item><description>Paged query is supported. You can also choose to return all data at once without paging.</description></item>
-        /// <item><description>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</description></item>
+        /// <item><description>This operation retrieves a list of traffic control nodes that meet specific conditional criteria.</description></item>
+        /// <item><description>You can use different query parameters for filtering and sorting the returned list of nodes.</description></item>
+        /// <item><description>Paged query is supported. You can also retrieve all data at once without paging.</description></item>
+        /// <item><description>Note: <c>InstanceId</c> is required. All other parameters are options. Specify them as needed to obtain more accurate results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26279,13 +26290,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task for a specific traffic control target.</para>
+        /// <para>Starts a traffic shaping task with the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Call this operation to start a traffic control task by providing the <c>TrafficControlTargetId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this operation to start a specific traffic shaping task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters. Ensure that you correctly specify the values of these two parameters in the request to prevent operation failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26305,6 +26316,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                body["Environment"] = request.Environment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -26331,13 +26346,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task for a specific traffic control target.</para>
+        /// <para>Starts a traffic shaping task with the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Call this operation to start a traffic control task by providing the <c>TrafficControlTargetId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this operation to start a specific traffic shaping task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters. Ensure that you correctly specify the values of these two parameters in the request to prevent operation failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26357,6 +26372,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                body["Environment"] = request.Environment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -26383,13 +26402,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task for a specific traffic control target.</para>
+        /// <para>Starts a traffic shaping task with the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Call this operation to start a traffic control task by providing the <c>TrafficControlTargetId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this operation to start a specific traffic shaping task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters. Ensure that you correctly specify the values of these two parameters in the request to prevent operation failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26408,13 +26427,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a traffic control task for a specific traffic control target.</para>
+        /// <para>Starts a traffic shaping task with the specified ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>Call this operation to start a traffic control task by providing the <c>TrafficControlTargetId</c> and <c>InstanceId</c>.</para>
+        /// <h2>Request description</h2>
+        /// <para>You can call this operation to start a specific traffic shaping task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c> parameters. Ensure that you correctly specify the values of these two parameters in the request to prevent operation failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26907,13 +26926,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specific traffic control target.</para>
+        /// <para>Stops a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation stops a traffic control task using the provided <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to stop an ongoing traffic control task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid operating on the wrong target or instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26933,6 +26952,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                body["Environment"] = request.Environment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -26959,13 +26982,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specific traffic control target.</para>
+        /// <para>Stops a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation stops a traffic control task using the provided <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to stop an ongoing traffic control task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid operating on the wrong target or instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26985,6 +27008,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                body["Environment"] = request.Environment;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 body["InstanceId"] = request.InstanceId;
@@ -27011,13 +27038,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specific traffic control target.</para>
+        /// <para>Stops a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation stops a traffic control task using the provided <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to stop an ongoing traffic control task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid operating on the wrong target or instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27036,13 +27063,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a specific traffic control target.</para>
+        /// <para>Stops a specified traffic control target.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation stops a traffic control task using the provided <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</para>
+        /// <h2>Request description</h2>
+        /// <para>Call this operation to stop an ongoing traffic control task by specifying the <c>TrafficControlTargetId</c> and <c>InstanceId</c>. Ensure that the parameter values are accurate to avoid operating on the wrong target or instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27251,7 +27278,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs the replay log for a feature consistency check job.</para>
+        /// <para>Synchronizes the replay logs of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27333,7 +27360,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs the replay log for a feature consistency check job.</para>
+        /// <para>Synchronizes the replay logs of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27415,7 +27442,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs the replay log for a feature consistency check job.</para>
+        /// <para>Synchronizes the replay logs of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27434,7 +27461,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Syncs the replay log for a feature consistency check job.</para>
+        /// <para>Synchronizes the replay logs of a feature consistency check job.</para>
         /// </summary>
         /// 
         /// <param name="request">

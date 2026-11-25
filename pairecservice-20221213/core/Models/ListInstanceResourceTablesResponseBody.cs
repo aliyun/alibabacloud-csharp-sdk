@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of tables.</para>
+        /// <para>The list of data tables.</para>
         /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]

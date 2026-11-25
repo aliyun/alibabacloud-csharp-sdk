@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ExportRecallManagementTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The export job ID. Use this ID to track the job\&quot;s status.</para>
+        /// <para>The export job ID. Use this ID to track the job&quot;s status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

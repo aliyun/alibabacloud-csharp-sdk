@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class StopTrafficControlTargetRequest : TeaModel {
         /// <summary>
+        /// <para>The environment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Pre</para>
+        /// </summary>
+        [NameInMap("Environment")]
+        [Validation(Required=false)]
+        public string Environment { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>

@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public List<int?> EffectiveSceneNames { get; set; }
 
             /// <summary>
-            /// <para>The end time. The time is in the YYYY-MM-DD format.</para>
+            /// <para>The end time. The format is YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-25</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the task has been published.</para>
+            /// <para>Indicates whether it has been published.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -128,10 +128,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public bool? EverPublished { get; set; }
 
             /// <summary>
-            /// <para>The execution time. Valid values:</para>
+            /// <para>The execution time.</para>
             /// <list type="bullet">
-            /// <item><description>Permanent: Executes permanently.</description></item>
-            /// <item><description>TimeRange: Executes within a specified time range. If you select this value, you must specify the StartTime and EndTime parameters.</description></item>
+            /// <item><description><para>Permanent: Executes permanently.</para>
+            /// </description></item>
+            /// <item><description><para>TimeRange: Specifies a time range. If you select this value, you must specify StartTime and EndTime.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,6 +142,26 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [NameInMap("ExecutionTime")]
             [Validation(Required=false)]
             public string ExecutionTime { get; set; }
+
+            /// <summary>
+            /// <para>The expiration information of the Flink job in each environment.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;&quot;}</para>
+            /// </summary>
+            [NameInMap("FlinkJobOutdated")]
+            [Validation(Required=false)]
+            public string FlinkJobOutdated { get; set; }
+
+            /// <summary>
+            /// <para>The Flink job information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;&quot;}</para>
+            /// </summary>
+            [NameInMap("FlinkJobs")]
+            [Validation(Required=false)]
+            public string FlinkJobs { get; set; }
 
             /// <summary>
             /// <para>The Flink resource ID.</para>
@@ -152,7 +174,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FlinkResourceId { get; set; }
 
             /// <summary>
-            /// <para>The Flink resource name.</para>
+            /// <para>The name of the Flink resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flink_test</para>
@@ -162,7 +184,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FlinkResourceName { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is in the ISO 8601 format and uses Z to indicate the UTC time zone.</para>
+            /// <para>The creation time. The format is ISO 8601, where Z indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-25T06:04:28.441Z</para>
@@ -172,7 +194,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time is in the ISO 8601 format and uses Z to indicate the UTC time zone.</para>
+            /// <para>The update time. The format is ISO 8601, where Z indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-25T06:04:28.441Z</para>
@@ -182,7 +204,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The array-formatted conditions for items.</para>
+            /// <para>The item conditions in array format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
@@ -192,7 +214,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionArray { get; set; }
 
             /// <summary>
-            /// <para>The expression-formatted conditions for items.</para>
+            /// <para>The item conditions in expression format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>status=1</para>
@@ -202,7 +224,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionExpress { get; set; }
 
             /// <summary>
-            /// <para>The condition type for items.</para>
+            /// <para>The condition type of the item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Array</para>
@@ -232,7 +254,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of pre-release experiment IDs.</para>
+            /// <para>The list of staging experiment IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2</para>
@@ -242,7 +264,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PreExperimentIds { get; set; }
 
             /// <summary>
-            /// <para>The status in the pre-release environment.</para>
+            /// <para>The status in the staging environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Runnning</para>
@@ -272,7 +294,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ProductStatus { get; set; }
 
             /// <summary>
-            /// <para>The scene ID. You can obtain this ID by calling the ListScenes operation.</para>
+            /// <para>The scene ID. You can call the ListScenes operation to obtain the scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -282,7 +304,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string SceneId { get; set; }
 
             /// <summary>
-            /// <para>The scene name.</para>
+            /// <para>The name of the scene.</para>
             /// 
             /// <b>Example:</b>
             /// <para>home_feed</para>
@@ -316,7 +338,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public List<string> ServiceIds { get; set; }
 
             /// <summary>
-            /// <para>The start time. The time is in the YYYY-MM-DD format.</para>
+            /// <para>The start time. The format is YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-25</para>
@@ -326,7 +348,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The expression-formatted conditions for behavior statistics.</para>
+            /// <para>The expression format for behavior statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>event=click</para>
@@ -336,7 +358,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string StatisBahaviorConditionExpress { get; set; }
 
             /// <summary>
-            /// <para>The array-formatted conditions for behavior statistics.</para>
+            /// <para>The array-format conditions for behavior statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</para>
@@ -373,7 +395,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public List<ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets> TrafficControlTargets { get; set; }
             public class ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets : TeaModel {
                 /// <summary>
-                /// <para>The end time. The time is in the YYYY-MM-DD format.</para>
+                /// <para>The end time. The format is YYYY-MM-DD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-04-25</para>
@@ -383,7 +405,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The event for the traffic control target.</para>
+                /// <para>The event of the control target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>click</para>
@@ -393,7 +415,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string Event { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. The time is in the ISO 8601 format and includes the time zone offset.</para>
+                /// <para>The creation time. The format is ISO 8601 and includes the time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-03T15:08:10.58+08:00</para>
@@ -403,7 +425,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The update time. The time is in the ISO 8601 format and includes the time zone offset.</para>
+                /// <para>The update time. The format is ISO 8601 and includes the time zone offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-11-21T16:26:58.57+08:00</para>
@@ -413,7 +435,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string GmtModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The array-formatted conditions for items.</para>
+                /// <para>The item conditions in array format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
@@ -423,7 +445,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string ItemConditionArray { get; set; }
 
                 /// <summary>
-                /// <para>The expression-formatted conditions for items.</para>
+                /// <para>The item conditions in expression format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status=1</para>
@@ -433,7 +455,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string ItemConditionExpress { get; set; }
 
                 /// <summary>
-                /// <para>The condition type for items.</para>
+                /// <para>The condition type of the item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Array</para>
@@ -443,7 +465,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string ItemConditionType { get; set; }
 
                 /// <summary>
-                /// <para>The traffic control target.</para>
+                /// <para>The control target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>target-1</para>
@@ -453,7 +475,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the recall applies to new items.</para>
+                /// <para>Indicates whether it is a new item recall.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -496,7 +518,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 }
 
                 /// <summary>
-                /// <para>The start time. The time is in the YYYY-MM-DD format.</para>
+                /// <para>The start time. The format is YYYY-MM-DD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-03-25</para>
@@ -526,7 +548,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The tolerance range of the traffic control target.</para>
+                /// <para>The tolerance range of the control target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -556,7 +578,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string TrafficControlTaskId { get; set; }
 
                 /// <summary>
-                /// <para>The target value for traffic control.</para>
+                /// <para>The value of the control target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -578,7 +600,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string TrafficControlTaskId { get; set; }
 
             /// <summary>
-            /// <para>The array-formatted conditions for the target user group.</para>
+            /// <para>The array-format conditions for the intervened user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</para>
@@ -588,7 +610,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string UserConditionArray { get; set; }
 
             /// <summary>
-            /// <para>The expression-formatted conditions for the target user group.</para>
+            /// <para>The expression-format conditions for the intervened user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</para>
@@ -598,7 +620,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string UserConditionExpress { get; set; }
 
             /// <summary>
-            /// <para>The condition type for the target user group.</para>
+            /// <para>The condition type of the intervened user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Array</para>

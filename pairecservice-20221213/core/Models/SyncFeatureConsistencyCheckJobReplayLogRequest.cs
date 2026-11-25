@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;Value\&quot;:{\&quot;FloatFeature\&quot;:0.1}}]</para>
+        /// <para>[{&quot;Value&quot;:{&quot;FloatFeature&quot;:0.1}}]</para>
         /// </summary>
         [NameInMap("ContextFeatures")]
         [Validation(Required=false)]
         public string ContextFeatures { get; set; }
 
         /// <summary>
-        /// <para>The feature consistency check job configuration ID. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</para>
+        /// <para>The ID of the feature consistency check job configuration. For information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GeneratedFeatures { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
+        /// <para>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The item ID from the log.</para>
+        /// <para>The item ID in the log.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogItemId { get; set; }
 
         /// <summary>
-        /// <para>The request ID from the log.</para>
+        /// <para>The request ID in the log.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogRequestId { get; set; }
 
         /// <summary>
-        /// <para>The request time from the log, provided as a UNIX epoch timestamp.</para>
+        /// <para>The request time in the log (UNIX epoch timestamp).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? LogRequestTime { get; set; }
 
         /// <summary>
-        /// <para>The user ID from the log.</para>
+        /// <para>The user ID in the log.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,14 +102,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>author__kv_city_expr_cnt_15d：北京市 | tem__min_age_15d:28</para>
+        /// <para>author__kv_city_expr_cnt_15d:Beijing | tem__min_age_15d:28</para>
         /// </summary>
         [NameInMap("RawFeatures")]
         [Validation(Required=false)]
         public string RawFeatures { get; set; }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The name of the scene.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

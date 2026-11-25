@@ -19,6 +19,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string MaxcomputeSchema { get; set; }
 
+        /// <summary>
+        /// <para>The table type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ManagedTable</para>
+        /// </summary>
+        [NameInMap("TableType")]
+        [Validation(Required=false)]
+        public string TableType { get; set; }
+
     }
 
 }

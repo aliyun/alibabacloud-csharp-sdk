@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The parameter\&quot;s value.</para>
+        /// <para>The parameter&quot;s value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>house</para>

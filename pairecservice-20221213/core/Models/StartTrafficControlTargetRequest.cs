@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class StartTrafficControlTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The environment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Prod</para>
+        /// </summary>
+        [NameInMap("Environment")]
+        [Validation(Required=false)]
+        public string Environment { get; set; }
+
+        /// <summary>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pairec-1324***</para>

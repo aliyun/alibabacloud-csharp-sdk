@@ -20,12 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ControlTargetFilter { get; set; }
 
         /// <summary>
-        /// <para>The environment to which the parameter belongs. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Daily: daily environment</description></item>
-        /// <item><description>Pre: staging environment</description></item>
-        /// <item><description>Prod: production environment.</description></item>
-        /// </list>
+        /// <para>The environment to which the parameter belongs. Valid values: Daily: daily environment. Pre: staging environment. Prod: production environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>

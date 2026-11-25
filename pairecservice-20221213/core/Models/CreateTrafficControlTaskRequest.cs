@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>The conditions for items in array format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</para>
+        /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
         /// </summary>
         [NameInMap("ItemConditionArray")]
         [Validation(Required=false)]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>The conditions for statistical behaviors in array format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;field\&quot;:\&quot;click\&quot;,\&quot;option\&quot;:\&quot;&lt;=\&quot;,\&quot;value\&quot;:\&quot;30\&quot;}]</para>
+        /// <para>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</para>
         /// </summary>
         [NameInMap("StatisBehaviorConditionArray")]
         [Validation(Required=false)]
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The conditions for items in array format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</para>
+            /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
             /// </summary>
             [NameInMap("ItemConditionArray")]
             [Validation(Required=false)]
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>The conditions for the target users in array format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;field\&quot;:\&quot;gender\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;male\&quot;}]</para>
+        /// <para>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</para>
         /// </summary>
         [NameInMap("UserConditionArray")]
         [Validation(Required=false)]

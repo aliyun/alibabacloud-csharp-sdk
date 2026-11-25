@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                         /// <para>The feature expression.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>city = \&quot;hangzhou\&quot;</para>
+                        /// <para>city = &quot;hangzhou&quot;</para>
                         /// </summary>
                         [NameInMap("Expression")]
                         [Validation(Required=false)]

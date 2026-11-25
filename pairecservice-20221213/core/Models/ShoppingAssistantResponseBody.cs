@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             /// <para>The response content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Here are some light-colored long-sleeve shirts for you:\\n</para>
+            /// <para>Here are some light-colored long-sleeve shirts for you:\n</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]

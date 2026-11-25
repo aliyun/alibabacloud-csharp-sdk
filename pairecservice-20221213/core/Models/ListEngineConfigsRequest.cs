@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The runtime environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Daily: Daily environment.</para>
-        /// </description></item>
-        /// <item><description><para>Pre: Pre-release environment.</para>
-        /// </description></item>
-        /// <item><description><para>Prod: Production environment.</para>
-        /// </description></item>
+        /// <item><description>Daily: Daily environment.</description></item>
+        /// <item><description>Pre: Staging environment.</description></item>
+        /// <item><description>Prod: Production environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to query instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +36,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The engine configuration name.</para>
+        /// <para>The name of the engine configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>engine_config_v1</para>
@@ -69,7 +66,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The scene ID.</para>
+        /// <para>The scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,10 +78,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <summary>
         /// <para>The status filter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Released: Released.</para>
-        /// </description></item>
-        /// <item><description><para>Unreleased: Not released.</para>
-        /// </description></item>
+        /// <item><description>Released: Released.</description></item>
+        /// <item><description>Unreleased: Unreleased.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,8 +90,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The version filter. Valid values:</para>
-        /// <para>latest: the most recently updated version.</para>
+        /// <para>The version filter. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>latest: The most recently updated version.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>latest</para>

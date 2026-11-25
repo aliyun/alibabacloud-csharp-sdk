@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class BackflowFeatureConsistencyCheckJobDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the feature consistency check job configuration. For more information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</para>
+        /// <para>The ID of the feature consistency check job configuration. To obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureConsistencyCheckJobConfigId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. For more information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
+        /// <para>The ID of the instance. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;{\\\&quot;itemid\\\&quot;:{\\\&quot;value\\\&quot;:1010,\\\&quot;type\\\&quot;:\\\&quot;string\\\&quot;}}\&quot;]</para>
+        /// <para>[&quot;{\&quot;itemid\&quot;:{\&quot;value\&quot;:1010,\&quot;type\&quot;:\&quot;string\&quot;}}&quot;]</para>
         /// </summary>
         [NameInMap("ItemFeatures")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogUserId { get; set; }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The name of the scene.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;{\\\&quot;dbmtl_probs_is_valid_play\\\&quot;:0.00032182207107543945,\\\&quot;dbmtl_y_play_time\\\&quot;:0.0043269748210906982}\&quot;]</para>
+        /// <para>[&quot;{\&quot;dbmtl_probs_is_valid_play\&quot;:0.00032182207107543945,\&quot;dbmtl_y_play_time\&quot;:0.0043269748210906982}&quot;]</para>
         /// </summary>
         [NameInMap("Scores")]
         [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;userid\&quot;:{\&quot;value\&quot;:1010,\&quot;type\&quot;:\&quot;string\&quot;},\&quot;click_5_seq\&quot;:{\&quot;value\&quot;:\&quot;9001;9002;9003;9004;9005\&quot;,\&quot;type\&quot;:\&quot;string\&quot;}}</para>
+        /// <para>{&quot;userid&quot;:{&quot;value&quot;:1010,&quot;type&quot;:&quot;string&quot;},&quot;click_5_seq&quot;:{&quot;value&quot;:&quot;9001;9002;9003;9004;9005&quot;,&quot;type&quot;:&quot;string&quot;}}</para>
         /// </summary>
         [NameInMap("UserFeatures")]
         [Validation(Required=false)]
