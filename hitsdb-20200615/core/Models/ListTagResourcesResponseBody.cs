@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The token that is used to start the next query.</para>
         /// <remarks>
-        /// <para>If not all results are returned in a query, the response includes this parameter. You can use the value of this parameter to start the next query.</para>
+        /// <para>This parameter is returned if a query does not return all results. You can pass the value of this parameter in a subsequent query to continue the query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. The value is fixed to <b>ALIYUN::HITSDB::INSTANCE</b>.</para>
+            /// <para>The resource type. The value is fixed as <b>ALIYUN::HITSDB::INSTANCE</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN::HITSDB::INSTANCE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.2.8</para>

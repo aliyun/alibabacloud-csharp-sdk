@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpgradeLindormInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The new storage capacity of the instance. Unit: GB. Valid values: <b>480</b> to <b>1017600</b>.</para>
+        /// <para>The storage capacity of the instance after the specification change. Unit: GB. Valid values: <b>480</b> to <b>1017600</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>480</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? ClusterStorage { get; set; }
 
         /// <summary>
-        /// <para>The new cold storage capacity of the instance. Unit: GB. Valid values: <b>800</b> to <b>1000000</b>.</para>
+        /// <para>The cold storage capacity of the instance after the specification change. Unit: GB. Valid values: <b>800</b> to <b>1000000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? ColdStorage { get; set; }
 
         /// <summary>
-        /// <para>The new storage capacity of a single core node in a multi-zone instance. Unit: GB. Valid values: 400 to 64000. <b>This parameter is optional.</b></para>
+        /// <para>The storage capacity per core node of the instance after the specification change for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <b>Specify this parameter if the target instance is a multi-zone instance.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>400GB</para>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("CoreSingleStorage")]
         [Validation(Required=false)]
         public int? CoreSingleStorage { get; set; }
 
         /// <summary>
-        /// <para>The new number of file engine nodes. Valid values: <b>0</b> to <b>60</b>.</para>
+        /// <para>The number of file engine nodes of the instance after the specification change. Valid values: <b>0</b> to <b>60</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? FilestoreNum { get; set; }
 
         /// <summary>
-        /// <para>The new specification of the file engine nodes. Valid value:</para>
-        /// <para><b>lindorm.c.xlarge</b>: 4 CPU cores, 8 GB of memory (standard specification).</para>
+        /// <para>The file engine node specifications of the instance after the specification change. Valid values:</para>
+        /// <para><b>indorm.c.xlarge</b>: 4 cores and 8 GB of memory (standard specification).</para>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm.c.xlarge</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FilestoreSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain this ID.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,9 +72,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new number of wide table engine nodes. Valid values: <b>0</b> to <b>90</b>.</para>
+        /// <para>The number of LindormTable nodes of the instance after the specification change. Valid values: <b>0</b> to <b>90</b>.</para>
         /// <remarks>
-        /// <para>If you specify this parameter, the LindormSpec parameter is also required.</para>
+        /// <para>This parameter must be specified together with the LindormSpec parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,16 +85,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LindormNum { get; set; }
 
         /// <summary>
-        /// <para>The new specification of the wide table engine nodes. Valid values:</para>
+        /// <para>The LindormTable engine node specifications of the instance after the specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm.c.xlarge</b>: 4 CPU cores, 8 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.c.2xlarge</b>: 8 CPU cores, 16 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.c.4xlarge</b>: 16 CPU cores, 32 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.c.8xlarge</b>: 32 CPU cores, 64 GB of memory (dedicated specification).</para>
-        /// </description></item>
+        /// <item><description><b>lindorm.c.xlarge</b>: 4 cores and 8 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.c.2xlarge</b>: 8 cores and 16 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.c.4xlarge</b>: 16 cores and 32 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.c.8xlarge</b>: 32 cores and 64 GB of memory (dedicated specification).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +101,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LindormSpec { get; set; }
 
         /// <summary>
-        /// <para>The new number of log nodes for a multi-zone instance. Valid values: 4 to 400. <b>This parameter is optional.</b></para>
+        /// <para>The number of log nodes of the instance after the specification change for a multi-zone instance. Valid values: 4 to 400. <b>Specify this parameter if the target instance is a multi-zone instance.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -115,24 +111,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LogNum { get; set; }
 
         /// <summary>
-        /// <para>The new disk capacity of a single log node for a multi-zone instance. Unit: GB. Valid values: 400 to 64000. <b>This parameter is optional.</b></para>
+        /// <para>The disk capacity per log node of the instance after the specification change for a multi-zone instance. Valid values: 400 to 64000. Unit: GB. <b>Specify this parameter if the target instance is a multi-zone instance.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>400GB</para>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("LogSingleStorage")]
         [Validation(Required=false)]
         public int? LogSingleStorage { get; set; }
 
         /// <summary>
-        /// <para>The new specification of the log nodes for a multi-zone instance. Valid values:</para>
+        /// <para>The log node specifications of the instance after the specification change for a multi-zone instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm.sn1.large</b>: 4 CPU cores, 8 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.sn1.2xlarge</b>: 8 CPU cores, 16 GB of memory (dedicated specification).</para>
-        /// </description></item>
+        /// <item><description><b>lindorm.sn1.large</b>: 4 cores and 8 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.sn1.2xlarge</b>: 8 cores and 16 GB of memory (dedicated specification).</description></item>
         /// </list>
-        /// <para><b>This parameter is optional.</b></para>
+        /// <para><b>Specify this parameter if the target instance is a multi-zone instance.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm.sn1.large</para>
@@ -142,7 +136,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LogSpec { get; set; }
 
         /// <summary>
-        /// <para>The new number of LTS nodes. Valid values: <b>0</b> to <b>50</b>.</para>
+        /// <para>The number of LTS nodes of the instance after the specification change. Valid values: <b>0</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -152,12 +146,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LtsCoreNum { get; set; }
 
         /// <summary>
-        /// <para>The new specification of the LTS nodes. Valid values:</para>
+        /// <para>The LTS node specifications of the instance after the specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 CPU cores, 16 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 CPU cores, 32 GB of memory (dedicated specification).</para>
-        /// </description></item>
+        /// <item><description><b>lindorm.g.xlarge</b>: 4 cores and 16 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.g.2xlarge</b>: 8 cores and 32 GB of memory (dedicated specification).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -176,7 +168,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain the latest region list.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -199,7 +191,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The new number of search engine nodes. Valid values: <b>0</b> to <b>60</b>.</para>
+        /// <para>The number of search index engine nodes of the instance after the specification change. Valid values: <b>0</b> to <b>60</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -209,16 +201,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? SolrNum { get; set; }
 
         /// <summary>
-        /// <para>The new specification of the search engine nodes. Valid values:</para>
+        /// <para>The search index engine node specifications of the instance after the specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 CPU cores, 16 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 CPU cores, 32 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 CPU cores, 64 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.g.8xlarg</b>e: 32 CPU cores, 128 GB of memory (dedicated specification).</para>
-        /// </description></item>
+        /// <item><description><b>lindorm.g.xlarge</b>: 4 cores and 16 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.g.2xlarge</b>: 8 cores and 32 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.g.4xlarge</b>: 16 cores and 64 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.g.8xlarg</b>e: 32 cores and 128 GB of memory (dedicated specification).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -229,7 +217,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SolrSpec { get; set; }
 
         /// <summary>
-        /// <para>The new number of stream engine nodes. Valid values: <b>0</b> to <b>90</b>.</para>
+        /// <para>The number of stream engine nodes of the instance after the specification change. Valid values: <b>0</b> to <b>90</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -239,14 +227,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? StreamNum { get; set; }
 
         /// <summary>
-        /// <para>The new specification of the stream engine nodes. Valid values:</para>
+        /// <para>The stream engine node specifications of the instance after the specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm.c.2xlarge</b>: 8 CPU cores, 16 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.c.4xlarge</b>: 16 CPU cores, 32 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.c.8xlarge</b>: 32 CPU cores, 64 GB of memory (dedicated specification).</para>
-        /// </description></item>
+        /// <item><description><b>lindorm.c.2xlarge</b>: 8 cores and 16 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.c.4xlarge</b>: 16 cores and 32 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.c.8xlarge</b>: 32 cores and 64 GB of memory (dedicated specification).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -257,7 +242,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string StreamSpec { get; set; }
 
         /// <summary>
-        /// <para>The new number of time series engine nodes. Valid values: <b>0</b> to <b>24</b>.</para>
+        /// <para>The number of LindormTSDB nodes of the instance after the specification change. Valid values: <b>0</b> to <b>24</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -267,16 +252,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? TsdbNum { get; set; }
 
         /// <summary>
-        /// <para>The new specification of the time series engine nodes. Valid values:</para>
+        /// <para>The LindormTSDB engine node specifications of the instance after the specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm.g.xlarge</b>: 4 CPU cores, 16 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 CPU cores, 32 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 CPU cores, 64 GB of memory (dedicated specification).</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm.g.8xlarge</b>: 32 CPU cores, 128 GB of memory (dedicated specification).</para>
-        /// </description></item>
+        /// <item><description><b>lindorm.g.xlarge</b>: 4 cores and 16 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.g.2xlarge</b>: 8 cores and 32 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.g.4xlarge</b>: 16 cores and 64 GB of memory (dedicated specification).</description></item>
+        /// <item><description><b>lindorm.g.8xlarge</b>: 32 cores and 128 GB of memory (dedicated specification).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -287,7 +268,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string TsdbSpec { get; set; }
 
         /// <summary>
-        /// <para>The type of the upgrade. For details about the supported types, see the description of the UpgradeType parameter in the &quot;Additional information about request parameters&quot; section.</para>
+        /// <para>The type of specification change for the instance. For supported types, see the UpgradeType parameter description in the request parameters supplement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -298,7 +279,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string UpgradeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the availability zone. You can call the <a href="https://help.aliyun.com/document_detail/426067.html">GetLindormInstance</a> operation to obtain this ID.</para>
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/426067.html">GetLindormInstance</a> operation to query the zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

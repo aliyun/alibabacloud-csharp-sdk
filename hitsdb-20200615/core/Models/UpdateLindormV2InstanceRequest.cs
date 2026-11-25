@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateLindormV2InstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The capacity of the storage-optimized storage.</para>
+        /// <para>The capacity storage space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? CapacityStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The cloud storage capacity. Unit: GB.</para>
+        /// <para>The cloud storage space. Unit: GB. When you modify the cloud storage space, you must also specify EngineList. The EngineType parameter in EngineList, and the NodeSpec and NodeCount parameters in NodeGroupList are required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>480</para>
@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? CloudStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The cloud storage class.</para>
+        /// <para>The cloud storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PerformanceStorage</b>: performance cloud storage.</para>
-        /// </description></item>
-        /// <item><description><para><b>StandardStorage</b>: standard cloud storage.</para>
-        /// </description></item>
+        /// <item><description><b>PerformanceStorage</b>: Performance cloud storage.</description></item>
+        /// <item><description><b>StandardStorage</b>: Standard cloud storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string CloudStorageType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable storage-optimized storage.</para>
+        /// <para>Specifies whether to enable capacity storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableCapacityStorage { get; set; }
 
         /// <summary>
-        /// <para>A list of engine types.</para>
+        /// <para>The list of engine types.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EngineList")]
@@ -66,20 +64,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>TABLE: LindormTable.</para>
-            /// </description></item>
-            /// <item><description><para>TSDB: LindormTSDB.</para>
-            /// </description></item>
-            /// <item><description><para>LSEARCH: search engine.</para>
-            /// </description></item>
-            /// <item><description><para>LTS: LTS engine.</para>
-            /// </description></item>
-            /// <item><description><para>LVECTOR: vector engine.</para>
-            /// </description></item>
-            /// <item><description><para>LCOLUMN: column store.</para>
-            /// </description></item>
-            /// <item><description><para>LAI: AI engine.</para>
-            /// </description></item>
+            /// <item><description>TABLE: LindormTable.</description></item>
+            /// <item><description>TSDB: LindormTSDB.</description></item>
+            /// <item><description>LSEARCH: search engine.</description></item>
+            /// <item><description>LTS: Lindorm Tunnel Service.</description></item>
+            /// <item><description>LVECTOR: vector engine.</description></item>
+            /// <item><description>LCOLUMN: column store engine.</description></item>
+            /// <item><description>LAI: AI engine.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -91,7 +82,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>A list of engine node groups.</para>
+            /// <para>The list of engine node groups.</para>
             /// </summary>
             [NameInMap("NodeGroupList")]
             [Validation(Required=false)]
@@ -119,7 +110,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public int? NodeCount { get; set; }
 
                 /// <summary>
-                /// <para>The disk size of a single node. This parameter is not required.</para>
+                /// <para>The disk size per node. This parameter is not required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -129,7 +120,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public int? NodeDiskSize { get; set; }
 
                 /// <summary>
-                /// <para>The disk type of the node. This parameter is not required. <b>This parameter is available only for specific scenarios and is accessible to users on a whitelist.</b></para>
+                /// <para>The cloud disk type of the node. This parameter is not required. <b>This parameter is used in special scenarios and is available only after your account is added to the whitelist.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_essd</para>
@@ -139,20 +130,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public string NodeDiskType { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications of the engine.</para>
+                /// <para>The node specifications of the engine. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>lindorm.c.2xlarge</b>: 8 cores and 16 GB of memory.</para>
-                /// </description></item>
-                /// <item><description><para><b>lindorm.g.2xlarge</b>: 8 cores and 32 GB of memory.</para>
-                /// </description></item>
-                /// <item><description><para><b>lindorm.c.4xlarge</b>: 16 cores and 32 GB of memory.</para>
-                /// </description></item>
-                /// <item><description><para><b>lindorm.g.4xlarge</b>: 16 cores and 64 GB of memory.</para>
-                /// </description></item>
-                /// <item><description><para><b>lindorm.c.8xlarge</b>: 32 cores and 64 GB of memory.</para>
-                /// </description></item>
-                /// <item><description><para><b>lindorm.g.8xlarge</b>: 32 cores and 128 GB of memory.</para>
-                /// </description></item>
+                /// <item><description><b>lindorm.c.2xlarge</b>: 8 vCPUs and 16 GB of memory.</description></item>
+                /// <item><description><b>lindorm.g.2xlarge</b>: 8 vCPUs and 32 GB of memory.</description></item>
+                /// <item><description><b>lindorm.c.4xlarge</b>: 16 vCPUs and 32 GB of memory.</description></item>
+                /// <item><description><b>lindorm.g.4xlarge</b>: 16 vCPUs and 64 GB of memory.</description></item>
+                /// <item><description><b>lindorm.c.8xlarge</b>: 32 vCPUs and 64 GB of memory.</description></item>
+                /// <item><description><b>lindorm.g.8xlarge</b>: 32 vCPUs and 128 GB of memory.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -164,7 +149,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public string NodeSpec { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node group. <b>This parameter is required.</b> You can obtain the name by calling the GetLindormV2Instance operation.</para>
+                /// <para>The name of the node group. You can call the GetLindormV2InstanceDetails operation to query the name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>groupName</para>
@@ -197,7 +182,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located. To query the latest region list, call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID. Use this parameter to specify the region where you want to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

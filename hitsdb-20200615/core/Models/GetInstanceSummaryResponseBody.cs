@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LockingCount { get; set; }
 
         /// <summary>
-        /// <para>An array of region summaries.</para>
+        /// <para>The collection of region information.</para>
         /// </summary>
         [NameInMap("RegionalSummary")]
         [Validation(Required=false)]
         public List<GetInstanceSummaryResponseBodyRegionalSummary> RegionalSummary { get; set; }
         public class GetInstanceSummaryResponseBodyRegionalSummary : TeaModel {
             /// <summary>
-            /// <para>The number of instances in <c>{RegionId}</c> that are about to expire.</para>
+            /// <para>The number of instances that are about to expire in {RegionId}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of running instances in <c>{RegionId}</c>.</para>
+            /// <para>The number of running instances in {RegionId}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public int? RunningCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of instances in <c>{RegionId}</c> that are running or about to expire.</para>
+            /// <para>The total number of running instances and instances that are about to expire in {RegionId}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? RunningCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances that are running or about to expire.</para>
+        /// <para>The total number of running instances and instances that are about to expire.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

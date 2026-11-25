@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormInstanceEngineListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why the access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</para>
@@ -29,14 +29,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>lindorm</b>: LindormTable.</para>
-            /// </description></item>
-            /// <item><description><para><b>tsdb</b>: LindormTSDB.</para>
-            /// </description></item>
-            /// <item><description><para><b>solr</b>: Search engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>store</b>: File engine.</para>
-            /// </description></item>
+            /// <item><description><b>lindorm</b>: LindormTable.</description></item>
+            /// <item><description><b>tsdb</b>: LindormTSDB.</description></item>
+            /// <item><description><b>solr</b>: search engine.</description></item>
+            /// <item><description><b>store</b>: file engine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,20 +52,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 /// <summary>
                 /// <para>The connection method for LindormTable. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: This is the default value and can be ignored.</para>
-                /// </description></item>
-                /// <item><description><para><b>1</b>: Use the HBase Java API to access LindormTable.</para>
-                /// </description></item>
-                /// <item><description><para><b>2</b>: Use a non-Java HBase API to access LindormTable.</para>
-                /// </description></item>
-                /// <item><description><para><b>3</b>: Use CQL to access LindormTable.</para>
-                /// </description></item>
-                /// <item><description><para><b>4</b>: Use the LindormTable SQL endpoint.</para>
-                /// </description></item>
-                /// <item><description><para><b>5</b>: Use the S3-compatible endpoint for LindormTable.</para>
-                /// </description></item>
-                /// <item><description><para><b>6</b>: Use the MySQL-compatible endpoint for LindormTable.</para>
-                /// </description></item>
+                /// <item><description><b>0</b>: Default value. You can ignore this value.</description></item>
+                /// <item><description><b>1</b>: Use the HBase Java API to access the LindormTable endpoint.</description></item>
+                /// <item><description><b>2</b>: Use a non-Java HBase API to access the LindormTable endpoint.</description></item>
+                /// <item><description><b>3</b>: Use CQL to access the LindormTable endpoint.</description></item>
+                /// <item><description><b>4</b>: Use the LindormTable SQL endpoint.</description></item>
+                /// <item><description><b>5</b>: Use the LindormTable S3-compatible endpoint.</description></item>
+                /// <item><description><b>6</b>: Use the LindormTable MySQL-compatible endpoint.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -92,10 +81,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 /// <summary>
                 /// <para>The network type of the database endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: Internet.</para>
-                /// </description></item>
-                /// <item><description><para><b>2</b>: Virtual private cloud (VPC).</para>
-                /// </description></item>
+                /// <item><description><b>0</b>: Internet.</description></item>
+                /// <item><description><b>2</b>: VPC.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

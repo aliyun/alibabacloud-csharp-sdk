@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetInstanceIpWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. To obtain the ID, call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426068.html">GetLindormInstanceList</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

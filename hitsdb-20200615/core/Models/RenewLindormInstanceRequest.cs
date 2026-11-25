@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class RenewLindormInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The subscription duration. Valid values:</para>
+        /// <para>The subscription duration of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set PricingCycle to <b>Month</b>, the valid values for this parameter are <b>1</b> to <b>9</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If you set PricingCycle to <b>Year</b>, the valid values for this parameter are <b>1</b> to <b>3</b>.</para>
-        /// </description></item>
+        /// <item><description>If PricingCycle is set to <b>Month</b>, the instance is billed by month. Valid values: <b>1</b> to <b>9</b>.</description></item>
+        /// <item><description>If PricingCycle is set to <b>Year</b>, the instance is billed by year. Valid values: <b>1</b> to <b>3</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</para>
+        /// <para>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID. The instance must be in the ACTIVATION (Running) state to be renewed. Instances in other states, such as CREATING (Creating), cannot be renewed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,12 +44,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle for the instance renewal. Valid values:</para>
+        /// <para>The billing cycle of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Month</b>: The instance is renewed by month.</para>
-        /// </description></item>
-        /// <item><description><para><b>Year</b>: The instance is renewed by year.</para>
-        /// </description></item>
+        /// <item><description><b>Month</b>: months</description></item>
+        /// <item><description><b>Year</b>: years</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

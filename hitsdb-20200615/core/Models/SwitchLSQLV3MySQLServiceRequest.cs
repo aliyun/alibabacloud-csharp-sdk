@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class SwitchLSQLV3MySQLServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the operation. Valid values:</para>
+        /// <para>The operation type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: Enable</para>
+        /// <item><description><para>1: Enable.</para>
         /// </description></item>
-        /// <item><description><para>0: Disable</para>
+        /// <item><description><para>0: Disable.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? ActionType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

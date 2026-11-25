@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The subscription duration. This parameter is required when you change the billing method to subscription.</para>
         /// <list type="bullet">
-        /// <item><description><para>If \<c>PricingCycle\\</c> is \<c>Month\\</c>, the valid values are 1 to 9.</para>
+        /// <item><description><para>If PricingCycle is set to Month, valid values are [1, 9].</para>
         /// </description></item>
-        /// <item><description><para>If \<c>PricingCycle\\</c> is \<c>Year\\</c>, the valid values are 1 to 3.</para>
+        /// <item><description><para>If PricingCycle is set to Year, valid values are [1, 3].</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PREPAY</b>: subscription.</para>
-        /// </description></item>
-        /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description><b>PREPAY</b>: subscription</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,11 +60,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is required when you change the billing method to subscription.</para>
+        /// <para>The unit of the subscription duration. This parameter is required when you change the billing method to subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month: The unit is month.</para>
+        /// <item><description><para>Month: month</para>
         /// </description></item>
-        /// <item><description><para>Year: The unit is year.</para>
+        /// <item><description><para>Year: year</para>
         /// </description></item>
         /// </list>
         /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? AliUid { get; set; }
 
         /// <summary>
-        /// <para>For a multi-zone instance, this is the ID of the virtual switch in the arbiter zone. The vSwitch must be in the zone specified by ArbiterZoneId.</para>
+        /// <para>The vSwitch ID of the arbitration zone for a multi-zone instance. The vSwitch must be in the zone specified by ArbiterZoneId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6664pqjawb87k36****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ArbiterVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>For a multi-zone instance, this is the ID of the arbiter zone.</para>
+        /// <para>The zone ID of the arbitration zone for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-g</para>
@@ -40,15 +40,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ArbiterZoneId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether auto-renewal is enabled. Valid values:</para>
+        /// <para>Indicates whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only for subscription instances.</para>
+        /// <para>This parameter is returned only when the billing method of the instance is subscription.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The cloud storage capacity in GB.</para>
+        /// <para>The cloud storage capacity, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>480</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? CloudStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the storage-optimized cloud storage.</para>
+        /// <para>The storage-optimized cloud storage capacity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>
@@ -79,7 +77,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? ColdStorage { get; set; }
 
         /// <summary>
-        /// <para>The number of milliseconds between the instance creation time and 00:00:00 on January 1, 1970.</para>
+        /// <para>The number of milliseconds between the instance creation time and 1970-01-01 00:00:00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1627290664000</para>
@@ -91,10 +89,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>Indicates whether deletion protection is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,12 +101,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The storage class. Valid values:</para>
+        /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>StandardStorage</b>: Standard cloud storage.</para>
-        /// </description></item>
-        /// <item><description><para><b>PerformanceStorage</b>: Performance cloud storage.</para>
-        /// </description></item>
+        /// <item><description><b>StandardStorage</b>: standard cloud storage.</description></item>
+        /// <item><description><b>PerformanceStorage</b>: performance cloud storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,12 +135,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string DiskUsage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the compute engine is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether the compute engine is activated for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: activated.</description></item>
+        /// <item><description><b>false</b>: not activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,7 +149,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableCompute { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the file engine is enabled.</para>
+        /// <para>Indicates whether the file engine is activated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -167,7 +159,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string EnableFs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether transparent data encryption (TDE) is enabled for storage.</para>
+        /// <para>Indicates whether storage TDE encryption is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -184,14 +176,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public List<GetLindormV2InstanceDetailsResponseBodyEngineList> EngineList { get; set; }
         public class GetLindormV2InstanceDetailsResponseBodyEngineList : TeaModel {
             /// <summary>
-            /// <para>A list of engine endpoints.</para>
+            /// <para>The list of engine connection addresses.</para>
             /// </summary>
             [NameInMap("ConnectAddressList")]
             [Validation(Required=false)]
             public List<GetLindormV2InstanceDetailsResponseBodyEngineListConnectAddressList> ConnectAddressList { get; set; }
             public class GetLindormV2InstanceDetailsResponseBodyEngineListConnectAddressList : TeaModel {
                 /// <summary>
-                /// <para>The endpoint.</para>
+                /// <para>The connection address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ld-mxj9asg***-proxy-lindorm-vpc.lindorm.aliyuncs.com:33060</para>
@@ -211,12 +203,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint type.</para>
+                /// <para>The connection address type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>INTRANET: VPC private endpoint.</para>
-                /// </description></item>
-                /// <item><description><para>INTERNET: Public endpoint.</para>
-                /// </description></item>
+                /// <item><description>INTRANET: VPC private network address.</description></item>
+                /// <item><description>INTERNET: public address.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -231,18 +221,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>TABLE</b>: LindormTable.</para>
-            /// </description></item>
-            /// <item><description><para><b>TSDB</b>: LindormTSDB.</para>
-            /// </description></item>
-            /// <item><description><para><b>LSEARCH</b>: Search engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>LTS</b>: LTS engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>LVECTOR</b>: Vector engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>LCOLUMN</b>: Column store.</para>
-            /// </description></item>
+            /// <item><description><b>TABLE</b>: LindormTable.</description></item>
+            /// <item><description><b>TSDB</b>: LindormTSDB.</description></item>
+            /// <item><description><b>LSEARCH</b>: search index engine.</description></item>
+            /// <item><description><b>LTS</b>: LTS timing engine.</description></item>
+            /// <item><description><b>LVECTOR</b>: vector engine.</description></item>
+            /// <item><description><b>LCOLUMN</b>: column store engine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -253,12 +237,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the engine is the latest version. Valid values:</para>
+            /// <para>Indicates whether the engine is running the latest version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The engine is the latest version.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The engine is not the latest version.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: the latest version.</description></item>
+            /// <item><description><b>false</b>: not the latest version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -279,7 +261,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string LatestVersion { get; set; }
 
             /// <summary>
-            /// <para>A list of engine node groups.</para>
+            /// <para>The list of engine node groups.</para>
             /// </summary>
             [NameInMap("NodeGroup")]
             [Validation(Required=false)]
@@ -296,7 +278,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The number of vCPUs for the node.</para>
+                /// <para>The number of vCPU cores on the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -306,7 +288,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public int? CpuCoreCount { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a local disk is attached to the node.</para>
+                /// <para>Indicates whether a local cloud disk is attached to the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -316,7 +298,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public bool? EnableAttachLocalDisk { get; set; }
 
                 /// <summary>
-                /// <para>The capacity of the local disk in GB.</para>
+                /// <para>The local cloud disk capacity, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -326,12 +308,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public long? LocalDiskCapacity { get; set; }
 
                 /// <summary>
-                /// <para>The type of the local cloud disk.</para>
+                /// <para>The local cloud disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>cloud_essd: performance cloud disk</para>
-                /// </description></item>
-                /// <item><description><para>cloud_efficiency: standard cloud disk</para>
-                /// </description></item>
+                /// <item><description>cloud_essd: performance cloud disk.</description></item>
+                /// <item><description>cloud_efficiency: standard cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -342,7 +322,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public string LocalDiskCategory { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of the node in GiB.</para>
+                /// <para>The memory size of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64</para>
@@ -353,78 +333,46 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 
                 /// <summary>
                 /// <para>The node specifications.</para>
-                /// <para>If you select Performance cloud storage or Standard cloud storage, this parameter can be set to one of the following values:</para>
+                /// <para>If you select performance cloud storage or standard cloud storage, valid values are:</para>
                 /// <list type="bullet">
-                /// <item><description><para>lindorm.c.2xlarge: 8 vCPUs, 16 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.g.2xlarge: 8 vCPUs, 32 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.c.4xlarge: 16 vCPUs, 32 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.g.4xlarge: 16 vCPUs, 64 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.c.8xlarge: 32 vCPUs, 64 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.g.8xlarge: 32 vCPUs, 128 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.r.2xlarge: 8 vCPUs, 64 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.r.4xlarge: 16 vCPUs, 128 GB memory.</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.r.8xlarge: 32 vCPUs, 256 GB memory.</para>
-                /// </description></item>
+                /// <item><description>lindorm.c.2xlarge: 8 vCores and 16 GB memory.</description></item>
+                /// <item><description>lindorm.g.2xlarge: 8 vCores and 32 GB memory.</description></item>
+                /// <item><description>lindorm.c.4xlarge: 16 vCores and 32 GB memory.</description></item>
+                /// <item><description>lindorm.g.4xlarge: 16 vCores and 64 GB memory.</description></item>
+                /// <item><description>lindorm.c.8xlarge: 32 vCores and 64 GB memory.</description></item>
+                /// <item><description>lindorm.g.8xlarge: 32 vCores and 128 GB memory.</description></item>
+                /// <item><description>lindorm.r.2xlarge: 8 vCores and 64 GB memory.</description></item>
+                /// <item><description>lindorm.r.4xlarge: 16 vCores and 128 GB memory.</description></item>
+                /// <item><description>lindorm.r.8xlarge: 32 vCores and 256 GB memory.</description></item>
                 /// </list>
-                /// <para>If you select Local SSD, this parameter can be set to one of the following values:</para>
+                /// <para>If you select local SSD storage, valid values are:</para>
                 /// <list type="bullet">
-                /// <item><description><para>lindorm.i4.xlarge: 4 vCPUs, 32 GB memory (I4).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i4.2xlarge: 8 vCPUs, 64 GB memory (I4).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i4.4xlarge: 16 vCPUs, 128 GB memory (I4).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i4.8xlarge: 32 vCPUs, 256 GB memory (I4).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i3.xlarge: 4 vCPUs, 32 GB memory (I3).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i3.2xlarge: 8 vCPUs, 64 GB memory (I3).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i3.4xlarge: 16 vCPUs, 128 GB memory (I3).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i3.8xlarge: 32 vCPUs, 256 GB memory (I3).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i2.xlarge: 4 vCPUs, 32 GB memory (I2).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i2.2xlarge: 8 vCPUs, 64 GB memory (I2).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i2.4xlarge: 16 vCPUs, 128 GB memory (I2).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.i2.8xlarge: 32 vCPUs, 256 GB memory (I2).</para>
-                /// </description></item>
+                /// <item><description>lindorm.i4.xlarge: 4 vCores and 32 GB memory (I4).</description></item>
+                /// <item><description>lindorm.i4.2xlarge: 8 vCores and 64 GB memory (I4).</description></item>
+                /// <item><description>lindorm.i4.4xlarge: 16 vCores and 128 GB memory (I4).</description></item>
+                /// <item><description>lindorm.i4.8xlarge: 32 vCores and 256 GB memory (I4).</description></item>
+                /// <item><description>lindorm.i3.xlarge: 4 vCores and 32 GB memory (I3).</description></item>
+                /// <item><description>lindorm.i3.2xlarge: 8 vCores and 64 GB memory (I3).</description></item>
+                /// <item><description>lindorm.i3.4xlarge: 16 vCores and 128 GB memory (I3).</description></item>
+                /// <item><description>lindorm.i3.8xlarge: 32 vCores and 256 GB memory (I3).</description></item>
+                /// <item><description>lindorm.i2.xlarge: 4 vCores and 32 GB memory (I2).</description></item>
+                /// <item><description>lindorm.i2.2xlarge: 8 vCores and 64 GB memory (I2).</description></item>
+                /// <item><description>lindorm.i2.4xlarge: 16 vCores and 128 GB memory (I2).</description></item>
+                /// <item><description>lindorm.i2.8xlarge: 32 vCores and 256 GB memory (I2).</description></item>
                 /// </list>
-                /// <para>If you select Big Data, this parameter can be set to one of the following values:</para>
+                /// <para>If you select big data instance type, valid values are:</para>
                 /// <list type="bullet">
-                /// <item><description><para>lindorm.sd3c.3xlarge: 14 vCPUs, 56 GB memory (D3C PRO).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.sd3c.7xlarge: 28 vCPUs, 112 GB memory (D3C PRO).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.sd3c.14xlarge: 56 vCPUs, 224 GB memory (D3C PRO).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d2c.6xlarge: 24 vCPUs, 88 GB memory (D2C).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d2c.12xlarge: 48 vCPUs, 176 GB memory (D2C).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d2c.24xlarge: 96 vCPUs, 352 GB memory (D2C).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d2s.5xlarge: 20 vCPUs, 88 GB memory (D2S).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d2s.10xlarge: 40 vCPUs, 176 GB memory (D2S).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d1.2xlarge: 8 vCPUs, 32 GB memory (D1NE).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d1.4xlarge: 16 vCPUs, 64 GB memory (D1NE).</para>
-                /// </description></item>
-                /// <item><description><para>lindorm.d1.6xlarge: 24 vCPUs, 96 GB memory (D1NE).</para>
-                /// </description></item>
+                /// <item><description>lindorm.sd3c.3xlarge: 14 vCores and 56 GB memory (D3C PRO).</description></item>
+                /// <item><description>lindorm.sd3c.7xlarge: 28 vCores and 112 GB memory (D3C PRO).</description></item>
+                /// <item><description>lindorm.sd3c.14xlarge: 56 vCores and 224 GB memory (D3C PRO).</description></item>
+                /// <item><description>lindorm.d2c.6xlarge: 24 vCores and 88 GB memory (D2C).</description></item>
+                /// <item><description>lindorm.d2c.12xlarge: 48 vCores and 176 GB memory (D2C).</description></item>
+                /// <item><description>lindorm.d2c.24xlarge: 96 vCores and 352 GB memory (D2C).</description></item>
+                /// <item><description>lindorm.d2s.5xlarge: 20 vCores and 88 GB memory (D2S).</description></item>
+                /// <item><description>lindorm.d2s.10xlarge: 40 vCores and 176 GB memory (D2S).</description></item>
+                /// <item><description>lindorm.d1.2xlarge: 8 vCores and 32 GB memory (D1NE).</description></item>
+                /// <item><description>lindorm.d1.4xlarge: 16 vCores and 64 GB memory (D1NE).</description></item>
+                /// <item><description>lindorm.d1.6xlarge: 24 vCores and 96 GB memory (D1NE).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -445,7 +393,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public int? Quantity { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node group. <b>Required</b>. This must be the same as the name used during creation.</para>
+                /// <para>The node group name. <b>Required.</b> Must match the name specified at creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>job_debug</para>
@@ -455,7 +403,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
                 public string ResourceGroupName { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID that corresponds to the delivery group ID.</para>
+                /// <para>The ID that uniquely corresponds to the delivery group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.c6.large</para>
@@ -489,7 +437,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The number of milliseconds between the instance expiration time and 00:00:00 on January 1, 1970.</para>
+        /// <para>The number of milliseconds between the instance expires time and 1970-01-01 00:00:00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1629993600000</para>
@@ -499,7 +447,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? ExpiredMilliseconds { get; set; }
 
         /// <summary>
-        /// <para>The default initial password.</para>
+        /// <para>The initial default password.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -519,7 +467,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceAlias { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ld-bp1mq0tdzbx1m****</para>
@@ -531,48 +479,27 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>ACTIVATION</b>: The instance is running.</para>
-        /// </description></item>
-        /// <item><description><para><b>COLD_EXPANDING</b>: The storage-optimized cloud storage is being scaled out.</para>
-        /// </description></item>
-        /// <item><description><para><b>MINOR_VERSION_TRANSING</b>: The minor version is being upgraded.</para>
-        /// </description></item>
-        /// <item><description><para><b>RESIZING</b>: The nodes are being scaled out.</para>
-        /// </description></item>
-        /// <item><description><para><b>SHRINKING</b>: The nodes are being scaled in.</para>
-        /// </description></item>
-        /// <item><description><para><b>CLASS_CHANGING</b>: The instance specifications are being upgraded or downgraded.</para>
-        /// </description></item>
-        /// <item><description><para><b>SSL_SWITCHING</b>: The SSL certificate is being changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>CDC_OPENING</b>: The data subscription feature is being enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>TRANSFER</b>: Data is being migrated.</para>
-        /// </description></item>
-        /// <item><description><para><b>DATABASE_TRANSFER</b>: Data is being migrated to the database.</para>
-        /// </description></item>
-        /// <item><description><para><b>GUARD_CREATING</b>: A disaster recovery instance is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>BACKUP_RECOVERING</b>: Data is being restored from a backup.</para>
-        /// </description></item>
-        /// <item><description><para><b>DATABASE_IMPORTING</b>: Data is being imported.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_MODIFYING</b>: The network is being modified.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_SWITCHING</b>: The network is being switched between the private network and the public network.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_CREATING</b>: A network connection is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_DELETING</b>: A network connection is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>DELETING</b>: The instance is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>RESTARTING</b>: The instance is being restarted.</para>
-        /// </description></item>
-        /// <item><description><para><b>LOCKED</b>: The instance has expired and is locked.</para>
-        /// </description></item>
+        /// <item><description><b>CREATING</b>: the instance is being created.</description></item>
+        /// <item><description><b>ACTIVATION</b>: the instance is running.</description></item>
+        /// <item><description><b>COLD_EXPANDING</b>: the storage-optimized cloud storage is undergoing storage expansion.</description></item>
+        /// <item><description><b>MINOR_VERSION_TRANSING</b>: a minor version upgrade is in progress.</description></item>
+        /// <item><description><b>RESIZING</b>: nodes are being scaled out.</description></item>
+        /// <item><description><b>SHRINKING</b>: nodes are being scaled in.</description></item>
+        /// <item><description><b>CLASS_CHANGING</b>: instance specifications are being upgraded or the quota is being decreased.</description></item>
+        /// <item><description><b>SSL_SWITCHING</b>: an SSL change is in progress.</description></item>
+        /// <item><description><b>CDC_OPENING</b>: the Lindorm Tunnel Service feature is being activated.</description></item>
+        /// <item><description><b>TRANSFER</b>: data migration is in progress.</description></item>
+        /// <item><description><b>DATABASE_TRANSFER</b>: data is being migrated to a database.</description></item>
+        /// <item><description><b>GUARD_CREATING</b>: a disaster recovery instance is being created.</description></item>
+        /// <item><description><b>BACKUP_RECOVERING</b>: backup recovery is in progress.</description></item>
+        /// <item><description><b>DATABASE_IMPORTING</b>: data import is in progress.</description></item>
+        /// <item><description><b>NET_MODIFYING</b>: a network change is in progress.</description></item>
+        /// <item><description><b>NET_SWITCHING</b>: the network is switching between the private network and the public network.</description></item>
+        /// <item><description><b>NET_CREATING</b>: a network connection is being created.</description></item>
+        /// <item><description><b>NET_DELETING</b>: a network connection is being deleted.</description></item>
+        /// <item><description><b>DELETING</b>: the instance is being deleted.</description></item>
+        /// <item><description><b>RESTARTING</b>: the instance is restarting.</description></item>
+        /// <item><description><b>LOCKED</b>: the instance has expired and is locked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -583,9 +510,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid value:</para>
+        /// <para>The instance form factor. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>basic: Production.</description></item>
+        /// <item><description>basic: production type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -596,7 +523,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window.</para>
+        /// <para>The end time of the maintenance window, in HH:mmZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>20:00Z</para>
@@ -606,7 +533,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window.</para>
+        /// <para>The start time of the maintenance window, in HH:mmZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00Z</para>
@@ -628,10 +555,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PREPAY</b>: subscription.</para>
-        /// </description></item>
-        /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description><b>PREPAY</b>: subscription.</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -642,7 +567,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>For a multi-zone instance, this is the ID of the virtual switch in the primary zone. The vSwitch must be in the zone specified by PrimaryZoneId.</para>
+        /// <para>The vSwitch ID of the primary zone for a multi-zone instance. The vSwitch must be in the zone specified by PrimaryZoneId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6fdqa7c0pipnqzq****</para>
@@ -652,7 +577,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PrimaryVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>For a multi-zone instance, this is the ID of the primary zone.</para>
+        /// <para>The zone ID of the primary zone for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-e</para>
@@ -694,12 +619,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm_v2</b>: Lindorm V2 single-zone instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm_v2_multizone</b>: Lindorm V2 Multi-zone Deployment (Basic) instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm_v2_multizone_ha</b>: Lindorm V2 multi-zone High-availability Edition instance.</para>
-        /// </description></item>
+        /// <item><description><b>lindorm_v2</b>: Lindorm V2 single-zone instance.</description></item>
+        /// <item><description><b>lindorm_v2_multizone</b>: Lindorm V2 multi-zone Basic Edition instance.</description></item>
+        /// <item><description><b>lindorm_v2_multizone_ha</b>: Lindorm V2 multi-zone High Availability Edition instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -710,7 +632,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>For a multi-zone instance, this is the ID of the virtual switch in the secondary zone. The vSwitch must be in the zone specified by StandbyZoneId.</para>
+        /// <para>The vSwitch ID of the secondary zone for a multi-zone instance. The vSwitch must be in the zone specified by StandbyZoneId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zec0kcn08cgdtr6****</para>
@@ -720,7 +642,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string StandbyVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>For a multi-zone instance, this is the ID of the secondary zone.</para>
+        /// <para>The zone ID of the secondary zone for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-f</para>
@@ -730,14 +652,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string StandbyZoneId { get; set; }
 
         /// <summary>
-        /// <para>The instance storage usage.</para>
+        /// <para>The instance storage usage level.</para>
         /// </summary>
         [NameInMap("StorageUsage")]
         [Validation(Required=false)]
         public GetLindormV2InstanceDetailsResponseBodyStorageUsage StorageUsage { get; set; }
         public class GetLindormV2InstanceDetailsResponseBodyStorageUsage : TeaModel {
             /// <summary>
-            /// <para>The instance storage usage.</para>
+            /// <para>The instance storage usage level.</para>
             /// </summary>
             [NameInMap("CapacityByDiskCategory")]
             [Validation(Required=false)]
@@ -756,7 +678,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) where the instance resides.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1xxxxxxxxxxxxxxxxxx</para>
@@ -766,7 +688,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual switch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1xxxxxxxxxxxxxxxxxx</para>
@@ -783,7 +705,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public List<GetLindormV2InstanceDetailsResponseBodyWhiteIpList> WhiteIpList { get; set; }
         public class GetLindormV2InstanceDetailsResponseBodyWhiteIpList : TeaModel {
             /// <summary>
-            /// <para>The group name. The name can contain only letters, digits, and underscores (_).</para>
+            /// <para>The group name. Only letters, digits, and underscores are allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swhy</para>
@@ -805,7 +727,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The deployment details of the engine in the zone.</para>
+        /// <para>The details of engine deployment by zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZoneEngineInfoMap</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class UpdateLindormV2WhiteIpListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. You can call the GetLindormV2InstanceList operation to obtain the instance ID.</para>
+        /// <para>The instance ID. You can call the GetLindormV2InstanceList operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain this ID.</para>
+        /// <para>The ID of the region where the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The list of IP whitelist groups.</para>
+        /// <para>The list of whitelist groups.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("WhiteIpGroupList")]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public List<UpdateLindormV2WhiteIpListRequestWhiteIpGroupList> WhiteIpGroupList { get; set; }
         public class UpdateLindormV2WhiteIpListRequestWhiteIpGroupList : TeaModel {
             /// <summary>
-            /// <para>The name of the IP whitelist group.</para>
+            /// <para>The name of the whitelist group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses to add to the IP whitelist.</para>
+            /// <para>The IP addresses to be added to the whitelist.</para>
             /// <remarks>
-            /// <para>The value 127.0.0.1 denies access from all IP addresses. For example, 192.168.0.0/24 allows all IP addresses in that range to access the Lindorm instance. Use a comma (,) to separate multiple IP addresses or CIDR blocks.</para>
+            /// <para>127.0.0.1 indicates that access from all IP addresses is denied. For example, 192.168.0.0/24 indicates that access from all IP addresses in the 192.168.0.X CIDR block is allowed to the Lindorm instance. Separate multiple IP addresses with commas (,).</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 

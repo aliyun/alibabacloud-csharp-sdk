@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormInstanceEngineListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

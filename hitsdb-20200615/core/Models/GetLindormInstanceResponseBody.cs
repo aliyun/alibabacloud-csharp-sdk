@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account.</para>
+        /// <para>The 16-character AliUid of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>164901546557****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? AliUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in the arbiter zone for the multi-zone instance. The vSwitch must be deployed in the zone that is specified by <c>ArbiterZoneId</c>.</para>
+        /// <para>The ID of the vSwitch in the arbiter zone for a multi-zone instance. The vSwitch must belong to the zone specified by ArbiterZoneId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6664pqjawb87k36****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ArbiterVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The arbiter zone ID of the multi-zone instance.</para>
+        /// <para>The ID of the arbiter zone for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-g</para>
@@ -42,10 +42,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The deployment architecture. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1.0</b>: single-zone deployment.</para>
-        /// </description></item>
-        /// <item><description><para><b>2.0</b>: multi-zone deployment.</para>
-        /// </description></item>
+        /// <item><description><b>1.0</b>: single-zone.</description></item>
+        /// <item><description><b>2.0</b>: multi-zone.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,25 +54,23 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ArchVersion { get; set; }
 
         /// <summary>
-        /// <para>The billable storage capacity of the archive storage. Unit: GB.</para>
+        /// <para>The billable storage capacity of the archive storage type. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0GB</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ArchiveStorage")]
         [Validation(Required=false)]
         public int? ArchiveStorage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether auto-renewal is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether auto-renewal is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only for subscription instances.</para>
+        /// <para>This parameter is returned only when the billing method of the instance is subscription.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,7 +81,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup instance.</para>
+        /// <para>The backup instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ld-xxxx</para>
@@ -95,26 +91,22 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string BackupInstance { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the cold storage.</para>
+        /// <para>Storage capacity of storage capacity cloud storage.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0GB</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("ColdStorage")]
         [Validation(Required=false)]
         public int? ColdStorage { get; set; }
 
         /// <summary>
-        /// <para>The disk type of the core nodes in a multi-zone instance. Valid values:</para>
+        /// <para>The disk type of the core node for a multi-zone instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cloud_efficiency</b>: Standard.</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_ssd</b>: Performance.</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_essd</b>: ESSD.</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_essd_pl0</b>: ESSD PL0.</para>
-        /// </description></item>
+        /// <item><description><b>cloud_efficiency</b>: standard cloud storage.</description></item>
+        /// <item><description><b>cloud_ssd</b>: performance cloud storage.</description></item>
+        /// <item><description><b>cloud_essd</b>: enhanced performance cloud storage.</description></item>
+        /// <item><description><b>cloud_essd_pl0</b>: performance cloud storage PL0.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +117,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string CoreDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The number of core nodes in the multi-zone instance.</para>
+        /// <para>The number of core nodes for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -135,7 +127,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? CoreNum { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of a single core node in the multi-zone instance.</para>
+        /// <para>The disk capacity of a single core node for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -145,7 +137,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? CoreSingleStorage { get; set; }
 
         /// <summary>
-        /// <para>The specification of the core nodes in the multi-zone instance.</para>
+        /// <para>The core node specifications for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm.g.xlarge</para>
@@ -155,7 +147,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string CoreSpec { get; set; }
 
         /// <summary>
-        /// <para>The time at which the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The creation time of the instance, represented as the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1627290664000</para>
@@ -165,7 +157,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? CreateMilliseconds { get; set; }
 
         /// <summary>
-        /// <para>The time at which the instance was created. The time is displayed in the <b>yyyy-MM-dd HH:mm:ss</b> format.</para>
+        /// <para>The time when the instance was created. The time is displayed in the <b>yyyy-MM-dd HH:mm:ss</b> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-26 17:10:26</para>
@@ -175,12 +167,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether release protection is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether deletion protection is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,20 +183,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cloud_efficiency</b>: Standard.</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_ssd</b>: Performance.</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_essd</b>: Enhanced SSD (ESSD).</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_essd_pl0</b>: ESSD PL0.</para>
-        /// </description></item>
-        /// <item><description><para><b>capacity_cloud_storage</b>: Capacity.</para>
-        /// </description></item>
-        /// <item><description><para><b>local_ssd_pro</b>: local SSD.</para>
-        /// </description></item>
-        /// <item><description><para><b>local_hdd_pro</b>: local HDD.</para>
-        /// </description></item>
+        /// <item><description><b>cloud_efficiency</b>: standard cloud storage.</description></item>
+        /// <item><description><b>cloud_ssd</b>: performance cloud storage.</description></item>
+        /// <item><description><b>cloud_essd</b>: enhanced performance cloud storage.</description></item>
+        /// <item><description><b>cloud_essd_pl0</b>: performance cloud storage PL0.</description></item>
+        /// <item><description><b>capacity_cloud_storage</b>: capacity cloud storage.</description></item>
+        /// <item><description><b>local_ssd_pro</b>: local SSD.</description></item>
+        /// <item><description><b>local_hdd_pro</b>: local HDD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -227,7 +210,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string DiskThreshold { get; set; }
 
         /// <summary>
-        /// <para>The disk usage.</para>
+        /// <para>The disk space usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0%</para>
@@ -237,8 +220,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string DiskUsage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether LBlob is enabled. Valid values:</para>
-        /// <para>true: Enabled. false: Disabled.</para>
+        /// <para>Indicates whether LBlob is enabled for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -248,12 +234,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableBlob { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Change Data Capture (CDC) is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether the data subscription feature is enabled for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -266,10 +250,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>Indicates whether the compute engine is enabled for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -282,10 +264,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>Indicates whether Key Management Service (KMS) is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -296,9 +276,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableKms { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the wide table engine supports the Thrift and CQL protocols. If this feature is disabled, you can call the SwitchLProxyService operation to enable it.</para>
-        /// <para>true: Supported.</para>
-        /// <para>false: Not supported.</para>
+        /// <para>Indicates whether LindormTable supports the Thrift and CQL protocols. If not supported, you can call the SwitchLProxyService operation to enable or disable the support. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>True: supported.</para>
+        /// </description></item>
+        /// <item><description><para>False: not supported.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -308,12 +292,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableLProxy { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the LTS engine is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether Lindorm Tunnel Service is enabled for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -324,12 +306,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableLTS { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether LindormSQL V3.0, which is compatible with the MySQL protocol, is supported by the wide table engine.
-        /// This feature is supported by default on instances created after October 24, 2023. For existing instances, contact technical support to enable this feature.</para>
+        /// <para>Indicates whether LindormTable supports LindormSQL-V3, which is compatible with the MySQL protocol. Instances purchased after October 24, 2023 support this feature by default. For existing instances, contact technical support for evaluation before enabling this feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Supported.</para>
+        /// <item><description><para>True: supported.</para>
         /// </description></item>
-        /// <item><description><para>false: Not supported.</para>
+        /// <item><description><para>False: not supported.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -341,11 +322,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableLsqlVersionV3 { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the ML node is enabled. Valid values:</para>
+        /// <para>Indicates whether the AI control node is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enabled.</para>
+        /// <item><description><para>True: enabled.</para>
         /// </description></item>
-        /// <item><description><para>false: Disabled.</para>
+        /// <item><description><para>False: disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -359,10 +340,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>Indicates whether SSL encryption is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -373,7 +352,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableSSL { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the History Server is enabled for the compute engine.</para>
+        /// <para>Indicates whether History Server for the compute engine is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -383,11 +362,11 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableShs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Transparent Data Encryption (TDE) is enabled. Valid values:</para>
+        /// <para>Indicates whether storage encryption is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enabled.</para>
+        /// <item><description><para>true: enabled.</para>
         /// </description></item>
-        /// <item><description><para>false: Disabled.</para>
+        /// <item><description><para>false: disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -399,12 +378,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableStoreTDE { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the stream engine is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether the streaming engine is enabled for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -415,7 +392,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public bool? EnableStream { get; set; }
 
         /// <summary>
-        /// <para>The information about the engines.</para>
+        /// <para>The list of engine information.</para>
         /// </summary>
         [NameInMap("EngineList")]
         [Validation(Required=false)]
@@ -442,7 +419,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string CoreCount { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs for the engine node.</para>
+            /// <para>The number of CPUs for the engine node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -452,20 +429,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string CpuCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the engine. Valid values:</para>
+            /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>lindorm</b>: the wide table engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>tsdb</b>: the time series engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>solr</b>: the search engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>store</b>: the file engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>bds</b>: the LTS engine.</para>
-            /// </description></item>
-            /// <item><description><para><b>compute</b>: the compute engine.</para>
-            /// </description></item>
+            /// <item><description><b>lindorm</b>: LindormTable.</description></item>
+            /// <item><description><b>tsdb</b>: LindormTSDB.</description></item>
+            /// <item><description><b>solr</b>: search engine.</description></item>
+            /// <item><description><b>store</b>: file engine.</description></item>
+            /// <item><description><b>bds</b>: Lindorm Tunnel Service engine.</description></item>
+            /// <item><description><b>compute</b>: compute engine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -478,10 +449,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             /// <summary>
             /// <para>Indicates whether the engine is of the latest version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The engine is of the latest version.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The engine is not of the latest version.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: latest version.</description></item>
+            /// <item><description><b>false</b>: not the latest version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -492,7 +461,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public bool? IsLastVersion { get; set; }
 
             /// <summary>
-            /// <para>The latest version of the engine.</para>
+            /// <para>The latest version number of the engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.2.19.2</para>
@@ -522,7 +491,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string PrimaryCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The specification of the engine nodes.</para>
+            /// <para>The engine node specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lindorm.g.2xlarge</para>
@@ -542,7 +511,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string StandbyCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The version of the engine.</para>
+            /// <para>The version number of the engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.2.3</para>
@@ -554,19 +523,15 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The types of the engines that are supported by the instance. The value of this parameter is the sum of the values of all supported engine types.</para>
+        /// <para>The supported engine types. The return value is the sum of the values of the following engine types:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: search engine</para>
-        /// </description></item>
-        /// <item><description><para>2: time series engine</para>
-        /// </description></item>
-        /// <item><description><para>4: wide table engine</para>
-        /// </description></item>
-        /// <item><description><para>8: file engine</para>
-        /// </description></item>
+        /// <item><description>1: search engine</description></item>
+        /// <item><description>2: LindormTSDB</description></item>
+        /// <item><description>4: LindormTable</description></item>
+        /// <item><description>8: file engine</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For example, if the value of this parameter is 15, it indicates that the instance supports the search, time series, wide table, and file engines because 1 + 2 + 4 + 8 = 15. If the value of this parameter is 6, it indicates that the instance supports the time series and wide table engines because 2 + 4 = 6.</para>
+        /// <para>For example, if the value of EngineType is 15 (15 = 8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If the value of EngineType is 6 (6 = 4 + 2), the instance supports LindormTSDB and LindormTable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -579,7 +544,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The expiration time of the instance. The time is displayed in the <b>yyyy-MM-dd HH:mm:ss</b> format.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for subscription instances.</para>
+        /// <para>This parameter is returned only when the billing method is subscription.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -590,7 +555,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the instance expires, represented as the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1629993600000</para>
@@ -610,7 +575,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceAlias { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ld-bp1o3y0yme2i2****</para>
@@ -620,50 +585,29 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance. Valid values:</para>
+        /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>ACTIVATION</b>: The instance is running.</para>
-        /// </description></item>
-        /// <item><description><para><b>COLD_EXPANDING</b>: The capacity of the cold storage is being expanded.</para>
-        /// </description></item>
-        /// <item><description><para><b>MINOR_VERSION_TRANSITIONING</b>: The minor version of the instance is being changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>RESIZING</b>: The number of nodes is being changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>SHRINKING</b>: The number of nodes is being changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>CLASS_CHANGING</b>: The specification of the instance is being changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>SSL_SWITCHING</b>: SSL is being enabled or disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>CDC_OPENING</b>: The CDC feature is being enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>TRANSFER</b>: Data is being migrated.</para>
-        /// </description></item>
-        /// <item><description><para><b>DATABASE_TRANSFER</b>: Data is being migrated.</para>
-        /// </description></item>
-        /// <item><description><para><b>GUARD_CREATING</b>: A disaster recovery instance is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>BACKUP_RECOVERING</b>: Data is being restored from a backup.</para>
-        /// </description></item>
-        /// <item><description><para><b>DATABASE_IMPORTING</b>: Data is being imported.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_MODIFYING</b>: The network type is being changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_SWITCHING</b>: The network is being switched.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_CREATING</b>: A network connection is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>NET_DELETING</b>: A network connection is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>DELETING</b>: The instance is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>RESTARTING</b>: The instance is being restarted.</para>
-        /// </description></item>
-        /// <item><description><para><b>LOCKED</b>: The instance is locked.</para>
-        /// </description></item>
+        /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
+        /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
+        /// <item><description><b>COLD_EXPANDING</b>: Capacity cloud storage expansion in progress.</description></item>
+        /// <item><description><b>MINOR_VERSION_TRANSING</b>: The minor version is being upgraded.</description></item>
+        /// <item><description><b>RESIZING</b>: The nodes are being scaled up.</description></item>
+        /// <item><description><b>SHRINKING</b>: The nodes are being scaled down.</description></item>
+        /// <item><description><b>CLASS_CHANGING</b>: Instance specification upgrade or downgrade in progress.</description></item>
+        /// <item><description><b>SSL_SWITCHING</b>: The SSL certificate is being changed.</description></item>
+        /// <item><description><b>CDC_OPENING</b>: The data subscription feature is being enabled.</description></item>
+        /// <item><description><b>TRANSFER</b>: Data migration in progress.</description></item>
+        /// <item><description><b>DATABASE_TRANSFER</b>: Data is being migrated to the database.</description></item>
+        /// <item><description><b>GUARD_CREATING</b>: A disaster recovery instance is being created.</description></item>
+        /// <item><description><b>BACKUP_RECOVERING</b>: The backup is being restored.</description></item>
+        /// <item><description><b>DATABASE_IMPORTING</b>: Data import in progress.</description></item>
+        /// <item><description><b>NET_MODIFYING</b>: The network is being modified.</description></item>
+        /// <item><description><b>NET_SWITCHING</b>: The network is being switched between the internal network and the Internet.</description></item>
+        /// <item><description><b>NET_CREATING</b>: A network connection is being created.</description></item>
+        /// <item><description><b>NET_DELETING</b>: A network connection is being deleted.</description></item>
+        /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
+        /// <item><description><b>RESTARTING</b>: The instance is being restarted.</description></item>
+        /// <item><description><b>LOCKED</b>: The instance has expired and is locked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -684,12 +628,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceStorage { get; set; }
 
         /// <summary>
-        /// <para>The disk type of the log nodes in the multi-zone instance. Valid values:</para>
+        /// <para>The disk type of the log node for a multi-zone instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cloud_efficiency</b>: Standard.</para>
-        /// </description></item>
-        /// <item><description><para><b>cloud_ssd</b>: Performance.</para>
-        /// </description></item>
+        /// <item><description><b>cloud_efficiency</b>: standard cloud storage.</description></item>
+        /// <item><description><b>cloud_ssd</b>: performance cloud storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -700,7 +642,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LogDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The number of log nodes in the multi-zone instance.</para>
+        /// <para>The number of log nodes for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -710,7 +652,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LogNum { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of a single log node in the multi-zone instance.</para>
+        /// <para>The disk capacity of a single log node for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400GB</para>
@@ -720,7 +662,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? LogSingleStorage { get; set; }
 
         /// <summary>
-        /// <para>The specification of the log nodes in the multi-zone instance.</para>
+        /// <para>The log node specifications for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm.sn1.large</para>
@@ -730,7 +672,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string LogSpec { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window.</para>
+        /// <para>The end time of the maintenance window. The time is displayed in the HH:mmZ format. UTC time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20:00Z</para>
@@ -740,7 +682,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window.</para>
+        /// <para>The start time of the maintenance window. The time is displayed in the HH:mmZ format. UTC time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00Z</para>
@@ -750,30 +692,19 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string MaintainStartTime { get; set; }
 
         /// <summary>
-        /// <para>The combination of zones. For more information about the supported zone combinations, see the instance buy page.</para>
+        /// <para>The multi-zone combination. You can go to the buy page to view the supported zone combinations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ap-southeast-5abc-aliyun</b>: Indonesia (Jakarta) Zone A, B, and C.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hangzhou-ehi-aliyun</b>: China (Hangzhou) Zone E, H, and I.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-beijing-acd-aliyun</b>: China (Beijing) Zone A, C, and D.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1-abc-aliyun</b>: Singapore Zone A, B, and C.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-zhangjiakou-abc-aliyun</b>: China (Zhangjiakou) Zone A, B, and C.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shanghai-efg-aliyun</b>: China (Shanghai) Zone E, F, and G.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shanghai-abd-aliyun</b>: China (Shanghai) Zone A, B, and D.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hangzhou-bef-aliyun</b>: China (Hangzhou) Zone B, E, and F.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hangzhou-bce-aliyun</b>: China (Hangzhou) Zone B, C, and E.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-beijing-fgh-aliyun</b>: China (Beijing) Zone F, G, and H.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shenzhen-abc-aliyun</b>: China (Shenzhen) Zone A, B, and C.</para>
-        /// </description></item>
+        /// <item><description><b>ap-southeast-5abc-aliyun</b>: Indonesia (Jakarta) Zones A, B, and C.</description></item>
+        /// <item><description><b>cn-hangzhou-ehi-aliyun</b>: China (Hangzhou) Zones E, H, and I.</description></item>
+        /// <item><description><b>cn-beijing-acd-aliyun</b>: China (Beijing) Zones A, C, and D.</description></item>
+        /// <item><description><b>ap-southeast-1-abc-aliyun</b>: Singapore Zones A, B, and C.</description></item>
+        /// <item><description><b>cn-zhangjiakou-abc-aliyun</b>: China (Zhangjiakou) Zones A, B, and C.</description></item>
+        /// <item><description><b>cn-shanghai-efg-aliyun</b>: China (Shanghai) Zones E, F, and G.</description></item>
+        /// <item><description><b>cn-shanghai-abd-aliyun</b>: China (Shanghai) Zones A, B, and D.</description></item>
+        /// <item><description><b>cn-hangzhou-bef-aliyun</b>: China (Hangzhou) Zones B, E, and F.</description></item>
+        /// <item><description><b>cn-hangzhou-bce-aliyun</b>: China (Hangzhou) Zones B, C, and E.</description></item>
+        /// <item><description><b>cn-beijing-fgh-aliyun</b>: China (Beijing) Zones F, G, and H.</description></item>
+        /// <item><description><b>cn-shenzhen-abc-aliyun</b>: China (Shenzhen) Zones A, B, and C.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -796,10 +727,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PREPAY</b>: subscription</para>
-        /// </description></item>
-        /// <item><description><para><b>POSTPAY</b>: pay-as-you-go</para>
-        /// </description></item>
+        /// <item><description><b>PREPAY</b>: subscription.</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -810,7 +739,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in the primary zone for the multi-zone instance. The vSwitch must be deployed in the zone that is specified by <c>PrimaryZoneId</c>.</para>
+        /// <para>The ID of the vSwitch in the primary zone for a multi-zone instance. The vSwitch must belong to the zone specified by PrimaryZoneId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6fdqa7c0pipnqzq****</para>
@@ -820,7 +749,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PrimaryVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The primary zone ID of the multi-zone instance.</para>
+        /// <para>The ID of the primary zone for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-e</para>
@@ -830,7 +759,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string PrimaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -860,18 +789,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm</b>: a single-zone instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm_multizone</b>: a multi-zone instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>serverless_lindorm</b>: a serverless instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm_standalone</b>: a single-node instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lts</b>: a Lindorm Tunnel Service (LTS) instance.</para>
-        /// </description></item>
+        /// <item><description><b>lindorm</b>: Lindorm single-zone instance.</description></item>
+        /// <item><description><b>lindorm_multizone</b>: Lindorm multi-zone instance.</description></item>
+        /// <item><description><b>serverless_lindorm</b>: Lindorm Serverless instance.</description></item>
+        /// <item><description><b>lindorm_standalone</b>: Lindorm single-node instance.</description></item>
+        /// <item><description><b>lts</b>: Lindorm Tunnel Service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -881,22 +805,49 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public string ServiceType { get; set; }
 
+        /// <summary>
+        /// <para>The risk alert information for the single-zone deployment.</para>
+        /// </summary>
         [NameInMap("SingleZoneRiskAlert")]
         [Validation(Required=false)]
         public GetLindormInstanceResponseBodySingleZoneRiskAlert SingleZoneRiskAlert { get; set; }
         public class GetLindormInstanceResponseBodySingleZoneRiskAlert : TeaModel {
+            /// <summary>
+            /// <para>The confirmation date for risk handling. The date is displayed in the yyyy-MM-dd format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-24</para>
+            /// </summary>
             [NameInMap("ConfirmDate")]
             [Validation(Required=false)]
             public string ConfirmDate { get; set; }
 
+            /// <summary>
+            /// <para>The risk handling type for the single-zone deployment.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>NO_SET</para>
+            /// </summary>
             [NameInMap("DispositionType")]
             [Validation(Required=false)]
             public string DispositionType { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether a risk alert for the single-zone deployment is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("NeedAlert")]
             [Validation(Required=false)]
             public bool? NeedAlert { get; set; }
 
+            /// <summary>
+            /// <para>The planned completion date for risk handling. The date is displayed in the yyyy-MM-dd format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-30</para>
+            /// </summary>
             [NameInMap("PlannedCompletionDate")]
             [Validation(Required=false)]
             public string PlannedCompletionDate { get; set; }
@@ -904,7 +855,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in the secondary zone for the multi-zone instance. The vSwitch must be deployed in the zone that is specified by <c>StandbyZoneId</c>.</para>
+        /// <para>The ID of the vSwitch in the secondary zone for a multi-zone instance. The vSwitch must belong to the zone specified by StandbyZoneId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zec0kcn08cgdtr6****</para>
@@ -914,7 +865,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string StandbyVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone ID of the multi-zone instance.</para>
+        /// <para>The ID of the secondary zone for a multi-zone instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-f</para>
@@ -944,7 +895,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string VswitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

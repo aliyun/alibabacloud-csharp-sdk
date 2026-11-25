@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language to use for the region name (LocalName) in the response. Valid values:</para>
+        /// <para>The display language of the region name (LocalName) in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh-CN</b>: Chinese. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>en-US</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh-CN</b>: Chinese. This is the default value.</description></item>
+        /// <item><description><b>en-US</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

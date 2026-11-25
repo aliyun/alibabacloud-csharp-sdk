@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         /// <summary>
         /// <para>Specifies whether to enable deletion protection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,12 +23,18 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
+        /// <summary>
+        /// <para>The risk disposition type for a single zone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PLAN_MIGRATION</para>
+        /// </summary>
         [NameInMap("DispositionType")]
         [Validation(Required=false)]
         public string DispositionType { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lindorm-test</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string InstanceAlias { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,6 +63,8 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The planned completion date for risk disposition, in the yyyy-MM-dd format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-10-01</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class GetLindormFsUsedDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details on why access was denied.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The total storage capacity of the cluster, in bytes.</para>
+        /// <para>The total storage capacity of the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85899345920</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsCapacity { get; set; }
 
         /// <summary>
-        /// <para>The cold storage capacity of the cluster, in bytes.</para>
+        /// <para>The cold storage capacity of the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85899345920</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsCapacityCold { get; set; }
 
         /// <summary>
-        /// <para>The hot storage capacity of the cluster, in bytes.</para>
+        /// <para>The hot storage capacity of the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85899345920</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsCapacityHot { get; set; }
 
         /// <summary>
-        /// <para>The cold storage used by the cluster, in bytes.</para>
+        /// <para>The cold storage usage of the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedCold { get; set; }
 
         /// <summary>
-        /// <para>The cold storage space used by table data of the search engine, in bytes.</para>
+        /// <para>The cold storage usage of table data in the search index DPI engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedColdOnLindormSearch { get; set; }
 
         /// <summary>
-        /// <para>The cold storage space used by table data of the time series engine, in bytes.</para>
+        /// <para>The cold storage usage of table data in the LindormTSDB engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedColdOnLindormTSDB { get; set; }
 
         /// <summary>
-        /// <para>The cold storage space used by table data of the wide-column engine, in bytes.</para>
+        /// <para>The cold storage usage of table data in the LindormTable engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedColdOnLindormTable { get; set; }
 
         /// <summary>
-        /// <para>The hot storage used by the cluster, in bytes.</para>
+        /// <para>The hot storage usage of the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedHot { get; set; }
 
         /// <summary>
-        /// <para>The hot storage space used by table data of the search engine, in bytes.</para>
+        /// <para>The hot storage usage of table data in the search index DPI engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedHotOnLindormSearch { get; set; }
 
         /// <summary>
-        /// <para>The hot storage space used by table data of the time series engine, in bytes.</para>
+        /// <para>The hot storage usage of table data in the LindormTSDB engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedHotOnLindormTSDB { get; set; }
 
         /// <summary>
-        /// <para>The hot storage space used by table data of the wide-column engine, in bytes.</para>
+        /// <para>The hot storage usage of table data in the LindormTable engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedHotOnLindormTable { get; set; }
 
         /// <summary>
-        /// <para>The storage space used by the search engine in the cluster, in bytes.</para>
+        /// <para>The storage usage of the search index DPI engine in the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedOnLindormSearch { get; set; }
 
         /// <summary>
-        /// <para>The storage space used by the time series engine in the cluster, in bytes.</para>
+        /// <para>The storage usage of the LindormTSDB engine in the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedOnLindormTSDB { get; set; }
 
         /// <summary>
-        /// <para>The storage space used by the wide-column engine in the cluster, in bytes.</para>
+        /// <para>The storage usage of the LindormTable engine in the cluster. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedOnLindormTable { get; set; }
 
         /// <summary>
-        /// <para>The storage space used by table data of the wide-column engine, in bytes.</para>
+        /// <para>The storage usage of table data in the LindormTable engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedOnLindormTableData { get; set; }
 
         /// <summary>
-        /// <para>The storage space used by log data of the wide-column engine, in bytes.</para>
+        /// <para>The storage usage of write-ahead log (wal) data in the LindormTable engine. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33269</para>
@@ -180,14 +180,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string FsUsedOnLindormTableWAL { get; set; }
 
         /// <summary>
-        /// <para>For clusters that run storage engine v4.1.9 or later, this parameter provides authoritative storage details categorized by storage medium.</para>
+        /// <para>For clusters with an underlying storage DPI engine version of 4.1.9 or later, this field is the authoritative source for storage details, categorized by storage medium categorization.</para>
         /// </summary>
         [NameInMap("LStorageUsageList")]
         [Validation(Required=false)]
         public List<GetLindormFsUsedDetailResponseBodyLStorageUsageList> LStorageUsageList { get; set; }
         public class GetLindormFsUsedDetailResponseBodyLStorageUsageList : TeaModel {
             /// <summary>
-            /// <para>The total storage capacity for this storage medium, in bytes.</para>
+            /// <para>The total storage capacity for the storage medium type. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>85899345920</para>
@@ -199,18 +199,12 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             /// <summary>
             /// <para>The storage type of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>StandardCloudStorage</c>: standard cloud storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>PerformanceCloudStorage</c>: performance cloud storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>CapacityCloudStorage</c>: capacity cloud storage.</para>
-            /// </description></item>
-            /// <item><description><para><c>LocalSsdStorage</c>: local SSD.</para>
-            /// </description></item>
-            /// <item><description><para><c>LocalHddStorage</c>: local HDD.</para>
-            /// </description></item>
-            /// <item><description><para><c>LocalEbsStorage</c>: local block storage.</para>
-            /// </description></item>
+            /// <item><description>StandardCloudStorage: standard cloud storage.</description></item>
+            /// <item><description>PerformanceCloudStorage: performance cloud storage.</description></item>
+            /// <item><description>CapacityCloudStorage: capacity cloud storage.</description></item>
+            /// <item><description>LocalSsdStorage: local SSD.</description></item>
+            /// <item><description>LocalHddStorage: local HDD.</description></item>
+            /// <item><description>LocalEbsStorage: local cloud storage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -221,7 +215,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string DiskType { get; set; }
 
             /// <summary>
-            /// <para>The storage used on this storage medium, in bytes.</para>
+            /// <para>The storage usage for the storage medium type. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33269</para>
@@ -230,16 +224,28 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public string Used { get; set; }
 
+            /// <summary>
+            /// <para>The column store engine storage usage for the storage medium type. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>688935</para>
+            /// </summary>
             [NameInMap("UsedLindormColumn3")]
             [Validation(Required=false)]
             public string UsedLindormColumn3 { get; set; }
 
+            /// <summary>
+            /// <para>The message engine storage usage for the storage medium type. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("UsedLindormMessage3")]
             [Validation(Required=false)]
             public string UsedLindormMessage3 { get; set; }
 
             /// <summary>
-            /// <para>The storage used by the search engine on this storage medium, in bytes.</para>
+            /// <para>The search index DPI engine storage usage for the storage medium type. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33269</para>
@@ -249,7 +255,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string UsedLindormSearch { get; set; }
 
             /// <summary>
-            /// <para>The storage used by the compute engine on this storage medium, in bytes.</para>
+            /// <para>The compute engine storage usage for the storage medium type. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33269</para>
@@ -259,7 +265,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string UsedLindormSpark { get; set; }
 
             /// <summary>
-            /// <para>The storage used by the wide-column engine on this storage medium, in bytes.</para>
+            /// <para>The LindormTable engine storage usage for the storage medium type. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33269</para>
@@ -269,7 +275,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string UsedLindormTable { get; set; }
 
             /// <summary>
-            /// <para>The storage used by the time series engine on this storage medium, in bytes.</para>
+            /// <para>The LindormTSDB engine storage usage for the storage medium type. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33269</para>
@@ -278,12 +284,18 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public string UsedLindormTsdb { get; set; }
 
+            /// <summary>
+            /// <para>The vector engine storage usage for the storage medium type. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>595054865855</para>
+            /// </summary>
             [NameInMap("UsedLindormVector3")]
             [Validation(Required=false)]
             public string UsedLindormVector3 { get; set; }
 
             /// <summary>
-            /// <para>The storage used by other components, such as logs and trash, on this storage medium, in bytes.</para>
+            /// <para>The storage usage for other purposes under the storage medium type, such as logs and the recycle bin. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33269</para>
@@ -295,7 +307,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. This unique identifier is generated by Alibaba Cloud for each request and is used for troubleshooting.</para>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F23D50C-400C-592C-9486-9D1E10179065</para>
@@ -305,7 +317,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the response is valid. A value of <c>false</c> indicates that an error occurred, and you must provide the request ID for troubleshooting.</para>
+        /// <para>Indicates whether the return value is valid. true indicates that the value is valid. false indicates that an exception occurred. Provide the request ID to troubleshoot the issue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

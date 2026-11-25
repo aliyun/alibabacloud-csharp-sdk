@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query.</para>
+        /// <para>The number of entries to return per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A keyword for a fuzzy search on instance names.</para>
+        /// <para>The keyword used to perform a fuzzy search by instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string QueryStr { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located. Call <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> to obtain the region ID.</para>
+        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek3b63arvg27vi</para>
@@ -80,18 +80,13 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>lindorm</b>: a single-zone Lindorm instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm_multizone</b>: a multi-zone Lindorm instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>serverless_lindorm</b>: a Lindorm Serverless instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lindorm_standalone</b>: a Lindorm standalone instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>lts</b>: the Lindorm Tunnel Service (LTS) type.</para>
-        /// </description></item>
+        /// <item><description><b>lindorm</b>: Lindorm single-zone instance</description></item>
+        /// <item><description><b>lindorm_multizone</b>: Lindorm multi-zone instance</description></item>
+        /// <item><description><b>serverless_lindorm</b>: Lindorm Serverless instance</description></item>
+        /// <item><description><b>lindorm_standalone</b>: Lindorm single-node instance</description></item>
+        /// <item><description><b>lts</b>: Lindorm Tunnel Service</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,39 +97,35 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The type of the engine supported by the instance that you want to query. Valid values:</para>
+        /// <para>The data engine types supported by the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: search engine.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: LindormTSDB.</para>
-        /// </description></item>
-        /// <item><description><para><b>4</b>: LindormTable.</para>
-        /// </description></item>
-        /// <item><description><para><b>8</b>: file engine.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: Search engine</description></item>
+        /// <item><description><b>2</b>: LindormTSDB</description></item>
+        /// <item><description><b>4</b>: LindormTable</description></item>
+        /// <item><description><b>8</b>: File engine</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For example, a value of 15 (8 + 4 + 2 + 1) indicates that the instance supports the file engine, LindormTable, LindormTSDB, and the search engine. A value of 6 (4 + 2) indicates that the instance supports LindormTSDB and LindormTable.</para>
+        /// <para>For example, if the value is 15 (15 = 8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If the value is 6 (6 = 4 + 2), the instance supports LindormTSDB and LindormTable.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>15</para>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("SupportEngine")]
         [Validation(Required=false)]
         public int? SupportEngine { get; set; }
 
         /// <summary>
-        /// <para>A list of tags. You can specify up to 20 tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<GetLindormInstanceListRequestTag> Tag { get; set; }
         public class GetLindormInstanceListRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key. Valid values of N: 1 to 20.</para>
             /// <remarks>
-            /// <para>You can pass in keys for multiple tags. For example, the Key in the first pair represents the key for the first tag. The Key in the second pair represents the key for the second tag.</para>
+            /// <para>You can specify multiple tag keys. For example, the first Key specifies the first tag key, and the second Key specifies the second tag key.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -145,9 +136,9 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value. Valid values of N: 1 to 20.</para>
             /// <remarks>
-            /// <para>You can provide values for multiple tags. For example, the Value in the first pair is the value for the first tag. The Value in the second pair is the value for the second tag.</para>
+            /// <para>You can specify multiple tag values. For example, the first Value specifies the first tag value, and the second Value specifies the second tag value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
