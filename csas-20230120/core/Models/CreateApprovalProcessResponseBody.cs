@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>The username of the approver.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>王先生</para>
+                /// <para>Mr. Wang</para>
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]

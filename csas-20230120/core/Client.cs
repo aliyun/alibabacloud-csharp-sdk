@@ -47,6 +47,138 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量添加设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDeviceBelongIdentifiersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDeviceBelongIdentifiersResponse
+        /// </returns>
+        public AddDeviceBelongIdentifiersResponse AddDeviceBelongIdentifiersWithOptions(AddDeviceBelongIdentifiersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifiers))
+            {
+                bodyFlat["Identifiers"] = request.Identifiers;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDeviceBelongIdentifiers",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDeviceBelongIdentifiersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDeviceBelongIdentifiersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDeviceBelongIdentifiersResponse
+        /// </returns>
+        public async Task<AddDeviceBelongIdentifiersResponse> AddDeviceBelongIdentifiersWithOptionsAsync(AddDeviceBelongIdentifiersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifiers))
+            {
+                bodyFlat["Identifiers"] = request.Identifiers;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDeviceBelongIdentifiers",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDeviceBelongIdentifiersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDeviceBelongIdentifiersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDeviceBelongIdentifiersResponse
+        /// </returns>
+        public AddDeviceBelongIdentifiersResponse AddDeviceBelongIdentifiers(AddDeviceBelongIdentifiersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddDeviceBelongIdentifiersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量添加设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDeviceBelongIdentifiersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDeviceBelongIdentifiersResponse
+        /// </returns>
+        public async Task<AddDeviceBelongIdentifiersResponse> AddDeviceBelongIdentifiersAsync(AddDeviceBelongIdentifiersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddDeviceBelongIdentifiersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds associated terminal devices to a static device tag in batches.</para>
         /// </summary>
         /// 
@@ -17263,6 +17395,178 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeviceBelongIdentifiersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeviceBelongIdentifiersResponse
+        /// </returns>
+        public ListDeviceBelongIdentifiersResponse ListDeviceBelongIdentifiersWithOptions(ListDeviceBelongIdentifiersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierIds))
+            {
+                bodyFlat["IdentifierIds"] = request.IdentifierIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierType))
+            {
+                body["IdentifierType"] = request.IdentifierType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDeviceBelongIdentifiers",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDeviceBelongIdentifiersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeviceBelongIdentifiersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeviceBelongIdentifiersResponse
+        /// </returns>
+        public async Task<ListDeviceBelongIdentifiersResponse> ListDeviceBelongIdentifiersWithOptionsAsync(ListDeviceBelongIdentifiersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierIds))
+            {
+                bodyFlat["IdentifierIds"] = request.IdentifierIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierType))
+            {
+                body["IdentifierType"] = request.IdentifierType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDeviceBelongIdentifiers",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDeviceBelongIdentifiersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeviceBelongIdentifiersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeviceBelongIdentifiersResponse
+        /// </returns>
+        public ListDeviceBelongIdentifiersResponse ListDeviceBelongIdentifiers(ListDeviceBelongIdentifiersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDeviceBelongIdentifiersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDeviceBelongIdentifiersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDeviceBelongIdentifiersResponse
+        /// </returns>
+        public async Task<ListDeviceBelongIdentifiersResponse> ListDeviceBelongIdentifiersAsync(ListDeviceBelongIdentifiersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDeviceBelongIdentifiersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
         /// </summary>
         /// 
@@ -25491,6 +25795,138 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyForwardStrategyBindingItemsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量移除设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDeviceBelongIdentifiersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDeviceBelongIdentifiersResponse
+        /// </returns>
+        public RemoveDeviceBelongIdentifiersResponse RemoveDeviceBelongIdentifiersWithOptions(RemoveDeviceBelongIdentifiersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierIds))
+            {
+                bodyFlat["IdentifierIds"] = request.IdentifierIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveDeviceBelongIdentifiers",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveDeviceBelongIdentifiersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量移除设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDeviceBelongIdentifiersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDeviceBelongIdentifiersResponse
+        /// </returns>
+        public async Task<RemoveDeviceBelongIdentifiersResponse> RemoveDeviceBelongIdentifiersWithOptionsAsync(RemoveDeviceBelongIdentifiersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierIds))
+            {
+                bodyFlat["IdentifierIds"] = request.IdentifierIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveDeviceBelongIdentifiers",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveDeviceBelongIdentifiersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量移除设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDeviceBelongIdentifiersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDeviceBelongIdentifiersResponse
+        /// </returns>
+        public RemoveDeviceBelongIdentifiersResponse RemoveDeviceBelongIdentifiers(RemoveDeviceBelongIdentifiersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveDeviceBelongIdentifiersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量移除设备归属标识</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveDeviceBelongIdentifiersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveDeviceBelongIdentifiersResponse
+        /// </returns>
+        public async Task<RemoveDeviceBelongIdentifiersResponse> RemoveDeviceBelongIdentifiersAsync(RemoveDeviceBelongIdentifiersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveDeviceBelongIdentifiersWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
