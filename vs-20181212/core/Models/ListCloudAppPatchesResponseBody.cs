@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Settings for the number of entries per page when paging in a paged query.</para>
+        /// <para>The paging Settings for the number of entries returned on each page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The patch list of the cloud application.</para>
+        /// <para>The list of patches for the cloud application.</para>
         /// </summary>
         [NameInMap("Patches")]
         [Validation(Required=false)]
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <list type="bullet">
             /// <item><description>Created</description></item>
             /// <item><description>Doing</description></item>
-            /// <item><description>Success: desired state</description></item>
-            /// <item><description>Failed: desired state</description></item>
+            /// <item><description>Success: final state</description></item>
+            /// <item><description>Failed: final state</description></item>
             /// <item><description>Deleting</description></item>
-            /// <item><description>DeleteFailed: desired state</description></item>
+            /// <item><description>DeleteFailed: final state</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The latest time when the status was updated. The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
+            /// <para>The time when the status was last updated. The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-23T02:12:28</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was uploaded. The time is in the ISO 8601 standard and includes the time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The time when the patch was uploaded. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-24T14:45:36+08:00</para>

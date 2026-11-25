@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The Hive ID, used as a filter to query tasks executed under the specified Hive.</para>
+        /// <para>The Hive ID used as a filter to query tasks executed under the specified Hive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hive-26cd567b35c04a0a90f0xxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records to display on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

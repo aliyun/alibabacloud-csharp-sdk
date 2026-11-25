@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The description of the workflow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a workflow for image-to-video</para>
+        /// <para>This is an image-to-video workflow</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample workflow for image-to-video</para>
+        /// <para>Sample image-to-video workflow</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The page size.</para>
         /// <remarks>
-        /// <para>Only for recording queries.</para>
+        /// <para>Only applicable to recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<DescribeComfyTasksResponseBodyTasks> Tasks { get; set; }
         public class DescribeComfyTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time, represented as a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387493000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task, represented as a UNIX timestamp in milliseconds.</para>
+            /// <para>The end time of the task. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387494000</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string HiveId { get; set; }
 
             /// <summary>
-            /// <para>The task error message.</para>
+            /// <para>The error message of the task.</para>
             /// </summary>
             [NameInMap("TaskErrorMessage")]
             [Validation(Required=false)]
             public string TaskErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6c8234f4-d1e1-4cea-b08b-7926fbdea144</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task state.</para>
+            /// <para>The state of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -127,17 +127,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TaskState { get; set; }
 
             /// <summary>
-            /// <para>The task state message.</para>
+            /// <para>The state message of the task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>任务执行成功</para>
+            /// <para>Task executed successfully</para>
             /// </summary>
             [NameInMap("TaskStateMessage")]
             [Validation(Required=false)]
             public string TaskStateMessage { get; set; }
 
             /// <summary>
-            /// <para>The last modified time, represented as a UNIX timestamp in milliseconds.</para>
+            /// <para>The last modified time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387494000</para>

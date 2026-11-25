@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
     public class CreateRenderingInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>Keep the default value unless you have special requirements. If you have special requirements, contact technical support to confirm and then specify the relevant parameters.</para>
+        /// <para>Unless you have special requirements, keep the default value. If you have special requirements, contact technical support to confirm and then specify this parameter.</para>
         /// </remarks>
         /// <para>The attribute information.</para>
         /// </summary>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// </remarks>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
-        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>Only one billing method is supported. If a billing method already exists, the new value is invalid by default, and the existing billing method prevails. Note that this parameter is required when you purchase the instance for the first time.</para>
+        /// <para>Only one Billable methods is supported. If a Billable methods already exists, the new value is invalid by default, and the existing one prevails. Note that this parameter is required when you purchase the instance for the first time.</para>
         /// </remarks>
-        /// <para>The network billing type. Valid values:</para>
+        /// <para>The network billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>95BandwidthByMonth: monthly 95th percentile bandwidth.</description></item>
         /// </list>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <remarks>
         /// <para>This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PrePaid</c> (subscription).</para>
         /// </remarks>
-        /// <para>The subscription duration. Valid values (Note: If you select 12, the duration is calculated as one year. For other values, the unit is months):</para>
+        /// <para>The subscription duration. Valid values (Note: If you select 12, it is calculated as one year. Other values are calculated in months.):</para>
         /// <list type="bullet">
         /// <item><description>1 (default)</description></item>
         /// <item><description>2</description></item>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingSpec { get; set; }
 
         /// <summary>
-        /// <para>The cloud storage capacity used by the cloud application service instance. Note: This is not local storage.</para>
+        /// <para>The cloud storage capacity used by the cloud application service instance. Note: This does not include local storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

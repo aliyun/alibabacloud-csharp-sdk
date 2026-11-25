@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<DescribeComfyProductionsResponseBodyProductions> Productions { get; set; }
         public class DescribeComfyProductionsResponseBodyProductions : TeaModel {
             /// <summary>
-            /// <para>The ComfyTask ID.</para>
+            /// <para>The ID of the ComfyTask.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6c8234f4-d1e1-4cea-b08b-7926fbdea144</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ComfyTaskId { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard and includes the time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-06T20:20:26+08:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The production ID.</para>
+            /// <para>The ID of the production.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3e5bda20-5cd4-4d55-8d23-88d624a18caa</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ProductionId { get; set; }
 
             /// <summary>
-            /// <para>The production status.</para>
+            /// <para>The status of the production.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>

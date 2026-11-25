@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the patch package. This parameter is supported only in Windows scenarios. If you enter origin, only the original version is filtered.</para>
+        /// <para>The ID of the patch package. This parameter is only supported in Windows scenarios. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>origin: Only the original version is filtered.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>patch-7bdf679812484df08a956b73e0b3bdf6</para>
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The cloud application service instance ID, which is used to query the cloud applications installed on the specified instance.</para>
+        /// <para>The instance ID of the cloud application service. This parameter is used to query the cloud applications installed on the specified instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -98,6 +101,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("RenderingInstanceId")]
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The list of cloud application service instance IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;render-eb01436f39ac459a96ac566c418ca926&quot;]</para>
+        /// </summary>
+        [NameInMap("RenderingInstanceIds")]
+        [Validation(Required=false)]
+        public List<string> RenderingInstanceIds { get; set; }
 
         /// <summary>
         /// <para>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>

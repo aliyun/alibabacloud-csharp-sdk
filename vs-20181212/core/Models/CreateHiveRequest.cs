@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateHiveRequest : TeaModel {
         /// <summary>
-        /// <para>A description of the cluster.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>G49单卡集群</para>
+        /// <para>G49 single-GPU cluster</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

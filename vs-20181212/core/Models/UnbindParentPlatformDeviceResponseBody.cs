@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UnbindParentPlatformDeviceResponseBody : TeaModel {
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartRecordStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The stream\&quot;s App name.</para>
+        /// <para>The stream&quot;s App name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The stream\&quot;s playback domain name.</para>
+        /// <para>The stream&quot;s playback domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

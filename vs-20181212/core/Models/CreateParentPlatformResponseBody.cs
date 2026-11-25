@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateParentPlatformResponseBody : TeaModel {
         /// <summary>
-        /// <para>上级平台ID。</para>
+        /// <para>The parent platform ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>359*****374-cn-qingdao</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

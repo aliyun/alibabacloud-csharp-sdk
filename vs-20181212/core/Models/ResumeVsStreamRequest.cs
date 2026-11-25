@@ -20,12 +20,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <para>Controls the stream behavior. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>resume</b>: Resumes the stream.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>resume</para>
+        /// </summary>
         [NameInMap("ControlStreamAction")]
         [Validation(Required=false)]
         public string ControlStreamAction { get; set; }
 
         /// <summary>
-        /// <para>Your accelerated domain name.</para>
+        /// <para>The accelerated domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The stream type.</para>
         /// <remarks>
-        /// <para>Only publisher is supported.</para>
+        /// <para>Currently, only publisher is supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

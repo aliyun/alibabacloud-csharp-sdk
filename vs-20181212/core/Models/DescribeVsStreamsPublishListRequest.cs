@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>publish_time_asc</para>
+        /// <para>stream_name_desc</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]

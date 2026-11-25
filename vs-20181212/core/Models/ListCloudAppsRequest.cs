@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page during paging for a paged query. Settings: 1 to 100. Default value: 10.</para>
+        /// <para>Settings for the number of entries to return on each page during paging for a paged query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <item><description>hot</description></item>
         /// <item><description>game</description></item>
         /// <item><description>app
-        /// To query cloud applications without labels, set this parameter to NULL.</description></item>
+        /// To query applications without labels, set the value to NULL.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The upload status of the application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Success: The upload is successful. This is a final state.</description></item>
-        /// <item><description>Failed: The upload failed. This is a final state.</description></item>
+        /// <item><description>Success: successful. This is a final state.</description></item>
+        /// <item><description>Failed: failed. This is a final state.</description></item>
         /// <item><description>Created</description></item>
         /// <item><description>Doing</description></item>
         /// </list>

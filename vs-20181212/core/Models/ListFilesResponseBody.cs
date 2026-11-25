@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of file information.</para>
+        /// <para>The list of files.</para>
         /// </summary>
         [NameInMap("Files")]
         [Validation(Required=false)]
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <list type="bullet">
             /// <item><description>Created</description></item>
             /// <item><description>Doing</description></item>
-            /// <item><description>Success: final state</description></item>
-            /// <item><description>Failed: final state</description></item>
+            /// <item><description>Success: final state.</description></item>
+            /// <item><description>Failed: final state.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The target path for pushing the file to the cloud application service instance.</para>
+            /// <para>The destination path for pushing the file to the cloud application service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/data/tmp/test/xxx.tar</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The time when the status was last updated. The time follows the ISO 8601 standard and includes the time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The time when the status was last updated. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-28T14:15:08+08:00</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the upload started. The time follows the ISO 8601 standard and includes the time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The time when the upload started. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-28T14:10:12+08:00</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page during paging in a paged query.</para>
+        /// <para>The Settings for the number of entries returned per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matched file records.</para>
+        /// <para>The total number of matched files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "vs";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,17 +42,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more instances to a specified cluster.</para>
+        /// <para>Binds one or more workload instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
-        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
-        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
-        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster to which the workloads are bound.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies the list of workload IDs to bind to the cluster.</description></item>
+        /// <item><description>If you attempt to bind a workload ID that already exists in the target cluster, an error message is returned.</description></item>
+        /// <item><description>After the binding operation succeeds, the returned lists of successful and failed workload instances help you identify which workloads were successfully bound and which were not, along with the reasons for failure.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -102,17 +105,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more instances to a specified cluster.</para>
+        /// <para>Binds one or more workload instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
-        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
-        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
-        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster to which the workloads are bound.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies the list of workload IDs to bind to the cluster.</description></item>
+        /// <item><description>If you attempt to bind a workload ID that already exists in the target cluster, an error message is returned.</description></item>
+        /// <item><description>After the binding operation succeeds, the returned lists of successful and failed workload instances help you identify which workloads were successfully bound and which were not, along with the reasons for failure.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -165,17 +168,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more instances to a specified cluster.</para>
+        /// <para>Binds one or more workload instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
-        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
-        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
-        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster to which the workloads are bound.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies the list of workload IDs to bind to the cluster.</description></item>
+        /// <item><description>If you attempt to bind a workload ID that already exists in the target cluster, an error message is returned.</description></item>
+        /// <item><description>After the binding operation succeeds, the returned lists of successful and failed workload instances help you identify which workloads were successfully bound and which were not, along with the reasons for failure.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -194,17 +197,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more instances to a specified cluster.</para>
+        /// <para>Binds one or more workload instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
-        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
-        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
-        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster to which the workloads are bound.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies the list of workload IDs to bind to the cluster.</description></item>
+        /// <item><description>If you attempt to bind a workload ID that already exists in the target cluster, an error message is returned.</description></item>
+        /// <item><description>After the binding operation succeeds, the returned lists of successful and failed workload instances help you identify which workloads were successfully bound and which were not, along with the reasons for failure.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1322,9 +1325,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Authentication</b>: The request must include the <c>AliUid</c> parameter to authenticate and perform identity verification.</description></item>
-        /// <item><description><b>Instance specification</b>: You can specify the instances to capture screenshots of by using <c>RenderingInstanceIds</c>.</description></item>
-        /// <item><description><b>Screenshot quality</b>: You can configure the Settings for the screenshot image quality by using the <c>Quality</c> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</description></item>
+        /// <item><description><b>Authenticate</b>: The request must include the AliUid parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: You can use the RenderingInstanceIds parameter to specify the instances for which you want to capture screenshots.</description></item>
+        /// <item><description><b>Screenshot quality</b>: The Quality parameter specifies the screenshot quality settings. The default value is 75 if not configured. Valid values: 1 to 100.</description></item>
         /// <item><description><b>Response processing</b>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</description></item>
         /// </list>
         /// </description>
@@ -1385,9 +1388,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Authentication</b>: The request must include the <c>AliUid</c> parameter to authenticate and perform identity verification.</description></item>
-        /// <item><description><b>Instance specification</b>: You can specify the instances to capture screenshots of by using <c>RenderingInstanceIds</c>.</description></item>
-        /// <item><description><b>Screenshot quality</b>: You can configure the Settings for the screenshot image quality by using the <c>Quality</c> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</description></item>
+        /// <item><description><b>Authenticate</b>: The request must include the AliUid parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: You can use the RenderingInstanceIds parameter to specify the instances for which you want to capture screenshots.</description></item>
+        /// <item><description><b>Screenshot quality</b>: The Quality parameter specifies the screenshot quality settings. The default value is 75 if not configured. Valid values: 1 to 100.</description></item>
         /// <item><description><b>Response processing</b>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</description></item>
         /// </list>
         /// </description>
@@ -1448,9 +1451,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Authentication</b>: The request must include the <c>AliUid</c> parameter to authenticate and perform identity verification.</description></item>
-        /// <item><description><b>Instance specification</b>: You can specify the instances to capture screenshots of by using <c>RenderingInstanceIds</c>.</description></item>
-        /// <item><description><b>Screenshot quality</b>: You can configure the Settings for the screenshot image quality by using the <c>Quality</c> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</description></item>
+        /// <item><description><b>Authenticate</b>: The request must include the AliUid parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: You can use the RenderingInstanceIds parameter to specify the instances for which you want to capture screenshots.</description></item>
+        /// <item><description><b>Screenshot quality</b>: The Quality parameter specifies the screenshot quality settings. The default value is 75 if not configured. Valid values: 1 to 100.</description></item>
         /// <item><description><b>Response processing</b>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</description></item>
         /// </list>
         /// </description>
@@ -1477,9 +1480,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Authentication</b>: The request must include the <c>AliUid</c> parameter to authenticate and perform identity verification.</description></item>
-        /// <item><description><b>Instance specification</b>: You can specify the instances to capture screenshots of by using <c>RenderingInstanceIds</c>.</description></item>
-        /// <item><description><b>Screenshot quality</b>: You can configure the Settings for the screenshot image quality by using the <c>Quality</c> parameter. The default value is 75 if not configured, and the valid values range from 1 to 100.</description></item>
+        /// <item><description><b>Authenticate</b>: The request must include the AliUid parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: You can use the RenderingInstanceIds parameter to specify the instances for which you want to capture screenshots.</description></item>
+        /// <item><description><b>Screenshot quality</b>: The Quality parameter specifies the screenshot quality settings. The default value is 75 if not configured. Valid values: 1 to 100.</description></item>
         /// <item><description><b>Response processing</b>: The response includes lists of successful and failed instances along with their related information, such as download URLs and screenshot completion times.</description></item>
         /// </list>
         /// </description>
@@ -4513,7 +4516,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// <para>Enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4570,7 +4573,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// <para>Enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4627,7 +4630,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// <para>Enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4652,7 +4655,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// <para>Enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4825,7 +4828,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must first enable the on-demand snapshot feature in the associated snapshot template.</para>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4882,7 +4885,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must first enable the on-demand snapshot feature in the associated snapshot template.</para>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4939,7 +4942,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must first enable the on-demand snapshot feature in the associated snapshot template.</para>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4964,7 +4967,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You must first enable the on-demand snapshot feature in the associated snapshot template.</para>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template in advance.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4983,8 +4986,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a new device.</para>
+        /// <para>Adds a new device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to workspaces whose access type is <b>GB28181 pull streaming</b> or <b>ODCAP</b>.</description></item>
+        /// <item><description>Workspaces whose access type is <b>RTMP push streaming</b> <b>do not support</b> adding devices.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeviceRequest
@@ -5113,8 +5126,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a new device.</para>
+        /// <para>Adds a new device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to workspaces whose access type is <b>GB28181 pull streaming</b> or <b>ODCAP</b>.</description></item>
+        /// <item><description>Workspaces whose access type is <b>RTMP push streaming</b> <b>do not support</b> adding devices.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeviceRequest
@@ -5243,8 +5266,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a new device.</para>
+        /// <para>Adds a new device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to workspaces whose access type is <b>GB28181 pull streaming</b> or <b>ODCAP</b>.</description></item>
+        /// <item><description>Workspaces whose access type is <b>RTMP push streaming</b> <b>do not support</b> adding devices.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeviceRequest
@@ -5261,8 +5294,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a new device.</para>
+        /// <para>Adds a new device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation is applicable only to workspaces whose access type is <b>GB28181 pull streaming</b> or <b>ODCAP</b>.</description></item>
+        /// <item><description>Workspaces whose access type is <b>RTMP push streaming</b> <b>do not support</b> adding devices.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDeviceRequest
@@ -5820,7 +5863,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
@@ -5874,7 +5917,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
@@ -5928,7 +5971,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
@@ -5954,7 +5997,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
@@ -6319,7 +6362,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a cloud rendering resource instance.</para>
+        /// <para>Creates a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6407,7 +6450,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a cloud rendering resource instance.</para>
+        /// <para>Creates a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6495,7 +6538,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a cloud rendering resource instance.</para>
+        /// <para>Creates a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6513,7 +6556,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a cloud rendering resource instance.</para>
+        /// <para>Creates a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10175,13 +10218,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URL for user-generated results.</para>
+        /// <para>Retrieves the download link for user-generated results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10224,13 +10267,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URL for user-generated results.</para>
+        /// <para>Retrieves the download link for user-generated results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10273,13 +10316,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URL for user-generated results.</para>
+        /// <para>Retrieves the download link for user-generated results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10298,13 +10341,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URL for user-generated results.</para>
+        /// <para>Retrieves the download link for user-generated results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10487,7 +10530,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the waiting queue information of Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
+        /// <para>Queries the waiting queue information for Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10529,7 +10572,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the waiting queue information of Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
+        /// <para>Queries the waiting queue information for Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10571,7 +10614,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the waiting queue information of Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
+        /// <para>Queries the waiting queue information for Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10589,7 +10632,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the waiting queue information of Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
+        /// <para>Queries the waiting queue information for Comfy tasks. The default maximum length of a single Hive waiting queue is 100.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10613,7 +10656,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10682,7 +10725,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10751,7 +10794,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10776,7 +10819,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in a new request.</para>
+        /// <para>Screenshot queries currently do not support pagination and only support iteration. To request the next page, use the value of the extStartTime parameter in the response as the StartTime parameter in the new request.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -19259,7 +19302,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification content.</para>
+        /// <para>Queries the check content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19305,7 +19348,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification content.</para>
+        /// <para>Queries the check content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19351,7 +19394,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification content.</para>
+        /// <para>Queries the check content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19369,7 +19412,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the verification content.</para>
+        /// <para>Queries the check content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19527,7 +19570,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// <para>Disables the push of a specific stream and allows you to schedule a time to resume the stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19597,7 +19640,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// <para>Disables the push of a specific stream and allows you to schedule a time to resume the stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19667,7 +19710,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// <para>Disables the push of a specific stream and allows you to schedule a time to resume the stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19685,7 +19728,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// <para>Disables the push of a specific stream and allows you to schedule a time to resume the stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20391,10 +20434,10 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances. Paging is supported for paged query.</para>
+        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances, and supports paging for a paged query.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListCloudAppInstallationsRequest
         /// </param>
         /// <param name="runtime">
@@ -20404,9 +20447,15 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <returns>
         /// ListCloudAppInstallationsResponse
         /// </returns>
-        public ListCloudAppInstallationsResponse ListCloudAppInstallationsWithOptions(ListCloudAppInstallationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListCloudAppInstallationsResponse ListCloudAppInstallationsWithOptions(ListCloudAppInstallationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCloudAppInstallationsShrinkRequest request = new ListCloudAppInstallationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20429,10 +20478,10 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances. Paging is supported for paged query.</para>
+        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances, and supports paging for a paged query.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListCloudAppInstallationsRequest
         /// </param>
         /// <param name="runtime">
@@ -20442,9 +20491,15 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <returns>
         /// ListCloudAppInstallationsResponse
         /// </returns>
-        public async Task<ListCloudAppInstallationsResponse> ListCloudAppInstallationsWithOptionsAsync(ListCloudAppInstallationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListCloudAppInstallationsResponse> ListCloudAppInstallationsWithOptionsAsync(ListCloudAppInstallationsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCloudAppInstallationsShrinkRequest request = new ListCloudAppInstallationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20467,7 +20522,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances. Paging is supported for paged query.</para>
+        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances, and supports paging for a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20485,7 +20540,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances. Paging is supported for paged query.</para>
+        /// <para>Queries the installation information list of cloud applications. The returned information includes the installation status of cloud application service instances, and supports paging for a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20503,13 +20558,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the patch list of a cloud application.</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID and the templatetype.</para>
+        /// <para>Specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20576,13 +20631,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the patch list of a cloud application.</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID and the templatetype.</para>
+        /// <para>Specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20649,13 +20704,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the patch list of a cloud application.</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID and the templatetype.</para>
+        /// <para>Specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20674,13 +20729,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the patch list of a cloud application.</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID and the templatetype.</para>
+        /// <para>Specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20699,7 +20754,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud applications and supports paging and paged query.</para>
+        /// <para>Queries a list of cloud applications and supports paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20737,7 +20792,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud applications and supports paging and paged query.</para>
+        /// <para>Queries a list of cloud applications and supports paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20775,7 +20830,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud applications and supports paging and paged query.</para>
+        /// <para>Queries a list of cloud applications and supports paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20793,7 +20848,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud applications and supports paging and paged query.</para>
+        /// <para>Queries a list of cloud applications and supports paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21075,7 +21130,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status list of cloud application service instances for a file. Paging is supported for paged query.</para>
+        /// <para>Queries the push status list for a file on cloud application service instances, and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21113,7 +21168,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status list of cloud application service instances for a file. Paging is supported for paged query.</para>
+        /// <para>Queries the push status list for a file on cloud application service instances, and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21151,7 +21206,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status list of cloud application service instances for a file. Paging is supported for paged query.</para>
+        /// <para>Queries the push status list for a file on cloud application service instances, and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21169,7 +21224,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the push status list of cloud application service instances for a file. Paging is supported for paged query.</para>
+        /// <para>Queries the push status list for a file on cloud application service instances, and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21187,7 +21242,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging for a paged query.</para>
+        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21225,7 +21280,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging for a paged query.</para>
+        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21263,7 +21318,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging for a paged query.</para>
+        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21281,7 +21336,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging for a paged query.</para>
+        /// <para>Queries a list of uploaded files. The response includes the upload status of the files and supports paging and paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27171,7 +27226,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes pushing for a stream.</para>
+        /// <para>Resumes the push of a specific stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27233,7 +27288,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes pushing for a stream.</para>
+        /// <para>Resumes the push of a specific stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27295,7 +27350,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes pushing for a stream.</para>
+        /// <para>Resumes the push of a specific stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27313,7 +27368,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes pushing for a stream.</para>
+        /// <para>Resumes the push of a specific stream.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32287,6 +32342,154 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpgradeRenderingInstanceImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>升级云应用服务主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradeRenderingServerImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingServerImageResponse
+        /// </returns>
+        public UpgradeRenderingServerImageResponse UpgradeRenderingServerImageWithOptions(UpgradeRenderingServerImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradeRenderingServerImageShrinkRequest request = new UpgradeRenderingServerImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Precheck))
+            {
+                query["Precheck"] = request.Precheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeRenderingServerImage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeRenderingServerImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>升级云应用服务主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradeRenderingServerImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingServerImageResponse
+        /// </returns>
+        public async Task<UpgradeRenderingServerImageResponse> UpgradeRenderingServerImageWithOptionsAsync(UpgradeRenderingServerImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradeRenderingServerImageShrinkRequest request = new UpgradeRenderingServerImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Precheck))
+            {
+                query["Precheck"] = request.Precheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeRenderingServerImage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeRenderingServerImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>升级云应用服务主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeRenderingServerImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingServerImageResponse
+        /// </returns>
+        public UpgradeRenderingServerImageResponse UpgradeRenderingServerImage(UpgradeRenderingServerImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpgradeRenderingServerImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>升级云应用服务主机镜像</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeRenderingServerImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingServerImageResponse
+        /// </returns>
+        public async Task<UpgradeRenderingServerImageResponse> UpgradeRenderingServerImageAsync(UpgradeRenderingServerImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpgradeRenderingServerImageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

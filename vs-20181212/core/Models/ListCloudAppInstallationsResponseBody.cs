@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>The installation time. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The installation time. The time is displayed in the ISO 8601 standard and includes the time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-28T14:48:34+08:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PatchId { get; set; }
 
             /// <summary>
-            /// <para>The cloud application service instance ID.</para>
+            /// <para>The instance ID of the cloud application service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -77,7 +77,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string RenderingInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The installation status of the cloud application. Valid values: install-init and installing (intermediate states), and installed and install-failed (final states).</para>
+            /// <para>The installation status of the cloud application. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Intermediate states: install-init and installing.</description></item>
+            /// <item><description>Final states: installed and install-failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>installed</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The time when the status was last updated. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The latest update time of the status. The time is displayed in the ISO 8601 standard and includes the time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-28T14:50:04+08:00</para>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned list.</para>
+        /// <para>The page number of the list to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page for a paged query.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

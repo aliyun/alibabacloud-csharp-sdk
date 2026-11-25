@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page during paging in a paged query.</para>
+        /// <para>The Settings for the number of entries returned per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The start time of the push. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The start time of the push. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-26T16:32:20+08:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PushTime { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the cloud application service.</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <list type="bullet">
             /// <item><description>Created</description></item>
             /// <item><description>Doing</description></item>
-            /// <item><description>Success: final state.</description></item>
-            /// <item><description>Failed: final state.</description></item>
+            /// <item><description>Success: terminal state</description></item>
+            /// <item><description>Failed: terminal state</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The latest update time of the status. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The latest update time of the status. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-26T17:02:10+08:00</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

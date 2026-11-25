@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The description. If Status is Failed, this field contains the cause of the failure.</para>
+        /// <para>The description. If Status is Failed, it includes the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conn failed!</para>

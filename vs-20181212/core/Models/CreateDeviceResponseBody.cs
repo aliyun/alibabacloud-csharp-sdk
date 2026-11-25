@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateDeviceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Device ID.</para>
+        /// <para>The ID of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>348*****380-cn-qingdao</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

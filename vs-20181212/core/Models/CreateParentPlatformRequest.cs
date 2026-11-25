@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The description of the parent platform.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>级联平台测试</para>
+        /// <para>Cascade platform test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>级联平台测试</para>
+        /// <para>Cascade platform test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

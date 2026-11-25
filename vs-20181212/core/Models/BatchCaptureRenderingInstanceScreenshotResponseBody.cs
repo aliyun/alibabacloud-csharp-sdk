@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchCaptureRenderingInstanceScreenshotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data pre-check result.</para>
+        /// <para>The data precheck result.</para>
         /// </summary>
         [NameInMap("Datatest")]
         [Validation(Required=false)]
         public BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest Datatest { get; set; }
         public class BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest : TeaModel {
             /// <summary>
-            /// <para>The pre-check result.</para>
+            /// <para>The precheck result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ErrCode { get; set; }
 
             /// <summary>
-            /// <para>The reason for the failure.</para>
+            /// <para>The error message for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Not Applied</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<BatchCaptureRenderingInstanceScreenshotResponseBodySuccessItems> SuccessItems { get; set; }
         public class BatchCaptureRenderingInstanceScreenshotResponseBodySuccessItems : TeaModel {
             /// <summary>
-            /// <para>The time when the screenshot was created. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
+            /// <para>The time when the screenshot was created. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-19T14:46:37+08:00</para>

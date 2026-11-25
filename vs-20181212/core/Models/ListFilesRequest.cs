@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The Settings for the number of entries to return on each page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

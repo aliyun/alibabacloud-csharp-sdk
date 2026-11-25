@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The primary key associated with the playback domain name. This key is used to generate the authentication URL.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeVsDomainConfigs">DescribeVsDomainConfigs</a> operation to query the \<c>AuthKey\\</c> information.</para>
+        /// <para>Call the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeVsDomainConfigs">DescribeVsDomainConfigs</a> operation to query the `AuthKey` information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AuthKey { get; set; }
 
         /// <summary>
-        /// <para>The end time. This parameter applies to \<c>vod\\</c> streams.<br>
+        /// <para>The end time. This parameter applies to `vod` streams.<br>
         /// A UNIX timestamp. Unit: seconds.<br></para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time. This parameter applies to \<c>vod\\</c> streams.<br>
+        /// <para>The start time. This parameter applies to `vod` streams.<br>
         /// A UNIX timestamp. Unit: seconds.<br></para>
         /// 
         /// <b>Example:</b>
@@ -115,11 +115,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Transcode { get; set; }
 
         /// <summary>
-        /// <para>The type of the stream. The default value is \<c>live\\</c>. Valid values:</para>
+        /// <para>The type of the stream. The default value is `live`. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>\<c>live\\</c>: a live stream.</para>
+        /// <item><description><para>`live`: a live stream.</para>
         /// </description></item>
-        /// <item><description><para>\<c>vod\\</c>: a video-on-demand (VOD) stream, such as a historical stream from a Network Video Recorder (NVR).</para>
+        /// <item><description><para>`vod`: a video-on-demand (VOD) stream, such as a historical stream from a Network Video Recorder (NVR).</para>
         /// </description></item>
         /// </list>
         /// 

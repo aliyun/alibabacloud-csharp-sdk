@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task waiting queue information.</para>
+        /// <para>The waiting queue information.</para>
         /// </summary>
         [NameInMap("TaskWaitingQueue")]
         [Validation(Required=false)]

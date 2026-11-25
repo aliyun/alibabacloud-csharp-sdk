@@ -20,6 +20,15 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <para>The stream control action. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>forbid</b>: Disables the stream.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>forbid</para>
+        /// </summary>
         [NameInMap("ControlStreamAction")]
         [Validation(Required=false)]
         public string ControlStreamAction { get; set; }
@@ -36,7 +45,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Only &quot;publisher&quot; is supported.</para>
+        /// <para>The live stream type. Valid values: publisher.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +56,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string LiveStreamType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only interrupt the stream without adding it to the blacklist. A value of \<c>yes\\</c> indicates that the stream is only interrupted.</para>
+        /// <para>Specifies whether to only interrupt the stream without adding it to the blacklist. Valid values: yes: Interrupts the stream without adding it to the blacklist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yes</para>
@@ -61,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time to resume the stream. The time is in UTC format.</para>
+        /// <para>The time to resume the stream in UTC format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-01T17:37:00Z</para>

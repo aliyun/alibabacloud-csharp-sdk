@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The URL to which live stream information is pushed.</para>
         /// <remarks>
-        /// <para>This URL must start with http\:// or https\://.</para>
+        /// <para>This URL must start with http:// or https://.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

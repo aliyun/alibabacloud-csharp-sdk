@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mytest</para>
+        /// <para>mytest01</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]

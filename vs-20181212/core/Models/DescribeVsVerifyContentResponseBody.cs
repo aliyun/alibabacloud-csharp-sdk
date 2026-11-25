@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsVerifyContentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The verification content.</para>
+        /// <para>The check content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>verify_dffeb6610035dcb77b413a59c3*****</para>

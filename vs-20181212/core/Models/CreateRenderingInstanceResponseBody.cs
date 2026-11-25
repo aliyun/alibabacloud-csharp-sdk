@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the cloud application service.</para>
+        /// <para>The cloud application service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID list of the cloud application service.</para>
+        /// <para>The cloud application service instance ID list.</para>
         /// </summary>
         [NameInMap("RenderingInstanceIds")]
         [Validation(Required=false)]

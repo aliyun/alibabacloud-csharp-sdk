@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class AddHiveEdgeWorkersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para><b>The cluster ID.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string HiveId { get; set; }
 
         /// <summary>
-        /// <para>A list of instance IDs.</para>
+        /// <para><b>The list of workload IDs.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;acp-c4b9pbj4fzkagfexv\&quot;, \&quot;acp-c4b9pbj4fzkagfexw\&quot;]</para>
+        /// <para>[&quot;acp-c4b9pbj4fzkagfexv&quot;, &quot;acp-c4b9pbj4fzkagfexw&quot;]</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

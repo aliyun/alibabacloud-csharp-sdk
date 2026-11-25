@@ -10,21 +10,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateDeviceRequest : TeaModel {
         /// <summary>
-        /// <para>GB-compliant alarm method to subscribe to. Valid values:</para>
+        /// <para>The subscribed national standard alarm methods. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0 (all)</para>
-        /// </description></item>
-        /// <item><description><para>5 (video alarm)</para>
-        /// </description></item>
-        /// <item><description><para>7 (other alarms)</para>
-        /// </description></item>
+        /// <item><description>0: All.</description></item>
+        /// <item><description>5: Video alarm.</description></item>
+        /// <item><description>7: Other alarms.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>An empty value means no subscription.</para>
-        /// </description></item>
-        /// <item><description><para>You can specify multiple values, separated by commas (,).</para>
-        /// </description></item>
+        /// <item><description>An empty value indicates no subscription.</description></item>
+        /// <item><description>Multiple values are supported and must be separated by commas (,).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -40,7 +35,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? AutoDirectory { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable location subscription for the device. Default value: false.</para>
+        /// <para>Specifies whether to enable device location subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.
+        /// Default value: false.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? AutoPos { get; set; }
 
         /// <summary>
-        /// <para>Whether to automatically start the stream. Default value: false.</para>
+        /// <para>Specifies whether to automatically start the stream. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.
+        /// Default value: false.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -60,17 +65,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? AutoStart { get; set; }
 
         /// <summary>
-        /// <para>Device description.</para>
+        /// <para>The description of the device.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx路口摄像头</para>
+        /// <para>xxx intersection camera</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>ID of the folder that contains the device.</para>
+        /// <para>The ID of the folder to which the device belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>399*****488-cn-qingdao</para>
@@ -80,7 +85,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>Device serial number.</para>
+        /// <para>The serial number of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D0*****4C0</para>
@@ -90,9 +95,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Dsn { get; set; }
 
         /// <summary>
-        /// <para>GB-compliant device ID.</para>
+        /// <para>The national standard ID of the device.</para>
         /// <remarks>
-        /// <para>This parameter applies only to GB-compliant protocols.</para>
+        /// <para>This parameter is applicable only to the national standard protocol.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,7 +108,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GbId { get; set; }
 
         /// <summary>
-        /// <para>ID of the space that contains the device.</para>
+        /// <para>The ID of the workspace to which the device belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +119,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Device IP address.</para>
+        /// <para>The IP address of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.10.10</para>
@@ -124,7 +129,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The dimension of the device.</para>
+        /// <para>The latitude of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>119.20</para>
@@ -134,7 +139,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Latitude { get; set; }
 
         /// <summary>
-        /// <para>Device longitude.</para>
+        /// <para>The longitude of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45.00</para>
@@ -144,10 +149,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Longitude { get; set; }
 
         /// <summary>
-        /// <para>Device name.</para>
+        /// <para>The name of the device.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx路口摄像头</para>
+        /// <para>xxx intersection camera</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -158,7 +163,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Additional device parameters, formatted as a JSON string.</para>
+        /// <para>The other parameters of the device, in the format of a JSON serialized string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -168,7 +173,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>ID of the parent device. For example, the ID of the platform that hosts the camera.</para>
+        /// <para>The ID of the parent device, such as the ID of the platform to which a camera belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>399*****774-cn-qingdao</para>
@@ -178,7 +183,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ParentId { get; set; }
 
         /// <summary>
-        /// <para>Device password.</para>
+        /// <para>The password of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -188,7 +193,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Device port.</para>
+        /// <para>The port of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -198,7 +203,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Port { get; set; }
 
         /// <summary>
-        /// <para>Location subscription interval, in seconds.</para>
+        /// <para>The location subscription interval, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -208,14 +213,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PosInterval { get; set; }
 
         /// <summary>
-        /// <para>Device type. Valid values:</para>
+        /// <para>The type of the device. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ipc (camera)</para>
-        /// </description></item>
-        /// <item><description><para>platform (platform)</para>
-        /// </description></item>
-        /// <item><description><para>ied (intelligent device)</para>
-        /// </description></item>
+        /// <item><description>ipc: IP camera.</description></item>
+        /// <item><description>platform: Platform.</description></item>
+        /// <item><description>ied: Intelligent device.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -227,7 +229,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Stream URL on the device.</para>
+        /// <para>The URL of the stream on the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://xxx/xxx</para>
@@ -237,7 +239,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Url { get; set; }
 
         /// <summary>
-        /// <para>Device username.</para>
+        /// <para>The username of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -247,10 +249,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>Device vendor.</para>
+        /// <para>The vendor of the device.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>公司A</para>
+        /// <para>Company A</para>
         /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]

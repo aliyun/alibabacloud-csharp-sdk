@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the specified ComfyTask.</para>
+        /// <para>The ID of the ComfyTask.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

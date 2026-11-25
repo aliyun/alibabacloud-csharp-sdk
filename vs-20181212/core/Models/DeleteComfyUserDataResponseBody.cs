@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
