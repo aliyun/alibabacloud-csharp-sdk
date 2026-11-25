@@ -29,19 +29,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The attack type of the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: abnormal connection</description></item>
-            /// <item><description><b>2</b>: execute commands</description></item>
-            /// <item><description><b>3</b>: brute-force attacks</description></item>
-            /// <item><description><b>4</b>: scan</description></item>
-            /// <item><description><b>5</b>: other</description></item>
-            /// <item><description><b>6</b>: information leak</description></item>
-            /// <item><description><b>7</b>: DoS attack</description></item>
-            /// <item><description><b>8</b>: overflow attack</description></item>
-            /// <item><description><b>9</b>: web attack</description></item>
-            /// <item><description><b>10</b>: trojan backdoor</description></item>
-            /// <item><description><b>11</b>: virus worm</description></item>
-            /// <item><description><b>12</b>: mining behavior</description></item>
-            /// <item><description><b>13</b>: reverse shell</description></item>
+            /// <item><description><b>1</b>: Abnormal connection.</description></item>
+            /// <item><description><b>2</b>: Command execute.</description></item>
+            /// <item><description><b>3</b>: Brute-force attacks.</description></item>
+            /// <item><description><b>4</b>: Scan.</description></item>
+            /// <item><description><b>5</b>: Other.</description></item>
+            /// <item><description><b>6</b>: Information leak.</description></item>
+            /// <item><description><b>7</b>: DoS attack.</description></item>
+            /// <item><description><b>8</b>: Overflow attack.</description></item>
+            /// <item><description><b>9</b>: Web attack.</description></item>
+            /// <item><description><b>10</b>: Trojan backdoor.</description></item>
+            /// <item><description><b>11</b>: Virus and worm.</description></item>
+            /// <item><description><b>12</b>: Mining behavior.</description></item>
+            /// <item><description><b>13</b>: Reverse shell.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The traffic direction of the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>in</b>: inbound</description></item>
-            /// <item><description><b>out</b>: outbound</description></item>
+            /// <item><description><b>in</b>: Inbound.</description></item>
+            /// <item><description><b>out</b>: Outbound.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The time when the intrusion event first occurred. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The time when the intrusion event first occurred. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1534408189</para>
@@ -126,6 +126,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? FirstEventTime { get; set; }
 
             /// <summary>
+            /// <para>The specific threat intelligence value matched by the event, such as an IP address, domain name, or URL. This parameter is returned only for events from the threat intelligence source and is empty for other sources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://www.example.com">www.example.com</a></para>
+            /// </summary>
+            [NameInMap("HitContent")]
+            [Validation(Required=false)]
+            public string HitContent { get; set; }
+
+            /// <summary>
+            /// <para>The type of threat intelligence matched by the event. Valid values: ip, domain, and url. This parameter is returned only for events from the threat intelligence source and is empty for other sources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>domain</para>
+            /// </summary>
+            [NameInMap("HitType")]
+            [Validation(Required=false)]
+            public string HitType { get; set; }
+
+            /// <summary>
             /// <para>The IP geolocation information. This struct contains the <b>CityId</b>, <b>CityName</b>, <b>CountryId</b>, and <b>CountryName</b> parameters.<br><b>CityId</b> indicates the ID of the city to which the IP address belongs. <b>CityName</b> indicates the name of the city to which the IP address belongs. <b>CountryId</b> indicates the ID of the country to which the IP address belongs. <b>CountryName</b> indicates the name of the country to which the IP address belongs.</para>
             /// </summary>
             [NameInMap("IPLocationInfo")]
@@ -133,7 +153,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public DescribeRiskEventGroupResponseBodyDataListIPLocationInfo IPLocationInfo { get; set; }
             public class DescribeRiskEventGroupResponseBodyDataListIPLocationInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the city.</para>
+                /// <para>The city ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>510100</para>
@@ -143,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CityId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the city.</para>
+                /// <para>The city name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Chengdu</para>
@@ -153,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CityName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the country.</para>
+                /// <para>The country ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN</para>
@@ -163,7 +183,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CountryId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the country.</para>
+                /// <para>The country name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>China</para>
@@ -175,7 +195,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The time when the intrusion prevention event last occurred. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The time when the intrusion prevention event last occurred. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1534408267</para>
@@ -185,7 +205,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? LastEventTime { get; set; }
 
             /// <summary>
-            /// <para>The private IP information of the intrusion prevention event. This information is returned as an array of <b>RegionNo</b>, <b>ResourceInstanceId</b>, <b>ResourceInstanceName</b>, and <b>ResourcePrivateIP</b>.<br><b>RegionNo</b> indicates the region ID to which the IP address belongs. <b>ResourceInstanceId</b> indicates the instance ID to which the IP address belongs. <b>ResourceInstanceName</b> indicates the name of the instance to which the IP address belongs. <b>ResourcePrivateIP</b> indicates the IP address.</para>
+            /// <para>The private IP address information of the intrusion prevention event. This information is returned as an array of <b>RegionNo</b>, <b>ResourceInstanceId</b>, <b>ResourceInstanceName</b>, and <b>ResourcePrivateIP</b>.<br><b>RegionNo</b> indicates the region ID to which the IP address belongs. <b>ResourceInstanceId</b> indicates the instance ID to which the IP address belongs. <b>ResourceInstanceName</b> indicates the name of the instance to which the IP address belongs. <b>ResourcePrivateIP</b> indicates the IP address.</para>
             /// </summary>
             [NameInMap("ResourcePrivateIPList")]
             [Validation(Required=false)]
@@ -212,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string ResourceInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the instance.</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LD-shenzhen-zy****</para>
@@ -236,12 +256,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The public IP address type of the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>EIP</b>: elastic IP address (EIP)</description></item>
-            /// <item><description><b>EcsPublicIP</b>: public IP addresses of Elastic Compute Service (ECS) instances</description></item>
-            /// <item><description><b>EcsEIP</b>: EIP of an ECS instance</description></item>
-            /// <item><description><b>NatPublicIP</b>: public IP address of a NAT gateway</description></item>
-            /// <item><description><b>NatEIP</b>: EIP of a NAT gateway</description></item>
-            /// <item><description><b>SlbPublicIp</b>: public IP address of an SLB instance</description></item>
+            /// <item><description><b>EIP</b>: Elastic IP address.</description></item>
+            /// <item><description><b>EcsPublicIP</b>: Public IP addresses of Elastic Compute Service (ECS) instances.</description></item>
+            /// <item><description><b>EcsEIP</b>: EIP of an ECS instance.</description></item>
+            /// <item><description><b>NatPublicIP</b>: Public IP address of a NAT gateway.</description></item>
+            /// <item><description><b>NatEIP</b>: EIP of a NAT gateway.</description></item>
+            /// <item><description><b>SlbPublicIp</b>: Public IP address of an SLB instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -264,8 +284,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The defense status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: alert</description></item>
-            /// <item><description><b>2</b>: block</description></item>
+            /// <item><description><b>1</b>: Alert.</description></item>
+            /// <item><description><b>2</b>: Block.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -278,9 +298,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The source of the detection rule for the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: basic protection</description></item>
-            /// <item><description><b>2</b>: virtual patches</description></item>
-            /// <item><description><b>4</b>: threat intelligence</description></item>
+            /// <item><description><b>1</b>: Basic protection.</description></item>
+            /// <item><description><b>2</b>: Virtual patches.</description></item>
+            /// <item><description><b>4</b>: Threat intelligence.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -303,7 +323,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The source IP address label, which serves as an identity to indicate whether the IP address is one of the back-to-origin IP addresses of cloud services.</para>
+            /// <para>The source IP address label, which provides the identity of whether the IP address is one of the back-to-origin IP addresses of a cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WAF Back-to-origin Address</para>
@@ -328,7 +348,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<string> SrcPrivateIPList { get; set; }
 
             /// <summary>
-            /// <para>The intelligence labels for critical event protection.</para>
+            /// <para>The intelligence tags label for critical event protection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-tag</para>
@@ -338,14 +358,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The destination VPC information of the intrusion prevention event. This structure contains the <b>EcsInstanceId</b>, <b>EcsInstanceName</b>, <b>NetworkInstanceId</b>, <b>NetworkInstanceName</b>, and <b>RegionNo</b> parameters.<br><b>EcsInstanceId</b> indicates the instance ID of the ECS instance in the VPC. <b>EcsInstanceName</b> indicates the name of the ECS instance in the VPC. <b>NetworkInstanceId</b> indicates the instance ID of the VPC-connected instance. <b>NetworkInstanceName</b> indicates the name of the VPC-connected instance. <b>RegionNo</b> indicates the region ID to which the VPC-connected instance belongs.</para>
+            /// <para>The destination VPC information of the intrusion prevention event. This structure contains the <b>EcsInstanceId</b>, <b>EcsInstanceName</b>, <b>NetworkInstanceId</b>, <b>NetworkInstanceName</b>, and <b>RegionNo</b> parameters.<br><b>EcsInstanceId</b> indicates the ECS instance ID in the VPC. <b>EcsInstanceName</b> indicates the name of the ECS instance in the VPC. <b>NetworkInstanceId</b> indicates the VPC-connected instance ID. <b>NetworkInstanceName</b> indicates the VPC-connected instance name. <b>RegionNo</b> indicates the region ID to which the VPC-connected instance belongs.</para>
             /// </summary>
             [NameInMap("VpcDstInfo")]
             [Validation(Required=false)]
             public DescribeRiskEventGroupResponseBodyDataListVpcDstInfo VpcDstInfo { get; set; }
             public class DescribeRiskEventGroupResponseBodyDataListVpcDstInfo : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the ECS instance.</para>
+                /// <para>The ECS instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-wz92jf4scg2zb74p****</para>
@@ -365,7 +385,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string EcsInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the VPC-connected instance.</para>
+                /// <para>The VPC-connected instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf6e9a9zyokj2ywuo****</para>
@@ -375,7 +395,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string NetworkInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the VPC-connected instance.</para>
+                /// <para>The VPC-connected instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VPC-SH-TX****</para>
@@ -397,14 +417,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The source VPC information of the intrusion prevention event. This structure contains the <b>EcsInstanceId</b>, <b>EcsInstanceName</b>, <b>NetworkInstanceId</b>, <b>NetworkInstanceName</b>, and <b>RegionNo</b> parameters.<br><b>EcsInstanceId</b> indicates the instance ID of the ECS instance in the VPC. <b>EcsInstanceName</b> indicates the name of the ECS instance in the VPC. <b>NetworkInstanceId</b> indicates the instance ID of the VPC-connected instance. <b>NetworkInstanceName</b> indicates the name of the VPC-connected instance. <b>RegionNo</b> indicates the region ID to which the VPC-connected instance belongs.</para>
+            /// <para>The source VPC information of the intrusion prevention event. This structure contains the <b>EcsInstanceId</b>, <b>EcsInstanceName</b>, <b>NetworkInstanceId</b>, <b>NetworkInstanceName</b>, and <b>RegionNo</b> parameters.<br><b>EcsInstanceId</b> indicates the ECS instance ID in the VPC. <b>EcsInstanceName</b> indicates the name of the ECS instance in the VPC. <b>NetworkInstanceId</b> indicates the VPC-connected instance ID. <b>NetworkInstanceName</b> indicates the VPC-connected instance name. <b>RegionNo</b> indicates the region ID to which the VPC-connected instance belongs.</para>
             /// </summary>
             [NameInMap("VpcSrcInfo")]
             [Validation(Required=false)]
             public DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo VpcSrcInfo { get; set; }
             public class DescribeRiskEventGroupResponseBodyDataListVpcSrcInfo : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the ECS instance.</para>
+                /// <para>The ECS instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-wz92jf4scg2zb74p****</para>
@@ -424,7 +444,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string EcsInstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the VPC-connected instance.</para>
+                /// <para>The VPC-connected instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf6e9a9zyokj2ywuo****</para>
@@ -434,7 +454,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string NetworkInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the VPC-connected instance.</para>
+                /// <para>The VPC-connected instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VPC-SH-TX****</para>
@@ -458,9 +478,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The security level of the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: low</description></item>
-            /// <item><description><b>2</b>: medium</description></item>
-            /// <item><description><b>3</b>: high</description></item>
+            /// <item><description><b>1</b>: Low.</description></item>
+            /// <item><description><b>2</b>: Medium.</description></item>
+            /// <item><description><b>3</b>: High.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

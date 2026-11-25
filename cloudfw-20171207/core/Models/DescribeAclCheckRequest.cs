@@ -42,6 +42,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The processing status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Pending: Unprocessed.</description></item>
+        /// <item><description>Success: Processed successfully.</description></item>
+        /// <item><description>Processing: Processing.</description></item>
+        /// <item><description>Ignored: Ignored.</description></item>
+        /// <item><description>Failed: Processing failed.</description></item>
+        /// <item><description>PendingOrFailed: Unprocessed or processing failed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Pending</para>
+        /// </summary>
+        [NameInMap("ProcessStatus")]
+        [Validation(Required=false)]
+        public string ProcessStatus { get; set; }
+
+        /// <summary>
         /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 

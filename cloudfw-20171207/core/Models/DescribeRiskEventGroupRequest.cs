@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The attack type of the intrusion prevention events. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: abnormal connection.</description></item>
-        /// <item><description><b>2</b>: command execute.</description></item>
+        /// <item><description><b>2</b>: commands to execute.</description></item>
         /// <item><description><b>3</b>: brute-force attacks.</description></item>
         /// <item><description><b>4</b>: scan.</description></item>
         /// <item><description><b>5</b>: other.</description></item>
@@ -38,13 +38,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>7</b>: DoS attack.</description></item>
         /// <item><description><b>8</b>: buffer overflow attack.</description></item>
         /// <item><description><b>9</b>: web attack.</description></item>
-        /// <item><description><b>10</b>: trojan or backdoor.</description></item>
+        /// <item><description><b>10</b>: trojan backdoor.</description></item>
         /// <item><description><b>11</b>: virus or worm.</description></item>
         /// <item><description><b>12</b>: mining behavior.</description></item>
         /// <item><description><b>13</b>: reverse shell.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not provide Settings for this parameter, events of all attack types are queried.</para>
+        /// <para>If you do not configure the Settings for this parameter, events of all attack types are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,8 +71,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? BuyVersion { get; set; }
 
         /// <summary>
-        /// <para>Settings for the paging page number to return in a paged query.</para>
-        /// <para>Default value: <b>1</b>.</para>
+        /// <para>The paging Settings that specify which page of data to return in a paged query.
+        /// Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,8 +82,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The risk event type.</para>
-        /// <para>Valid value: <b>session</b>, which indicates intrusion prevention events.</para>
+        /// <para>The risk event type. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>session</b>: intrusion prevention events. This is the only valid value.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The direction of the traffic in the intrusion prevention events. Valid values:</para>
+        /// <para>The traffic direction of the intrusion prevention events. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>in</b>: inbound.</description></item>
         /// <item><description><b>out</b>: outbound.</description></item>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The destination IP address to query. If you specify this parameter, intrusion prevention events that involve the specified destination IP address are queried.</para>
+        /// <para>The destination IP address that you want to query. If you specify this parameter, intrusion prevention events that involve this destination IP address are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -123,7 +125,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The instance ID of the destination VPC-connected instance.</para>
         /// <remarks>
-        /// <para>Settings for this parameter are required only when FirewallType is set to VpcFirewall.</para>
+        /// <para>You only need to configure the Settings for this parameter when FirewallType is set to VpcFirewall.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstNetworkInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The value is a UNIX timestamp in seconds. The end time must not be earlier than the start time. Both NAT and VPC queries include the end time.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -155,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The type of the Cloud Firewall. Valid values:</para>
+        /// <para>The type of the cloud firewall. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>VpcFirewall</b>: virtual private cloud (VPC) firewalls.</description></item>
         /// <item><description><b>InternetFirewall</b> (default): the Internet Border firewall.</description></item>
@@ -195,8 +197,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to query the geolocation information of IP addresses. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: does not query the IP geolocation information.</description></item>
-        /// <item><description><b>false</b> (default): queries the IP geolocation information.</description></item>
+        /// <item><description><b>true</b>: does not query the geolocation information of IP addresses.</description></item>
+        /// <item><description><b>false</b> (default): queries the geolocation information of IP addresses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -223,8 +225,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>Settings for the paging size in a paged query.</para>
-        /// <para>Default value: <b>6</b>. Maximum value: <b>10</b>.</para>
+        /// <para>The paging Settings for the number of entries to return on each page in a paged query.</para>
+        /// <para>Default value: <b>6</b>, which indicates that 6 entries are returned on each page. Maximum value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -269,11 +271,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleSource { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Valid values:</para>
+        /// <para>The field based on which the results are sorted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VulLevel</b> (default): sorts the results by risk level.</para>
+        /// <item><description><para><b>VulLevel</b> (default): sorts the results based on the risk level.</para>
         /// </description></item>
-        /// <item><description><para><b>LastTime</b>: sorts the results by the most recent occurrence time.</para>
+        /// <item><description><para><b>LastTime</b>: sorts the results based on the time when the event last occurred.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -285,7 +287,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The source IP address to query. If you specify this parameter, intrusion prevention events that involve the specified source IP address are queried.</para>
+        /// <para>The source IP address that you want to query. If you specify this parameter, intrusion prevention events that involve this source IP address are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -297,7 +299,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The instance ID of the source VPC-connected instance.</para>
         /// <remarks>
-        /// <para>Settings for this parameter are required only when FirewallType is set to VpcFirewall.</para>
+        /// <para>You only need to configure the Settings for this parameter when FirewallType is set to VpcFirewall.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -321,9 +323,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The security level of the intrusion prevention events. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: low-risk.</description></item>
-        /// <item><description><b>2</b>: medium-risk.</description></item>
-        /// <item><description><b>3</b>: high-risk.</description></item>
+        /// <item><description><b>1</b>: low risk.</description></item>
+        /// <item><description><b>2</b>: medium risk.</description></item>
+        /// <item><description><b>3</b>: high risk.</description></item>
         /// </list>
         /// <remarks>
         /// <para>If you do not specify this parameter, events at all security levels are queried.</para>

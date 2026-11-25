@@ -12097,8 +12097,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 queries per second. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12141,8 +12141,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 queries per second. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12185,8 +12185,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 queries per second. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12209,8 +12209,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 queries per second. If this limit is exceeded, API calls are throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this API operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29280,14 +29280,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed data of intrusion prevention events.</para>
+        /// <para>Queries the detailed data of intrusion prevention events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if you do not need to return IP geolocation information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29425,14 +29425,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed data of intrusion prevention events.</para>
+        /// <para>Queries the detailed data of intrusion prevention events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if you do not need to return IP geolocation information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29570,14 +29570,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed data of intrusion prevention events.</para>
+        /// <para>Queries the detailed data of intrusion prevention events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if you do not need to return IP geolocation information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29595,14 +29595,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed data of intrusion prevention events.</para>
+        /// <para>Queries the detailed data of intrusion prevention events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if IP geolocation information is not required.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The QPS limit per user for this operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
+        /// <para>This operation queries and downloads detailed data of intrusion prevention events. Query 5 to 10 entries at a time. To prevent query timeouts, set the NoLocation parameter to true if you do not need to return IP geolocation information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10 queries per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33337,7 +33337,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall has not been created, you must first prepare an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
+        /// <para>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall is not created, you must first create an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33388,7 +33388,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall has not been created, you must first prepare an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
+        /// <para>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall is not created, you must first create an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33439,7 +33439,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall has not been created, you must first prepare an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
+        /// <para>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall is not created, you must first create an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33462,7 +33462,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a VPC firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall has not been created, you must first prepare an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
+        /// <para>Queries the details of a virtual private cloud (VPC) firewall for an Enterprise Edition transit router. You can obtain the FirewallId by calling DescribeTrFirewallsV2List. If the firewall is not created, you must first create an Enterprise Edition transit router in Cloud Enterprise Network (CEN) and then call CreateTrFirewallV2 to create the firewall and obtain the FirewallId.</para>
         /// </description>
         /// 
         /// <param name="request">
