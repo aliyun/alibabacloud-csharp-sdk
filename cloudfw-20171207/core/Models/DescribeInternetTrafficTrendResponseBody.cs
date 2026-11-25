@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The average inbound network throughput. Unit: bps.</para>
+        /// <para>The average network throughput in the inbound direction. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6114152</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgInBps { get; set; }
 
         /// <summary>
-        /// <para>The average outbound network throughput. Unit: bps.</para>
+        /// <para>The average network throughput in the outbound direction. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70148993</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgSession { get; set; }
 
         /// <summary>
-        /// <para>The average total network throughput for inbound and outbound traffic. Unit: bps.</para>
+        /// <para>The average network throughput in both outbound and inbound directions. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2306</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgTotalBps { get; set; }
 
         /// <summary>
-        /// <para>A list of traffic statistics.</para>
+        /// <para>The list of traffic statistics information.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeInternetTrafficTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetTrafficTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The inbound network throughput. Unit: bps.</para>
+            /// <para>The network throughput in the inbound direction. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>187</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBps { get; set; }
 
             /// <summary>
-            /// <para>The inbound traffic. Unit: bytes.</para>
+            /// <para>The total network traffic in the inbound direction. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>235</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The inbound packet rate. Unit: pps.</para>
+            /// <para>The packet rate in the inbound direction. Unit: pps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NewConn { get; set; }
 
             /// <summary>
-            /// <para>The outbound network throughput. Unit: bps.</para>
+            /// <para>The network throughput in the outbound direction. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBps { get; set; }
 
             /// <summary>
-            /// <para>The outbound traffic. Unit: bytes.</para>
+            /// <para>The total network traffic in the outbound direction. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1123</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The outbound packet rate. Unit: pps.</para>
+            /// <para>The packet rate in the outbound direction. Unit: pps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -137,8 +137,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the traffic was recorded. This value is a UNIX timestamp in seconds.</para>
-            /// <para>If data for this time point has not been processed, the values of other fields are -1.</para>
+            /// <para>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</para>
+            /// <para>If the data for this time point is not fully processed, the values of other fields are -1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1659405600</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Time { get; set; }
 
             /// <summary>
-            /// <para>The total inbound and outbound network throughput. Unit: bps.</para>
+            /// <para>The total network throughput in both outbound and inbound directions. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>232</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The UNIX timestamp when the peak bandwidth was reached. Unit: seconds.</para>
+        /// <para>The timestamp when the peak bandwidth occurred. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672736400</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxBandwidthTime { get; set; }
 
         /// <summary>
-        /// <para>The peak daily excess traffic.</para>
+        /// <para>The maximum daily excess traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>873</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxDayExceedBytes { get; set; }
 
         /// <summary>
-        /// <para>The peak inbound network throughput. Unit: bps.</para>
+        /// <para>The peak network throughput in the inbound direction. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10275643</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxInBps { get; set; }
 
         /// <summary>
-        /// <para>The peak outbound network throughput. Unit: bps.</para>
+        /// <para>The peak network throughput in the outbound direction. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>395188</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxSession { get; set; }
 
         /// <summary>
-        /// <para>The peak total network throughput for inbound and outbound traffic. Unit: bps.</para>
+        /// <para>The peak network throughput in both outbound and inbound directions. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89783147</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total inbound and outbound traffic. Unit: bytes.</para>
+        /// <para>The total network traffic in both outbound and inbound directions. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>963227674958</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalExceedBytes { get; set; }
 
         /// <summary>
-        /// <para>The total inbound traffic. Unit: bytes.</para>
+        /// <para>The total network traffic in the inbound direction. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>41536824243873</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalInBytes { get; set; }
 
         /// <summary>
-        /// <para>The total outbound traffic. Unit: bytes.</para>
+        /// <para>The total network traffic in the outbound direction. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2660894567178</para>

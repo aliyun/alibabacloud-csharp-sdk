@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddControlPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The action that Cloud Firewall performs on traffic that matches the access control policy. Valid values:</para>
+        /// <para>The action that Cloud Firewall performs on traffic based on the access control policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>accept</b>: allows the traffic.</description></item>
-        /// <item><description><b>drop</b>: blocks the traffic.</description></item>
+        /// <item><description><b>drop</b>: denies the traffic.</description></item>
         /// <item><description><b>log</b>: monitors the traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The Protocol Type supported by the access control policy. Valid values:</para>
+        /// <para>The application type supported by the access control policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>FTP</b></description></item>
         /// <item><description><b>HTTP</b></description></item>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>SSL_No_Cert</b></description></item>
         /// <item><description><b>SSL</b></description></item>
         /// <item><description><b>VNC</b></description></item>
-        /// <item><description><b>ANY</b>: all Protocol Types.</description></item>
+        /// <item><description><b>ANY</b> (all application types)</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The valid values of ApplicationName depend on the value of Proto. If Proto is set to TCP, ApplicationName can be set to any of the preceding Protocol Types. If Proto is set to UDP, ICMP, or ANY, ApplicationName can only be set to ANY. You must specify ApplicationNameList or ApplicationName. You cannot leave both parameters empty.</para>
+        /// <para>The supported application types depend on the protocol type specified by the Proto parameter. If Proto is set to TCP, ApplicationName can be set to any of the preceding application types. If Proto is set to UDP, ICMP, or ANY, ApplicationName can only be set to ANY. You must specify either ApplicationNameList or ApplicationName. You cannot leave both parameters empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> ApplicationNameList { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure idempotence.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddadxefexxxx</para>
@@ -90,19 +90,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The destination port for traffic in the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When the Protocol Type is ICMP, leave DestPort empty.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>When the protocol type is ICMP, access control on destination ports is not supported.</para>
+        /// <item><description>If the protocol type is ICMP, leave DestPort empty.<remarks>
+        /// <para>If the protocol type is ICMP, access control on destination ports is not supported.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>When the Protocol Type is TCP, UDP, or ANY, and DestPortType is set to group, leave DestPort empty.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>When you select group (destination port address book) for the destination port type of the access control policy, you do not need to configure the Settings for specific destination port numbers. All ports that you want to manage by using this access control policy are included in the destination port address book.</para>
+        /// </description></item>
+        /// <item><description>If the protocol type is TCP, UDP, or ANY, and the destination port type (DestPortType) is group, leave DestPort empty.<remarks>
+        /// <para>If you set the destination port type to group (destination port address book), you do not need to specify a destination port number. All ports managed by the access control policy are included in the destination port address book.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>When the Protocol Type is TCP, UDP, or ANY, and DestPortType is set to port, set DestPort to the destination port number.</description></item>
+        /// </description></item>
+        /// <item><description>If the protocol type is TCP, UDP, or ANY, and the destination port type (DestPortType) is port, set DestPort to the destination port number.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,21 +140,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The destination address in the access control policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If DestinationType is set to net, set Destination to the destination CIDR block.</para>
+        /// <item><description><para>If DestinationType is set to net, Destination specifies the destination CIDR block.</para>
         /// <para>Example: 1.2.XX.XX/24</para>
         /// </description></item>
-        /// <item><description><para>If DestinationType is set to group, set Destination to the name of the destination address book.</para>
+        /// <item><description><para>If DestinationType is set to group, Destination specifies the name of the destination address book.</para>
         /// <para>Example: db_group</para>
         /// </description></item>
-        /// <item><description><para>If DestinationType is set to domain, set Destination to the destination domain name.</para>
+        /// <item><description><para>If DestinationType is set to domain, Destination specifies the destination domain name.</para>
         /// <para>Example: *.aliyuncs.com</para>
         /// </description></item>
-        /// <item><description><para>If DestinationType is set to location, set Destination to the destination region.</para>
-        /// <para>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</para>
+        /// <item><description><para>If DestinationType is set to location, Destination specifies the destination location.</para>
+        /// <para>Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about destination regions, see <a href="https://help.aliyun.com/document_detail/2854161.html">Region codes</a>.</para>
+        /// <para>If Destination specifies a destination location, for more information, see <a href="https://help.aliyun.com/document_detail/2854161.html">Location codes</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -170,12 +166,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Destination { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination address in the access control policy. Valid values:</para>
+        /// <para>The destination address type in the access control policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>net</b>: destination CIDR block</description></item>
         /// <item><description><b>group</b>: destination address book</description></item>
         /// <item><description><b>domain</b>: destination domain name</description></item>
-        /// <item><description><b>location</b>: destination area</description></item>
+        /// <item><description><b>location</b>: destination region</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -189,8 +185,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The traffic direction of the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound traffic</description></item>
-        /// <item><description><b>out</b>: outbound traffic</description></item>
+        /// <item><description><b>in</b>: Inbound traffic.</description></item>
+        /// <item><description><b>out</b>: Outbound traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -224,9 +220,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The end time of the Policy Validity Period for the access control policy. It is expressed in the format of a UNIX timestamp accurate to seconds. The time must be on the hour or half hour, and must be at least 30 minutes later than the start time.</para>
+        /// <para>The end time of the Policy Validity Period for the access control policy. The time is expressed in the UNIX timestamp in seconds format. The time must be on the hour or half hour, and must be at least 30 minutes later than the start time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent, leave EndTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime is required, and you must configure the Settings for the end time.</para>
+        /// <para>When RepeatType is set to <c>Permanent</c>, EndTime is empty. When RepeatType is set to <c>None</c>, <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, EndTime is required, and you must specify the end time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -287,7 +283,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>ICMP</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the traffic direction is outbound and the destination address is a threat intelligence address book or a cloud service address book of the domain name type, you can only set Proto to TCP. In this case, you can set the application type to HTTP, HTTPS, SMTP, SMTPS, or SSL.</para>
+        /// <para>If the traffic direction is outbound and the destination address is a domain name in a threat intelligence address book or a cloud service address book, you can only set Proto to TCP. In this case, you can set the application type to HTTP, HTTPS, SMTP, SMTPS, or SSL.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -315,18 +311,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Release { get; set; }
 
         /// <summary>
-        /// <para>The set of recurrence days for the Policy Validity Period of the access control policy.</para>
+        /// <para>The set of repeat days for the Policy Validity Period of the access control policy.</para>
         /// <list type="bullet">
-        /// <item><description>If RepeatType is set to <c>Permanent</c>, <c>None</c>, or <c>Daily</c>, leave RepeatDays empty.
-        /// Example: []</description></item>
-        /// <item><description>If RepeatType is set to Weekly, RepeatDays cannot be empty.
-        /// Example: [0, 6]<remarks>
-        /// <para>When the RepeatType Settings is Weekly, the values in RepeatDays cannot be duplicate.</para>
+        /// <item><description>When RepeatType is set to <c>Permanent</c>, <c>None</c>, or <c>Daily</c>, RepeatDays is an empty set. Example: []</description></item>
+        /// <item><description>When RepeatType is set to <c>Weekly</c>, RepeatDays cannot be empty. Example: [0, 6]<remarks>
+        /// <para>When RepeatType is set to Weekly, the values in RepeatDays must be unique.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>If RepeatType is set to <c>Monthly</c>, RepeatDays cannot be empty.
-        /// Example: [1, 31]<remarks>
-        /// <para>When the RepeatType Settings is Monthly, the values in RepeatDays cannot be duplicate.</para>
+        /// <item><description>When RepeatType is set to <c>Monthly</c>, RepeatDays cannot be empty. Example: [1, 31]<remarks>
+        /// <para>When RepeatType is set to Monthly, the values in RepeatDays must be unique.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -336,10 +329,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<long?> RepeatDays { get; set; }
 
         /// <summary>
-        /// <para>The recurrence end time of the Policy Validity Period for the access control policy. Example: 23:30. The time must be on the hour or half hour, and must be at least 30 minutes later than the recurrence start time.</para>
+        /// <para>The repeat end time for the Policy Validity Period of the access control policy. Example: 23:30. The time must be on the hour or half hour, and must be at least 30 minutes later than the repeat start time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent or None, leave RepeatEndTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime is required, and you must configure the Settings for the recurrence end time.
-        /// The time is in the HH:mm format (24-hour clock). Example: 08:00 or 23:30.</para>
+        /// <para>When RepeatType is set to <c>Permanent</c> or <c>None</c>, RepeatEndTime is empty. When RepeatType is set to <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, RepeatEndTime is required, and you must specify the repeat end time.
+        /// The time format is HH:mm (24-hour clock). Examples: 08:00 and 23:30.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -350,10 +343,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RepeatEndTime { get; set; }
 
         /// <summary>
-        /// <para>The recurrence start time of the Policy Validity Period for the access control policy. Example: 08:00. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the recurrence end time.</para>
+        /// <para>The repeat start time for the Policy Validity Period of the access control policy. Example: 08:00. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the repeat end time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent or None, leave RepeatStartTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime is required, and you must configure the Settings for the recurrence start time.
-        /// The time is in the HH:mm format (24-hour clock). Example: 08:00 or 23:30.</para>
+        /// <para>When RepeatType is set to <c>Permanent</c> or <c>None</c>, RepeatStartTime is empty. When RepeatType is set to <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, RepeatStartTime is required, and you must specify the repeat start time.
+        /// The time format is HH:mm (24-hour clock). Examples: 08:00 and 23:30.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -364,13 +357,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RepeatStartTime { get; set; }
 
         /// <summary>
-        /// <para>The recurrence type of the Policy Validity Period for the access control policy. Valid values:</para>
+        /// <para>The repeat type of the Policy Validity Period for the access control policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Permanent</b> (default): always</description></item>
-        /// <item><description><b>None</b>: specified single time</description></item>
-        /// <item><description><b>Daily</b>: every day</description></item>
-        /// <item><description><b>Weekly</b>: every week</description></item>
-        /// <item><description><b>Monthly</b>: every month</description></item>
+        /// <item><description><b>None</b>: a single specified time</description></item>
+        /// <item><description><b>Daily</b>: daily</description></item>
+        /// <item><description><b>Weekly</b>: weekly</description></item>
+        /// <item><description><b>Monthly</b>: monthly</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -390,7 +383,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>Example: db_group</para>
         /// </description></item>
         /// <item><description><para>If SourceType is set to location, set Source to the source region.</para>
-        /// <para>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</para>
+        /// <para>Example: [&quot;BJ11&quot;, &quot;ZB&quot;]</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -408,7 +401,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the requester.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -419,7 +412,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The source address type in the access control policy. Valid values:</para>
+        /// <para>The type of the source address in the access control policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>net</b>: source CIDR block</description></item>
         /// <item><description><b>group</b>: source address book</description></item>
@@ -435,9 +428,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the Policy Validity Period for the access control policy. It is expressed in the format of a UNIX timestamp accurate to seconds. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the end time.</para>
+        /// <para>The start time of the Policy Validity Period for the access control policy. The time is expressed in the UNIX timestamp in seconds format. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the end time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent, leave StartTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime is required, and you must configure the Settings for the start time.</para>
+        /// <para>When RepeatType is set to <c>Permanent</c>, StartTime is empty. When RepeatType is set to <c>None</c>, <c>Daily</c>, <c>Weekly</c>, or <c>Monthly</c>, StartTime is required, and you must specify the start time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

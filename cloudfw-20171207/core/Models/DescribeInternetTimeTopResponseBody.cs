@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTimeTopResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of returned entries.</para>
+        /// <para>The number of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? DataCount { get; set; }
 
         /// <summary>
-        /// <para>The list of returned data.</para>
+        /// <para>The returned data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The inbound bandwidth. Unit: bit/s.</para>
+            /// <para>The inbound traffic bandwidth rate. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>187</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NewConn { get; set; }
 
             /// <summary>
-            /// <para>The outbound bandwidth. Unit: bit/s.</para>
+            /// <para>The outbound traffic. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The total bandwidth. Unit: bit/s.</para>
+            /// <para>The total bandwidth. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>232</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The traffic time. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The time of the traffic. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1734399660</para>

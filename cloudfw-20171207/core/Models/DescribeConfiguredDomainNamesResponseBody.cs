@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeConfiguredDomainNamesResponseBodyDomainNames> DomainNames { get; set; }
         public class DescribeConfiguredDomainNamesResponseBodyDomainNames : TeaModel {
             /// <summary>
-            /// <para>The comment.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Office network domain name</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the domain name is malicious. Valid values: 0 (not malicious), 1 (malicious).</para>
+            /// <para>Indicates whether the domain name is malicious. Valid values: 0 (not malicious), 1 (malicious).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

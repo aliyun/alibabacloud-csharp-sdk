@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table to which the route entry belongs. The route table must exist in the user\&quot;s VPC. This parameter and DestinationCidr are used together to locate a route. If the route does not exist, the task fails and a message indicating that the route entry does not exist is returned.</para>
+            /// <para>The ID of the route table to which the route entry belongs. The route table must exist in the user&quot;s VPC. This parameter and DestinationCidr are used together to locate a route. If the route does not exist, the task fails and a message indicating that the route entry does not exist is returned.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

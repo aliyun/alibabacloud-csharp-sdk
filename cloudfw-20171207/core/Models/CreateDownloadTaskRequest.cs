@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The query conditions for the download task. This parameter is required. If you do not specify this parameter, the API returns error code -340408 (download task TaskData invalid).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;SearchItem\&quot;:\&quot;\&quot;,\&quot;UserType\&quot;:\&quot;buy\&quot;,\&quot;IpVersion\&quot;:\&quot;4\&quot;}</para>
+        /// <para>{&quot;SearchItem&quot;:&quot;&quot;,&quot;UserType&quot;:&quot;buy&quot;,&quot;IpVersion&quot;:&quot;4&quot;}</para>
         /// </summary>
         [NameInMap("TaskData")]
         [Validation(Required=false)]

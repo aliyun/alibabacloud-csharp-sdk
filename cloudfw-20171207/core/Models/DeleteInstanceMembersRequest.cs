@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The UIDs of the member accounts.</para>
+        /// <para>The list of UIDs of the Cloud Firewall member accounts.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234123412341234</para>
+        /// <para>[1234123412341234]</para>
         /// </summary>
         [NameInMap("MemberUids")]
         [Validation(Required=false)]

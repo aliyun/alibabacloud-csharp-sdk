@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The access control policy group ID of the virtual private cloud (VPC) firewalls at the border. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>If the virtual private cloud (VPC) firewalls at the border protect a Cloud Enterprise Network (CEN) instance, the policy group ID is the instance ID of the CEN instance.</para>
-            /// <para>Example: cen-ervw0g12b5jbw*\<em>\</em>\*</para>
+            /// <para>Example: cen-ervw0g12b5jbw****</para>
             /// </description></item>
             /// <item><description><para>If the virtual private cloud (VPC) firewalls at the border protect an Express Connect circuit, the policy group ID is the instance ID of the virtual private cloud (VPC) firewalls at the border.</para>
-            /// <para>Example: vfw-a42bbb7b887148c9*\<em>\</em>\*</para>
+            /// <para>Example: vfw-a42bbb7b887148c9****</para>
             /// </description></item>
             /// </list>
             /// 

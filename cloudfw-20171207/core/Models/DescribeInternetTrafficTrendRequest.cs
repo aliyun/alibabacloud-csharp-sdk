@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the Internet traffic. Valid values:</para>
+        /// <para>The traffic direction of the Internet. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>in</b>: inbound</para>
-        /// </description></item>
-        /// <item><description><para><b>out</b>: outbound</para>
-        /// </description></item>
+        /// <item><description><b>in</b>: inbound traffic access control.</description></item>
+        /// <item><description><b>out</b>: outbound traffic access control.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,12 +35,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Valid values:</para>
+        /// <para>The language type of the request and response messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source tracking code.</para>
+        /// <para>The tracing code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPublicIP { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. This value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,11 +104,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of traffic to query. Valid values:</para>
+        /// <para>The collected traffic type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>max</b> (default): peak traffic</para>
+        /// <item><description><para><b>max</b> (default): peak traffic.</para>
         /// </description></item>
-        /// <item><description><para><b>avg</b>: average traffic</para>
+        /// <item><description><para><b>avg</b>: average traffic.</para>
         /// </description></item>
         /// </list>
         /// 

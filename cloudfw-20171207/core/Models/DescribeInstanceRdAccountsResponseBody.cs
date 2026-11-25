@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeInstanceRdAccountsResponseBodyAccounts> Accounts { get; set; }
         public class DescribeInstanceRdAccountsResponseBodyAccounts : TeaModel {
             /// <summary>
-            /// <para>The ID of the member accounts.</para>
+            /// <para>The ID of member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>171054237268****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the member.</para>
+            /// <para>The display name of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

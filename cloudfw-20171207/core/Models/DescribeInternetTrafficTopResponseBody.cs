@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? DataCount { get; set; }
 
         /// <summary>
-        /// <para>The list of traffic data.</para>
+        /// <para>The traffic data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? IsSubscribed { get; set; }
 
             /// <summary>
-            /// <para>The list of labels.</para>
+            /// <para>The label list.</para>
             /// </summary>
             [NameInMap("LabelList")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3******</para>

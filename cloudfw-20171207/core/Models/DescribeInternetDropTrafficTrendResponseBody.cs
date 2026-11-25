@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DropRatio { get; set; }
 
             /// <summary>
-            /// <para>The value range of the object: <b>[0,10000\]</b>.</para>
+            /// <para>The value range of the object: <b>[0,10000]</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DropRing { get; set; }
 
             /// <summary>
-            /// <para>The rate of network traffic. Unit: kbit/s.</para>
+            /// <para>The rate of network traffic. Unit: kbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RingDataTime { get; set; }
 
             /// <summary>
-            /// <para>The dynamic packet drop time. The value is a UNIX timestamp in seconds, which indicates the number of seconds that have elapsed since January 1, 1970 (UTC).</para>
+            /// <para>The dynamic packet drop time. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724982259</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of dropped sessions in the corresponding period (peak value).</para>
+        /// <para>The maximum number of dropped sessions in the specified period, which represents the peak value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8090</para>
@@ -139,7 +139,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DropSessionMax { get; set; }
 
         /// <summary>
-        /// <para>The traffic multiplication mode. Valid values: - <b>0</b>: priority mode. - <b>1</b>: load balancing mode.</para>
+        /// <para>The traffic multiplication mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: priority mode.</description></item>
+        /// <item><description><b>1</b>: load balancing mode.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>12.34</para>

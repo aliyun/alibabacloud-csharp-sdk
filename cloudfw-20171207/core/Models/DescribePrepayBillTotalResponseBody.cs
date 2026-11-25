@@ -97,7 +97,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? InternetTrafficBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The monthly free quota for sensitive data detection. Unit: GB.</para>
+            /// <para>Specifies whether Agentic billing is used on the date to which the bill belongs. A value of true indicates that Agentic billing is used. A value of false indicates that standard billing is used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("IsAgenticBilling")]
+            [Validation(Required=false)]
+            public bool? IsAgenticBilling { get; set; }
+
+            /// <summary>
+            /// <para>The monthly free quota for sensitive data detection traffic. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? NatTrafficBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the total bandwidth (Internet, VPC, and NAT) reaches the maximum value on the day.</para>
+            /// <para>The timestamp when the total bandwidth (Internet + VPC + NAT) reaches the maximum value on the day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761588300</para>

@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <item><description>If <b>DestinationType</b> is set to <b>net</b>, the destination address is a CIDR block. Example: 192.0.XX.XX/24.</description></item>
             /// <item><description>If <b>DestinationType</b> is set to <b>domain</b>, the destination address is a domain name. Example: aliyuncs.com.</description></item>
             /// <item><description>If <b>DestinationType</b> is set to <b>group</b>, the destination address is the name of an address book. Example: db_group.</description></item>
-            /// <item><description>If <b>DestinationType</b> is set to <b>location</b>, the destination address is an area name. For more information about the area positional encoding, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
+            /// <item><description>If <b>DestinationType</b> is set to <b>location</b>, the destination address is an area name. For more information about the area positional encoding, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <list type="bullet">
             /// <item><description>If <b>SourceType</b> is set to <c>net</c>, the source address is a CIDR block. Example: 192.0.XX.XX/24.</description></item>
             /// <item><description>If <b>SourceType</b> is set to <c>group</c>, the source address is the name of a source address book. Example: db_group.</description></item>
-            /// <item><description>If <b>SourceType</b> is set to <c>location</c>, the source address is an area. For more information about the area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
+            /// <item><description>If <b>SourceType</b> is set to <c>location</c>, the source address is an area. For more information about the area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -506,7 +506,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The quota consumed by the access control policy, which is the sum of the quota consumed by each policy.
-            /// Quota consumed by a single policy = Number of source addresses (number of CIDR blocks or area) \* Number of destination addresses (number of CIDR blocks, area, or domain names) \* Number of port ranges \* Number of applications.</para>
+            /// Quota consumed by a single policy = Number of source addresses (number of CIDR blocks or area) * Number of destination addresses (number of CIDR blocks, area, or domain names) * Number of port ranges * Number of applications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>

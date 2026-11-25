@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateTrFirewallV2Request : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance. Create a CEN instance in the CEN console first and make sure that an Enterprise Edition transit router is created.</para>
+        /// <para>The ID of the CEN instance. You must first create a CEN instance in the CEN console and ensure that an Enterprise Edition transit router is created.</para>
         /// <remarks>
-        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</para>
+        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,11 +55,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The deployment mode of the firewall service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrimaryStandby</b>: primary/secondary mode</description></item>
-        /// <item><description><b>MultiPrimary</b>: active-active mode</description></item>
+        /// <item><description><b>PrimaryStandby</b>: active/standby mode.</description></item>
+        /// <item><description><b>MultiPrimary</b>: active-active mode.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If the value is invalid, ErrorFwServiceMode (-360437) is returned. The MultiPrimary mode does not support specifying zones.</para>
+        /// <para>Note: If this parameter is not specified, the system automatically selects a deployment mode based on the capabilities of the transit router. If the value is invalid, the API returns ErrorFwServiceMode (-360437). The MultiPrimary mode does not support specifying zones.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The CIDR block of the subnet that stores the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</para>
+        /// <para>The CIDR block of the subnet for the firewall elastic network interface (ENI) in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.1.0/24</para>
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallVswitchId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The region ID of the Enterprise Edition transit router.</para>
         /// <remarks>
-        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</para>
+        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -147,9 +147,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The routing mode. Valid values: managed (automatic mode), manual (manual mode for custom VPCs), and semi-managed (manual mode for managed VPCs).</para>
+        /// <para>The routing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>In managed mode, you only need to specify FirewallVpcCidr. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated (deprecated:true) and do not need to be specified.</para>
+        /// <item><description><para>managed: automatic mode.</para>
+        /// </description></item>
+        /// <item><description><para>manual: manual mode for custom VPCs.</para>
+        /// </description></item>
+        /// <item><description><para>semi-managed: manual mode for managed VPCs.</para>
+        /// </description></item>
+        /// <item><description><para>In managed mode, you only need to specify FirewallVpcCidr. The FirewallSubnetCidr, TrAttachmentSlaveCidr, and TrAttachmentMasterCidr parameters are deprecated and do not need to be specified.</para>
         /// </description></item>
         /// <item><description><para>In manual mode, you must specify FirewallVpcId, FirewallVswitchId, TrAttachmentSlaveZone, and TrAttachmentMasterZone.</para>
         /// </description></item>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</para>
+        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -170,7 +176,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The primary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</para>
+        /// <para>The primary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.3.0/24</para>
@@ -193,7 +199,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The secondary CIDR block of the subnet used to connect to the TR in the firewall VPC in automatic mode.</para>
+        /// <para>The secondary CIDR block of the subnet used to connect to the transit router in the firewall VPC in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.16/28</para>
@@ -214,7 +220,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrAttachmentSlaveZone { get; set; }
 
         /// <summary>
-        /// <para>The list of zone IDs used for the TR connection.</para>
+        /// <para>The list of zone IDs used for the transit router connection.</para>
         /// </summary>
         [NameInMap("TrAttachmentZones")]
         [Validation(Required=false)]
@@ -223,7 +229,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The ID of the Enterprise Edition transit router instance. The transit router must belong to the CEN instance specified by CenId.</para>
         /// <remarks>
-        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters(400).</para>
+        /// <para>Note: Although the required field in the schema is set to false, this parameter is actually required. If this parameter is not specified, the API returns ErrorParameters (400).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

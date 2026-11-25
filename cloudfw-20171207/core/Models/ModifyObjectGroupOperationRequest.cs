@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyObjectGroupOperationRequest : TeaModel {
         /// <summary>
-        /// <para>The comment for the operation.</para>
+        /// <para>The remark for the operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Comment for batch whitelisting</para>
+        /// <para>Remark for batch whitelisting</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The traffic direction controlled by the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound</description></item>
-        /// <item><description><b>out</b>: outbound</description></item>
+        /// <item><description><b>in</b>: Inbound traffic.</description></item>
+        /// <item><description><b>out</b>: Outbound traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,12 +57,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> ObjectList { get; set; }
 
         /// <summary>
-        /// <para>The operation to whitelist, remove from the whitelist, follow, or unfollow an object. Valid values:</para>
+        /// <para>Specifies the operation to perform on the object, such as adding to the whitelist, removing from the whitelist, following, or unfollowing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>subscribe</b>: follow</description></item>
-        /// <item><description><b>unsubscribe</b>: unfollow</description></item>
-        /// <item><description><b>ignore</b>: add to the whitelist</description></item>
-        /// <item><description><b>cancelIgnore</b>: remove from the whitelist</description></item>
+        /// <item><description><b>subscribe</b>: Follow.</description></item>
+        /// <item><description><b>unsubscribe</b>: Unfollow.</description></item>
+        /// <item><description><b>ignore</b>: Add to the whitelist.</description></item>
+        /// <item><description><b>cancelIgnore</b>: Remove from the whitelist.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,12 +74,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ObjectOperation { get; set; }
 
         /// <summary>
-        /// <para>The type of the object to whitelist or follow for outbound connections. Valid values:</para>
+        /// <para>The type of the object to add to the outbound connections whitelist or follow. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>assetsIp</b>: asset IP address</description></item>
-        /// <item><description><b>destinationIp</b>: destination IP address</description></item>
-        /// <item><description><b>destinationPort</b>: destination port</description></item>
-        /// <item><description><b>destinationDomain</b>: destination domain name</description></item>
+        /// <item><description><b>assetsIp</b>: Asset IP address.</description></item>
+        /// <item><description><b>destinationIp</b>: Destination IP address.</description></item>
+        /// <item><description><b>destinationPort</b>: Destination port.</description></item>
+        /// <item><description><b>destinationDomain</b>: Destination domain name.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

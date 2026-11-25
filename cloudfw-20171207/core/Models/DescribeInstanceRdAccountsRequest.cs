@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRdAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The description of the Cloud Firewall member accounts.</para>
+        /// <para>The description of Cloud Firewall member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>renewal</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the Cloud Firewall member accounts.</para>
+        /// <para>The name of Cloud Firewall member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudfirewall_2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member accounts.</para>
+        /// <para>The UID of member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>

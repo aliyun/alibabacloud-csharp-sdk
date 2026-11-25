@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;4664138c-4f81-4650-9c8d-2230ea0d****\&quot;]</para>
+        /// <para>[&quot;4664138c-4f81-4650-9c8d-2230ea0d****&quot;]</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

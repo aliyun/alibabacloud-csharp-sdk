@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrepayBillTotalRequest : TeaModel {
         /// <summary>
-        /// <para>The bill type. This parameter is required. If it is not specified, an error is returned. Valid values:</para>
+        /// <para>The bill type. This parameter is required. If you do not specify this parameter, an error is returned. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>elastic_traffic: elastic traffic.</description></item>
         /// <item><description>sdl: sensitive data leak detection traffic.</description></item>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh</description></item>
-        /// <item><description>en
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.
         /// Default value: zh.</description></item>
         /// </list>
         /// 

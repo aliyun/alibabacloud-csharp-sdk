@@ -346,10 +346,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The instance ID of the virtual private cloud (VPC) firewalls at the border. You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</para>
         /// <list type="bullet">
         /// <item><description><para>When the virtual private cloud (VPC) firewalls protect a CEN instance, set this parameter to the instance ID of the CEN instance.</para>
-        /// <para>Example: cen-ervw0g12b5jbw*\<em>\</em>\*</para>
+        /// <para>Example: cen-ervw0g12b5jbw****</para>
         /// </description></item>
         /// <item><description><para>When the virtual private cloud (VPC) firewalls protect an Express Connect circuit, set this parameter to the instance ID of the virtual private cloud (VPC) firewalls.</para>
-        /// <para>Example: vfw-a42bbb7b887148c9*\<em>\</em>\*</para>
+        /// <para>Example: vfw-a42bbb7b887148c9****</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

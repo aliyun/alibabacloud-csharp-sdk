@@ -469,9 +469,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to create a policy that allows, blocks, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <para>You can use this operation to create a policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -622,9 +622,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to create a policy that allows, blocks, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <para>You can use this operation to create a policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -775,9 +775,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to create a policy that allows, blocks, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <para>You can use this operation to create a policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -800,9 +800,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this operation to create a policy that allows, blocks, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <para>You can use this operation to create a policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limits</h2>
-        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -886,10 +886,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
@@ -983,10 +979,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Source"] = request.Source;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
@@ -1073,11 +1065,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a real-time domain name resolution task for a specified domain name.</para>
+        /// <para>Creates a real-time domain name resolution task for a specified domain name.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>, International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
-        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If the returned value is false, the current account has not purchased or activated Cloud Firewall.</description></item>
+        /// <item><description>Before calling this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If false is returned, the current account has not purchased or activated Cloud Firewall.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1133,11 +1125,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a real-time domain name resolution task for a specified domain name.</para>
+        /// <para>Creates a real-time domain name resolution task for a specified domain name.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>, International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
-        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If the returned value is false, the current account has not purchased or activated Cloud Firewall.</description></item>
+        /// <item><description>Before calling this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If false is returned, the current account has not purchased or activated Cloud Firewall.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1193,11 +1185,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a real-time domain name resolution task for a specified domain name.</para>
+        /// <para>Creates a real-time domain name resolution task for a specified domain name.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>, International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
-        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If the returned value is false, the current account has not purchased or activated Cloud Firewall.</description></item>
+        /// <item><description>Before calling this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If false is returned, the current account has not purchased or activated Cloud Firewall.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1221,11 +1213,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a real-time domain name resolution task for a specified domain name.</para>
+        /// <para>Creates a real-time domain name resolution task for a specified domain name.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>, International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
-        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If the returned value is false, the current account has not purchased or activated Cloud Firewall.</description></item>
+        /// <item><description>Before calling this operation, you must activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>You can call the DescribeUserBuyVersion operation to query the UserStatus parameter. If false is returned, the current account has not purchased or activated Cloud Firewall.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3636,8 +3628,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>Creates a NAT firewall asset synchronization task.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure that you have purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
-        /// <item><description>You can activate Cloud Firewall on the buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a> and International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
+        /// <item><description>Before calling this operation, ensure that your account has purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
+        /// <item><description>You can activate Cloud Firewall on the buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3688,8 +3680,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>Creates a NAT firewall asset synchronization task.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure that you have purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
-        /// <item><description>You can activate Cloud Firewall on the buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a> and International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
+        /// <item><description>Before calling this operation, ensure that your account has purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
+        /// <item><description>You can activate Cloud Firewall on the buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3740,8 +3732,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>Creates a NAT firewall asset synchronization task.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure that you have purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
-        /// <item><description>You can activate Cloud Firewall on the buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a> and International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
+        /// <item><description>Before calling this operation, ensure that your account has purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
+        /// <item><description>You can activate Cloud Firewall on the buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3768,8 +3760,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>Creates a NAT firewall asset synchronization task.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure that you have purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
-        /// <item><description>You can activate Cloud Firewall on the buy page (Chinese site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a> and International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
+        /// <item><description>Before calling this operation, ensure that your account has purchased and activated a Cloud Firewall instance. Both subscription and pay-as-you-go billing methods are supported.</description></item>
+        /// <item><description>You can activate Cloud Firewall on the buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>). After activation, call the DescribeUserBuyVersion operation and check the UserStatus parameter to confirm the activation status.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4464,12 +4456,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall for a transit router. Prerequisites: (1) Cloud Firewall is purchased. (2) A CEN instance is created and an Enterprise Edition transit router is enabled. (3) The TR is synchronized to Cloud Firewall.</para>
+        /// <para>Creates a VPC firewall for a transit router. Before you begin: (1) Purchase Cloud Firewall. (2) A CEN instance is created and an Enterprise Edition forward routing transit router is enabled. (3) The synchronization of the TR to Cloud Firewall is complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before you call this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then, call this operation by specifying the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the transit router to Cloud Firewall. Then, call this operation by using the CenId, TransitRouterId, RegionNo, and RouteMode parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4583,12 +4575,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall for a transit router. Prerequisites: (1) Cloud Firewall is purchased. (2) A CEN instance is created and an Enterprise Edition transit router is enabled. (3) The TR is synchronized to Cloud Firewall.</para>
+        /// <para>Creates a VPC firewall for a transit router. Before you begin: (1) Purchase Cloud Firewall. (2) A CEN instance is created and an Enterprise Edition forward routing transit router is enabled. (3) The synchronization of the TR to Cloud Firewall is complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before you call this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then, call this operation by specifying the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the transit router to Cloud Firewall. Then, call this operation by using the CenId, TransitRouterId, RegionNo, and RouteMode parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4702,12 +4694,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall for a transit router. Prerequisites: (1) Cloud Firewall is purchased. (2) A CEN instance is created and an Enterprise Edition transit router is enabled. (3) The TR is synchronized to Cloud Firewall.</para>
+        /// <para>Creates a VPC firewall for a transit router. Before you begin: (1) Purchase Cloud Firewall. (2) A CEN instance is created and an Enterprise Edition forward routing transit router is enabled. (3) The synchronization of the TR to Cloud Firewall is complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before you call this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then, call this operation by specifying the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the transit router to Cloud Firewall. Then, call this operation by using the CenId, TransitRouterId, RegionNo, and RouteMode parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4725,12 +4717,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall for a transit router. Prerequisites: (1) Cloud Firewall is purchased. (2) A CEN instance is created and an Enterprise Edition transit router is enabled. (3) The TR is synchronized to Cloud Firewall.</para>
+        /// <para>Creates a VPC firewall for a transit router. Before you begin: (1) Purchase Cloud Firewall. (2) A CEN instance is created and an Enterprise Edition forward routing transit router is enabled. (3) The synchronization of the TR to Cloud Firewall is complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before you call this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the TR to Cloud Firewall. Then, call this operation by specifying the CEN ID, TransitRouterId, RegionNo, and RouteMode parameters.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall for an Enterprise Edition transit router (TR). Before calling this operation, you must create a CEN instance and an Enterprise Edition transit router in the CEN console, and synchronize the transit router to Cloud Firewall. Then, call this operation by using the CenId, TransitRouterId, RegionNo, and RouteMode parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8093,9 +8085,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete up to 20 Cloud Firewall member accounts in a single call. Separate the UIDs of multiple member accounts with commas (,). After a member account is deleted, Cloud Firewall can no longer access the cloud resources of that account. Use this operation with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to retrieve information about the member accounts.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This can affect your business operations. Plan your calls accordingly.</para>
+        /// <para>You can call the DeleteInstanceMembers operation to delete up to 20 Cloud Firewall member accounts at a time. Separate multiple member account UIDs with commas (,). After a member account is deleted, Cloud Firewall cannot access the cloud resources of the deleted member account. Proceed with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about Cloud Firewall member accounts.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8142,9 +8134,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete up to 20 Cloud Firewall member accounts in a single call. Separate the UIDs of multiple member accounts with commas (,). After a member account is deleted, Cloud Firewall can no longer access the cloud resources of that account. Use this operation with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to retrieve information about the member accounts.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This can affect your business operations. Plan your calls accordingly.</para>
+        /// <para>You can call the DeleteInstanceMembers operation to delete up to 20 Cloud Firewall member accounts at a time. Separate multiple member account UIDs with commas (,). After a member account is deleted, Cloud Firewall cannot access the cloud resources of the deleted member account. Proceed with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about Cloud Firewall member accounts.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8191,9 +8183,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete up to 20 Cloud Firewall member accounts in a single call. Separate the UIDs of multiple member accounts with commas (,). After a member account is deleted, Cloud Firewall can no longer access the cloud resources of that account. Use this operation with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to retrieve information about the member accounts.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This can affect your business operations. Plan your calls accordingly.</para>
+        /// <para>You can call the DeleteInstanceMembers operation to delete up to 20 Cloud Firewall member accounts at a time. Separate multiple member account UIDs with commas (,). After a member account is deleted, Cloud Firewall cannot access the cloud resources of the deleted member account. Proceed with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about Cloud Firewall member accounts.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8216,9 +8208,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete up to 20 Cloud Firewall member accounts in a single call. Separate the UIDs of multiple member accounts with commas (,). After a member account is deleted, Cloud Firewall can no longer access the cloud resources of that account. Use this operation with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to retrieve information about the member accounts.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This can affect your business operations. Plan your calls accordingly.</para>
+        /// <para>You can call the DeleteInstanceMembers operation to delete up to 20 Cloud Firewall member accounts at a time. Separate multiple member account UIDs with commas (,). After a member account is deleted, Cloud Firewall cannot access the cloud resources of the deleted member account. Proceed with caution. Before deleting member accounts, call the <a href="https://help.aliyun.com/document_detail/271704.html">DescribeInstanceMembers</a> operation to obtain the information about Cloud Firewall member accounts.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9135,6 +9127,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>Deletes a NAT firewall.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, make sure that your account has purchased Cloud Firewall. If you call this API without purchasing Cloud Firewall, error code <c>202</c> and error message <c>not buy user</c> are returned.</description></item>
+        /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the purchase status. The <c>UserStatus</c> field in the response indicates whether the Cloud Firewall service is valid. A value of <c>false</c> indicates that the service is not activated or has expired.</description></item>
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
+        /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
+        /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteSecurityProxyRequest
         /// </param>
@@ -9180,6 +9186,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <summary>
         /// <para>Deletes a NAT firewall.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, make sure that your account has purchased Cloud Firewall. If you call this API without purchasing Cloud Firewall, error code <c>202</c> and error message <c>not buy user</c> are returned.</description></item>
+        /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the purchase status. The <c>UserStatus</c> field in the response indicates whether the Cloud Firewall service is valid. A value of <c>false</c> indicates that the service is not activated or has expired.</description></item>
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
+        /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
+        /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSecurityProxyRequest
@@ -9227,6 +9247,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <para>Deletes a NAT firewall.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, make sure that your account has purchased Cloud Firewall. If you call this API without purchasing Cloud Firewall, error code <c>202</c> and error message <c>not buy user</c> are returned.</description></item>
+        /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the purchase status. The <c>UserStatus</c> field in the response indicates whether the Cloud Firewall service is valid. A value of <c>false</c> indicates that the service is not activated or has expired.</description></item>
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
+        /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
+        /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteSecurityProxyRequest
         /// </param>
@@ -9244,6 +9278,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <summary>
         /// <para>Deletes a NAT firewall.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Before you begin</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, make sure that your account has purchased Cloud Firewall. If you call this API without purchasing Cloud Firewall, error code <c>202</c> and error message <c>not buy user</c> are returned.</description></item>
+        /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the purchase status. The <c>UserStatus</c> field in the response indicates whether the Cloud Firewall service is valid. A value of <c>false</c> indicates that the service is not activated or has expired.</description></item>
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
+        /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
+        /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteSecurityProxyRequest
@@ -9388,15 +9436,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects mutual access traffic between a network instance in a Cloud Enterprise Network (CEN) instance and a specified VPC.</para>
+        /// <para>Deletes VPC border firewalls that protect mutual access traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a CEN instance and a specified VPC.
-        /// Before you invoke this operation, you must have already created a VPC border firewall by invoking the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as needed.</para>
+        /// <para>This operation deletes VPC border firewalls. The VPC border firewalls protect mutual access traffic between network instances in a CEN and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs).
+        /// Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation to create VPC border firewalls.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of invocations per second exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9446,15 +9494,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects mutual access traffic between a network instance in a Cloud Enterprise Network (CEN) instance and a specified VPC.</para>
+        /// <para>Deletes VPC border firewalls that protect mutual access traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a CEN instance and a specified VPC.
-        /// Before you invoke this operation, you must have already created a VPC border firewall by invoking the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as needed.</para>
+        /// <para>This operation deletes VPC border firewalls. The VPC border firewalls protect mutual access traffic between network instances in a CEN and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs).
+        /// Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation to create VPC border firewalls.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of invocations per second exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9504,15 +9552,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects mutual access traffic between a network instance in a Cloud Enterprise Network (CEN) instance and a specified VPC.</para>
+        /// <para>Deletes VPC border firewalls that protect mutual access traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a CEN instance and a specified VPC.
-        /// Before you invoke this operation, you must have already created a VPC border firewall by invoking the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as needed.</para>
+        /// <para>This operation deletes VPC border firewalls. The VPC border firewalls protect mutual access traffic between network instances in a CEN and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs).
+        /// Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation to create VPC border firewalls.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of invocations per second exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9530,15 +9578,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects mutual access traffic between a network instance in a Cloud Enterprise Network (CEN) instance and a specified VPC.</para>
+        /// <para>Deletes VPC border firewalls that protect mutual access traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a CEN instance and a specified VPC.
-        /// Before you invoke this operation, you must have already created a VPC border firewall by invoking the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as needed.</para>
+        /// <para>This operation deletes VPC border firewalls. The VPC border firewalls protect mutual access traffic between network instances in a CEN and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs).
+        /// Before you invoke this operation, make sure that you have invoked the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation to create VPC border firewalls.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>You can invoke this operation up to 10 times per second per account. If the number of invocations per second exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9556,16 +9604,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
+        /// <para>Deletes virtual private cloud (VPC) firewalls at the border that protect traffic between two VPCs connected over Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
-        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.
-        /// This operation is asynchronous. After a successful invocation, the status changes to deleting. Poll DescribeVpcFirewallList until the target VpcFirewallId no longer appears. The firewall to be deleted must be in the opened or closed state. Firewalls in the notconfigured or deleting state cannot be deleted, and the ErrorFirewallStatus error is returned.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</para>
+        /// <para>This operation is generally used to delete virtual private cloud (VPC) firewalls at the border. The virtual private cloud (VPC) firewalls protect traffic between two VPCs connected over Express Connect.
+        /// Before you invoke this operation, you must invoke the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create virtual private cloud (VPC) firewalls.
+        /// This operation is asynchronous. After you successfully invoke this operation, the status changes to deleting. You must perform polling on the DescribeVpcFirewallList operation until the target VpcFirewallId disappears. The virtual private cloud (VPC) firewalls to be deleted must be in the opened or closed state. Firewalls in states such as notconfigured or deleting cannot be deleted, and an ErrorFirewallStatus fault is returned.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per account. Exceeding this limit triggers throttling, which may affect your business. Plan your API invocations accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9615,16 +9663,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
+        /// <para>Deletes virtual private cloud (VPC) firewalls at the border that protect traffic between two VPCs connected over Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
-        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.
-        /// This operation is asynchronous. After a successful invocation, the status changes to deleting. Poll DescribeVpcFirewallList until the target VpcFirewallId no longer appears. The firewall to be deleted must be in the opened or closed state. Firewalls in the notconfigured or deleting state cannot be deleted, and the ErrorFirewallStatus error is returned.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</para>
+        /// <para>This operation is generally used to delete virtual private cloud (VPC) firewalls at the border. The virtual private cloud (VPC) firewalls protect traffic between two VPCs connected over Express Connect.
+        /// Before you invoke this operation, you must invoke the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create virtual private cloud (VPC) firewalls.
+        /// This operation is asynchronous. After you successfully invoke this operation, the status changes to deleting. You must perform polling on the DescribeVpcFirewallList operation until the target VpcFirewallId disappears. The virtual private cloud (VPC) firewalls to be deleted must be in the opened or closed state. Firewalls in states such as notconfigured or deleting cannot be deleted, and an ErrorFirewallStatus fault is returned.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per account. Exceeding this limit triggers throttling, which may affect your business. Plan your API invocations accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9674,16 +9722,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
+        /// <para>Deletes virtual private cloud (VPC) firewalls at the border that protect traffic between two VPCs connected over Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
-        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.
-        /// This operation is asynchronous. After a successful invocation, the status changes to deleting. Poll DescribeVpcFirewallList until the target VpcFirewallId no longer appears. The firewall to be deleted must be in the opened or closed state. Firewalls in the notconfigured or deleting state cannot be deleted, and the ErrorFirewallStatus error is returned.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</para>
+        /// <para>This operation is generally used to delete virtual private cloud (VPC) firewalls at the border. The virtual private cloud (VPC) firewalls protect traffic between two VPCs connected over Express Connect.
+        /// Before you invoke this operation, you must invoke the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create virtual private cloud (VPC) firewalls.
+        /// This operation is asynchronous. After you successfully invoke this operation, the status changes to deleting. You must perform polling on the DescribeVpcFirewallList operation until the target VpcFirewallId disappears. The virtual private cloud (VPC) firewalls to be deleted must be in the opened or closed state. Firewalls in states such as notconfigured or deleting cannot be deleted, and an ErrorFirewallStatus fault is returned.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per account. Exceeding this limit triggers throttling, which may affect your business. Plan your API invocations accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9701,16 +9749,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
+        /// <para>Deletes virtual private cloud (VPC) firewalls at the border that protect traffic between two VPCs connected over Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
-        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.
-        /// This operation is asynchronous. After a successful invocation, the status changes to deleting. Poll DescribeVpcFirewallList until the target VpcFirewallId no longer appears. The firewall to be deleted must be in the opened or closed state. Firewalls in the notconfigured or deleting state cannot be deleted, and the ErrorFirewallStatus error is returned.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</para>
+        /// <para>This operation is generally used to delete virtual private cloud (VPC) firewalls at the border. The virtual private cloud (VPC) firewalls protect traffic between two VPCs connected over Express Connect.
+        /// Before you invoke this operation, you must invoke the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create virtual private cloud (VPC) firewalls.
+        /// This operation is asynchronous. After you successfully invoke this operation, the status changes to deleting. You must perform polling on the DescribeVpcFirewallList operation until the target VpcFirewallId disappears. The virtual private cloud (VPC) firewalls to be deleted must be in the opened or closed state. Firewalls in states such as notconfigured or deleting cannot be deleted, and an ErrorFirewallStatus fault is returned.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per account. Exceeding this limit triggers throttling, which may affect your business. Plan your API invocations accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9728,14 +9776,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
+        /// <para>Deletes the access control policy of a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
+        /// <para>This operation is typically used to delete the access control policy of a specified VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and VPC firewall instances that protect Express Connect circuits use a different access control policy.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9785,14 +9833,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
+        /// <para>Deletes the access control policy of a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
+        /// <para>This operation is typically used to delete the access control policy of a specified VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and VPC firewall instances that protect Express Connect circuits use a different access control policy.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9842,14 +9890,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
+        /// <para>Deletes the access control policy of a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
+        /// <para>This operation is typically used to delete the access control policy of a specified VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and VPC firewall instances that protect Express Connect circuits use a different access control policy.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9867,14 +9915,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
+        /// <para>Deletes the access control policy of a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
+        /// <para>This operation is typically used to delete the access control policy of a specified VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and VPC firewall instances that protect Express Connect circuits use a different access control policy.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke the API at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15981,9 +16029,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. Log details are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span of a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the virtual private cloud (VPC) firewalls at the border, set FirewallType to VpcFirewall.</para>
+        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. The logs are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span for a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the VPC firewall, set FirewallType to VpcFirewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16090,9 +16138,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. Log details are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span of a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the virtual private cloud (VPC) firewalls at the border, set FirewallType to VpcFirewall.</para>
+        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. The logs are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span for a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the VPC firewall, set FirewallType to VpcFirewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16199,9 +16247,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. Log details are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span of a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the virtual private cloud (VPC) firewalls at the border, set FirewallType to VpcFirewall.</para>
+        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. The logs are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span for a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the VPC firewall, set FirewallType to VpcFirewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16224,9 +16272,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. Log details are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span of a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the virtual private cloud (VPC) firewalls at the border, set FirewallType to VpcFirewall.</para>
+        /// <para>Queries the event logs of Cloud Firewall. This operation supports five types of logs: application access control (app_ctl), web filtering (web_filter), TLS inspection (tls), intrusion prevention (ips), and threat intelligence (threat_intelligence). You can filter logs by time range, source IP address, destination IP address, URL, action, rule result, and attack type. The logs are returned with paging. StartTime and EndTime are UNIX timestamps in seconds. The time span for a single query cannot exceed 8 days. If FirewallType is not specified, the Internet Border firewall (InternetFirewall) is queried by default. To query the VPC firewall, set FirewallType to VpcFirewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The QPS limit for a single user is 10 requests per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17968,13 +18016,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet defense trends.</para>
+        /// <para>Queries the Internet defense trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user for this API operation is 10. If you exceed the limit, API calls are throttled, which may affect your business. Call the API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18040,13 +18088,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet defense trends.</para>
+        /// <para>Queries the Internet defense trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user for this API operation is 10. If you exceed the limit, API calls are throttled, which may affect your business. Call the API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18112,13 +18160,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet defense trends.</para>
+        /// <para>Queries the Internet defense trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user for this API operation is 10. If you exceed the limit, API calls are throttled, which may affect your business. Call the API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18136,13 +18184,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet defense trends.</para>
+        /// <para>Queries the Internet defense trends.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API at a reasonable rate.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user for this API operation is 10. If you exceed the limit, API calls are throttled, which may affect your business. Call the API operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18416,7 +18464,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy group in Cloud Firewall.</para>
+        /// <para>Queries the details of Cloud Firewall access control policy groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18506,7 +18554,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy group in Cloud Firewall.</para>
+        /// <para>Queries the details of Cloud Firewall access control policy groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18596,7 +18644,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy group in Cloud Firewall.</para>
+        /// <para>Queries the details of Cloud Firewall access control policy groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18614,7 +18662,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access control policy group in Cloud Firewall.</para>
+        /// <para>Queries the details of Cloud Firewall access control policy groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19832,7 +19880,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top trend charts for Internet traffic.</para>
+        /// <para>Queries the top Internet traffic trend charts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19922,7 +19970,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top trend charts for Internet traffic.</para>
+        /// <para>Queries the top Internet traffic trend charts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20012,7 +20060,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top trend charts for Internet traffic.</para>
+        /// <para>Queries the top Internet traffic trend charts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20030,7 +20078,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top trend charts for Internet traffic.</para>
+        /// <para>Queries the top Internet traffic trend charts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20048,7 +20096,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet traffic trends.</para>
+        /// <para>Retrieves Internet traffic trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20126,7 +20174,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet traffic trends.</para>
+        /// <para>Retrieves Internet traffic trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20204,7 +20252,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet traffic trends.</para>
+        /// <para>Retrieves Internet traffic trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20222,7 +20270,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Internet traffic trends.</para>
+        /// <para>Retrieves Internet traffic trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26648,18 +26696,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the enabling status of strict mode for access control policies.</para>
+        /// <para>Queries the enabling status of the strict mode for access control policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is typically used to query the enabling status of strict mode for access control policies.</para>
+        /// <para>This operation is generally used to query the enabling status of the strict mode for access control policies.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, you must purchase and activate Cloud Firewall. You can activate the service on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>Before you call this operation, you must purchase and activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
         /// </list>
         /// <h2>Rate limit</h2>
-        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26709,18 +26757,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the enabling status of strict mode for access control policies.</para>
+        /// <para>Queries the enabling status of the strict mode for access control policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is typically used to query the enabling status of strict mode for access control policies.</para>
+        /// <para>This operation is generally used to query the enabling status of the strict mode for access control policies.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, you must purchase and activate Cloud Firewall. You can activate the service on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>Before you call this operation, you must purchase and activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
         /// </list>
         /// <h2>Rate limit</h2>
-        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26770,18 +26818,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the enabling status of strict mode for access control policies.</para>
+        /// <para>Queries the enabling status of the strict mode for access control policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is typically used to query the enabling status of strict mode for access control policies.</para>
+        /// <para>This operation is generally used to query the enabling status of the strict mode for access control policies.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, you must purchase and activate Cloud Firewall. You can activate the service on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>Before you call this operation, you must purchase and activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
         /// </list>
         /// <h2>Rate limit</h2>
-        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26799,18 +26847,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the enabling status of strict mode for access control policies.</para>
+        /// <para>Queries the enabling status of the strict mode for access control policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is typically used to query the enabling status of strict mode for access control policies.</para>
+        /// <para>This operation is generally used to query the enabling status of the strict mode for access control policies.</para>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, you must purchase and activate Cloud Firewall. You can activate the service on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
+        /// <item><description>Before you call this operation, you must purchase and activate Cloud Firewall. You can activate it on the Cloud Firewall buy page (China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a>; International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a>).</description></item>
         /// </list>
         /// <h2>Rate limit</h2>
-        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</para>
+        /// <para>The rate limit for this operation is 10 queries per second (QPS) per user. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28084,12 +28132,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscription 2.0 billing overview.</para>
+        /// <para>Queries the overview of subscription 2.0 bills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The statistical scope covers the current Cloud Firewall instances of the user, including all data since the purchase date.</para>
+        /// <para>The statistical scope covers the current Cloud Firewall instances of the user and includes all data since the purchase date.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28151,12 +28199,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscription 2.0 billing overview.</para>
+        /// <para>Queries the overview of subscription 2.0 bills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The statistical scope covers the current Cloud Firewall instances of the user, including all data since the purchase date.</para>
+        /// <para>The statistical scope covers the current Cloud Firewall instances of the user and includes all data since the purchase date.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28218,12 +28266,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscription 2.0 billing overview.</para>
+        /// <para>Queries the overview of subscription 2.0 bills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The statistical scope covers the current Cloud Firewall instances of the user, including all data since the purchase date.</para>
+        /// <para>The statistical scope covers the current Cloud Firewall instances of the user and includes all data since the purchase date.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28241,12 +28289,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the subscription 2.0 billing overview.</para>
+        /// <para>Queries the overview of subscription 2.0 bills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The statistical scope covers the current Cloud Firewall instances of the user, including all data since the purchase date.</para>
+        /// <para>The statistical scope covers the current Cloud Firewall instances of the user and includes all data since the purchase date.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35037,9 +35085,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to query and retrieve Cloud Firewall instance information for a user.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This operation is typically used to query and retrieve Cloud Firewall instance information for a user.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35086,9 +35134,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to query and retrieve Cloud Firewall instance information for a user.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This operation is typically used to query and retrieve Cloud Firewall instance information for a user.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35135,9 +35183,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to query and retrieve Cloud Firewall instance information for a user.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This operation is typically used to query and retrieve Cloud Firewall instance information for a user.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35160,9 +35208,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to query and retrieve Cloud Firewall instance information for a user.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>This operation is typically used to query and retrieve Cloud Firewall instance information for a user.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit per user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42445,9 +42493,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to modify the configurations of an access control policy that allows, denies, or monitors traffic through Cloud Firewall.</para>
+        /// <para>This operation is generally used to modify the configurations of an access control policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42590,9 +42638,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to modify the configurations of an access control policy that allows, denies, or monitors traffic through Cloud Firewall.</para>
+        /// <para>This operation is generally used to modify the configurations of an access control policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42735,9 +42783,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to modify the configurations of an access control policy that allows, denies, or monitors traffic through Cloud Firewall.</para>
+        /// <para>This operation is generally used to modify the configurations of an access control policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42760,9 +42808,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is used to modify the configurations of an access control policy that allows, denies, or monitors traffic through Cloud Firewall.</para>
+        /// <para>This operation is generally used to modify the configurations of an access control policy that allows, denies, or monitors traffic passing through Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43374,10 +43422,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Source"] = request.Source;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
                 query["SourceType"] = request.SourceType;
@@ -43460,10 +43504,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
             {
@@ -44244,12 +44284,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a NAT Firewall security access control policy.</para>
+        /// <para>Modifies the configuration of an access control policy for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API modifies the configuration of an access control policy that allows, denies, or observes traffic passing through a NAT Firewall.</para>
+        /// <para>This operation is typically used to modify the configuration of an access control policy that allows, denies, or monitors traffic passing through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44379,12 +44419,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a NAT Firewall security access control policy.</para>
+        /// <para>Modifies the configuration of an access control policy for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API modifies the configuration of an access control policy that allows, denies, or observes traffic passing through a NAT Firewall.</para>
+        /// <para>This operation is typically used to modify the configuration of an access control policy that allows, denies, or monitors traffic passing through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44514,12 +44554,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a NAT Firewall security access control policy.</para>
+        /// <para>Modifies the configuration of an access control policy for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API modifies the configuration of an access control policy that allows, denies, or observes traffic passing through a NAT Firewall.</para>
+        /// <para>This operation is typically used to modify the configuration of an access control policy that allows, denies, or monitors traffic passing through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44537,12 +44577,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a NAT Firewall security access control policy.</para>
+        /// <para>Modifies the configuration of an access control policy for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API modifies the configuration of an access control policy that allows, denies, or observes traffic passing through a NAT Firewall.</para>
+        /// <para>This operation is typically used to modify the configuration of an access control policy that allows, denies, or monitors traffic passing through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44719,9 +44759,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <description>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate a Cloud Firewall instance.</description></item>
+        /// <item><description>Before you call this operation, you must activate Cloud Firewall.</description></item>
         /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the activation status. The UserStatus field in the response indicates whether the Cloud Firewall instance is valid. A value of false indicates that the instance is invalid or not activated.</description></item>
-        /// <item><description>Activate a Cloud Firewall instance:<list type="bullet">
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
         /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
         /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
         /// </list>
@@ -44799,9 +44839,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <description>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate a Cloud Firewall instance.</description></item>
+        /// <item><description>Before you call this operation, you must activate Cloud Firewall.</description></item>
         /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the activation status. The UserStatus field in the response indicates whether the Cloud Firewall instance is valid. A value of false indicates that the instance is invalid or not activated.</description></item>
-        /// <item><description>Activate a Cloud Firewall instance:<list type="bullet">
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
         /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
         /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
         /// </list>
@@ -44879,9 +44919,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <description>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate a Cloud Firewall instance.</description></item>
+        /// <item><description>Before you call this operation, you must activate Cloud Firewall.</description></item>
         /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the activation status. The UserStatus field in the response indicates whether the Cloud Firewall instance is valid. A value of false indicates that the instance is invalid or not activated.</description></item>
-        /// <item><description>Activate a Cloud Firewall instance:<list type="bullet">
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
         /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
         /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
         /// </list>
@@ -44911,9 +44951,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <description>
         /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, you must activate a Cloud Firewall instance.</description></item>
+        /// <item><description>Before you call this operation, you must activate Cloud Firewall.</description></item>
         /// <item><description>You can call <a href="~~DescribeUserBuyVersion~~">DescribeUserBuyVersion</a> to query the activation status. The UserStatus field in the response indicates whether the Cloud Firewall instance is valid. A value of false indicates that the instance is invalid or not activated.</description></item>
-        /// <item><description>Activate a Cloud Firewall instance:<list type="bullet">
+        /// <item><description>Activate Cloud Firewall:<list type="bullet">
         /// <item><description>China site: <a href="https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn">https://common-buy.aliyun.com/?commodityCode=cfw_sub_public_cn</a></description></item>
         /// <item><description>International site: <a href="https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl">https://common-buy-intl.alibabacloud.com/?commodityCode=cfw_sub_public_intl</a></description></item>
         /// </list>
@@ -50088,12 +50128,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables automatic protection for new assets.</para>
+        /// <para>Enables automatic protection for newly added assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Cloud Firewall instance supports up to 100 associations with TLS inspection policies.</para>
+        /// <para>Each Cloud Firewall instance supports up to 100 associations for TLS inspection policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50118,10 +50158,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Lang"] = request.Lang;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -50143,12 +50179,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables automatic protection for new assets.</para>
+        /// <para>Enables automatic protection for newly added assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Cloud Firewall instance supports up to 100 associations with TLS inspection policies.</para>
+        /// <para>Each Cloud Firewall instance supports up to 100 associations for TLS inspection policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50173,10 +50209,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 query["Lang"] = request.Lang;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
-            {
-                query["SourceIp"] = request.SourceIp;
-            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -50198,12 +50230,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables automatic protection for new assets.</para>
+        /// <para>Enables automatic protection for newly added assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Cloud Firewall instance supports up to 100 associations with TLS inspection policies.</para>
+        /// <para>Each Cloud Firewall instance supports up to 100 associations for TLS inspection policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50221,12 +50253,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables automatic protection for new assets.</para>
+        /// <para>Enables automatic protection for newly added assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each Cloud Firewall instance supports up to 100 associations with TLS inspection policies.</para>
+        /// <para>Each Cloud Firewall instance supports up to 100 associations for TLS inspection policies.</para>
         /// </description>
         /// 
         /// <param name="request">

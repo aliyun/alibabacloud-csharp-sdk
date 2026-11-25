@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public float? AggregateNatTraffic { get; set; }
 
         /// <summary>
-        /// <para>The aggregated sensitive data detection traffic. Unit: GB.</para>
+        /// <para>The aggregated sensitive data leak detection traffic. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public float? AggregateVpcTraffic { get; set; }
 
         /// <summary>
-        /// <para>The list of bills.</para>
+        /// <para>The bill list.</para>
         /// </summary>
         [NameInMap("BillList")]
         [Validation(Required=false)]
         public List<DescribePostpayBillResponseBodyBillList> BillList { get; set; }
         public class DescribePostpayBillResponseBodyBillList : TeaModel {
             /// <summary>
-            /// <para>The end time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</para>
+            /// <para>The end time. The time is a UNIX timestamp in seconds and represents an exact hour or day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733710015</para>
@@ -97,7 +97,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? InternetTraffic { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the fee is reduced. A value of 0 indicates that the fee is not reduced. A value greater than 0 indicates that the fee is reduced. If the fee is reduced, no bill is generated.</para>
+            /// <para>Specifies whether the bill for the specified date is calculated based on the Agentic billing method. A value of true indicates the Agentic billing method. A value of false indicates the standard billing method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("IsAgenticBilling")]
+            [Validation(Required=false)]
+            public bool? IsAgenticBilling { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether the fee is reduced or waived. A value of 0 indicates that the fee is not reduced or waived. A value greater than 0 indicates that the fee is reduced or waived, and no bill is generated.</para>
             /// <remarks>
             /// <para>This parameter is valid only when you query hourly data.</para>
             /// </remarks>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IsDerated { get; set; }
 
             /// <summary>
-            /// <para>The usage duration of Simple Log Service. Unit: TB×h.</para>
+            /// <para>The usage duration of Simple Log Service. Unit: TB × hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -150,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? Sdl { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data detection traffic. Unit: GB.</para>
+            /// <para>The sensitive data leak detection traffic. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? SdlTraffic { get; set; }
 
             /// <summary>
-            /// <para>The start time. The time is a UNIX timestamp accurate to seconds, which represents an exact hour or day.</para>
+            /// <para>The start time. The time is a UNIX timestamp in seconds and represents an exact hour or day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710206070000</para>

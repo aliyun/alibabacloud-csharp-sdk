@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The code of the instance property to update.
             /// The following codes are supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>\<c>Code\\</c>: \<c>MajorVersion\\</c>. Set \<c>Value\\</c> to \<c>2\\</c>. This is available only for pay-as-you-go 1.0 users to upgrade their instances to pay-as-you-go 2.0.</para>
+            /// <item><description><para>`Code`: `MajorVersion`. Set `Value` to `2`. This is available only for pay-as-you-go 1.0 users to upgrade their instances to pay-as-you-go 2.0.</para>
             /// <remarks>
             /// <para>Warning: </para>
             /// </remarks>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// </remarks>
             /// <para>Note that if log delivery is enabled before the upgrade, it will remain enabled after the upgrade, and logs will be delivered to a new Logstore.</para>
             /// </description></item>
-            /// <item><description><para>\<c>Code\\</c>: \<c>ThreatIntelligence\\</c>. This is available only for pay-as-you-go 2.0 users to enable or disable the threat intelligence feature. Set \<c>Value\\</c> to \<c>1\\</c> to enable the feature or \<c>0\\</c> to disable it.</para>
+            /// <item><description><para>`Code`: `ThreatIntelligence`. This is available only for pay-as-you-go 2.0 users to enable or disable the threat intelligence feature. Set `Value` to `1` to enable the feature or `0` to disable it.</para>
             /// </description></item>
-            /// <item><description><para>\<c>Code\\</c>: \<c>Sdl\\</c>. This is available only for pay-as-you-go 2.0 users to enable or disable the sensitive data leak detection feature. Set \<c>Value\\</c> to \<c>1\\</c> to enable the feature or \<c>0\\</c> to disable it.</para>
+            /// <item><description><para>`Code`: `Sdl`. This is available only for pay-as-you-go 2.0 users to enable or disable the sensitive data leak detection feature. Set `Value` to `1` to enable the feature or `0` to disable it.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The value for the specified \<c>Code\\</c>. For valid values, see the description of the \<c>Code\\</c> parameter.</para>
+            /// <para>The value for the specified `Code`. For valid values, see the description of the `Code` parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

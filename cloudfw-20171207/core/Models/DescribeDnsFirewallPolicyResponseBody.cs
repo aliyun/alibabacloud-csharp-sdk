@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <list type="bullet">
             /// <item><description>If <b>SourceType</b> is set to <c>net</c>, the source address is a CIDR block. Example: 192.0.XX.XX/24.</description></item>
             /// <item><description>If <b>SourceType</b> is set to <c>group</c>, the source address is the name of the source address book. Example: db_group.</description></item>
-            /// <item><description>If <b>SourceType</b> is set to <c>location</c>, the source address is an area. For more information about the specific area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
+            /// <item><description>If <b>SourceType</b> is set to <c>location</c>, the source address is an area. For more information about the specific area positional encoding, see <a href="https://help.aliyun.com/document_detail/138867.html">AddControlPolicy</a>. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

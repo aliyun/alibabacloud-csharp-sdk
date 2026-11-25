@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DispatchValue { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to deliver logs. A value of \<c>true\\</c> enables delivery, and \<c>false\\</c> disables it.</para>
+        /// <para>Specifies whether to deliver logs. A value of `true` enables delivery, and `false` disables it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NewRegionId { get; set; }
 
         /// <summary>
-        /// <para>The site to modify. If the log version is 1, leave this parameter empty or set it to \<c>global\\</c>. If the log version is 2, set this parameter to \<c>cn\\</c> or \<c>intl\\</c>.</para>
+        /// <para>The site to modify. If the log version is 1, leave this parameter empty or set it to `global`. If the log version is 2, set this parameter to `cn` or `intl`.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn</para>

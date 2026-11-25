@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of a member account of the current Alibaba Cloud account.</para>
+        /// <para>The UID of the member accounts that belong to the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs of VPC border firewalls.</para>
+        /// <para>The list of instance IDs of the VPC border firewalls.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VpcFirewallIdList")]

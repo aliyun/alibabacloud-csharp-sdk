@@ -11,7 +11,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class SetAutoProtectNewAssetsRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to enable automatic traffic redirection. Valid values:</para>
-        /// <para><b>true****false</b></para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +25,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? AutoProtect { get; set; }
 
         /// <summary>
-        /// <para>The language. Valid values are zh (Chinese) and <b>en</b> (English). The default value is <b>zh</b>.</para>
+        /// <para>The language type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese. Default value.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,16 +37,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
-
-        /// <summary>
-        /// <para>The source IP address of the visitor.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>60.182.79.XXX</para>
-        /// </summary>
-        [NameInMap("SourceIp")]
-        [Validation(Required=false)]
-        public string SourceIp { get; set; }
 
     }
 

@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of top entries to return. Default value: 50. Valid values: 1 to 50.</para>
+        /// <para>The maximum number of top entries. Default value: 50. Valid values: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The sorting method.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in_bps</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The traffic time to query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The time of the traffic to query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1745222880</para>

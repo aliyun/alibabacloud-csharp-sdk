@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeConfiguredDomainNamesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response.</para>
+        /// <para>The language of the request and response messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The source code.</para>
+        /// <para>The tracing code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

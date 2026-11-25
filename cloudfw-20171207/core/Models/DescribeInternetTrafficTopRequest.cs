@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The end time. Use a UNIX timestamp in seconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Limit { get; set; }
 
         /// <summary>
-        /// <para>The rule defense result.</para>
+        /// <para>The rule protection result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ShowCountryName { get; set; }
 
         /// <summary>
-        /// <para>The sort order.</para>
+        /// <para>The sorting method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in_bytes</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start time. Use a UNIX timestamp in seconds.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

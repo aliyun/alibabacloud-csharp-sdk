@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The type of the zone. The default value is \<c>AvailabilityZone\\</c>, which indicates a standard cloud zone.</para>
+            /// <para>The type of the zone. The default value is `AvailabilityZone`, which indicates a standard cloud zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AvailabilityZone</para>

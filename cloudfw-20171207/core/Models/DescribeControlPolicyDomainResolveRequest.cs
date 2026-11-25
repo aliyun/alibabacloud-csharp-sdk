@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required. If this parameter is not specified, the MissingParameter.RegionNo (-200155, The required parameter \&quot;RegionNo\&quot; is not provided.) error is returned.</para>
+        /// <para>The region ID. This parameter is required. If this parameter is not specified, the MissingParameter.RegionNo (-200155, The required parameter &quot;RegionNo&quot; is not provided.) error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>If the VPC firewall protects a Cloud Enterprise Network (CEN) instance, the ID of the policy group is the ID of the CEN instance.</para>
-        /// <para>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></para>
+        /// <para>Example: cen-ervw0g12b5jbw****</para>
         /// </description></item>
         /// <item><description><para>If the VPC firewall protects an Express Connect circuit, the ID of the policy group is the ID of the VPC firewall instance.</para>
-        /// <para>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></para>
+        /// <para>Example: vfw-a42bbb7b887148c9****</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

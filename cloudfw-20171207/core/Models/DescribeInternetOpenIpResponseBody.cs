@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetOpenIpResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeInternetOpenIpResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetOpenIpResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The reason why no intelligent policies recommendation is available. Valid values:</para>
+            /// <para>The reason why no intelligent policy is recommended. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>No intelligent policies recommendation is available.</description></item>
-            /// <item><description>This feature is currently available only to selected users.</description></item>
-            /// <item><description>The policy configuration has been modified. No intelligent policies recommendation is available.</description></item>
-            /// <item><description>Intelligent policies have been configured. No new intelligent policies recommendation is available.</description></item>
+            /// <item><description>No intelligent policy is currently recommended.</description></item>
+            /// <item><description>This feature is currently available only to specific users.</description></item>
+            /// <item><description>The policy configuration has been modified, and no intelligent policy is currently recommended.</description></item>
+            /// <item><description>Intelligent policy has been configured, and no new intelligent policy is currently recommended.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>当前无智能策略推荐</para>
+            /// <para>No intelligent policy is currently recommended</para>
             /// </summary>
             [NameInMap("AclRecommendDetail")]
             [Validation(Required=false)]
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? DetailNum { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a recommended ACL exists. Valid values:</para>
+            /// <para>Specifies whether an ACL is recommended. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: A recommended ACL exists.</description></item>
-            /// <item><description><b>false</b>: No recommended ACL exists.</description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? HasAclRecommend { get; set; }
 
             /// <summary>
-            /// <para>The inbound network throughput (total bytes sent). Unit: bytes.</para>
+            /// <para>The inbound network throughput. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>235</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The UID of the Cloud Firewall member account. For more information about member accounts, see multi-account management.</para>
+            /// <para>The UID of the Cloud Firewall member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14151892****7022</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The outbound network throughput (total bytes sent). Unit: bytes.</para>
+            /// <para>The outbound network throughput. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1123</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The port list.</para>
+            /// <para>The list of ports.</para>
             /// </summary>
             [NameInMap("PortList")]
             [Validation(Required=false)]
@@ -146,10 +146,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>3</b>: high risk</description></item>
-            /// <item><description><b>2</b>: medium risk</description></item>
-            /// <item><description><b>1</b>: low risk</description></item>
-            /// <item><description><b>0</b>: no risk.</description></item>
+            /// <item><description><b>3</b>: High risk.</description></item>
+            /// <item><description><b>2</b>: Medium risk.</description></item>
+            /// <item><description><b>1</b>: Low risk.</description></item>
+            /// <item><description><b>0</b>: No risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,17 +160,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The risk reason.</para>
+            /// <para>The reason for the risk.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>历史流量均为黑流量</para>
+            /// <para>All historical traffic is malicious traffic</para>
             /// </summary>
             [NameInMap("RiskReason")]
             [Validation(Required=false)]
             public string RiskReason { get; set; }
 
             /// <summary>
-            /// <para>The application list.</para>
+            /// <para>The list of applications.</para>
             /// </summary>
             [NameInMap("ServiceNameList")]
             [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The total reply traffic over the last 7 days.</para>
+            /// <para>The total response traffic in the last 7 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalReplyBytes { get; set; }
 
             /// <summary>
-            /// <para>For specific traffic information, refer to the TotalBytes field.</para>
+            /// <para>For specific traffic information, see the TotalBytes field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent1Day { get; set; }
 
             /// <summary>
-            /// <para>For specific traffic information, refer to the TotalBytes field.</para>
+            /// <para>For specific traffic information, see the TotalBytes field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent30Day { get; set; }
 
             /// <summary>
-            /// <para>For specific traffic information, refer to the TotalBytes field.</para>
+            /// <para>For specific traffic information, see the TotalBytes field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficPercent7Day { get; set; }
 
             /// <summary>
-            /// <para>The reason why the protocol could not be identified when the identified protocol is Unknown.</para>
+            /// <para>The reason why the protocol is not identified when the recognized protocol is Unknown.</para>
             /// </summary>
             [NameInMap("UnknownReason")]
             [Validation(Required=false)]
@@ -246,14 +246,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The paging information for the paged query.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeInternetOpenIpResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeInternetOpenIpResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The current page number in the paged query.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in the paged query.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

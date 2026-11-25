@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeEventLogResponseBodyDataList> DataList { get; set; }
         public class DescribeEventLogResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The application type supported by the access control policy. We recommend that you use ApplicationNameList. Valid values:</para>
+            /// <para>The application type supported by the access control policy. Use ApplicationNameList instead. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>FTP</b></description></item>
             /// <item><description><b>HTTP</b></description></item>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <item><description><b>SSH</b></description></item>
             /// <item><description><b>SSL</b></description></item>
             /// <item><description><b>VNC</b></description></item>
-            /// <item><description><b>ANY</b>: All application types.</description></item>
+            /// <item><description><b>ANY</b> (all application types)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The attack type of the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Abnormal connection.</description></item>
-            /// <item><description><b>2</b>: execute commands.</description></item>
-            /// <item><description><b>3</b>: brute-force attacks.</description></item>
+            /// <item><description><b>2</b>: Command execution.</description></item>
+            /// <item><description><b>3</b>: Brute-force attack.</description></item>
             /// <item><description><b>4</b>: Scan.</description></item>
             /// <item><description><b>5</b>: Other.</description></item>
             /// <item><description><b>6</b>: Information leak.</description></item>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <item><description><b>8</b>: Overflow attack.</description></item>
             /// <item><description><b>9</b>: Web attack.</description></item>
             /// <item><description><b>10</b>: Trojan backdoor.</description></item>
-            /// <item><description><b>11</b>: Virus and worm.</description></item>
+            /// <item><description><b>11</b>: Virus or worm.</description></item>
             /// <item><description><b>12</b>: Mining behavior.</description></item>
             /// <item><description><b>13</b>: Reverse shell.</description></item>
             /// </list>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Direction { get; set; }
 
             /// <summary>
-            /// <para>The destination IP address. This indicates that the intrusion prevention event involves this destination IP address.</para>
+            /// <para>The queried destination IP address. This indicates that the intrusion prevention event involves this destination IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.2.2.2</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// <para>The UID of the Cloud Firewall member accounts.</para>
+            /// <para>The UID of the Cloud Firewall member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14151892****7022</para>
@@ -189,8 +189,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The source of the detection rule for the intrusion prevention event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Basic protection.</description></item>
-            /// <item><description><b>2</b>: Virtual Patches.</description></item>
+            /// <item><description><b>1</b>: Basic defense.</description></item>
+            /// <item><description><b>2</b>: Virtual patches.</description></item>
             /// <item><description><b>4</b>: Threat intelligence.</description></item>
             /// </list>
             /// 
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? RuleSource { get; set; }
 
             /// <summary>
-            /// <para>The Server Name Indication (SNI) used when the TLS connection is established.</para>
+            /// <para>The SNI used when the TLS connection is established.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Sni { get; set; }
 
             /// <summary>
-            /// <para>The source IP address. This indicates that the intrusion prevention event involves this source IP address.</para>
+            /// <para>The queried source IP address. This indicates that the intrusion prevention event involves this source IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SslErrorIndex { get; set; }
 
             /// <summary>
-            /// <para>The reason for the TLS handshake failure, such as BAD_PACKET_LENGTH.</para>
+            /// <para>The cause of the TLS handshake failure, such as BAD_PACKET_LENGTH.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BAD_PACKET_LENGTH</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SslErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The TLS handshake result. For example, success indicates a successful handshake.</para>
+            /// <para>The TLS handshake result. For example, success indicates that the handshake is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The URL path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://example.com/task3%DF%5C%5C">http://example.com/task3%DF\\</a>&quot;</para>
+            /// <para><a href="http://example.com/task3%DF%5C">http://example.com/task3%DF\</a>&quot;</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]

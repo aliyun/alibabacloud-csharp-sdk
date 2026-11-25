@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The list of ACL check names.</para>
-        /// <para><b>Note</b>: This parameter is required in actual calls. Provide at least one check name. If no check name is provided, the API returns ErrorParameters (-200103).</para>
+        /// <para><b>Note</b>: This parameter is required in actual calls. Provide at least one check name. If this parameter is not provided, the API returns ErrorParameters (-200103).</para>
         /// </summary>
         [NameInMap("CheckNames")]
         [Validation(Required=false)]
         public List<string> CheckNames { get; set; }
 
         /// <summary>
-        /// <para>The language type of the request and response messages.</para>
+        /// <para>The language of the request and response messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
