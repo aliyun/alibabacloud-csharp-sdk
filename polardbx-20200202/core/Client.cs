@@ -21794,7 +21794,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
+        /// <para>Queries the details of slow SQL statements on the compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21868,7 +21868,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
+        /// <para>Queries the details of slow SQL statements on the compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21942,7 +21942,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
+        /// <para>Queries the details of slow SQL statements on the compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21960,7 +21960,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
+        /// <para>Queries the details of slow SQL statements on the compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

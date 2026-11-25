@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The configuration information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;schemaName\&quot;:\&quot;transfer_test\&quot;,\&quot;tableList\&quot;:[]}]</para>
+        /// <para>[{&quot;schemaName&quot;:&quot;transfer_test&quot;,&quot;tableList&quot;:[]}]</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]

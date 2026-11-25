@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The additional information returned by the API operation. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[Environment: huanghe]\nhuanghe 503_UC_OUTBOUND alert exceeds the threshold!\n\nFor details, see: <a href="https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE%5C%5Cn">https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE\\n</a></para>
+            /// <para>[Environment: huanghe]\nhuanghe 503_UC_OUTBOUND alert exceeds the threshold!\n\nFor details, see: <a href="https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE%5Cn">https://grafana-cn-lbj34sreu03.grafana.aliyuncs.com/d/_rOiq2lNk/asm-status-code-monitor?var-datasource=DataSource-HUANGHE\n</a></para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

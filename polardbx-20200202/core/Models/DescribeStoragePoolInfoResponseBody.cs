@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 /// <para>The reserved field.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</para>
+                /// <para>{&quot;appId&quot;:&quot;APP_ETLUP1E5FMI5ND5IFO8W&quot;}</para>
                 /// </summary>
                 [NameInMap("Extra")]
                 [Validation(Required=false)]

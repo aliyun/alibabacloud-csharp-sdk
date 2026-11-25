@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;pc-bp1m9tt23o5kh834y.rwlb.rds.aliyuncs.com\&quot;:\&quot;rm-bp1ycl5o6ojs957o0.mysql.rds.aliyuncs.com\&quot;}</para>
+        /// <para>{&quot;pc-bp1m9tt23o5kh834y.rwlb.rds.aliyuncs.com&quot;:&quot;rm-bp1ycl5o6ojs957o0.mysql.rds.aliyuncs.com&quot;}</para>
         /// </summary>
         [NameInMap("ConnectionStrings")]
         [Validation(Required=false)]

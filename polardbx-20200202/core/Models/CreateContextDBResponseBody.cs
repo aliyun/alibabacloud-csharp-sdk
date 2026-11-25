@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public CreateContextDBResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class CreateContextDBResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The description as above.</para>
+            /// <para>The description is as stated above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardbx:CreateContextDB</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public CreateContextDBResponseBodyData Data { get; set; }
         public class CreateContextDBResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The administrator key of the context service.</para>
+            /// <para>The administrator key for the context service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ctx-admin-***</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The name of the context service dashboard replica set.</para>
+            /// <para>The name of the dashboard replica set for the context service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********-d</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string OpenSearchInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The name of the context service replica set.</para>
+            /// <para>The name of the service replica set for the context service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxt-*********-s</para>

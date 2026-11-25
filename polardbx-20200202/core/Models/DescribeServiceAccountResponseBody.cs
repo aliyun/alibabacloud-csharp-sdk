@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The message returned. If the request is successful, \&quot;success\&quot; is returned. If the request fails, the corresponding error code is returned.</para>
+        /// <para>The message returned. If the request is successful, &quot;success&quot; is returned. If the request fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

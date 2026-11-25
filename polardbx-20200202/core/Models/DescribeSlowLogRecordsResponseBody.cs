@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of slow log details.</para>
+        /// <para>The details of the slow query logs.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSlowLogRecordsResponseBodyItems> Items { get; set; }
         public class DescribeSlowLogRecordsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The compute node name. This field is available only for CN.</para>
+            /// <para>The name of the compute node. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-i-xxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CNname { get; set; }
 
             /// <summary>
-            /// <para>The database name.</para>
+            /// <para>The name of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dcdev</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The extension field. This field is available only for CN.</para>
+            /// <para>The extended field. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>tddl:5.4.19-20240927</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Extension { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the execution failed. This field is available only for CN.</para>
+            /// <para>Indicates whether the execution failed. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Fail { get; set; }
 
             /// <summary>
-            /// <para>The number of rows fetched. This field is available only for CN.</para>
+            /// <para>The number of fetched rows. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Frows { get; set; }
 
             /// <summary>
-            /// <para>The client name and address that connects to the database.</para>
+            /// <para>The name and address of the client that connects to the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>[</b></b>] @ [1XX.XX.XX.XX]</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string HostAddress { get; set; }
 
             /// <summary>
-            /// <para>The instance name. This field is available only for DN.</para>
+            /// <para>The name of the instance. This field is available only for storage nodes (DN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>pxc-xdb-s-xxxx</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Prepare mode is used. This field is available only for CN.</para>
+            /// <para>Indicates whether the Prepare mode is used. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string IsBind { get; set; }
 
             /// <summary>
-            /// <para>The lock duration. Unit: milliseconds (ms). This field is available only for DN.</para>
+            /// <para>The lock duration. Unit: milliseconds. This field is available only for storage nodes (DN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string LockTimeMS { get; set; }
 
             /// <summary>
-            /// <para>The parameters in Prepare mode. This field is available only for CN.</para>
+            /// <para>The parameters in the Prepare mode. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;1&quot;]</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Params { get; set; }
 
             /// <summary>
-            /// <para>The number of rows scanned. This field is available only for DN.</para>
+            /// <para>The number of scanned rows. This field is available only for storage nodes (DN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -137,10 +137,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ParseRowCounts { get; set; }
 
             /// <summary>
-            /// <para>The timestamp. Format: YYYY-MM-ddTHH:mm.ss.SSSZ (UTC).</para>
+            /// <para>The timestamp. Specify the time in the YYYY-MM-ddTHH:mm.ss.SSSZ format. The time must be in UTC.</para>
             /// <list type="bullet">
-            /// <item><description>In CN slow logs, this field indicates the execution start time.</description></item>
-            /// <item><description>In DN slow logs, this field indicates the execution end time.</description></item>
+            /// <item><description>In the slow query logs of compute nodes (CN), this field indicates the start time of the execution.</description></item>
+            /// <item><description>In the slow query logs of storage nodes (DN), this field indicates the completion time of the execution.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string QueryStartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the SQL statement. Unit: seconds (s).</para>
+            /// <para>The execution duration of the SQL statement. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.000</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string QueryTime { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the SQL statement. Unit: milliseconds (ms).</para>
+            /// <para>The execution duration of the SQL statement. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3000.000</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string QueryTimeMS { get; set; }
 
             /// <summary>
-            /// <para>The number of rows returned. This field is available only for DN.</para>
+            /// <para>The number of returned rows. This field is available only for storage nodes (DN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ReturnRowCounts { get; set; }
 
             /// <summary>
-            /// <para>The number of rows affected or returned. This field is available only for CN.</para>
+            /// <para>The number of affected or returned rows. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Rows { get; set; }
 
             /// <summary>
-            /// <para>The number of physical SQL statements. This field is available only for CN.</para>
+            /// <para>The number of physical SQL statements. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SCNT { get; set; }
 
             /// <summary>
-            /// <para>The unique identity of the SQL statement in slow query log statistics.</para>
+            /// <para>The unique identifier of the SQL statement in the slow query log statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c8df07e5d45cd68da8b4771c2016e20b</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SQLText { get; set; }
 
             /// <summary>
-            /// <para>The SQL type. This field is available only for CN.</para>
+            /// <para>The type of the SQL statement. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>select</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string SqlType { get; set; }
 
             /// <summary>
-            /// <para>The kernel template ID. This field is available only for CN.</para>
+            /// <para>The kernel template ID. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>af33ffee</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the SQL statement is too long. This field is available only for CN.</para>
+            /// <para>Indicates whether the SQL statement is too long. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TooLong { get; set; }
 
             /// <summary>
-            /// <para>The trace ID. This field is available only for CN.</para>
+            /// <para>The trace ID. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>17a5c5c840006000</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TraceId { get; set; }
 
             /// <summary>
-            /// <para>The transaction policy. This field is available only for CN.</para>
+            /// <para>The transaction policy. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>XA</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TransactionPolicy { get; set; }
 
             /// <summary>
-            /// <para>The transaction ID. This field is available only for CN.</para>
+            /// <para>The transaction ID. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>17a5c5c840006000</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string TrxId { get; set; }
 
             /// <summary>
-            /// <para>The workload type. This field is available only for CN.</para>
+            /// <para>The workload type. This field is available only for compute nodes (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>TP</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current query.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

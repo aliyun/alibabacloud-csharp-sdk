@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public List<DescribeTasksResponseBodyItems> Items { get; set; }
         public class DescribeTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The start time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+            /// <para>The start time of the task. The format is yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-20T19:40:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+            /// <para>The end time of the task. The format is yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-20T20:00:00Z</para>

@@ -1,3 +1,9 @@
+2026-11-25 Version: 3.13.1
+- Update API DescribeSupabaseInstanceAttribute: add response parameters Body.Data.LatestMinorVersion.
+- Update API DescribeSupabaseInstanceAttribute: add response parameters Body.Data.WebAppsHttpUrl.
+- Update API DescribeSupabaseInstanceAttribute: add response parameters Body.Data.WebAppsUrl.
+
+
 2026-11-23 Version: 3.13.0
 - Support API ListPxfsTenants.
 - Support API ModifyPxfsTenantQuota.

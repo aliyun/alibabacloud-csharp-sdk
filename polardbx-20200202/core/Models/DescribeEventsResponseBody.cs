@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <para>The additional information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Domain\&quot;: \&quot;rds-cn-hangzhou.aliyuncs.com\&quot;}</para>
+            /// <para>{&quot;Domain&quot;: &quot;rds-cn-hangzhou.aliyuncs.com&quot;}</para>
             /// </summary>
             [NameInMap("EventPayload")]
             [Validation(Required=false)]

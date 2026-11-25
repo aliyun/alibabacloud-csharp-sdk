@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeCustomEndpointListResponseBodyDataEndpoints> Endpoints { get; set; }
             public class DescribeCustomEndpointListResponseBodyDataEndpoints : TeaModel {
                 /// <summary>
-                /// <para>[\&quot;pxc-i-vb1sqa7llp\&quot;,\&quot;pxc-i-bemprx50ad\&quot;]</para>
+                /// <para>[&quot;pxc-i-vb1sqa7llp&quot;,&quot;pxc-i-bemprx50ad&quot;]</para>
                 /// </summary>
                 [NameInMap("CnNames")]
                 [Validation(Required=false)]

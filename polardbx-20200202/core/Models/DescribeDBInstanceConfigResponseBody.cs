@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;attendHtapList\&quot;:[\&quot;pxc-hzruyzes08****\&quot;],\&quot;autoAttendHtap\&quot;:\&quot;true\&quot;,\&quot;delayExecutionStrategy\&quot;:1,\&quot;enableConsistentReplicaRead\&quot;:true,\&quot;enableHtap\&quot;:\&quot;true\&quot;,\&quot;masterReadWeight\&quot;:100,\&quot;storageDelayThreshold\&quot;:3}</para>
+            /// <para>{&quot;attendHtapList&quot;:[&quot;pxc-hzruyzes08****&quot;],&quot;autoAttendHtap&quot;:&quot;true&quot;,&quot;delayExecutionStrategy&quot;:1,&quot;enableConsistentReplicaRead&quot;:true,&quot;enableHtap&quot;:&quot;true&quot;,&quot;masterReadWeight&quot;:100,&quot;storageDelayThreshold&quot;:3}</para>
             /// </summary>
             [NameInMap("ConfigValue")]
             [Validation(Required=false)]

@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>The list of tags.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;TagKey\&quot;:\&quot;test\&quot;,\&quot;TagValue\&quot;:\&quot;test-value\&quot;}]</para>
+        /// <para>[{&quot;TagKey&quot;:&quot;test&quot;,&quot;TagValue&quot;:&quot;test-value&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

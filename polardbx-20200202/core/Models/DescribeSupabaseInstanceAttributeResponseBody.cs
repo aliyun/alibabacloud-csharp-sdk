@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The name of the authentication principal.</para>
+            /// <para>The display name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic message.</para>
+            /// <para>The encoded diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The no permission type.</para>
+            /// <para>The type of missing permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public DescribeSupabaseInstanceAttributeResponseBodyData Data { get; set; }
         public class DescribeSupabaseInstanceAttributeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoints.</para>
+            /// <para>The connection endpoints.</para>
             /// </summary>
             [NameInMap("ConnAddrs")]
             [Validation(Required=false)]
@@ -185,6 +185,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public bool? Expired { get; set; }
 
             /// <summary>
+            /// <para>The latest minor engine version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</para>
+            /// </summary>
+            [NameInMap("LatestMinorVersion")]
+            [Validation(Required=false)]
+            public string LatestMinorVersion { get; set; }
+
+            /// <summary>
             /// <para>The lock mode.</para>
             /// 
             /// <b>Example:</b>
@@ -195,7 +205,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The minor version.</para>
+            /// <para>The minor engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</para>
@@ -232,7 +242,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeSupabaseInstanceAttributeResponseBodyDataNodes> Nodes { get; set; }
             public class DescribeSupabaseInstanceAttributeResponseBodyDataNodes : TeaModel {
                 /// <summary>
-                /// <para>The specification code.</para>
+                /// <para>The class code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>polarx.supabase.x2.small</para>
@@ -304,7 +314,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The Supabase specification code.</para>
+            /// <para>The Supabase class code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx.supabase.x4.xlarge</para>
@@ -352,6 +362,26 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
+            /// <summary>
+            /// <para>The complete HTTP access URL for WebApps. This parameter is not returned if WebApps is not enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://example.com:8000/apps/">http://example.com:8000/apps/</a></para>
+            /// </summary>
+            [NameInMap("WebAppsHttpUrl")]
+            [Validation(Required=false)]
+            public string WebAppsHttpUrl { get; set; }
+
+            /// <summary>
+            /// <para>The complete HTTPS access URL for WebApps. This parameter is not returned if WebApps is not enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com:8443/apps/">https://example.com:8443/apps/</a></para>
+            /// </summary>
+            [NameInMap("WebAppsUrl")]
+            [Validation(Required=false)]
+            public string WebAppsUrl { get; set; }
 
             /// <summary>
             /// <para>The zone ID.</para>
