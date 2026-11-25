@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public CreateLangfuseProjectResponseBodyData Data { get; set; }
         public class CreateLangfuseProjectResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time of the Langfuse project. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The time when the Langfuse project was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-24T10:14:33Z</para>

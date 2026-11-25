@@ -1,3 +1,6 @@
+2026-11-25 Version: 3.0.5
+- Generated csharp 2023-05-22 for clickhouse.
+
 2026-11-05 Version: 3.0.4
 - Update API CreateLangfuseUser: add request parameters AllowOrgCreation.
 - Update API CreateLangfuseUser: add response parameters Body.Data.AllowOrgCreation.

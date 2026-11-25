@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The database account. The account name must meet the following requirements:</para>
+        /// <para>The database account. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be unique.</description></item>
         /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The type of the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NormalAccount</b>: Standard account.</description></item>
-        /// <item><description><b>SuperAccount</b>: Privileged account.</description></item>
+        /// <item><description><b>NormalAccount</b>: standard account.</description></item>
+        /// <item><description><b>SuperAccount</b>: privileged account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<string> AllowDictionaries { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to grant DDL permissions to the database account. Valid values:</para>
+            /// <para>Specifies whether to grant Data Definition Language (DDL) permissions to the database account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Allows DDL operations.</description></item>
             /// <item><description><b>false</b>: Prohibits DDL operations.</description></item>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public bool? DdlAuthority { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to grant DML permissions to the database account. Valid values:</para>
+            /// <para>Specifies whether to grant Data Manipulation Language (DML) permissions to the database account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Allows queries for reading, writing, and changing settings.</description></item>
             /// <item><description><b>1</b>: Allows only queries for reading data.</description></item>

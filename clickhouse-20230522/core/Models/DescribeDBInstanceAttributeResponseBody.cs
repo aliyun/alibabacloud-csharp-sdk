@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
             /// <summary>
             /// <para>The category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enterprise: Enterprise Edition.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>enterprise</para>
@@ -47,7 +50,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The billing method.</para>
+            /// <para>The billing method. 
+            /// Enterprise Edition clusters only support the pay-as-you-go billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The ClickObserve service status.</para>
+            /// <para>The status of the ClickObserve service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>activation</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled.</para>
+            /// <para>Indicates whether release protection is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0/1</para>
@@ -97,7 +101,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public bool? DeletionProtection { get; set; }
 
             /// <summary>
-            /// <para>The zone deployment status of the cluster. Valid values: single_az and multi_az.</para>
+            /// <para>The zone deployment status of the cluster. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>single_az: Servers are deployed in the primary zone specified by ZoneId.</description></item>
+            /// <item><description>multi_az: Servers are deployed in multiple zones specified by MultiZones.</description></item>
+            /// </list>
+            /// <para>Keeper nodes are always deployed in multiple zones specified by MultiZones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>single_az</para>
@@ -117,7 +126,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The disabled database ports. Multiple ports are separated by commas (,).</para>
+            /// <para>The disabled database ports. Separate multiple ports with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>9001,8123</para>
@@ -137,7 +146,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The minor version of the cluster engine.</para>
+            /// <para>The minor engine version of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23.8.1.41495_6</para>
@@ -147,7 +156,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string EngineMinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The DPI engine version.</para>
+            /// <para>The database engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23.8</para>
@@ -158,6 +167,9 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
             /// <summary>
             /// <para>The expiration time of the cluster. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <remarks>
+            /// <para>Pay-as-you-go clusters do not have an expiration time. An empty value is returned.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-17T08:14:48Z</para>
@@ -167,7 +179,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The list of Langfuse instance IDs.</para>
+            /// <para>The Langfuse instance IDs.</para>
             /// </summary>
             [NameInMap("LangfuseInstanceIds")]
             [Validation(Required=false)]
@@ -260,7 +272,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string NodeCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum elastic scaling value for serverless nodes.</para>
+            /// <para>The maximum scaling limit for serverless nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -270,7 +282,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string NodeScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum elastic scaling value for serverless nodes.</para>
+            /// <para>The minimum scaling limit for serverless nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -339,7 +351,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The maximum scaling value for serverless elastic scaling.</para>
+            /// <para>The maximum value for serverless elastic scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -349,7 +361,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum scaling value for serverless elastic scaling.</para>
+            /// <para>The minimum value for serverless elastic scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -369,7 +381,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The pre-purchased storage quota, in GB.</para>
+            /// <para>The purchased storage quota, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -379,7 +391,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string StorageQuota { get; set; }
 
             /// <summary>
-            /// <para>The storage size. Unit: GB.</para>
+            /// <para>The storage space size. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -438,7 +450,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz9duj8xd6r1gzhsg*****</para>

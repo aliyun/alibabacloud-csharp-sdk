@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateAccountShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The database account. The account name must meet the following requirements:</para>
+        /// <para>The database account. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be unique.</description></item>
         /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The type of the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NormalAccount</b>: Standard account.</description></item>
-        /// <item><description><b>SuperAccount</b>: Privileged account.</description></item>
+        /// <item><description><b>NormalAccount</b>: standard account.</description></item>
+        /// <item><description><b>SuperAccount</b>: privileged account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

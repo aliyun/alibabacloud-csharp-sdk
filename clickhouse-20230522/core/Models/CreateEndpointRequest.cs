@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ComputingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the destination endpoint. This is the prefix of the ConnectionString parameter.</para>
+        /// <para>The prefix of the destination endpoint, which is the prefix of the ConnectionString parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</para>

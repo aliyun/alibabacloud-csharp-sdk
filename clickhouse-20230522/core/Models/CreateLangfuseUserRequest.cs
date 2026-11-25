@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The username.</para>
+        /// <para>The name of the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string OrgRole { get; set; }
 
         /// <summary>
-        /// <para>The Langfuse organization ID.</para>
+        /// <para>The ID of the Langfuse organization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cmrbhzx930005jw2q****</para>
@@ -72,11 +72,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The password of the user account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// <item><description><para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
         /// </description></item>
         /// <item><description><para>Special characters include !@#$%^&amp;*()_+-=.</para>
         /// </description></item>
-        /// <item><description><para>It must be 8 to 32 characters in length.</para>
+        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

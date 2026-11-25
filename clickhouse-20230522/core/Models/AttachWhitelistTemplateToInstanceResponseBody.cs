@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public AttachWhitelistTemplateToInstanceResponseBodyData Data { get; set; }
         public class AttachWhitelistTemplateToInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instances that failed to be disassociated.</para>
+            /// <para>The instances that failed to be associated.</para>
             /// </summary>
             [NameInMap("AttachFailList")]
             [Validation(Required=false)]
             public List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachFailList> AttachFailList { get; set; }
             public class AttachWhitelistTemplateToInstanceResponseBodyDataAttachFailList : TeaModel {
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-database</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the disassociation failure.</para>
+                /// <para>The reason for the association failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Processing exception</para>
+                /// <para>Processing error</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
-            /// <para>The templates that were successfully associated.</para>
+            /// <para>The successfully associated templates.</para>
             /// </summary>
             [NameInMap("AttachSuccessedList")]
             [Validation(Required=false)]
             public List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedList> AttachSuccessedList { get; set; }
             public class AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedList : TeaModel {
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-database</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The whitelist templates.</para>
+                /// <para>The list of whitelist templates.</para>
                 /// </summary>
                 [NameInMap("Templates")]
                 [Validation(Required=false)]
                 public List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplates> Templates { get; set; }
                 public class AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplates : TeaModel {
                     /// <summary>
-                    /// <para>The associated instances.</para>
+                    /// <para>The list of associated instances.</para>
                     /// </summary>
                     [NameInMap("DbInstances")]
                     [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     }
 
                     /// <summary>
-                    /// <para>The IP whitelists.</para>
+                    /// <para>The IP whitelist.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>192.168.1.1,10.0.0.1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     public string SecurityIPList { get; set; }
 
                     /// <summary>
-                    /// <para>The whitelist template ID.</para>
+                    /// <para>The ID of the whitelist template.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>g-asdfwem</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     public string TemplateId { get; set; }
 
                     /// <summary>
-                    /// <para>The whitelist template name.</para>
+                    /// <para>The name of the whitelist template.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>demo_template</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
-            /// <para>The operation status.</para>
+            /// <para>The status of the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cc-bp100p4q1g9z3****</para>
+            /// <para>100001</para>
             /// </summary>
             [NameInMap("DBInstanceID")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Enterprise edition cluster test</para>
+            /// <para>Enterprise Edition cluster test</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]

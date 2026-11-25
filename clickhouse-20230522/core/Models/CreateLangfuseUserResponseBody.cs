@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The user role.</para>
+            /// <para>The role of the user.</para>
             /// </summary>
             [NameInMap("Membership")]
             [Validation(Required=false)]
             public CreateLangfuseUserResponseBodyDataMembership Membership { get; set; }
             public class CreateLangfuseUserResponseBodyDataMembership : TeaModel {
                 /// <summary>
-                /// <para>The Langfuse organization ID.</para>
+                /// <para>The ID of the Langfuse organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cmrbhzx930005jw2q****</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
-            /// <para>The username.</para>
+            /// <para>The name of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>john</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>lfs-****</para>
+            /// <para>100001</para>
             /// </summary>
             [NameInMap("DBInstanceID")]
             [Validation(Required=false)]

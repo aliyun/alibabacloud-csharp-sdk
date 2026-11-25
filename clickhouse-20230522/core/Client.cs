@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a whitelist template with instances.</para>
+        /// <para>Associates instances with a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a whitelist template with instances.</para>
+        /// <para>Associates instances with a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a whitelist template with instances.</para>
+        /// <para>Associates instances with a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a whitelist template with instances.</para>
+        /// <para>Associates instances with a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1163,7 +1163,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint.</para>
+        /// <para>Creates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1221,7 +1221,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint.</para>
+        /// <para>Creates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1279,7 +1279,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint.</para>
+        /// <para>Creates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1297,7 +1297,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates a public endpoint.</para>
+        /// <para>Creates a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4175,7 +4175,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4221,7 +4221,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4267,7 +4267,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4285,7 +4285,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9375,6 +9375,150 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Modifies the organization creation permissions for a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseUserAllowOrgCreationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseUserAllowOrgCreationResponse
+        /// </returns>
+        public ModifyLangfuseUserAllowOrgCreationResponse ModifyLangfuseUserAllowOrgCreationWithOptions(ModifyLangfuseUserAllowOrgCreationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowOrgCreation))
+            {
+                query["AllowOrgCreation"] = request.AllowOrgCreation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLangfuseUserAllowOrgCreation",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLangfuseUserAllowOrgCreationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the organization creation permissions for a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseUserAllowOrgCreationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseUserAllowOrgCreationResponse
+        /// </returns>
+        public async Task<ModifyLangfuseUserAllowOrgCreationResponse> ModifyLangfuseUserAllowOrgCreationWithOptionsAsync(ModifyLangfuseUserAllowOrgCreationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowOrgCreation))
+            {
+                query["AllowOrgCreation"] = request.AllowOrgCreation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLangfuseUserAllowOrgCreation",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLangfuseUserAllowOrgCreationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the organization creation permissions for a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseUserAllowOrgCreationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseUserAllowOrgCreationResponse
+        /// </returns>
+        public ModifyLangfuseUserAllowOrgCreationResponse ModifyLangfuseUserAllowOrgCreation(ModifyLangfuseUserAllowOrgCreationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyLangfuseUserAllowOrgCreationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the organization creation permissions for a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseUserAllowOrgCreationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseUserAllowOrgCreationResponse
+        /// </returns>
+        public async Task<ModifyLangfuseUserAllowOrgCreationResponse> ModifyLangfuseUserAllowOrgCreationAsync(ModifyLangfuseUserAllowOrgCreationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyLangfuseUserAllowOrgCreationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the whitelist settings of a cluster.</para>
         /// </summary>
         /// 
@@ -9823,7 +9967,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9840,9 +9984,17 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputingGroupId))
+            {
+                query["ComputingGroupId"] = request.ComputingGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeList))
+            {
+                query["NodeList"] = request.NodeList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9869,7 +10021,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9886,9 +10038,17 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputingGroupId))
+            {
+                query["ComputingGroupId"] = request.ComputingGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeList))
+            {
+                query["NodeList"] = request.NodeList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9915,7 +10075,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9933,7 +10093,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Restarts an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

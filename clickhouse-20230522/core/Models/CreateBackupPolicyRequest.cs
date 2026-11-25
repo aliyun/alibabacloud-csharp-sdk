@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for which backups are retained.</para>
+        /// <para>The backup retention period in days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class AttachWhitelistTemplateToInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The database instance IDs. Separate multiple IDs with commas. You can associate or disassociate up to 20 instances at a time.</para>
+        /// <para>The IDs of the database instances. Separate multiple IDs with commas. You can associate up to 20 instances at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The whitelist template ID.</para>
+        /// <para>The ID of the whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
