@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application. It must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</para>
+        /// <para>The application name must start with a letter and can contain digits, letters, underscores (_), and hyphens (-). The name can be up to 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not used and can be ignored.</para>
+        /// <para>The dynamic code. This parameter is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the move was successful.</para>
+        /// <para>Specifies whether the move operation is successful.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation was successful.</para>
+            /// <para>Specifies whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed synchronously.</para>
+        /// <para>Specifies whether the processing is synchronous.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

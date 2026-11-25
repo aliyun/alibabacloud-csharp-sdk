@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppTokenServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied detail.</para>
+        /// <para>The access denial information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The extended information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;绑定域名及发布\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
+            /// <para>{&quot;deliveryNodeName&quot;:&quot;Bind domain name and publish&quot;,&quot;deliveryNodeStatus&quot;:&quot;Finish&quot;,&quot;deliveryOperatorRole&quot;:&quot;Provider&quot;}</para>
             /// </summary>
             [NameInMap("Extend")]
             [Validation(Required=false)]
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The root error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

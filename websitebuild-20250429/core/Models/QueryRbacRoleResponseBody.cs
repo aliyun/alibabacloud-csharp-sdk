@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryRbacRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public QueryRbacRoleResponseBodyModule Module { get; set; }
         public class QueryRbacRoleResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created, in ISO 8601 format, such as 2024-01-01T00:00:00Z.</para>
+            /// <para>The task creation time in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-06T10:20:09Z</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether it is the default. Valid values:</para>
+            /// <para>The default status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: No.</description></item>
             /// <item><description>1: Yes.</description></item>

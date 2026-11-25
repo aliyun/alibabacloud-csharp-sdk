@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPluginVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Valid values: integers greater than 0. Default value: 1.</para>
+        /// <para>The current page number. Valid values: integers greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

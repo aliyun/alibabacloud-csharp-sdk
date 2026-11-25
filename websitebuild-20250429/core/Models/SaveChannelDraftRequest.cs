@@ -10,55 +10,55 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SaveChannelDraftRequest : TeaModel {
         /// <summary>
-        /// <para>The channel content (outside China only).</para>
+        /// <para>The content of the channel (outside China only).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>x</para>
+        /// <para>Introduces the main features and usage of the website</para>
         /// </summary>
         [NameInMap("AdaptedContent")]
         [Validation(Required=false)]
         public string AdaptedContent { get; set; }
 
         /// <summary>
-        /// <para>The channel title.</para>
+        /// <para>The title of the channel.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>Website features and user guide</para>
         /// </summary>
         [NameInMap("AdaptedTitle")]
         [Validation(Required=false)]
         public string AdaptedTitle { get; set; }
 
         /// <summary>
-        /// <para>The display name of the publishing account. A null value does not overwrite the original value. Maximum length: 256 characters.</para>
+        /// <para>The display name of the publishing account. If this parameter is left empty, the original value is not overwritten. Maximum length: 256 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx</para>
+        /// <para>Sample publishing account</para>
         /// </summary>
         [NameInMap("ChannelAccountName")]
         [Validation(Required=false)]
         public string ChannelAccountName { get; set; }
 
         /// <summary>
-        /// <para>The collection of channel cover images (full overwrite).</para>
+        /// <para>The collection of cover images for the channel. This parameter overwrites all existing cover images.</para>
         /// </summary>
         [NameInMap("CoverImages")]
         [Validation(Required=false)]
         public List<SaveChannelDraftRequestCoverImages> CoverImages { get; set; }
         public class SaveChannelDraftRequestCoverImages : TeaModel {
             /// <summary>
-            /// <para>The image URL.</para>
+            /// <para>The URL of the image.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&OSSAccessKeyId=LTAI5tLYirCpzCVXoArh1VYt&Signature=">http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&amp;OSSAccessKeyId=LTAI5tLYirCpzCVXoArh1VYt&amp;Signature=</a>******************************</para>
+            /// <para><a href="http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&OSSAccessKeyId=LTAI5tLYir****VXoArh1VYt&Signature=">http://campus-retail-prod.oss-cn-hangzhou.aliyuncs.com/d1c5efed9b3a419bb54b75056d54dae6.jpg?Expires=4928263770&amp;OSSAccessKeyId=LTAI5tLYir****VXoArh1VYt&amp;Signature=</a>******************************</para>
             /// </summary>
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The material center file ID (optional).</para>
+            /// <para>The ID of the file in the material center. This parameter is optional.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Ascending</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("SortOrder")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The channel draft ID.</para>
+        /// <para>The ID of the channel draft.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DraftId { get; set; }
 
         /// <summary>
-        /// <para>The article column name for Wanxiaozhi 1.0. This parameter is required only when the website has not enabled an article column.</para>
+        /// <para>The name of the article column in Wanxiaozhi 1.0. This parameter is required only when the article column is not enabled for the website.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Article</para>

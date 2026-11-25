@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The list of mobile butler delivery platform types in a JSON string array. Valid values: wechat, dingtalk, wecom, and feishu.</para>
+        /// <para>The list of mobile butler delivery platform types in a JSON string array. Supported values include wechat, dingtalk, wecom, and feishu.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;feishu&quot;]</para>
@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ButlerChannelTypesJson { get; set; }
 
         /// <summary>
-        /// <para>The list of mobile butler notification fields in a JSON string array. This parameter is required when the butler channel is selected. A maximum of 10 fields are supported. The butler fields in JSON format.</para>
+        /// <para>The list of mobile butler notification fields. The value is a JSON string array. This parameter is required when the butler channel is selected. A maximum of 10 fields are supported.
+        /// Butler field JSON.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;id&quot;,&quot;phone&quot;,&quot;name&quot;,&quot;city&quot;,&quot;message&quot;,&quot;is_deleted&quot;,&quot;updated_at&quot;,&quot;created_at&quot;,&quot;status&quot;,&quot;budget&quot;]</para>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ChannelsJson { get; set; }
 
         /// <summary>
-        /// <para>The description of the scenario.</para>
+        /// <para>The scenario description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn_graph_prod</para>
@@ -70,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EmailFieldsJson { get; set; }
 
         /// <summary>
-        /// <para>The email sending limit in a JSON string, including the minInterval and dailyLimit fields.</para>
+        /// <para>The email sending limits. The value is a JSON string that contains the minInterval and dailyLimit fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -90,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EmailRecipientIdsJson { get; set; }
 
         /// <summary>
-        /// <para>The name of the scenario.</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Device Capability Manual</para>
@@ -120,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SmsFieldsJson { get; set; }
 
         /// <summary>
-        /// <para>The SMS sending limit in a JSON string, including the minInterval and dailyLimit fields.</para>
+        /// <para>The SMS sending limits. The value is a JSON string that contains the minInterval and dailyLimit fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppCodeWorkspaceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denied error.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message used to replace the <c>%s</c> placeholder in the error message of the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the value of the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the specified <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string CommitHash { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the workspace has uncommitted changes.</para>
+            /// <para>Indicates whether the workspace contains uncommitted changes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteId { get; set; }
 
             /// <summary>
-            /// <para>The API description information.</para>
+            /// <para>The operation description.</para>
             /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ChangeLog { get; set; }
 
                 /// <summary>
-                /// <para>The creation time in UTC. The time is in the ISO 8601 format.</para>
+                /// <para>The creation time in UTC. The time follows the ISO 8601 standard.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>

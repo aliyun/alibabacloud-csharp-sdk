@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The domain hosting method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CUSTOMER_ESA: Uses the customer\&quot;s own Edge Security Acceleration (ESA). Only supported when DomainType is set to CUSTOM.</description></item>
-        /// </list>
-        /// <para>If this parameter is not specified, the original hosting process is used.</para>
+        /// <para>The optional domain hosting method. A value of CUSTOMER_ESA indicates that the customer&quot;s own ESA is used. If you do not specify this parameter, the original hosting process is used. This parameter is supported only when DomainType is set to CUSTOM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDN</para>
@@ -44,12 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The domain management type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CUSTOM</description></item>
-        /// <item><description>PLATFORM_PREFIX</description></item>
-        /// </list>
-        /// <para>Default value: CUSTOM.</para>
+        /// <para>The domain management type. Valid values: CUSTOM and PLATFORM_PREFIX. If you do not specify this parameter, CUSTOM is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CUSTOM</para>
@@ -62,7 +53,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The extended information (OverwriteExistingRecord).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;Website acceptance\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</para>
+        /// <para>{&quot;deliveryNodeName&quot;:&quot;Website acceptance&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]

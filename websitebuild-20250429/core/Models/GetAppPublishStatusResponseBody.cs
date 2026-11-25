@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPublishStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -73,6 +73,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public GetAppPublishStatusResponseBodyModule Module { get; set; }
         public class GetAppPublishStatusResponseBodyModule : TeaModel {
+            [NameInMap("ArtifactDigest")]
+            [Validation(Required=false)]
+            public string ArtifactDigest { get; set; }
+
+            [NameInMap("AuditId")]
+            [Validation(Required=false)]
+            public string AuditId { get; set; }
+
+            [NameInMap("BindingId")]
+            [Validation(Required=false)]
+            public string BindingId { get; set; }
+
             /// <summary>
             /// <para>Indicates whether quick rollback is supported.</para>
             /// 
@@ -83,8 +95,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public string CanQuickRevert { get; set; }
 
+            [NameInMap("CandidateId")]
+            [Validation(Required=false)]
+            public string CandidateId { get; set; }
+
+            [NameInMap("CandidateStatus")]
+            [Validation(Required=false)]
+            public string CandidateStatus { get; set; }
+
+            [NameInMap("CommitHash")]
+            [Validation(Required=false)]
+            public string CommitHash { get; set; }
+
             /// <summary>
-            /// <para>The current step of the task.</para>
+            /// <para>The current step number of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRE_CHECK</para>
@@ -153,8 +177,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>Indicates whether the call is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The call is successful.</description></item>
-            /// <item><description><c>false</c>: The call failed.</description></item>
+            /// <item><description><para><c>true</c>: The call is successful.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The call fails.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +191,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? IsSuccess { get; set; }
 
             /// <summary>
-            /// <para>The additional description.</para>
+            /// <para>The additional information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>common notify successfully.</para>
@@ -175,7 +201,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The sorting type, such as ASC or DESC.</para>
+            /// <para>The sort order. Valid values: ASC and DESC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DESC</para>
@@ -204,6 +230,34 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public int? Percent { get; set; }
 
+            [NameInMap("PlatformAppid")]
+            [Validation(Required=false)]
+            public string PlatformAppid { get; set; }
+
+            [NameInMap("PluginDeclarationHash")]
+            [Validation(Required=false)]
+            public string PluginDeclarationHash { get; set; }
+
+            [NameInMap("PluginState")]
+            [Validation(Required=false)]
+            public string PluginState { get; set; }
+
+            [NameInMap("PrivacyDraftId")]
+            [Validation(Required=false)]
+            public string PrivacyDraftId { get; set; }
+
+            [NameInMap("PrivacyRevision")]
+            [Validation(Required=false)]
+            public string PrivacyRevision { get; set; }
+
+            [NameInMap("PublishDiagnostics")]
+            [Validation(Required=false)]
+            public string PublishDiagnostics { get; set; }
+
+            [NameInMap("PublishEnv")]
+            [Validation(Required=false)]
+            public string PublishEnv { get; set; }
+
             /// <summary>
             /// <para>The publish number.</para>
             /// 
@@ -225,7 +279,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? PublishOrderId { get; set; }
 
             /// <summary>
-            /// <para>The scheduled publish time in the UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</para>
+            /// <para>The scheduled publish time in UTC format yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSS&quot;Z&quot;.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -235,8 +289,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public string PublishTime { get; set; }
 
+            [NameInMap("ReadbackStatus")]
+            [Validation(Required=false)]
+            public string ReadbackStatus { get; set; }
+
             /// <summary>
-            /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -268,6 +326,30 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [NameInMap("Subchannel")]
             [Validation(Required=false)]
             public string Subchannel { get; set; }
+
+            [NameInMap("SubmitIntentStatus")]
+            [Validation(Required=false)]
+            public string SubmitIntentStatus { get; set; }
+
+            [NameInMap("UpdatedAt")]
+            [Validation(Required=false)]
+            public long? UpdatedAt { get; set; }
+
+            [NameInMap("UploadAttemptId")]
+            [Validation(Required=false)]
+            public string UploadAttemptId { get; set; }
+
+            [NameInMap("UploadLeaseState")]
+            [Validation(Required=false)]
+            public string UploadLeaseState { get; set; }
+
+            [NameInMap("UploadSequence")]
+            [Validation(Required=false)]
+            public long? UploadSequence { get; set; }
+
+            [NameInMap("UploadTicketState")]
+            [Validation(Required=false)]
+            public string UploadTicketState { get; set; }
 
         }
 

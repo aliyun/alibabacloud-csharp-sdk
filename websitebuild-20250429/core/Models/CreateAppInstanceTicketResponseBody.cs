@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppInstanceTicketResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reasons for access denial.</para>
+        /// <para>The detailed reasons for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -50,7 +50,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter. If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERRROR</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public CreateAppInstanceTicketResponseBodyModule Module { get; set; }
         public class CreateAppInstanceTicketResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The time when the access token expires.</para>
+            /// <para>The expiration time of the access token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768619049924</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AccessTokenExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>The time when the access token was issued.</para>
+            /// <para>The issuance time of the access token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768619049924</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AccessTokenIssuedAt { get; set; }
 
             /// <summary>
-            /// <para>The access token value.</para>
+            /// <para>The value of the access token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>be9750d595b6cd7c93a80b46</para>
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The extended attributes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;resourceGroupId\&quot;:\&quot;\&quot;,\&quot;page\&quot;:1,\&quot;size\&quot;:10,\&quot;selected\&quot;:\&quot;[\\\&quot;kvstore\\\&quot;]\&quot;}</para>
+            /// <para>{&quot;resourceGroupId&quot;:&quot;&quot;,&quot;page&quot;:1,&quot;size&quot;:10,&quot;selected&quot;:&quot;[\&quot;kvstore\&quot;]&quot;}</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ParentPk { get; set; }
 
             /// <summary>
-            /// <para>The time when the refresh token expires.</para>
+            /// <para>The expiration time of the refresh token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768619049924</para>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RefreshTokenExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>The time when the refresh token was issued.</para>
+            /// <para>The issuance time of the refresh token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768619049924</para>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RefreshTokenIssuedAt { get; set; }
 
             /// <summary>
-            /// <para>The refresh token value.</para>
+            /// <para>The value of the refresh token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>be9750d595b6cd7c93a80b46</para>

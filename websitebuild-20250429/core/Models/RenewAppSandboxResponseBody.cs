@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>Internal error.</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

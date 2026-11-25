@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The directory depth. If this parameter is set to null or 0, all levels are returned.</para>
+        /// <para>The directory depth. If you set this parameter to null or 0, all levels are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

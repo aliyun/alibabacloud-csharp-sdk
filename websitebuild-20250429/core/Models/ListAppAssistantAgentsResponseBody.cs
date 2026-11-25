@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppAssistantAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response element.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The agent name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>演示</para>
+            /// <para>Demo</para>
             /// </summary>
             [NameInMap("AgentName")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>The authentication credential.</para>
+            /// <para>The authentication credentials.</para>
             /// </summary>
             [NameInMap("Credential")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ApiSecret { get; set; }
 
                 /// <summary>
-                /// <para>The extension field.</para>
+                /// <para>The extension fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The password.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Demo****2026</para>
+                /// <hr>
                 /// </summary>
                 [NameInMap("Password")]
                 [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public ListAppAssistantAgentsResponseBodyModuleEmbedConfig EmbedConfig { get; set; }
             public class ListAppAssistantAgentsResponseBodyModuleEmbedConfig : TeaModel {
                 /// <summary>
-                /// <para>The extension field.</para>
+                /// <para>The extension fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>The extension parameters.</para>
+            /// <para>The extra parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The platform application ID of the agent.</para>
+            /// <para>The application ID of the agent platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WA12313123131</para>
@@ -287,14 +287,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

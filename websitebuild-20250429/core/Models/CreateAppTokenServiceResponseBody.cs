@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The optional migration extension information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;serviceApi\&quot;:\&quot;sendUserMsg\&quot;,\&quot;bizId\&quot;:\&quot;sp\&quot;}</para>
+            /// <para>{&quot;serviceApi&quot;:&quot;sendUserMsg&quot;,&quot;bizId&quot;:&quot;sp&quot;}</para>
             /// </summary>
             [NameInMap("ExtInfo")]
             [Validation(Required=false)]

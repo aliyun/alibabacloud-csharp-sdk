@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListMyAppPluginsRequest : TeaModel {
         /// <summary>
-        /// <para>The category used to filter results.</para>
+        /// <para>Filters the results by category.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: \&quot;JGHDDLT\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000952447, \&quot;ParentCategoryId\&quot;: 30000952446}</para>
+        /// <para>{&quot;Status&quot;: 0, &quot;Name&quot;: &quot;JGHDDLT&quot;, &quot;BizCode&quot;: &quot;&quot;, &quot;CategoryId&quot;: 30000952447, &quot;ParentCategoryId&quot;: 30000952446}</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. The keyword matches the name or description.</para>
+        /// <para>The search keyword, which matches the name or description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</para>
+        /// <para>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status used to filter results.</para>
+        /// <para>Filters the results by status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>

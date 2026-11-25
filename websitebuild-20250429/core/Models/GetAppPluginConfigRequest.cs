@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPluginConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID of the customer.</para>
+        /// <para>The customer business ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway plugin.</para>
+        /// <para>The gateway plugin ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -42,8 +42,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public long? MaxFileSize { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return for a single request.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return for a single request. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. If no next query is available, this parameter is left empty.</para>
+        /// <para>The token that is used to start the next query. If no next query exists, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -93,7 +92,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC, DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -130,7 +129,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string StatusListShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of file extensions.</para>
+        /// <para>The list of file name extensions.</para>
         /// </summary>
         [NameInMap("SuffixList")]
         [Validation(Required=false)]

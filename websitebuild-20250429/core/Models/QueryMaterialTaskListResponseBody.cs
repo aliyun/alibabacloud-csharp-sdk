@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialTaskListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed. Valid values:</para>
+        /// <para>Indicates whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: No retry is allowed.</description></item>
-        /// <item><description>true: A retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the app.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. Currently not in use. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</para>
+        /// <para>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -91,8 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return for a single request. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +118,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The request result.</para>
+            /// <para>The query results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -136,7 +135,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -156,7 +155,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>Apart from pagination limits, the server processes up to 1000 recent records per query. If the results exceed 1000 records, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is set to <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is set to <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -188,7 +187,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token used to start the next query. If no next query is available, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -208,7 +207,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The root error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -218,7 +217,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The root error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System exception</para>
@@ -228,7 +227,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -238,7 +237,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether synchronous processing is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

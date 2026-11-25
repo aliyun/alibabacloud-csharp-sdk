@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;Recorded\&quot;: False}</para>
+                /// <para>{&quot;Recorded&quot;: False}</para>
                 /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]

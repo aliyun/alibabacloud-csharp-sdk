@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The current viewpoint, which is equivalent to the news title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Feel Like Makin\&quot; Love</para>
+            /// <para>Feel Like Makin&quot; Love</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

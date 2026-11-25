@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-28T02:25:41Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses related to com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</para>
+            /// <para>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses of the com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig utility class. Developers must inherit this component configuration class to implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginConfig { get; set; }
 
             /// <summary>
-            /// <para>The description of the plugin.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a simple test plugin</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginDesc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound API gateway plugin.</para>
+            /// <para>The ID of the associated API gateway plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>The plugin name. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</para>
+            /// <para>The plugin name. It must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tf_testaccapigatewayplugin29311</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

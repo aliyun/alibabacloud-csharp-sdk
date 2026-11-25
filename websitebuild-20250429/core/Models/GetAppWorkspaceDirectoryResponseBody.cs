@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppWorkspaceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed cause of access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
+        /// <para>The dynamic message. This parameter is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AssignRbacUserRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace %s in the ErrMessage response parameter.</para>
+        /// <para>The dynamic error message used to replace %s in the ErrMessage response parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion is successful.</para>
+        /// <para>Indicates whether the deletion was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The backup parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

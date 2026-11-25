@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class RollbackAppPluginVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the gateway plugin.</para>
+        /// <para>The ID of the gateway plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>The target version.</para>
+        /// <para>The target version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>

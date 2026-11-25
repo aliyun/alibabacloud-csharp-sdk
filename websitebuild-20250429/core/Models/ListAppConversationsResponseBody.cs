@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppConversationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reasons for access denial.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error arguments.</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public ListAppConversationsResponseBodyModule Module { get; set; }
         public class ListAppConversationsResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The request results.</para>
+            /// <para>The results of the request.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>aliyun_pk</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>2468****135790</para>
                 /// </summary>
                 [NameInMap("AliyunPk")]
                 [Validation(Required=false)]
                 public string AliyunPk { get; set; }
 
                 /// <summary>
-                /// <para>The bot ID.</para>
+                /// <para>The ID of the bot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Zero2</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BotId { get; set; }
 
                 /// <summary>
-                /// <para>The number of chat records.</para>
+                /// <para>The chat records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? ChatNum { get; set; }
 
                 /// <summary>
-                /// <para>The conversation ID.</para>
+                /// <para>The ID of the conversation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>799EAC1246C855CAC75B77955E43D841</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The update time in ISO 8601 format. The time zone is UTC (Z).</para>
+                /// <para>The update time in ISO 8601 format, in the UTC (Z) time zone.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The extended information in JSON string format.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;MD5\&quot;:\&quot;296f6c01e7fea2697ffe1cf41082b774\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;12845825\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:true,\&quot;uefi_preferred\&quot;:false}</para>
+                /// <para>{&quot;MD5&quot;:&quot;296f6c01e7fea2697ffe1cf41082b774&quot;,&quot;driver&quot;:&quot;vhd&quot;,&quot;flag&quot;:&quot;12845825&quot;,&quot;imds_support&quot;:&quot;v1&quot;,&quot;io_optimized&quot;:true,&quot;nvme_supported&quot;:true,&quot;uefi_preferred&quot;:false}</para>
                 /// </summary>
                 [NameInMap("MetaData")]
                 [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SectionId { get; set; }
 
                 /// <summary>
-                /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+                /// <para>The ID of the site.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1068725896006128</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The ID of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The resource count that meets the conditional filters.</para>
+            /// <para>The conditional resource count that meets the filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. If no next query is available, this parameter is empty.</para>
+        /// <para>The token used to start the next query. If there is no next query, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>

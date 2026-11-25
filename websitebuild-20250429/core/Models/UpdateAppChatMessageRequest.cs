@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The message content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FormatVersion: OOS-2019-06-01nTasks:n  - Name: runCommandn    Action: \&quot;ACS::ECS::RunCommand\&quot;n    Properties:n      commandContent: \&quot; echo Hksqj@@883289</para>
+        /// <para>FormatVersion: OOS-2019-06-01nTasks:n  - Name: runCommandn    Action: &quot;ACS::ECS::RunCommand&quot;n    Properties:n      commandContent: &quot; echo Hksqj@@883289</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

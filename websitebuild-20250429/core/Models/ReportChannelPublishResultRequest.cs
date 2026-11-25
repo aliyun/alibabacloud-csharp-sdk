@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ReportChannelPublishResultRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the publishing account. A null value does not overwrite the original value. Maximum length: 256 characters.</para>
+        /// <para>The display name of the publishing account. An empty value does not overwrite the original value. Maximum length: 256 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx</para>
+        /// <para>Sample publishing account</para>
         /// </summary>
         [NameInMap("ChannelAccountName")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DraftId { get; set; }
 
         /// <summary>
-        /// <para>The ID returned by the platform. Set this parameter when the publishing is successful.</para>
+        /// <para>The ID returned by the platform. Specify this parameter when the publishing is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5467410713875420090</para>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ExternalUrl { get; set; }
 
         /// <summary>
-        /// <para>The failure reason. Set this parameter when the publishing fails.</para>
+        /// <para>The reason for the failure. Specify this parameter when the publishing fails.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>Publishing failed. Try again later</para>
         /// </summary>
         [NameInMap("FailReason")]
         [Validation(Required=false)]
         public string FailReason { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the publishing is successful (true/false).</para>
+        /// <para>Specifies whether the publishing is successful.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

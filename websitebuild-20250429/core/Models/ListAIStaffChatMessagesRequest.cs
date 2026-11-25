@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the last entry on the previous page. Do not specify this parameter when you query the first page.</para>
+        /// <para>The gmtCreate value of the last entry on the previous page. Do not specify this parameter for the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

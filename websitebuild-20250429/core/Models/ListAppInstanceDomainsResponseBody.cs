@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppInstanceDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,8 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return for a single query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return in a single query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -142,7 +141,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CertificateType { get; set; }
 
                     /// <summary>
-                    /// <para>The expiration time of the certificate. The value is a UNIX timestamp in milliseconds.</para>
+                    /// <para>The certificate expiration time. The value is a UNIX timestamp in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4885718400000</para>
@@ -154,7 +153,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time of the instance. Format: yyyy-MM-dd HH:mm:ss. This parameter is required.</para>
+                /// <para>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1683256054000</para>
@@ -174,38 +173,38 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DeployType { get; set; }
 
                 /// <summary>
-                /// <para>The DNS conflict information. This parameter is returned when resolveStatus is DNS_CONFLICT.</para>
+                /// <para>The DNS conflict information. This field has a value when resolveStatus is DNS_CONFLICT.</para>
                 /// </summary>
                 [NameInMap("DnsConflict")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleDataDnsConflict DnsConflict { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleDataDnsConflict : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether automatic override is supported. Valid values: true (the domain name belongs to the current Alibaba Cloud account) and false (the domain name belongs to another account).</para>
+                    /// <para>Specifies whether automatic override is supported. Valid values: true: Supported for the current Alibaba Cloud account. false: Not supported for other accounts.</para>
                     /// </summary>
                     [NameInMap("CanAutoResolve")]
                     [Validation(Required=false)]
                     public bool? CanAutoResolve { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether a conflict exists.</para>
+                    /// <para>Specifies whether a conflict exists.</para>
                     /// </summary>
                     [NameInMap("HasConflict")]
                     [Validation(Required=false)]
                     public bool? HasConflict { get; set; }
 
                     /// <summary>
-                    /// <para>The user-facing prompt message. The message varies based on the scenario.</para>
+                    /// <para>The user-facing prompt message. Different guidance text is generated based on the scenario.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The domain name <a href="http://www.example.com">www.example.com</a> has a conflicting DNS record (A 192.0.2.1). Delete the conflicting record at your DNS provider and try again</para>
+                    /// <para>The domain name <a href="http://www.example.com">www.example.com</a> has a conflicting DNS record (A 192.0.2.1). Delete the conflicting record from your DNS provider and try again</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// <para>The list of conflicting DNS records.</para>
+                    /// <para>The list of conflicting DNS records. This reuses the existing AppDomainDnsRecordDTO.</para>
                     /// </summary>
                     [NameInMap("Records")]
                     [Validation(Required=false)]
@@ -286,14 +285,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string IcpFilingStatus { get; set; }
 
                 /// <summary>
-                /// <para>The domain name migration information. This parameter is returned when a region switch occurs.</para>
+                /// <para>The domain migration information, which is exposed during region switching.</para>
                 /// </summary>
                 [NameInMap("Migration")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleDataMigration Migration { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleDataMigration : TeaModel {
                     /// <summary>
-                    /// <para>The migration status. Valid values: NOT_STARTED, IN_PROGRESS, and COMPLETED.</para>
+                    /// <para>The migration status. Valid values: NOT_STARTED, IN_PROGRESS, COMPLETED.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>IN_PROGRESS</para>
@@ -303,7 +302,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string MigrationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The complete status of the domain name before migration. The structure is the same as the current domain name DTO, allowing the frontend to reuse the rendering logic.</para>
+                    /// <para>The full domain status before migration. The structure is consistent with the current domain DTO, and the frontend can directly reuse the rendering logic.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;DomainName&quot;:&quot;<a href="http://www.example.com%22,%22DomainType%22:%22CUSTOM%22,%22DeployType%22:%22CDN%22%7D">www.example.com&quot;,&quot;DomainType&quot;:&quot;CUSTOM&quot;,&quot;DeployType&quot;:&quot;CDN&quot;}</a></para>
@@ -315,7 +314,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the website is currently offline. This status belongs to the application instance, and the value is the same for all domain names under the same instance.</para>
+                /// <para>Indicates whether the website is offline. This status belongs to the application instance, and the value is the same for all domain names under the same instance.</para>
                 /// </summary>
                 [NameInMap("Offline")]
                 [Validation(Required=false)]
@@ -332,7 +331,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OverallStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ownership information of the domain name.</para>
+                /// <para>The domain name ownership information.</para>
                 /// </summary>
                 [NameInMap("Ownership")]
                 [Validation(Required=false)]
@@ -349,7 +348,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Account { get; set; }
 
                     /// <summary>
-                    /// <para>The registrar type. Valid values: ALIYUN and OTHER.</para>
+                    /// <para>The registrar type. Valid values: ALIYUN, OTHER.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ROS</para>
@@ -371,7 +370,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>The qualification information of the domain name.</para>
+                /// <para>The domain qualification information.</para>
                 /// </summary>
                 [NameInMap("Qualification")]
                 [Validation(Required=false)]
@@ -381,7 +380,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The ICP entity filing number.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Zhe ICP No. 123456</para>
+                    /// <para>浙ICP备123456号</para>
                     /// </summary>
                     [NameInMap("IcpRecordNumber")]
                     [Validation(Required=false)]
@@ -391,7 +390,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The ICP website filing number.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Zhe ICP No. 123456-1</para>
+                    /// <para>浙ICP备123456号-1</para>
                     /// </summary>
                     [NameInMap("IcpSiteRecordNumber")]
                     [Validation(Required=false)]
@@ -401,7 +400,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The public security filing number.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Public Security Filing No. 11040102700048</para>
+                    /// <para>京公网安备11040102700048号</para>
                     /// </summary>
                     [NameInMap("PoliceRecordNumber")]
                     [Validation(Required=false)]
@@ -495,7 +494,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public ListAppInstanceDomainsResponseBodyModuleDataVerification Verification { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleDataVerification : TeaModel {
                     /// <summary>
-                    /// <para>The guide for DNS records to be configured by the user.</para>
+                    /// <para>The guide for DNS records that users need to configure.</para>
                     /// </summary>
                     [NameInMap("DnsRecord")]
                     [Validation(Required=false)]
@@ -554,7 +553,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string VerificationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The ownership verification status.</para>
+                    /// <para>The ownership verification status code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>NoAliyunServiceRoleForWebsiteBuildPublishAuth</para>
@@ -612,7 +611,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CertificateType { get; set; }
 
                     /// <summary>
-                    /// <para>The expiration date of the certificate. The date is in ISO 8601 format and the UTC (Z) time zone.</para>
+                    /// <para>The expiration date of the certificate. The time is in ISO 8601 format in UTC (Z).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-01-15T02:04:00Z</para>
@@ -624,7 +623,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time of the instance. Format: yyyy-MM-dd HH:mm:ss. This parameter is required.</para>
+                /// <para>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1741572465000</para>
@@ -634,7 +633,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The network hosting type: CDN / INDEP_DEPLOY / ESA_SAAS.</para>
+                /// <para>The network hosting type. Valid values: CDN, INDEP_DEPLOY, ESA_SAAS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CDN</para>
@@ -644,38 +643,38 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DeployType { get; set; }
 
                 /// <summary>
-                /// <para>The DNS conflict information. This parameter is returned when resolveStatus is DNS_CONFLICT.</para>
+                /// <para>The DNS conflict information. This field has a value when resolveStatus is DNS_CONFLICT.</para>
                 /// </summary>
                 [NameInMap("DnsConflict")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleNextDnsConflict DnsConflict { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleNextDnsConflict : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether automatic override is supported. Valid values: true (the domain name belongs to the current Alibaba Cloud account) and false (the domain name belongs to another account).</para>
+                    /// <para>Specifies whether automatic override is supported. Valid values: true: Supported for the current Alibaba Cloud account. false: Not supported for other accounts.</para>
                     /// </summary>
                     [NameInMap("CanAutoResolve")]
                     [Validation(Required=false)]
                     public bool? CanAutoResolve { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether a conflict exists.</para>
+                    /// <para>Specifies whether a conflict exists.</para>
                     /// </summary>
                     [NameInMap("HasConflict")]
                     [Validation(Required=false)]
                     public bool? HasConflict { get; set; }
 
                     /// <summary>
-                    /// <para>The user-facing prompt message. The message varies based on the scenario.</para>
+                    /// <para>The user-facing prompt message. Different guidance text is generated based on the scenario.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The domain name <a href="http://www.example.com">www.example.com</a> has a conflicting DNS record (A 192.0.2.1). Delete the conflicting record at your DNS provider and try again</para>
+                    /// <para>The domain name <a href="http://www.example.com">www.example.com</a> has a conflicting DNS record (A 192.0.2.1). Delete the conflicting record from your DNS provider and try again</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// <para>The list of conflicting DNS records.</para>
+                    /// <para>The list of conflicting DNS records. This reuses the existing AppDomainDnsRecordDTO.</para>
                     /// </summary>
                     [NameInMap("Records")]
                     [Validation(Required=false)]
@@ -726,7 +725,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// <para>The domain name management type: CUSTOM / PLATFORM_PREFIX.</para>
+                /// <para>The domain management type. Valid values: CUSTOM, PLATFORM_PREFIX.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CUSTOM</para>
@@ -746,14 +745,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string IcpFilingStatus { get; set; }
 
                 /// <summary>
-                /// <para>The domain name migration information. This parameter is returned when a region switch occurs.</para>
+                /// <para>The domain migration information, which is exposed during region switching.</para>
                 /// </summary>
                 [NameInMap("Migration")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleNextMigration Migration { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleNextMigration : TeaModel {
                     /// <summary>
-                    /// <para>The migration status. Valid values: NOT_STARTED, IN_PROGRESS, and COMPLETED.</para>
+                    /// <para>The migration status. Valid values: NOT_STARTED, IN_PROGRESS, COMPLETED.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>IN_PROGRESS</para>
@@ -763,7 +762,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string MigrationStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The complete status of the domain name before migration. The structure is the same as the current domain name DTO, allowing the frontend to reuse the rendering logic.</para>
+                    /// <para>The full domain status before migration. The structure is consistent with the current domain DTO, and the frontend can directly reuse the rendering logic.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;DomainName&quot;:&quot;<a href="http://www.example.com%22,%22DomainType%22:%22CUSTOM%22,%22DeployType%22:%22CDN%22%7D">www.example.com&quot;,&quot;DomainType&quot;:&quot;CUSTOM&quot;,&quot;DeployType&quot;:&quot;CDN&quot;}</a></para>
@@ -775,7 +774,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the website is currently offline. This status belongs to the application instance, and the value is the same for all domain names under the same instance.</para>
+                /// <para>Indicates whether the website is offline. This status belongs to the application instance, and the value is the same for all domain names under the same instance.</para>
                 /// </summary>
                 [NameInMap("Offline")]
                 [Validation(Required=false)]
@@ -792,7 +791,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OverallStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ownership information of the domain name.</para>
+                /// <para>The domain name ownership information.</para>
                 /// </summary>
                 [NameInMap("Ownership")]
                 [Validation(Required=false)]
@@ -809,7 +808,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Account { get; set; }
 
                     /// <summary>
-                    /// <para>The registrar type. Valid values: ALIYUN and OTHER.</para>
+                    /// <para>The registrar type. Valid values: ALIYUN, OTHER.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pai</para>
@@ -819,7 +818,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Provider { get; set; }
 
                     /// <summary>
-                    /// <para>The primary domain name.</para>
+                    /// <para>The root domain name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>example.com</para>
@@ -831,7 +830,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
-                /// <para>The qualification information of the domain name.</para>
+                /// <para>The domain qualification information.</para>
                 /// </summary>
                 [NameInMap("Qualification")]
                 [Validation(Required=false)]
@@ -841,7 +840,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The ICP entity filing number.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Zhe ICP No. 123456</para>
+                    /// <para>浙ICP备123456号</para>
                     /// </summary>
                     [NameInMap("IcpRecordNumber")]
                     [Validation(Required=false)]
@@ -851,7 +850,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The ICP website filing number.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Zhe ICP No. 123456-1</para>
+                    /// <para>浙ICP备123456号-1</para>
                     /// </summary>
                     [NameInMap("IcpSiteRecordNumber")]
                     [Validation(Required=false)]
@@ -861,7 +860,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The public security filing number.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Public Security Filing No. 11040102700048</para>
+                    /// <para>京公网安备11040102700048号</para>
                     /// </summary>
                     [NameInMap("PoliceRecordNumber")]
                     [Validation(Required=false)]
@@ -945,7 +944,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public ListAppInstanceDomainsResponseBodyModuleNextVerification Verification { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleNextVerification : TeaModel {
                     /// <summary>
-                    /// <para>The guide for DNS records to be configured by the user.</para>
+                    /// <para>The guide for DNS records that users need to configure.</para>
                     /// </summary>
                     [NameInMap("DnsRecord")]
                     [Validation(Required=false)]
@@ -1042,7 +1041,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
@@ -1071,7 +1070,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. If no next query is available, this value is empty.</para>
+        /// <para>The token used to start the next query. If no next query exists, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw+qdTi1EjVSWX/INJdYNw==</para>
@@ -1101,10 +1100,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System error</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

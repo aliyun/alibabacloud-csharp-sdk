@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>Filters the results by category.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;CateName\&quot;: u\&quot;\u57fa\u7840\u533b\u5b66\u7efc\u5408\&quot;, \&quot;CateId\&quot;: 1000675720, \&quot;Level\&quot;: 2, \&quot;Type\&quot;: \&quot;default\&quot;, \&quot;ParentId\&quot;: 1000675713}</para>
+        /// <para>{&quot;CateName&quot;: u&quot;\u57fa\u7840\u533b\u5b66\u7efc\u5408&quot;, &quot;CateId&quot;: 1000675720, &quot;Level&quot;: 2, &quot;Type&quot;: &quot;default&quot;, &quot;ParentId&quot;: 1000675713}</para>
         /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</para>
+        /// <para>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

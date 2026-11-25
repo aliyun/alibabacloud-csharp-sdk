@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialFileDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission check failure.</para>
+        /// <para>The details of the failed permission check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</para>
+        /// <para>The error code. If the request is successful, this parameter is not returned. If the request fails, this parameter is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;TotalPageNum\&quot;: 1, \&quot;ResultLimit\&quot;: False, \&quot;CurrentPageNum\&quot;: 0, \&quot;PageSize\&quot;: 0, \&quot;TotalItemNum\&quot;: 0}</para>
+        /// <para>{&quot;TotalPageNum&quot;: 1, &quot;ResultLimit&quot;: False, &quot;CurrentPageNum&quot;: 0, &quot;PageSize&quot;: 0, &quot;TotalItemNum&quot;: 0}</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]

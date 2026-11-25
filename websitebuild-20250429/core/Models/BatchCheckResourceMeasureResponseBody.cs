@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class BatchCheckResourceMeasureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reasons for access denial.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retries are allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the app.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>watermark</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? AllPassed { get; set; }
 
             /// <summary>
-            /// <para>The check results for each resource, where the key is the resourceCode.</para>
+            /// <para>The check results for each resource. The key is the resourceCode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;InspirationTokens&quot;:{&quot;Passed&quot;:true,&quot;ResourceCode&quot;:&quot;InspirationTokens&quot;}}</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The root error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether synchronous processing is used.</para>
+        /// <para>Specifies whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

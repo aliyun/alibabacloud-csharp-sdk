@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SetAppDomainCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow retries. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>false: Retries are not allowed.</description></item>
         /// <item><description>true: Retries are allowed.</description></item>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The dynamic message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=WIutxAQYbbwxX0aeKmdObduLnDg%3D</a></para>
+        /// <para><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&Signature=WIutxAQYbbwxX****mdObduLnDg%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/uoa11auyf2565k6/uoa11auyf2565k6.sql.zip?Expires=1730520371&amp;OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&amp;Signature=WIutxAQYbbwxX****mdObduLnDg%3D</a></para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The returned error parameters.</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public SetAppDomainCertificateResponseBodyModule Module { get; set; }
         public class SetAppDomainCertificateResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operation is successful.</para>
+            /// <para>Indicates whether the request is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request is processed synchronously.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

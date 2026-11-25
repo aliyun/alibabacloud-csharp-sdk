@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</para>
+        /// <para>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stg.mlp_finance_cap_refund_hi</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error code. This parameter is about to be deprecated.</para>
+        /// <para>The dynamic error code. This parameter will be deprecated soon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The placeholder in the dynamic error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxx</para>
+        /// <para>BizId</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The application module.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;StorageSize\&quot;: \&quot;3.29 MB\&quot;, \&quot;FileNum\&quot;: 30}</para>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed synchronously.</para>
+        /// <para>Indicates whether the operation is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

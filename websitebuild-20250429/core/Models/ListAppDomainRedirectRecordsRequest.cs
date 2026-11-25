@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no next query is available.</para>
+        /// <para>The token used to start the next query. If no more results are available, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yPkgBbQln0gmUnIZSGizGw==</para>

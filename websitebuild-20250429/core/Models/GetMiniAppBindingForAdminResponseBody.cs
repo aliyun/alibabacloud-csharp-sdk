@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The mini program ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxx</para>
+            /// <para>wx1111a1a111a1a111</para>
             /// </summary>
             [NameInMap("PlatformAppid")]
             [Validation(Required=false)]

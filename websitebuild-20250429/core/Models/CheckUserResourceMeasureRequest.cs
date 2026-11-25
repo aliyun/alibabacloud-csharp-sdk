@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckUserResourceMeasureRequest : TeaModel {
         /// <summary>
-        /// <para>The belong ID, such as the website ID or Alibaba Cloud user ID.</para>
+        /// <para>The owner ID, which can be a website ID or an Alibaba Cloud user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongId { get; set; }
 
         /// <summary>
-        /// <para>The belong ID type, such as siteId or uid.</para>
+        /// <para>The owner ID type, such as siteId or uid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The optional compatible total for APP_WORKSPACE. Valid values: 0 to 100000. If provided, it takes precedence over ResourceValue and does not repeatedly add the used quota. For new calls, only ResourceValue is required. This field is not used for APP/USER.</para>
+        /// <para>The desired total for APP_WORKSPACE. This is an optional compatible total with a range of 0 to 100,000. If provided, it takes precedence over ResourceValue and does not repeatedly add the used quota. For new calls, only ResourceValue is required. This field is not used for APP or USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>The order component information. If this field is empty, EspBizId and BizType cannot be empty.</para>
+        /// <para>The order component information in JSON format. If this parameter is left empty, EspBizId and BizType cannot be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;siteversion&quot;:&quot;test&quot;}</para>
@@ -80,7 +80,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
-        /// <para>The resource value. Default is empty. Required only for feature resources. A value of 0 indicates not supported, and 1 indicates supported.</para>
+        /// <para>The resource value. This parameter is left empty by default and is required only for feature resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Not supported.</description></item>
+        /// <item><description>1: Supported.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

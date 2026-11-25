@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the domain name redirect record.</para>
+        /// <para>The ID of the domain redirect record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>803858889404426240</para>

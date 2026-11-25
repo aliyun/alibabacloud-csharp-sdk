@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckResourceMeasureRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the owner, such as the website ID or Alibaba Cloud user ID.</para>
+        /// <para>The owner ID, which can be a website ID or an Alibaba Cloud user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The desired total for APP_WORKSPACE. Valid values: 0 to 100000. If this parameter is specified, it takes precedence over ResourceValue and is not added to the existing usage. For new calls, you only need to specify ResourceValue. This parameter is not used for APP or USER.</para>
+        /// <para>The optional compatible total for APP_WORKSPACE, with a range of 0 to 100000. When provided, it takes precedence over ResourceValue and does not repeatedly add the used amount. New calls only require ResourceValue. This field is not used for APP or USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>The order component parameters. If this parameter is empty, EspBizId and BizType cannot be empty.</para>
+        /// <para>The order component information. If this parameter is empty, EspBizId and BizType must not be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;siteversion&quot;:&quot;test&quot;}</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
-        /// <para>The resource value. This parameter is empty by default and is required only for feature resources. Valid values: 0: Not supported. 1: Supported.</para>
+        /// <para>The resource value. This parameter is empty by default and is required only for feature resources. A value of 0 indicates not supported, and 1 indicates supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

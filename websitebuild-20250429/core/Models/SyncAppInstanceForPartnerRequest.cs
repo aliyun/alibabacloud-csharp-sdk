@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public SyncAppInstanceForPartnerRequestAppInstance AppInstance { get; set; }
         public class SyncAppInstanceForPartnerRequestAppInstance : TeaModel {
             /// <summary>
-            /// <para>The application type. Set this parameter to WEBSITE.</para>
+            /// <para>The application type. Valid value: WEBSITE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WEBSITE</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtDelete { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was published. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was published, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01 00:00:00</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The website configuration information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Website configuration information</para>
+            /// <para>{&quot;DeployArea&quot;:&quot;ChineseMainland&quot;}</para>
             /// </summary>
             [NameInMap("Profile")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteHost { get; set; }
 
             /// <summary>
-            /// <para>The website SiteID.</para>
+            /// <para>The site ID of the website.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31104757</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Slug { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried. Specify the time in the ISO 8601 standard in the UTC (Z) time zone.</para>
+            /// <para>The start time of the query. If you do not specify the start and end times, all historical deployment records of the instance are queried. Specify the time in the ISO 8601 standard in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-15T16:00:00Z</para>
@@ -218,11 +218,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <item><description>WaitResource: Waiting for resources.</description></item>
             /// <item><description>Failure: Execution failed.</description></item>
             /// <item><description>Success: Execution succeeded.</description></item>
-            /// <item><description>Checking: Submitted for data quality check.</description></item>
+            /// <item><description>Checking: Dispatched for data quality check.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Phase\&quot;: \&quot;Running\&quot;, \&quot;SlotNum\&quot;: 1, \&quot;UsedCapacity\&quot;: \&quot;500.0Gi\&quot;}</para>
+            /// <para>{&quot;Phase&quot;: &quot;Running&quot;, &quot;SlotNum&quot;: 1, &quot;UsedCapacity&quot;: &quot;500.0Gi&quot;}</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceBizId { get; set; }
 
         /// <summary>
-        /// <para>The source. Set this parameter to MARKET_CLOUD_DREAM.</para>
+        /// <para>The source type. Valid value: MARKET_CLOUD_DREAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>

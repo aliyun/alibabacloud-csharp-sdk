@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per query.</para>
+        /// <para>The maximum number of entries to return in each query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC, DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DOWNGRADE</para>

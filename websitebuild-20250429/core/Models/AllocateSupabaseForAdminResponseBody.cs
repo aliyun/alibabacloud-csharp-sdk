@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AllocateSupabaseForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission check failure.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -134,10 +134,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The extra information.</para>
+            /// <para>The additional information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</para>
+            /// <para>{&quot;appId&quot;:&quot;APP_NTJAK8P11SNZDJ3M6BWC&quot;}</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
@@ -164,10 +164,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateStatus { get; set; }
 
             /// <summary>
-            /// <para>The deletion flag.</para>
+            /// <para>Indicates whether the instance is deleted.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("IsDeleted")]
             [Validation(Required=false)]
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RdsDatabasePassword { get; set; }
 
             /// <summary>
-            /// <para>The read-only business schema name parsed by the Builder trusted binding. This name cannot be used as input for tenant switching.</para>
+            /// <para>The read-only business schema name parsed by the Builder trusted binding. This parameter cannot be used as the input for switching tenants.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant_00000000-0000-4000-8000-000000000001_schema</para>
@@ -204,10 +204,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ServiceKey { get; set; }
 
             /// <summary>
-            /// <para>The status. Valid values: 0 (Paused) and 1 (Running).</para>
+            /// <para>The instance status. Valid values: 0: Paused. 1: Running.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>NORMAL</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabasePublicIp { get; set; }
 
             /// <summary>
-            /// <para>The public URL of Supabase.</para>
+            /// <para>The public URL of the Supabase instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The read-only tenant mode: schema indicates the legacy Builder pool, and db or agenticdb indicates the new platform. The history record can be empty.</para>
+            /// <para>The read-only tenant mode. A value of schema indicates the legacy Builder pool, and a value of db or agenticdb indicates the new platform. Historical records can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>schema</para>

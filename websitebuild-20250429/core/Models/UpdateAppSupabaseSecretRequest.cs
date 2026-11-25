@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The secret key.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>EXAMPLE_API_KEY</para>
         /// </summary>
         [NameInMap("SecretKey")]
         [Validation(Required=false)]

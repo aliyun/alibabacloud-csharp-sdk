@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -70,8 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -101,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The configuration form in React JSON Schema format.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;label&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Display name&quot;}}}</para>
             /// </summary>
             [NameInMap("ConfigItems")]
             [Validation(Required=false)]
@@ -118,29 +117,28 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to display the image. Valid values:</para>
+            /// <para>Specifies whether the plugin is displayed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b> (None): Not displayed.</description></item>
-            /// <item><description><b>1</b> (Always): Always displayed.</description></item>
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>always</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Display")]
             [Validation(Required=false)]
             public int? Display { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable scheduled delivery of resource snapshots.</para>
-            /// <para>Valid values:</para>
+            /// <para>Specifies whether the plugin is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Disabled.</description></item>
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>True</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
@@ -168,7 +166,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The update time in ISO 8601 format in the UTC time zone.</para>
+            /// <para>The modification time in ISO 8601 format in the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -209,10 +207,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the item is deleted. Valid values: 0 (no) and 1 (yes).</para>
+            /// <para>Specifies whether the plugin is deleted. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("IsDeleted")]
             [Validation(Required=false)]
@@ -222,7 +224,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The name of the plugin.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Filename</para>
+            /// <para>File name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -242,7 +244,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The category tags.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;Key\&quot;: \&quot;kubernetes.io/cluster-id\&quot;, \&quot;Value\&quot;: \&quot;cc67198b13db948c9848599654da5586e\&quot;}, {\&quot;Key\&quot;: \&quot;created-by\&quot;, \&quot;Value\&quot;: \&quot;alibabacloud-imagecache-controller\&quot;}]</para>
+            /// <para>[{&quot;Key&quot;: &quot;kubernetes.io/cluster-id&quot;, &quot;Value&quot;: &quot;cc67198b13db948c9848599654da5586e&quot;}, {&quot;Key&quot;: &quot;created-by&quot;, &quot;Value&quot;: &quot;alibabacloud-imagecache-controller&quot;}]</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -251,7 +253,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no more results are available.</para>
+        /// <para>The token used to start the next query. If no next query is available, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>

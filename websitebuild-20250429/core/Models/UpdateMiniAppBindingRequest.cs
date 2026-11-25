@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The configuration key.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>SERVER_DOMAIN</para>
         /// </summary>
         [NameInMap("SettingKey")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The configuration value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>{&quot;requestDomains&quot;:[{&quot;domain&quot;:&quot;<a href="https://api.example.com%22%7D%5D,%22wsRequestDomains%22:%5B%5D,%22uploadDomains%22:%5B%5D,%22downloadDomains%22:%5B%5D,%22udpDomains%22:%5B%5D,%22tcpDomains%22:%5B%5D%7D">https://api.example.com&quot;}],&quot;wsRequestDomains&quot;:[],&quot;uploadDomains&quot;:[],&quot;downloadDomains&quot;:[],&quot;udpDomains&quot;:[],&quot;tcpDomains&quot;:[]}</a></para>
         /// </summary>
         [NameInMap("SettingValue")]
         [Validation(Required=false)]

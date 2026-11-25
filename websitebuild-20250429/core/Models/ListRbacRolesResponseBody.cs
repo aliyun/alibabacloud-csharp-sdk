@@ -60,14 +60,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results returned per query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -101,7 +102,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<ListRbacRolesResponseBodyModuleData> Data { get; set; }
             public class ListRbacRolesResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The creation date in ISO 8601 format in the UTC time zone.</para>
+                /// <para>The creation date. The time is in ISO 8601 format in the UTC time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-28T17:59:55Z</para>
@@ -123,7 +124,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <summary>
                 /// <para>Specifies whether the report is the default report. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Not the default report.</description></item>
+                /// <item><description><b>0</b>: Non-default report.</description></item>
                 /// <item><description><b>1</b>: Default report.</description></item>
                 /// </list>
                 /// 
@@ -195,7 +196,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the private gateway is the default one.</para>
+                /// <para>Specifies whether it is the default private gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -219,7 +220,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>label-03\&quot;&amp;$(curl D93PCxNZ.popscan.xaliyun.com)%3B</para>
+                /// <para>label-03&quot;&amp;$(curl D93PCxNZ.popscan.xaliyun.com)%3B</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]
@@ -238,7 +239,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether a next page exists.</para>
+            /// <para>Indicates whether a next page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -258,7 +259,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether a previous page exists.</para>
+            /// <para>Indicates whether a previous page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -268,7 +269,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -300,7 +301,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. If there is no next query, this parameter is empty.</para>
+        /// <para>The token used to start the next query. This parameter is empty if no subsequent query is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>

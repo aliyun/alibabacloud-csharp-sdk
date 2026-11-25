@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the app.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not used and can be ignored.</para>
+        /// <para>The dynamic code. This field is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the update was successful.</para>
+        /// <para>Indicates whether the modification was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed synchronously.</para>
+        /// <para>Specifies whether the processing is synchronous.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

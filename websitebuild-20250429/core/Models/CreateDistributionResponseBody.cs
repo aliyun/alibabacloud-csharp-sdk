@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateDistributionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed cause of access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:</para>
+        /// <para>Specifies whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>watermark</para>
@@ -98,17 +98,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BatchId { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in millisecond timestamp.</para>
+            /// <para>The creation time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-11-03 02:05:01</para>
+            /// <para>1767225600000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The list of channel drafts within the batch.</para>
+            /// <para>The list of channel drafts in the batch.</para>
             /// </summary>
             [NameInMap("Drafts")]
             [Validation(Required=false)]
@@ -118,17 +118,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The AI adaptation status. Valid values: NONE, ADAPTING, DONE, and FAILED.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>DONE</para>
                 /// </summary>
                 [NameInMap("AdaptStatus")]
                 [Validation(Required=false)]
                 public string AdaptStatus { get; set; }
 
                 /// <summary>
-                /// <para>The channel-adapted content body.</para>
+                /// <para>The channel-adapted content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>Introduces the main features and usage of the website</para>
                 /// </summary>
                 [NameInMap("AdaptedContent")]
                 [Validation(Required=false)]
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The channel-adapted title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>Website features and user guide</para>
                 /// </summary>
                 [NameInMap("AdaptedTitle")]
                 [Validation(Required=false)]
                 public string AdaptedTitle { get; set; }
 
                 /// <summary>
-                /// <para>The channel enumeration value.</para>
+                /// <para>The channel enumeration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WECHAT</para>
@@ -155,10 +155,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>The publishing account snapshot. For overseas channels, this is the OWLAIS socialAccountNo.</para>
+                /// <para>The snapshot of the publishing account. For overseas channels, this is the OWLAIS socialAccountNo.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>social-account-demo-001</para>
                 /// </summary>
                 [NameInMap("ChannelAccount")]
                 [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The display name of the publishing account.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>Sample publishing account</para>
                 /// </summary>
                 [NameInMap("ChannelAccountName")]
                 [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The file ID in the material center.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx</para>
+                    /// <para>material-file-demo-001</para>
                     /// </summary>
                     [NameInMap("MaterialFileId")]
                     [Validation(Required=false)]
@@ -215,17 +215,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     /// <para>The CDN URL of the image.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para><a href="http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3%5C%5C%22%5C%5C%22%60curl">http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3\\&quot;\\&quot;`curl</a> YFLd1vS4.popscan.xaliyun.com`\&quot;\&quot;</para>
+                    /// <para><a href="http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3%5C%22%5C%22%60curl">http://another-bucket.oss-cn-hangzhou.aliyuncs.com/path/to/file3\&quot;\&quot;`curl</a> YFLd1vS4.popscan.xaliyun.com`&quot;&quot;</para>
                     /// </summary>
                     [NameInMap("OssUrl")]
                     [Validation(Required=false)]
                     public string OssUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The sort order number.</para>
+                    /// <para>The sort order.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Desc</para>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("SortOrder")]
                     [Validation(Required=false)]
@@ -264,30 +264,30 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ExternalUrl { get; set; }
 
                 /// <summary>
-                /// <para>The failure reason.</para>
+                /// <para>The reason for the failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>Publishing failed. Try again later</para>
                 /// </summary>
                 [NameInMap("FailReason")]
                 [Validation(Required=false)]
                 public string FailReason { get; set; }
 
                 /// <summary>
-                /// <para>The channel-specific publish configuration in JSON format.</para>
+                /// <para>The channel-specific publishing fields in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>{}</para>
                 /// </summary>
                 [NameInMap("PublishConfig")]
                 [Validation(Required=false)]
                 public string PublishConfig { get; set; }
 
                 /// <summary>
-                /// <para>The publish time, in millisecond timestamp.</para>
+                /// <para>The publish time, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>1767225600000</para>
                 /// </summary>
                 [NameInMap("PublishedAt")]
                 [Validation(Required=false)]
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System exception</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed synchronously.</para>
+        /// <para>Specifies whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

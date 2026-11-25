@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values: ASC, DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <item><description>Organization administrator (preset role): 111111111</description></item>
         /// <item><description>Permission management administrator (preset role): 111111112</description></item>
         /// <item><description>Regular user (preset role): 111111113</description></item>
-        /// <item><description>Custom role: the role ID of the custom role</description></item>
+        /// <item><description>Custom role: the role ID corresponding to the custom role.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

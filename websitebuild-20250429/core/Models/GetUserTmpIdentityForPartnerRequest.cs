@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetUserTmpIdentityForPartnerRequest : TeaModel {
         /// <summary>
-        /// <para>The purpose of the authorization.</para>
+        /// <para>The authorization purpose.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BindDomain</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AuthPurpose { get; set; }
 
         /// <summary>
-        /// <para>The business ID of the customer.</para>
+        /// <para>The customer business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether fuzzy match is supported for port numbers. Set this parameter to <b>1</b> to enable fuzzy match. Other values or an empty value indicate that fuzzy match is not supported.</para>
+        /// <para>Specifies whether fuzzy match is supported for port numbers. To enable fuzzy match, set this parameter to <b>1</b>. Any other value or an empty value indicates that fuzzy match is not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</para>
+        /// <para>{&quot;deliveryNodeName&quot;:&quot;Visual Design Confirmation&quot;,&quot;deliveryNodeStatus&quot;:&quot;Reject&quot;,&quot;deliveryOperatorRole&quot;:&quot;Customer&quot;}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <summary>
         /// <para>The service-linked role.</para>
         /// <remarks>
-        /// <para>For information about the service-linked roles supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</para>
+        /// <para>For more information about the service-linked roles supported by RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

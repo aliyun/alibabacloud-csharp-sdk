@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The list of conversation messages in JSON array format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\r\n  {\r\n    \&quot;role\&quot;: \&quot;user\&quot;,\r\n    \&quot;content\&quot;: \&quot;Prove that there are only five platonic solids, namely the tetrahedron, octahedron, icosahedron, cube, and dodecahedron.\&quot;\r\n  }\r\n]</para>
+        /// <para>[\r\n  {\r\n    &quot;role&quot;: &quot;user&quot;,\r\n    &quot;content&quot;: &quot;Prove that there are only five platonic solids, namely the tetrahedron, octahedron, icosahedron, cube, and dodecahedron.&quot;\r\n  }\r\n]</para>
         /// </summary>
         [NameInMap("Messages")]
         [Validation(Required=false)]

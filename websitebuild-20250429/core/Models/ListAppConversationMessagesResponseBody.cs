@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppConversationMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Specifies whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,15 +63,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The invalid parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -118,10 +117,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ChatStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data API that is called.</para>
+            /// <para>The ID of the called data API operation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;DeviceName\&quot;: u\&quot;\u667a\u80fd\u63d2\u5ea716A\&quot;, \&quot;BlidMac\&quot;: \&quot;18bc5a53351c\&quot;, \&quot;DeviceModel\&quot;: \&quot;ABSP21-16M\&quot;, \&quot;DeviceCategory\&quot;: u\&quot;\u63d2\u5ea7\&quot;, \&quot;DeviceManufacturer\&quot;: \&quot;\&quot;, \&quot;DeviceType\&quot;: 140}</para>
+            /// <para>{&quot;DeviceName&quot;: u&quot;\u667a\u80fd\u63d2\u5ea716A&quot;, &quot;BlidMac&quot;: &quot;18bc5a53351c&quot;, &quot;DeviceModel&quot;: &quot;ABSP21-16M&quot;, &quot;DeviceCategory&quot;: u&quot;\u63d2\u5ea7&quot;, &quot;DeviceManufacturer&quot;: &quot;&quot;, &quot;DeviceType&quot;: 140}</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -158,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-28T02:25:41Z</para>
@@ -178,17 +177,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// <para>The business extension metadata (in Map format, must be a JSON string).</para>
+            /// <para>The business extension metadata in Map format. The value must be a JSON string.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</para>
+            /// <para>{&quot;appId&quot;:&quot;WS20260507200853000001&quot;,&quot;inputTokens&quot;:1411,&quot;outputTokens&quot;:51}</para>
             /// </summary>
             [NameInMap("MetaData")]
             [Validation(Required=false)]
             public string MetaData { get; set; }
 
             /// <summary>
-            /// <para><b>[Deprecated]</b> The region sequence number. This parameter is deprecated.</para>
+            /// <para><b>[Deprecated]</b> The region serial number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -200,17 +199,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>The role of the conversation participant. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>user: User.</para>
+            /// <item><description><para>user: The user.</para>
             /// </description></item>
-            /// <item><description><para>assistant: Assistant.</para>
+            /// <item><description><para>assistant: The assistant.</para>
             /// </description></item>
-            /// <item><description><para>system: System.</para>
+            /// <item><description><para>system: The system.</para>
             /// </description></item>
-            /// <item><description><para>function: Function.</para>
+            /// <item><description><para>function: The function.</para>
             /// </description></item>
-            /// <item><description><para>plugin: Plugin.</para>
+            /// <item><description><para>plugin: The plug-in.</para>
             /// </description></item>
-            /// <item><description><para>tool: Tool.</para>
+            /// <item><description><para>tool: The tool.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -232,7 +231,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SectionId { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -254,7 +253,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results are available.</para>
+        /// <para>The token used to start the next query. This parameter is empty if there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</para>
@@ -287,14 +286,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System exception.</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

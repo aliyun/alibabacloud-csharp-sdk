@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceBizId { get; set; }
 
         /// <summary>
-        /// <para>The source. Set this parameter to MARKET_CLOUD_DREAM.</para>
+        /// <para>The source type. Valid value: MARKET_CLOUD_DREAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>

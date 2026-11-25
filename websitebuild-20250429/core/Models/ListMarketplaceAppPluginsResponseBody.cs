@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;Status\&quot;: 0, \&quot;Name\&quot;: u\&quot;\u81ea\u52a8\u521b\u5efacom.alibaba.cloudrobot.apitest.resource.AbstractResource1773800213419\&quot;, \&quot;BizCode\&quot;: \&quot;\&quot;, \&quot;CategoryId\&quot;: 30000941833, \&quot;ParentCategoryId\&quot;: 30000941832}</para>
+                /// <para>{&quot;Status&quot;: 0, &quot;Name&quot;: u&quot;\u81ea\u52a8\u521b\u5efacom.alibaba.cloudrobot.apitest.resource.AbstractResource1773800213419&quot;, &quot;BizCode&quot;: &quot;&quot;, &quot;CategoryId&quot;: 30000941833, &quot;ParentCategoryId&quot;: 30000941832}</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]

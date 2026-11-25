@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DraftId { get; set; }
 
         /// <summary>
-        /// <para>The user personalization requirement in free text. This parameter is optional.</para>
+        /// <para>The custom requirement specified by the user. This parameter is optional and accepts free text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>Highlight the main features and keep the title concise and clear</para>
         /// </summary>
         [NameInMap("UserRequirement")]
         [Validation(Required=false)]

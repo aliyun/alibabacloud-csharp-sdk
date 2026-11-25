@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;URI\&quot;: \&quot;oss://imm-test-co-cn-chengdu/zqh/input/Image/indexImage/nn1.jpg\&quot;, \&quot;LatLong\&quot;:\&quot;+39.998800,+116.480900\&quot;}</para>
+        /// <para>{&quot;URI&quot;: &quot;oss://imm-test-co-cn-chengdu/zqh/input/Image/indexImage/nn1.jpg&quot;, &quot;LatLong&quot;:&quot;+39.998800,+116.480900&quot;}</para>
         /// </summary>
         [NameInMap("File")]
         [Validation(Required=false)]

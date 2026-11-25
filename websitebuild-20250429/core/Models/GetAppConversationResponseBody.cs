@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
         /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time is in the ISO 8601 format and the UTC time zone (Z).</para>
+            /// <para>The update time. The value is in ISO 8601 format and the time zone is UTC (Z).</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The extended information in JSON string format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</para>
+            /// <para>{&quot;appId&quot;:&quot;WS20260507200853000001&quot;,&quot;inputTokens&quot;:1411,&quot;outputTokens&quot;:51}</para>
             /// </summary>
             [NameInMap("MetaData")]
             [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SectionId { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The current viewpoint, which is equivalent to the news title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Feel Like Makin\&quot; Love</para>
+            /// <para>Feel Like Makin&quot; Love</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

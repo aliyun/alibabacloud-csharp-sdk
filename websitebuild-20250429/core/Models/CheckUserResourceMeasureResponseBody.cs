@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckUserResourceMeasureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name, which is used to query the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The returned error arguments.</para>
+        /// <para>The returned error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public CheckUserResourceMeasureResponseBodyModule Module { get; set; }
         public class CheckUserResourceMeasureResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Returned only for APP_WORKSPACE: the target total for this check, which is the used quota in the saved configuration plus ResourceValue. If the compatible DesiredTotal is provided, this total is used directly. The used quota for questions is the sum of common and word-of-mouth questions in the saved configuration. The used quota for competitors is the number of competitors. This field is empty for APP and USER checks.</para>
+            /// <para>The target total for the current check. This parameter is returned only for APP_WORKSPACE. It is the sum of the used quota in the saved configuration and ResourceValue. If the compatible DesiredTotal is provided, this total is used directly. The used quota for questions is the sum of common and word-of-mouth questions in the saved configuration, and the used quota for competitors is the number of competitors. This parameter is empty for APP or USER checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? DesiredTotal { get; set; }
 
             /// <summary>
-            /// <para>The error code when the check fails. This field is null when the check passes.</para>
+            /// <para>The error code returned when the check fails. This parameter is null when the check is passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message when the check fails. This field is null when the check passes.</para>
+            /// <para>The error message returned when the check fails. This parameter is null when the check is passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stream push failed</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>Returned only for APP_WORKSPACE quantity dry runs: the maximum number of questions or competitors allowed by the current commodity edition, not the remaining quota. This field is empty for APP and USER checks or when the edition benefits cannot be determined.</para>
+            /// <para>The maximum number of questions or competitors allowed by the current commodity version. This parameter is returned only for APP_WORKSPACE quantity dry runs and does not represent the remaining quota. This parameter is empty for APP or USER checks, or when the version benefits cannot be determined.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ResourceCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a purchasable higher edition exists that can accommodate the DesiredTotal. This field is true only when the current edition capacity is insufficient and a higher edition meets the requirements. Otherwise, it is false. This field may be empty for APP and USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</para>
+            /// <para>Indicates whether a purchasable higher version exists that can accommodate the DesiredTotal. This parameter is true only when the current version capacity is insufficient and a higher version meets the requirements. Otherwise, it is false. This parameter may be empty for APP or USER checks. This field does not indicate that an upgrade has been performed or an upgrade order has been created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The root error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The root error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System exception</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The backup parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

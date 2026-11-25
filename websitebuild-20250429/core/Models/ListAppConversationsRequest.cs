@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppConversationsRequest : TeaModel {
         /// <summary>
-        /// <para>The bot ID.</para>
+        /// <para>The ID of the bot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Zero2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BotId { get; set; }
 
         /// <summary>
-        /// <para>The end modification time in ISO 8601 format.</para>
+        /// <para>The end time for the modification in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20201212</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. If no next query is available, this parameter is empty.</para>
+        /// <para>The token used to start the next query. If there is no next query, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The site ID.</para>
+        /// <para>The ID of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1168642640022064</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteId { get; set; }
 
         /// <summary>
-        /// <para>The start modification time in ISO 8601 format.</para>
+        /// <para>The start time for the modification in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20200101</para>

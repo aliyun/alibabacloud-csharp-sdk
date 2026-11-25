@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting.</para>
+        /// <para>The sort field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC, DESC.</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>

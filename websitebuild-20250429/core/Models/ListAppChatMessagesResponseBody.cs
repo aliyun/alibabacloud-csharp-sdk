@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppChatMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,13 +50,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>DtsJobId</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per query. Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<ListAppChatMessagesResponseBodyModule> Module { get; set; }
         public class ListAppChatMessagesResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The bot ID.</para>
+            /// <para>The chatbot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zero2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BotId { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the utterance.</para>
+            /// <para>The unique ID of the sentence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chat-xrz3etcl2bsygwlx8g</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The ID of the called data API.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;code\&quot;: \&quot;200\&quot;, \&quot;success\&quot;: True, \&quot;content\&quot;: True, \&quot;requestId\&quot;: \&quot;028993DE-097E-5F4E-AC48-64A2D5ED5F30\&quot;, \&quot;businessError\&quot;: False, \&quot;message\&quot;: \&quot;success\&quot;, \&quot;httpStatusCode\&quot;: 200}</para>
+            /// <para>{&quot;code&quot;: &quot;200&quot;, &quot;success&quot;: True, &quot;content&quot;: True, &quot;requestId&quot;: &quot;028993DE-097E-5F4E-AC48-64A2D5ED5F30&quot;, &quot;businessError&quot;: False, &quot;message&quot;: &quot;success&quot;, &quot;httpStatusCode&quot;: 200}</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is in ISO 8601 format and the UTC time zone (Z).</para>
+            /// <para>The update time in ISO 8601 format in the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The business extension metadata. The value must be a JSON string in map format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;appId\&quot;:\&quot;WS20260506101154000001\&quot;,\&quot;inputTokens\&quot;:1148,\&quot;outputTokens\&quot;:60}</para>
+            /// <para>{&quot;appId&quot;:&quot;WS20260506101154000001&quot;,&quot;inputTokens&quot;:1148,&quot;outputTokens&quot;:60}</para>
             /// </summary>
             [NameInMap("MetaData")]
             [Validation(Required=false)]
             public string MetaData { get; set; }
 
             /// <summary>
-            /// <para><b>[Deprecated]</b> The region sequence number.</para>
+            /// <para><b>[Deprecated]</b> The region sequence number. This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -201,17 +201,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>The role of the conversation participant. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>user: User</para>
+            /// <item><description><para>user: user</para>
             /// </description></item>
-            /// <item><description><para>assistant: Assistant</para>
+            /// <item><description><para>assistant: assistant</para>
             /// </description></item>
-            /// <item><description><para>system: System</para>
+            /// <item><description><para>system: system</para>
             /// </description></item>
-            /// <item><description><para>function: Function</para>
+            /// <item><description><para>function: function</para>
             /// </description></item>
-            /// <item><description><para>plugin: Plug-in</para>
+            /// <item><description><para>plugin: plug-in</para>
             /// </description></item>
-            /// <item><description><para>tool: Tool</para>
+            /// <item><description><para>tool: tool</para>
             /// </description></item>
             /// </list>
             /// 
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SectionId { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if there is no next query.</para>
+        /// <para>The token used to start the next query. This parameter is empty if no subsequent query is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPluginVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
+        /// <para>The dynamic message. This parameter is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The version changelog.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>x x x</para>
+                /// <para>Fixed the plug-in configuration reading issue</para>
                 /// </summary>
                 [NameInMap("Changelog")]
                 [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The commit ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>0123456789abcdef0123456789abcdef01234567</para>
                 /// </summary>
                 [NameInMap("CommitSha")]
                 [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The application instance version.</para>
+                /// <para>The version of the application instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>V2.0</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The version changelog.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>Fixed the plug-in configuration reading issue</para>
                 /// </summary>
                 [NameInMap("Changelog")]
                 [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The commit ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>0123456789abcdef0123456789abcdef01234567</para>
                 /// </summary>
                 [NameInMap("CommitSha")]
                 [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The application instance version.</para>
+                /// <para>The version of the application instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>V2.0</para>

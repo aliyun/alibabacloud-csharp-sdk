@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The deployment ticket ID.</para>
+        /// <para>The deployment order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4998717</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("DeployOrderId")]
         [Validation(Required=false)]
         public long? DeployOrderId { get; set; }
+
+        [NameInMap("PublishOrderId")]
+        [Validation(Required=false)]
+        public long? PublishOrderId { get; set; }
 
         /// <summary>
         /// <para>The website domain name.</para>

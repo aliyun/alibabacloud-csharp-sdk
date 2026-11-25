@@ -13,15 +13,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The ID of the business group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx</para>
+        /// <para>GROUP_1</para>
         /// </summary>
         [NameInMap("BizGroupId")]
         [Validation(Required=false)]
         public string BizGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return for a single request. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token used to start the next query. If no next query is available, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting.</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort type. Valid values: ASC and DESC.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>

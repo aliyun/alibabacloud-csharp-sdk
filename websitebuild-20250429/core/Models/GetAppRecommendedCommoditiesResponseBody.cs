@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter. If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message. If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -69,12 +69,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <summary>
         /// <para>The data table module. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ABTest: Experiment data table.</para>
-        /// </description></item>
-        /// <item><description><para>ExperimentTool: Experiment tool table.</para>
-        /// </description></item>
-        /// <item><description><para>DataDiagnosis: Data diagnosis.</para>
-        /// </description></item>
+        /// <item><description>ABTest: experiment data table.</description></item>
+        /// <item><description>ExperimentTool: experiment tool table.</description></item>
+        /// <item><description>DataDiagnosis: data diagnosis.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Module")]
@@ -82,14 +79,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public GetAppRecommendedCommoditiesResponseBodyModule Module { get; set; }
         public class GetAppRecommendedCommoditiesResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The list of marketing commodities.</para>
+            /// <para>The list of marketing products.</para>
             /// </summary>
             [NameInMap("Commodities")]
             [Validation(Required=false)]
             public List<GetAppRecommendedCommoditiesResponseBodyModuleCommodities> Commodities { get; set; }
             public class GetAppRecommendedCommoditiesResponseBodyModuleCommodities : TeaModel {
                 /// <summary>
-                /// <para>The click action type. Valid values: CONSULT, BUY, and AUTO.</para>
+                /// <para>The click action type. Valid values: CONSULT (add WeCom), BUY (purchase), and AUTO (automatic issuance).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CONSULT</para>
@@ -99,7 +96,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ActionType { get; set; }
 
                 /// <summary>
-                /// <para>The commodity code. This parameter applies to both resource plans and marketing commodities.</para>
+                /// <para>The commodity code. This parameter is applicable to both resource plans and marketing products.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -112,7 +109,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The display description of the recommendation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Add a WeCom consultant to receive inspiration points for free</para>
+                /// <para>Add a WeCom advisor to get inspiration points for free</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -122,14 +119,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The extended fields, such as unsupportedReason.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{&quot;unsupportedReason&quot;:&quot;当前实例不支持该商品。&quot;}</para>
+                /// <para>{&quot;unsupportedReason&quot;:&quot;The current instance does not support this product.&quot;}</para>
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Extend { get; set; }
 
                 /// <summary>
-                /// <para>The order type. Valid values: BUY and UPGRADE.</para>
+                /// <para>The order type. Valid values: BUY (purchase) and UPGRADE (upgrade).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DESC</para>
@@ -149,7 +146,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the marketing commodity. This parameter is returned only for new purchases.</para>
+                /// <para>The ID of the marketing product. This parameter is returned only for new purchases.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -159,7 +156,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PromotionCommodityId { get; set; }
 
                 /// <summary>
-                /// <para>The recommendation type. Valid values: COMMODITY and ACTIVITY.</para>
+                /// <para>The recommendation type. Valid values: COMMODITY (product recommendation) and ACTIVITY (promotional activity recommendation).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>COMMODITY</para>
@@ -179,7 +176,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string RedirectUrl { get; set; }
 
                 /// <summary>
-                /// <para>The status of the commodity.</para>
+                /// <para>The status of the product.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -192,7 +189,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The display title of the recommendation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Add a consultant as a friend to receive an extra 1,000 inspiration points</para>
+                /// <para>Add an advisor as a friend to receive an extra 1,000 inspiration points</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -233,7 +230,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed synchronously.</para>
+        /// <para>Specifies whether synchronous processing is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

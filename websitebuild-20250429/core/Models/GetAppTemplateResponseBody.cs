@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;operations\&quot;:[{\&quot;operator\&quot;:\&quot;replace\&quot;,\&quot;oldMetaName\&quot;:\&quot;character2_add\&quot;,\&quot;newMetaType\&quot;:\&quot;varchar(2)\&quot;}]}</para>
+            /// <para>{&quot;operations&quot;:[{&quot;operator&quot;:&quot;replace&quot;,&quot;oldMetaName&quot;:&quot;character2_add&quot;,&quot;newMetaType&quot;:&quot;varchar(2)&quot;}]}</para>
             /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]

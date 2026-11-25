@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>Indicates whether the move succeeded.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;TotalPageNum\&quot;: 1, \&quot;ResultLimit\&quot;: False, \&quot;CurrentPageNum\&quot;: 0, \&quot;PageSize\&quot;: 0, \&quot;TotalItemNum\&quot;: 0}</para>
+        /// <para>{&quot;TotalPageNum&quot;: 1, &quot;ResultLimit&quot;: False, &quot;CurrentPageNum&quot;: 0, &quot;PageSize&quot;: 0, &quot;TotalItemNum&quot;: 0}</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPluginResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reason why the access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message returned by the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message returned by the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the specified <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The configuration form in React JSON Schema format.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;label&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Display name&quot;}}}</para>
             /// </summary>
             [NameInMap("ConfigItems")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>The application description.</para>
+            /// <para>The description of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/bak-&gt;serverless.handler(2020091300200279)</para>
@@ -117,28 +117,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The image display mode. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>0</b> (None): The image is not displayed.</description></item>
-            /// <item><description><b>1</b> (Always): The image is always displayed.</description></item>
-            /// </list>
+            /// <para>Specifies whether the plug-in is displayed. Valid values: 0 (no) and 1 (yes).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>always</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Display")]
             [Validation(Required=false)]
             public int? Display { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether scheduled delivery of resource snapshots is enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Disabled.</description></item>
-            /// </list>
+            /// <para>Specifies whether the plug-in is enabled. Valid values: 0 (no) and 1 (yes).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>True</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
@@ -175,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-28T02:25:41Z</para>
@@ -205,7 +197,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? HotCount { get; set; }
 
             /// <summary>
-            /// <para>The plugin description.</para>
+            /// <para>The description of the plug-in.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@lALPM2AwTOg9IUHNAUDNAUA</para>
@@ -215,7 +207,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Icon { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated API gateway plugin.</para>
+            /// <para>The ID of the associated API gateway plug-in.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -225,7 +217,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginId { get; set; }
 
             /// <summary>
-            /// <para>The name of the plugin. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</para>
+            /// <para>The name of the plug-in. The name must be 4 to 50 characters in length and can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). It cannot start with an underscore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tf_testaccapigatewayplugin29311</para>
@@ -235,10 +227,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PluginName { get; set; }
 
             /// <summary>
-            /// <para>The URL of the image repository.</para>
+            /// <para>The clone URL of the plug-in code repository.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para><a href="https://codeup.aliyun.com/example/demo-plugin.git">https://codeup.aliyun.com/example/demo-plugin.git</a></para>
             /// </summary>
             [NameInMap("RepositoryUrl")]
             [Validation(Required=false)]
@@ -268,7 +260,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The category tags.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;Key\&quot;: \&quot;kubernetes.io/cluster-id\&quot;, \&quot;Value\&quot;: \&quot;cc67198b13db948c9848599654da5586e\&quot;}, {\&quot;Key\&quot;: \&quot;created-by\&quot;, \&quot;Value\&quot;: \&quot;alibabacloud-imagecache-controller\&quot;}]</para>
+            /// <para>[{&quot;Key&quot;: &quot;kubernetes.io/cluster-id&quot;, &quot;Value&quot;: &quot;cc67198b13db948c9848599654da5586e&quot;}, {&quot;Key&quot;: &quot;created-by&quot;, &quot;Value&quot;: &quot;alibabacloud-imagecache-controller&quot;}]</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

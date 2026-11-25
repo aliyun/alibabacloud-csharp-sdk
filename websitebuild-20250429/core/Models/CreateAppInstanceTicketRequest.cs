@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The user role that the ticket will assume.</para>
+        /// <para>The user role assumed by the ticket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>

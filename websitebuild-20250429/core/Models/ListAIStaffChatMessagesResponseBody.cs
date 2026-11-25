@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAIStaffChatMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denial details.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a retry is allowed.</para>
+        /// <para>Specifies whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the app.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>The business extension metadata. The value must be a JSON string in map format.</para>
+                /// <para>The business extension metadata in map format. The value must be a JSON string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;appId&quot;:&quot;WS20260510153620000001&quot;,&quot;inputTokens&quot;:1120,&quot;outputTokens&quot;:32}</para>
@@ -188,18 +188,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <summary>
                 /// <para>The role of the conversation participant. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>user: User.</para>
-                /// </description></item>
-                /// <item><description><para>assistant: Assistant.</para>
-                /// </description></item>
-                /// <item><description><para>system: System.</para>
-                /// </description></item>
-                /// <item><description><para>function: Function.</para>
-                /// </description></item>
-                /// <item><description><para>plugin: Plug-in.</para>
-                /// </description></item>
-                /// <item><description><para>tool: Tool.</para>
-                /// </description></item>
+                /// <item><description>user: User.</description></item>
+                /// <item><description>assistant: Assistant.</description></item>
+                /// <item><description>system: System.</description></item>
+                /// <item><description>function: Function.</description></item>
+                /// <item><description>plugin: Plug-in.</description></item>
+                /// <item><description>tool: Tool.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -264,10 +258,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System error</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

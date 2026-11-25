@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The message content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;CodeRevision\&quot;: \&quot;1750040991876284109\&quot;}</para>
+            /// <para>{&quot;CodeRevision&quot;: &quot;1750040991876284109&quot;}</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]

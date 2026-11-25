@@ -73,6 +73,54 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public PublishAppInstanceResponseBodyModule Module { get; set; }
         public class PublishAppInstanceResponseBodyModule : TeaModel {
+            [NameInMap("ArtifactDigest")]
+            [Validation(Required=false)]
+            public string ArtifactDigest { get; set; }
+
+            [NameInMap("AuditId")]
+            [Validation(Required=false)]
+            public string AuditId { get; set; }
+
+            [NameInMap("CandidateId")]
+            [Validation(Required=false)]
+            public string CandidateId { get; set; }
+
+            [NameInMap("CandidateStatus")]
+            [Validation(Required=false)]
+            public string CandidateStatus { get; set; }
+
+            [NameInMap("CommitHash")]
+            [Validation(Required=false)]
+            public string CommitHash { get; set; }
+
+            [NameInMap("PlatformAppid")]
+            [Validation(Required=false)]
+            public string PlatformAppid { get; set; }
+
+            [NameInMap("PluginDeclarationHash")]
+            [Validation(Required=false)]
+            public string PluginDeclarationHash { get; set; }
+
+            [NameInMap("PluginState")]
+            [Validation(Required=false)]
+            public string PluginState { get; set; }
+
+            [NameInMap("PrivacyDraftId")]
+            [Validation(Required=false)]
+            public string PrivacyDraftId { get; set; }
+
+            [NameInMap("PrivacyRevision")]
+            [Validation(Required=false)]
+            public string PrivacyRevision { get; set; }
+
+            [NameInMap("PublishEnv")]
+            [Validation(Required=false)]
+            public string PublishEnv { get; set; }
+
+            [NameInMap("PublishNumber")]
+            [Validation(Required=false)]
+            public string PublishNumber { get; set; }
+
             /// <summary>
             /// <para>The publish order ID.</para>
             /// 
@@ -82,6 +130,22 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [NameInMap("PublishOrderId")]
             [Validation(Required=false)]
             public long? PublishOrderId { get; set; }
+
+            [NameInMap("ReadbackStatus")]
+            [Validation(Required=false)]
+            public string ReadbackStatus { get; set; }
+
+            [NameInMap("SubmitIntentStatus")]
+            [Validation(Required=false)]
+            public string SubmitIntentStatus { get; set; }
+
+            [NameInMap("UpdatedAt")]
+            [Validation(Required=false)]
+            public long? UpdatedAt { get; set; }
+
+            [NameInMap("UploadSequence")]
+            [Validation(Required=false)]
+            public long? UploadSequence { get; set; }
 
         }
 

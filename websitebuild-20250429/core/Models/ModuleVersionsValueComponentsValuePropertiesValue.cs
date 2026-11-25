@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleVersionsValueComponentsValuePropertiesValue : TeaModel {
         /// <summary>
-        /// <para>属性编码（系统内部标识）</para>
+        /// <para>The code of the property, which is an internal system identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>属性显示名称（用户可见名称）</para>
+        /// <para>The display name of the property, which is visible to users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>属性值编码（系统内部值）</para>
+        /// <para>The code of the property value, which is an internal system value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>value</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Value { get; set; }
 
         /// <summary>
-        /// <para>模块属性值列表</para>
+        /// <para>The list of module property values.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]
         public List<ModuleVersionsValueComponentsValuePropertiesValueValues> Values { get; set; }
         public class ModuleVersionsValueComponentsValuePropertiesValueValues : TeaModel {
             /// <summary>
-            /// <para>属性编码（系统内部标识）</para>
+            /// <para>The code of the property, which is an internal system identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>code</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>属性值编码（系统内部值）</para>
+            /// <para>The code of the property value, which is an internal system value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>属性显示名称（用户可见名称）</para>
+            /// <para>The display name of the property, which is visible to users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>

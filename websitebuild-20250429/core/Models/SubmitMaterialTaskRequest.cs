@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The business group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>GROUP_1</para>
         /// </summary>
         [NameInMap("BizGroupId")]
         [Validation(Required=false)]

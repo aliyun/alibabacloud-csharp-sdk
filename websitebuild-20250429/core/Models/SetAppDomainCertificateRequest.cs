@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>The certificate type. Valid values: default free certificate and customer-owned certificate.</para>
+        /// <para>The certificate type. Valid values: default free certificate, customer-owned certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Server</para>

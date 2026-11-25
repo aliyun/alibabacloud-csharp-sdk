@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The error parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;\&quot;]</para>
+        /// <para>[&quot;&quot;]</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

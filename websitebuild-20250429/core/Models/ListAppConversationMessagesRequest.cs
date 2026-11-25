@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The number of results returned per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results are available.</para>
+        /// <para>The token used to start the next query. This parameter is empty if there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page (10-100).</para>
+        /// <para>The number of entries per page. Valid values: 10 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteId { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the last entry on the previous page (ISO 8601 format).</para>
+        /// <para>The creation time of the last entry on the previous page in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

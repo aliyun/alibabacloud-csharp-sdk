@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The extended information in JSON string format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;appId\&quot;:\&quot;WS20260504134737000001\&quot;,\&quot;inputTokens\&quot;:1395,\&quot;outputTokens\&quot;:38}</para>
+            /// <para>{&quot;appId&quot;:&quot;WS20260504134737000001&quot;,&quot;inputTokens&quot;:1395,&quot;outputTokens&quot;:38}</para>
             /// </summary>
             [NameInMap("MetaData")]
             [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The current viewpoint, equivalent to the news title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Feel Like Makin\&quot; Love</para>
+            /// <para>Feel Like Makin&quot; Love</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

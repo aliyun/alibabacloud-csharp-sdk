@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The app name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ish-intelligence-store-platform-admin-web</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public GetOssUploadPolicyResponseBodyModule Module { get; set; }
         public class GetOssUploadPolicyResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The upload directory path.</para>
+            /// <para>The path of the upload directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pano_src/100070-2679478/images/</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Dir { get; set; }
 
             /// <summary>
-            /// <para>The OSS bucket host address.</para>
+            /// <para>The host address of the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>*.com</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The Security Token Service (STS) token. This value is null in non-STS scenarios.</para>
+            /// <para>The Security Token Service (STS) token. This parameter is null in non-STS scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>

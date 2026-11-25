@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationBalanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retries are allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The invalid parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public QueryInspirationBalanceResponseBodyModule Module { get; set; }
         public class QueryInspirationBalanceResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The remaining quota (totalQuota - totalUsed).</para>
+            /// <para>The remaining quota, which is calculated by subtracting totalUsed from totalQuota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RemainingStr { get; set; }
 
             /// <summary>
-            /// <para>The total quota (the sum of initQuota of all valid accounts).</para>
+            /// <para>The total quota, which is the sum of the initQuota values of all valid accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TotalQuotaStr { get; set; }
 
             /// <summary>
-            /// <para>The consumed quota (the sum of used of all valid accounts).</para>
+            /// <para>The used quota, which is the sum of the used values of all valid accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? TotalUsed { get; set; }
 
             /// <summary>
-            /// <para>The string format of the consumed quota.</para>
+            /// <para>The string format of the used quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the processing is synchronous.</para>
+        /// <para>Indicates whether synchronous processing is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

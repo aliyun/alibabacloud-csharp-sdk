@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The category.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;Depth\&quot;: 2, \&quot;ParentCategoryId\&quot;: 5260, \&quot;Name\&quot;: \&quot;2\&quot;, \&quot;CategoryId\&quot;: 5280, \&quot;CreateTime\&quot;: \&quot;2025-08-26 10:20:37\&quot;}</para>
+                /// <para>{&quot;Depth&quot;: 2, &quot;ParentCategoryId&quot;: 5260, &quot;Name&quot;: &quot;2&quot;, &quot;CategoryId&quot;: 5280, &quot;CreateTime&quot;: &quot;2025-08-26 10:20:37&quot;}</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]

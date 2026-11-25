@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppInstanceFileRequest : TeaModel {
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81bc5a34-1d8d-4ef7-a208-7401c51b054b</para>

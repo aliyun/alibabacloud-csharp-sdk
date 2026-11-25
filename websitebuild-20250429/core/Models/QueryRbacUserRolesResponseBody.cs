@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not used. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not in use and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The request result.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <summary>
                 /// <para>The preset workspace role ID. This will overwrite existing roles. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>25: storage management administrator</description></item>
-                /// <item><description>26: workspace developer</description></item>
-                /// <item><description>27: storage analysis analyst</description></item>
-                /// <item><description>30: workspace viewer</description></item>
+                /// <item><description>25: Storage management administrator.</description></item>
+                /// <item><description>26: Workspace developer.</description></item>
+                /// <item><description>27: Storage analysis analyst.</description></item>
+                /// <item><description>30: Workspace viewer.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

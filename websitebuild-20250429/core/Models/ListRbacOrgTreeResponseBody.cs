@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListRbacOrgTreeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed cause of the access denial.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retries are allowed.</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the error message of the <b>ErrMessage</b> response parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> error message.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the specified request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,8 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The number of results returned per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return for each query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -105,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<ListRbacOrgTreeResponseBodyModuleData> Data { get; set; }
             public class ListRbacOrgTreeResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The creation time. The time is in the ISO 8601 format and the UTC time zone.</para>
+                /// <para>The creation time. The time follows the ISO 8601 standard and is in the UTC time zone (Z).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-08T02:28:26Z</para>
@@ -115,10 +114,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The directory level.</para>
+                /// <para>The folder level.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>FirstChildDepth</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("Depth")]
                 [Validation(Required=false)]
@@ -161,7 +160,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public ListRbacOrgTreeResponseBodyModuleNext Next { get; set; }
             public class ListRbacOrgTreeResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>The creation date. The date is in the ISO 8601 format and the UTC time zone.</para>
+                /// <para>The creation date. The date follows the ISO 8601 standard and is in the UTC time zone (Z).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-12-15T02:29:22Z</para>
@@ -171,7 +170,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The category level. The root category level is 1.</para>
+                /// <para>The category level. The root category is 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -201,7 +200,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The request path of the API.</para>
+                /// <para>The URI of the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/h6sRMdP&amp;LTdQz/44ImvD/JtjSeUza/wVcp1i/dsxnl0FlL0/bvL/d+0~V6Fi5+R/P8ebktwGxe/l&amp;AqBD_/Y+TstdpTo06U_Q/4i4:EDPGo/7.fIVgd.//AOJtXP5/X</para>
@@ -275,7 +274,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no subsequent query is available.</para>
+        /// <para>The token used to start the next query. If no next query is available, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>

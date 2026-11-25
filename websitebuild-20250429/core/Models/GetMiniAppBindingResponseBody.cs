@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The extended information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;SERVER_DOMAIN&quot;:&quot;{\&quot;requestDomains\&quot;:[{\&quot;domain\&quot;:\&quot;<a href="https://api.example.com%5C%5C%22,%5C%5C%22source%5C%5C%22:%5C%5C%22managed%5C%5C%22%7D%5D,%5C%5C%22wsRequestDomains%5C%5C%22:%5B%5D,%5C%5C%22uploadDomains%5C%5C%22:%5B%5D,%5C%5C%22downloadDomains%5C%5C%22:%5B%5D,%5C%5C%22udpDomains%5C%5C%22:%5B%5D,%5C%5C%22tcpDomains%5C%5C%22:%5B%5D%7D%22%7D">https://api.example.com\\&quot;,\\&quot;source\\&quot;:\\&quot;managed\\&quot;}],\\&quot;wsRequestDomains\\&quot;:[],\\&quot;uploadDomains\\&quot;:[],\\&quot;downloadDomains\\&quot;:[],\\&quot;udpDomains\\&quot;:[],\\&quot;tcpDomains\\&quot;:[]}&quot;}</a></para>
+            /// <para>{&quot;SERVER_DOMAIN&quot;:&quot;{&quot;requestDomains&quot;:[{&quot;domain&quot;:&quot;<a href="https://api.example.com%5C%22,%5C%22source%5C%22:%5C%22managed%5C%22%7D%5D,%5C%22wsRequestDomains%5C%22:%5B%5D,%5C%22uploadDomains%5C%22:%5B%5D,%5C%22downloadDomains%5C%22:%5B%5D,%5C%22udpDomains%5C%22:%5B%5D,%5C%22tcpDomains%5C%22:%5B%5D%7D%22%7D">https://api.example.com\&quot;,\&quot;source\&quot;:\&quot;managed\&quot;}],\&quot;wsRequestDomains\&quot;:[],\&quot;uploadDomains\&quot;:[],\&quot;downloadDomains\&quot;:[],\&quot;udpDomains\&quot;:[],\&quot;tcpDomains\&quot;:[]}&quot;}</a></para>
             /// </summary>
             [NameInMap("SettingValues")]
             [Validation(Required=false)]

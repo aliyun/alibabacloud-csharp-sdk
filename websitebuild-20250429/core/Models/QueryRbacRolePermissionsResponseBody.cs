@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether retries are allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not used. Ignore it.</para>
+        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the move is successful.</para>
+        /// <para>Indicates whether the move operation is successful.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>The request result.</para>
+            /// <para>The request results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryRbacRolePermissionsResponseBodyModuleData> Data { get; set; }
             public class QueryRbacRolePermissionsResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>The system-defined parameter. Set the value to <b>DeleteIntegration</b>.</para>
+                /// <para>The system-defined parameter. Valid value: <b>DeleteIntegration</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>js</para>
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>The ID of the next feature.</para>
+            /// <para>The next feature ID.</para>
             /// </summary>
             [NameInMap("Next")]
             [Validation(Required=false)]
             public QueryRbacRolePermissionsResponseBodyModuleNext Next { get; set; }
             public class QueryRbacRolePermissionsResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>The system-defined parameter. Set the value to <b>GetCreateCustomerInfomation</b>.</para>
+                /// <para>The system-defined parameter. Valid value: <b>GetCreateCustomerInfomation</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>accept</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 /// <summary>
                 /// <para>The statistical method for the Warn level.</para>
-                /// <para>The value of <c>Statistics</c> varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
+                /// <para>The valid values of <c>Statistics</c> vary by cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mwaf-apisec0629.wafqax.top-waf</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether synchronous processing is used.</para>
+        /// <para>Indicates whether the processing is synchronous.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

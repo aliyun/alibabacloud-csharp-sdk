@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The configuration form in React JSON Schema format.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;label&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Display name&quot;}}}</para>
         /// </summary>
         [NameInMap("ConfigItems")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The additional extension information in JSON format for subsequent parameter extensions.</para>
+        /// <para>The additional extension information in JSON format to facilitate subsequent parameter extensions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Hooks { get; set; }
 
         /// <summary>
-        /// <para>The description of the plugin.</para>
+        /// <para>The description of the plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png">https://img.alicdn.com/imgextra/i4/O1CN01ANcLnQ1bCX7tZPVMJ_!!6000000003429-2-tps-100-100.png</a></para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Icon { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway plugin.</para>
+        /// <para>The ID of the gateway plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>The name of the plugin.</para>
+        /// <para>The name of the plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alisecguard</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginName { get; set; }
 
         /// <summary>
-        /// <para>The plugin version.</para>
+        /// <para>The plug-in version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The list of extended information keys.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SERVER_DOMAIN</para>
+        /// <para>[&quot;SERVER_DOMAIN&quot;]</para>
         /// </summary>
         [NameInMap("SettingKeys")]
         [Validation(Required=false)]

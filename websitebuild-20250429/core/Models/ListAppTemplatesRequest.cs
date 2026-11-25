@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</para>
+        /// <para>${&quot;wget JiexJPWT.popscan.xaliyun.com&quot;}</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

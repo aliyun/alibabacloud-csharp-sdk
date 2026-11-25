@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The repair action.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;memFrom\&quot;: \&quot;text\&quot;, \&quot;uid\&quot;: \&quot;text\&quot;, \&quot;labels\&quot;: \&quot;jsonb\&quot;, \&quot;content\&quot;: \&quot;text\&quot;, \&quot;fromId\&quot;: \&quot;text\&quot;, \&quot;uuid\&quot;: \&quot;text\&quot;}</para>
+                /// <para>{&quot;memFrom&quot;: &quot;text&quot;, &quot;uid&quot;: &quot;text&quot;, &quot;labels&quot;: &quot;jsonb&quot;, &quot;content&quot;: &quot;text&quot;, &quot;fromId&quot;: &quot;text&quot;, &quot;uuid&quot;: &quot;text&quot;}</para>
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>The fix details.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;knowledge_point\&quot;:\&quot;text\&quot;,\&quot;trunk_id\&quot;:\&quot;text\&quot;,\&quot;doc_name\&quot;:\&quot;text\&quot;,\&quot;knowledge_point_id\&quot;:\&quot;text\&quot;,\&quot;doc_id\&quot;:\&quot;text\&quot;,\&quot;trunk_content\&quot;:\&quot;text\&quot;}</para>
+                /// <para>{&quot;knowledge_point&quot;:&quot;text&quot;,&quot;trunk_id&quot;:&quot;text&quot;,&quot;doc_name&quot;:&quot;text&quot;,&quot;knowledge_point_id&quot;:&quot;text&quot;,&quot;doc_id&quot;:&quot;text&quot;,&quot;trunk_content&quot;:&quot;text&quot;}</para>
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]

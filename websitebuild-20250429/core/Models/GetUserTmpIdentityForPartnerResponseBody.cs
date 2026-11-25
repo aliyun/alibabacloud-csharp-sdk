@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public GetUserTmpIdentityForPartnerResponseBodyData Data { get; set; }
         public class GetUserTmpIdentityForPartnerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The security token.</para>
+            /// <para>The security credentials.</para>
             /// </summary>
             [NameInMap("Credentials")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EncryptedAccessKeySecret { get; set; }
 
                 /// <summary>
-                /// <para>The encrypted STS token.</para>
+                /// <para>The encrypted Security Token Service (STS) token.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7t2Rzt37ND7-xxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EncryptedSecurityToken { get; set; }
 
                 /// <summary>
-                /// <para>The estimated expiration time of the credential.</para>
+                /// <para>The expected expiration time of the credentials.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-04-29T14:00:00Z</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the customer authorization has been obtained.</para>
+            /// <para>Indicates whether customer authorization has been obtained.</para>
             /// </summary>
             [NameInMap("HasCustomRoleAuth")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The error code. If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</para>
+        /// <para>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

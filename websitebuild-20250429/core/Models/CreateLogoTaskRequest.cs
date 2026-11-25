@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The task parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;ehpcutilParam\&quot;:\&quot;sched job_submit --commandline \\\&quot;/ehpcdata/data/usersTest/huangqiaoyi-1725933699384/huangqiaoyi-1725933699384.slurm\\\&quot; --runasuser TestGfjnSimworks\&quot;}</para>
+        /// <para>{&quot;ehpcutilParam&quot;:&quot;sched job_submit --commandline \&quot;/ehpcdata/data/usersTest/huangqiaoyi-1725933699384/huangqiaoyi-1725933699384.slurm\&quot; --runasuser TestGfjnSimworks&quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

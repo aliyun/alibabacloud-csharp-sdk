@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>The completion time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1767323045000</para>
         /// </summary>
         [NameInMap("FinishTime")]
         [Validation(Required=false)]

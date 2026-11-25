@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The file path.</para>
+        /// <para>The path of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77</a></para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>The file name.</para>
+        /// <para>The name of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test file</para>

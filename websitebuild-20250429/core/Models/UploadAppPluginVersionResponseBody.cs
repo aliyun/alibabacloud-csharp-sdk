@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UploadAppPluginVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reasons for access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a retry is allowed. Valid values:</para>
+        /// <para>Indicates whether retries are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: A retry is not allowed.</description></item>
-        /// <item><description>true: A retry is allowed.</description></item>
+        /// <item><description>false: Retries are not allowed.</description></item>
+        /// <item><description>true: Retries are allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></para>
+        /// <para><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&Signature=Bcj3eohy8nmlS****Gdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUEr****M4ev9SELNb&amp;Signature=Bcj3eohy8nmlS****Gdq7JZoLjM%3D</a></para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The commit ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>0123456789abcdef0123456789abcdef01234567</para>
             /// </summary>
             [NameInMap("CommitSha")]
             [Validation(Required=false)]
             public string CommitSha { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound API gateway plugin.</para>
+            /// <para>The ID of the bound API gateway plug-in.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1bae9ceaceea432d91c7069fab0dfc02</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether synchronous processing is used.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;Success\&quot;: True}</para>
+        /// <para>{&quot;Success&quot;: True}</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]

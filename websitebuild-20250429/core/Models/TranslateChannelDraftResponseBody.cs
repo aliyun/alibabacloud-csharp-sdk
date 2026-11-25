@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class TranslateChannelDraftResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name used to query the application.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ish-intelligence-store-platform-admin-web</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The dynamic code. This field is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error message that is used to replace the <c>%s</c> variable in the <b>ErrMessage</b> return parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <c>%s</c> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the value of the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters.</para>
+        /// <para>The invalid parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion was successful.</para>
+        /// <para>Indicates whether the deletion is successful.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -80,34 +80,34 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The AI adaptation status. Valid values: NONE, ADAPTING, DONE, and FAILED.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>DONE</para>
             /// </summary>
             [NameInMap("AdaptStatus")]
             [Validation(Required=false)]
             public string AdaptStatus { get; set; }
 
             /// <summary>
-            /// <para>The channel-adapted content body.</para>
+            /// <para>The adapted content for the channel.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>Introduces the main features and usage of the website</para>
             /// </summary>
             [NameInMap("AdaptedContent")]
             [Validation(Required=false)]
             public string AdaptedContent { get; set; }
 
             /// <summary>
-            /// <para>The channel-adapted title.</para>
+            /// <para>The adapted title for the channel.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>Website features and user guide</para>
             /// </summary>
             [NameInMap("AdaptedTitle")]
             [Validation(Required=false)]
             public string AdaptedTitle { get; set; }
 
             /// <summary>
-            /// <para>The channel enumeration value.</para>
+            /// <para>The channel enumeration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WECHAT</para>
@@ -117,10 +117,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The publishing account snapshot.</para>
+            /// <para>The snapshot of the publishing account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>social-account-demo-001</para>
             /// </summary>
             [NameInMap("ChannelAccount")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The display name of the publishing account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>Sample publishing account</para>
             /// </summary>
             [NameInMap("ChannelAccountName")]
             [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ChannelName { get; set; }
 
             /// <summary>
-            /// <para>The channel type. Valid values: DOMESTIC, OVERSEA, and INTERNAL.</para>
+            /// <para>The type of the channel. Valid values: DOMESTIC, OVERSEA, and INTERNAL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wechat</para>
@@ -157,17 +157,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>The list of channel cover images.</para>
+            /// <para>The list of cover images for the channel.</para>
             /// </summary>
             [NameInMap("CoverImages")]
             [Validation(Required=false)]
             public List<TranslateChannelDraftResponseBodyModuleCoverImages> CoverImages { get; set; }
             public class TranslateChannelDraftResponseBodyModuleCoverImages : TeaModel {
                 /// <summary>
-                /// <para>The file ID in the material center.</para>
+                /// <para>The ID of the file in the material center.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>material-file-demo-001</para>
                 /// </summary>
                 [NameInMap("MaterialFileId")]
                 [Validation(Required=false)]
@@ -184,10 +184,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OssUrl { get; set; }
 
                 /// <summary>
-                /// <para>The sort order number.</para>
+                /// <para>The sort order.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Desc</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("SortOrder")]
                 [Validation(Required=false)]
@@ -236,20 +236,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string FailReason { get; set; }
 
             /// <summary>
-            /// <para>The channel-specific publishing configuration in JSON format.</para>
+            /// <para>The JSON string of channel-specific publishing fields.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("PublishConfig")]
             [Validation(Required=false)]
             public string PublishConfig { get; set; }
 
             /// <summary>
-            /// <para>The publishing time, in millisecond timestamp format.</para>
+            /// <para>The publishing time. The value is a millisecond timestamp.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>1767225600000</para>
             /// </summary>
             [NameInMap("PublishedAt")]
             [Validation(Required=false)]

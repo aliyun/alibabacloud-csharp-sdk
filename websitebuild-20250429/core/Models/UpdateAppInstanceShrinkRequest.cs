@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The extended information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</para>
+        /// <para>{&quot;user_device_id&quot;:&quot;6bef45cb0c76de284d24de074c088b73&quot;}\n</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]

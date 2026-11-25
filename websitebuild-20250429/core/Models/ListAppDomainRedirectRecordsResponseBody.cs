@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppDomainRedirectRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reasons for the access denial.</para>
+        /// <para>The detailed cause of the access denied error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use and can be ignored.</para>
+        /// <para>The dynamic message. This field is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -67,8 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of results to return per query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
@@ -122,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceDomain { get; set; }
 
                 /// <summary>
-                /// <para>The target domain name.</para>
+                /// <para>The destination domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyuncs.com</para>
@@ -161,7 +160,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceDomain { get; set; }
 
                 /// <summary>
-                /// <para>The target domain name.</para>
+                /// <para>The destination domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyuncs.com</para>
@@ -180,7 +179,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -197,7 +196,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is set to <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is set to <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of the latest 1,000 records for the current query. If the number of results exceeds 1,000, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
@@ -226,7 +225,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>The token used to start the next query. This parameter is empty if no next query is available.</para>
+        /// <para>The token used to start the next query. If no more results are available, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -256,10 +255,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>System error</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

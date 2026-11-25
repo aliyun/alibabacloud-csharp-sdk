@@ -16,6 +16,26 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public UpdateMiniAppBindingResponseBodyData Data { get; set; }
         public class UpdateMiniAppBindingResponseBodyData : TeaModel {
+            [NameInMap("PrivacyDraftId")]
+            [Validation(Required=false)]
+            public string PrivacyDraftId { get; set; }
+
+            [NameInMap("PrivacyRevision")]
+            [Validation(Required=false)]
+            public string PrivacyRevision { get; set; }
+
+            [NameInMap("ReadbackStatus")]
+            [Validation(Required=false)]
+            public string ReadbackStatus { get; set; }
+
+            [NameInMap("Revision")]
+            [Validation(Required=false)]
+            public long? Revision { get; set; }
+
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the request is successful.</para>
             /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The domain name keyword for fuzzy match. This parameter is optional.</para>
+        /// <para>The domain name keyword used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainKeyword { get; set; }
 
         /// <summary>
-        /// <para>The domain name management type. Valid values: CUSTOM and PLATFORM_PREFIX. If this parameter is not specified, the default value is CUSTOM.</para>
+        /// <para>The domain name management type. Valid values: CUSTOM and PLATFORM_PREFIX. Default value: CUSTOM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CUSTOM</para>
@@ -40,8 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return for a single query.</para>
-        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return in a single query. Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. If no next query is available, this value is empty.</para>
+        /// <para>The token used to start the next query. If no next query exists, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -101,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query mode for the domain name status. Valid values: BASIC and REALTIME. BASIC returns only the persisted status. REALTIME refreshes the status from external services. If this parameter is not specified, the default value is REALTIME.</para>
+        /// <para>The domain name status query mode. Valid values: BASIC and REALTIME. BASIC returns only the persisted status. REALTIME refreshes the status from external services. Default value: REALTIME.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REALTIME</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The request result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;HasCustomRoleAuth\&quot;: False}</para>
+            /// <para>{&quot;HasCustomRoleAuth&quot;: False}</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]

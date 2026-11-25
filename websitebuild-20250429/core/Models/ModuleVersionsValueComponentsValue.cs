@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleVersionsValueComponentsValue : TeaModel {
         /// <summary>
-        /// <para>组件唯一编码（系统内部标识）</para>
+        /// <para>The unique code of the component, which is an internal system identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ComponentCode</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ComponentCode { get; set; }
 
         /// <summary>
-        /// <para>组件显示名称（用户可见名称）</para>
+        /// <para>The display name of the component, which is visible to users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ComponentName</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// <para>组件实例属性配置</para>
+        /// <para>The instance property configuration of the component.</para>
         /// </summary>
         [NameInMap("InstanceProperty")]
         [Validation(Required=false)]
         public List<ModuleVersionsValueComponentsValueInstanceProperty> InstanceProperty { get; set; }
         public class ModuleVersionsValueComponentsValueInstanceProperty : TeaModel {
             /// <summary>
-            /// <para>属性编码（系统内部标识）</para>
+            /// <para>The code of the property, which is an internal system identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>code</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>属性显示名称（用户可见名称）</para>
+            /// <para>The display name of the property, which is visible to users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>属性值编码（系统内部值）</para>
+            /// <para>The code of the property value, which is an internal system value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>模块属性值列表</para>
+            /// <para>The list of module property values.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<ModuleVersionsValueComponentsValueInstancePropertyValues> Values { get; set; }
             public class ModuleVersionsValueComponentsValueInstancePropertyValues : TeaModel {
                 /// <summary>
-                /// <para>属性编码（系统内部标识）</para>
+                /// <para>The code of the property, which is an internal system identifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>code</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>属性值编码（系统内部值）</para>
+                /// <para>The code of the property value, which is an internal system value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Value { get; set; }
 
                 /// <summary>
-                /// <para>属性显示名称（用户可见名称）</para>
+                /// <para>The display name of the property, which is visible to users.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>组件实例属性配置</para>
+        /// <para>The instance property configuration of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public Dictionary<string, ModuleVersionsValueComponentsValuePropertiesValue> Properties { get; set; }
 
         /// <summary>
-        /// <para>模块属性状态</para>
+        /// <para>The status of the module property.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

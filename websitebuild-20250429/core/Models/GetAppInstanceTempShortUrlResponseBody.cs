@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public GetAppInstanceTempShortUrlResponseBodyModule Module { get; set; }
         public class GetAppInstanceTempShortUrlResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The expiration time in UTC format yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSS\&quot;Z\&quot;.</para>
+            /// <para>The expiration time in UTC format yyyy-MM-dd&quot;T&quot;HH:mm:ss.SSS&quot;Z&quot;.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
