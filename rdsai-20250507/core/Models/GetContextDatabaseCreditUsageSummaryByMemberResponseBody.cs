@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetContextDatabaseCreditUsageSummaryByMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end time of the query range passed in the request, exclusive.</para>
+        /// <para>The end time of the query interval passed in the request, exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-08T00:00:00Z</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The member summaries on the current page, sorted in descending order of total credit consumption. Each record covers the entire query range.</para>
+        /// <para>The member summaries on the current page, sorted by total credit consumption in descending order. Each record covers the entire query interval.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<GetContextDatabaseCreditUsageSummaryByMemberResponseBodyItems> Items { get; set; }
         public class GetContextDatabaseCreditUsageSummaryByMemberResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The total credit consumption of priced records for the member. Returned as a decimal string with up to 6 decimal places. 1 credit equals 1 CNY. The value is null if there are no priced records.</para>
+            /// <para>The total credit consumption of priced records for this member. Returned as a decimal string with up to 6 decimal places, where 1 credit = 1 CNY. The value is <c>null</c> if there are no priced records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.2513</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The total metered quantity of records that match the filter criteria for the member, including unpriced records. To view the usage of a specific billable item, specify Item in the request.</para>
+            /// <para>The total metered quantity of records that match the filter criteria for this member, including unpriced records. To view the usage of a specific billing item, specify <c>Item</c> in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? Quantity { get; set; }
 
             /// <summary>
-            /// <para>The number of metering records that match the filter criteria for the member, including unpriced records.</para>
+            /// <para>The number of metering records that match the filter criteria for this member, including unpriced records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The actual page number used for the query.</para>
+        /// <para>The actual page number used in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The actual number of items per page used for the query.</para>
+        /// <para>The actual number of items per page used in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the OpenAPI request, used to troubleshoot call issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range passed in the request, inclusive.</para>
+        /// <para>The start time of the query interval passed in the request, inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-01T00:00:00Z</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? Total { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace queried.</para>
+        /// <para>The ID of the workspace queried in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-x9z4ctzed9gfu2w</para>

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetContextDatabaseUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query dimension. A value of Workspace indicates a single workspace. A value of Account indicates all workspaces under the caller account.</para>
+        /// <para>The query dimension. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>Workspace</c>: A single workspace.</description></item>
+        /// <item><description><c>Account</c>: All workspaces under the caller account.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Workspace</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The usage list. Returns all 7 metering items in a fixed order. If an item has no data within the query range, its usage is 0.</para>
+        /// <para>The usage list. It returns all seven metering items in a fixed order. If an item has no data within the query range, its usage is 0.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Item { get; set; }
 
             /// <summary>
-            /// <para>The usage of the item within the query range. The unit is specified by Unit. Invocations, tokens, and context evolution are accumulated over the range. Storage is calculated by averaging the usage snapshots of each workspace within the range and rounding to the nearest whole byte. For the account dimension, the average values of all workspaces are summed.</para>
+            /// <para>The usage of the item within the query range. The unit is specified by <c>Unit</c>. The number of calls, tokens, and context evolutions are accumulated over the range. Storage is calculated by averaging the occupancy snapshots of each workspace within the range and rounding to the nearest integer byte. For the account dimension, the average values of all workspaces are summed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -57,7 +61,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? Quantity { get; set; }
 
             /// <summary>
-            /// <para>The metering unit. A value of Count indicates the number of invocations. A value of Token indicates the number of tokens. A value of MicroCredit indicates one millionth of a credit. A value of Byte indicates bytes.</para>
+            /// <para>The metering unit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>Count</c>: The number of calls.</description></item>
+            /// <item><description><c>Token</c>: The number of tokens.</description></item>
+            /// <item><description><c>MicroCredit</c>: One millionth of a credit.</description></item>
+            /// <item><description><c>Byte</c>: Bytes.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Count</para>
@@ -69,7 +79,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The ID of the API request, which is used to troubleshoot invocation issues.</para>
+        /// <para>The ID of the API request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>
@@ -89,7 +99,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the queried workspace. This parameter has a value only when Dimension is Workspace. It is empty for the account dimension.</para>
+        /// <para>The ID of the queried workspace. This field has a value only when <c>Dimension</c> is set to <c>Workspace</c>. It is empty for the account dimension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-x9z4ctzed9gfu2w</para>

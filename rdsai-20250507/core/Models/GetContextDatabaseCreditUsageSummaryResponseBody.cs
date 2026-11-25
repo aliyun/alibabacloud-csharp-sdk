@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetContextDatabaseCreditUsageSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bucketing results, sorted by BucketStart, Item, and SubItem in sequence. Unpriced records are included in Quantity and RecordCount, but not in Credits.</para>
+        /// <para>The bucketing results, sorted sequentially by BucketStart, Item, and SubItem. Unpriced records are included in Quantity and RecordCount, but not in Credits.</para>
         /// </summary>
         [NameInMap("Buckets")]
         [Validation(Required=false)]
         public List<GetContextDatabaseCreditUsageSummaryResponseBodyBuckets> Buckets { get; set; }
         public class GetContextDatabaseCreditUsageSummaryResponseBodyBuckets : TeaModel {
             /// <summary>
-            /// <para>The start time of the bucket, in ISO 8601 UTC time format ending with Z.</para>
+            /// <para>The start time of the bucket, in ISO 8601 UTC time format ending with <c>Z</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-01T00:00:00Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string BucketStart { get; set; }
 
             /// <summary>
-            /// <para>The total credit consumption of priced records in the bucket. The value is returned as a decimal string with up to 6 decimal places. 1 credit = 1 CNY. If all records are unpriced, the string 0 is returned.</para>
+            /// <para>The total credit consumption of priced records in the bucket. Returned as a decimal string with up to 6 decimal places, where 1 credit equals 1 CNY. Returns the string <c>0</c> when all records are unpriced.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.2513</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Credits { get; set; }
 
             /// <summary>
-            /// <para>The billing item corresponding to the bucket. Valid values: KnowledgeBaseRead (knowledge base read), MemoryRead (memory read), MemoryWrite (memory write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context evolution).</para>
+            /// <para>The billing item corresponding to the bucket. Valid values: KnowledgeBaseRead (knowledge base read), MemoryRead (memory read), MemoryWrite (memory write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context growth).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ContextGrowth</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? RecordCount { get; set; }
 
             /// <summary>
-            /// <para>The context evolution sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). For other billing items, missing sub-items, or unrecognized sub-items, null is returned.</para>
+            /// <para>The context evolution sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). Returns null for other billing items, missing sub-items, or unrecognized sub-items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MemoryEvolution</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Dimension { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query range passed in the request, exclusive.</para>
+        /// <para>The end time of the query interval passed in the request, exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-15T00:00:00Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The actual bucketing granularity used. Valid values: Hour (hourly) and Day (daily). If the request parameter is omitted, the automatically selected granularity is returned.</para>
+        /// <para>The actual bucketing granularity used. Valid values: Hour (hourly) and Day (daily). When the request parameter is omitted, the automatically selected granularity is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Day</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the OpenAPI request, which is used to troubleshoot call issues.</para>
+        /// <para>The ID of the API request, which is used to troubleshoot call issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-4000-8000-000000000001</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range passed in the request, inclusive.</para>
+        /// <para>The start time of the query interval passed in the request, inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-15T00:00:00Z</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total credit consumption of priced records that meet the filter conditions within the query range. The value is returned as a decimal string with up to 6 decimal places. 1 credit = 1 CNY. If there are no priced records, the string 0 is returned. Unpriced records are not included in the total amount. Do not treat this value as the final bill amount.</para>
+        /// <para>The total credit consumption of priced records that meet the filter conditions within the query interval. Returned as a decimal string with up to 6 decimal places, where 1 credit equals 1 CNY. Returns the string <c>0</c> when there are no priced records. Unpriced records are not included in the total. Do not treat this value as the final bill amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.2513</para>

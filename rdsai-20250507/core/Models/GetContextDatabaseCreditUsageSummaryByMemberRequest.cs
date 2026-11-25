@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetContextDatabaseCreditUsageSummaryByMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query range, exclusive. It must be later than StartTime. Use the ISO 8601 time format, such as 2026-10-08T00:00:00Z (UTC).</para>
+        /// <para>The end time of the query interval, exclusive. It must be later than <c>StartTime</c>. Use the ISO 8601 time format, such as <c>2026-10-08T00:00:00Z</c> (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The billable item used to filter records. Valid values: KnowledgeBaseRead (knowledge base read), MemoryRead (memory base read), MemoryWrite (memory base write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context evolution). If omitted, all billable items that consume credits are included. Storage items or unlisted values return InvalidParameter.</para>
+        /// <para>The billing item used to filter records. Supported values include KnowledgeBaseRead (knowledge base read), MemoryRead (memory read), MemoryWrite (memory write), KnowledgeBaseWriteToken (knowledge base write token), and ContextGrowth (context growth). If omitted, all billing items that consume credits are included. Specifying storage items or unlisted values returns an <c>InvalidParameter</c> error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MemoryWrite</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range, inclusive. Use the ISO 8601 time format, such as 2026-10-01T00:00:00Z (UTC).</para>
+        /// <para>The start time of the query interval, inclusive. Use the ISO 8601 time format, such as <c>2026-10-01T00:00:00Z</c> (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to be analyzed. This parameter is required. The workspace must belong to the caller\&quot;s account. Locked workspaces can still be queried. Member IDs are unique only within their respective workspaces, and cross-workspace ranking is not supported.</para>
+        /// <para>The ID of the workspace to be analyzed. This parameter is required. The workspace must belong to the caller&quot;s account. Locked workspaces can still be queried. Member IDs are unique only within their respective workspaces, and cross-workspace ranking is not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

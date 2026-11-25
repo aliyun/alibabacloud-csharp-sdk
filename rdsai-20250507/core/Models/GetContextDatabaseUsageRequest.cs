@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetContextDatabaseUsageRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query range, exclusive. It must be later than StartTime. Use the ISO 8601 time format, such as 2026-08-01T00:00:00Z (UTC).</para>
+        /// <para>The end time of the query range, exclusive. It must be later than <c>StartTime</c>. Use the ISO 8601 time format, such as <c>2026-08-01T00:00:00Z</c> (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range, inclusive. Use the ISO 8601 time format, such as 2026-07-01T00:00:00Z (UTC).</para>
+        /// <para>The start time of the query range, inclusive. Use the ISO 8601 time format, such as <c>2026-07-01T00:00:00Z</c> (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

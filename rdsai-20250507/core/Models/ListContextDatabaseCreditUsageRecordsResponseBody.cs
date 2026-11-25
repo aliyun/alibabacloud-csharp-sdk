@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListContextDatabaseCreditUsageRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query dimension. Valid values: Workspace (a single workspace) and Account (all workspaces under the caller account).</para>
+        /// <para>The query dimension. Valid values: Workspace indicates a single workspace, and Account indicates all workspaces under the caller account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Workspace</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<ListContextDatabaseCreditUsageRecordsResponseBodyRecords> Records { get; set; }
         public class ListContextDatabaseCreditUsageRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The credit consumption of this record. It is returned as a decimal string with up to 6 decimal places, where 1 credit equals 1 CNY. The amount is recorded at the time of metering and does not change with subsequent price adjustments. If unpriced, null is returned, which does not indicate zero consumption.</para>
+            /// <para>The credit consumption of this record. It is returned as a decimal string with up to 6 decimal places. 1 credit = 1 CNY. The amount is recorded at the time of metering and does not change with subsequent price adjustments. It is null when unpriced, which does not indicate zero consumption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0742</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Item { get; set; }
 
             /// <summary>
-            /// <para>The member ID that generated this record. Historical or system records may not have a member ID, in which case null is returned.</para>
+            /// <para>The ID of the member that generated this record. Historical or system records may not have a member ID, in which case null is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mb-abcdefghijklmno</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The usage of this record. The unit is specified by the Unit field in the same record.</para>
+            /// <para>The usage of this record. The unit is specified by Unit in the same record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>74200</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? Quantity { get; set; }
 
             /// <summary>
-            /// <para>The request time when this metering record was generated, in ISO 8601 UTC time format ending with <c>Z</c>.</para>
+            /// <para>The request time when this metering record was generated, in ISO 8601 UTC time format ending with Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T08:30:12Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string RequestTime { get; set; }
 
             /// <summary>
-            /// <para>The context growth sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). For other billing items, missing sub-items, or unrecognized sub-items, null is returned.</para>
+            /// <para>The context growth sub-item. Recognized values include KnowledgeOrganization (knowledge organization), MemoryPromotion (memory promotion), KnowledgeReview (knowledge review), KnowledgeEvolution (knowledge evolution), and MemoryEvolution (memory evolution). null is returned for other billing items, missing sub-items, or unrecognized sub-items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KnowledgeReview</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string SubItem { get; set; }
 
             /// <summary>
-            /// <para>The metering unit. Valid values: Count (number of times), Token (number of tokens), and MicroCredit (one millionth of a credit).</para>
+            /// <para>The metering unit. Valid values: Count indicates the number of times, Token indicates the number of tokens, and MicroCredit indicates one millionth of a credit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MicroCredit</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Unit { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace to which this record belongs. Even if queried by account, each record still indicates the workspace it belongs to.</para>
+            /// <para>The ID of the workspace to which this record belongs. Even if queried by account, each record still indicates its workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-x9z4ctzed9gfu2w</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of metering records that meet the filter conditions, which is not affected by pagination.</para>
+        /// <para>The total number of metering records that match the filter conditions, which is not affected by pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The minor versions of each component in the RDS AI application instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;studio\&quot;:\&quot;20260602r1\&quot;,\&quot;storage\&quot;:\&quot;v1.48.9\&quot;,\&quot;auth\&quot;:\&quot;v2.188.1\&quot;,\&quot;kong\&quot;:\&quot;3.9.0\&quot;,\&quot;rest\&quot;:\&quot;v12.2.12\&quot;,\&quot;meta\&quot;:\&quot;v0.89.3\&quot;,\&quot;realtime-dev\&quot;:\&quot;v2.34.47\&quot;,\&quot;postgres\&quot;:\&quot;rds_postgres_1700_20260830\&quot;}</para>
+        /// <para>{&quot;studio&quot;:&quot;20260602r1&quot;,&quot;storage&quot;:&quot;v1.48.9&quot;,&quot;auth&quot;:&quot;v2.188.1&quot;,&quot;kong&quot;:&quot;3.9.0&quot;,&quot;rest&quot;:&quot;v12.2.12&quot;,&quot;meta&quot;:&quot;v0.89.3&quot;,&quot;realtime-dev&quot;:&quot;v2.34.47&quot;,&quot;postgres&quot;:&quot;rds_postgres_1700_20260830&quot;}</para>
         /// </summary>
         [NameInMap("MinorVersionDetail")]
         [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The release notes for the minor version of the RDS AI application instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;20260915\&quot;:\&quot;realtime：1xxx；auth：2xxx；storage：3xxx\&quot;,\&quot;20260917\&quot;:\&quot;studio：4xxx；auth：5xxx\&quot;}</para>
+        /// <para>{&quot;20260915&quot;:&quot;realtime：1xxx；auth：2xxx；storage：3xxx&quot;,&quot;20260917&quot;:&quot;studio：4xxx；auth：5xxx&quot;}</para>
         /// </summary>
         [NameInMap("MinorVersionReleaseNotes")]
         [Validation(Required=false)]
