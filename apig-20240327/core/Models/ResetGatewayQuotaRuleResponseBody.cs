@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The response data content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;key\&quot;: \&quot;value\&quot;}</para>
+        /// <para>{&quot;key&quot;: &quot;value&quot;}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

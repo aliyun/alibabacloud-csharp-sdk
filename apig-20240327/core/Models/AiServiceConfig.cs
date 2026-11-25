@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The authentication key for Vertex AI.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;my-project\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----...\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></para>
+            /// <para>{&quot;type&quot;:&quot;service_account&quot;,&quot;project_id&quot;:&quot;my-project&quot;,&quot;private_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;client_email&quot;:&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>&quot;,&quot;token_uri&quot;:&quot;<a href="https://oauth2.googleapis.com/token%5C%22%7D">https://oauth2.googleapis.com/token\&quot;}</a></para>
             /// </summary>
             [NameInMap("vertexAuthKey")]
             [Validation(Required=false)]

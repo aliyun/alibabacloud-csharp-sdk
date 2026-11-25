@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The match rule of the canary route.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;change_order_revision\&quot;:\&quot;3.686.0_fc-sz-futian.1662568293908382_faas-eerouter\&quot;}</para>
+                /// <para>{&quot;change_order_revision&quot;:&quot;3.686.0_fc-sz-futian.1662568293908382_faas-eerouter&quot;}</para>
                 /// </summary>
                 [NameInMap("match")]
                 [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The match rule of the route.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;product_code\&quot;:\&quot;apigw\&quot;}</para>
+            /// <para>{&quot;product_code&quot;:&quot;apigw&quot;}</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]

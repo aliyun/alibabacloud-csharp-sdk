@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The detailed data related to the risk. The data structure varies based on the risk type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;30010010001&quot;:&quot;[\&quot;\&quot;,\&quot;\&quot;]&quot;}</para>
+            /// <para>{&quot;30010010001&quot;:&quot;[&quot;&quot;,&quot;&quot;]&quot;}</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]

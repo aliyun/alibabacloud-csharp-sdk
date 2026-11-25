@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The list of usage details.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{&quot;model&quot;:&quot;qwen-plus&quot;,\&quot;usedAmount\&quot;:210}]</para>
+                /// <para>[{&quot;model&quot;:&quot;qwen-plus&quot;,&quot;usedAmount&quot;:210}]</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]

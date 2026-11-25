@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetModelTokenRateLimitResponseBodyData Data { get; set; }
         public class GetModelTokenRateLimitResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The most recent configuration revision successfully delivered to the control plane.</para>
+            /// <para>The version of the configuration that was last successfully delivered to the control plane.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of tokens per minute (TPM) for this consumer using this model.</para>
+                /// <para>The maximum number of tokens per minute (TPM) allowed for this consumer to use this model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The rule ID for the global model quota, which can be matched with the rule hits in the gateway throttling logs. This parameter is returned only when the global quota is configured.</para>
+            /// <para>The rule ID for the global model quota, which can be matched with the rule hits in the gateway throttling logs. This field is returned only when a global quota is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-tpm/gw-example01/msc-example01/global</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? GlobalTpm { get; set; }
 
             /// <summary>
-            /// <para>The actual model card ID (prefixed with msc-) or the logical model ID (prefixed with vm-).</para>
+            /// <para>The physical model card ID that starts with msc- or the logical model ID that starts with vm-.</para>
             /// 
             /// <b>Example:</b>
             /// <para>msc-example01</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelId { get; set; }
 
             /// <summary>
-            /// <para>The saved revision of the model throttling configuration. Pass this value as expectedRevision in subsequent modification requests.</para>
+            /// <para>The saved version of the model throttling configuration. Pass this value as expectedRevision in subsequent modification requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The cause of the error. This parameter is omitted if the request is successful.</para>
+        /// <para>The cause of the error. This field can be omitted if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified gateway does not exist.</para>

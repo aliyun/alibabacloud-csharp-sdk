@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The end time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793919600.</para>
+        /// <para>The end time. The value is a UNIX timestamp in seconds (since the UTC epoch), such as 1793919600.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>opaque-token-from-previous-page</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a UNIX timestamp in seconds since the UTC epoch. Example: 1793916000.</para>
+        /// <para>The start time. The value is a UNIX timestamp in seconds (since the UTC epoch), such as 1793916000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

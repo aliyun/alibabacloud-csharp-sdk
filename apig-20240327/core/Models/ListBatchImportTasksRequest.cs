@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListBatchImportTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the creation time range. Specify the time in RFC 3339 format.</para>
+        /// <para>The end time of the creation time range in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-26T11:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The start mark for the paging query.</para>
+        /// <para>The starting token for the paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the creation time range. Specify the time in RFC 3339 format.</para>
+        /// <para>The start time of the creation time range in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-26T10:00:00Z</para>

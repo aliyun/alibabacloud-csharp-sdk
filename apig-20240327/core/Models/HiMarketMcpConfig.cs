@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The MCP tool definitions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;name\&quot;:\&quot;search\&quot;,\&quot;description\&quot;:\&quot;Search tool\&quot;}]</para>
+        /// <para>[{&quot;name&quot;:&quot;search&quot;,&quot;description&quot;:&quot;Search tool&quot;}]</para>
         /// </summary>
         [NameInMap("tools")]
         [Validation(Required=false)]

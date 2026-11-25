@@ -56,6 +56,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>qwen-prod/qwen-plus</para>
+            /// </summary>
+            [NameInMap("callName")]
+            [Validation(Required=false)]
+            public string CallName { get; set; }
+
+            /// <summary>
             /// <para>The credit pricing configuration of the model.</para>
             /// </summary>
             [NameInMap("credit")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListBatchExportTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+        /// <para>The end time of the creation time range. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-26T11:00:00Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the creation time range. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+        /// <para>The start time of the creation time range. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-26T10:00:00Z</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetBatchExportTaskResponseBodyData Data { get; set; }
         public class GetBatchExportTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task creation time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</para>
+            /// <para>The task creation time. Format: yyyy-MM-dd&quot;T&quot;HH:mm:ss&quot;Z&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-15T10:00:00Z</para>

@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListAiModelSourcesResponseBodyDataItems> Items { get; set; }
             public class ListAiModelSourcesResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>qwen-prod</para>
+                /// </summary>
+                [NameInMap("callNamePrefix")]
+                [Validation(Required=false)]
+                public string CallNamePrefix { get; set; }
+
+                /// <summary>
                 /// <para>The display name of the model source or model provider.</para>
                 /// 
                 /// <b>Example:</b>

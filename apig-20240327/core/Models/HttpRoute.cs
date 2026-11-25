@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The MCP server metadata configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;config\&quot;:{}}</para>
+            /// <para>{&quot;config&quot;:{}}</para>
             /// </summary>
             [NameInMap("mcpServerConfig")]
             [Validation(Required=false)]

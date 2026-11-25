@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card licenses to a consumer.</para>
+        /// <para>Grants model card licenses to consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -608,7 +608,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card licenses to a consumer.</para>
+        /// <para>Grants model card licenses to consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -666,7 +666,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card licenses to a consumer.</para>
+        /// <para>Grants model card licenses to consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -685,7 +685,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants model card licenses to a consumer.</para>
+        /// <para>Grants model card licenses to consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -964,7 +964,145 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes specified routes or all visible routes under the same HTTP API in batches.</para>
+        /// <para>批量删除HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteHttpApiRoutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteHttpApiRoutesResponse
+        /// </returns>
+        public BatchDeleteHttpApiRoutesResponse BatchDeleteHttpApiRoutesWithOptions(string httpApiId, BatchDeleteHttpApiRoutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAll))
+            {
+                body["deleteAll"] = request.DeleteAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteIds))
+            {
+                body["routeIds"] = request.RouteIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteHttpApiRoutes",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/routes/batch-delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteHttpApiRoutesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteHttpApiRoutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteHttpApiRoutesResponse
+        /// </returns>
+        public async Task<BatchDeleteHttpApiRoutesResponse> BatchDeleteHttpApiRoutesWithOptionsAsync(string httpApiId, BatchDeleteHttpApiRoutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAll))
+            {
+                body["deleteAll"] = request.DeleteAll;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteIds))
+            {
+                body["routeIds"] = request.RouteIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteHttpApiRoutes",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/routes/batch-delete",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteHttpApiRoutesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteHttpApiRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteHttpApiRoutesResponse
+        /// </returns>
+        public BatchDeleteHttpApiRoutesResponse BatchDeleteHttpApiRoutes(string httpApiId, BatchDeleteHttpApiRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchDeleteHttpApiRoutesWithOptions(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteHttpApiRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteHttpApiRoutesResponse
+        /// </returns>
+        public async Task<BatchDeleteHttpApiRoutesResponse> BatchDeleteHttpApiRoutesAsync(string httpApiId, BatchDeleteHttpApiRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchDeleteHttpApiRoutesWithOptionsAsync(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes specified routes or all visible routes under the same HTTP API in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1023,7 +1161,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes specified routes or all visible routes under the same HTTP API in batches.</para>
+        /// <para>Publishes specified routes or all visible routes under the same HTTP API in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1082,7 +1220,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes specified routes or all visible routes under the same HTTP API in batches.</para>
+        /// <para>Publishes specified routes or all visible routes under the same HTTP API in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1106,7 +1244,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes specified routes or all visible routes under the same HTTP API in batches.</para>
+        /// <para>Publishes specified routes or all visible routes under the same HTTP API in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1620,6 +1758,152 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await BatchRemoveConsumerGroupConsumersWithOptionsAsync(consumerGroupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量下线HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUndeployHttpApiRoutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUndeployHttpApiRoutesResponse
+        /// </returns>
+        public BatchUndeployHttpApiRoutesResponse BatchUndeployHttpApiRoutesWithOptions(string httpApiId, BatchUndeployHttpApiRoutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            {
+                body["async"] = request.Async;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteIds))
+            {
+                body["routeIds"] = request.RouteIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UndeployAll))
+            {
+                body["undeployAll"] = request.UndeployAll;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUndeployHttpApiRoutes",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/routes/batch-undeploy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUndeployHttpApiRoutesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量下线HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUndeployHttpApiRoutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUndeployHttpApiRoutesResponse
+        /// </returns>
+        public async Task<BatchUndeployHttpApiRoutesResponse> BatchUndeployHttpApiRoutesWithOptionsAsync(string httpApiId, BatchUndeployHttpApiRoutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            {
+                body["async"] = request.Async;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteIds))
+            {
+                body["routeIds"] = request.RouteIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UndeployAll))
+            {
+                body["undeployAll"] = request.UndeployAll;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUndeployHttpApiRoutes",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/routes/batch-undeploy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUndeployHttpApiRoutesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量下线HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUndeployHttpApiRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUndeployHttpApiRoutesResponse
+        /// </returns>
+        public BatchUndeployHttpApiRoutesResponse BatchUndeployHttpApiRoutes(string httpApiId, BatchUndeployHttpApiRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchUndeployHttpApiRoutesWithOptions(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量下线HttpApi的路由</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUndeployHttpApiRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUndeployHttpApiRoutesResponse
+        /// </returns>
+        public async Task<BatchUndeployHttpApiRoutesResponse> BatchUndeployHttpApiRoutesAsync(string httpApiId, BatchUndeployHttpApiRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchUndeployHttpApiRoutesWithOptionsAsync(httpApiId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2439,6 +2723,10 @@ namespace AlibabaCloud.SDK.APIG20240327
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallNamePrefix))
+            {
+                body["callNamePrefix"] = request.CallNamePrefix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 body["displayName"] = request.DisplayName;
@@ -2503,6 +2791,10 @@ namespace AlibabaCloud.SDK.APIG20240327
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallNamePrefix))
+            {
+                body["callNamePrefix"] = request.CallNamePrefix;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 body["displayName"] = request.DisplayName;
@@ -2580,7 +2872,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an in-source AI model.</para>
+        /// <para>Creates an AI model in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2652,7 +2944,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an in-source AI model.</para>
+        /// <para>Creates an AI model in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2724,7 +3016,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an in-source AI model.</para>
+        /// <para>Creates an AI model in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2743,7 +3035,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an in-source AI model.</para>
+        /// <para>Creates an AI model in a model source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6270,7 +6562,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model creation API.</para>
+        /// <para>Creates an API for model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6366,7 +6658,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model creation API.</para>
+        /// <para>Creates an API for model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6462,7 +6754,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model creation API.</para>
+        /// <para>Creates an API for model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6481,7 +6773,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model creation API.</para>
+        /// <para>Creates an API for model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11131,7 +11423,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
+        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11186,7 +11478,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
+        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11241,7 +11533,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
+        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11265,7 +11557,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Automatically stops the service and cleans up the resources owned by the API when a published new-version model API is deleted. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained during deletion or upon failure. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
+        /// <para>When you delete a published new-version model API, the system automatically stops the service and cleans up the dedicated resources of the API. A successful response indicates that the request is accepted or is an idempotent replay of a completed deletion, but it does not indicate that all background steps are complete. Monitor the progress by checking the deleteStatus parameter of GetModelApi. Only a NotFound.ModelApi error explicitly indicates that the deletion is fully complete. The object is retained if the deletion is in progress or fails. Shared model sources, model groups, models, services, consumers, and keys are not deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13306,6 +13598,144 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>检测HttpApi间的路由冲突</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectHttpApiConflictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectHttpApiConflictsResponse
+        /// </returns>
+        public DetectHttpApiConflictsResponse DetectHttpApiConflictsWithOptions(string httpApiId, DetectHttpApiConflictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestApiConfig))
+            {
+                body["restApiConfig"] = request.RestApiConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteId))
+            {
+                body["routeId"] = request.RouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetectHttpApiConflicts",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/detect-conflicts",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetectHttpApiConflictsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检测HttpApi间的路由冲突</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectHttpApiConflictsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectHttpApiConflictsResponse
+        /// </returns>
+        public async Task<DetectHttpApiConflictsResponse> DetectHttpApiConflictsWithOptionsAsync(string httpApiId, DetectHttpApiConflictsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestApiConfig))
+            {
+                body["restApiConfig"] = request.RestApiConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteId))
+            {
+                body["routeId"] = request.RouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetectHttpApiConflicts",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/http-apis/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(httpApiId) + "/detect-conflicts",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetectHttpApiConflictsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检测HttpApi间的路由冲突</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectHttpApiConflictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectHttpApiConflictsResponse
+        /// </returns>
+        public DetectHttpApiConflictsResponse DetectHttpApiConflicts(string httpApiId, DetectHttpApiConflictsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DetectHttpApiConflictsWithOptions(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检测HttpApi间的路由冲突</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectHttpApiConflictsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectHttpApiConflictsResponse
+        /// </returns>
+        public async Task<DetectHttpApiConflictsResponse> DetectHttpApiConflictsAsync(string httpApiId, DetectHttpApiConflictsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DetectHttpApiConflictsWithOptionsAsync(httpApiId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Exports a specified HTTP API.</para>
         /// </summary>
         /// 
@@ -13924,7 +14354,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a model source.</para>
+        /// <para>Queries AI models in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13964,7 +14394,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a model source.</para>
+        /// <para>Queries AI models in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14004,7 +14434,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a model source.</para>
+        /// <para>Queries AI models in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14023,7 +14453,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI models in a model source.</para>
+        /// <para>Queries AI models in a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16875,7 +17305,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</para>
+        /// <para>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16920,7 +17350,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</para>
+        /// <para>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16965,7 +17395,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</para>
+        /// <para>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16989,7 +17419,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the current half-open cycle Redis summary for the configured metering policy of the current user\&quot;s dedicated Professional AI gateway. Only total instance counts are supported. Filters for time ranges, models, connections, or SLS destinations are not accepted. If data_present is false, it indicates that no cycle data is available, and the value is not padded with zeros.</para>
+        /// <para>Retrieves the current half-open cycle Redis summary of the configured metering policy for the dedicated Professional AI gateway of the current user. It only supports the total number of instances and does not accept filtering by time range, model, connection, or SLS destination. A value of false for data_present indicates that no cycle data is available, and it is not padded with zero values.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17374,7 +17804,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -17410,7 +17840,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -17446,7 +17876,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17461,7 +17891,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17696,7 +18126,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration delivery of a logical model.</para>
+        /// <para>Queries the logical model configuration delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17736,7 +18166,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration delivery of a logical model.</para>
+        /// <para>Queries the logical model configuration delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17776,7 +18206,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration delivery of a logical model.</para>
+        /// <para>Queries the logical model configuration delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17795,7 +18225,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration delivery of a logical model.</para>
+        /// <para>Queries the logical model configuration delivery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23310,7 +23740,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model card entitlements for consumers.</para>
+        /// <para>Queries the list of consumer model card entitlements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23372,7 +23802,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model card entitlements for consumers.</para>
+        /// <para>Queries the list of consumer model card entitlements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23434,7 +23864,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model card entitlements for consumers.</para>
+        /// <para>Queries the list of consumer model card entitlements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23453,7 +23883,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of model card entitlements for consumers.</para>
+        /// <para>Queries the list of consumer model card entitlements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25456,7 +25886,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. This operation supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25539,7 +25969,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. This operation supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25622,7 +26052,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. This operation supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25646,7 +26076,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. Supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
+        /// <para>Queries the historical WebSocket events delivered by a dedicated Professional AI gateway to the Simple Log Service (SLS) of the current user. This operation supports a time range of up to 31 days, conditional filtering, and cursor-based pagination. The results do not represent the online connection status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -41964,6 +42394,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["aiServiceConfig"] = request.AiServiceConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyIndexToRemove))
+            {
+                body["apiKeyIndexToRemove"] = request.ApiKeyIndexToRemove;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyReferencesToAdd))
             {
                 body["apiKeyReferencesToAdd"] = request.ApiKeyReferencesToAdd;
@@ -42057,6 +42491,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiServiceConfig))
             {
                 body["aiServiceConfig"] = request.AiServiceConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyIndexToRemove))
+            {
+                body["apiKeyIndexToRemove"] = request.ApiKeyIndexToRemove;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyReferencesToAdd))
             {

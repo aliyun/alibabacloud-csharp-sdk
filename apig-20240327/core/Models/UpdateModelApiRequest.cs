@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateModelApiRequest : TeaModel {
         /// <summary>
-        /// <para>The API access prefix. The default value is / during creation. If omitted during an update, the original value is retained.</para>
+        /// <para>The access prefix of the API. The default value is / when created. If omitted in an update request, the original value is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/beta</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>The description of the model API. If omitted during an update, the original value is retained.</para>
+        /// <para>The description of the model API. If omitted in an update request, the original value is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Model API for business integration</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable direct supply fallback. If omitted during an update, the original value is retained. Explicitly set to false to disable it.</para>
+        /// <para>Specifies whether to enable the direct supply fallback. If omitted in an update request, the original value is retained. Set to false to explicitly disable it.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DirectSupplyFallbackEnabled { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the selected custom or default domain names of the instance. This parameter must be explicitly non-empty during creation. If omitted during an update, the original value is retained. When submitted, the entire list is replaced and cannot be empty.</para>
+        /// <para>The IDs of the selected custom or instance default domain names. This parameter must be explicitly set to a non-empty value when creating an API. If omitted in an update request, the original value is retained. When submitted, the entire list is replaced and cannot be empty.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> DomainIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable consumer API key authentication. If omitted during an update, the original value is retained. The type is fixed to Apikey or Custom.</para>
+        /// <para>Specifies whether to enable consumer API key authentication. If omitted in an update request, the original value is retained. The type is fixed to Apikey or Custom.</para>
         /// </summary>
         [NameInMap("enableAuth")]
         [Validation(Required=false)]
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The time to first byte.</para>
+        /// <para>The first byte timeout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>The model selection. This parameter is required during creation. If omitted during an update, the original value is retained. When submitted, the entire selection is replaced.</para>
+        /// <para>The model selection. This parameter is required when creating an API. If omitted in an update request, the original value is retained. When submitted, the entire selection is replaced.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ModelSelection ModelSelection { get; set; }
 
         /// <summary>
-        /// <para>Supported only by the new version of ModelAPI in minimalist mode: merges the actual source model IDs added to or removed from the model source in this request into the latest selection within the lock. This parameter is mutually exclusive with modelSelection and cannot be null or an empty delta. The standard update and publish process applies.</para>
+        /// <para>Supported only by the new version of Model API in minimalist mode. Merges the actual source model IDs added or removed in this request into the latest locked selection. This parameter is mutually exclusive with modelSelection and cannot be null or an empty delta. The standard update and publish process applies.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ModelSelectionDelta ModelSelectionDelta { get; set; }
 
         /// <summary>
-        /// <para>The name of the model API. If omitted or set to null, the original value is retained. When submitted, the value is trimmed of leading and trailing whitespace, must be non-empty, contain a maximum of 128 UTF-8 bytes, and cannot contain @ or /. Renaming the API does not change the API ID or access prefix.</para>
+        /// <para>The name of the model API. If omitted or set to null, the original value is retained. When submitted, the name is trimmed of leading and trailing whitespace, must not be empty, can be up to 128 UTF-8 bytes in length, and cannot contain the at sign (@) or forward slash (/). Renaming the API does not change the API ID or the access prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beta-model-api</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configurations for AI request logs and AI security protection. If omitted during an update, the original values are retained. When submitted, the inline policies of both types are entirely replaced. An empty array clears both types. Independent token quotas are not affected.</para>
+        /// <para>The policy configurations for AI request logging and AI security protection only. If omitted in an update request, the original values are retained. When submitted, the inline policies of both types are entirely replaced. An empty array clears both types of policies. Independent token quotas are not affected.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>

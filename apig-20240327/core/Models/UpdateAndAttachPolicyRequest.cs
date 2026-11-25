@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;enable\&quot;:false}</para>
+        /// <para>{&quot;enable&quot;:false}</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]

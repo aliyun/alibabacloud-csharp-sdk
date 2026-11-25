@@ -31,6 +31,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiServiceConfig AiServiceConfig { get; set; }
 
         /// <summary>
+        /// <para>Removes a custom upstream API key from the current configuration. The index starts from 1. You must specify expectedConfigRevision, maintain the order of the remaining keys, and retain at least one key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("apiKeyIndexToRemove")]
+        [Validation(Required=false)]
+        public int? ApiKeyIndexToRemove { get; set; }
+
+        /// <summary>
         /// <para>The list of KMS reference names to append. This parameter is only available in Reference mode. KMS content is not read.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> DnsServers { get; set; }
 
         /// <summary>
-        /// <para>The expected configuration revision for conditional updates of the AI service. If this parameter is not provided, backward compatibility with legacy calls is maintained. If the version changes, the Conflict.ServiceConfigurationChanged error is returned.</para>
+        /// <para>The expected configuration revision for conditional updates of the AI service. If this parameter is not specified, the call is compatible with legacy versions. If the version changes, Conflict.ServiceConfigurationChanged is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7e4f52a9b0c34d16a268e913f5c2087b</para>
@@ -211,7 +221,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The panic threshold. When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally, and requests are sent only to healthy nodes, not to ejected nodes. When the proportion of healthy nodes is less than or equal to the panic threshold, health checks are effectively disabled, and requests are sent to all nodes, including ejected ones.</para>
+            /// <para>The panic threshold.</para>
+            /// <para>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks take effect normally. Requests are sent only to healthy nodes and not to ejected nodes.
+            /// When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled. Requests are sent to all nodes, including ejected nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -221,7 +233,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? FailurePercentageMinimumHosts { get; set; }
 
             /// <summary>
-            /// <para>The failure rate threshold. When the proportion of failed requests for a node reaches this threshold, the system triggers the ejection mechanism for the node.</para>
+            /// <para>The failure percentage threshold. When the proportion of failed requests for a node reaches this threshold, the system triggers the ejection mechanism for the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

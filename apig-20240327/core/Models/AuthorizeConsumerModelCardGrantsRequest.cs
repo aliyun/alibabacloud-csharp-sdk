@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> ModelCardIds { get; set; }
 
         /// <summary>
-        /// <para>The actual model group IDs of the current instance. The modelCardIds parameter can be empty only when group licenses are granted. Group licenses allow zero intersection with the current API, but principal relationships with both target types empty cannot be saved.</para>
+        /// <para>The actual model group IDs of the current instance. modelCardIds can be empty only when group licenses are granted. Group licenses allow zero intersection with the current API, but principal relationships with both target types empty cannot be saved.</para>
         /// </summary>
         [NameInMap("modelGroupIds")]
         [Validation(Required=false)]

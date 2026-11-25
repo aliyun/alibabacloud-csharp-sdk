@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The match condition configuration for API publishing.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</para>
+                    /// <para>{&quot;change_order_revision&quot;:&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter&quot;}</para>
                     /// </summary>
                     [NameInMap("match")]
                     [Validation(Required=false)]

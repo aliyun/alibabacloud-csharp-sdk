@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListBatchImportTasksResponseBodyData Data { get; set; }
         public class ListBatchImportTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of tasks. Tasks are returned in descending order of creation time, with the latest tasks first.</para>
+            /// <para>The list of tasks. The tasks are returned in descending order of creation time, with the latest tasks first.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The gateway instance ID associated with the task.</para>
+                /// <para>The ID of the gateway instance associated with the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-xxx</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TaskType { get; set; }
 
                 /// <summary>
-                /// <para>The total number of tasks.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of tasks.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in the current request.</para>
+        /// <para>The maximum number of records returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. This parameter is empty if no more results are available.</para>
+        /// <para>The starting token for the next query. This parameter is empty when no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxx</para>

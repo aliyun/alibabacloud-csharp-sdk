@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Basis { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a next page is available.</para>
+            /// <para>Indicates whether there is a next page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
