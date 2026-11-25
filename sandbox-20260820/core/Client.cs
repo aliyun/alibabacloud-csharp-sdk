@@ -3670,7 +3670,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota configuration list for the current account by using paging.</para>
+        /// <para>Performs a paged query to retrieve the quota configurations for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3720,7 +3720,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota configuration list for the current account by using paging.</para>
+        /// <para>Performs a paged query to retrieve the quota configurations for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3770,7 +3770,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota configuration list for the current account by using paging.</para>
+        /// <para>Performs a paged query to retrieve the quota configurations for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3789,7 +3789,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the quota configuration list for the current account by using paging.</para>
+        /// <para>Performs a paged query to retrieve the quota configurations for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">

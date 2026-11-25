@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
 {
     public class QuotaUsage : TeaModel {
         /// <summary>
-        /// <para>The consumed CPU quota in vCPUs, not the CPU utilization.</para>
+        /// <para>The consumed CPU quota in vCPUs, which is not the CPU utilization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public double? CpuCores { get; set; }
 
         /// <summary>
-        /// <para>The number of unreleased snapshot-based sandbox creation concurrency authorizations.</para>
+        /// <para>The number of unreleased concurrency authorizations for snapshot-based sandbox creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("createSessionWithSnapshotConcurrency")]
+        [NameInMap("createSandboxWithSnapshotConcurrency")]
         [Validation(Required=false)]
-        public int? CreateSessionWithSnapshotConcurrency { get; set; }
+        public int? CreateSandboxWithSnapshotConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The number of unreleased snapshot creation concurrency authorizations.</para>
+        /// <para>The number of unreleased concurrency authorizations for snapshot creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public long? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The consumed memory quota in GB, not the actual memory used by processes.</para>
+        /// <para>The consumed memory quota in GB, which is not the actual memory used by processes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public double? MemoryGB { get; set; }
 
         /// <summary>
-        /// <para>The number of unreleased sandbox hibernation concurrency authorizations.</para>
+        /// <para>The number of unreleased concurrency authorizations for sandbox hibernation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? PauseConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The number of unreleased sandbox resume concurrency authorizations.</para>
+        /// <para>The number of unreleased concurrency authorizations for resuming sandboxes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? ResumeConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The number of cores consumed from the team\&quot;s exclusive CPU creation quota that have not yet been naturally replenished. This is not the cumulative creation volume in the last minute. This field is omitted when there is no valid exclusive bucket snapshot, and actual zeros and decimal values are preserved.</para>
+        /// <para>The number of cores consumed from the exclusive CPU creation quota of the team that have not yet been naturally replenished. This is not the cumulative creation volume over the last minute. This field is omitted when no valid exclusive bucket snapshot is available. Actual zeros and decimals are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19.875</para>

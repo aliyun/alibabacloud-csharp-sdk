@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? CpuCores { get; set; }
 
         /// <summary>
-        /// <para>The concurrent quota for creating sandboxes from snapshots in a team. This indicates the maximum number of requests for creating sandboxes from snapshots that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits creating sandboxes from snapshots. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</para>
+        /// <para>The team snapshot-based sandbox creation concurrency quota, in requests. This value represents the maximum number of snapshot-based sandbox creation requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit snapshot-based sandbox creation. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
-        [NameInMap("createSessionWithSnapshotConcurrency")]
+        [NameInMap("createSandboxWithSnapshotConcurrency")]
         [Validation(Required=false)]
-        public int? CreateSessionWithSnapshotConcurrency { get; set; }
+        public int? CreateSandboxWithSnapshotConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The concurrent quota for creating snapshots in a team. This indicates the maximum number of snapshot creation requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits creating snapshots. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</para>
+        /// <para>The team snapshot creation concurrency quota, in requests. This value represents the maximum number of snapshot creation requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit snapshot creation. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? CreateSnapshotConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The quota for the number of running instances.</para>
+        /// <para>The quota for active instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MemoryGB { get; set; }
 
         /// <summary>
-        /// <para>The concurrent quota for sandbox hibernation in a team. This indicates the maximum number of sandbox hibernation requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits sandbox hibernation. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</para>
+        /// <para>The team sandbox hibernation concurrency quota, in requests. This value represents the maximum number of sandbox hibernation requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit sandbox hibernation. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? PauseConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The concurrent quota for resuming sandboxes in a team. This indicates the maximum number of sandbox resumption requests that can be executed at the same time. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive quota. 0 prohibits resuming sandboxes. -1 clears the exclusive quota and restores the remaining quota of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</para>
+        /// <para>The team sandbox wake-up concurrency quota, in requests. This value represents the maximum number of sandbox wake-up requests that can be executed at the same time. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive quota. Set it to 0 to prohibit sandbox wake-up. Set it to -1 to clear the exclusive quota and restore the remaining quota of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? ResumeConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The Team CPU creation rate, in cores per minute. Omit or pass null to retain the original configuration during updates. A positive integer sets an exclusive rate. 0 prohibits adding new CPU capacity. -1 clears the exclusive rate and restores the remaining rate of the shared account. During queries, this field is omitted if not configured, an explicit 0 is retained, and -1 is not returned.</para>
+        /// <para>The team CPU creation rate, in cores per minute. When updating, omit this parameter or set it to null to retain the original configuration. Set it to a positive integer to specify an exclusive rate. Set it to 0 to prohibit new CPU capacity. Set it to -1 to clear the exclusive rate and restore the remaining rate of the shared account. In query responses, this parameter is omitted if it is not configured. An explicit value of 0 is retained, and -1 is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public long? ScalingCpuCoresPerMinute { get; set; }
 
         /// <summary>
-        /// <para>The quota tag value. This value is the team ID, and quotas are calculated independently based on this dimension.</para>
+        /// <para>The quota tag value, which represents the team ID. Quotas are independently calculated based on this dimension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7696f4cf-****</para>

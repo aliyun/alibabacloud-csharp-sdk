@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Do not specify this parameter for the first query. To query the next page, specify the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first request. To query the next page, specify the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Trigger_fasdatalake_deductionfee</para>

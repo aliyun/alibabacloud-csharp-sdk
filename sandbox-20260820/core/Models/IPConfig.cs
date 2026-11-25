@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sandbox20260820.Models
         /// <para>The description of the IP rule. The length cannot exceed 128 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>办公网出口地址</para>
+        /// <para>The egress address of the office network.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
