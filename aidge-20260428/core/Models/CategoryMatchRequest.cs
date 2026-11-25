@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Women\&quot;s spring new arrival clothing</para>
+        /// <para>Women&quot;s spring new arrival clothing</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

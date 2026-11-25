@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The matching reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The core of the product is a cat collar with AirTag tracking functionality, which belongs to the \&quot;Location and Activity Trackers\&quot; category. The leaf node semantics precisely match its tracking function and cat-specific attributes</para>
+            /// <para>The core of the product is a cat collar with AirTag tracking functionality, which belongs to the &quot;Location and Activity Trackers&quot; category. The leaf node semantics precisely match its tracking function and cat-specific attributes</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]

@@ -104,14 +104,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// <para>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;\].</para>
+                /// <para>The list of selected attribute value texts, such as [&quot;iOS&quot;,&quot;Android&quot;].</para>
                 /// </summary>
                 [NameInMap("SelectedValues")]
                 [Validation(Required=false)]
                 public List<string> SelectedValues { get; set; }
 
                 /// <summary>
-                /// <para>The list of selected attribute value IDs, such as [30127,30128\].</para>
+                /// <para>The list of selected attribute value IDs, such as [30127,30128].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[30127,30128]</para>

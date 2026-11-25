@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public EcomVideoRecreationRequestInputProductInfo ProductInfo { get; set; }
             public class EcomVideoRecreationRequestInputProductInfo : TeaModel {
                 /// <summary>
-                /// <para>The product category. Example: Women\&quot;s clothing/Sun-protective clothing.</para>
+                /// <para>The product category. Example: Women&quot;s clothing/Sun-protective clothing.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Women\&quot;s clothing/sun protection clothing</para>
+                /// <para>Women&quot;s clothing/sun protection clothing</para>
                 /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
