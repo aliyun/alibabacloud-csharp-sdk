@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAttachInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of attachment information.</para>
+        /// <para>The list of mount information.</para>
         /// </summary>
         [NameInMap("AttachInfos")]
         [Validation(Required=false)]
         public List<ListKVCacheStoreAttachInfoResponseBodyAttachInfos> AttachInfos { get; set; }
         public class ListKVCacheStoreAttachInfoResponseBodyAttachInfos : TeaModel {
             /// <summary>
-            /// <para>The time of the last attachment. The time follows the ISO 8601 standard. If the instance is not attached, the value is null.</para>
+            /// <para>The time of the last mount operation in ISO 8601 format. If the instance is not mounted, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-20T08:30:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The serial number (SN) of the NVMe channel disk. This value is returned only when protocol is set to nvme and the channel is bound in the current round. If other protocols are used or the channel is not bound, the value is null.</para>
+            /// <para>The SN of the NVMe controller. This parameter is returned only when Protocol is set to nvme.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kvaaaaaaaaaaaaaaaa</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string ControlSn { get; set; }
 
             /// <summary>
-            /// <para>The ID of the compute resource, such as the ECS instance ID or the Lingjun compute node ID.</para>
+            /// <para>The compute-side instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i-hdsagtg61h2hf21</para>
+            /// <para>i-0jl0vy0d9yxlp4bqkxgi</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string MountPointId { get; set; }
 
             /// <summary>
-            /// <para>The NGUID of the KVCacheStore data disk. This value is returned only when protocol is set to nvme and the NGUID is generated for the instance. If other protocols are used or the NGUID is missing, the value is null.</para>
+            /// <para>The NGUID of the NVMe channel device. This parameter is returned only when Protocol is set to nvme.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00000000-0000-0000-0000-000000000001</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Nguid { get; set; }
 
             /// <summary>
-            /// <para>The access channel protocol of the instance. Valid values: vsc (VSC channel) and nvme (TDC NVMe channel).</para>
+            /// <para>The access channel protocol. Valid values: vsc and nvme.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nvme</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The attachment status. Valid values: Attaching, Attached, and Detaching. After an instance is detached, the record is deleted and not returned.</para>
+            /// <para>The mount status. Valid values: Attaching, Attached, and Detaching. After the instance is unmounted, the record is deleted and not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Attached</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. It is used to query the next batch of data.</para>
+        /// <para>The query token, which is used to query the next batch of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3NUkN7qf+fcWj7joK8M6tU</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID. The request ID is returned regardless of whether the call is successful.</para>
+        /// <para>The request ID. This ID is returned regardless of whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned for the paged query.</para>
+        /// <para>The total number of entries returned for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

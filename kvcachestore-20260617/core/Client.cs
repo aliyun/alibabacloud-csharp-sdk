@@ -1146,16 +1146,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attachment information of multiple KVCache instances.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be attached to multiple VSCs. Multiple attachment records may be returned for each KVCacheStore.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1222,16 +1222,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attachment information of multiple KVCache instances.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be attached to multiple VSCs. Multiple attachment records may be returned for each KVCacheStore.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1298,16 +1298,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attachment information of multiple KVCache instances.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be attached to multiple VSCs. Multiple attachment records may be returned for each KVCacheStore.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1326,16 +1326,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attachment information of multiple KVCache instances.</para>
+        /// <para>Queries the mount information of KVCache instances in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation has no status restrictions on KVCacheStore. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
         /// <list type="bullet">
-        /// <item><description>A KVCacheStore can be attached to multiple VSCs. Multiple attachment records may be returned for each KVCacheStore.</description></item>
-        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
-        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs. Multiple mount records may be returned for each KVCacheStore.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single call.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are provided, cursor-based pagination takes precedence.</description></item>
         /// </list>
         /// </description>
         /// 
