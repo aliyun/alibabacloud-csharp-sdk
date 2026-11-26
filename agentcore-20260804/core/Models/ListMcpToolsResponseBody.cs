@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListMcpToolsResponseBodyItems> Items { get; set; }
         public class ListMcpToolsResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>工具名称、说明和输入输出 Schema 的规范化 SHA-256 摘要。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</para>
+            /// </summary>
+            [NameInMap("definitionDigest")]
+            [Validation(Required=false)]
+            public string DefinitionDigest { get; set; }
+
+            /// <summary>
             /// <para>The input parameter schema of the tool.</para>
             /// 
             /// <b>Example:</b>

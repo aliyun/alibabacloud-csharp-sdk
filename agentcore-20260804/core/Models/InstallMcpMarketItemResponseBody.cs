@@ -234,6 +234,112 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string McpRuntimeMode { get; set; }
 
                     /// <summary>
+                    /// <para>仅 ImageRegistryType 为 CUSTOM 时生效，用于配置镜像拉取认证、TLS 证书校验和私网拉取网络</para>
+                    /// </summary>
+                    [NameInMap("registryConfig")]
+                    [Validation(Required=false)]
+                    public InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfig RegistryConfig { get; set; }
+                    public class InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfig : TeaModel {
+                        /// <summary>
+                        /// <para>镜像仓库需要用户名密码认证时填写</para>
+                        /// </summary>
+                        [NameInMap("authConfig")]
+                        [Validation(Required=false)]
+                        public InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfigAuthConfig AuthConfig { get; set; }
+                        public class InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfigAuthConfig : TeaModel {
+                            /// <summary>
+                            /// <para>镜像仓库密码，由服务端加密保存，查询时不返回。更新时省略该字段保留已有密码。</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>example-password</para>
+                            /// </summary>
+                            [NameInMap("password")]
+                            [Validation(Required=false)]
+                            public string Password { get; set; }
+
+                            /// <summary>
+                            /// <para>镜像仓库用户名</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>puller</para>
+                            /// </summary>
+                            [NameInMap("userName")]
+                            [Validation(Required=false)]
+                            public string UserName { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>镜像仓库 TLS 证书校验配置</para>
+                        /// </summary>
+                        [NameInMap("certConfig")]
+                        [Validation(Required=false)]
+                        public InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfigCertConfig CertConfig { get; set; }
+                        public class InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfigCertConfig : TeaModel {
+                            /// <summary>
+                            /// <para>true 表示不校验镜像仓库 TLS 证书，默认 false</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>false</para>
+                            /// </summary>
+                            [NameInMap("insecure")]
+                            [Validation(Required=false)]
+                            public bool? Insecure { get; set; }
+
+                            /// <summary>
+                            /// <para>Base64 编码的镜像仓库根 CA 证书，用于校验自签证书</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>LS0tLS1CRUdJTi...</para>
+                            /// </summary>
+                            [NameInMap("rootCaCertBase64")]
+                            [Validation(Required=false)]
+                            public string RootCaCertBase64 { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>镜像仓库仅在 VPC 内可访问时填写，FC 通过该网络拉取镜像</para>
+                        /// </summary>
+                        [NameInMap("networkConfig")]
+                        [Validation(Required=false)]
+                        public InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfigNetworkConfig NetworkConfig { get; set; }
+                        public class InstallMcpMarketItemResponseBodyDataDeploymentConfigContainerConfigurationRegistryConfigNetworkConfig : TeaModel {
+                            /// <summary>
+                            /// <para>拉取镜像使用的安全组 ID</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>sg-example</para>
+                            /// </summary>
+                            [NameInMap("securityGroupId")]
+                            [Validation(Required=false)]
+                            public string SecurityGroupId { get; set; }
+
+                            /// <summary>
+                            /// <para>拉取镜像使用的交换机 ID</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>vsw-example</para>
+                            /// </summary>
+                            [NameInMap("vSwitchId")]
+                            [Validation(Required=false)]
+                            public string VSwitchId { get; set; }
+
+                            /// <summary>
+                            /// <para>镜像仓库所在 VPC ID</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>vpc-example</para>
+                            /// </summary>
+                            [NameInMap("vpcId")]
+                            [Validation(Required=false)]
+                            public string VpcId { get; set; }
+
+                        }
+
+                    }
+
+                    /// <summary>
                     /// <para>The container source type. Currently fixed to CONTAINER_IMAGE.</para>
                     /// 
                     /// <b>Example:</b>

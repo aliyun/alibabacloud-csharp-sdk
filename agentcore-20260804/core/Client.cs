@@ -560,6 +560,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Validates in batch whether the saved tool selections match the current tool definitions of the source MCPs based on a list of virtual MCP IDs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the saved tools with the current tools of the source MCPs in batch based on a list of MCP IDs. After submission, GetMcp returns the validation details of the current MCP, ListMcps returns the validation status of each MCP, and you can also use validationId to query the complete batch report. If the previous task of any MCP in the batch is in the PENDING, RUNNING, or PAUSED state, the entire batch returns 409. You can re-validate immediately after the previous task enters the desired state.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchValidateVirtualMcpToolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchValidateVirtualMcpToolsResponse
+        /// </returns>
+        public BatchValidateVirtualMcpToolsResponse BatchValidateVirtualMcpToolsWithOptions(string workspaceId, BatchValidateVirtualMcpToolsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchValidateVirtualMcpToolsShrinkRequest request = new BatchValidateVirtualMcpToolsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchValidateVirtualMcpTools",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/virtual-tools/validations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchValidateVirtualMcpToolsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates in batch whether the saved tool selections match the current tool definitions of the source MCPs based on a list of virtual MCP IDs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the saved tools with the current tools of the source MCPs in batch based on a list of MCP IDs. After submission, GetMcp returns the validation details of the current MCP, ListMcps returns the validation status of each MCP, and you can also use validationId to query the complete batch report. If the previous task of any MCP in the batch is in the PENDING, RUNNING, or PAUSED state, the entire batch returns 409. You can re-validate immediately after the previous task enters the desired state.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchValidateVirtualMcpToolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchValidateVirtualMcpToolsResponse
+        /// </returns>
+        public async Task<BatchValidateVirtualMcpToolsResponse> BatchValidateVirtualMcpToolsWithOptionsAsync(string workspaceId, BatchValidateVirtualMcpToolsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchValidateVirtualMcpToolsShrinkRequest request = new BatchValidateVirtualMcpToolsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchValidateVirtualMcpTools",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/virtual-tools/validations",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchValidateVirtualMcpToolsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates in batch whether the saved tool selections match the current tool definitions of the source MCPs based on a list of virtual MCP IDs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the saved tools with the current tools of the source MCPs in batch based on a list of MCP IDs. After submission, GetMcp returns the validation details of the current MCP, ListMcps returns the validation status of each MCP, and you can also use validationId to query the complete batch report. If the previous task of any MCP in the batch is in the PENDING, RUNNING, or PAUSED state, the entire batch returns 409. You can re-validate immediately after the previous task enters the desired state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchValidateVirtualMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchValidateVirtualMcpToolsResponse
+        /// </returns>
+        public BatchValidateVirtualMcpToolsResponse BatchValidateVirtualMcpTools(string workspaceId, BatchValidateVirtualMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchValidateVirtualMcpToolsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates in batch whether the saved tool selections match the current tool definitions of the source MCPs based on a list of virtual MCP IDs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares the saved tools with the current tools of the source MCPs in batch based on a list of MCP IDs. After submission, GetMcp returns the validation details of the current MCP, ListMcps returns the validation status of each MCP, and you can also use validationId to query the complete batch report. If the previous task of any MCP in the batch is in the PENDING, RUNNING, or PAUSED state, the entire batch returns 409. You can re-validate immediately after the previous task enters the desired state.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchValidateVirtualMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchValidateVirtualMcpToolsResponse
+        /// </returns>
+        public async Task<BatchValidateVirtualMcpToolsResponse> BatchValidateVirtualMcpToolsAsync(string workspaceId, BatchValidateVirtualMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchValidateVirtualMcpToolsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>申请知识库资产上传地址</para>
         /// </summary>
         /// 
@@ -5162,15 +5324,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or use the query API to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
         /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
-        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The clientToken parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to create a new one.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5228,15 +5390,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or use the query API to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
         /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
-        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The clientToken parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to create a new one.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5294,15 +5456,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or use the query API to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
         /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
-        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The clientToken parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to create a new one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5321,15 +5483,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or call the query operation to confirm whether the service is ready.</para>
+        /// <para>Creates an MCP service in a specified workspace. The creation process is asynchronous. You can check the returned status or use the query API to confirm whether the service is ready.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Creates an MCP service in a workspace for agents to use the tools provided by the service.
-        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to query whether the service is ready.
+        /// The creation process is executed asynchronously. After submission, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcp">GetMcp</a> to check whether the service is ready.
         /// When deploying with a local code package, first call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetMcpCodePackageUploadUrl">GetMcpCodePackageUploadUrl</a> to obtain the URL and upload the file, and then fill the returned code package token into the deployment configuration.
-        /// <c>clientToken</c> currently does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to recreate.</para>
+        /// The clientToken parameter does not provide idempotency guarantees. If the request result is not confirmed, query existing services before deciding whether to create a new one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20316,6 +20478,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the execution status, detailed validation report, and failure causes of an asynchronous validation task for virtual MCP tools.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, report, and failure causes of an asynchronous validation task. You can continue to query the task before it finishes. PAUSED indicates that the task is paused. COMPLETED, PARTIAL_FAILED, FAILED, and CANCELED are desired states. When you query a failed task, the API operation itself still succeeds. You can determine whether the task failed based on data.status, failureCode, and failureMessage. The validation only returns a report and does not modify the gateway tool configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVirtualMcpToolValidationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirtualMcpToolValidationResponse
+        /// </returns>
+        public GetVirtualMcpToolValidationResponse GetVirtualMcpToolValidationWithOptions(string workspaceId, string validationId, GetVirtualMcpToolValidationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVirtualMcpToolValidation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/virtual-tools/validations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(validationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVirtualMcpToolValidationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the execution status, detailed validation report, and failure causes of an asynchronous validation task for virtual MCP tools.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, report, and failure causes of an asynchronous validation task. You can continue to query the task before it finishes. PAUSED indicates that the task is paused. COMPLETED, PARTIAL_FAILED, FAILED, and CANCELED are desired states. When you query a failed task, the API operation itself still succeeds. You can determine whether the task failed based on data.status, failureCode, and failureMessage. The validation only returns a report and does not modify the gateway tool configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVirtualMcpToolValidationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirtualMcpToolValidationResponse
+        /// </returns>
+        public async Task<GetVirtualMcpToolValidationResponse> GetVirtualMcpToolValidationWithOptionsAsync(string workspaceId, string validationId, GetVirtualMcpToolValidationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVirtualMcpToolValidation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/virtual-tools/validations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(validationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVirtualMcpToolValidationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the execution status, detailed validation report, and failure causes of an asynchronous validation task for virtual MCP tools.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, report, and failure causes of an asynchronous validation task. You can continue to query the task before it finishes. PAUSED indicates that the task is paused. COMPLETED, PARTIAL_FAILED, FAILED, and CANCELED are desired states. When you query a failed task, the API operation itself still succeeds. You can determine whether the task failed based on data.status, failureCode, and failureMessage. The validation only returns a report and does not modify the gateway tool configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVirtualMcpToolValidationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirtualMcpToolValidationResponse
+        /// </returns>
+        public GetVirtualMcpToolValidationResponse GetVirtualMcpToolValidation(string workspaceId, string validationId, GetVirtualMcpToolValidationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetVirtualMcpToolValidationWithOptions(workspaceId, validationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the execution status, detailed validation report, and failure causes of an asynchronous validation task for virtual MCP tools.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the status, report, and failure causes of an asynchronous validation task. You can continue to query the task before it finishes. PAUSED indicates that the task is paused. COMPLETED, PARTIAL_FAILED, FAILED, and CANCELED are desired states. When you query a failed task, the API operation itself still succeeds. You can determine whether the task failed based on data.status, failureCode, and failureMessage. The validation only returns a report and does not modify the gateway tool configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVirtualMcpToolValidationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirtualMcpToolValidationResponse
+        /// </returns>
+        public async Task<GetVirtualMcpToolValidationResponse> GetVirtualMcpToolValidationAsync(string workspaceId, string validationId, GetVirtualMcpToolValidationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetVirtualMcpToolValidationWithOptionsAsync(workspaceId, validationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS workspace, AI Registry namespace, and current network policies.</para>
         /// </summary>
         /// 
@@ -25096,6 +25396,164 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询 MCP 引用</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询 MCP 引用。校验仅返回报告，不修改网关工具配置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpReferencesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpReferencesResponse
+        /// </returns>
+        public ListMcpReferencesResponse ListMcpReferencesWithOptions(string workspaceId, string mcpServerId, ListMcpReferencesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpReferences",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/references",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpReferencesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MCP 引用</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询 MCP 引用。校验仅返回报告，不修改网关工具配置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpReferencesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpReferencesResponse
+        /// </returns>
+        public async Task<ListMcpReferencesResponse> ListMcpReferencesWithOptionsAsync(string workspaceId, string mcpServerId, ListMcpReferencesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpReferences",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/references",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpReferencesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MCP 引用</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询 MCP 引用。校验仅返回报告，不修改网关工具配置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpReferencesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpReferencesResponse
+        /// </returns>
+        public ListMcpReferencesResponse ListMcpReferences(string workspaceId, string mcpServerId, ListMcpReferencesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMcpReferencesWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MCP 引用</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询 MCP 引用。校验仅返回报告，不修改网关工具配置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpReferencesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpReferencesResponse
+        /// </returns>
+        public async Task<ListMcpReferencesResponse> ListMcpReferencesAsync(string workspaceId, string mcpServerId, ListMcpReferencesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMcpReferencesWithOptionsAsync(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of tools exposed by a specified MCP service and their input and output schemas.</para>
         /// </summary>
         /// 
@@ -25283,6 +25741,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["customTag"] = request.CustomTag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeVirtualConfig))
+            {
+                query["includeVirtualConfig"] = request.IncludeVirtualConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -25302,6 +25764,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
             {
                 query["searchType"] = request.SearchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageActive))
             {
@@ -25358,6 +25824,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["customTag"] = request.CustomTag;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeVirtualConfig))
+            {
+                query["includeVirtualConfig"] = request.IncludeVirtualConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -25377,6 +25847,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
             {
                 query["searchType"] = request.SearchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageActive))
             {
@@ -36142,7 +36616,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the MCP parameters based on a template.</para>
+        /// <para>Updates MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36210,7 +36684,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the MCP parameters based on a template.</para>
+        /// <para>Updates MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36278,7 +36752,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the MCP parameters based on a template.</para>
+        /// <para>Updates MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36303,7 +36777,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the MCP parameters based on a template.</para>
+        /// <para>Updates MCP parameters based on a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

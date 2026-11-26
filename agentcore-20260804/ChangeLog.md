@@ -1,3 +1,57 @@
+2026-11-26 Version: 3.9.0
+- Support API BatchValidateVirtualMcpTools.
+- Support API GetVirtualMcpToolValidation.
+- Support API ListMcpReferences.
+- Update API ConvertMcpToFreeEdit: add response parameters Body.data.deploymentConfig.containerConfiguration.registryConfig.
+- Update API CreateMcp: add request parameters body.virtualConfig.
+- Update API CreateMcp: add request parameters body.deploymentConfig.containerConfiguration.registryConfig.
+- Update API CreateMcp: add response parameters Body.data.appliedRevision.
+- Update API CreateMcp: add response parameters Body.data.appliedVirtualConfig.
+- Update API CreateMcp: add response parameters Body.data.operationTaskId.
+- Update API CreateMcp: add response parameters Body.data.resolvedImageUri.
+- Update API CreateMcp: add response parameters Body.data.revision.
+- Update API CreateMcp: add response parameters Body.data.sourceCount.
+- Update API CreateMcp: add response parameters Body.data.statusReasonCode.
+- Update API CreateMcp: add response parameters Body.data.toolCount.
+- Update API CreateMcp: add response parameters Body.data.virtualConfig.
+- Update API CreateMcp: add response parameters Body.data.deploymentConfig.containerConfiguration.registryConfig.
+- Update API GetMcp: add response parameters Body.data.appliedRevision.
+- Update API GetMcp: add response parameters Body.data.appliedVirtualConfig.
+- Update API GetMcp: add response parameters Body.data.lastValidation.
+- Update API GetMcp: add response parameters Body.data.lastValidationId.
+- Update API GetMcp: add response parameters Body.data.operationTaskId.
+- Update API GetMcp: add response parameters Body.data.resolvedImageUri.
+- Update API GetMcp: add response parameters Body.data.revision.
+- Update API GetMcp: add response parameters Body.data.sourceCount.
+- Update API GetMcp: add response parameters Body.data.statusReasonCode.
+- Update API GetMcp: add response parameters Body.data.toolCount.
+- Update API GetMcp: add response parameters Body.data.virtualConfig.
+- Update API GetMcp: add response parameters Body.data.deploymentConfig.containerConfiguration.registryConfig.
+- Update API InstallMcpMarketItem: add request parameters body.deploymentConfig.containerConfiguration.registryConfig.
+- Update API InstallMcpMarketItem: add response parameters Body.data.deploymentConfig.containerConfiguration.registryConfig.
+- Update API ListMcpTools: add response parameters Body.items.$.definitionDigest.
+- Update API ListMcps: add request parameters includeVirtualConfig.
+- Update API ListMcps: add request parameters type.
+- Update API ListMcps: add response parameters Body.items.$.appliedRevision.
+- Update API ListMcps: add response parameters Body.items.$.appliedVirtualConfig.
+- Update API ListMcps: add response parameters Body.items.$.lastValidationId.
+- Update API ListMcps: add response parameters Body.items.$.lastValidationStatus.
+- Update API ListMcps: add response parameters Body.items.$.operationTaskId.
+- Update API ListMcps: add response parameters Body.items.$.resolvedImageUri.
+- Update API ListMcps: add response parameters Body.items.$.revision.
+- Update API ListMcps: add response parameters Body.items.$.sourceCount.
+- Update API ListMcps: add response parameters Body.items.$.statusReasonCode.
+- Update API ListMcps: add response parameters Body.items.$.toolCount.
+- Update API ListMcps: add response parameters Body.items.$.virtualConfig.
+- Update API ListMcps: add response parameters Body.items.$.deploymentConfig.containerConfiguration.registryConfig.
+- Update API UpdateMcp: add request parameters body.expectedRevision.
+- Update API UpdateMcp: add request parameters body.virtualConfig.
+- Update API UpdateMcp: add request parameters body.deploymentConfig.containerConfiguration.registryConfig.
+- Update API UpdateMcp: add response parameters Body.data.
+- Update API UpdateMcpTemplateConfig: add request parameters body.deploymentConfig.containerConfiguration.registryConfig.
+- Update API UpdateMcpTemplateConfig: add response parameters Body.data.deploymentConfig.containerConfiguration.registryConfig.
+
+
 2026-11-26 Version: 3.8.0
 - Support API BeginAssetUpload.
 - Support API CompleteAssetUpload.

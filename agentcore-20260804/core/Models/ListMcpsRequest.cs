@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string CustomTag { get; set; }
 
         /// <summary>
+        /// <para>默认 false，仅返回修订号、状态、源和工具数量。需要完整配置时使用 GetMcp，或显式设置为 true。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("includeVirtualConfig")]
+        [Validation(Required=false)]
+        public bool? IncludeVirtualConfig { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +78,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("searchType")]
         [Validation(Required=false)]
         public string SearchType { get; set; }
+
+        /// <summary>
+        /// <para>按 MCP 类型筛选，省略时返回全部类型。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VIRTUAL</para>
+        /// </summary>
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
         /// <summary>
         /// <para>Specifies whether the service is still subject to official template usage constraints.</para>

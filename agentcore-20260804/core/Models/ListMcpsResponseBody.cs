@@ -44,6 +44,73 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
+            /// <para>已生效修订号。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("appliedRevision")]
+            [Validation(Required=false)]
+            public long? AppliedRevision { get; set; }
+
+            /// <summary>
+            /// <para>仅 includeVirtualConfig=true 时返回已生效的源和工具选择。</para>
+            /// </summary>
+            [NameInMap("appliedVirtualConfig")]
+            [Validation(Required=false)]
+            public ListMcpsResponseBodyItemsAppliedVirtualConfig AppliedVirtualConfig { get; set; }
+            public class ListMcpsResponseBodyItemsAppliedVirtualConfig : TeaModel {
+                /// <summary>
+                /// <para>虚拟 MCP 必填，填写 1 到 10 个不同的源 MCP。</para>
+                /// </summary>
+                [NameInMap("sources")]
+                [Validation(Required=false)]
+                public List<ListMcpsResponseBodyItemsAppliedVirtualConfigSources> Sources { get; set; }
+                public class ListMcpsResponseBodyItemsAppliedVirtualConfigSources : TeaModel {
+                    /// <summary>
+                    /// <para>虚拟 MCP 必填：当前工作空间的源 MCP ID。</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>mcp-server-source-1</para>
+                    /// </summary>
+                    [NameInMap("mcpServerId")]
+                    [Validation(Required=false)]
+                    public string McpServerId { get; set; }
+
+                    /// <summary>
+                    /// <para>虚拟 MCP 必填：手动选择的工具，每个源至少一个，全部源最多 100 个。</para>
+                    /// </summary>
+                    [NameInMap("tools")]
+                    [Validation(Required=false)]
+                    public List<ListMcpsResponseBodyItemsAppliedVirtualConfigSourcesTools> Tools { get; set; }
+                    public class ListMcpsResponseBodyItemsAppliedVirtualConfigSourcesTools : TeaModel {
+                        /// <summary>
+                        /// <para>虚拟 MCP 必填：从源 MCP 的 ListMcpTools 或校验结果取得的定义摘要，客户端原样回传，不自行计算。仅用作手动更新校验基线，不冻结运行时 Schema。</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</para>
+                        /// </summary>
+                        [NameInMap("expectedDigest")]
+                        [Validation(Required=false)]
+                        public string ExpectedDigest { get; set; }
+
+                        /// <summary>
+                        /// <para>虚拟 MCP 必填：源工具名称。</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>get-current-time</para>
+                        /// </summary>
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                }
+
+            }
+
+            /// <summary>
             /// <para>The backend authentication configuration. enabled specifies whether the configuration is enabled. directProxy specifies the custom authentication header for the direct proxy. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</para>
             /// </summary>
             [NameInMap("auth")]
@@ -399,6 +466,112 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     [NameInMap("mcpRuntimeMode")]
                     [Validation(Required=false)]
                     public string McpRuntimeMode { get; set; }
+
+                    /// <summary>
+                    /// <para>仅 ImageRegistryType 为 CUSTOM 时生效，用于配置镜像拉取认证、TLS 证书校验和私网拉取网络</para>
+                    /// </summary>
+                    [NameInMap("registryConfig")]
+                    [Validation(Required=false)]
+                    public ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfig RegistryConfig { get; set; }
+                    public class ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfig : TeaModel {
+                        /// <summary>
+                        /// <para>镜像仓库需要用户名密码认证时填写</para>
+                        /// </summary>
+                        [NameInMap("authConfig")]
+                        [Validation(Required=false)]
+                        public ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfigAuthConfig AuthConfig { get; set; }
+                        public class ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfigAuthConfig : TeaModel {
+                            /// <summary>
+                            /// <para>镜像仓库密码，由服务端加密保存，查询时不返回。更新时省略该字段保留已有密码。</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>example-password</para>
+                            /// </summary>
+                            [NameInMap("password")]
+                            [Validation(Required=false)]
+                            public string Password { get; set; }
+
+                            /// <summary>
+                            /// <para>镜像仓库用户名</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>puller</para>
+                            /// </summary>
+                            [NameInMap("userName")]
+                            [Validation(Required=false)]
+                            public string UserName { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>镜像仓库 TLS 证书校验配置</para>
+                        /// </summary>
+                        [NameInMap("certConfig")]
+                        [Validation(Required=false)]
+                        public ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfigCertConfig CertConfig { get; set; }
+                        public class ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfigCertConfig : TeaModel {
+                            /// <summary>
+                            /// <para>true 表示不校验镜像仓库 TLS 证书，默认 false</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>false</para>
+                            /// </summary>
+                            [NameInMap("insecure")]
+                            [Validation(Required=false)]
+                            public bool? Insecure { get; set; }
+
+                            /// <summary>
+                            /// <para>Base64 编码的镜像仓库根 CA 证书，用于校验自签证书</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>LS0tLS1CRUdJTi...</para>
+                            /// </summary>
+                            [NameInMap("rootCaCertBase64")]
+                            [Validation(Required=false)]
+                            public string RootCaCertBase64 { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>镜像仓库仅在 VPC 内可访问时填写，FC 通过该网络拉取镜像</para>
+                        /// </summary>
+                        [NameInMap("networkConfig")]
+                        [Validation(Required=false)]
+                        public ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfigNetworkConfig NetworkConfig { get; set; }
+                        public class ListMcpsResponseBodyItemsDeploymentConfigContainerConfigurationRegistryConfigNetworkConfig : TeaModel {
+                            /// <summary>
+                            /// <para>拉取镜像使用的安全组 ID</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>sg-example</para>
+                            /// </summary>
+                            [NameInMap("securityGroupId")]
+                            [Validation(Required=false)]
+                            public string SecurityGroupId { get; set; }
+
+                            /// <summary>
+                            /// <para>拉取镜像使用的交换机 ID</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>vsw-example</para>
+                            /// </summary>
+                            [NameInMap("vSwitchId")]
+                            [Validation(Required=false)]
+                            public string VSwitchId { get; set; }
+
+                            /// <summary>
+                            /// <para>镜像仓库所在 VPC ID</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>vpc-example</para>
+                            /// </summary>
+                            [NameInMap("vpcId")]
+                            [Validation(Required=false)]
+                            public string VpcId { get; set; }
+
+                        }
+
+                    }
 
                     /// <summary>
                     /// <para>Currently fixed to CONTAINER_IMAGE.</para>
@@ -953,6 +1126,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string FunctionName { get; set; }
 
             /// <summary>
+            /// <para>当前目标组装最近一次工具校验的 ID。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>val-1234567890</para>
+            /// </summary>
+            [NameInMap("lastValidationId")]
+            [Validation(Required=false)]
+            public string LastValidationId { get; set; }
+
+            /// <summary>
+            /// <para>当前目标组装的校验状态，取值为 PENDING、RUNNING、PAUSED、COMPLETED、PARTIAL_FAILED、FAILED 或 CANCELED。批量任务完成后按当前 MCP 的结果判定 COMPLETED 或 PARTIAL_FAILED。需查看明细时调用 GetMcp。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>COMPLETED</para>
+            /// </summary>
+            [NameInMap("lastValidationStatus")]
+            [Validation(Required=false)]
+            public string LastValidationStatus { get; set; }
+
+            /// <summary>
             /// <para>The MCP source marketplace template.</para>
             /// </summary>
             [NameInMap("marketSource")]
@@ -1115,6 +1308,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string UpdatedAt { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>最近一次虚拟 MCP 发布任务 ID，可用于查询和定位异步发布结果。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>task-1234567890</para>
+            /// </summary>
+            [NameInMap("operationTaskId")]
+            [Validation(Required=false)]
+            public string OperationTaskId { get; set; }
 
             /// <summary>
             /// <para>Only code deployment returns the minimal origin verification summary of the most recent task. This field is empty for direct proxy and HTTP to MCP, and queries do not trigger probing.</para>
@@ -1308,6 +1511,36 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>只读，记录当前生效部署从 FC 读取的镜像地址及 Digest。部署仍使用 deploymentConfig.containerConfiguration.image 中的 Tag；该字段不作为部署入参。部署尚未生效或未取得镜像摘要时为空。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>registry.example.com/mcp@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef</para>
+            /// </summary>
+            [NameInMap("resolvedImageUri")]
+            [Validation(Required=false)]
+            public string ResolvedImageUri { get; set; }
+
+            /// <summary>
+            /// <para>目标修订号。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("revision")]
+            [Validation(Required=false)]
+            public long? Revision { get; set; }
+
+            /// <summary>
+            /// <para>选择的源数量。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("sourceCount")]
+            [Validation(Required=false)]
+            public int? SourceCount { get; set; }
+
+            /// <summary>
             /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
@@ -1328,6 +1561,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StatusReason { get; set; }
 
             /// <summary>
+            /// <para>虚拟 MCP 发布失败的安全原因码。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PublishFailed</para>
+            /// </summary>
+            [NameInMap("statusReasonCode")]
+            [Validation(Required=false)]
+            public string StatusReasonCode { get; set; }
+
+            /// <summary>
             /// <para>The Swagger configuration.</para>
             /// 
             /// <b>Example:</b>
@@ -1336,6 +1579,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("swaggerConfig")]
             [Validation(Required=false)]
             public string SwaggerConfig { get; set; }
+
+            /// <summary>
+            /// <para>选择的工具数量。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("toolCount")]
+            [Validation(Required=false)]
+            public int? ToolCount { get; set; }
 
             /// <summary>
             /// <para>The type.</para>
@@ -1363,6 +1616,63 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("usageActive")]
             [Validation(Required=false)]
             public bool? UsageActive { get; set; }
+
+            /// <summary>
+            /// <para>仅 includeVirtualConfig=true 时返回目标源和工具选择。</para>
+            /// </summary>
+            [NameInMap("virtualConfig")]
+            [Validation(Required=false)]
+            public ListMcpsResponseBodyItemsVirtualConfig VirtualConfig { get; set; }
+            public class ListMcpsResponseBodyItemsVirtualConfig : TeaModel {
+                /// <summary>
+                /// <para>虚拟 MCP 必填，填写 1 到 10 个不同的源 MCP。</para>
+                /// </summary>
+                [NameInMap("sources")]
+                [Validation(Required=false)]
+                public List<ListMcpsResponseBodyItemsVirtualConfigSources> Sources { get; set; }
+                public class ListMcpsResponseBodyItemsVirtualConfigSources : TeaModel {
+                    /// <summary>
+                    /// <para>虚拟 MCP 必填：当前工作空间的源 MCP ID。</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>mcp-server-source-1</para>
+                    /// </summary>
+                    [NameInMap("mcpServerId")]
+                    [Validation(Required=false)]
+                    public string McpServerId { get; set; }
+
+                    /// <summary>
+                    /// <para>虚拟 MCP 必填：手动选择的工具，每个源至少一个，全部源最多 100 个。</para>
+                    /// </summary>
+                    [NameInMap("tools")]
+                    [Validation(Required=false)]
+                    public List<ListMcpsResponseBodyItemsVirtualConfigSourcesTools> Tools { get; set; }
+                    public class ListMcpsResponseBodyItemsVirtualConfigSourcesTools : TeaModel {
+                        /// <summary>
+                        /// <para>虚拟 MCP 必填：从源 MCP 的 ListMcpTools 或校验结果取得的定义摘要，客户端原样回传，不自行计算。仅用作手动更新校验基线，不冻结运行时 Schema。</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</para>
+                        /// </summary>
+                        [NameInMap("expectedDigest")]
+                        [Validation(Required=false)]
+                        public string ExpectedDigest { get; set; }
+
+                        /// <summary>
+                        /// <para>虚拟 MCP 必填：源工具名称。</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>get-current-time</para>
+                        /// </summary>
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
+
+                }
+
+            }
 
         }
 
