@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para>The value of this parameter affects the length of the packet received by the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirroring</a>.</para>
+        /// <item><description><para>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirrors</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateTrafficMirrorSessionRequestTag> Tag { get; set; }
         public class CreateTrafficMirrorSessionRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</para>
             /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</para>
             /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the traffic mirror session.</para>
-        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a trafficmirrorsession.</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the traffic mirror session.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorSessionName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the traffic mirror source. Currently, network interface controllers (NICs) are supported as traffic mirror sources. The default value of <b>N</b> is <b>1</b>, which means that you can add only one traffic mirror source to a traffic mirror session.</para>
+        /// <para>The instance ID of the traffic mirror source. Currently, elastic network interface controllers (NICs) are supported as traffic mirror sources. The default value of <b>N</b> is <b>1</b>, which means that you can add only one traffic mirror source to a traffic mirror session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> TrafficMirrorSourceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the traffic mirror destination. Currently, network interface controllers (NICs) and internal-facing SLB instances are supported as traffic mirror destinations.</para>
+        /// <para>The instance ID of the traffic mirror destination. Currently, elastic network interface controllers (NICs) and internal-facing SLB instances are supported as traffic mirror destinations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -209,9 +209,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the traffic mirror destination. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NetworkInterface</b>: network interface controllers (NICs).</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interface controller (NIC).</para>
         /// </description></item>
-        /// <item><description><para><b>SLB</b>: internal-facing SLB instances.</para>
+        /// <item><description><para><b>SLB</b>: internal-facing SLB instance.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The VXLAN network identifier (VNI) that is used to distinguish different mirrored data. Valid values: <b>0</b> to <b>16777215</b>.</para>
-        /// <para>You can use the VNI to distinguish the mirrored data of different sessions at the traffic mirror destination. You can specify a custom VNI or let the system randomly allocate the value. If you want the system to randomly allocate the VNI, do not specify this parameter.</para>
+        /// <para>You can use the VNI to distinguish the mirrored data of different sessions at the traffic mirror destination. You can specify a custom VNI or let the system randomly allocate a VNI. If you want the system to randomly allocate a VNI, do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

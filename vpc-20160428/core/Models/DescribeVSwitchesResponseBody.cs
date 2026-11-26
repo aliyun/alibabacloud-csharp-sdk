@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("EnableDns64")]
+                [Validation(Required=false)]
+                public bool? EnableDns64 { get; set; }
+
                 [NameInMap("EnabledIpv6")]
                 [Validation(Required=false)]
                 public bool? EnabledIpv6 { get; set; }

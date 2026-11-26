@@ -50,6 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("EnableDns64")]
+        [Validation(Required=false)]
+        public bool? EnableDns64 { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether the IPv6 CIDR block is enabled and configured for the vSwitch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>

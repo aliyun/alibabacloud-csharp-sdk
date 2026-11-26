@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class AddSourcesToTrafficMirrorSessionRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate the parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: prechecks the request without adding the traffic mirror sources. The system checks whether the required parameters are specified, the request format, and the limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run and does not add the traffic mirror sources. The system checks whether the required parameters are specified, the request format is valid, and the limits are met. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends the request. After the request passes the precheck, the traffic mirror sources are added.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the dry run, the system adds the traffic mirror sources.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the traffic mirror session to which you want to add traffic mirror sources.</para>
+        /// <para>The instance ID of the traffic mirror session for which you want to add traffic mirror sources.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficMirrorSessionId { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs of the traffic mirror sources that you want to add. Currently, elastic network interfaces (ENIs) are supported as traffic mirror sources. The default value of <b>N</b> is <b>1</b>, which indicates that you can add only one traffic mirror source to a traffic mirror session.</para>
+        /// <para>The instance IDs of the traffic mirror sources that you want to add. Currently, only elastic network interfaces (ENIs) are supported as traffic mirror sources. The default value of <b>N</b> is <b>1</b>, which indicates that only one traffic mirror source can be added to a traffic mirror session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

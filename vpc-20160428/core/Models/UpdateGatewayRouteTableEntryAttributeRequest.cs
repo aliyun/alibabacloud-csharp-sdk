@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class UpdateGatewayRouteTableEntryAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate the parameter value on your client. Make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route entry in the gateway route table.</para>
+        /// <para>The destination CIDR block of the route in the gateway route table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prechecks the request without modifying the gateway route table. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the gateway route table is modified.</description></item>
+        /// <item><description><b>true</b>: performs a dry run and does not modify the gateway route table. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the gateway route table is modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway route table that you want to modify.</para>
+        /// <para>The ID of the gateway route table to be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-5ts0ohchwkp3dydt2****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GatewayRouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway route table that you want to modify.</para>
+        /// <para>The ID of the gateway route table to be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-5ts0ohchwkp3dydt2****</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the next hop that you want to modify.</para>
+        /// <para>The instance ID of the next hop to be modified.</para>
         /// <list type="bullet">
         /// <item><description>If <b>NextHopType</b> is set to <b>Instance</b>, <b>NextHopId</b> is the ID of the ECS instance.</description></item>
-        /// <item><description>If <b>NextHopType</b> is set to <b>NetworkInterface</b>, <b>NextHopId</b> is the ID of the ENI.</description></item>
+        /// <item><description>If <b>NextHopType</b> is set to <b>NetworkInterface</b>, <b>NextHopId</b> is the ID of the elastic network interface controller (NIC) instance.</description></item>
         /// <item><description>If <b>NextHopType</b> is set to <b>Local</b>, <b>NextHopId</b> is empty, which indicates local.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the next hop type of the route is <b>Instance</b> or <b>NetworkInterface</b> and you want to modify the next hop, you must first change <b>NextHopType</b> to <b>Local</b>, and then change <b>NextHopType</b> back to <b>Instance</b> or <b>NetworkInterface</b> before modifying the specific <b>NextHopId</b>. You cannot directly change the next hop from one ENI or ECS instance to another ENI or ECS instance.</para>
+        /// <para>To modify the next hop of a route whose next hop type is <b>Instance</b> or <b>NetworkInterface</b>, you must first change <b>NextHopType</b> to <b>Local</b>, and then change <b>NextHopType</b> back to <b>Instance</b> or <b>NetworkInterface</b> and specify a new <b>NextHopId</b>. You cannot directly change the next hop to other elastic network interface controllers (NICs) or ECS instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,11 +109,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The next hop type of the route that you want to modify. Valid values:</para>
+        /// <para>The next hop type of the route to be modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Instance</b>: ECS instance.</para>
+        /// <item><description><para><b>Instance</b>: an ECS instance.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: elastic network interface (ENI).</para>
+        /// <item><description><para><b>NetworkInterface</b>: an elastic network interface controller (NIC) instance.</para>
         /// </description></item>
         /// <item><description><para><b>Local</b>: local.</para>
         /// </description></item>
@@ -136,8 +136,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the gateway route table that you want to modify.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the gateway route table to be modified.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

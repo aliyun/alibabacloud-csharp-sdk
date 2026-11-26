@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IPv4</para>
+            /// </summary>
+            [NameInMap("IpVersion")]
+            [Validation(Required=false)]
+            public string IpVersion { get; set; }
+
+            /// <summary>
             /// <para>The region ID of the VPC to which the route target group belongs.</para>
             /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
             /// 

@@ -107,9 +107,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <remarks>
                 /// <para>You cannot specify this parameter together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
                 /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para><c>1.1.**.**</c>/24</para>
                 /// </summary>
                 [NameInMap("DstCidr")]
                 [Validation(Required=false)]
@@ -303,9 +300,6 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <remarks>
                 /// <para>You cannot specify this parameter together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
                 /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para><c>1.1.**.**</c>/24</para>
                 /// </summary>
                 [NameInMap("SrcCidr")]
                 [Validation(Required=false)]

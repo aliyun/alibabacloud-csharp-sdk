@@ -155,6 +155,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 }
 
+                [NameInMap("Ipv6Config")]
+                [Validation(Required=false)]
+                public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config Ipv6Config { get; set; }
+                public class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpv6Config : TeaModel {
+                    [NameInMap("Ipv6Enabled")]
+                    [Validation(Required=false)]
+                    public bool? Ipv6Enabled { get; set; }
+
+                }
+
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -194,6 +204,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                     [NameInMap("PrivateIpAddress")]
                     [Validation(Required=false)]
                     public string PrivateIpAddress { get; set; }
+
+                    [NameInMap("PrivateIpv6Address")]
+                    [Validation(Required=false)]
+                    public string PrivateIpv6Address { get; set; }
 
                     [NameInMap("VswitchId")]
                     [Validation(Required=false)]
@@ -306,7 +320,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of NAT gateways queried.</para>
+        /// <para>The total number of NAT gateways returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

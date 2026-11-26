@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The type of resource associated with the IPsec-VPN connection.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CEN</b>: The IPsec-VPN connection is attached to a transit router instance.</description></item>
+        /// <item><description><b>VPNGW</b>: The IPsec-VPN connection is attached to a VPN gateway instance.</description></item>
+        /// <item><description><b>NO_ASSOCIATED</b>: The IPsec-VPN connection is not attached to any resource.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CEN</para>
@@ -62,6 +68,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Indicates whether the IPsec-VPN connection configuration takes effect immediately.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -299,6 +310,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The network type of the IPsec-VPN connection.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>public</b>: public network.</description></item>
+        /// <item><description><b>private</b>: private network.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>
@@ -387,6 +403,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>Indicates whether the DPD feature is enabled for the tunnel.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -397,6 +418,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>Indicates whether the NAT traversal feature is enabled for the tunnel.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -417,6 +443,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The role of the tunnel.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>master</b>: The tunnel is the master tunnel.</description></item>
+            /// <item><description><b>slave</b>: The tunnel is the backup tunnel.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>master</para>
@@ -548,6 +579,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The negotiation mode of the IKE version. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>main</b>: main mode. This mode ensures high security during negotiation.</description></item>
+                /// <item><description><b>aggressive</b>: aggressive mode. This mode features fast negotiation and a high success rate.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>main</para>
@@ -610,6 +645,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The creation order of the tunnel.</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: the first tunnel.</description></item>
+            /// <item><description><b>2</b>: the second tunnel.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -689,6 +728,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>Indicates whether the health check feature is enabled for the IPsec-VPN connection.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -752,6 +796,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class ModifyVpnAttachmentAttributeResponseBodyVpnBgpConfig : TeaModel {
             /// <summary>
             /// <para>Indicates whether the BGP feature is enabled for the IPsec-VPN connection.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -802,6 +851,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The BGP negotiation status.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>success</b>: normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: abnormal.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

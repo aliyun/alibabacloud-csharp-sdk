@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The EIP attach pattern of the NAT gateway. Valid values: You can leave this parameter empty. If you specify a value, only <b>NAT</b> is allowed, which indicates the standard EIP attach pattern.</para>
+        /// <para>The EIP attach mode of the NAT gateway. Valid values: Leave this parameter empty or set it to <b>NAT</b>, which indicates the standard EIP mode.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can only change the pattern from <b>MULTI_BINDED</b> to <b>NAT</b>. You cannot change the pattern from <b>NAT</b> to <b>MULTI_BINDED</b>. For more information about the <b>MULTI_BINDED</b> pattern, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</description></item>
+        /// <item><description>You can only change the mode from <b>MULTI_BINDED</b> to <b>NAT</b>. You cannot change the mode from <b>NAT</b> to <b>MULTI_BINDED</b>. For more information about the <b>MULTI_BINDED</b> mode, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>During the EIP attach pattern switchover procedure, network connectivity may experience a transient connection at the second level (the duration of the transient connection increases with the number of EIPs. Currently, configuration changes are supported for NAT gateways with up to five EIPs attached), so execute the switchover operation during off-peak hours.</description></item>
-        /// <item><description>After the EIP attach pattern is changed to <b>NAT</b>, the Internet NAT gateway becomes compatible with the IPv4 gateway. However, when you attach a public EIP, a private IP address in the vSwitch where the NAT gateway resides is occupied. Ensure that the vSwitch has sufficient private IP addresses. If no available private IP address exists in the vSwitch, you cannot attach a new EIP.</description></item>
+        /// <item><description>During the EIP attach mode switch procedure, network connectivity may experience a transient connection that lasts for a few seconds (the duration of the transient connection increases with the number of EIPs. Currently, configuration changes are supported only for NAT gateways with up to five EIPs attached). We recommend that you execute the switch operation during off-peak hours.</description></item>
+        /// <item><description>After the EIP attach mode is changed to <b>NAT</b>, the Internet NAT gateway becomes compatible with the IPv4 gateway. However, attaching a public EIP consumes a private IP address from the vSwitch where the NAT gateway resides. Ensure that the vSwitch has sufficient private IP addresses. If no idle private IP address is available in the vSwitch, you cannot attach new EIPs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable the session log feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enables the session log feature.</para>
+        /// <item><description><para><b>true</b>: The session log feature is enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: disables the session log feature.</para>
+        /// <item><description><para><b>false</b>: The session log feature is disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable ICMP echo reply. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): enables ICMP echo reply.</description></item>
-        /// <item><description><b>false</b>: disables ICMP echo reply.</description></item>
+        /// <item><description><b>true</b> (default): Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,6 +68,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("IcmpReplyEnabled")]
         [Validation(Required=false)]
         public bool? IcmpReplyEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The IPv6 configuration.</para>
+        /// </summary>
+        [NameInMap("Ipv6Config")]
+        [Validation(Required=false)]
+        public string Ipv6ConfigShrink { get; set; }
 
         /// <summary>
         /// <para>The session log configuration.</para>

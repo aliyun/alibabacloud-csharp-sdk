@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
+
+        /// <summary>
         /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>

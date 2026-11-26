@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableDns64")]
+        [Validation(Required=false)]
+        public bool? EnableDns64 { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable IPv6 for the vSwitch. Valid values:</para>
         /// <list type="bullet">

@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to only perform a dry run for this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run on the request without querying the resource status. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run for the request without querying the resource status. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>PrePaid</b>: subscription. This billing method is no longer available for new purchases.</description></item>
+        /// <item><description><b>PrePaid</b>: subscription. The subscription billing method is no longer available for new purchases.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway. Valid value: <b>PostPaid</b> (pay-as-you-go).</para>
         /// 
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,15 +178,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the NAT gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Creating</b>: Creating a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Creating</b> state until the creation is complete.</para>
+        /// <item><description><para><b>Creating</b>: The NAT gateway is being created. Creating a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Creating</b> state until it is created.</para>
         /// </description></item>
         /// <item><description><para><b>Available</b>: The NAT gateway is created and running. This is a stable state.</para>
         /// </description></item>
-        /// <item><description><para><b>Modifying</b>: Upgrading or downgrading a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Modifying</b> state until the modification is complete.</para>
+        /// <item><description><para><b>Modifying</b>: The NAT gateway is being modified. Modifying a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Modifying</b> state until it is modified.</para>
         /// </description></item>
-        /// <item><description><para><b>Deleting</b>: Deleting a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Deleting</b> state until the deletion is complete.</para>
+        /// <item><description><para><b>Deleting</b>: The NAT gateway is being deleted. Deleting a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Deleting</b> state until it is deleted.</para>
         /// </description></item>
-        /// <item><description><para><b>Converting</b>: Upgrading a standard NAT gateway to an enhanced NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Converting</b> state until the upgrade is complete.</para>
+        /// <item><description><para><b>Converting</b>: The standard NAT gateway is being upgraded to an enhanced NAT gateway. This is an asynchronous operation. The NAT gateway remains in the <b>Converting</b> state until the upgrade is complete.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the NAT gateway belongs.</para>
+        /// <para>The ID of the VPC to which the NAT gateway belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp15zckdt37pq72z****</para>

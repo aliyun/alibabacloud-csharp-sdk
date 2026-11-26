@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The name of the Express Connect circuit access point.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>杭州-萧山-B</para>
+            /// <para>Hangzhou-Xiaoshan-B</para>
             /// </summary>
             [NameInMap("AccessPointName")]
             [Validation(Required=false)]

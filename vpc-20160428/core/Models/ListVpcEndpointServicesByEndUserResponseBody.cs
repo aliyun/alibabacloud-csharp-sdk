@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The default access policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{   \&quot;Version\&quot; : \&quot;1\&quot;,   \&quot;Statement\&quot; : [ {     \&quot;Effect\&quot; : \&quot;Allow\&quot;,     \&quot;Action\&quot; : \&quot;<em>\&quot;,     \&quot;Principal\&quot; : \&quot;</em>\&quot;,     \&quot;Resource\&quot; : \&quot;*\&quot;   } ] }</para>
+            /// <para>{   &quot;Version&quot; : &quot;1&quot;,   &quot;Statement&quot; : [ {     &quot;Effect&quot; : &quot;Allow&quot;,     &quot;Action&quot; : &quot;<em>&quot;,     &quot;Principal&quot; : &quot;</em>&quot;,     &quot;Resource&quot; : &quot;*&quot;   } ] }</para>
             /// </summary>
             [NameInMap("DefaultPolicyDocument")]
             [Validation(Required=false)]

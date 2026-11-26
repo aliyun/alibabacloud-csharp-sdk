@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CompanyLocalizedName { get; set; }
 
             /// <summary>
-            /// <para>The name of the organization that requires the Express Connect circuit deployment.</para>
+            /// <para>The name of the enterprise that requires the Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1234</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CompanyName { get; set; }
 
             /// <summary>
-            /// <para>The time when the construction starts. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the construction team enters the site. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-26T08:00:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineCode { get; set; }
 
             /// <summary>
-            /// <para>The cable label in the data center building.</para>
+            /// <para>The cable label in the data center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bbb222</para>
@@ -97,12 +97,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineSPContactInfo { get; set; }
 
             /// <summary>
-            /// <para>The telecommunications service provider. Valid values:</para>
+            /// <para>The carrier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>中国电信</b></description></item>
-            /// <item><description><b>中国联通</b></description></item>
-            /// <item><description><b>中国移动</b></description></item>
-            /// <item><description><b>中国其他</b></description></item>
+            /// <item><description><b>China Telecom</b>.</description></item>
+            /// <item><description><b>China Unicom</b>.</description></item>
+            /// <item><description><b>China Mobile</b>.</description></item>
+            /// <item><description><b>Other carriers in China</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The construction company.</para>
+            /// <para>The construction company that enters the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ctcu</para>
@@ -183,12 +183,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the LOA. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Applying</b>: The LOA application is being processed.</description></item>
+            /// <item><description><b>Applying</b>: The LOA application is in progress.</description></item>
             /// <item><description><b>Accept</b>: The LOA application is approved.</description></item>
             /// <item><description><b>Available</b>: The LOA is available.</description></item>
             /// <item><description><b>Rejected</b>: The LOA application is rejected.</description></item>
-            /// <item><description><b>Completing</b>: The circuit is under construction.</description></item>
-            /// <item><description><b>Complete</b>: The circuit construction is complete.</description></item>
+            /// <item><description><b>Completing</b>: The Express Connect circuit is under construction.</description></item>
+            /// <item><description><b>Complete</b>: The construction of the Express Connect circuit is completed.</description></item>
             /// <item><description><b>Deleted</b>: The LOA is deleted.</description></item>
             /// </list>
             /// 

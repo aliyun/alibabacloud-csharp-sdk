@@ -33,6 +33,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string ConfigMode { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
+
         /// <summary>
         /// <para>The region ID of the route target group. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>

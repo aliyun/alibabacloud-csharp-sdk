@@ -59,7 +59,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
                 {"cn-zhengzhou-nebula-1", "vpc-nebula.cn-qingdao-nebula.aliyuncs.com"},
                 {"eu-west-1-oxs", "vpc-nebula.cn-shenzhen-cloudstone.aliyuncs.com"},
                 {"rus-west-1-pop", "vpc.aliyuncs.com"},
-                {"cn-nanjing", "vpc-smarthosting.cn-hangzhou-cloudstone.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1169,7 +1168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Elastic IP Address (EIP) to a specified Internet Shared Bandwidth instance.</para>
+        /// <para>Adds an elastic IP address (EIP) to a specified shared bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1235,7 +1234,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Elastic IP Address (EIP) to a specified Internet Shared Bandwidth instance.</para>
+        /// <para>Adds an elastic IP address (EIP) to a specified shared bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1301,7 +1300,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Elastic IP Address (EIP) to a specified Internet Shared Bandwidth instance.</para>
+        /// <para>Adds an elastic IP address (EIP) to a specified shared bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1319,7 +1318,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an Elastic IP Address (EIP) to a specified Internet Shared Bandwidth instance.</para>
+        /// <para>Adds an elastic IP address (EIP) to a specified shared bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1789,13 +1788,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds traffic mirror sources to a traffic mirror session.</para>
+        /// <para>Adds one or more traffic mirror sources to a traffic mirror session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the traffic mirror sources are not added yet. The system is still adding the traffic mirror sources in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the traffic mirror sources:<list type="bullet">
+        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. The system returns a request ID, but the traffic mirror sources are not immediately added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the addition status of the traffic mirror sources:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being added.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are added.</description></item>
         /// </list>
@@ -1875,13 +1874,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds traffic mirror sources to a traffic mirror session.</para>
+        /// <para>Adds one or more traffic mirror sources to a traffic mirror session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the traffic mirror sources are not added yet. The system is still adding the traffic mirror sources in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the traffic mirror sources:<list type="bullet">
+        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. The system returns a request ID, but the traffic mirror sources are not immediately added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the addition status of the traffic mirror sources:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being added.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are added.</description></item>
         /// </list>
@@ -1961,13 +1960,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds traffic mirror sources to a traffic mirror session.</para>
+        /// <para>Adds one or more traffic mirror sources to a traffic mirror session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the traffic mirror sources are not added yet. The system is still adding the traffic mirror sources in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the traffic mirror sources:<list type="bullet">
+        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. The system returns a request ID, but the traffic mirror sources are not immediately added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the addition status of the traffic mirror sources:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being added.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are added.</description></item>
         /// </list>
@@ -1991,13 +1990,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds traffic mirror sources to a traffic mirror session.</para>
+        /// <para>Adds one or more traffic mirror sources to a traffic mirror session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns a request ID, but the traffic mirror sources are not added yet. The system is still adding the traffic mirror sources in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the status of the traffic mirror sources:<list type="bullet">
+        /// <item><description>The <b>AddSourcesToTrafficMirrorSession</b> operation is asynchronous. The system returns a request ID, but the traffic mirror sources are not immediately added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the addition status of the traffic mirror sources:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being added.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are added.</description></item>
         /// </list>
@@ -9357,12 +9356,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Internet Shared Bandwidth instance by calling the CreateCommonBandwidthPackage operation.</para>
+        /// <para>Creates an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation supports only the creation of pay-as-you-go Internet Shared Bandwidth instances. To create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation only supports creating pay-as-you-go Internet Shared Bandwidth instances. For information about how to create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9464,12 +9463,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Internet Shared Bandwidth instance by calling the CreateCommonBandwidthPackage operation.</para>
+        /// <para>Creates an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation supports only the creation of pay-as-you-go Internet Shared Bandwidth instances. To create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation only supports creating pay-as-you-go Internet Shared Bandwidth instances. For information about how to create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9571,12 +9570,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Internet Shared Bandwidth instance by calling the CreateCommonBandwidthPackage operation.</para>
+        /// <para>Creates an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation supports only the creation of pay-as-you-go Internet Shared Bandwidth instances. To create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation only supports creating pay-as-you-go Internet Shared Bandwidth instances. For information about how to create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9594,12 +9593,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Internet Shared Bandwidth instance by calling the CreateCommonBandwidthPackage operation.</para>
+        /// <para>Creates an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation supports only the creation of pay-as-you-go Internet Shared Bandwidth instances. To create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This operation only supports creating pay-as-you-go Internet Shared Bandwidth instances. For information about how to create a subscription Internet Shared Bandwidth instance, see <a href="https://help.aliyun.com/document_detail/65223.html">Create an Internet Shared Bandwidth instance</a>.</ph></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15732,9 +15731,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and attaches an access policy named AliyunServiceRolePolicyForNatgw to the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
-        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and whose next hop is the NAT gateway to the route table of the VPC. This routes traffic to the NAT gateway.</description></item>
-        /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created, and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<list type="bullet">
+        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and associates an access policy named AliyunServiceRolePolicyForNatgw with the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and next hop is the NAT gateway to the route table of the VPC. This route entry is used to route traffic to the NAT gateway.</description></item>
+        /// <item><description>The <b>CreateNatGateway</b> operation is asynchronous. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the NAT gateway.<list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway is in the <b>Available</b> state, the NAT gateway is created.</description></item>
         /// </list>
@@ -15761,6 +15760,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccessMode))
             {
                 request.AccessModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccessMode, "AccessMode", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6Config))
+            {
+                request.Ipv6ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6Config, "Ipv6Config", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessModeShrink))
@@ -15806,6 +15809,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
             {
                 query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6ConfigShrink))
+            {
+                query["Ipv6Config"] = request.Ipv6ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -15899,9 +15906,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and attaches an access policy named AliyunServiceRolePolicyForNatgw to the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
-        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and whose next hop is the NAT gateway to the route table of the VPC. This routes traffic to the NAT gateway.</description></item>
-        /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created, and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<list type="bullet">
+        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and associates an access policy named AliyunServiceRolePolicyForNatgw with the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and next hop is the NAT gateway to the route table of the VPC. This route entry is used to route traffic to the NAT gateway.</description></item>
+        /// <item><description>The <b>CreateNatGateway</b> operation is asynchronous. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the NAT gateway.<list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway is in the <b>Available</b> state, the NAT gateway is created.</description></item>
         /// </list>
@@ -15928,6 +15935,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AccessMode))
             {
                 request.AccessModeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccessMode, "AccessMode", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6Config))
+            {
+                request.Ipv6ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6Config, "Ipv6Config", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessModeShrink))
@@ -15973,6 +15984,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv4Prefix))
             {
                 query["Ipv4Prefix"] = request.Ipv4Prefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6ConfigShrink))
+            {
+                query["Ipv6Config"] = request.Ipv6ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -16066,9 +16081,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and attaches an access policy named AliyunServiceRolePolicyForNatgw to the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
-        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and whose next hop is the NAT gateway to the route table of the VPC. This routes traffic to the NAT gateway.</description></item>
-        /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created, and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<list type="bullet">
+        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and associates an access policy named AliyunServiceRolePolicyForNatgw with the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and next hop is the NAT gateway to the route table of the VPC. This route entry is used to route traffic to the NAT gateway.</description></item>
+        /// <item><description>The <b>CreateNatGateway</b> operation is asynchronous. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the NAT gateway.<list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway is in the <b>Available</b> state, the NAT gateway is created.</description></item>
         /// </list>
@@ -16099,9 +16114,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and attaches an access policy named AliyunServiceRolePolicyForNatgw to the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
-        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and whose next hop is the NAT gateway to the route table of the VPC. This routes traffic to the NAT gateway.</description></item>
-        /// <item><description><b>CreateNatGateway</b> is an asynchronous operation. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created, and the creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> to query the status of the NAT gateway.<list type="bullet">
+        /// <item><description>When you create a NAT gateway for the first time, the system automatically creates a service-linked role named AliyunServiceRoleForNatgw and associates an access policy named AliyunServiceRolePolicyForNatgw with the role. This grants the NAT gateway the permissions to access other cloud resources. For more information, see <a href="https://help.aliyun.com/document_detail/174251.html">Service-linked roles</a>.</description></item>
+        /// <item><description>After an enhanced Internet NAT gateway is created, the system automatically adds a route entry whose destination CIDR block is 0.0.0.0/0 and next hop is the NAT gateway to the route table of the VPC. This route entry is used to route traffic to the NAT gateway.</description></item>
+        /// <item><description>The <b>CreateNatGateway</b> operation is asynchronous. The system first returns the instance ID of the NAT gateway (Internet NAT gateway or VPC NAT gateway), but the NAT gateway instance is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/36054.html">DescribeNatGateways</a> operation to query the status of the NAT gateway.<list type="bullet">
         /// <item><description>If the NAT gateway is in the <b>Creating</b> state, the NAT gateway is being created. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the NAT gateway is in the <b>Available</b> state, the NAT gateway is created.</description></item>
         /// </list>
@@ -18111,26 +18126,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. The system returns an instance ID, but custom route entry creation is not yet complete and a background task is still running. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of custom route entry:<list type="bullet">
-        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
-        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
+        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
+        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent creation of custom route entries in the same VPC or on the same VBR.</description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
+        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
+        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
+        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.</description></item>
-        /// <item><description>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
+        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure equal-cost multi-path (ECMP) routing:<list type="bullet">
+        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18138,26 +18153,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
+        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. A configuration fault may prevent normal access and use of cloud services.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
         /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routing is supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18259,26 +18274,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. The system returns an instance ID, but custom route entry creation is not yet complete and a background task is still running. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of custom route entry:<list type="bullet">
-        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
-        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
+        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
+        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent creation of custom route entries in the same VPC or on the same VBR.</description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
+        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
+        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
+        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.</description></item>
-        /// <item><description>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
+        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure equal-cost multi-path (ECMP) routing:<list type="bullet">
+        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18286,26 +18301,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
+        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. A configuration fault may prevent normal access and use of cloud services.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
         /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routing is supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18407,26 +18422,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. The system returns an instance ID, but custom route entry creation is not yet complete and a background task is still running. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of custom route entry:<list type="bullet">
-        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
-        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
+        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
+        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent creation of custom route entries in the same VPC or on the same VBR.</description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
+        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
+        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
+        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.</description></item>
-        /// <item><description>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
+        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure equal-cost multi-path (ECMP) routing:<list type="bullet">
+        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18434,26 +18449,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
+        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. A configuration fault may prevent normal access and use of cloud services.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
         /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routing is supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18479,26 +18494,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. The system returns an instance ID, but custom route entry creation is not yet complete and a background task is still running. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of custom route entry:<list type="bullet">
-        /// <item><description>If custom route entry is in the <b>Creating</b> state, custom route entry is being created.</description></item>
-        /// <item><description>If custom route entry is in the <b>Created</b> state, custom route entry is created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns an instance ID, but the addition of the route is not immediately completed. A background startup task is still running. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the addition status of the route:<list type="bullet">
+        /// <item><description>When the route is in the <b>Creating</b> state, it indicates that the route is being added.</description></item>
+        /// <item><description>When the route is in the <b>Created</b> state, it indicates that the route addition is complete.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent creation of custom route entries in the same VPC or on the same VBR.</description></item>
-        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>If the route entry to be added is a prefix list route, the route quota is calculated based on whether the sum of the number of existing routes and the maximum number of route entries for the prefix list route exceeds the route quota limit.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support adding a custom route entry concurrently in the same VPC or on the same VBR.</description></item>
+        /// <item><description>If you invoke the <b>CreateRouteEntry</b> operation concurrently, the system may return the <b>TaskConflict</b> error code. Retry the operation as needed.
+        /// <b>When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>If the route entry that you want to add is a prefix list route, the system checks whether the sum of the number of existing routes and the maximum number of route entries in the prefix list exceeds the route quota.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain at most 200 custom route entries.</description></item>
+        /// <item><description>You can add up to 200 custom route entries to a route table.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of the vSwitch, but cannot be contained by the CIDR block of the vSwitch.</description></item>
         /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. An incorrect configuration may cause cloud services to become inaccessible.</notice></description></item>
         /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.</description></item>
-        /// <item><description>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.</description></item>
+        /// <item><description>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
-        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure equal-cost multi-path (ECMP) routing:<list type="bullet">
+        /// <item><description>You can use the <b>NextHopList</b> parameter settings to configure ECMP routing:<list type="bullet">
         /// <item><description><para>When you add a regular (non-ECMP) custom route, you must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.   </para>
         /// </description></item>
         /// <item><description><para>When you add an ECMP route, you must specify the <b>DestinationCidrBlock</b> and <b>NextHopList</b> parameters, and you cannot specify the <b>NextHopType</b> and <b>NextHopId</b> parameters.</para>
@@ -18506,26 +18521,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you call this operation to add a custom route entry to the route table of a VBR, take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain at most 200 custom route entries.  </para>
+        /// <item><description><para>You can add up to 200 custom route entries to a route table.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
         /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> for cloud services, but cannot be the same as <c>100.64.0.0/10</c>.
-        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in the VPC. Proceed with caution when you configure a more specific route. A configuration fault may prevent normal access and use of cloud services.</notice></para>
+        /// <notice>The system route whose destination CIDR block is <c>100.64.0.0/10</c> is used for communication between cloud services in a VPC. Proceed with caution when you configure a more specific route. A configuration error may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
         /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a 32-bit subnet mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is processed as a CIDR block with a 32-bit subnet mask.   </para>
         /// </description></item>
-        /// <item><description><para>You can point more than one custom routing entry to the same next hop (<b>NextHopId</b>).  </para>
+        /// <item><description><para>More than one custom route entry can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
         /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
         /// </description></item>
         /// <item><description><para>You can create a route entry on a VBR only when the VBR is in the <b>Active</b> state, the associated Express Connect circuit is in the <b>Enabled</b> state, and the VBR is not locked due to overdue payments.  </para>
         /// </description></item>
-        /// <item><description><para>Only regular (non-ECMP) routing is supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only regular (non-ECMP) routes are supported. You must specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters, and you cannot specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18840,6 +18855,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ConfigMode"] = request.ConfigMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -18927,6 +18950,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigMode))
             {
                 query["ConfigMode"] = request.ConfigMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -19475,19 +19506,19 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation adds an SNAT entry to an enhanced Internet NAT gateway or a VPC NAT gateway. The term <b>NAT gateway</b> in this document refers to both types unless otherwise specified.
-        /// Note the following information when you call this operation to add an SNAT entry:</para>
+        /// When you call this operation to create an SNAT entry, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system first returns an SNAT entry ID, but the SNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
+        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system returns an SNAT entry ID, but the SNAT entry is not immediately created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
         /// <list type="bullet">
-        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being added. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is added.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>The vSwitch and ECS instance specified in the SNAT entry must belong to the VPC to which the NAT gateway belongs.</para>
         /// </description></item>
         /// <item><description><para>Each vSwitch and ECS instance can belong to only one SNAT entry.</para>
         /// </description></item>
-        /// <item><description><para>If a high-availability virtual IP address (HaVip) is associated with the vSwitch, you cannot add an SNAT entry.</para>
+        /// <item><description><para>If a high-availability virtual IP address (HAVIP) exists in the vSwitch, you cannot create an SNAT entry.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -19517,6 +19548,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
                 query["EipAffinity"] = request.EipAffinity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
             {
@@ -19589,19 +19624,19 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation adds an SNAT entry to an enhanced Internet NAT gateway or a VPC NAT gateway. The term <b>NAT gateway</b> in this document refers to both types unless otherwise specified.
-        /// Note the following information when you call this operation to add an SNAT entry:</para>
+        /// When you call this operation to create an SNAT entry, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system first returns an SNAT entry ID, but the SNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
+        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system returns an SNAT entry ID, but the SNAT entry is not immediately created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
         /// <list type="bullet">
-        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being added. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is added.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>The vSwitch and ECS instance specified in the SNAT entry must belong to the VPC to which the NAT gateway belongs.</para>
         /// </description></item>
         /// <item><description><para>Each vSwitch and ECS instance can belong to only one SNAT entry.</para>
         /// </description></item>
-        /// <item><description><para>If a high-availability virtual IP address (HaVip) is associated with the vSwitch, you cannot add an SNAT entry.</para>
+        /// <item><description><para>If a high-availability virtual IP address (HAVIP) exists in the vSwitch, you cannot create an SNAT entry.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -19631,6 +19666,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EipAffinity))
             {
                 query["EipAffinity"] = request.EipAffinity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchType))
+            {
+                query["MatchType"] = request.MatchType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceId))
             {
@@ -19703,19 +19742,19 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation adds an SNAT entry to an enhanced Internet NAT gateway or a VPC NAT gateway. The term <b>NAT gateway</b> in this document refers to both types unless otherwise specified.
-        /// Note the following information when you call this operation to add an SNAT entry:</para>
+        /// When you call this operation to create an SNAT entry, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system first returns an SNAT entry ID, but the SNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
+        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system returns an SNAT entry ID, but the SNAT entry is not immediately created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
         /// <list type="bullet">
-        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being added. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is added.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>The vSwitch and ECS instance specified in the SNAT entry must belong to the VPC to which the NAT gateway belongs.</para>
         /// </description></item>
         /// <item><description><para>Each vSwitch and ECS instance can belong to only one SNAT entry.</para>
         /// </description></item>
-        /// <item><description><para>If a high-availability virtual IP address (HaVip) is associated with the vSwitch, you cannot add an SNAT entry.</para>
+        /// <item><description><para>If a high-availability virtual IP address (HAVIP) exists in the vSwitch, you cannot create an SNAT entry.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -19741,19 +19780,19 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation adds an SNAT entry to an enhanced Internet NAT gateway or a VPC NAT gateway. The term <b>NAT gateway</b> in this document refers to both types unless otherwise specified.
-        /// Note the following information when you call this operation to add an SNAT entry:</para>
+        /// When you call this operation to create an SNAT entry, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system first returns an SNAT entry ID, but the SNAT entry is not yet added. The addition task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
+        /// <item><description><para>The <b>CreateSnatEntry</b> operation is asynchronous. The system returns an SNAT entry ID, but the SNAT entry is not immediately created. The creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/42677.html">DescribeSnatTableEntries</a> operation to query the status of the SNAT entry:</para>
         /// <list type="bullet">
-        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being added. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is added.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Pending</b> state, the SNAT entry is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the SNAT entry is in the <b>Available</b> state, the SNAT entry is created.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>The vSwitch and ECS instance specified in the SNAT entry must belong to the VPC to which the NAT gateway belongs.</para>
         /// </description></item>
         /// <item><description><para>Each vSwitch and ECS instance can belong to only one SNAT entry.</para>
         /// </description></item>
-        /// <item><description><para>If a high-availability virtual IP address (HaVip) is associated with the vSwitch, you cannot add an SNAT entry.</para>
+        /// <item><description><para>If a high-availability virtual IP address (HAVIP) exists in the vSwitch, you cannot create an SNAT entry.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -20806,7 +20845,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. The system returns an instance ID, but the traffic mirror session is not immediately created. The creation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
+        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the traffic mirror session is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
         /// <list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Creating</b> state, the traffic mirror session is being created.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror session is created.</description></item>
@@ -20929,7 +20968,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. The system returns an instance ID, but the traffic mirror session is not immediately created. The creation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
+        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the traffic mirror session is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
         /// <list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Creating</b> state, the traffic mirror session is being created.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror session is created.</description></item>
@@ -21052,7 +21091,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. The system returns an instance ID, but the traffic mirror session is not immediately created. The creation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
+        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the traffic mirror session is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
         /// <list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Creating</b> state, the traffic mirror session is being created.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror session is created.</description></item>
@@ -21079,7 +21118,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. The system returns an instance ID, but the traffic mirror session is not immediately created. The creation task continues to run in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
+        /// <para>The <b>CreateTrafficMirrorSession</b> operation is asynchronous. After you call this operation, the system returns an instance ID, but the traffic mirror session is not yet created and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> operation to query the creation status of the traffic mirror session:</para>
         /// <list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Creating</b> state, the traffic mirror session is being created.</description></item>
         /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror session is created.</description></item>
@@ -23901,7 +23940,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection to associate with a transit router instance.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23910,12 +23949,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>In the scenario where an IPsec-VPN connection is associated with a transit router, the IPsec-VPN connection is upgraded to the dual-tunnel mode. When you create an IPsec-VPN connection, apart from the required parameters, you can only configure the following request parameters related to the dual-tunnel mode: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, the <b>Tags</b> array, <b>ResourceGroupId</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Instructions for dual-tunnel IPsec-VPN connections associated with transit routers</a>.</description></item>
-        /// <item><description>By default, an IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not associated with any resource. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to associate the IPsec-VPN connection with a transit router instance. After the association, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the IP address.</description></item>
+        /// <item><description>When you bindIPsec-VPN connections to a transit router, the connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required parameters, only the following request parameters for dual-tunnel mode are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to a transit router</a>.</description></item>
+        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number (ASN) is added to the customer gateway.</para>
+        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection will be deployed. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+        /// If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24061,7 +24100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection to associate with a transit router instance.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24070,12 +24109,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>In the scenario where an IPsec-VPN connection is associated with a transit router, the IPsec-VPN connection is upgraded to the dual-tunnel mode. When you create an IPsec-VPN connection, apart from the required parameters, you can only configure the following request parameters related to the dual-tunnel mode: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, the <b>Tags</b> array, <b>ResourceGroupId</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Instructions for dual-tunnel IPsec-VPN connections associated with transit routers</a>.</description></item>
-        /// <item><description>By default, an IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not associated with any resource. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to associate the IPsec-VPN connection with a transit router instance. After the association, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the IP address.</description></item>
+        /// <item><description>When you bindIPsec-VPN connections to a transit router, the connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required parameters, only the following request parameters for dual-tunnel mode are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to a transit router</a>.</description></item>
+        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number (ASN) is added to the customer gateway.</para>
+        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection will be deployed. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+        /// If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24221,7 +24260,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection to associate with a transit router instance.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24230,12 +24269,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>In the scenario where an IPsec-VPN connection is associated with a transit router, the IPsec-VPN connection is upgraded to the dual-tunnel mode. When you create an IPsec-VPN connection, apart from the required parameters, you can only configure the following request parameters related to the dual-tunnel mode: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, the <b>Tags</b> array, <b>ResourceGroupId</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Instructions for dual-tunnel IPsec-VPN connections associated with transit routers</a>.</description></item>
-        /// <item><description>By default, an IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not associated with any resource. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to associate the IPsec-VPN connection with a transit router instance. After the association, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the IP address.</description></item>
+        /// <item><description>When you bindIPsec-VPN connections to a transit router, the connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required parameters, only the following request parameters for dual-tunnel mode are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to a transit router</a>.</description></item>
+        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number (ASN) is added to the customer gateway.</para>
+        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection will be deployed. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+        /// If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24253,7 +24292,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IPsec-VPN connection to associate with a transit router instance.</para>
+        /// <para>Creates an IPsec-VPN connection to be associated with a transit router instance by calling the CreateVpnAttachment operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24262,12 +24301,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>In the scenario where an IPsec-VPN connection is associated with a transit router, the IPsec-VPN connection is upgraded to the dual-tunnel mode. When you create an IPsec-VPN connection, apart from the required parameters, you can only configure the following request parameters related to the dual-tunnel mode: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, the <b>Tags</b> array, <b>ResourceGroupId</b>, the <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Instructions for dual-tunnel IPsec-VPN connections associated with transit routers</a>.</description></item>
-        /// <item><description>By default, an IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not associated with any resource. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to associate the IPsec-VPN connection with a transit router instance. After the association, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the IP address.</description></item>
+        /// <item><description>When you bindIPsec-VPN connections to a transit router, the connections have been upgraded to dual-tunnel mode. When you create an IPsec-VPN connection, in addition to the required parameters, only the following request parameters for dual-tunnel mode are supported: <b>ClientToken</b>, <b>Name</b>, <b>NetworkType</b>, <b>EffectImmediately</b>, <b>Tags</b> array, <b>ResourceGroupId</b>, <b>TunnelOptionsSpecification</b> array, and <b>EnableTunnelsBgp</b>. For more information, see <a href="https://help.aliyun.com/document_detail/2853535.html">Dual-tunnel IPsec-VPN connections bound to a transit router</a>.</description></item>
+        /// <item><description>An IPsec-VPN connection created by calling the <c>CreateVpnAttachment</c> operation is not bound to any resource by default. You can call the <a href="https://help.aliyun.com/document_detail/443993.html">CreateTransitRouterVpnAttachment</a> operation to bind the IPsec-VPN connection to a transit router instance. After the IPsec-VPN connection is bound to a transit router instance, the system assigns a gateway IP address to the IPsec-VPN connection. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to view the gateway IP address.</description></item>
         /// </list>
         /// <h3>Before you begin</h3>
-        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection resides. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.</para>
-        /// <para>If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number (ASN) is added to the customer gateway.</para>
+        /// <para>Before you create an IPsec-VPN connection, make sure that you have created a customer gateway in the region where the IPsec-VPN connection will be deployed. For more information, see <a href="https://help.aliyun.com/document_detail/120368.html">CreateCustomerGateway</a>.
+        /// If you want to add BGP configurations to the IPsec-VPN connection, make sure that an autonomous system number has been added to the customer gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30562,14 +30601,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules first. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
+        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPv6 gateway is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> to query the deletion status of the IPv6 gateway:<list type="bullet">
+        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After you send the request, the system returns a request ID, but the IPv6 gateway is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the deletion status of the IPv6 gateway:<list type="bullet">
         /// <item><description>If the IPv6 gateway is in the <b>Deleting</b> state, the IPv6 gateway is being deleted.</description></item>
         /// <item><description>If the specified IPv6 gateway cannot be found, the IPv6 gateway is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation does not support concurrent deletion of the same IPv6 gateway.</description></item>
+        /// <item><description>You cannot call the <b>DeleteIpv6Gateway</b> operation to concurrently delete the same IPv6 gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30649,14 +30688,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules first. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
+        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPv6 gateway is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> to query the deletion status of the IPv6 gateway:<list type="bullet">
+        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After you send the request, the system returns a request ID, but the IPv6 gateway is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the deletion status of the IPv6 gateway:<list type="bullet">
         /// <item><description>If the IPv6 gateway is in the <b>Deleting</b> state, the IPv6 gateway is being deleted.</description></item>
         /// <item><description>If the specified IPv6 gateway cannot be found, the IPv6 gateway is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation does not support concurrent deletion of the same IPv6 gateway.</description></item>
+        /// <item><description>You cannot call the <b>DeleteIpv6Gateway</b> operation to concurrently delete the same IPv6 gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30736,14 +30775,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules first. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
+        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPv6 gateway is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> to query the deletion status of the IPv6 gateway:<list type="bullet">
+        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After you send the request, the system returns a request ID, but the IPv6 gateway is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the deletion status of the IPv6 gateway:<list type="bullet">
         /// <item><description>If the IPv6 gateway is in the <b>Deleting</b> state, the IPv6 gateway is being deleted.</description></item>
         /// <item><description>If the specified IPv6 gateway cannot be found, the IPv6 gateway is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation does not support concurrent deletion of the same IPv6 gateway.</description></item>
+        /// <item><description>You cannot call the <b>DeleteIpv6Gateway</b> operation to concurrently delete the same IPv6 gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30767,14 +30806,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules first. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
+        /// <para>Before you delete an IPv6 gateway, delete the IPv6 egress-only rules. For more information, see <a href="https://help.aliyun.com/document_detail/102201.html">DeleteIpv6EgressOnlyRule</a>.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the IPv6 gateway is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> to query the deletion status of the IPv6 gateway:<list type="bullet">
+        /// <item><description>The <b>DeleteIpv6Gateway</b> operation is asynchronous. After you send the request, the system returns a request ID, but the IPv6 gateway is not immediately deleted. The deletion task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/102226.html">DescribeIpv6GatewayAttribute</a> operation to query the deletion status of the IPv6 gateway:<list type="bullet">
         /// <item><description>If the IPv6 gateway is in the <b>Deleting</b> state, the IPv6 gateway is being deleted.</description></item>
         /// <item><description>If the specified IPv6 gateway cannot be found, the IPv6 gateway is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteIpv6Gateway</b> operation does not support concurrent deletion of the same IPv6 gateway.</description></item>
+        /// <item><description>You cannot call the <b>DeleteIpv6Gateway</b> operation to concurrently delete the same IPv6 gateway.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33445,6 +33484,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelete))
             {
                 query["ForceDelete"] = request.ForceDelete;
@@ -33513,6 +33556,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceDelete))
             {
@@ -45314,7 +45361,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types unless otherwise specified.</para>
+        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45437,7 +45484,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types unless otherwise specified.</para>
+        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45560,7 +45607,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types unless otherwise specified.</para>
+        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45583,7 +45630,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types unless otherwise specified.</para>
+        /// <para>This operation queries the details of Internet NAT gateways and VPC NAT gateways. The term NAT gateway in this document refers to both types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -54496,6 +54543,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Shuts down ClassicLink.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableVpcClassicLinkRequest
         /// </param>
@@ -54567,6 +54619,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Shuts down ClassicLink.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableVpcClassicLinkRequest
@@ -54640,6 +54697,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Shuts down ClassicLink.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableVpcClassicLinkRequest
         /// </param>
@@ -54663,6 +54725,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Shuts down ClassicLink.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableVpcClassicLinkRequest
@@ -55832,6 +55899,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Enables ClassicLink.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableVpcClassicLinkRequest
         /// </param>
@@ -55903,6 +55975,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Enables ClassicLink.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableVpcClassicLinkRequest
@@ -55976,6 +56053,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Enables ClassicLink.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableVpcClassicLinkRequest
         /// </param>
@@ -55999,6 +56081,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Enables ClassicLink.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>目前该接口已标记为弃用。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableVpcClassicLinkRequest
@@ -56753,12 +56840,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a NAT gateway instance.</para>
+        /// <para>Queries the details of a NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both Internet NAT gateways and VPC NAT gateways.</para>
+        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56824,12 +56911,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a NAT gateway instance.</para>
+        /// <para>Queries the details of a NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both Internet NAT gateways and VPC NAT gateways.</para>
+        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56895,12 +56982,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a NAT gateway instance.</para>
+        /// <para>Queries the details of a NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both Internet NAT gateways and VPC NAT gateways.</para>
+        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56918,12 +57005,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a NAT gateway instance.</para>
+        /// <para>Queries the details of a NAT gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both Internet NAT gateways and VPC NAT gateways.</para>
+        /// <para>This operation queries the details of an Internet NAT gateway or a VPC NAT gateway. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -62163,6 +62250,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -62241,6 +62332,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -70290,7 +70385,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The NAT gateways supported by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types without distinction.</para>
+        /// <para>The NAT gateways involved in this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -70308,6 +70403,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyNatGatewayAttributeShrinkRequest request = new ModifyNatGatewayAttributeShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6Config))
+            {
+                request.Ipv6ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6Config, "Ipv6Config", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LogDelivery))
             {
                 request.LogDeliveryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LogDelivery, "LogDelivery", "json");
@@ -70328,6 +70427,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IcmpReplyEnabled))
             {
                 query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6ConfigShrink))
+            {
+                query["Ipv6Config"] = request.Ipv6ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDeliveryShrink))
             {
@@ -70387,7 +70490,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The NAT gateways supported by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types without distinction.</para>
+        /// <para>The NAT gateways involved in this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -70405,6 +70508,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyNatGatewayAttributeShrinkRequest request = new ModifyNatGatewayAttributeShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ipv6Config))
+            {
+                request.Ipv6ConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ipv6Config, "Ipv6Config", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LogDelivery))
             {
                 request.LogDeliveryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LogDelivery, "LogDelivery", "json");
@@ -70425,6 +70532,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IcmpReplyEnabled))
             {
                 query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6ConfigShrink))
+            {
+                query["Ipv6Config"] = request.Ipv6ConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogDeliveryShrink))
             {
@@ -70484,7 +70595,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The NAT gateways supported by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types without distinction.</para>
+        /// <para>The NAT gateways involved in this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -70507,7 +70618,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The NAT gateways supported by this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types without distinction.</para>
+        /// <para>The NAT gateways involved in this operation include Internet NAT gateways and VPC NAT gateways. The term &quot;NAT gateway&quot; in this document refers to both types unless otherwise specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -74302,6 +74413,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDns64))
+            {
+                query["EnableDns64"] = request.EnableDns64;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIPv6))
             {
                 query["EnableIPv6"] = request.EnableIPv6;
@@ -74399,6 +74514,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDns64))
+            {
+                query["EnableDns64"] = request.EnableDns64;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIPv6))
             {
@@ -80837,7 +80956,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>Removes an elastic IP address (EIP) from an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80903,7 +81022,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>Removes an elastic IP address (EIP) from an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80969,7 +81088,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>Removes an elastic IP address (EIP) from an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -80987,7 +81106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>Removes an elastic IP address (EIP) from an Internet Shared Bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81187,9 +81306,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the traffic mirror sources have not been removed yet. The removal task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
+        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the traffic mirror sources are not immediately removed. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being removed.</description></item>
-        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources have been removed.</description></item>
+        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are removed.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> does not support concurrent removal of traffic mirror sources from the same traffic mirror session.</description></item>
@@ -81273,9 +81392,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the traffic mirror sources have not been removed yet. The removal task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
+        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the traffic mirror sources are not immediately removed. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being removed.</description></item>
-        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources have been removed.</description></item>
+        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are removed.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> does not support concurrent removal of traffic mirror sources from the same traffic mirror session.</description></item>
@@ -81359,9 +81478,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the traffic mirror sources have not been removed yet. The removal task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
+        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the traffic mirror sources are not immediately removed. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being removed.</description></item>
-        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources have been removed.</description></item>
+        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are removed.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> does not support concurrent removal of traffic mirror sources from the same traffic mirror session.</description></item>
@@ -81389,9 +81508,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the traffic mirror sources have not been removed yet. The removal task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
+        /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> is an asynchronous operation. After you call this operation, the system returns a request ID, but the traffic mirror sources are not immediately removed. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/261367.html">ListTrafficMirrorSessions</a> to query the status of the traffic mirror session:<list type="bullet">
         /// <item><description>If the traffic mirror session is in the <b>Modifying</b> state, the traffic mirror sources are being removed.</description></item>
-        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources have been removed.</description></item>
+        /// <item><description>If the traffic mirror session is in the <b>Created</b> state, the traffic mirror sources are removed.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>RemoveSourcesFromTrafficMirrorSession</b> does not support concurrent removal of traffic mirror sources from the same traffic mirror session.</description></item>
@@ -83109,12 +83228,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -83134,6 +83253,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -83168,12 +83291,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -83193,6 +83316,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -83227,12 +83354,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -83250,12 +83377,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs an active/standby switchover for a route target group.</para>
+        /// <para>Performs a primary/secondary switchover for a route target group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -88405,6 +88532,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -88477,6 +88612,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

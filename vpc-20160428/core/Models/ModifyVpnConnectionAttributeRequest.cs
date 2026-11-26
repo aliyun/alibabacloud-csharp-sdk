@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para><b>IkeConfig.Psk</b>: The pre-shared key used for authentication between the VPN gateway and the data center.</para>
         /// <list type="bullet">
-        /// <item><description>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <c>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</c> It cannot contain spaces.</description></item>
+        /// <item><description>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <c>~!`@#$%^&amp;*()_-+={}[]|;:\&quot;,.&lt;&gt;/?</c> It cannot contain spaces.</description></item>
         /// <item><description>If you do not specify a pre-shared key, the system randomly generates a 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to query the automatically generated pre-shared key.<remarks>
         /// <para>The pre-shared key on the IPsec-VPN connection side must be the same as the authentication key on the data center side. Otherwise, the connection between the data center and the VPN gateway cannot be established.</para>
         /// </remarks>
@@ -552,7 +552,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The pre-shared key used for authentication between the tunnel and the peer.</para>
                 /// <list type="bullet">
-                /// <item><description><para>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <c>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</c> It cannot contain spaces.</para>
+                /// <item><description><para>The key must be 1 to 100 characters in length and can contain digits, letters, and the following special characters: <c>~!`@#$%^&amp;*()_-+={}[]|;:\&quot;,.&lt;&gt;/?</c> It cannot contain spaces.</para>
                 /// </description></item>
                 /// <item><description><para>If you do not specify a pre-shared key, the system randomly generates a 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2526951.html">DescribeVpnConnection</a> operation to query the automatically generated pre-shared key.</para>
                 /// </description></item>

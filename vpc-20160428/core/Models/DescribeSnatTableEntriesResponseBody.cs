@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string EipAffinity { get; set; }
 
+                [NameInMap("MatchType")]
+                [Validation(Required=false)]
+                public string MatchType { get; set; }
+
                 [NameInMap("NatGatewayId")]
                 [Validation(Required=false)]
                 public string NatGatewayId { get; set; }
@@ -86,6 +90,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("TunnelIndex")]
+                [Validation(Required=false)]
+                public string TunnelIndex { get; set; }
 
             }
 

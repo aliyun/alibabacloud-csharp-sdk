@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> VbrInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the VBR instance to be authorized. This account must be different from the caller\&quot;s account. You cannot specify the caller\&quot;s own account ID. This operation is used for cross-account authorization.</para>
+        /// <para>The ID of the Alibaba Cloud account that owns the VBR instance to be authorized. This account must be different from the caller&quot;s account. You cannot specify the caller&quot;s own account ID. This operation is used for cross-account authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

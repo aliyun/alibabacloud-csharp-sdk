@@ -82,11 +82,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Duration { get; set; }
 
         /// <summary>
-        /// <para>The EIP binding mode of the NAT gateway. Valid values:</para>
+        /// <para>The EIP attach mode of the NAT gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MULTI_BINDED</b> (default): multi-EIP NIC-visible mode.</description></item>
-        /// <item><description><b>NAT</b>: NAT mode, which is compatible with IPv4 gateways.<remarks>
-        /// <para>When the EIP binding mode of the NAT gateway is set to NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch to which the NAT gateway belongs does not have available idle private IP addresses, you cannot bind new EIPs. When the EIP binding mode of the NAT gateway is set to NAT mode, the NAT gateway supports a maximum of 50 EIPs.</para>
+        /// <item><description><b>MULTI_BINDED</b> (default): multi-EIP to network interface controller (NIC) mode.</description></item>
+        /// <item><description><b>NAT</b>: standard mode, which is compatible with IPv4 gateways.<remarks>
+        /// <para>If the EIP attach mode of the NAT gateway is set to the standard mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch does not have available idle private IP addresses, you cannot attach new EIPs. In the standard mode, a NAT gateway supports up to 50 EIPs.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The billing method of the NAT gateway. Valid values:</para>
         /// <para><b>PostPaid</b> (default): pay-as-you-go.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of Internet NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Use an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</para>
+        /// <para>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Specify an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</para>
         /// <remarks>
         /// <para>This parameter takes effect only for VPC NAT gateways.</para>
         /// </remarks>
@@ -148,8 +148,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4Prefix { get; set; }
 
         /// <summary>
+        /// <para>The IPv6 configuration.</para>
+        /// </summary>
+        [NameInMap("Ipv6Config")]
+        [Validation(Required=false)]
+        public string Ipv6ConfigShrink { get; set; }
+
+        /// <summary>
         /// <para>The name of the NAT gateway.</para>
-        /// <para>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</para>
+        /// <para>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and can contain digits, underscores (_), and hyphens (-).</para>
         /// <para>If you do not specify this parameter, the system generates a default name for the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
@@ -160,7 +167,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The private IP address that is allocated to the NAT gateway. Use an unallocated IP address in the vSwitch CIDR block of the NAT gateway. If this parameter is left empty, an IP address is randomly allocated.</para>
+        /// <para>The private IP address that is occupied by the NAT gateway. Specify an unallocated IP address from the vSwitch CIDR block to which the NAT gateway belongs. If this parameter is left empty, the system randomly allocates an IP address.</para>
         /// <remarks>
         /// <para>This parameter takes effect only for VPC NAT gateways.</para>
         /// </remarks>
@@ -292,7 +299,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateNatGatewayShrinkRequestTag> Tag { get; set; }
         public class CreateNatGatewayShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can use the Tag.N.Key format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag key. To specify a tag key in an API request, use the Tag.N.Key format, where N ranges from 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -302,7 +309,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. You can use the Tag.N.Value format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>The tag value. To specify a tag value in an API request, use the Tag.N.Value format, where N ranges from 1 to 20. The tag value cannot be an empty string. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

@@ -1,3 +1,27 @@
+2026-11-26 Version: 7.4.1
+- Update API CreateNatGateway: add request parameters Ipv6Config.
+- Update API CreateRouteTargetGroup: add request parameters DryRun.
+- Update API CreateRouteTargetGroup: add request parameters IpVersion.
+- Update API CreateSnatEntry: add request parameters MatchType.
+- Update API DeleteRouteTargetGroup: add request parameters DryRun.
+- Update API DescribeNatGateways: add response parameters Body.NatGateways.$.Ipv6Config.
+- Update API DescribeNatGateways: add response parameters Body.NatGateways.$.NatGatewayPrivateInfo.PrivateIpv6Address.
+- Update API DescribeSnatTableEntries: add response parameters Body.SnatTableEntries.$.MatchType.
+- Update API DescribeSnatTableEntries: add response parameters Body.SnatTableEntries.$.TunnelIndex.
+- Update API DescribeVSwitchAttributes: add response parameters Body.EnableDns64.
+- Update API DescribeVSwitches: add response parameters Body.VSwitches.$.EnableDns64.
+- Update API GetNatGatewayAttribute: add response parameters Body.Ipv6Config.
+- Update API GetNatGatewayAttribute: add response parameters Body.PrivateInfo.PrivateIpv6Address.
+- Update API GetRouteTargetGroup: add response parameters Body.IpVersion.
+- Update API ListRouteTargetGroups: add request parameters IpVersion.
+- Update API ListRouteTargetGroups: add response parameters Body.RouteTargetGroups.$.IpVersion.
+- Update API ModifyNatGatewayAttribute: add request parameters Ipv6Config.
+- Update API ModifyVSwitchAttribute: add request parameters EnableDns64.
+- Update API SwitchActiveRouteTarget: add request parameters DryRun.
+- Update API UpdateRouteTargetGroup: add request parameters DryRun.
+- Update API UpdateRouteTargetGroup: add request parameters IpVersion.
+
+
 2026-11-17 Version: 7.4.0
 - Support API CalculateNatGatewayCapacityUnits.
 - Support API DeleteNatRateLimitRule.

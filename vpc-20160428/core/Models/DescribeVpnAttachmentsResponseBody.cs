@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;description\&quot;:\&quot;forwarding1.7.22\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;BGPSupport\&quot;:\&quot;true\&quot;,\&quot;IDaaSNewVersion\&quot;:\&quot;true\&quot;}</para>
+            /// <para>{&quot;description&quot;:&quot;forwarding1.7.22&quot;,&quot;VisuallySsl&quot;:&quot;true&quot;,&quot;PbrPriority&quot;:&quot;true&quot;,&quot;BGPSupport&quot;:&quot;true&quot;,&quot;IDaaSNewVersion&quot;:&quot;true&quot;}</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]

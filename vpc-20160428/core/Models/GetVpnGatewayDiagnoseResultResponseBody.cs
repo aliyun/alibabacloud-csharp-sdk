@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;targetIp\&quot;:\&quot;192.168.0.1\&quot;,\&quot;srcIp\&quot;:\&quot;192.168.1.1\&quot;,\&quot;rtt\&quot;:-1.0,\&quot;lossRate\&quot;:100.0}</para>
+            /// <para>{&quot;targetIp&quot;:&quot;192.168.0.1&quot;,&quot;srcIp&quot;:&quot;192.168.1.1&quot;,&quot;rtt&quot;:-1.0,&quot;lossRate&quot;:100.0}</para>
             /// </summary>
             [NameInMap("DiagnoseResultDescription")]
             [Validation(Required=false)]

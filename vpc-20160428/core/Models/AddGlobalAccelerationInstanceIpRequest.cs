@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EIP instance. You can call <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> to query the EIP instance ID. </para>
+        /// <para>The ID of the EIP. You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query the EIP ID. </para>
         /// <remarks>
-        /// <para>Make sure that the billing method of the EIP is pay-as-you-go and the EIP resides in the same region as the Internet Shared Bandwidth instance.</para>
+        /// <para>Make sure that the billing method of the EIP is pay-as-you-go and that the EIP and the shared bandwidth instance are in the same region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Internet Shared Bandwidth instance resides. </para>
-        /// <para>You can call <b>DescribeRegions</b> to query the region ID.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance. </para>
+        /// <para>You can call the <b>DescribeRegions</b> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

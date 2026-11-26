@@ -33,6 +33,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
+        [NameInMap("IpVersion")]
+        [Validation(Required=false)]
+        public string IpVersion { get; set; }
+
+        /// <summary>
         /// <para>The ID of the region where the VPC to which the route target group belongs is deployed. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>

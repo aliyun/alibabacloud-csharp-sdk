@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The IP address allocated to the specified EIP. This parameter is returned only if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>The IP address allocated to the specified EIP. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The order ID.
-        /// &lt;props=&quot;china&quot;&gt;This parameter is returned if InstanceChargeType (the billing method of the EIP to be allocated) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is disabled, go to the <a href="https://usercenter2.aliyun.com/order/list">User Center</a> to complete the payment.
-        /// &lt;props=&quot;intl&quot;&gt;This parameter is returned if InstanceChargeType (the billing method of the EIP to be allocated) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is disabled, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">User Center</a> to complete the payment.</para>
+        /// &lt;props=&quot;china&quot;&gt;This parameter is returned when InstanceChargeType (the Billable methods of the specified EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is disabled, go to the <a href="https://usercenter2.aliyun.com/order/list">Billing Management console</a> to complete the payment.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is returned when InstanceChargeType (the Billable methods of the specified EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is disabled, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Billing Management console</a> to complete the payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20190000</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter is returned only if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>The resource group ID. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-resourcegroup****</para>

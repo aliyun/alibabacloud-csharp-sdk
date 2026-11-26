@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The system prechecks the request without creating resources. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): The system sends a normal request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>false</b> (default): The system sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to query the IPv6 single-stack vSwitches in the specified region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Queries the IPv6 single-stack vSwitches in the specified region.</description></item>
-        /// <item><description>false: Does not query the IPv6 single-stack vSwitches in the specified region.</description></item>
+        /// <item><description><b>true</b>: Queries the IPv6 single-stack vSwitches in the specified region.</description></item>
+        /// <item><description><b>false</b>: Does not query the IPv6 single-stack vSwitches in the specified region.</description></item>
         /// </list>
         /// <para>If you do not specify this parameter, the system queries all vSwitches in the specified region by default.</para>
         /// 
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVSwitchesRequestTag> Tag { get; set; }
         public class DescribeVSwitchesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</para>
             /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</para>
             /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the vSwitch.</para>
-        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vSwitch</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchName { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the resource ownership.</para>
+        /// <para>The Alibaba Cloud account ID for resource ownership.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2546073170691****</para>
