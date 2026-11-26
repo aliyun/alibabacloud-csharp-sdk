@@ -1,3 +1,12 @@
+2026-11-26 Version: 1.3.2
+- Update API ListSubTasks: add request parameters OnlyRunning.
+- Update API ListSubTasks: add request parameters ResourceDirectoryAccountId.
+- Update API ListSubTasks: add response parameters Body.Data.$.AgentName.
+- Update API ListSubTasks: add response parameters Body.Data.$.GmtTaskFinished.
+- Update API ListSubTasks: add response parameters Body.Data.$.GmtTaskStart.
+- Update API ListSubTasks: add response parameters Body.Data.$.TaskResultMessage.FullCheckResult.
+
+
 2026-11-17 Version: 1.3.1
 - Generated csharp 2026-01-01 for AISC.
 

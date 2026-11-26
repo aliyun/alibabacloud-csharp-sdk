@@ -20,7 +20,14 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Specifies whether to query only running subtasks. If you set this parameter to true, the system queries all running subtasks of the current tenant across root tasks. In this case, you do not need to specify RootTaskId.</para>
+        /// </summary>
+        [NameInMap("OnlyRunning")]
+        [Validation(Required=false)]
+        public bool? OnlyRunning { get; set; }
+
+        /// <summary>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +37,17 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent task returned after the task is submitted.</para>
+        /// <para>The ID of the resource directory account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456789</para>
+        /// </summary>
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the root task returned upon task submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110146ac282314fe4f7cd11afc7540eb</para>

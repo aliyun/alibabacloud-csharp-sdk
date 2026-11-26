@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public List<ListSubTasksResponseBodyData> Data { get; set; }
         public class ListSubTasksResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The display name of the agent. It is parsed from the application information based on the target of the subtask. This field is empty if the application record is missing.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agent-01</para>
+            /// </summary>
+            [NameInMap("AgentName")]
+            [Validation(Required=false)]
+            public string AgentName { get; set; }
+
+            /// <summary>
             /// <para>The hash value of the uploaded file.</para>
             /// 
             /// <b>Example:</b>
@@ -25,6 +35,26 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             [NameInMap("FileHash")]
             [Validation(Required=false)]
             public string FileHash { get; set; }
+
+            /// <summary>
+            /// <para>The millisecond-level timestamp when the subtask finishes execution. This field is empty if the subtask has not finished.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1764036120000</para>
+            /// </summary>
+            [NameInMap("GmtTaskFinished")]
+            [Validation(Required=false)]
+            public long? GmtTaskFinished { get; set; }
+
+            /// <summary>
+            /// <para>The millisecond-level timestamp when the subtask starts execution. This field is empty if the subtask has not started.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1764036000000</para>
+            /// </summary>
+            [NameInMap("GmtTaskStart")]
+            [Validation(Required=false)]
+            public long? GmtTaskStart { get; set; }
 
             /// <summary>
             /// <para>The task ID.</para>
@@ -54,28 +84,380 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public ListSubTasksResponseBodyDataTaskResultMessage TaskResultMessage { get; set; }
             public class ListSubTasksResponseBodyDataTaskResultMessage : TeaModel {
                 /// <summary>
-                /// <para>The skill check task result.</para>
+                /// <para>The check results of the comprehensive health check task, which provides the status and description for each check item.</para>
+                /// </summary>
+                [NameInMap("FullCheckResult")]
+                [Validation(Required=false)]
+                public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult FullCheckResult { get; set; }
+                public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResult : TeaModel {
+                    /// <summary>
+                    /// <para>The result of the asset scanning check item.</para>
+                    /// </summary>
+                    [NameInMap("AssetScan")]
+                    [Validation(Required=false)]
+                    public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan AssetScan { get; set; }
+                    public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultAssetScan : TeaModel {
+                        /// <summary>
+                        /// <para>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>dispatched</para>
+                        /// </summary>
+                        [NameInMap("Message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
+                        [NameInMap("Percent")]
+                        [Validation(Required=false)]
+                        public int? Percent { get; set; }
+
+                        /// <summary>
+                        /// <para>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>success</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The ID of the policy corresponding to the check item. This field is used only by health check items.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1001</para>
+                        /// </summary>
+                        [NameInMap("StrategyId")]
+                        [Validation(Required=false)]
+                        public long? StrategyId { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The result of the health check item.</para>
+                    /// </summary>
+                    [NameInMap("HealthCheck")]
+                    [Validation(Required=false)]
+                    public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck HealthCheck { get; set; }
+                    public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultHealthCheck : TeaModel {
+                        /// <summary>
+                        /// <para>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>strategyId=1001</para>
+                        /// </summary>
+                        [NameInMap("Message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
+                        [NameInMap("Percent")]
+                        [Validation(Required=false)]
+                        public int? Percent { get; set; }
+
+                        /// <summary>
+                        /// <para>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>success</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The ID of the policy corresponding to the check item. This field is used only by health check items.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1001</para>
+                        /// </summary>
+                        [NameInMap("StrategyId")]
+                        [Validation(Required=false)]
+                        public long? StrategyId { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The result of the MCP check item. If the detector is not connected, the result defaults to success.</para>
+                    /// </summary>
+                    [NameInMap("McpCheck")]
+                    [Validation(Required=false)]
+                    public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck McpCheck { get; set; }
+                    public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMcpCheck : TeaModel {
+                        /// <summary>
+                        /// <para>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>mcp check task created, detector not implemented yet</para>
+                        /// </summary>
+                        [NameInMap("Message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
+                        [NameInMap("Percent")]
+                        [Validation(Required=false)]
+                        public int? Percent { get; set; }
+
+                        /// <summary>
+                        /// <para>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>success</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The ID of the policy corresponding to the check item. This field is used only by health check items.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1001</para>
+                        /// </summary>
+                        [NameInMap("StrategyId")]
+                        [Validation(Required=false)]
+                        public long? StrategyId { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The result of the memory check item. If the detector is not connected, the result defaults to success.</para>
+                    /// </summary>
+                    [NameInMap("MemoryCheck")]
+                    [Validation(Required=false)]
+                    public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck MemoryCheck { get; set; }
+                    public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultMemoryCheck : TeaModel {
+                        /// <summary>
+                        /// <para>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>memory check task created, detector not implemented yet</para>
+                        /// </summary>
+                        [NameInMap("Message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
+                        [NameInMap("Percent")]
+                        [Validation(Required=false)]
+                        public int? Percent { get; set; }
+
+                        /// <summary>
+                        /// <para>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>success</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The ID of the policy corresponding to the check item. This field is used only by health check items.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1001</para>
+                        /// </summary>
+                        [NameInMap("StrategyId")]
+                        [Validation(Required=false)]
+                        public long? StrategyId { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The result of the session check item. If the detector is not connected, the result defaults to success.</para>
+                    /// </summary>
+                    [NameInMap("SessionCheck")]
+                    [Validation(Required=false)]
+                    public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck SessionCheck { get; set; }
+                    public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSessionCheck : TeaModel {
+                        /// <summary>
+                        /// <para>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>session check task created, detector not implemented yet</para>
+                        /// </summary>
+                        [NameInMap("Message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
+                        [NameInMap("Percent")]
+                        [Validation(Required=false)]
+                        public int? Percent { get; set; }
+
+                        /// <summary>
+                        /// <para>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>success</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The ID of the policy corresponding to the check item. This field is used only by health check items.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1001</para>
+                        /// </summary>
+                        [NameInMap("StrategyId")]
+                        [Validation(Required=false)]
+                        public long? StrategyId { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The result of the Skill file check item.</para>
+                    /// </summary>
+                    [NameInMap("SkillCheck")]
+                    [Validation(Required=false)]
+                    public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck SkillCheck { get; set; }
+                    public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultSkillCheck : TeaModel {
+                        /// <summary>
+                        /// <para>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>dispatched</para>
+                        /// </summary>
+                        [NameInMap("Message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
+                        [NameInMap("Percent")]
+                        [Validation(Required=false)]
+                        public int? Percent { get; set; }
+
+                        /// <summary>
+                        /// <para>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>success</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The ID of the policy corresponding to the check item. This field is used only by health check items.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1001</para>
+                        /// </summary>
+                        [NameInMap("StrategyId")]
+                        [Validation(Required=false)]
+                        public long? StrategyId { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The result of the vulnerability scanning check item.</para>
+                    /// </summary>
+                    [NameInMap("VulScan")]
+                    [Validation(Required=false)]
+                    public ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan VulScan { get; set; }
+                    public class ListSubTasksResponseBodyDataTaskResultMessageFullCheckResultVulScan : TeaModel {
+                        /// <summary>
+                        /// <para>The result description of the check item, such as the cause of failure, the cause of skipping, or the ID of the delivered policy.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>submitted</para>
+                        /// </summary>
+                        [NameInMap("Message")]
+                        [Validation(Required=false)]
+                        public string Message { get; set; }
+
+                        /// <summary>
+                        /// <para>The progress percentage of the check item. Valid values: 0 to 100. This field is not used in the current version.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>100</para>
+                        /// </summary>
+                        [NameInMap("Percent")]
+                        [Validation(Required=false)]
+                        public int? Percent { get; set; }
+
+                        /// <summary>
+                        /// <para>The status of the check item. Valid values: init, running, success, failed, timeout, and skipped.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>success</para>
+                        /// </summary>
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The ID of the policy corresponding to the check item. This field is used only by health check items.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1001</para>
+                        /// </summary>
+                        [NameInMap("StrategyId")]
+                        [Validation(Required=false)]
+                        public long? StrategyId { get; set; }
+
+                    }
+
+                }
+
+                /// <summary>
+                /// <para>The Skill check task result.</para>
                 /// </summary>
                 [NameInMap("SkillCheckResult")]
                 [Validation(Required=false)]
                 public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResult SkillCheckResult { get; set; }
                 public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResult : TeaModel {
                     /// <summary>
-                    /// <para>The file detection risk information.</para>
+                    /// <para>The file check risk information.</para>
                     /// </summary>
                     [NameInMap("RiskInfo")]
                     [Validation(Required=false)]
                     public List<ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo> RiskInfo { get; set; }
                     public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfo : TeaModel {
                         /// <summary>
-                        /// <para>The list of file detection risks.</para>
+                        /// <para>The list of file check risks.</para>
                         /// </summary>
                         [NameInMap("Ext")]
                         [Validation(Required=false)]
                         public ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt Ext { get; set; }
                         public class ListSubTasksResponseBodyDataTaskResultMessageSkillCheckResultRiskInfoExt : TeaModel {
                             /// <summary>
-                            /// <para>The configuration detection risk.</para>
+                            /// <para>The configuration check risk.</para>
                             /// </summary>
                             [NameInMap("Config")]
                             [Validation(Required=false)]
@@ -338,7 +720,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                         public string Path { get; set; }
 
                         /// <summary>
-                        /// <para>The detection result type. Valid values:</para>
+                        /// <para>The type of the check result. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>0</b>: No risk.</description></item>
                         /// <item><description><b>1</b>: Risk detected.</description></item>
@@ -377,7 +759,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public ListSubTasksResponseBodyPageInfo PageInfo { get; set; }
         public class ListSubTasksResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries displayed on the current page.</para>
+            /// <para>The number of entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -397,7 +779,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -419,7 +801,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9FDE3D6F-26BD-5937-B0E5-8F47962B****</para>
