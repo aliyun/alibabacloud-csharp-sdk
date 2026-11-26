@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReplaceObjectBindingsRequest : TeaModel {
         /// <summary>
-        /// <para>The new list of object bindings (full replacement. Pass an empty list to clear all bindings).</para>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The new list of object bindings for full replacement. Passing an empty list clears all bindings.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("objectBindings")]
@@ -18,7 +28,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ReplaceObjectBindingsRequestObjectBindings> ObjectBindings { get; set; }
         public class ReplaceObjectBindingsRequestObjectBindings : TeaModel {
             /// <summary>
-            /// <para>The semantic graph name to which the binding object belongs (object_id is unique within this graph. Required).</para>
+            /// <para>The name of the semantic graph to which the bound object belongs. The object_id must be unique within this graph. This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -28,7 +38,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>The binding object ID.</para>
+            /// <para>The ID of the bound object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -38,7 +48,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>The binding object type (such as customer or project).</para>
+            /// <para>The object type to attach, such as customer or project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -50,7 +60,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The ID of the personal FILE data source to be replaced (unique within the tenant).</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the personal FILE data source to be replaced, which is unique within the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. Pass it explicitly through winnexo-cli using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter and is explicitly passed by winnexo-cli through the --tenant-id option.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ExecuteMode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the skill is globally accessible.</para>
+            /// <para>Specifies whether global access is allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? GlobalAccess { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether unpublished draft modifications exist.</para>
+            /// <para>Specifies whether unpublished draft modifications exist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SampleName.pdf</para>
+            /// <para>Sample name.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The skill code that is actually executed.</para>
+            /// <para>The code of the skill that is actually executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The task status. Running is returned upon submission.</para>
+            /// <para>The task status. Running is returned immediately after submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -127,10 +127,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The keys.</para>
+            /// <para>The key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>[&quot;None&quot;]</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</para>
+        /// <para>The number of entries per page in the returned results. Default value: 20. Minimum value: 1. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

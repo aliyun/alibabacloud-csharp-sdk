@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateKnowledgeBaseAliDingDocRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the operation is performed as the user specified by <c>opsUserId</c> or <c>opsUserCode</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The description of the alias.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The publicly accessible URL of the AliDing online document.</para>
+        /// <para>The public access URL of the AliDing online document.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>Not supported. This parameter is ignored.</para>
+        /// <para>This parameter is not supported and is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleKnowledgeId</para>
@@ -62,7 +72,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The digital employee name (operating object name, optional).</para>
+        /// <para>The name of the digital employee, which is the name of the operating object. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -72,7 +82,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as <c>source_uid</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as <c>winnexo_uid</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The resource tags. This parameter is optional and accepts a JSON string array, such as <c>[&quot;tagA&quot;,&quot;tagB&quot;]</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

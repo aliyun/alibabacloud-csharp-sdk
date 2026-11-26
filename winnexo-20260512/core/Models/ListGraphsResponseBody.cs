@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListGraphsResponseBodyItems> Items { get; set; }
         public class ListGraphsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The business description of the knowledge graph. An empty string is returned if not configured.</para>
+            /// <para>The business description of the graph. This is an empty string if not configured.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The knowledge graph name.</para>
+            /// <para>The graph name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default group.</para>
+            /// <para>Specifies whether it is the default group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The prompt message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

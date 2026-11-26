@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data item. When tabId and orgId are the same, itemId uniquely identifies a data item. The maximum length is 128 characters.</para>
+            /// <para>The ID of the data item. When tabId and orgId are the same, itemId uniquely identifies a data item. The length cannot exceed 128 characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleItemId</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>The data type (group, user, or role).</para>
+            /// <para>The data type, such as group, user, or role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ObjectName { get; set; }
 
                 /// <summary>
-                /// <para>The object type, such as customer. This field has a value when type is set to mention.</para>
+                /// <para>The object type, such as customer. This parameter has a value only when type is set to mention.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ObjectType { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the object type (such as &quot;Customer&quot;), parsed from the graph schema. The value is null when the cache is missed.</para>
+                /// <para>The display name of the object type, such as Customer. This name is parsed from the graph schema. If the cache is missing, the value is null.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>The number of resources with the FAILED status. This field is returned only in the top-level knowledge base directory list.</para>
+            /// <para>The number of resources in the FAILED state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>The knowledge base source type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</para>
+            /// <para>The ownership type of the knowledge base. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceKind { get; set; }
 
             /// <summary>
-            /// <para>The number of resources with the READY status. This field is returned only in the top-level knowledge base directory list.</para>
+            /// <para>The number of resources in the READY state. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>The resource status. This field has a value when itemType is set to resource.</para>
+            /// <para>The resource status. This parameter has a value only when itemType is set to resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceStatus { get; set; }
 
             /// <summary>
-            /// <para>The total number of resources in the directory and its subdirectories. This field is returned only in the top-level knowledge base directory list.</para>
+            /// <para>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in this request.</para>
+        /// <para>The maximum number of records returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

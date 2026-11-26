@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The image name.</para>
+        /// <para>The mirror name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProjectPlan</para>
+        /// <para>Project plan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -112,9 +112,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The signing status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CREATED: Created but not signed.</description></item>
-        /// <item><description>SUCCESS: Signed successfully.</description></item>
-        /// <item><description>STOP: Terminated.</description></item>
+        /// <item><description>CREATED: created but not signed</description></item>
+        /// <item><description>SUCCESS: signed successfully</description></item>
+        /// <item><description>STOP: terminated</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

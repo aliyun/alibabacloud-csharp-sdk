@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupPublicUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The description of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The ID of the folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_tenant_kb_child</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The project group ID.</para>
+        /// <para>The ID of the project group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,27 +51,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name of the resource.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Enterprise Policy</para>
+        /// <para>Corporate Policy</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The meeting notes content. This parameter is optional. The notes participate in auxiliary analysis.</para>
+        /// <para>The content of the meeting notes. This parameter is optional and is used for auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Extract applicable scope and key clauses</para>
+        /// <para>Extract the applicable scope and key terms</para>
         /// </summary>
         [NameInMap("notes")]
         [Validation(Required=false)]
         public string Notes { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (monitored object name). This parameter is optional.</para>
+        /// <para>The name of the digital employee. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customer_assistant</para>
@@ -69,6 +79,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("operatingObjectName")]
         [Validation(Required=false)]
         public string OperatingObjectName { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
 
         /// <summary>
         /// <para>The URL of the web page.</para>
@@ -82,17 +112,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OriginalUrl { get; set; }
 
         /// <summary>
-        /// <para>The resource labels. This parameter is optional. Specify a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
+        /// <para>The resource tags. This parameter is optional. Specify a JSON array of strings, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;Important&quot;,&quot;Meeting&quot;]</para>
+        /// <para>[&quot;Important&quot;, &quot;Meeting&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID that takes effect.</para>
+        /// <para>The ID of the tenant where the operation takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

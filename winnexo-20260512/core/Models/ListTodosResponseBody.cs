@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether more data is available.</para>
+        /// <para>Specifies whether more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? AssigneeCount { get; set; }
 
             /// <summary>
-            /// <para>The completion time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
+            /// <para>The completion time in UTC+8. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:00:00</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name of the user who completed the item. This field is empty if the item is not completed.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John Doe</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("completedByUserName")]
             [Validation(Required=false)]
             public string CompletedByUserName { get; set; }
 
             /// <summary>
-            /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
+            /// <para>The creation time in UTC+8. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:00:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
+            /// <para>The last modification time in UTC+8. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:00:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the caller has read the item.</para>
+            /// <para>Specifies whether the caller has read the item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsRead { get; set; }
 
             /// <summary>
-            /// <para>The message ID of the assistant that sent the to-do item. This field is empty if there is no conversation source.</para>
+            /// <para>The ID of the assistant message that generated the to-do item. This field is empty if there is no conversation source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>msg-1</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The list display status for the caller.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TODO</para>
+            /// <para>DONE</para>
             /// </summary>
             [NameInMap("myDisplayState")]
             [Validation(Required=false)]
@@ -164,10 +164,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> QuestionSummaries { get; set; }
 
             /// <summary>
-            /// <para>The source context. This context is passed through as-is during creation.</para>
+            /// <para>The source context. This is passed through as-is during creation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>source=openapi</para>
+            /// <para>{&quot;source&quot;:&quot;openapi&quot;}</para>
             /// </summary>
             [NameInMap("sourceContext")]
             [Validation(Required=false)]
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The effective maximum number of entries to return per page for the current request.</para>
+        /// <para>The effective maximum number of entries returned per page for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This field is an empty string if no more data is available.</para>
+        /// <para>The pagination token for the next page. This is an empty string if no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

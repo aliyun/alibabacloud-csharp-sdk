@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The template structure version. The current value is 2, which is independent of the business version vN.</para>
+        /// <para>The schema version of the template. The current value is 2, which is independent of the business version vN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -170,11 +170,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OwnerAgentName { get; set; }
 
             /// <summary>
-            /// <para>The owner type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>MEMBER: Human.</description></item>
-            /// <item><description>AGENT: Agent.</description></item>
-            /// </list>
+            /// <para>The owner type. Valid values: MEMBER (human) and AGENT (agent).</para>
             /// 
             /// <b>Example:</b>
             /// <para>MEMBER</para>
@@ -194,7 +190,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to manually review the output. Default value: false. This feature can only be enabled for digital workers, and review to-do items are automatically sent to the owner.</para>
+            /// <para>Specifies whether to manually review the deliverables. Default value: false. This can be enabled only for digital workers. Review tasks are automatically sent to the owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -207,7 +203,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The list of reviewer user IDs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>example</para>
+            /// <para>[10001]</para>
             /// </summary>
             [NameInMap("reviewerUserIds")]
             [Validation(Required=false)]
@@ -227,17 +223,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The step processing instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Collect customer information and submit it to the owner for review</para>
+            /// <para>Collect customer information and submit it to the person in charge for review</para>
             /// </summary>
             [NameInMap("specification")]
             [Validation(Required=false)]
             public string Specification { get; set; }
 
             /// <summary>
-            /// <para>The ordered fragment array. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</para>
+            /// <para>The ordered array of segments. Supports text, mention, skill, app, files, and web_search. Preserves reference identities and order.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</para>
+            /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Collect Customer Information&quot;}]</para>
             /// </summary>
             [NameInMap("specificationJson")]
             [Validation(Required=false)]
@@ -286,11 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>The version status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DRAFT: Draft.</description></item>
-        /// <item><description>SUBMITTED: Submitted.</description></item>
-        /// </list>
+        /// <para>The version status. Valid values: DRAFT and SUBMITTED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUBMITTED</para>

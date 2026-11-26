@@ -10,17 +10,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListWorkItemsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business statuses used for filtering.</para>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The business status filter, which supports seven states.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;PROCESSING&quot;]</para>
         /// </summary>
         [NameInMap("businessStatuses")]
         [Validation(Required=false)]
         public string BusinessStatusesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collaboration workspace.</para>
+        /// <para>The collaboration workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +41,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The work item types used for filtering.</para>
+        /// <para>The work item type filter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>[&quot;WORKFLOW&quot;]</para>
         /// </summary>
         [NameInMap("itemTypes")]
         [Validation(Required=false)]
@@ -61,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</para>
+        /// <para>The pagination token, which is obtained from the nextToken value returned in the previous response. This parameter takes precedence over page if both are specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -69,6 +79,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
 
         /// <summary>
         /// <para>The page number. This parameter is ignored if nextToken is specified.</para>
@@ -91,17 +121,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The priorities used for filtering.</para>
+        /// <para>The priority filter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>[&quot;HIGH&quot;]</para>
         /// </summary>
         [NameInMap("priorities")]
         [Validation(Required=false)]
         public string PrioritiesShrink { get; set; }
 
         /// <summary>
-        /// <para>The personal scope used for filtering.</para>
+        /// <para>The personal scope filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASSIGNED_TO_ME</para>

@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The directory titles.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>[&quot;Directory 1&quot;]</para>
         /// </summary>
         [NameInMap("directories")]
         [Validation(Required=false)]
         public List<object> Directories { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>

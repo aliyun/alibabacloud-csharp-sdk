@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

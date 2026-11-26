@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListTodosRequest : TeaModel {
         /// <summary>
-        /// <para>The collaboration workspace ID. This is an optional filter. If not specified, items from all workspaces are returned.</para>
+        /// <para>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The collaboration workspace ID. This is an optional filter. If not specified, all workspaces are included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123</para>
@@ -50,6 +60,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
         /// <para>The page number. This parameter is ignored if nextToken is specified.</para>
         /// 
         /// <b>Example:</b>
@@ -70,20 +100,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The priority filter. Valid values: HIGH, MEDIUM, and LOW.</para>
+        /// <para>The priority filter. Valid values: HIGH, MEDIUM, LOW.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>HIGH</para>
+        /// <para>[&quot;HIGH&quot;,&quot;MEDIUM&quot;]</para>
         /// </summary>
         [NameInMap("priorities")]
         [Validation(Required=false)]
         public List<string> Priorities { get; set; }
 
         /// <summary>
-        /// <para>The read status filter. Valid values: UNREAD and READ. The status is determined by the readAt field of the assignee.</para>
+        /// <para>The read status filter. Valid values: UNREAD, READ. The status is determined by the readAt time of the assignee.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>UNREAD</para>
+        /// <para>[&quot;UNREAD&quot;,&quot;READ&quot;]</para>
         /// </summary>
         [NameInMap("readStatus")]
         [Validation(Required=false)]
@@ -100,20 +130,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The to-do type filter. Valid values: WORKFLOW and OPEN_API.</para>
+        /// <para>The to-do type filter. Valid values: WORKFLOW, OPEN_API.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WORKFLOW</para>
+        /// <para>[&quot;WORKFLOW&quot;,&quot;OPEN_API&quot;]</para>
         /// </summary>
         [NameInMap("sourceTypes")]
         [Validation(Required=false)]
         public List<string> SourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The to-do status filter. Valid values: PENDING, COMPLETED, and CANCELLED.</para>
+        /// <para>The to-do status filter. Valid values: PENDING, COMPLETED, CANCELLED.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PENDING</para>
+        /// <para>[&quot;PENDING&quot;,&quot;COMPLETED&quot;]</para>
         /// </summary>
         [NameInMap("statuses")]
         [Validation(Required=false)]

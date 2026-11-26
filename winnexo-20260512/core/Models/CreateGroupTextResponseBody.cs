@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The prompt message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The image name.</para>
+        /// <para>The mirror name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProjectResources</para>
+        /// <para>Project materials</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier on the business system side, that is, the business ID.</para>
+        /// <para>The unique identifier on the business system side, which is the business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

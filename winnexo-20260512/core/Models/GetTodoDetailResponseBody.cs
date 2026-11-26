@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<GetTodoDetailResponseBodyAssignees> Assignees { get; set; }
         public class GetTodoDetailResponseBodyAssignees : TeaModel {
             /// <summary>
-            /// <para>The action time in UTC+8. This field is empty if the item is not processed.</para>
+            /// <para>The time when the item was processed (UTC+8). This field is empty if the item is unprocessed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-16T10:30:00+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AssigneeUserId { get; set; }
 
             /// <summary>
-            /// <para>The read time in UTC+8. This field is empty if the item is unread.</para>
+            /// <para>The time when the item was read (UTC+8). This field is empty if the item is unread.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-12 10:01:00</para>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The attachment policy. Attachments are not stored in the database in the current version.</para>
+        /// <para>The attachment policy. In the current version, attachments are not stored in the database.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>allowUpload=true</para>
+        /// <para>{&quot;allowAttachments&quot;:&quot;true&quot;,&quot;maxFilesPerQuestion&quot;:&quot;20&quot;,&quot;maxFilesTotal&quot;:&quot;50&quot;,&quot;maxFileSizeBytes&quot;:&quot;52428800&quot;,&quot;acceptTypes&quot;:[]}</para>
         /// </summary>
         [NameInMap("attachmentPolicy")]
         [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The completion time in UTC+8 (YYYY-MM-DD HH:mm:ss).</para>
+        /// <para>The completion time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-12 10:00:00</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CompletedByUserName { get; set; }
 
         /// <summary>
-        /// <para>The creation time in UTC+8 (YYYY-MM-DD HH:mm:ss).</para>
+        /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-12 10:00:00</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The last modification time in UTC+8 (YYYY-MM-DD HH:mm:ss).</para>
+        /// <para>The last modification time in the YYYY-MM-DD HH:mm:ss format (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-12 10:00:00</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>The action status of the caller as the assignee.</para>
+        /// <para>The action status of the caller as an assignee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>
@@ -202,17 +202,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The list display status for the caller.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TODO</para>
+        /// <para>DONE</para>
         /// </summary>
         [NameInMap("myDisplayState")]
         [Validation(Required=false)]
         public string MyDisplayState { get; set; }
 
         /// <summary>
-        /// <para>The permissions of the caller, such as canSubmit and canTransfer.</para>
+        /// <para>The permissions of the caller. Valid values: canSubmit and canTransfer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>APP/VIEW=true</para>
+        /// <para>{&quot;canSubmit&quot;:&quot;true&quot;,&quot;canTransfer&quot;:&quot;false&quot;}</para>
         /// </summary>
         [NameInMap("myPermissions")]
         [Validation(Required=false)]
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The list of questions (structured projection).</para>
+        /// <para>The structured list of questions.</para>
         /// </summary>
         [NameInMap("questions")]
         [Validation(Required=false)]
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? AllowCustom { get; set; }
 
             /// <summary>
-            /// <para>The text for the custom input field.</para>
+            /// <para>The text for the custom input item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Other</para>
@@ -296,24 +296,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The options. This field is required for choice questions.</para>
+            /// <para>The options, which are required for choice questions.</para>
             /// </summary>
             [NameInMap("options")]
             [Validation(Required=false)]
             public List<GetTodoDetailResponseBodyQuestionsOptions> Options { get; set; }
             public class GetTodoDetailResponseBodyQuestionsOptions : TeaModel {
                 /// <summary>
-                /// <para>The supplementary description of the option.</para>
+                /// <para>The additional description for the option.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Supplementary description of the option</para>
+                /// <para>Additional description for the option</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The option text (reference key).</para>
+                /// <para>The option text, which serves as a reference key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Approve</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Placeholder { get; set; }
 
             /// <summary>
-            /// <para>The question text (reference key).</para>
+            /// <para>The question text, which serves as a reference key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Whether to approve</para>
@@ -377,20 +377,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response content in JSONB format as-is. Defaults to an empty object if not submitted.</para>
+        /// <para>The response content in JSONB format, passed through as-is. Defaults to an empty object if not submitted.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>result=Approved</para>
+        /// <para>{&quot;answers&quot;:[{&quot;question&quot;:&quot;Whether to approve&quot;,&quot;answer&quot;:[&quot;Approve&quot;]}]}</para>
         /// </summary>
         [NameInMap("resultPayload")]
         [Validation(Required=false)]
         public Dictionary<string, object> ResultPayload { get; set; }
 
         /// <summary>
-        /// <para>The source context. This context is passed through as-is during creation.</para>
+        /// <para>The source context, which is passed through as-is during creation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>source=openapi</para>
+        /// <para>{&quot;source&quot;:&quot;openapi&quot;}</para>
         /// </summary>
         [NameInMap("sourceContext")]
         [Validation(Required=false)]

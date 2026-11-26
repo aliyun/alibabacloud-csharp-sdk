@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupDingtalkChatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The session ID, typically used for JSSDK.</para>
+        /// <para>The chat ID, which is generally used for JSSDK.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cidxxxxxxxx</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CustomerProjectGroup</para>
+        /// <para>Customer project group</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The data source ID (unique within the tenant).</para>
+        /// <para>The data source ID, which is unique within the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>

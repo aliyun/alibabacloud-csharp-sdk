@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AccountIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether the account is activated. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Activated.</description></item>
@@ -34,7 +44,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsActive { get; set; }
 
         /// <summary>
-        /// <para>The keyword for product search. Fuzzy match is supported.</para>
+        /// <para>The keyword for searching products. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample keyword</para>
@@ -42,6 +52,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>
@@ -67,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of new system role codes. This is a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
+        /// <para>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;string_value&quot;]</para>
@@ -77,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RoleCodesShrink { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. winnexo-cli explicitly passes this parameter by using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter and is explicitly passed by using the --tenant-id option in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

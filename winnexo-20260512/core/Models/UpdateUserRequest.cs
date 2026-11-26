@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The display name of the user.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +44,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsActive { get; set; }
 
         /// <summary>
-        /// <para>The new list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The new list of system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;APPLICATION_USER&quot;]</para>
         /// </summary>
         [NameInMap("roleCodes")]
         [Validation(Required=false)]
@@ -54,17 +84,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The new list of user group IDs (full replacement. If not specified, the value is not modified).</para>
+        /// <para>The new list of user group IDs. This list fully replaces the existing user groups. If this parameter is not specified, the user groups are not modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>[&quot;string_value&quot;]</para>
         /// </summary>
         [NameInMap("userGroupIds")]
         [Validation(Required=false)]
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target user (WINNEXO platform user ID).</para>
+        /// <para>The ID of the target user, which is the WINNEXO platform user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

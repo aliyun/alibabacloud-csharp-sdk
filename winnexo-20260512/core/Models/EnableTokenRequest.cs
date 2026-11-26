@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target user (WINNEXO platform user ID). If this parameter is left empty, the operation is performed on the caller. Administrators can specify another user\&quot;s ID to perform the operation on behalf of that user.</para>
+        /// <para>The ID of the target user (WINNEXO platform user ID). If this parameter is left empty, the operation is performed on the caller. Administrators can specify another user&quot;s ID to perform the operation on behalf of that user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

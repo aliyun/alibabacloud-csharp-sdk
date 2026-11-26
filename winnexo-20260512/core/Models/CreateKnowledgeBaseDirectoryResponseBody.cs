@@ -53,24 +53,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-11-14T02:18:27Z</para>
+        /// <para>1763086707</para>
         /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The last modification time.</para>
+        /// <para>The last update time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2026-01-19T01:48:56Z</para>
+        /// <para>1768787336</para>
         /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

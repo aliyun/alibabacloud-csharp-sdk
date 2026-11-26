@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateTenantDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The business status code. A value of 200 indicates success. If the request fails, a specific business error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,27 +20,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The business ID of the updated directory. You can refresh the configuration content by calling the corresponding configuration read API operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleDirectoryId</para>
+        /// <para>kb-example</para>
         /// </summary>
         [NameInMap("directoryId")]
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The response message. The value is success if the request is successful. If the request fails, the message describes the cause of the error.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ok</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID. You can use this ID to troubleshoot issues related to this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

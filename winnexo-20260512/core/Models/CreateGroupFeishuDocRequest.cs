@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupFeishuDocRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the operation is performed as the user identified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The description of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
@@ -52,20 +62,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The image name.</para>
+        /// <para>The mirror name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProjectPlan</para>
+        /// <para>Project plan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The meeting notes content (optional). The notes are used for auxiliary analysis.</para>
+        /// <para>The meeting notes content. This parameter is optional and is used for auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Extract decisions and to-do items</para>
+        /// <para>Extract decisions and to-dos</para>
         /// </summary>
         [NameInMap("notes")]
         [Validation(Required=false)]
@@ -113,17 +123,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The name of the operating object.</para>
+        /// <para>The name of the operation object.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>R&amp;D Assistant</para>
+        /// <para>R&amp;D assistant</para>
         /// </summary>
         [NameInMap("operatingObjectName")]
         [Validation(Required=false)]
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The resource tags. This parameter is optional and accepts a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;R&amp;D&quot;]</para>
@@ -140,7 +170,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public CreateGroupFeishuDocRequestSyncConfig SyncConfig { get; set; }
         public class CreateGroupFeishuDocRequestSyncConfig : TeaModel {
             /// <summary>
-            /// <para>The cron expression for the timed scheduling task.</para>
+            /// <para>The cron expression for the timed scheduling node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 * * * *</para>
@@ -150,7 +180,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Cron { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable or disable synchronization.</para>
+            /// <para><b>Enable/Disable</b></para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -161,7 +191,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The preset mode (can be ignored).</para>
+            /// <para>The preset mode. You can ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -173,7 +203,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using the --tenant-id option.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

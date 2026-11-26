@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateGraphInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business description of the knowledge graph. If not configured, the value is an empty string.</para>
+        /// <para>The business description of the graph. If this parameter is not specified, the value is an empty string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Customer domain knowledge graph</para>
+        /// <para>Customer domain semantic graph</para>
         /// </summary>
         [NameInMap("businessProfile")]
         [Validation(Required=false)]
         public string BusinessProfile { get; set; }
 
         /// <summary>
-        /// <para>SUCCESS indicates success. In failure cases, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
+        /// <para>The status code. A value of SUCCESS indicates success. If the request fails, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The display name of the knowledge graph.</para>
+        /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CRM Graph</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The name of the knowledge graph.</para>
+        /// <para>The name of the graph.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crm_graph</para>

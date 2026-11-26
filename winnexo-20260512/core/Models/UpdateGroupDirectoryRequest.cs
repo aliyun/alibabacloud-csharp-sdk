@@ -10,17 +10,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateGroupDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>The new description. If this parameter is set to an empty string, the description is cleared. If this parameter is omitted or set to null, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Project description</para>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The new description. An empty string clears the description. If omitted or set to null, the description is not modified. At least one of the name or description parameters must be non-null.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Project Description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the physical subfolder in the current space. The internal root folder and reference folders are not allowed.</para>
+        /// <para>The ID of the physical subdirectory in the current workspace. Internal root directories and referenced directories are not allowed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collaborative share.</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The new name. If this parameter is omitted or set to null, the name remains unchanged.</para>
+        /// <para>The new name. If omitted or set to null, the name is not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Project Materials</para>
@@ -52,7 +62,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The tenant ID. This is a common parameter. If omitted, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

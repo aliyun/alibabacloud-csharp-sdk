@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class QuerySourceUsageSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group to which the resource belongs, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</para>
+        /// <para>The platform application token issued by the console. If specified, the request is executed as the user identified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the collaboration group to which the resource belongs, such as cg_101. If specified, a group workspace task is created, and the caller must be a valid group member. If left empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCollaborationGroupId</para>
@@ -34,18 +44,38 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The event type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>UserOperator</para>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("eventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge base folder.</para>
+        /// <para>The IDs of the knowledge base folders.</para>
         /// </summary>
         [NameInMap("knowledgeBaseIds")]
         [Validation(Required=false)]
         public List<string> KnowledgeBaseIds { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
 
         /// <summary>
         /// <para>The role scope type. Valid values:</para>
@@ -56,14 +86,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, and ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, and ALL_GROUPS</para>
+        /// <para>TENANT</para>
         /// </summary>
         [NameInMap("scopeType")]
         [Validation(Required=false)]
         public string ScopeType { get; set; }
 
         /// <summary>
-        /// <para>The source ID.</para>
+        /// <para>The source IDs.</para>
         /// </summary>
         [NameInMap("sourceIds")]
         [Validation(Required=false)]
@@ -73,7 +103,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The resume channel source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The name of the source</para>
+        /// <para>Source name content</para>
         /// </summary>
         [NameInMap("sourceName")]
         [Validation(Required=false)]
@@ -91,7 +121,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID, which is a common parameter. If you use winnexo-cli, pass this parameter explicitly by using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

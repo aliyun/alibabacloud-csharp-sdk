@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The generated non-persistent template draft.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;schemaVersion\&quot;:2,\&quot;steps\&quot;:[]}</para>
+        /// <para>{&quot;schemaVersion&quot;:2,&quot;steps&quot;:[]}</para>
         /// </summary>
         [NameInMap("draft")]
         [Validation(Required=false)]

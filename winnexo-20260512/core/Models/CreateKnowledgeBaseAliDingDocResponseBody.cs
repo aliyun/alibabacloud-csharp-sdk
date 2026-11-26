@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The public URL of the document (echoes the input parameter).</para>
+        /// <para>The public URL of the document. This value is echoed from the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-toolset-b8a1de80-e9f5-49f3-8a12-873d378889c6</para>
@@ -100,18 +100,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The refund status. Query this field to confirm the refund status during processing. Valid values:</para>
+        /// <para>The refund status. If the refund is in progress, you must query and confirm the refund status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCESS: All refunds are successful.</description></item>
-        /// <item><description>FAIL: The refund failed.</description></item>
+        /// <item><description>SUCCESS: Succeeded.</description></item>
+        /// <item><description>FAIL: Failed.</description></item>
         /// <item><description>WAIT_PAY: Waiting for refund.</description></item>
-        /// <item><description>EXPIRE: The refund has expired.</description></item>
-        /// <item><description>PAYING: The refund is being processed.</description></item>
-        /// <item><description>TERMINATE: The refund is terminated.</description></item>
+        /// <item><description>EXPIRE: Expired.</description></item>
+        /// <item><description>PAYING: Refunding.</description></item>
+        /// <item><description>TERMINATE: Terminated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;observedGeneration\&quot;: 7, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-12-17T11:57:07Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1765972627273-k7GZvr\&quot;}</para>
+        /// <para>{&quot;observedGeneration&quot;: 7, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2025-12-17T11:57:07Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1765972627273-k7GZvr&quot;}</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

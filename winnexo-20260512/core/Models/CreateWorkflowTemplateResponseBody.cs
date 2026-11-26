@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The ordered array of fragments. Supported types include text, mention, skill, app, files, and web_search. The referenced identities and order are preserved.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;text\&quot;:\&quot;Collect customer information\&quot;}]</para>
+            /// <para>[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Collect customer information&quot;}]</para>
             /// </summary>
             [NameInMap("specificationJson")]
             [Validation(Required=false)]

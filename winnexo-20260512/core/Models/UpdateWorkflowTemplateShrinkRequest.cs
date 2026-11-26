@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateWorkflowTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The write action. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SAVE: Saves the template as a draft without taking effect, allowing node names and executors to be left empty.</description></item>
-        /// <item><description>SUBMIT: Requires complete nodes, and saves and submits the template as the only effective version.
-        /// Default value: SUBMIT.</description></item>
-        /// </list>
+        /// <para>The write action. Valid values: SAVE (saves the template as a draft without taking effect, and allows node names and executors to be left empty) and SUBMIT (requires complete nodes, and saves and submits the template as the only effective version). Default value: SUBMIT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUBMIT</para>
@@ -23,6 +18,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("action")]
         [Validation(Required=false)]
         public string Action { get; set; }
+
+        /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
 
         /// <summary>
         /// <para>The collaboration workspace ID.</para>
@@ -40,14 +45,34 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]}</para>
+        /// <para>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;,&quot;specification&quot;:[{&quot;type&quot;:&quot;text&quot;,&quot;content&quot;:&quot;Collect Customer Information&quot;}],&quot;executorType&quot;:&quot;MEMBER&quot;,&quot;executorUserId&quot;:10086}],&quot;edges&quot;:[]}</para>
         /// </summary>
         [NameInMap("definition")]
         [Validation(Required=false)]
         public string DefinitionShrink { get; set; }
 
         /// <summary>
-        /// <para>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the system falls back to the current effective version.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If not specified, the current effective version is used as the fallback.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

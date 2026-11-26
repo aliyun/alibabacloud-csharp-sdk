@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;observedGeneration\&quot;: 2, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2026-03-05T16:00:09Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1772726409137-lmvsqr\&quot;}</para>
+        /// <para>{&quot;observedGeneration&quot;: 2, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2026-03-05T16:00:09Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1772726409137-lmvsqr&quot;}</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

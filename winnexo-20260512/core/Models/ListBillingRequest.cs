@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListBillingRequest : TeaModel {
         /// <summary>
-        /// <para>The unique business identifier. When bizType is set to LibraryChat, bizId specifies the document library ID.</para>
+        /// <para>The platform application token issued by the console. If you specify this parameter, the request is executed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The unique identifier of the business. When bizType is set to LibraryChat, bizId refers to the ID of the document library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleBizId</para>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The business type. Currently supported values: model Q&amp;A (LlmChat) and document library Q&amp;A (LibraryChat).</para>
+        /// <para>The business type. Valid values: LlmChat (model Q&amp;A) and LibraryChat (document library Q&amp;A).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The actual end timestamp of the live stream, in milliseconds.</para>
+        /// <para>The actual end timestamp of the live stream. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter out bills with zero credit consumption. Default value: true (filter out).</para>
+        /// <para>Specifies whether to filter out bills with zero credit consumption. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,14 +60,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IgnoreZero { get; set; }
 
         /// <summary>
-        /// <para>The operation type. Valid values:</para>
+        /// <para>The operation item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>start: indicates node creation. This is the default value. In most cases, you do not need to explicitly set this value.</description></item>
-        /// <item><description>stop: stops a real-time meeting node. This value corresponds to the creation of a real-time meeting. After the meeting ends, set this value to stop and trigger the call. This value is used in real-time meeting scenarios.</description></item>
+        /// <item><description>start: indicates the creation of a task. This is the default value and usually does not need to be explicitly specified.</description></item>
+        /// <item><description>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting and is set to stop to trigger a call after the meeting ends. This value is used in real-time meeting scenarios.
+        /// Note: When you end a real-time recording, you must set this parameter to stop.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Note: When ending a real-time recording, make sure to set this parameter to stop.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -65,6 +73,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("operation")]
         [Validation(Required=false)]
         public string Operation { get; set; }
+
+        /// <summary>
+        /// <para>The code of the proxy user, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the proxy user, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
 
         /// <summary>
         /// <para>The current page number.</para>
@@ -87,7 +115,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query start time. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -97,7 +125,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The node status. Running is returned upon submission.</para>
+        /// <para>The task status. A status of Running is returned immediately after the task is submitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -107,7 +135,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. For winnexo-cli, this parameter is explicitly passed by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -117,7 +145,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The user ID (WINNEXO platform user ID, optional filter).</para>
+        /// <para>The user ID, which is the WINNEXO platform user ID. This parameter is optional for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AbnormalReason { get; set; }
 
             /// <summary>
+            /// <para>任务 AUTO 偏好：none=默认、performance=效果优先、credit=成本优先</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>none</para>
+            /// </summary>
+            [NameInMap("autoPreference")]
+            [Validation(Required=false)]
+            public string AutoPreference { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether the current caller can delete the task. This is valid only for the task creator and group owner. For personal tasks, the value is always true.</para>
             /// 
             /// <b>Example:</b>

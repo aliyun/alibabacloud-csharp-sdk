@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListSourceUsageStatisticsResponseBodyItems> Items { get; set; }
         public class ListSourceUsageStatisticsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time of the most recent reporting and ingestion within the filtered range.</para>
+            /// <para>The most recent reporting and ingestion time within the filtered range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-02 11:20:09</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? RetrievalCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source, which is unique within the tenant.</para>
+            /// <para>The data source ID, which is unique within the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data source.</para>
+            /// <para>The data source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test123</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>

@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListOperatingObjectFavoritesRequest : TeaModel {
         /// <summary>
-        /// <para>The graph name. Call listGraphs to retrieve available graphs.</para>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user identified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The name of the graph. You can call the listGraphs operation to obtain the graph name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>The digital employee name (operating object name). Optional.</para>
+        /// <para>The name of the digital worker, which is the name of the operating object. This parameter is optional.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +63,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -63,7 +93,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID to take effect.</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

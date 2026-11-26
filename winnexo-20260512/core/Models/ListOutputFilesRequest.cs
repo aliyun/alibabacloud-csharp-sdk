@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListOutputFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID used for exact filtering. The length is 1 to 128 characters. This ID is derived from file registrations or the businessId of associated workflow instances.</para>
+        /// <para>The platform application token issued by the console. If provided, the operation is executed with the identity of the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The business ID used for exact filtering. The length is 1 to 128 characters. This value is derived from the businessId of file registrations or associated workflow instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REQ-20261012-001</para>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the collaboration workspace. The length is 1 to 64 characters. This parameter is optional. If not specified, the personal outputs of the current user are queried. If specified, the real-time permissions of the workspace members and source resources are verified.</para>
+        /// <para>The ID of the collaboration workspace. The length is 1 to 64 characters. If this parameter is not provided, the personal outputs of the current user are queried. If provided, the real-time permissions of the workspace members and source resources are verified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_123e4567-e89b-42d3-a456-426614174001</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The output detail type. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
+        /// <para>The type of the output detail. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>document</para>
@@ -43,14 +53,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The keyword used to match the output title or detail name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Quarterly business</para>
+        /// <para>Quarterly operations</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object). Filters results by name.</para>
+        /// <para>The name of the digital employee used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business Analysis Assistant</para>
@@ -60,7 +70,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The page number, starting from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of items per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -90,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display only the outputs and output details that have sharing enabled.</para>
+        /// <para>Specifies whether to display only shared outputs and output details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -100,14 +130,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? SharedOnly { get; set; }
 
         /// <summary>
-        /// <para>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</para>
+        /// <para>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from the variables.tags of file registrations or associated instances.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The ID of the current execution used to exactly filter outputs.</para>
+        /// <para>The execution ID used to exactly filter the outputs of the current execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleExecutionId</para>

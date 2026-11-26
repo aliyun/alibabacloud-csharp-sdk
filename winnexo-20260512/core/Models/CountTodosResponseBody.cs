@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The number of pending items with the primary status of PENDING.</para>
+        /// <para>The number of pending items with the PENDING primary status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

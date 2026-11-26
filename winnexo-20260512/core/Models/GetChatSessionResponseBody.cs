@@ -176,6 +176,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public GetChatSessionResponseBodySession Session { get; set; }
         public class GetChatSessionResponseBodySession : TeaModel {
             /// <summary>
+            /// <para>会话归档状态 ACTIVE/ARCHIVING/ARCHIVED</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACTIVE</para>
+            /// </summary>
+            [NameInMap("conversationArchiveStatus")]
+            [Validation(Required=false)]
+            public string ConversationArchiveStatus { get; set; }
+
+            /// <summary>
+            /// <para>会话归档完成时间戳（秒）</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1735689600</para>
+            /// </summary>
+            [NameInMap("conversationArchivedTime")]
+            [Validation(Required=false)]
+            public long? ConversationArchivedTime { get; set; }
+
+            /// <summary>
             /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>

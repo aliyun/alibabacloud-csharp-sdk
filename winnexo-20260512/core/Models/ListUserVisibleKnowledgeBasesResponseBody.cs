@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result list.
+        /// <para>The list of results.
         /// Maximum size:
         ///     50</para>
         /// </summary>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? CreatorId { get; set; }
 
             /// <summary>
-            /// <para>The creator name.</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John Doe</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("creatorName")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Product materials and user guides</para>
+            /// <para>Product materials and instructions</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ProductKnowledgeBase</para>
+            /// <para>Product knowledge base</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

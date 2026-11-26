@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the bills.</para>
+        /// <para>The details of the link enhancement rule.</para>
         /// </summary>
         [NameInMap("list")]
         [Validation(Required=false)]
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>The cost source type.</para>
+            /// <para>The type of the cost source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>[&quot;STANDARD&quot;]</para>
             /// </summary>
             [NameInMap("costSource")]
             [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The display name of the cost source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>[&quot;Standard Edition&quot;]</para>
             /// </summary>
             [NameInMap("costSourceDisplayName")]
             [Validation(Required=false)]
             public List<string> CostSourceDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The end timestamp, in milliseconds.</para>
+            /// <para>The end timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The entry object ID.</para>
+            /// <para>The ID of the entry object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleEntryObjectId</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EntryObjectType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the bill is a shadow bill.</para>
+            /// <para>Specifies whether the bill is a shadow bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsShadow { get; set; }
 
             /// <summary>
-            /// <para>The operation type.</para>
+            /// <para>The search term rewrite configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The display name of the operation.</para>
+            /// <para>The display name of the action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OperationDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp, in milliseconds.</para>
+            /// <para>The start timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The node status. Running is returned upon submission.</para>
+            /// <para>The task status. A status of Running is returned immediately after the task is submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string StatusDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+            /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The prompt message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of Logtail pipeline configurations in the current project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

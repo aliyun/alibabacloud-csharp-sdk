@@ -10,6 +10,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateScheduledTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the task is executed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The AUTO preference. Valid values: none (default), performance (performance first), and credit (cost first). If omitted or set to null, the current value is retained. If set to an empty string, the value is reset to none. For fixed models, this parameter can be saved but does not take effect.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>credit</para>
+        /// </summary>
+        [NameInMap("autoPreference")]
+        [Validation(Required=false)]
+        public string AutoPreference { get; set; }
+
+        /// <summary>
         /// <para>The description.</para>
         /// </summary>
         [NameInMap("description")]
@@ -110,7 +130,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsOpen { get; set; }
 
         /// <summary>
-        /// <para>The execution model tier. If this parameter is not specified, the model tier is not updated.</para>
+        /// <para>The execution model tier. If not specified, the model tier is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -130,7 +150,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The output conversation mode. If this parameter is omitted, the current configuration is retained.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The output conversation mode. If not specified, the current configuration is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAME_CONVERSATION</para>
@@ -254,7 +294,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The object ID. This parameter has a value when the object is specified by using the @ symbol.</para>
+                /// <para>The object ID. This parameter has a value when the object is specified by using @.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleObjectId</para>
@@ -354,7 +394,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>The task understanding description refined by the large language model (LLM).</para>
+            /// <para>The task understanding description refined by the LLM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -377,7 +417,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -394,7 +434,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public UpdateScheduledTaskRequestTriggerConfig TriggerConfig { get; set; }
         public class UpdateScheduledTaskRequestTriggerConfig : TeaModel {
             /// <summary>
-            /// <para>The cron expression. This parameter is required when trigger_mode is set to scheduled. Example: 00 09 * * *.</para>
+            /// <para>The cron expression. This parameter is required when trigger_mode is set to scheduled. Example: &quot;00 09 * * *&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -414,7 +454,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The list of task push channels. If the list is empty or no channel is enabled, no push notification is sent.</para>
+            /// <para>The list of task push channels. If this list is empty or no channel is enabled, no push notification is sent.</para>
             /// </summary>
             [NameInMap("pushConfig")]
             [Validation(Required=false)]
@@ -451,7 +491,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string DeliveryMethod { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to push notifications to the channel. Default value: false.</para>
+                /// <para>Specifies whether to push notifications to this channel. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -481,7 +521,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OperatingObjectName { get; set; }
 
                 /// <summary>
-                /// <para>The recipient. Only self is supported.</para>
+                /// <para>The receiver type. Currently, only self is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -516,7 +556,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The visibility scope adjustment for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If this parameter is not specified, the visibility scope is not updated. This field is ignored for personal tasks.</para>
+        /// <para>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility scope is not updated. This parameter is ignored for personal tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COLLABORATIVE</para>
@@ -526,7 +566,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The full replacement list of collaborators. This parameter takes effect only when visibility is set to COLLABORATIVE. When the visibility is changed from COLLABORATIVE to another value, the list is cleared. A maximum of 1,000 members are supported. If this parameter is not specified, the members are not updated. You do not need to specify the task creator and group creator because they are covered by the authentication layer. This field is ignored for personal tasks.</para>
+        /// <para>The full replacement list of collaborators. This parameter takes effect only when visibility is set to COLLABORATIVE. A maximum of 1,000 members can be specified. If the visibility is changed from COLLABORATIVE to another value, the list is cleared. If not specified, the members are not updated. The task creator and group creator do not need to be specified because they are covered by the authentication layer. This parameter is ignored for personal tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;10001&quot;]</para>

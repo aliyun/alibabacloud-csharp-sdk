@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? RetrievalCount { get; set; }
 
         /// <summary>
-        /// <para>The deduplicated count of sources that have retrieval events.</para>
+        /// <para>The deduplicated number of sources with retrieval events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? UsageCount { get; set; }
 
         /// <summary>
-        /// <para>The deduplicated count of sources that have usage events.</para>
+        /// <para>The deduplicated number of sources with usage events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

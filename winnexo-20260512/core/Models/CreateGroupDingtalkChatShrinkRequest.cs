@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupDingtalkChatShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The session ID, typically used for JSSDK.</para>
+        /// <para>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The chat ID, which is generally used for JSSDK.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +31,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ChatId { get; set; }
 
         /// <summary>
-        /// <para>The group chat name.</para>
+        /// <para>The name of the group chat.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CustomerProjectGroup</para>
+        /// <para>Customer project group</para>
         /// </summary>
         [NameInMap("chatName")]
         [Validation(Required=false)]
@@ -34,7 +44,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The description of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Customer chat history</para>
+        /// <para>Customer group chat history</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -62,7 +72,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The start time for collecting chat history.</para>
+        /// <para>The start time for collecting chat records.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +83,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string HistoryStartTime { get; set; }
 
         /// <summary>
-        /// <para>The meeting notes content (optional). This participates in auxiliary analysis.</para>
+        /// <para>The content of the meeting notes. This parameter is optional and is used for auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Focus on identifying customer demands and to-do items</para>
@@ -83,7 +93,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Notes { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object name, optional).</para>
+        /// <para>The name of the digital employee, which is the name of the operating object. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-agent</para>
@@ -93,17 +103,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
         /// <para>The source tags.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;Customer&quot;,&quot;GroupChat&quot;]</para>
+        /// <para>[&quot;Customer&quot;,&quot;Group chat&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this explicitly with --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. For winnexo-cli, explicitly pass this parameter by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

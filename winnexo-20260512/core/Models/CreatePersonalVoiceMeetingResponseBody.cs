@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The bound directory ID. This value is echoed back if provided in the request body. The value is null if the default root directory is used.</para>
+        /// <para>The bound directory ID. If this parameter is passed in the request body, the value is echoed back. If the default root directory is used, the value is null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource scope. The value is fixed to PERSONAL.</para>
+        /// <para>The resource scope. This value is fixed to PERSONAL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_info projects pull_requests hook gists emails</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The unique ID on the business system side, which is the business ID.</para>
+        /// <para>The unique identifier on the business system side, which is the business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource status. The initial status during the creation process is typically PENDING. If the on_create process fails, the status is FAILED.</para>
+        /// <para>The resource status. The initial status in the creation pipeline is mostly PENDING. If the on_create operation fails, the status is FAILED.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;observedGeneration\&quot;: 4, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-10-31T03:48:27Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1761882507097-Eu1vIP\&quot;}</para>
+        /// <para>{&quot;observedGeneration&quot;: 4, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2025-10-31T03:48:27Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1761882507097-Eu1vIP&quot;}</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

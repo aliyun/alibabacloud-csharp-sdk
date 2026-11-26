@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The task running status.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;observedGeneration\&quot;: 7, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-12-17T11:57:07Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1765972627273-k7GZvr\&quot;}</para>
+        /// <para>{&quot;observedGeneration&quot;: 7, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2025-12-17T11:57:07Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1765972627273-k7GZvr&quot;}</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

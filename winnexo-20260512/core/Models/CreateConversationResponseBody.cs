@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A reserved field for extension purposes.</para>
+        /// <para>The reserved field for extension purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;source&quot;:&quot;openapi&quot;}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The appointment title.</para>
+        /// <para>The title of the scheduled meeting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Incident RCA: alert-0885feb7-3d4b-4da5-90f0-0119dfbbf555:up0shc25tp0kueo0afeobvhk81</para>

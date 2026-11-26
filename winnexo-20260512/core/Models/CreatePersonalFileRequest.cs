@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalFileRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If this parameter is passed, the operation is executed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The pipeline description.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The file name extension (optional, such as pdf or docx).</para>
+        /// <para>The file name extension, such as pdf or docx. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -71,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>The file record ID (optional, corresponding to settings.file_record_id).</para>
+        /// <para>The file record ID, which corresponds to settings.file_record_id. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleFileRecordId</para>
@@ -92,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object name, optional).</para>
+        /// <para>The name of the digital employee, which is the name of the operating object. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -102,10 +112,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
         /// <para>The list of resource tag JSON strings.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;Important&quot;,&quot;File&quot;]</para>
+        /// <para>[&quot;Important&quot;, &quot;File&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]

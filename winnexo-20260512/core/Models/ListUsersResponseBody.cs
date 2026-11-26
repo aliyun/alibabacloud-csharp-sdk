@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string LastLoginTime { get; set; }
 
             /// <summary>
-            /// <para>The list of new system role codes. This is a full replacement and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
+            /// <para>The list of new system role codes. This list fully replaces the existing roles and must contain at least one role. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;APPLICATION_USER&quot;]</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>

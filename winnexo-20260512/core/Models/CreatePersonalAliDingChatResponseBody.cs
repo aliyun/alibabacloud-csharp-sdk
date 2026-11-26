@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalAliDingChatResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DingTalk group chat session ID.</para>
+        /// <para>The ID of the DingTalk group chat session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cidxxxxxxxx</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The skill name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CustomerProjectGroup</para>
+        /// <para>Customer project group</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The original project ID.</para>
+        /// <para>The source project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>
@@ -102,10 +102,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The call status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PENDING</b>: Waiting for acknowledgment.</description></item>
-        /// <item><description><b>SUCCESS</b>: Succeeded.</description></item>
+        /// <item><description><b>PENDING</b>: Awaiting acknowledgment.</description></item>
+        /// <item><description><b>SUCCESS</b>: Success.</description></item>
         /// <item><description><b>FAILED</b>: Failed.</description></item>
-        /// <item><description><b>TIMEOUT</b>: Timed out.</description></item>
+        /// <item><description><b>TIMEOUT</b>: Timeout.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

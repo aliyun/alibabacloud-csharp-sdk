@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListCollaborationGroupMembersResponseBodyItems> Items { get; set; }
         public class ListCollaborationGroupMembersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The display name. This field is empty if the display name is not set.</para>
+            /// <para>The display name. This field is empty if not set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TEST001</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The enabling status of the tenant account. Only active members are returned, so this value is always true. This field does not indicate the HR employment status.</para>
+            /// <para>The enabling status of the tenant account. Only active members are returned, so this value is always true. It does not represent the employment status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The common error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>You do not have permissions to access tenant 2147483647 because the user does not belong to the tenant</para>
+        /// <para>No permission to access tenant 2147483647. The user does not belong to this tenant</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c9cf6cb3-3f5c-4994-a8a1-c93379a6f5cf</para>

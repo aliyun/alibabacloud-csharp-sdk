@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalDingtalkChatRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If specified, the operation is performed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The DingTalk group chat session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,10 +31,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ChatId { get; set; }
 
         /// <summary>
-        /// <para>The group chat name.</para>
+        /// <para>The name of the group chat.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CustomerProjectGroup</para>
+        /// <para>Customer Project Group</para>
         /// </summary>
         [NameInMap("chatName")]
         [Validation(Required=false)]
@@ -41,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The directory ID.</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -51,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The start time for collecting chat history.</para>
+        /// <para>The start time for chat record collection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +72,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string HistoryStartTime { get; set; }
 
         /// <summary>
-        /// <para>The meeting notes content (optional). The notes are used for auxiliary analysis.</para>
+        /// <para>The content of the meeting notes (optional), which is used for auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Focus on identifying customer demands and to-do items</para>
@@ -72,7 +82,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Notes { get; set; }
 
         /// <summary>
-        /// <para>The digital employee name (operating object name, optional).</para>
+        /// <para>The name of the digital employee (the name of the operating object, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-agent</para>
@@ -82,17 +92,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;Customer&quot;,&quot;GroupChat&quot;]</para>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The resource tags (optional). The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Customer&quot;,&quot;Group chat&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The ID of the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -109,7 +139,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public CreatePersonalDingtalkChatRequestUpdateFrequency UpdateFrequency { get; set; }
         public class CreatePersonalDingtalkChatRequestUpdateFrequency : TeaModel {
             /// <summary>
-            /// <para>The cron expression for timed scheduling.</para>
+            /// <para>The cron expression for the timed scheduling task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 2 * * *</para>
@@ -119,7 +149,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Cron { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable or disable the feature.</para>
+            /// <para><b>Specifies whether to enable the feature.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -129,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The preset mode (can be ignored).</para>
+            /// <para>The preset mode, which can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hourly</para>

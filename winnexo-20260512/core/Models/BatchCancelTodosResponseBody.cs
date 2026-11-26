@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class BatchCancelTodosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The actual number of canceled items. The value is 0 for idempotent repeated calls.</para>
+        /// <para>The actual number of invalidated items. For idempotent repeated calls, the value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>

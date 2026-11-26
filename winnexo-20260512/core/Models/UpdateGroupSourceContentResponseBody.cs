@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Project resource</para>
+        /// <para>Project material</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C474BFC7-7B11-5D92-971E-74AA82EC495B</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The task running status.</para>
+        /// <para>The task execution status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>

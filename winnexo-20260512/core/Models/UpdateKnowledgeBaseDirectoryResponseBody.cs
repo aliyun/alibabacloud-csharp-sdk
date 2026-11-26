@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The category ID (echoed from the input parameter).</para>
+        /// <para>The category ID, which is echoed from the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>

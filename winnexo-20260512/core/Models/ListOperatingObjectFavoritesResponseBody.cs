@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The graph name. Call listGraphs to retrieve available graphs.</para>
+        /// <para>The name of the graph. You can call the listGraphs operation to obtain the graph name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crm</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether more pages are available.</para>
+        /// <para>Indicates whether more pages exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The MCP card list.</para>
+        /// <para>The list of MCP cards.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListOperatingObjectFavoritesResponseBodyItems> Items { get; set; }
         public class ListOperatingObjectFavoritesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The to-do card type description.</para>
+            /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sample description</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The follow time. The value is a Unix timestamp in seconds.</para>
+            /// <para>The subscription time, which is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787822400</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? FollowedAt { get; set; }
 
             /// <summary>
-            /// <para>The graph name.</para>
+            /// <para>The name of the graph.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recommended item. The value can be a <b>feedId</b> or a micro-application ID.</para>
+            /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a mini-app ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2676</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>The object name.</para>
+            /// <para>The name of the object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>469ac312-403c-41fb-aae3-de5260e30906</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectName { get; set; }
 
             /// <summary>
-            /// <para>The bound object type, such as customer or project.</para>
+            /// <para>The object type of the attached object, such as customer or project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>table</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>The digital employee name (operating object name).</para>
+        /// <para>The name of the digital worker, which is the name of the operating object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customer_assistant</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of results.</para>
+        /// <para>The total number of Logtail pipeline configurations in the current project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1001</para>

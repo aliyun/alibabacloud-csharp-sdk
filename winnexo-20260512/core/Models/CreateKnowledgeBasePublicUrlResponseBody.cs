@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination folder in the enterprise knowledge base that was specified in the request.</para>
+        /// <para>The ID of the requested target directory in the enterprise knowledge base.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_tenant_child</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The error description. This value is empty if the request is successful.</para>
+        /// <para>The error message. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The resource name.</para>
+        /// <para>The name of the resource.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Project Plan</para>
+        /// <para>Project plan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The submitted public web page URL.</para>
+        /// <para>The URL of the submitted public web page.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com">https://example.com</a></para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OriginalUrl { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource scope. The value is fixed to TENANT.</para>
+        /// <para>The scope of the resource. The value is fixed to TENANT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TENANT</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource status. A value of RUNNING indicates that the request has been accepted but the crawling and parsing are not yet complete.</para>
+        /// <para>The status of the resource. A value of RUNNING indicates that the request is accepted but the crawling and parsing are not completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>

@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;servicesInstances\&quot;: {}, \&quot;servicesWithPendingChanges\&quot;: []}</para>
+        /// <para>{&quot;servicesInstances&quot;: {}, &quot;servicesWithPendingChanges&quot;: []}</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

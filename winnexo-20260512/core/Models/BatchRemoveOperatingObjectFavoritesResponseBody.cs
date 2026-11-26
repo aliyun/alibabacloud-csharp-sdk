@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>The digital employee name (operating object name, optional).</para>
+        /// <para>The digital worker name, which is the name of the operating object. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The number of remaining subscribed objects within the precise scope.</para>
+        /// <para>The number of remaining favorited objects within the exact scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? RemainingCount { get; set; }
 
         /// <summary>
-        /// <para>The number of physical subscription records that are actually deleted.</para>
+        /// <para>The number of physical favorite records that are actually deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? RequestedCount { get; set; }
 
         /// <summary>
-        /// <para>The relationships between internal and external DingTalk users that failed to be created.</para>
+        /// <para>The internal and external DingTalk user relationships that failed to be created.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<BatchRemoveOperatingObjectFavoritesResponseBodyResults> Results { get; set; }
         public class BatchRemoveOperatingObjectFavoritesResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the object is subscribed after the operation.</para>
+            /// <para>Indicates whether the object is favorited after the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsFavorited { get; set; }
 
             /// <summary>
-            /// <para>The aligned object ID: target ID or KR ID.</para>
+            /// <para>The ID of the aligned object, which is the target ID or KR ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request is processed.</para>
+            /// <para>Indicates whether the request has been processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

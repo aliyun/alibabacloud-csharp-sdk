@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ReplaceObjectBindingsResponseBodyObjectBindings> ObjectBindings { get; set; }
         public class ReplaceObjectBindingsResponseBodyObjectBindings : TeaModel {
             /// <summary>
-            /// <para>The semantic graph name to which the binding object belongs (object_id is unique within this graph. Required).</para>
+            /// <para>The name of the semantic graph to which the bound object belongs. The object_id is unique within this graph. This field is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>The binding object ID.</para>
+            /// <para>The ID of the bound object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>The binding object type (such as customer or project).</para>
+            /// <para>The object type to attach, such as customer or project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the personal FILE data source to be replaced (unique within the tenant).</para>
+        /// <para>The ID of the personal FILE data source to be replaced, which is unique within the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>

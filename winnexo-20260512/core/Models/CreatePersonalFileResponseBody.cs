@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The updated filter view name.</para>
+        /// <para>The updated name of the filtered view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ha-cn-36z45q4xg06_qrs</para>
@@ -70,11 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The export scope. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ALL: all.</description></item>
-        /// <item><description>SELECT: selected rows.</description></item>
-        /// </list>
+        /// <para>The export scope. Valid values: ALL: all data. SELECT: selected rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>read:user,read:repo,write:repo,read:org,read:group</para>

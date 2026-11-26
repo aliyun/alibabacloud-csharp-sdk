@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The directory ID.</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The name of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CustomerProjectGroup</para>
+        /// <para>Customer Project Group</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The source ID.</para>
+        /// <para>The source project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The task running status.</para>
+        /// <para>The running status of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>

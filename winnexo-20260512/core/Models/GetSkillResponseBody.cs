@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The list of tags, resolved by i18n.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;[{\\\&quot;value\\\&quot;:\\\&quot;dataworks#0#1#33935#176145#T3_26059405665#94046932754\\\&quot;,\\\&quot;key\\\&quot;:\\\&quot;dataworksTag\\\&quot;}]&quot;]</para>
+        /// <para>[&quot;[{\&quot;value\&quot;:\&quot;dataworks#0#1#33935#176145#T3_26059405665#94046932754\&quot;,\&quot;key\&quot;:\&quot;dataworksTag\&quot;}]&quot;]</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

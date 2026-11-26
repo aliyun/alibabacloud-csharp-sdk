@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class QuerySourceUsageTrendShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group to which the resource belongs, such as cg_101. If this parameter is specified, a group workspace task is created, and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</para>
+        /// <para>平台应用 Token（控制台签发）。传入后将以 opsUserId 或 opsUserCode 指定的用户身份执行</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the associated collaboration group, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -34,17 +44,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The event type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MAIN</para>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("eventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The aggregation granularity. Valid values: hourly and daily.</para>
+        /// <para>The trend aggregation granularity. Valid values: DAY (daily), WEEK (weekly), and MONTH (monthly).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>daily</para>
+        /// <para>DAY</para>
         /// </summary>
         [NameInMap("granularity")]
         [Validation(Required=false)]
@@ -61,6 +71,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string KnowledgeBaseIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>代理用户编码（租户内唯一），仅当应用凭证配置为 source_uid 时使用</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>代理用户ID（WINNEXO 平台用户ID），仅当应用凭证配置为 winnexo_uid 时使用</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
         /// <para>The role scope type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ALL_VISIBLE</b>: All members.</description></item>
@@ -69,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, and ALL_GROUPS</para>
+        /// <para>TENANT</para>
         /// </summary>
         [NameInMap("scopeType")]
         [Validation(Required=false)]
@@ -89,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The resume channel source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The naming content of the source</para>
+        /// <para>Naming content of the source</para>
         /// </summary>
         [NameInMap("sourceName")]
         [Validation(Required=false)]

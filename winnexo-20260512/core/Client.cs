@@ -286,6 +286,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -359,6 +371,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -455,12 +479,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple to-do items.</para>
+        /// <para>Invalidates to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels multiple to-do items based on a list of IDs. This operation is idempotent and does not return errors for completed or non-existent items.</para>
+        /// <para>Invalidates to-do items in batches by a collection of IDs. No error is returned for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -486,6 +510,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TodoIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TodoIds, "todoIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -518,12 +554,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple to-do items.</para>
+        /// <para>Invalidates to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels multiple to-do items based on a list of IDs. This operation is idempotent and does not return errors for completed or non-existent items.</para>
+        /// <para>Invalidates to-do items in batches by a collection of IDs. No error is returned for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -549,6 +585,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TodoIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TodoIds, "todoIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -581,12 +629,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple to-do items.</para>
+        /// <para>Invalidates to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels multiple to-do items based on a list of IDs. This operation is idempotent and does not return errors for completed or non-existent items.</para>
+        /// <para>Invalidates to-do items in batches by a collection of IDs. No error is returned for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -605,12 +653,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels multiple to-do items.</para>
+        /// <para>Invalidates to-do items in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels multiple to-do items based on a list of IDs. This operation is idempotent and does not return errors for completed or non-existent items.</para>
+        /// <para>Invalidates to-do items in batches by a collection of IDs. No error is returned for completed or non-existent items, ensuring idempotence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -660,6 +708,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.WorkItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkItemIds, "workItemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -735,6 +795,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.WorkItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkItemIds, "workItemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -827,12 +899,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch cancels digital employee precise object type subscriptions.</para>
+        /// <para>Cancels exact object type favorites for digital workers in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</para>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The original array accepts 1 to 200 items per request, and each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, the order is preserved and duplicates are removed. Non-string values, oversized values, or arrays exceeding the limit are rejected. Deletion, item-by-item status updates, and the calculation of the remaining valid count are completed within the same transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clear historical, MISSING, or permission-hidden records that are invisible in the list, and finally read back the data to confirm that the total is 0.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -858,6 +930,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "objectIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -902,12 +986,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch cancels digital employee precise object type subscriptions.</para>
+        /// <para>Cancels exact object type favorites for digital workers in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</para>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The original array accepts 1 to 200 items per request, and each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, the order is preserved and duplicates are removed. Non-string values, oversized values, or arrays exceeding the limit are rejected. Deletion, item-by-item status updates, and the calculation of the remaining valid count are completed within the same transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clear historical, MISSING, or permission-hidden records that are invisible in the list, and finally read back the data to confirm that the total is 0.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -933,6 +1017,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "objectIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -977,12 +1073,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch cancels digital employee precise object type subscriptions.</para>
+        /// <para>Cancels exact object type favorites for digital workers in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</para>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The original array accepts 1 to 200 items per request, and each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, the order is preserved and duplicates are removed. Non-string values, oversized values, or arrays exceeding the limit are rejected. Deletion, item-by-item status updates, and the calculation of the remaining valid count are completed within the same transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clear historical, MISSING, or permission-hidden records that are invisible in the list, and finally read back the data to confirm that the total is 0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1001,12 +1097,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch cancels digital employee precise object type subscriptions.</para>
+        /// <para>Cancels exact object type favorites for digital workers in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Idempotently cancels subscriptions along three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, items are deduplicated while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. The delete operation, per-item status tracking, and remaining valid count are completed within a single transaction. To safely cancel all subscriptions, you must also invoke ClearOperatingObjectFavorites to clean up historical, MISSING, or permission-hidden records that are invisible in the list, and then read back to confirm that total is 0.</para>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The original array accepts 1 to 200 items per request, and each item must be a non-empty string with a maximum length of 128 characters. After server-side validation, the order is preserved and duplicates are removed. Non-string values, oversized values, or arrays exceeding the limit are rejected. Deletion, item-by-item status updates, and the calculation of the remaining valid count are completed within the same transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clear historical, MISSING, or permission-hidden records that are invisible in the list, and finally read back the data to confirm that the total is 0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1050,6 +1146,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1111,6 +1219,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1220,6 +1340,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1297,6 +1429,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1397,12 +1541,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the permissions of resources within applications in batches.</para>
+        /// <para>Checks the resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Authenticates applications in batches and reuses constant-time service queries.</para>
+        /// <para>Authenticates applications in a batch and reuses constant-time service queries.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1428,6 +1572,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ChecksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Checks, "checks", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1472,12 +1628,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the permissions of resources within applications in batches.</para>
+        /// <para>Checks the resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Authenticates applications in batches and reuses constant-time service queries.</para>
+        /// <para>Authenticates applications in a batch and reuses constant-time service queries.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1503,6 +1659,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ChecksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Checks, "checks", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1547,12 +1715,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the permissions of resources within applications in batches.</para>
+        /// <para>Checks the resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Authenticates applications in batches and reuses constant-time service queries.</para>
+        /// <para>Authenticates applications in a batch and reuses constant-time service queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1571,12 +1739,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the permissions of resources within applications in batches.</para>
+        /// <para>Checks the resource permissions within applications in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Authenticates applications in batches and reuses constant-time service queries.</para>
+        /// <para>Authenticates applications in a batch and reuses constant-time service queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1615,6 +1783,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1661,6 +1841,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1750,6 +1942,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1815,6 +2019,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1928,6 +2144,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -1993,6 +2221,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2106,6 +2346,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2167,6 +2419,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2276,6 +2540,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2333,6 +2609,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2413,12 +2701,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the to-do badge statistics.</para>
+        /// <para>Retrieves the to-do badge counts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
+        /// <para>Retrieves the to-do badge counts for the current user, including the pending count and unread count.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2438,6 +2726,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2470,12 +2770,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the to-do badge statistics.</para>
+        /// <para>Retrieves the to-do badge counts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
+        /// <para>Retrieves the to-do badge counts for the current user, including the pending count and unread count.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2495,6 +2795,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2527,12 +2839,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the to-do badge statistics.</para>
+        /// <para>Retrieves the to-do badge counts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
+        /// <para>Retrieves the to-do badge counts for the current user, including the pending count and unread count.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2551,12 +2863,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the to-do badge statistics.</para>
+        /// <para>Retrieves the to-do badge counts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the to-do badge statistics for the current user, including the number of pending and unread items.</para>
+        /// <para>Retrieves the to-do badge counts for the current user, including the pending count and unread count.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2617,6 +2929,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TargetTenantIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetTenantIds, "targetTenantIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2735,6 +3059,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TargetTenantIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetTenantIds, "targetTenantIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2899,6 +3235,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.OperatingObjectNameShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingObjectName, "operatingObjectName", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -2965,6 +3313,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.OperatingObjectNameShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingObjectName, "operatingObjectName", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3073,6 +3433,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3139,6 +3511,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3268,6 +3652,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.MemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemberUserIds, "memberUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3351,6 +3747,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.MemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemberUserIds, "memberUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3486,6 +3894,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3569,6 +3989,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3727,6 +4159,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3833,6 +4277,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -3988,6 +4444,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4065,6 +4533,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4165,18 +4645,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
+        /// <para>Creates common DingTalk group chat knowledge for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
+        /// <item><description>Connects a specified common DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
+        /// <item><description>You can configure the subsequent synchronization frequency for updateFrequency by using a preset or a five-part cron expression.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and the target group directory permissions. The same group chat can be created as different sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4203,6 +4683,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4271,18 +4763,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
+        /// <para>Creates common DingTalk group chat knowledge for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
+        /// <item><description>Connects a specified common DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
+        /// <item><description>You can configure the subsequent synchronization frequency for updateFrequency by using a preset or a five-part cron expression.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and the target group directory permissions. The same group chat can be created as different sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4309,6 +4801,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4377,18 +4881,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
+        /// <para>Creates common DingTalk group chat knowledge for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
+        /// <item><description>Connects a specified common DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
+        /// <item><description>You can configure the subsequent synchronization frequency for updateFrequency by using a preset or a five-part cron expression.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and the target group directory permissions. The same group chat can be created as different sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4408,18 +4912,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
+        /// <para>Creates common DingTalk group chat knowledge for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
+        /// <item><description>Connects a specified common DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
+        /// <item><description>You can configure the subsequent synchronization frequency for updateFrequency by using a preset or a five-part cron expression.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and the target group directory permissions. The same group chat can be created as different sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4439,12 +4943,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// <para>Creates a material directory for a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// <para>Valid workspace members can create physical subdirectories. If the parent directory is omitted or set to root, the internal root is used and created lazily on the first attempt. The parent directory must belong to the current workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4464,6 +4968,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4508,12 +5024,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// <para>Creates a material directory for a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// <para>Valid workspace members can create physical subdirectories. If the parent directory is omitted or set to root, the internal root is used and created lazily on the first attempt. The parent directory must belong to the current workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4533,6 +5049,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4577,12 +5105,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// <para>Creates a material directory for a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// <para>Valid workspace members can create physical subdirectories. If the parent directory is omitted or set to root, the internal root is used and created lazily on the first attempt. The parent directory must belong to the current workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4601,12 +5129,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// <para>Creates a material directory for a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// <para>Valid workspace members can create physical subdirectories. If the parent directory is omitted or set to root, the internal root is used and created lazily on the first attempt. The parent directory must belong to the current workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4656,6 +5184,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4751,6 +5291,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4863,12 +5415,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// <para>Creates a group knowledge resource from a single Lark online document by using the current user\&quot;s Lark authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// <h2>Request description\n\nFixed to <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4898,6 +5450,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -4966,12 +5530,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// <para>Creates a group knowledge resource from a single Lark online document by using the current user\&quot;s Lark authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// <h2>Request description\n\nFixed to <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5001,6 +5565,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5069,12 +5645,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// <para>Creates a group knowledge resource from a single Lark online document by using the current user\&quot;s Lark authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// <h2>Request description\n\nFixed to <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -5093,12 +5669,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// <para>Creates a group knowledge resource from a single Lark online document by using the current user\&quot;s Lark authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// <h2>Request description\n\nFixed to <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -5142,6 +5718,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5219,6 +5807,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5319,12 +5919,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects public web pages to a collaborative share.</para>
+        /// <para>Collects a public web page into a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// <para>Allows valid members to collect web pages into a physical directory of the workspace. The resource type is fixed to PUBLIC_URL or GROUP. Use the getGroupSource operation to query the backend status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5344,6 +5944,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5404,12 +6016,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects public web pages to a collaborative share.</para>
+        /// <para>Collects a public web page into a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// <para>Allows valid members to collect web pages into a physical directory of the workspace. The resource type is fixed to PUBLIC_URL or GROUP. Use the getGroupSource operation to query the backend status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5429,6 +6041,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5489,12 +6113,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects public web pages to a collaborative share.</para>
+        /// <para>Collects a public web page into a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// <para>Allows valid members to collect web pages into a physical directory of the workspace. The resource type is fixed to PUBLIC_URL or GROUP. Use the getGroupSource operation to query the backend status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5513,12 +6137,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Collects public web pages to a collaborative share.</para>
+        /// <para>Collects a public web page into a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// <para>Allows valid members to collect web pages into a physical directory of the workspace. The resource type is fixed to PUBLIC_URL or GROUP. Use the getGroupSource operation to query the backend status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5542,7 +6166,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
+        /// <para>Uploads plain text to a physical directory as a valid workspace member. The type is fixed to TEXT or GROUP. If directoryId or root is omitted, the workspace root is resolved. The content and final name follow the provider processing rules. The actual status and actual directory are returned, which does not indicate that the resolution is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5562,6 +6186,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5619,7 +6255,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
+        /// <para>Uploads plain text to a physical directory as a valid workspace member. The type is fixed to TEXT or GROUP. If directoryId or root is omitted, the workspace root is resolved. The content and final name follow the provider processing rules. The actual status and actual directory are returned, which does not indicate that the resolution is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5639,6 +6275,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5696,7 +6344,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
+        /// <para>Uploads plain text to a physical directory as a valid workspace member. The type is fixed to TEXT or GROUP. If directoryId or root is omitted, the workspace root is resolved. The content and final name follow the provider processing rules. The actual status and actual directory are returned, which does not indicate that the resolution is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5720,7 +6368,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Allows a valid workspace member to upload plain text to a physical folder. The type is fixed to TEXT/GROUP. If directoryId is omitted or set to root, the workspace root is resolved. The body and final name follow the Provider processing rules. The response returns the actual status and real folder, which does not indicate that parsing is complete.</para>
+        /// <para>Uploads plain text to a physical directory as a valid workspace member. The type is fixed to TEXT or GROUP. If directoryId or root is omitted, the workspace root is resolved. The content and final name follow the provider processing rules. The actual status and actual directory are returned, which does not indicate that the resolution is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5739,18 +6387,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
+        /// <para>Uploads an AliDing online document to an enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
-        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>Adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
-        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the public access URL of the AliDing online document to be uploaded.</description></item>
         /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
         /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
@@ -5773,6 +6421,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5829,18 +6489,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
+        /// <para>Uploads an AliDing online document to an enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
-        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>Adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
-        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the public access URL of the AliDing online document to be uploaded.</description></item>
         /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
         /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
@@ -5863,6 +6523,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -5919,18 +6591,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
+        /// <para>Uploads an AliDing online document to an enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
-        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>Adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
-        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the public access URL of the AliDing online document to be uploaded.</description></item>
         /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
         /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
@@ -5952,18 +6624,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
+        /// <para>Uploads an AliDing online document to an enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
-        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>Adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
-        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the public access URL of the AliDing online document to be uploaded.</description></item>
         /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
         /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
@@ -5985,18 +6657,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category directory in the enterprise knowledge base.</para>
+        /// <para>Creates a new category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
-        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
-        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
-        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a new category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID during creation. If not specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for issues such as name conflicts and directory depth limits.</description></item>
+        /// <item><description>The <c>tenant_id</c> and <c>user_id</c> are obtained only through the authenticated identity. Even if provided in the request body, they are ignored.</description></item>
+        /// <item><description>Ensure that the provided <c>parentDirectoryId</c>, if any, belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6017,6 +6689,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6057,18 +6741,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category directory in the enterprise knowledge base.</para>
+        /// <para>Creates a new category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
-        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
-        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
-        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a new category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID during creation. If not specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for issues such as name conflicts and directory depth limits.</description></item>
+        /// <item><description>The <c>tenant_id</c> and <c>user_id</c> are obtained only through the authenticated identity. Even if provided in the request body, they are ignored.</description></item>
+        /// <item><description>Ensure that the provided <c>parentDirectoryId</c>, if any, belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6089,6 +6773,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6129,18 +6825,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category directory in the enterprise knowledge base.</para>
+        /// <para>Creates a new category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
-        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
-        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
-        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a new category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID during creation. If not specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for issues such as name conflicts and directory depth limits.</description></item>
+        /// <item><description>The <c>tenant_id</c> and <c>user_id</c> are obtained only through the authenticated identity. Even if provided in the request body, they are ignored.</description></item>
+        /// <item><description>Ensure that the provided <c>parentDirectoryId</c>, if any, belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6160,18 +6856,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a category directory in the enterprise knowledge base.</para>
+        /// <para>Creates a new category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
-        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
-        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
-        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a new category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID during creation. If not specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for issues such as name conflicts and directory depth limits.</description></item>
+        /// <item><description>The <c>tenant_id</c> and <c>user_id</c> are obtained only through the authenticated identity. Even if provided in the request body, they are ignored.</description></item>
+        /// <item><description>Ensure that the provided <c>parentDirectoryId</c>, if any, belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6226,6 +6922,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6325,6 +7033,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6471,6 +7191,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6577,6 +7309,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6720,7 +7464,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// <h2>Request description\n\nThe PUBLIC_URL + TENANT combination is fixed, and the user is determined by the trusted OpenAPI identity. A successful creation only indicates that the request is accepted. Invoke getKnowledgeBaseSource to query the background collection status. directoryId is required, and the caller must have knowledge base management permissions on the target knowledge base.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -6740,6 +7484,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6801,7 +7557,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// <h2>Request description\n\nThe PUBLIC_URL + TENANT combination is fixed, and the user is determined by the trusted OpenAPI identity. A successful creation only indicates that the request is accepted. Invoke getKnowledgeBaseSource to query the background collection status. directoryId is required, and the caller must have knowledge base management permissions on the target knowledge base.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -6821,6 +7577,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -6882,7 +7650,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// <h2>Request description\n\nThe PUBLIC_URL + TENANT combination is fixed, and the user is determined by the trusted OpenAPI identity. A successful creation only indicates that the request is accepted. Invoke getKnowledgeBaseSource to query the background collection status. directoryId is required, and the caller must have knowledge base management permissions on the target knowledge base.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -6906,7 +7674,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// <h2>Request description\n\nThe PUBLIC_URL + TENANT combination is fixed, and the user is determined by the trusted OpenAPI identity. A successful creation only indicates that the request is accepted. Invoke getKnowledgeBaseSource to query the background collection status. directoryId is required, and the caller must have knowledge base management permissions on the target knowledge base.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -6958,6 +7726,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7047,6 +7827,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7167,17 +7959,243 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
+        /// <para>Creates an offline recording in an enterprise knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an uploaded recording as an offline meeting resource in an enterprise knowledge base. The sourceType is fixed to VOICE_MEETING, the scope is fixed to TENANT, and the meeting mode is fixed to OFFLINE. You must specify the target enterprise knowledge base directory directoryId and have administrative permissions for the knowledge base. Personal directories, collaborative workspace directories, and directories of other tenants cannot be used as targets. Call GetSourceUploadSignature with scope=knowledge and PUT the file first, and then pass the returned fileUrl. OSS object keys supported by existing recording services are also compatible. The API itself does not transmit audio binaries. This API reuses the internal offline recording storage, metering and billing, and background transcription pipelines. The resource status returned upon creation does not indicate that transcription is complete. During the creation phase, a transcription task is submitted and the media duration is synchronously detected. The gateway timeout is 300,000 milliseconds. This API does not provide an idempotency key. If a request times out or the connection is disconnected, query the target knowledge base first to confirm whether the resource has been created to avoid duplicate resources or duplicate billing caused by direct retries. The identity is obtained from the unified authentication chain. Specifying the tenant, user, scope, sourceType, or settings in the request body is not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseVoiceMeetingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseVoiceMeetingResponse
+        /// </returns>
+        public CreateKnowledgeBaseVoiceMeetingResponse CreateKnowledgeBaseVoiceMeetingWithOptions(CreateKnowledgeBaseVoiceMeetingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["fileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseVoiceMeeting",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createKnowledgeBaseVoiceMeeting",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseVoiceMeetingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an offline recording in an enterprise knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an uploaded recording as an offline meeting resource in an enterprise knowledge base. The sourceType is fixed to VOICE_MEETING, the scope is fixed to TENANT, and the meeting mode is fixed to OFFLINE. You must specify the target enterprise knowledge base directory directoryId and have administrative permissions for the knowledge base. Personal directories, collaborative workspace directories, and directories of other tenants cannot be used as targets. Call GetSourceUploadSignature with scope=knowledge and PUT the file first, and then pass the returned fileUrl. OSS object keys supported by existing recording services are also compatible. The API itself does not transmit audio binaries. This API reuses the internal offline recording storage, metering and billing, and background transcription pipelines. The resource status returned upon creation does not indicate that transcription is complete. During the creation phase, a transcription task is submitted and the media duration is synchronously detected. The gateway timeout is 300,000 milliseconds. This API does not provide an idempotency key. If a request times out or the connection is disconnected, query the target knowledge base first to confirm whether the resource has been created to avoid duplicate resources or duplicate billing caused by direct retries. The identity is obtained from the unified authentication chain. Specifying the tenant, user, scope, sourceType, or settings in the request body is not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseVoiceMeetingRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseVoiceMeetingResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseVoiceMeetingResponse> CreateKnowledgeBaseVoiceMeetingWithOptionsAsync(CreateKnowledgeBaseVoiceMeetingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
+            {
+                body["fileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseVoiceMeeting",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createKnowledgeBaseVoiceMeeting",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseVoiceMeetingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an offline recording in an enterprise knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an uploaded recording as an offline meeting resource in an enterprise knowledge base. The sourceType is fixed to VOICE_MEETING, the scope is fixed to TENANT, and the meeting mode is fixed to OFFLINE. You must specify the target enterprise knowledge base directory directoryId and have administrative permissions for the knowledge base. Personal directories, collaborative workspace directories, and directories of other tenants cannot be used as targets. Call GetSourceUploadSignature with scope=knowledge and PUT the file first, and then pass the returned fileUrl. OSS object keys supported by existing recording services are also compatible. The API itself does not transmit audio binaries. This API reuses the internal offline recording storage, metering and billing, and background transcription pipelines. The resource status returned upon creation does not indicate that transcription is complete. During the creation phase, a transcription task is submitted and the media duration is synchronously detected. The gateway timeout is 300,000 milliseconds. This API does not provide an idempotency key. If a request times out or the connection is disconnected, query the target knowledge base first to confirm whether the resource has been created to avoid duplicate resources or duplicate billing caused by direct retries. The identity is obtained from the unified authentication chain. Specifying the tenant, user, scope, sourceType, or settings in the request body is not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseVoiceMeetingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseVoiceMeetingResponse
+        /// </returns>
+        public CreateKnowledgeBaseVoiceMeetingResponse CreateKnowledgeBaseVoiceMeeting(CreateKnowledgeBaseVoiceMeetingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateKnowledgeBaseVoiceMeetingWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an offline recording in an enterprise knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an uploaded recording as an offline meeting resource in an enterprise knowledge base. The sourceType is fixed to VOICE_MEETING, the scope is fixed to TENANT, and the meeting mode is fixed to OFFLINE. You must specify the target enterprise knowledge base directory directoryId and have administrative permissions for the knowledge base. Personal directories, collaborative workspace directories, and directories of other tenants cannot be used as targets. Call GetSourceUploadSignature with scope=knowledge and PUT the file first, and then pass the returned fileUrl. OSS object keys supported by existing recording services are also compatible. The API itself does not transmit audio binaries. This API reuses the internal offline recording storage, metering and billing, and background transcription pipelines. The resource status returned upon creation does not indicate that transcription is complete. During the creation phase, a transcription task is submitted and the media duration is synchronously detected. The gateway timeout is 300,000 milliseconds. This API does not provide an idempotency key. If a request times out or the connection is disconnected, query the target knowledge base first to confirm whether the resource has been created to avoid duplicate resources or duplicate billing caused by direct retries. The identity is obtained from the unified authentication chain. Specifying the tenant, user, scope, sourceType, or settings in the request body is not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseVoiceMeetingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseVoiceMeetingResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseVoiceMeetingResponse> CreateKnowledgeBaseVoiceMeetingAsync(CreateKnowledgeBaseVoiceMeetingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateKnowledgeBaseVoiceMeetingWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates personal knowledge from a DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Integrates a specified DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for subsequent synchronization frequency.</description></item>
         /// <item><description>chatId must be unique within the target personal scope.</description></item>
         /// </list>
         /// </description>
@@ -7205,6 +8223,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7269,17 +8299,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
+        /// <para>Creates personal knowledge from a DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Integrates a specified DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for subsequent synchronization frequency.</description></item>
         /// <item><description>chatId must be unique within the target personal scope.</description></item>
         /// </list>
         /// </description>
@@ -7307,6 +8337,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7371,17 +8413,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
+        /// <para>Creates personal knowledge from a DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Integrates a specified DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for subsequent synchronization frequency.</description></item>
         /// <item><description>chatId must be unique within the target personal scope.</description></item>
         /// </list>
         /// </description>
@@ -7402,17 +8444,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
+        /// <para>Creates personal knowledge from a DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Integrates a specified DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for subsequent synchronization frequency.</description></item>
         /// <item><description>chatId must be unique within the target personal scope.</description></item>
         /// </list>
         /// </description>
@@ -7466,6 +8508,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7555,6 +8609,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7709,6 +8775,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7795,6 +8873,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -7958,6 +9048,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8059,6 +9161,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8183,18 +9297,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// <para>Creates personal knowledge for a regular DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>Integrates a specified regular DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for the subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources, and each source is isolated by sourceId.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8221,6 +9335,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8285,18 +9411,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// <para>Creates personal knowledge for a regular DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>Integrates a specified regular DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for the subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources, and each source is isolated by sourceId.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8323,6 +9449,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8387,18 +9525,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// <para>Creates personal knowledge for a regular DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>Integrates a specified regular DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for the subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources, and each source is isolated by sourceId.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8418,18 +9556,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// <para>Creates personal knowledge for a regular DingTalk group chat.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>Integrates a specified regular DingTalk group chat into the personal knowledge base of the current user.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
-        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
-        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// <item><description>historyStartTime is required and supports the YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-part cron expression for the subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources, and each source is isolated by sourceId.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8487,6 +9625,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8581,6 +9731,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8744,6 +9906,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8833,6 +10007,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -8984,6 +10170,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9059,6 +10257,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9203,6 +10413,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9303,6 +10525,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9464,6 +10698,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9563,6 +10809,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9712,6 +10970,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9805,6 +11075,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -9940,11 +11222,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>An OSS persistence address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the destination directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If it is specified, ensure that the directory belongs to the personal directory of the invoker.</description></item>
+        /// <item><description>Multiple authentication methods such as AK, BearerToken, and APP are supported to authenticate securely.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -9966,6 +11248,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10041,11 +11335,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>An OSS persistence address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the destination directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If it is specified, ensure that the directory belongs to the personal directory of the invoker.</description></item>
+        /// <item><description>Multiple authentication methods such as AK, BearerToken, and APP are supported to authenticate securely.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -10067,6 +11361,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10142,11 +11448,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>An OSS persistence address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the destination directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If it is specified, ensure that the directory belongs to the personal directory of the invoker.</description></item>
+        /// <item><description>Multiple authentication methods such as AK, BearerToken, and APP are supported to authenticate securely.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -10174,11 +11480,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>An OSS persistence address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the destination directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If it is specified, ensure that the directory belongs to the personal directory of the invoker.</description></item>
+        /// <item><description>Multiple authentication methods such as AK, BearerToken, and APP are supported to authenticate securely.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -10224,6 +11530,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10305,6 +11623,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10443,6 +11773,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10529,6 +11871,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10652,14 +12006,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads an offline meeting audio file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>This API operation uploads an audio file of an offline meeting to My Resources of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>VOICE_MEETING</c>, the <c>scope</c> parameter is fixed to <c>PERSONAL</c>, and the <c>voice_meeting_type</c> parameter is fixed to <c>OFFLINE</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
-        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>Calling this API operation starts a background process to transcribe the audio file and returns the information about the newly created resource.</description></item>
         /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
-        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
+        /// <item><description>Any validation or execution failure throws an <c>RobjectException</c>, which is converted into a POP error code by the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10680,6 +12034,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10746,14 +12112,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads an offline meeting audio file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>This API operation uploads an audio file of an offline meeting to My Resources of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>VOICE_MEETING</c>, the <c>scope</c> parameter is fixed to <c>PERSONAL</c>, and the <c>voice_meeting_type</c> parameter is fixed to <c>OFFLINE</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
-        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>Calling this API operation starts a background process to transcribe the audio file and returns the information about the newly created resource.</description></item>
         /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
-        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
+        /// <item><description>Any validation or execution failure throws an <c>RobjectException</c>, which is converted into a POP error code by the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10774,6 +12140,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10840,14 +12218,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads an offline meeting audio file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>This API operation uploads an audio file of an offline meeting to My Resources of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>VOICE_MEETING</c>, the <c>scope</c> parameter is fixed to <c>PERSONAL</c>, and the <c>voice_meeting_type</c> parameter is fixed to <c>OFFLINE</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
-        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>Calling this API operation starts a background process to transcribe the audio file and returns the information about the newly created resource.</description></item>
         /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
-        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
+        /// <item><description>Any validation or execution failure throws an <c>RobjectException</c>, which is converted into a POP error code by the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10872,14 +12250,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation uploads an offline meeting audio file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>This API operation uploads an audio file of an offline meeting to My Resources of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> parameter is fixed to <c>VOICE_MEETING</c>, the <c>scope</c> parameter is fixed to <c>PERSONAL</c>, and the <c>voice_meeting_type</c> parameter is fixed to <c>OFFLINE</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
-        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>Calling this API operation starts a background process to transcribe the audio file and returns the information about the newly created resource.</description></item>
         /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
-        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
+        /// <item><description>Any validation or execution failure throws an <c>RobjectException</c>, which is converted into a POP error code by the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10959,11 +12337,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 body["collaborationGroupId"] = request.CollaborationGroupId;
@@ -11095,11 +12489,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 body["collaborationGroupId"] = request.CollaborationGroupId;
@@ -11237,22 +12647,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base and knowledge base categories.</para>
+        /// <para>Creates an enterprise knowledge base root directory or subdirectory in the current tenant, and configures digital employee associations and AI version summaries for standard enterprise root directories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
-        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
-        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
-        /// </list>
+        /// <para>Creating an enterprise knowledge base root directory requires the knowledge base management feature permission. Creating a subdirectory requires the management permission of the associated knowledge base. The newly added digital employee association and version summary fields are supported only for standard enterprise knowledge base root directories and cannot be submitted together with a non-null parentId. The directory creation and these configurations are atomically saved in the same operation. After the directory is created, you can use the returned directoryId to call GetKnowledgeBaseConfiguration or the intelligent index configuration API. This API does not have an idempotency key. If a timeout occurs, verify the creation result first to avoid duplicate creations.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateTenantDirectoryRequest
         /// </param>
         /// <param name="headers">
@@ -11265,15 +12668,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// CreateTenantDirectoryResponse
         /// </returns>
-        public CreateTenantDirectoryResponse CreateTenantDirectoryWithOptions(CreateTenantDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateTenantDirectoryResponse CreateTenantDirectoryWithOptions(CreateTenantDirectoryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTenantDirectoryShrinkRequest request = new CreateTenantDirectoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingObjectNames))
+            {
+                request.OperatingObjectNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingObjectNames, "operatingObjectNames", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeRecordEnabled))
+            {
+                body["changeRecordEnabled"] = request.ChangeRecordEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -11281,6 +12706,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OoVisibilityMode))
+            {
+                body["ooVisibilityMode"] = request.OoVisibilityMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectNamesShrink))
+            {
+                body["operatingObjectNames"] = request.OperatingObjectNamesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
             {
@@ -11313,22 +12746,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base and knowledge base categories.</para>
+        /// <para>Creates an enterprise knowledge base root directory or subdirectory in the current tenant, and configures digital employee associations and AI version summaries for standard enterprise root directories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
-        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
-        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
-        /// </list>
+        /// <para>Creating an enterprise knowledge base root directory requires the knowledge base management feature permission. Creating a subdirectory requires the management permission of the associated knowledge base. The newly added digital employee association and version summary fields are supported only for standard enterprise knowledge base root directories and cannot be submitted together with a non-null parentId. The directory creation and these configurations are atomically saved in the same operation. After the directory is created, you can use the returned directoryId to call GetKnowledgeBaseConfiguration or the intelligent index configuration API. This API does not have an idempotency key. If a timeout occurs, verify the creation result first to avoid duplicate creations.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateTenantDirectoryRequest
         /// </param>
         /// <param name="headers">
@@ -11341,15 +12767,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// CreateTenantDirectoryResponse
         /// </returns>
-        public async Task<CreateTenantDirectoryResponse> CreateTenantDirectoryWithOptionsAsync(CreateTenantDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateTenantDirectoryResponse> CreateTenantDirectoryWithOptionsAsync(CreateTenantDirectoryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateTenantDirectoryShrinkRequest request = new CreateTenantDirectoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingObjectNames))
+            {
+                request.OperatingObjectNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingObjectNames, "operatingObjectNames", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeRecordEnabled))
+            {
+                body["changeRecordEnabled"] = request.ChangeRecordEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -11357,6 +12805,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OoVisibilityMode))
+            {
+                body["ooVisibilityMode"] = request.OoVisibilityMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectNamesShrink))
+            {
+                body["operatingObjectNames"] = request.OperatingObjectNamesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
             {
@@ -11389,19 +12845,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base and knowledge base categories.</para>
+        /// <para>Creates an enterprise knowledge base root directory or subdirectory in the current tenant, and configures digital employee associations and AI version summaries for standard enterprise root directories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
-        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
-        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
-        /// </list>
+        /// <para>Creating an enterprise knowledge base root directory requires the knowledge base management feature permission. Creating a subdirectory requires the management permission of the associated knowledge base. The newly added digital employee association and version summary fields are supported only for standard enterprise knowledge base root directories and cannot be submitted together with a non-null parentId. The directory creation and these configurations are atomically saved in the same operation. After the directory is created, you can use the returned directoryId to call GetKnowledgeBaseConfiguration or the intelligent index configuration API. This API does not have an idempotency key. If a timeout occurs, verify the creation result first to avoid duplicate creations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11420,19 +12869,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base and knowledge base categories.</para>
+        /// <para>Creates an enterprise knowledge base root directory or subdirectory in the current tenant, and configures digital employee associations and AI version summaries for standard enterprise root directories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
-        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
-        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
-        /// </list>
+        /// <para>Creating an enterprise knowledge base root directory requires the knowledge base management feature permission. Creating a subdirectory requires the management permission of the associated knowledge base. The newly added digital employee association and version summary fields are supported only for standard enterprise knowledge base root directories and cannot be submitted together with a non-null parentId. The directory creation and these configurations are atomically saved in the same operation. After the directory is created, you can use the returned directoryId to call GetKnowledgeBaseConfiguration or the intelligent index configuration API. This API does not have an idempotency key. If a timeout occurs, verify the creation result first to avoid duplicate creations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11490,6 +12932,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceContext, "sourceContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -11585,6 +13039,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceContext, "sourceContext", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -11729,6 +13195,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "roleCodes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -11817,6 +13295,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "roleCodes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -11962,6 +13452,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12033,6 +13535,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12178,6 +13692,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12271,6 +13797,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12387,12 +13925,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12426,6 +13964,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.WorkflowTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowTemplateIds, "workflowTemplateIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12498,12 +14048,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12537,6 +14087,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.WorkflowTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowTemplateIds, "workflowTemplateIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12609,12 +14171,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12633,12 +14195,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a workflow work item for a valid member and copies the template execution snapshot. Only the WORKFLOW type is supported.</para>
+        /// <para>Creates a Workflow work item and copies the template execution snapshot. Only the WORKFLOW type is accepted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12688,6 +14250,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Variables, "variables", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12779,6 +14353,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VariablesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Variables, "variables", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12918,6 +14504,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.DefinitionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Definition, "definition", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -12989,6 +14587,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.DefinitionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Definition, "definition", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13102,6 +14712,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13167,6 +14789,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13286,6 +14920,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Items, "items", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13353,6 +14999,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Items, "items", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13470,6 +15128,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["sessionId"] = request.SessionId;
@@ -13533,6 +15203,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["sessionId"] = request.SessionId;
@@ -13657,6 +15339,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13719,6 +15413,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13840,6 +15546,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -13907,6 +15625,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14028,6 +15758,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14089,6 +15831,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14198,6 +15952,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14259,6 +16025,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14368,6 +16146,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14433,6 +16223,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14546,6 +16348,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14603,6 +16417,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14708,6 +16534,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -14773,6 +16611,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15082,6 +16932,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15161,6 +17023,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15288,6 +17162,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15375,6 +17261,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15669,6 +17567,172 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>立即执行定时任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteScheduledTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteScheduledTaskResponse
+        /// </returns>
+        public ExecuteScheduledTaskResponse ExecuteScheduledTaskWithOptions(ExecuteScheduledTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteScheduledTask",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/executeScheduledTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteScheduledTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行定时任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteScheduledTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteScheduledTaskResponse
+        /// </returns>
+        public async Task<ExecuteScheduledTaskResponse> ExecuteScheduledTaskWithOptionsAsync(ExecuteScheduledTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteScheduledTask",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/executeScheduledTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteScheduledTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行定时任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteScheduledTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteScheduledTaskResponse
+        /// </returns>
+        public ExecuteScheduledTaskResponse ExecuteScheduledTask(ExecuteScheduledTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ExecuteScheduledTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>立即执行定时任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteScheduledTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteScheduledTaskResponse
+        /// </returns>
+        public async Task<ExecuteScheduledTaskResponse> ExecuteScheduledTaskAsync(ExecuteScheduledTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ExecuteScheduledTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Exports a simplified template definition that can be re-imported by valid members.</para>
         /// </summary>
         /// 
@@ -15694,6 +17758,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15759,6 +17835,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15878,6 +17966,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PreviousDraftShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PreviousDraft, "previousDraft", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -15949,6 +18049,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PreviousDraftShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PreviousDraft, "previousDraft", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16062,6 +18174,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16131,6 +18255,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16253,6 +18389,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16315,6 +18463,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16438,9 +18598,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -16505,9 +18677,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -16628,6 +18812,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16689,6 +18885,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16806,6 +19014,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16871,6 +19091,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -16992,6 +19224,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17049,6 +19293,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17159,6 +19415,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17221,6 +19489,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17336,6 +19616,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17397,6 +19689,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17513,6 +19817,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17571,6 +19887,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17659,6 +19987,378 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>读取企业知识库配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的平台用户身份及目标知识库管理权限；仅有内容阅读权限不足以读取本接口。仅支持普通企业自建知识库根目录，不支持个人空间、群知识库、子目录或特殊知识库。读取不创建配置。历史未显式设置 ALL 的关联模式返回 SPECIFIED，空名单的含义必须结合模式判断；版本摘要历史缺省为 false。修改这些配置使用 UpdateTenantDirectory，读取 LLM Wiki 配置使用 GetKnowledgeBaseSmartIndexConfiguration。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseConfigurationResponse
+        /// </returns>
+        public GetKnowledgeBaseConfigurationResponse GetKnowledgeBaseConfigurationWithOptions(GetKnowledgeBaseConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseConfiguration",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getKnowledgeBaseConfiguration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取企业知识库配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的平台用户身份及目标知识库管理权限；仅有内容阅读权限不足以读取本接口。仅支持普通企业自建知识库根目录，不支持个人空间、群知识库、子目录或特殊知识库。读取不创建配置。历史未显式设置 ALL 的关联模式返回 SPECIFIED，空名单的含义必须结合模式判断；版本摘要历史缺省为 false。修改这些配置使用 UpdateTenantDirectory，读取 LLM Wiki 配置使用 GetKnowledgeBaseSmartIndexConfiguration。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseConfigurationResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseConfigurationResponse> GetKnowledgeBaseConfigurationWithOptionsAsync(GetKnowledgeBaseConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseConfiguration",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getKnowledgeBaseConfiguration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取企业知识库配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的平台用户身份及目标知识库管理权限；仅有内容阅读权限不足以读取本接口。仅支持普通企业自建知识库根目录，不支持个人空间、群知识库、子目录或特殊知识库。读取不创建配置。历史未显式设置 ALL 的关联模式返回 SPECIFIED，空名单的含义必须结合模式判断；版本摘要历史缺省为 false。修改这些配置使用 UpdateTenantDirectory，读取 LLM Wiki 配置使用 GetKnowledgeBaseSmartIndexConfiguration。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseConfigurationResponse
+        /// </returns>
+        public GetKnowledgeBaseConfigurationResponse GetKnowledgeBaseConfiguration(GetKnowledgeBaseConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetKnowledgeBaseConfigurationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取企业知识库配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的平台用户身份及目标知识库管理权限；仅有内容阅读权限不足以读取本接口。仅支持普通企业自建知识库根目录，不支持个人空间、群知识库、子目录或特殊知识库。读取不创建配置。历史未显式设置 ALL 的关联模式返回 SPECIFIED，空名单的含义必须结合模式判断；版本摘要历史缺省为 false。修改这些配置使用 UpdateTenantDirectory，读取 LLM Wiki 配置使用 GetKnowledgeBaseSmartIndexConfiguration。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseConfigurationResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseConfigurationResponse> GetKnowledgeBaseConfigurationAsync(GetKnowledgeBaseConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetKnowledgeBaseConfigurationWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取企业知识库智能索引配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的活跃成员身份；目标知识库管理者或对知识库内容具有可见权限的用户可读取。仅支持普通企业知识库根目录。未配置时返回 enabled=false、revision=0、lifecycle=DISABLED，不创建配置、任务或账单。更新前读取 revision，作为 UpdateKnowledgeBaseSmartIndexConfiguration 的 expectedRevision；更新后可通过本接口查询异步构建和清理状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public GetKnowledgeBaseSmartIndexConfigurationResponse GetKnowledgeBaseSmartIndexConfigurationWithOptions(GetKnowledgeBaseSmartIndexConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseSmartIndexConfiguration",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getKnowledgeBaseSmartIndexConfiguration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseSmartIndexConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取企业知识库智能索引配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的活跃成员身份；目标知识库管理者或对知识库内容具有可见权限的用户可读取。仅支持普通企业知识库根目录。未配置时返回 enabled=false、revision=0、lifecycle=DISABLED，不创建配置、任务或账单。更新前读取 revision，作为 UpdateKnowledgeBaseSmartIndexConfiguration 的 expectedRevision；更新后可通过本接口查询异步构建和清理状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseSmartIndexConfigurationResponse> GetKnowledgeBaseSmartIndexConfigurationWithOptionsAsync(GetKnowledgeBaseSmartIndexConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBaseSmartIndexConfiguration",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getKnowledgeBaseSmartIndexConfiguration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseSmartIndexConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取企业知识库智能索引配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的活跃成员身份；目标知识库管理者或对知识库内容具有可见权限的用户可读取。仅支持普通企业知识库根目录。未配置时返回 enabled=false、revision=0、lifecycle=DISABLED，不创建配置、任务或账单。更新前读取 revision，作为 UpdateKnowledgeBaseSmartIndexConfiguration 的 expectedRevision；更新后可通过本接口查询异步构建和清理状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public GetKnowledgeBaseSmartIndexConfigurationResponse GetKnowledgeBaseSmartIndexConfiguration(GetKnowledgeBaseSmartIndexConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetKnowledgeBaseSmartIndexConfigurationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取企业知识库智能索引配置</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>需要当前租户的活跃成员身份；目标知识库管理者或对知识库内容具有可见权限的用户可读取。仅支持普通企业知识库根目录。未配置时返回 enabled=false、revision=0、lifecycle=DISABLED，不创建配置、任务或账单。更新前读取 revision，作为 UpdateKnowledgeBaseSmartIndexConfiguration 的 expectedRevision；更新后可通过本接口查询异步构建和清理状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseSmartIndexConfigurationResponse> GetKnowledgeBaseSmartIndexConfigurationAsync(GetKnowledgeBaseSmartIndexConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetKnowledgeBaseSmartIndexConfigurationWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a specified knowledge item in the enterprise knowledge base.</para>
         /// </summary>
         /// 
@@ -17693,6 +20393,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17759,6 +20471,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17882,6 +20606,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -17943,6 +20679,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -18052,6 +20800,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -18113,6 +20873,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -18222,6 +20994,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -18287,6 +21071,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -18409,9 +21205,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatorUserId))
             {
                 query["initiatorUserId"] = request.InitiatorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -18489,9 +21297,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatorUserId))
             {
                 query["initiatorUserId"] = request.InitiatorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -18635,9 +21455,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionId))
             {
                 query["executionId"] = request.ExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -18699,9 +21531,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionId))
             {
                 query["executionId"] = request.ExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -18803,12 +21647,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
-        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (<c>filePath</c>).</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a bill for UNSTRUCTURED_PARSE. Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18829,6 +21673,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
@@ -18836,6 +21684,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatorUserId))
             {
                 query["initiatorUserId"] = request.InitiatorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -18887,12 +21743,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
-        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (<c>filePath</c>).</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a bill for UNSTRUCTURED_PARSE. Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18913,6 +21769,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
@@ -18920,6 +21780,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatorUserId))
             {
                 query["initiatorUserId"] = request.InitiatorUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -18971,12 +21839,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
-        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (<c>filePath</c>).</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a bill for UNSTRUCTURED_PARSE. Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19004,12 +21872,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads files to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the DEVELOPMENT_KB_MANAGE feature permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistence address (filePath) of the file when uploading the file.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to improve the completeness of the file information.</description></item>
-        /// <item><description>If you specify directoryId, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can use sourceTags to add tags to resources for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation generates a bill (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission to call this API.</description></item>
+        /// <item><description>When uploading a file, you must provide the OSS persistence address of the file (<c>filePath</c>).</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of the file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation triggers a bill for UNSTRUCTURED_PARSE. Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19054,6 +21922,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -19115,6 +21995,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -19249,6 +22141,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SegmentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Segments, "segments", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
@@ -19256,6 +22152,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeNameShrink))
             {
                 query["digitalEmployeeName"] = request.DigitalEmployeeNameShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegmentsShrink))
             {
@@ -19341,6 +22245,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SegmentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Segments, "segments", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
@@ -19348,6 +22256,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeNameShrink))
             {
                 query["digitalEmployeeName"] = request.DigitalEmployeeNameShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SegmentsShrink))
             {
@@ -19494,6 +22410,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -19571,6 +22499,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -19711,6 +22651,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -19779,6 +22731,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -19907,6 +22871,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -19973,6 +22949,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -20099,6 +23087,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -20183,6 +23183,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -20322,6 +23334,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -20387,6 +23411,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -20475,12 +23511,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the processing details of a to-do item.</para>
+        /// <para>Queries the details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a pending assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20500,6 +23536,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -20532,12 +23580,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the processing details of a to-do item.</para>
+        /// <para>Queries the details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a pending assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20557,6 +23605,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -20589,12 +23649,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the processing details of a to-do item.</para>
+        /// <para>Queries the details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a pending assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20613,12 +23673,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the processing details of a to-do item.</para>
+        /// <para>Queries the details of a to-do item.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a to-do item. If the current caller is a PENDING assignee, the readAt field is automatically populated to mark the item as read.</para>
+        /// <para>Queries the details of a to-do item. If the current caller is a pending assignee, the readAt field is automatically populated to mark the item as read.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21051,6 +24111,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21119,6 +24191,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21250,6 +24334,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21307,6 +24403,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21426,6 +24534,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21491,6 +24611,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21618,6 +24750,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21675,6 +24819,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21786,6 +24942,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21847,6 +25015,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -21956,6 +25136,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["artifactId"] = request.ArtifactId;
@@ -21963,6 +25147,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -22019,6 +25211,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactId))
             {
                 query["artifactId"] = request.ArtifactId;
@@ -22026,6 +25222,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -22130,6 +25334,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachmentId))
             {
                 query["attachmentId"] = request.AttachmentId;
@@ -22137,6 +25345,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -22193,6 +25409,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachmentId))
             {
                 query["attachmentId"] = request.AttachmentId;
@@ -22200,6 +25420,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -22299,6 +25527,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22355,6 +25595,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22454,6 +25706,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22519,6 +25783,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22632,6 +25908,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22689,6 +25977,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22789,6 +26089,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22849,6 +26161,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -22952,6 +26276,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23017,6 +26353,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23150,6 +26498,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23243,6 +26603,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23351,12 +26723,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23382,6 +26754,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TemplateShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Template, "template", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23418,12 +26802,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23449,6 +26833,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TemplateShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Template, "template", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23485,12 +26881,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23509,12 +26905,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name exists.</para>
+        /// <para>Imports a portable template in JSON format and creates a new template, regardless of whether a template with the same name already exists.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23559,6 +26955,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23621,6 +27029,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23707,19 +27127,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
+        /// <para>Queries the enterprise knowledge base list for a tenant or drills down to view its contents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources of specific types.</description></item>
-        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
-        /// <item><description>The search feature is effective only when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
-        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
+        /// <item><description>This operation supports two modes. If directoryId is empty or set to \&quot;root\&quot;, it returns the top-level list of the knowledge base. If directoryId has a specific value, it performs a drill-down operation and returns the subdirectories and resources under the specified directory.</description></item>
+        /// <item><description>tenantId is a common parameter. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>In drill-down mode (when directoryId is not empty), you can use the sourceTypes parameter to filter resources of specific types.</description></item>
+        /// <item><description>You can customize the sort field (sortField) and sort order (sortOrder). Invalid values are reset to the default settings.</description></item>
+        /// <item><description>The search feature applies only when retrieving the top-level list and supports only fuzzy matching for names or descriptions.</description></item>
+        /// <item><description>For security purposes, tenant_id is strictly obtained from the authentication identity and cannot be passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23746,6 +27166,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23802,19 +27234,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
+        /// <para>Queries the enterprise knowledge base list for a tenant or drills down to view its contents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources of specific types.</description></item>
-        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
-        /// <item><description>The search feature is effective only when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
-        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
+        /// <item><description>This operation supports two modes. If directoryId is empty or set to \&quot;root\&quot;, it returns the top-level list of the knowledge base. If directoryId has a specific value, it performs a drill-down operation and returns the subdirectories and resources under the specified directory.</description></item>
+        /// <item><description>tenantId is a common parameter. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>In drill-down mode (when directoryId is not empty), you can use the sourceTypes parameter to filter resources of specific types.</description></item>
+        /// <item><description>You can customize the sort field (sortField) and sort order (sortOrder). Invalid values are reset to the default settings.</description></item>
+        /// <item><description>The search feature applies only when retrieving the top-level list and supports only fuzzy matching for names or descriptions.</description></item>
+        /// <item><description>For security purposes, tenant_id is strictly obtained from the authentication identity and cannot be passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23841,6 +27273,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -23897,19 +27341,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
+        /// <para>Queries the enterprise knowledge base list for a tenant or drills down to view its contents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources of specific types.</description></item>
-        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
-        /// <item><description>The search feature is effective only when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
-        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
+        /// <item><description>This operation supports two modes. If directoryId is empty or set to \&quot;root\&quot;, it returns the top-level list of the knowledge base. If directoryId has a specific value, it performs a drill-down operation and returns the subdirectories and resources under the specified directory.</description></item>
+        /// <item><description>tenantId is a common parameter. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>In drill-down mode (when directoryId is not empty), you can use the sourceTypes parameter to filter resources of specific types.</description></item>
+        /// <item><description>You can customize the sort field (sortField) and sort order (sortOrder). Invalid values are reset to the default settings.</description></item>
+        /// <item><description>The search feature applies only when retrieving the top-level list and supports only fuzzy matching for names or descriptions.</description></item>
+        /// <item><description>For security purposes, tenant_id is strictly obtained from the authentication identity and cannot be passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23929,19 +27373,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
+        /// <para>Queries the enterprise knowledge base list for a tenant or drills down to view its contents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources of specific types.</description></item>
-        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
-        /// <item><description>The search feature is effective only when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
-        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
+        /// <item><description>This operation supports two modes. If directoryId is empty or set to \&quot;root\&quot;, it returns the top-level list of the knowledge base. If directoryId has a specific value, it performs a drill-down operation and returns the subdirectories and resources under the specified directory.</description></item>
+        /// <item><description>tenantId is a common parameter. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>In drill-down mode (when directoryId is not empty), you can use the sourceTypes parameter to filter resources of specific types.</description></item>
+        /// <item><description>You can customize the sort field (sortField) and sort order (sortOrder). Invalid values are reset to the default settings.</description></item>
+        /// <item><description>The search feature applies only when retrieving the top-level list and supports only fuzzy matching for names or descriptions.</description></item>
+        /// <item><description>For security purposes, tenant_id is strictly obtained from the authentication identity and cannot be passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23992,6 +27436,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24049,6 +27505,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24165,6 +27633,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24239,6 +27719,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24371,6 +27863,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24445,6 +27949,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24578,6 +28094,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "permissions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24673,6 +28201,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "permissions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24816,6 +28356,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "permissions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -24907,6 +28459,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PermissionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Permissions, "permissions", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25046,6 +28610,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25113,6 +28689,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25239,6 +28827,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25313,6 +28913,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25415,18 +29027,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enumerates available organization synchronization configurations.</para>
+        /// <para>Enumerates the available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Enumerates all available organization synchronization configurations under the current tenant.
-        ///     Returns a unified configs list covering four platform types:
+        ///     Returns a list of configs in a unified format, covering four platform types:
         ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
-        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
-        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
-        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
-        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry, using idpEntityId as the corpId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry, using clientId as the corpId.
+        ///     - <b>custom</b>: Queries the database for purely custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization API operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25446,6 +29058,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25472,18 +29096,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enumerates available organization synchronization configurations.</para>
+        /// <para>Enumerates the available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Enumerates all available organization synchronization configurations under the current tenant.
-        ///     Returns a unified configs list covering four platform types:
+        ///     Returns a list of configs in a unified format, covering four platform types:
         ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
-        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
-        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
-        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
-        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry, using idpEntityId as the corpId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry, using clientId as the corpId.
+        ///     - <b>custom</b>: Queries the database for purely custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization API operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25503,6 +29127,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25529,18 +29165,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enumerates available organization synchronization configurations.</para>
+        /// <para>Enumerates the available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Enumerates all available organization synchronization configurations under the current tenant.
-        ///     Returns a unified configs list covering four platform types:
+        ///     Returns a list of configs in a unified format, covering four platform types:
         ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
-        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
-        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
-        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
-        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry, using idpEntityId as the corpId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry, using clientId as the corpId.
+        ///     - <b>custom</b>: Queries the database for purely custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization API operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25559,18 +29195,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enumerates available organization synchronization configurations.</para>
+        /// <para>Enumerates the available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Enumerates all available organization synchronization configurations under the current tenant.
-        ///     Returns a unified configs list covering four platform types:
+        ///     Returns a list of configs in a unified format, covering four platform types:
         ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
-        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
-        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
-        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
-        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry, using idpEntityId as the corpId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry, using clientId as the corpId.
+        ///     - <b>custom</b>: Queries the database for purely custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization API operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25589,18 +29225,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and filters a bill list by using OpenAPI. Multiple filter conditions are supported.</para>
+        /// <para>Queries and filters a list of bills by using OpenAPI with multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
-        /// <item><description>Filtering is supported by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
-        /// <item><description>Bill data is returned in pages. By default, 20 records are displayed per page.</description></item>
-        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Provide the required authentication information (such as AccessKey pair, BearerToken, or APP authentication) when you send a request.</description></item>
+        /// <item><description>This operation queries a list of bills based on specified conditions.</description></item>
+        /// <item><description>You can filter bills by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns paginated bill data. The default number of entries per page is 20.</description></item>
+        /// <item><description>You can specify whether to filter out bills with zero credit consumption. By default, these bills are filtered out.</description></item>
+        /// <item><description>You must provide necessary authentication information, such as an AccessKey pair, bearer token, or application authentication, when you make a request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25621,6 +29257,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25689,18 +29337,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and filters a bill list by using OpenAPI. Multiple filter conditions are supported.</para>
+        /// <para>Queries and filters a list of bills by using OpenAPI with multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
-        /// <item><description>Filtering is supported by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
-        /// <item><description>Bill data is returned in pages. By default, 20 records are displayed per page.</description></item>
-        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Provide the required authentication information (such as AccessKey pair, BearerToken, or APP authentication) when you send a request.</description></item>
+        /// <item><description>This operation queries a list of bills based on specified conditions.</description></item>
+        /// <item><description>You can filter bills by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns paginated bill data. The default number of entries per page is 20.</description></item>
+        /// <item><description>You can specify whether to filter out bills with zero credit consumption. By default, these bills are filtered out.</description></item>
+        /// <item><description>You must provide necessary authentication information, such as an AccessKey pair, bearer token, or application authentication, when you make a request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25721,6 +29369,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25789,18 +29449,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and filters a bill list by using OpenAPI. Multiple filter conditions are supported.</para>
+        /// <para>Queries and filters a list of bills by using OpenAPI with multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
-        /// <item><description>Filtering is supported by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
-        /// <item><description>Bill data is returned in pages. By default, 20 records are displayed per page.</description></item>
-        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Provide the required authentication information (such as AccessKey pair, BearerToken, or APP authentication) when you send a request.</description></item>
+        /// <item><description>This operation queries a list of bills based on specified conditions.</description></item>
+        /// <item><description>You can filter bills by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns paginated bill data. The default number of entries per page is 20.</description></item>
+        /// <item><description>You can specify whether to filter out bills with zero credit consumption. By default, these bills are filtered out.</description></item>
+        /// <item><description>You must provide necessary authentication information, such as an AccessKey pair, bearer token, or application authentication, when you make a request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25820,18 +29480,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and filters a bill list by using OpenAPI. Multiple filter conditions are supported.</para>
+        /// <para>Queries and filters a list of bills by using OpenAPI with multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
-        /// <item><description>Filtering is supported by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
-        /// <item><description>Bill data is returned in pages. By default, 20 records are displayed per page.</description></item>
-        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Provide the required authentication information (such as AccessKey pair, BearerToken, or APP authentication) when you send a request.</description></item>
+        /// <item><description>This operation queries a list of bills based on specified conditions.</description></item>
+        /// <item><description>You can filter bills by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns paginated bill data. The default number of entries per page is 20.</description></item>
+        /// <item><description>You can specify whether to filter out bills with zero credit consumption. By default, these bills are filtered out.</description></item>
+        /// <item><description>You must provide necessary authentication information, such as an AccessKey pair, bearer token, or application authentication, when you make a request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25876,6 +29536,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -25945,6 +29617,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26067,6 +29751,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
             {
                 query["digitalEmployeeName"] = request.DigitalEmployeeName;
@@ -26074,6 +29762,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -26139,6 +29835,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
             {
                 query["digitalEmployeeName"] = request.DigitalEmployeeName;
@@ -26146,6 +29846,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -26239,12 +29947,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query with paging support on the list of members in a collaboration workspace.</para>
+        /// <para>Queries the member list of a collaboration workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query with paging support on the active members of a specified workspace, and supports searching by member display name. To invoke this API, you must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account, not the employment status.</para>
+        /// <para>Queries active members of a specified workspace by using paging and supports searching by member display name. The caller must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account and does not represent the employment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26264,6 +29972,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26308,12 +30028,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query with paging support on the list of members in a collaboration workspace.</para>
+        /// <para>Queries the member list of a collaboration workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query with paging support on the active members of a specified workspace, and supports searching by member display name. To invoke this API, you must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account, not the employment status.</para>
+        /// <para>Queries active members of a specified workspace by using paging and supports searching by member display name. The caller must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account and does not represent the employment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26333,6 +30053,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26377,12 +30109,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query with paging support on the list of members in a collaboration workspace.</para>
+        /// <para>Queries the member list of a collaboration workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query with paging support on the active members of a specified workspace, and supports searching by member display name. To invoke this API, you must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account, not the employment status.</para>
+        /// <para>Queries active members of a specified workspace by using paging and supports searching by member display name. The caller must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account and does not represent the employment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26401,12 +30133,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query with paging support on the list of members in a collaboration workspace.</para>
+        /// <para>Queries the member list of a collaboration workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query with paging support on the active members of a specified workspace, and supports searching by member display name. To invoke this API, you must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account, not the employment status.</para>
+        /// <para>Queries active members of a specified workspace by using paging and supports searching by member display name. The caller must be an active member of the workspace in the current tenant. The isActive field indicates the enabling status of the tenant account and does not represent the employment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26430,7 +30162,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the collaboration spaces that the invoking user has validly joined in the current tenant. You can search for spaces by name. Only ACTIVE spaces are returned. The identity used to invoke the operation must be associated with a platform user, and deployment credentials without a user identity are not supported.</para>
+        /// <para>Performs a paging query for the collaboration spaces that the user who invokes the operation has validly joined in the current tenant. Supports searching by space name. Only ACTIVE spaces are returned. An identity used to invoke the operation that is associated with a platform user is required, and deployment credentials without a user identity are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26450,6 +30182,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26495,7 +30239,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the collaboration spaces that the invoking user has validly joined in the current tenant. You can search for spaces by name. Only ACTIVE spaces are returned. The identity used to invoke the operation must be associated with a platform user, and deployment credentials without a user identity are not supported.</para>
+        /// <para>Performs a paging query for the collaboration spaces that the user who invokes the operation has validly joined in the current tenant. Supports searching by space name. Only ACTIVE spaces are returned. An identity used to invoke the operation that is associated with a platform user is required, and deployment credentials without a user identity are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26515,6 +30259,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26560,7 +30316,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the collaboration spaces that the invoking user has validly joined in the current tenant. You can search for spaces by name. Only ACTIVE spaces are returned. The identity used to invoke the operation must be associated with a platform user, and deployment credentials without a user identity are not supported.</para>
+        /// <para>Performs a paging query for the collaboration spaces that the user who invokes the operation has validly joined in the current tenant. Supports searching by space name. Only ACTIVE spaces are returned. An identity used to invoke the operation that is associated with a platform user is required, and deployment credentials without a user identity are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26584,7 +30340,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the collaboration spaces that the invoking user has validly joined in the current tenant. You can search for spaces by name. Only ACTIVE spaces are returned. The identity used to invoke the operation must be associated with a platform user, and deployment credentials without a user identity are not supported.</para>
+        /// <para>Performs a paging query for the collaboration spaces that the user who invokes the operation has validly joined in the current tenant. Supports searching by space name. Only ACTIVE spaces are returned. An identity used to invoke the operation that is associated with a platform user is required, and deployment credentials without a user identity are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26637,6 +30393,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26703,6 +30471,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26835,6 +30615,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SemanticTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SemanticTags, "semanticTags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26905,6 +30697,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SemanticTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SemanticTags, "semanticTags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -26995,15 +30799,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
+        /// <para>Queries the graphs available for semantic queries for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists published knowledge graphs under an identity tenant.
-        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
-        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
-        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
+        /// <para>Lists the published graphs under an identity tenant.
+        ///     The CLI mapping is <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be directly used in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend graph list and does not filter by digital employee permissions. Specific semantic queries still verify the agent USE permission.
+        ///     Database exceptions are directly routed to unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27023,6 +30827,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27049,15 +30865,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
+        /// <para>Queries the graphs available for semantic queries for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists published knowledge graphs under an identity tenant.
-        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
-        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
-        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
+        /// <para>Lists the published graphs under an identity tenant.
+        ///     The CLI mapping is <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be directly used in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend graph list and does not filter by digital employee permissions. Specific semantic queries still verify the agent USE permission.
+        ///     Database exceptions are directly routed to unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27077,6 +30893,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27103,15 +30931,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
+        /// <para>Queries the graphs available for semantic queries for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists published knowledge graphs under an identity tenant.
-        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
-        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
-        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
+        /// <para>Lists the published graphs under an identity tenant.
+        ///     The CLI mapping is <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be directly used in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend graph list and does not filter by digital employee permissions. Specific semantic queries still verify the agent USE permission.
+        ///     Database exceptions are directly routed to unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27130,15 +30958,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
+        /// <para>Queries the graphs available for semantic queries for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists published knowledge graphs under an identity tenant.
-        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
-        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
-        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
+        /// <para>Lists the published graphs under an identity tenant.
+        ///     The CLI mapping is <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be directly used in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend graph list and does not filter by digital employee permissions. Specific semantic queries still verify the agent USE permission.
+        ///     Database exceptions are directly routed to unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27182,6 +31010,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27251,6 +31091,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27374,6 +31226,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27465,6 +31329,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27598,6 +31474,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27659,6 +31547,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27743,17 +31643,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base and supports sorting by specified fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
-        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the directoryId parameter is not provided, all category trees under the root directory of the enterprise knowledge base are returned. If directoryId is provided, the subdirectory tree with this directory as the root is returned.</description></item>
+        /// <item><description>You can use the sortField and sortOrder parameters to sort the results. By default, the results are sorted in descending order of creation time.</description></item>
+        /// <item><description>Security constraints: The tenant_id and user_id parameters are obtained only from the authenticated identity, and the caller must have the DEVELOPMENT_KB_VIEW feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27774,6 +31674,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27814,17 +31726,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base and supports sorting by specified fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
-        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the directoryId parameter is not provided, all category trees under the root directory of the enterprise knowledge base are returned. If directoryId is provided, the subdirectory tree with this directory as the root is returned.</description></item>
+        /// <item><description>You can use the sortField and sortOrder parameters to sort the results. By default, the results are sorted in descending order of creation time.</description></item>
+        /// <item><description>Security constraints: The tenant_id and user_id parameters are obtained only from the authenticated identity, and the caller must have the DEVELOPMENT_KB_VIEW feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27845,6 +31757,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -27885,17 +31809,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base and supports sorting by specified fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
-        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the directoryId parameter is not provided, all category trees under the root directory of the enterprise knowledge base are returned. If directoryId is provided, the subdirectory tree with this directory as the root is returned.</description></item>
+        /// <item><description>You can use the sortField and sortOrder parameters to sort the results. By default, the results are sorted in descending order of creation time.</description></item>
+        /// <item><description>Security constraints: The tenant_id and user_id parameters are obtained only from the authenticated identity, and the caller must have the DEVELOPMENT_KB_VIEW feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27915,17 +31839,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base and supports sorting by specified fields.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
-        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the directoryId parameter is not provided, all category trees under the root directory of the enterprise knowledge base are returned. If directoryId is provided, the subdirectory tree with this directory as the root is returned.</description></item>
+        /// <item><description>You can use the sortField and sortOrder parameters to sort the results. By default, the results are sorted in descending order of creation time.</description></item>
+        /// <item><description>Security constraints: The tenant_id and user_id parameters are obtained only from the authenticated identity, and the caller must have the DEVELOPMENT_KB_VIEW feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27945,12 +31869,242 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// <para>Queries enterprise knowledge base resources by bound object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// <para>Queries bound sources precisely by the graphName, objectType, and objectId triplet. The target object must exist and be readable by the current user. The identity is derived from the unified authentication chain. Specifying a user, tenant, or scope in the request body is not accepted.
+        /// Queries only TENANT resources visible to the current user within the current tenant. The knowledge base root, directory ancestors, and source content ACLs must all pass validation. Uses content visibility semantics. It does not require knowledge base management permissions and does not bypass content ACLs due to management permissions. For multi-directory bindings, only legally readable directories are displayed.
+        /// Does not return group, orphaned, or internally hidden knowledge assets. Binding filtering, resource permissions, hidden filtering, and deduplication all occur before total count calculation and pagination. The totalCount does not include invisible resources. Multiple bindings of the same source are counted only once, regardless of the processing status.
+        /// Returns sources, totalCount, page, and pageSize upon success. Returns an empty list and 0 if no matches are found. Returns an empty list and the actual authorized total count for out-of-bounds pages. Returns only basic resource fields. It does not return settings, signed URLs, or other object bindings. Pagination is based on real-time queries and does not provide cross-request snapshots.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseSourcesByObjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseSourcesByObjectResponse
+        /// </returns>
+        public ListKnowledgeBaseSourcesByObjectResponse ListKnowledgeBaseSourcesByObjectWithOptions(ListKnowledgeBaseSourcesByObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                body["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseSourcesByObject",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listKnowledgeBaseSourcesByObject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseSourcesByObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries enterprise knowledge base resources by bound object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries bound sources precisely by the graphName, objectType, and objectId triplet. The target object must exist and be readable by the current user. The identity is derived from the unified authentication chain. Specifying a user, tenant, or scope in the request body is not accepted.
+        /// Queries only TENANT resources visible to the current user within the current tenant. The knowledge base root, directory ancestors, and source content ACLs must all pass validation. Uses content visibility semantics. It does not require knowledge base management permissions and does not bypass content ACLs due to management permissions. For multi-directory bindings, only legally readable directories are displayed.
+        /// Does not return group, orphaned, or internally hidden knowledge assets. Binding filtering, resource permissions, hidden filtering, and deduplication all occur before total count calculation and pagination. The totalCount does not include invisible resources. Multiple bindings of the same source are counted only once, regardless of the processing status.
+        /// Returns sources, totalCount, page, and pageSize upon success. Returns an empty list and 0 if no matches are found. Returns an empty list and the actual authorized total count for out-of-bounds pages. Returns only basic resource fields. It does not return settings, signed URLs, or other object bindings. Pagination is based on real-time queries and does not provide cross-request snapshots.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseSourcesByObjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseSourcesByObjectResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseSourcesByObjectResponse> ListKnowledgeBaseSourcesByObjectWithOptionsAsync(ListKnowledgeBaseSourcesByObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                body["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBaseSourcesByObject",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listKnowledgeBaseSourcesByObject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBaseSourcesByObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries enterprise knowledge base resources by bound object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries bound sources precisely by the graphName, objectType, and objectId triplet. The target object must exist and be readable by the current user. The identity is derived from the unified authentication chain. Specifying a user, tenant, or scope in the request body is not accepted.
+        /// Queries only TENANT resources visible to the current user within the current tenant. The knowledge base root, directory ancestors, and source content ACLs must all pass validation. Uses content visibility semantics. It does not require knowledge base management permissions and does not bypass content ACLs due to management permissions. For multi-directory bindings, only legally readable directories are displayed.
+        /// Does not return group, orphaned, or internally hidden knowledge assets. Binding filtering, resource permissions, hidden filtering, and deduplication all occur before total count calculation and pagination. The totalCount does not include invisible resources. Multiple bindings of the same source are counted only once, regardless of the processing status.
+        /// Returns sources, totalCount, page, and pageSize upon success. Returns an empty list and 0 if no matches are found. Returns an empty list and the actual authorized total count for out-of-bounds pages. Returns only basic resource fields. It does not return settings, signed URLs, or other object bindings. Pagination is based on real-time queries and does not provide cross-request snapshots.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseSourcesByObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseSourcesByObjectResponse
+        /// </returns>
+        public ListKnowledgeBaseSourcesByObjectResponse ListKnowledgeBaseSourcesByObject(ListKnowledgeBaseSourcesByObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKnowledgeBaseSourcesByObjectWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries enterprise knowledge base resources by bound object.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries bound sources precisely by the graphName, objectType, and objectId triplet. The target object must exist and be readable by the current user. The identity is derived from the unified authentication chain. Specifying a user, tenant, or scope in the request body is not accepted.
+        /// Queries only TENANT resources visible to the current user within the current tenant. The knowledge base root, directory ancestors, and source content ACLs must all pass validation. Uses content visibility semantics. It does not require knowledge base management permissions and does not bypass content ACLs due to management permissions. For multi-directory bindings, only legally readable directories are displayed.
+        /// Does not return group, orphaned, or internally hidden knowledge assets. Binding filtering, resource permissions, hidden filtering, and deduplication all occur before total count calculation and pagination. The totalCount does not include invisible resources. Multiple bindings of the same source are counted only once, regardless of the processing status.
+        /// Returns sources, totalCount, page, and pageSize upon success. Returns an empty list and 0 if no matches are found. Returns an empty list and the actual authorized total count for out-of-bounds pages. Returns only basic resource fields. It does not return settings, signed URLs, or other object bindings. Pagination is based on real-time queries and does not provide cross-request snapshots.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBaseSourcesByObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBaseSourcesByObjectResponse
+        /// </returns>
+        public async Task<ListKnowledgeBaseSourcesByObjectResponse> ListKnowledgeBaseSourcesByObjectAsync(ListKnowledgeBaseSourcesByObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKnowledgeBaseSourcesByObjectWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query for the exact object type subscriptions of a digital worker.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscriptions based on three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1,000-item display window of the subscription panel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27970,6 +32124,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28018,12 +32184,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// <para>Performs a paging query for the exact object type subscriptions of a digital worker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// <para>Queries subscriptions based on three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1,000-item display window of the subscription panel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28043,6 +32209,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28091,12 +32269,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// <para>Performs a paging query for the exact object type subscriptions of a digital worker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// <para>Queries subscriptions based on three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1,000-item display window of the subscription panel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28115,12 +32293,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// <para>Performs a paging query for the exact object type subscriptions of a digital worker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// <para>Queries subscriptions based on three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1,000-item display window of the subscription panel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28139,16 +32317,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
+        /// <para>Performs a paged query of the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. The paging and total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
         /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -28174,6 +32352,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28246,16 +32436,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
+        /// <para>Performs a paged query of the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. The paging and total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
         /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -28281,6 +32471,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28353,16 +32555,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
+        /// <para>Performs a paged query of the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. The paging and total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
         /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28381,16 +32583,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. Paging and the total count are calculated based on the primary output records.</para>
+        /// <para>Performs a paged query of the visible outputs and the latest published file versions for the current user or a specified collaboration workspace. Supports filtering by session, label, and business ID. The paging and total count are calculated based on the primary output records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>If collaborationGroupId is not provided, queries the personal outputs of the current caller. If provided, queries the outputs of the specified collaboration workspace and verifies the real-time access permissions of the current workspace members and source resources. The caller identity and tenant permissions are determined by the authentication context.
-        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of a file registration or an associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
-        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 entries per page, up to a maximum of 100 entries, sorted in descending order by update time. The response structure remains compatible with the original API operation.
+        /// The sessionId parameter requires an exact match for a regular session, skill session, or node execution session. The tags parameter requires all specified labels to match simultaneously. The bizId parameter requires an exact match for the business ID of the file registration or associated workflow instance. The new conditions are combined with the existing operatingObjectName, itemType, keyword, and sharedOnly conditions using the AND operator, and are executed before counting and paging.
+        /// Tags and business IDs are derived from file registrations or workflow instance associations. Unregistered tags or business IDs are not inferred from titles. Pagination defaults to page 1 with 20 items per page, up to a maximum of 100 items, sorted in descending order by update time. The response structure remains compatible with the original API operation.
         /// For versioned files, the latest published version is returned by default without expanding historical versions. This API operation does not currently support querying specific versions. Pagination and the total count are still based on the primary output records, deduplicated by outputId, and are not counted by the number of files or historical versions.
-        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not trigger an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
+        /// For versioned files, fileInfo.path is a time-sensitive download link attached to the published version and content revisions selected during the query. Downloads do not perform an automatic switchover to other versions published later. Invoke this API operation again to obtain a new link after the current one expires. Historical files that have not yet formed a published version may not return download information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28448,6 +32650,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28543,6 +32757,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28663,6 +32889,236 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>按绑定对象查询个人资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按 graphName、objectType、objectId 三元组精确查询绑定的 Source。目标对象必须存在且对当前用户可读；身份来自统一鉴权链，不接受请求体指定用户、租户或 scope。
+        /// 仅查询当前租户内由当前用户创建、位于其有效个人目录树下的 PERSONAL 资源；目录根不依赖名称。所有目录祖先须同租户、同所有者且为个人类型。
+        /// 不返回群组、孤儿或内部隐藏知识资产。绑定过滤、资源权限、隐藏过滤和去重均发生在总数计算和分页之前；totalCount 不包含不可见资源。同一 Source 多绑定只计一次，不限制处理状态。
+        /// 成功返回 sources、totalCount、page、pageSize；无匹配返回空列表和 0，越界页返回空列表及真实授权总数。只返回资源基础字段，不返回 settings、签名 URL 或其他对象绑定。分页为实时查询，不提供跨请求快照。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPersonalSourcesByObjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPersonalSourcesByObjectResponse
+        /// </returns>
+        public ListPersonalSourcesByObjectResponse ListPersonalSourcesByObjectWithOptions(ListPersonalSourcesByObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                body["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPersonalSourcesByObject",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listPersonalSourcesByObject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPersonalSourcesByObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>按绑定对象查询个人资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按 graphName、objectType、objectId 三元组精确查询绑定的 Source。目标对象必须存在且对当前用户可读；身份来自统一鉴权链，不接受请求体指定用户、租户或 scope。
+        /// 仅查询当前租户内由当前用户创建、位于其有效个人目录树下的 PERSONAL 资源；目录根不依赖名称。所有目录祖先须同租户、同所有者且为个人类型。
+        /// 不返回群组、孤儿或内部隐藏知识资产。绑定过滤、资源权限、隐藏过滤和去重均发生在总数计算和分页之前；totalCount 不包含不可见资源。同一 Source 多绑定只计一次，不限制处理状态。
+        /// 成功返回 sources、totalCount、page、pageSize；无匹配返回空列表和 0，越界页返回空列表及真实授权总数。只返回资源基础字段，不返回 settings、签名 URL 或其他对象绑定。分页为实时查询，不提供跨请求快照。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPersonalSourcesByObjectRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPersonalSourcesByObjectResponse
+        /// </returns>
+        public async Task<ListPersonalSourcesByObjectResponse> ListPersonalSourcesByObjectWithOptionsAsync(ListPersonalSourcesByObjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectId))
+            {
+                body["objectId"] = request.ObjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPersonalSourcesByObject",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listPersonalSourcesByObject",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPersonalSourcesByObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>按绑定对象查询个人资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按 graphName、objectType、objectId 三元组精确查询绑定的 Source。目标对象必须存在且对当前用户可读；身份来自统一鉴权链，不接受请求体指定用户、租户或 scope。
+        /// 仅查询当前租户内由当前用户创建、位于其有效个人目录树下的 PERSONAL 资源；目录根不依赖名称。所有目录祖先须同租户、同所有者且为个人类型。
+        /// 不返回群组、孤儿或内部隐藏知识资产。绑定过滤、资源权限、隐藏过滤和去重均发生在总数计算和分页之前；totalCount 不包含不可见资源。同一 Source 多绑定只计一次，不限制处理状态。
+        /// 成功返回 sources、totalCount、page、pageSize；无匹配返回空列表和 0，越界页返回空列表及真实授权总数。只返回资源基础字段，不返回 settings、签名 URL 或其他对象绑定。分页为实时查询，不提供跨请求快照。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPersonalSourcesByObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPersonalSourcesByObjectResponse
+        /// </returns>
+        public ListPersonalSourcesByObjectResponse ListPersonalSourcesByObject(ListPersonalSourcesByObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPersonalSourcesByObjectWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>按绑定对象查询个人资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按 graphName、objectType、objectId 三元组精确查询绑定的 Source。目标对象必须存在且对当前用户可读；身份来自统一鉴权链，不接受请求体指定用户、租户或 scope。
+        /// 仅查询当前租户内由当前用户创建、位于其有效个人目录树下的 PERSONAL 资源；目录根不依赖名称。所有目录祖先须同租户、同所有者且为个人类型。
+        /// 不返回群组、孤儿或内部隐藏知识资产。绑定过滤、资源权限、隐藏过滤和去重均发生在总数计算和分页之前；totalCount 不包含不可见资源。同一 Source 多绑定只计一次，不限制处理状态。
+        /// 成功返回 sources、totalCount、page、pageSize；无匹配返回空列表和 0，越界页返回空列表及真实授权总数。只返回资源基础字段，不返回 settings、签名 URL 或其他对象绑定。分页为实时查询，不提供跨请求快照。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListPersonalSourcesByObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPersonalSourcesByObjectResponse
+        /// </returns>
+        public async Task<ListPersonalSourcesByObjectResponse> ListPersonalSourcesByObjectAsync(ListPersonalSourcesByObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPersonalSourcesByObjectWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of system built-in roles.</para>
         /// </summary>
         /// 
@@ -28694,6 +33150,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28751,6 +33219,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -28877,6 +33357,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VisibilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Visibilities, "visibilities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
@@ -28896,6 +33380,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -28975,6 +33467,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VisibilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Visibilities, "visibilities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
@@ -28994,6 +33490,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
@@ -29105,20 +33609,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>Retrieves a list of all skills visible to the current tenant. Supports filtering by digital employee bindings, skill sources, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
-        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description><b>TenantId</b>: Optional. Common parameter. Passed through to the backend header by the gateway. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published skills), <c>BUILTIN</c> (published built-in skills), <c>CUSTOM</c> (published custom skills), and <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match by skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
         /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
-        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound) and <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response contains the skill list <c>items</c>, the total count <c>total</c>, the current page <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
+        /// <para>The response includes the skill list <c>items</c>, the total count <c>total</c>, the current page number <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -29144,6 +33648,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -29206,20 +33722,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>Retrieves a list of all skills visible to the current tenant. Supports filtering by digital employee bindings, skill sources, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
-        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description><b>TenantId</b>: Optional. Common parameter. Passed through to the backend header by the gateway. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published skills), <c>BUILTIN</c> (published built-in skills), <c>CUSTOM</c> (published custom skills), and <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match by skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
         /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
-        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound) and <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response contains the skill list <c>items</c>, the total count <c>total</c>, the current page <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
+        /// <para>The response includes the skill list <c>items</c>, the total count <c>total</c>, the current page number <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -29245,6 +33761,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -29307,20 +33835,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>Retrieves a list of all skills visible to the current tenant. Supports filtering by digital employee bindings, skill sources, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
-        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description><b>TenantId</b>: Optional. Common parameter. Passed through to the backend header by the gateway. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published skills), <c>BUILTIN</c> (published built-in skills), <c>CUSTOM</c> (published custom skills), and <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match by skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
         /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
-        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound) and <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response contains the skill list <c>items</c>, the total count <c>total</c>, the current page <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
+        /// <para>The response includes the skill list <c>items</c>, the total count <c>total</c>, the current page number <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29345,20 +33873,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>Retrieves a list of all skills visible to the current tenant. Supports filtering by digital employee bindings, skill sources, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
-        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
+        /// <item><description><b>TenantId</b>: Optional. Common parameter. Passed through to the backend header by the gateway. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published skills), <c>BUILTIN</c> (published built-in skills), <c>CUSTOM</c> (published custom skills), and <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match by skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
         /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
-        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The name of the digital employee. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound) and <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response contains the skill list <c>items</c>, the total count <c>total</c>, the current page <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
+        /// <para>The response includes the skill list <c>items</c>, the total count <c>total</c>, the current page number <c>page</c>, and the number of entries per page <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29377,12 +33905,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging.</para>
+        /// <para>Retrieves sources and usage statistics through paged query and paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach settings. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Performs a paged query with paging to retrieve sources and usage statistics. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, storage management administrators or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -29412,6 +33940,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceIds, "sourceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -29488,12 +34028,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging.</para>
+        /// <para>Retrieves sources and usage statistics through paged query and paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach settings. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Performs a paged query with paging to retrieve sources and usage statistics. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, storage management administrators or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -29523,6 +34063,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceIds, "sourceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -29599,12 +34151,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging.</para>
+        /// <para>Retrieves sources and usage statistics through paged query and paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach settings. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Performs a paged query with paging to retrieve sources and usage statistics. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, storage management administrators or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29623,12 +34175,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging.</para>
+        /// <para>Retrieves sources and usage statistics through paged query and paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves source retrieve and usage statistics through paged query and paging. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach settings. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Performs a paged query with paging to retrieve sources and usage statistics. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, storage management administrators or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29679,6 +34231,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -29763,6 +34327,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -29877,12 +34453,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the to-do list.</para>
+        /// <para>Performs a paging query for the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
+        /// <para>Performs a paging query for the to-do list of the current user. Filters within a group use union, and filters across groups use intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -29920,6 +34496,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "statuses", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -29992,12 +34580,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the to-do list.</para>
+        /// <para>Performs a paging query for the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
+        /// <para>Performs a paging query for the to-do list of the current user. Filters within a group use union, and filters across groups use intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30035,6 +34623,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "statuses", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30107,12 +34707,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the to-do list.</para>
+        /// <para>Performs a paging query for the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
+        /// <para>Performs a paging query for the to-do list of the current user. Filters within a group use union, and filters across groups use intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30131,12 +34731,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query on the to-do list.</para>
+        /// <para>Performs a paging query for the to-do list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query on the to-do list for the current user. For paging, filters within a group use a union, and filters across groups use an intersection. If no filters are specified, all items are returned.</para>
+        /// <para>Performs a paging query for the to-do list of the current user. Filters within a group use union, and filters across groups use intersection. If no filters are specified, all items are returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30186,6 +34786,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30243,6 +34855,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30359,6 +34983,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30445,6 +35081,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30564,11 +35212,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
-        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
-        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
+        /// <item><description>This operation queries the visible enterprise knowledge bases for the platform user mapped by the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visibility scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can be used to filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30589,6 +35237,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30626,11 +35286,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
-        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
-        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
+        /// <item><description>This operation queries the visible enterprise knowledge bases for the platform user mapped by the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visibility scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can be used to filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30651,6 +35311,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30688,11 +35360,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
-        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
-        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
+        /// <item><description>This operation queries the visible enterprise knowledge bases for the platform user mapped by the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visibility scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can be used to filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30717,11 +35389,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
-        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
-        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
+        /// <item><description>This operation queries the visible enterprise knowledge bases for the platform user mapped by the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visibility scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can be used to filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30741,18 +35413,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the tenant member list.</para>
+        /// <para>Performs a paged query for the tenant member list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the tenant member list by using OpenAPI.
-        ///     Workflow:
-        ///     1. Parse filter conditions (roleCodes to role_ids).
-        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paging query.
+        /// <para>Performs a paged query for the tenant member list by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse the filter conditions (roleCodes to role_ids).
+        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
         ///     3. Convert role_id in the result to roleCode and assemble the response.
         ///     Error codes:
-        ///     - Throws an error when the roleCode parameter is invalid.</para>
+        ///     - A fault is thrown when an invalid roleCode parameter is provided.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30782,6 +35454,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "roleCodes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30834,18 +35518,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the tenant member list.</para>
+        /// <para>Performs a paged query for the tenant member list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the tenant member list by using OpenAPI.
-        ///     Workflow:
-        ///     1. Parse filter conditions (roleCodes to role_ids).
-        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paging query.
+        /// <para>Performs a paged query for the tenant member list by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse the filter conditions (roleCodes to role_ids).
+        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
         ///     3. Convert role_id in the result to roleCode and assemble the response.
         ///     Error codes:
-        ///     - Throws an error when the roleCode parameter is invalid.</para>
+        ///     - A fault is thrown when an invalid roleCode parameter is provided.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30875,6 +35559,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "roleCodes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -30927,18 +35623,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the tenant member list.</para>
+        /// <para>Performs a paged query for the tenant member list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the tenant member list by using OpenAPI.
-        ///     Workflow:
-        ///     1. Parse filter conditions (roleCodes to role_ids).
-        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paging query.
+        /// <para>Performs a paged query for the tenant member list by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse the filter conditions (roleCodes to role_ids).
+        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
         ///     3. Convert role_id in the result to roleCode and assemble the response.
         ///     Error codes:
-        ///     - Throws an error when the roleCode parameter is invalid.</para>
+        ///     - A fault is thrown when an invalid roleCode parameter is provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30957,18 +35653,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the tenant member list.</para>
+        /// <para>Performs a paged query for the tenant member list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the tenant member list by using OpenAPI.
-        ///     Workflow:
-        ///     1. Parse filter conditions (roleCodes to role_ids).
-        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paging query.
+        /// <para>Performs a paged query for the tenant member list by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse the filter conditions (roleCodes to role_ids).
+        ///     2. Invoke UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
         ///     3. Convert role_id in the result to roleCode and assemble the response.
         ///     Error codes:
-        ///     - Throws an error when the roleCode parameter is invalid.</para>
+        ///     - A fault is thrown when an invalid roleCode parameter is provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31026,6 +35722,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31121,6 +35829,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31269,6 +35989,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31338,6 +36070,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31458,6 +36202,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31519,6 +36275,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31603,12 +36371,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31642,6 +36410,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PrioritiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Priorities, "priorities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31710,12 +36490,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31749,6 +36529,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PrioritiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Priorities, "priorities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31817,12 +36609,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31841,12 +36633,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists visible work items in the current workspace for valid members with pagination. The nextToken and maxResults parameters take precedence over the page and pageSize parameters.</para>
+        /// <para>Queries work items visible to valid members in the current workspace with pagination. Both page/pageSize and nextToken/maxResults are supported, but tokens take precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31890,6 +36682,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -31979,6 +36783,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32116,6 +36932,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32177,6 +37005,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32261,12 +37101,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Lists valid templates in the current collaboration space with pagination. Both page/pageSize and nextToken/maxResults are supported, and tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Searches for valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Searches for valid templates in the current collaboration workspace with pagination for valid members. Both page/pageSize and nextToken/maxResults are supported, but the token takes precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32286,6 +37126,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32338,12 +37190,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Lists valid templates in the current collaboration space with pagination. Both page/pageSize and nextToken/maxResults are supported, and tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Searches for valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Searches for valid templates in the current collaboration workspace with pagination for valid members. Both page/pageSize and nextToken/maxResults are supported, but the token takes precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32363,6 +37215,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32415,12 +37279,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Lists valid templates in the current collaboration space with pagination. Both page/pageSize and nextToken/maxResults are supported, and tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Searches for valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Searches for valid templates in the current collaboration workspace with pagination for valid members. Both page/pageSize and nextToken/maxResults are supported, but the token takes precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32439,12 +37303,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Lists valid templates in the current collaboration space with pagination. Both page/pageSize and nextToken/maxResults are supported, and tokens take precedence.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Searches for valid templates in the current collaboration space by using pagination. If both page/pageSize and nextToken/maxResults are specified, the token takes precedence.</para>
+        /// <para>Searches for valid templates in the current collaboration workspace with pagination for valid members. Both page/pageSize and nextToken/maxResults are supported, but the token takes precedence.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32468,7 +37332,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over todoIds. No error is reported if both are empty.</para>
+        /// <para>Marks to-do items as read for the current user. The markAllRead parameter takes precedence over todoIds. If both are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -32494,6 +37358,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TodoIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TodoIds, "todoIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32535,7 +37411,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over todoIds. No error is reported if both are empty.</para>
+        /// <para>Marks to-do items as read for the current user. The markAllRead parameter takes precedence over todoIds. If both are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -32561,6 +37437,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TodoIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TodoIds, "todoIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32602,7 +37490,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over todoIds. No error is reported if both are empty.</para>
+        /// <para>Marks to-do items as read for the current user. The markAllRead parameter takes precedence over todoIds. If both are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32626,7 +37514,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Marks the to-do items of the current user as read. The markAllRead parameter takes precedence over todoIds. No error is reported if both are empty.</para>
+        /// <para>Marks to-do items as read for the current user. The markAllRead parameter takes precedence over todoIds. If both are empty, no error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32670,6 +37558,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32739,6 +37639,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32877,6 +37789,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -32967,6 +37891,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33133,6 +38069,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33205,6 +38153,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33334,6 +38294,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33393,6 +38365,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33502,6 +38486,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33563,6 +38559,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33672,6 +38680,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33733,6 +38753,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33849,6 +38881,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -33913,6 +38957,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34032,6 +39088,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34093,6 +39161,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34208,6 +39288,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34280,6 +39372,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34413,6 +39517,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34493,6 +39609,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34633,6 +39761,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34703,6 +39843,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34806,7 +39958,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the attach configuration. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, workspace administrators responsible for storage management or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time range is based on the ingestion time, inclusive of the start time and exclusive of the end time, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -34836,6 +39988,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceIds, "sourceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34901,7 +40065,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the attach configuration. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, workspace administrators responsible for storage management or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time range is based on the ingestion time, inclusive of the start time and exclusive of the end time, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -34931,6 +40095,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceIds, "sourceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -34996,7 +40172,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the attach configuration. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, workspace administrators responsible for storage management or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time range is based on the ingestion time, inclusive of the start time and exclusive of the end time, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35020,7 +40196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose, without other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, which is left-closed and right-open, with a maximum span of 366 days. Knowledge bases are filtered based on the attach configuration. The three APIs do not guarantee the same snapshot across requests.</para>
+        /// <para>Queries the overview of source retrieve and usage. Returns only the data for the current query purpose without other report sections. For enterprises, only knowledge base super administrators are allowed. For a single workspace, workspace administrators responsible for storage management or the SUPER_ADMIN of the current tenant platform are allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time range is based on the ingestion time, inclusive of the start time and exclusive of the end time, with a maximum span of 366 days. Knowledge bases are filtered based on the current attach. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35039,12 +40215,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the retrieval and usage time trends of sources.</para>
+        /// <para>Queries the retrieval and usage trends of sources over time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the trends of source retrieval and usage over time. Returns only the data relevant to the current query and does not include other report sections. For enterprises, only knowledge base super administrators are authorized. For a single workspace, workspace administrators or the SUPER_ADMIN of the current tenant are authorized. For all workspaces, only the platform SUPER_ADMIN is authorized. This feature is unavailable for individual users, and group credentials cannot be used across workspaces. The time parameter refers to the time when data is reported and ingested. The time range is inclusive of the start time and exclusive of the end time, and can span up to 366 days. Knowledge bases are filtered based on current bindings. The three APIs do not guarantee data snapshot consistency across requests.</para>
+        /// <para>Queries the retrieve and usage trends of sources over time. Returns only the data for the current query purpose without attaching other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, using a left-closed and right-open interval, with a maximum span of 366 days. Knowledge bases are filtered based on current bindings. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -35074,6 +40250,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceIds, "sourceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35142,12 +40330,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the retrieval and usage time trends of sources.</para>
+        /// <para>Queries the retrieval and usage trends of sources over time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the trends of source retrieval and usage over time. Returns only the data relevant to the current query and does not include other report sections. For enterprises, only knowledge base super administrators are authorized. For a single workspace, workspace administrators or the SUPER_ADMIN of the current tenant are authorized. For all workspaces, only the platform SUPER_ADMIN is authorized. This feature is unavailable for individual users, and group credentials cannot be used across workspaces. The time parameter refers to the time when data is reported and ingested. The time range is inclusive of the start time and exclusive of the end time, and can span up to 366 days. Knowledge bases are filtered based on current bindings. The three APIs do not guarantee data snapshot consistency across requests.</para>
+        /// <para>Queries the retrieve and usage trends of sources over time. Returns only the data for the current query purpose without attaching other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, using a left-closed and right-open interval, with a maximum span of 366 days. Knowledge bases are filtered based on current bindings. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -35177,6 +40365,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.SourceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceIds, "sourceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35245,12 +40445,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the retrieval and usage time trends of sources.</para>
+        /// <para>Queries the retrieval and usage trends of sources over time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the trends of source retrieval and usage over time. Returns only the data relevant to the current query and does not include other report sections. For enterprises, only knowledge base super administrators are authorized. For a single workspace, workspace administrators or the SUPER_ADMIN of the current tenant are authorized. For all workspaces, only the platform SUPER_ADMIN is authorized. This feature is unavailable for individual users, and group credentials cannot be used across workspaces. The time parameter refers to the time when data is reported and ingested. The time range is inclusive of the start time and exclusive of the end time, and can span up to 366 days. Knowledge bases are filtered based on current bindings. The three APIs do not guarantee data snapshot consistency across requests.</para>
+        /// <para>Queries the retrieve and usage trends of sources over time. Returns only the data for the current query purpose without attaching other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, using a left-closed and right-open interval, with a maximum span of 366 days. Knowledge bases are filtered based on current bindings. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35269,12 +40469,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the retrieval and usage time trends of sources.</para>
+        /// <para>Queries the retrieval and usage trends of sources over time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the trends of source retrieval and usage over time. Returns only the data relevant to the current query and does not include other report sections. For enterprises, only knowledge base super administrators are authorized. For a single workspace, workspace administrators or the SUPER_ADMIN of the current tenant are authorized. For all workspaces, only the platform SUPER_ADMIN is authorized. This feature is unavailable for individual users, and group credentials cannot be used across workspaces. The time parameter refers to the time when data is reported and ingested. The time range is inclusive of the start time and exclusive of the end time, and can span up to 366 days. Knowledge bases are filtered based on current bindings. The three APIs do not guarantee data snapshot consistency across requests.</para>
+        /// <para>Queries the retrieve and usage trends of sources over time. Returns only the data for the current query purpose without attaching other report sections. For enterprises, only the knowledge base super administrator is allowed. For a single workspace, the storage management administrator or the SUPER_ADMIN of the current tenant platform is allowed. For all workspaces, only the platform SUPER_ADMIN is allowed. This feature is not available for individual users, and group credentials cannot be used across workspaces. The time refers to the reporting and ingestion time, using a left-closed and right-open interval, with a maximum span of 366 days. Knowledge bases are filtered based on current bindings. The three API operations do not guarantee the same snapshot across requests.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35320,6 +40520,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35379,6 +40591,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35502,6 +40726,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PrioritiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Priorities, "priorities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35609,6 +40845,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.PrioritiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Priorities, "priorities", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35758,6 +41006,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35835,6 +41095,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -35974,6 +41246,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Items, "items", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36041,6 +41325,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Items, "items", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36159,6 +41455,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36223,6 +41531,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36357,6 +41677,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36431,6 +41763,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36563,6 +41907,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36633,6 +41989,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36767,6 +42135,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36835,6 +42215,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -36958,6 +42350,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37023,6 +42427,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37141,6 +42557,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37207,6 +42635,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37326,6 +42766,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37407,6 +42859,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37511,6 +42975,228 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>设置企业知识库单库管理员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>全量替换知识库的可变用户和用户组管理员。省略或传空数组会清空对应可变主体；普通企业知识库创建者保留。仅支持知识库根目录；帮助库配置只允许平台超级管理员或知识库超级管理员。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ReplaceKnowledgeBaseAdminsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseAdminsResponse
+        /// </returns>
+        public ReplaceKnowledgeBaseAdminsResponse ReplaceKnowledgeBaseAdminsWithOptions(ReplaceKnowledgeBaseAdminsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReplaceKnowledgeBaseAdminsShrinkRequest request = new ReplaceKnowledgeBaseAdminsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
+            {
+                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIdsShrink))
+            {
+                body["userGroupIds"] = request.UserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplaceKnowledgeBaseAdmins",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replaceKnowledgeBaseAdmins",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplaceKnowledgeBaseAdminsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置企业知识库单库管理员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>全量替换知识库的可变用户和用户组管理员。省略或传空数组会清空对应可变主体；普通企业知识库创建者保留。仅支持知识库根目录；帮助库配置只允许平台超级管理员或知识库超级管理员。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ReplaceKnowledgeBaseAdminsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseAdminsResponse
+        /// </returns>
+        public async Task<ReplaceKnowledgeBaseAdminsResponse> ReplaceKnowledgeBaseAdminsWithOptionsAsync(ReplaceKnowledgeBaseAdminsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReplaceKnowledgeBaseAdminsShrinkRequest request = new ReplaceKnowledgeBaseAdminsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
+            {
+                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIdsShrink))
+            {
+                body["userGroupIds"] = request.UserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplaceKnowledgeBaseAdmins",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replaceKnowledgeBaseAdmins",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplaceKnowledgeBaseAdminsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置企业知识库单库管理员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>全量替换知识库的可变用户和用户组管理员。省略或传空数组会清空对应可变主体；普通企业知识库创建者保留。仅支持知识库根目录；帮助库配置只允许平台超级管理员或知识库超级管理员。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceKnowledgeBaseAdminsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseAdminsResponse
+        /// </returns>
+        public ReplaceKnowledgeBaseAdminsResponse ReplaceKnowledgeBaseAdmins(ReplaceKnowledgeBaseAdminsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReplaceKnowledgeBaseAdminsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置企业知识库单库管理员</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>全量替换知识库的可变用户和用户组管理员。省略或传空数组会清空对应可变主体；普通企业知识库创建者保留。仅支持知识库根目录；帮助库配置只允许平台超级管理员或知识库超级管理员。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceKnowledgeBaseAdminsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseAdminsResponse
+        /// </returns>
+        public async Task<ReplaceKnowledgeBaseAdminsResponse> ReplaceKnowledgeBaseAdminsAsync(ReplaceKnowledgeBaseAdminsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReplaceKnowledgeBaseAdminsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Replaces a FILE resource in a specified enterprise knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
@@ -37542,6 +43228,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37625,6 +43323,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37737,6 +43447,224 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Replaces all object bindings for enterprise knowledge base resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only TENANT resources can be modified: the current user must have administrative ACLs for all enterprise knowledge bases that are actually bound to the resource. Write permissions cannot be obtained by verifying only a single knowledge base.
+        /// The identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases.
+        /// The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list verifies the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned.
+        /// The local binding replacement is completed in the same transaction, and then DocumentAgent is synchronously notified to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ReplaceKnowledgeBaseSourceObjectBindingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseSourceObjectBindingsResponse
+        /// </returns>
+        public ReplaceKnowledgeBaseSourceObjectBindingsResponse ReplaceKnowledgeBaseSourceObjectBindingsWithOptions(ReplaceKnowledgeBaseSourceObjectBindingsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReplaceKnowledgeBaseSourceObjectBindingsShrinkRequest request = new ReplaceKnowledgeBaseSourceObjectBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplaceKnowledgeBaseSourceObjectBindings",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replaceKnowledgeBaseSourceObjectBindings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplaceKnowledgeBaseSourceObjectBindingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Replaces all object bindings for enterprise knowledge base resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only TENANT resources can be modified: the current user must have administrative ACLs for all enterprise knowledge bases that are actually bound to the resource. Write permissions cannot be obtained by verifying only a single knowledge base.
+        /// The identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases.
+        /// The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list verifies the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned.
+        /// The local binding replacement is completed in the same transaction, and then DocumentAgent is synchronously notified to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ReplaceKnowledgeBaseSourceObjectBindingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseSourceObjectBindingsResponse
+        /// </returns>
+        public async Task<ReplaceKnowledgeBaseSourceObjectBindingsResponse> ReplaceKnowledgeBaseSourceObjectBindingsWithOptionsAsync(ReplaceKnowledgeBaseSourceObjectBindingsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReplaceKnowledgeBaseSourceObjectBindingsShrinkRequest request = new ReplaceKnowledgeBaseSourceObjectBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplaceKnowledgeBaseSourceObjectBindings",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replaceKnowledgeBaseSourceObjectBindings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplaceKnowledgeBaseSourceObjectBindingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Replaces all object bindings for enterprise knowledge base resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only TENANT resources can be modified: the current user must have administrative ACLs for all enterprise knowledge bases that are actually bound to the resource. Write permissions cannot be obtained by verifying only a single knowledge base.
+        /// The identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases.
+        /// The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list verifies the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned.
+        /// The local binding replacement is completed in the same transaction, and then DocumentAgent is synchronously notified to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceKnowledgeBaseSourceObjectBindingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseSourceObjectBindingsResponse
+        /// </returns>
+        public ReplaceKnowledgeBaseSourceObjectBindingsResponse ReplaceKnowledgeBaseSourceObjectBindings(ReplaceKnowledgeBaseSourceObjectBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReplaceKnowledgeBaseSourceObjectBindingsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Replaces all object bindings for enterprise knowledge base resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only TENANT resources can be modified: the current user must have administrative ACLs for all enterprise knowledge bases that are actually bound to the resource. Write permissions cannot be obtained by verifying only a single knowledge base.
+        /// The identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases.
+        /// The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list verifies the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned.
+        /// The local binding replacement is completed in the same transaction, and then DocumentAgent is synchronously notified to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceKnowledgeBaseSourceObjectBindingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceKnowledgeBaseSourceObjectBindingsResponse
+        /// </returns>
+        public async Task<ReplaceKnowledgeBaseSourceObjectBindingsResponse> ReplaceKnowledgeBaseSourceObjectBindingsAsync(ReplaceKnowledgeBaseSourceObjectBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReplaceKnowledgeBaseSourceObjectBindingsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Overwrites or clears manual memory.</para>
         /// </summary>
         /// 
@@ -37762,6 +43690,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37827,6 +43767,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37913,19 +43865,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return await ReplaceManualMemoryWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ReplaceObjectBindings is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces all object binding information under a specified data source.</para>
+        /// <para>Replaces all object bindings for a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation replaces all object bindings for a specific data source by deleting existing bindings and inserting new ones. If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Security constraints</b>: The <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
-        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, a best-effort synchronous notification is sent to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37942,6 +43898,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// ReplaceObjectBindingsResponse
         /// </returns>
+        [Obsolete("OpenAPI ReplaceObjectBindings is deprecated")]
+        // Deprecated
         public ReplaceObjectBindingsResponse ReplaceObjectBindingsWithOptions(ReplaceObjectBindingsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -37952,6 +43910,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -37986,19 +43956,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return TeaModel.ToObject<ReplaceObjectBindingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ReplaceObjectBindings is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces all object binding information under a specified data source.</para>
+        /// <para>Replaces all object bindings for a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation replaces all object bindings for a specific data source by deleting existing bindings and inserting new ones. If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Security constraints</b>: The <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
-        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, a best-effort synchronous notification is sent to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38015,6 +43989,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// ReplaceObjectBindingsResponse
         /// </returns>
+        [Obsolete("OpenAPI ReplaceObjectBindings is deprecated")]
+        // Deprecated
         public async Task<ReplaceObjectBindingsResponse> ReplaceObjectBindingsWithOptionsAsync(ReplaceObjectBindingsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -38025,6 +44001,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38059,19 +44047,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return TeaModel.ToObject<ReplaceObjectBindingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ReplaceObjectBindings is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces all object binding information under a specified data source.</para>
+        /// <para>Replaces all object bindings for a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation replaces all object bindings for a specific data source by deleting existing bindings and inserting new ones. If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Security constraints</b>: The <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
-        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, a best-effort synchronous notification is sent to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38082,6 +44074,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// ReplaceObjectBindingsResponse
         /// </returns>
+        [Obsolete("OpenAPI ReplaceObjectBindings is deprecated")]
+        // Deprecated
         public ReplaceObjectBindingsResponse ReplaceObjectBindings(ReplaceObjectBindingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -38089,19 +44083,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return ReplaceObjectBindingsWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ReplaceObjectBindings is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces all object binding information under a specified data source.</para>
+        /// <para>Replaces all object bindings for a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation replaces all object bindings for a specific data source by deleting existing bindings and inserting new ones. If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Security constraints</b>: The <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
-        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, a best-effort synchronous notification is sent to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38112,11 +44110,219 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// ReplaceObjectBindingsResponse
         /// </returns>
+        [Obsolete("OpenAPI ReplaceObjectBindings is deprecated")]
+        // Deprecated
         public async Task<ReplaceObjectBindingsResponse> ReplaceObjectBindingsAsync(ReplaceObjectBindingsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ReplaceObjectBindingsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Replaces all object bindings for a personal resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only PERSONAL resources can be modified. The current user must be both the creator of the resource and the owner of all actual bound directories, and the directory ownership must match the resource scope. Identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases. The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list validates the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned. Local binding replacement is completed in the same transaction, followed by a synchronous notification to DocumentAgent to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ReplacePersonalSourceObjectBindingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplacePersonalSourceObjectBindingsResponse
+        /// </returns>
+        public ReplacePersonalSourceObjectBindingsResponse ReplacePersonalSourceObjectBindingsWithOptions(ReplacePersonalSourceObjectBindingsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReplacePersonalSourceObjectBindingsShrinkRequest request = new ReplacePersonalSourceObjectBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplacePersonalSourceObjectBindings",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replacePersonalSourceObjectBindings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplacePersonalSourceObjectBindingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Replaces all object bindings for a personal resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only PERSONAL resources can be modified. The current user must be both the creator of the resource and the owner of all actual bound directories, and the directory ownership must match the resource scope. Identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases. The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list validates the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned. Local binding replacement is completed in the same transaction, followed by a synchronous notification to DocumentAgent to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ReplacePersonalSourceObjectBindingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplacePersonalSourceObjectBindingsResponse
+        /// </returns>
+        public async Task<ReplacePersonalSourceObjectBindingsResponse> ReplacePersonalSourceObjectBindingsWithOptionsAsync(ReplacePersonalSourceObjectBindingsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReplacePersonalSourceObjectBindingsShrinkRequest request = new ReplacePersonalSourceObjectBindingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplacePersonalSourceObjectBindings",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replacePersonalSourceObjectBindings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplacePersonalSourceObjectBindingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Replaces all object bindings for a personal resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only PERSONAL resources can be modified. The current user must be both the creator of the resource and the owner of all actual bound directories, and the directory ownership must match the resource scope. Identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases. The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list validates the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned. Local binding replacement is completed in the same transaction, followed by a synchronous notification to DocumentAgent to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplacePersonalSourceObjectBindingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplacePersonalSourceObjectBindingsResponse
+        /// </returns>
+        public ReplacePersonalSourceObjectBindingsResponse ReplacePersonalSourceObjectBindings(ReplacePersonalSourceObjectBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReplacePersonalSourceObjectBindingsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Replaces all object bindings for a personal resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only PERSONAL resources can be modified. The current user must be both the creator of the resource and the owner of all actual bound directories, and the directory ownership must match the resource scope. Identity is obtained from the unified authentication chain. Users, tenants, or scopes in the request body are not accepted. The resource must be within the current tenant. This operation does not support GROUP, mixed personal and enterprise directory bindings, broken-link directories, or internal assets of system or external knowledge bases. The objectBindings parameter performs a full replacement and supports up to 20 items. An empty array clears all bindings, and the clear operation also checks the write permissions of the resource. A non-empty list validates the object type, object existence, and the current user\&quot;s object row read permissions grouped by graphName. Multiple graphs are supported, and normalized object bindings are returned. Local binding replacement is completed in the same transaction, followed by a synchronous notification to DocumentAgent to update semantics.object_bindings. The gateway timeout is 300,000 milliseconds. If the synchronization fails, an error is returned, and the local bindings may have already been committed. You can retry with the same binding list. This operation does not provide cross-service transactions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplacePersonalSourceObjectBindingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplacePersonalSourceObjectBindingsResponse
+        /// </returns>
+        public async Task<ReplacePersonalSourceObjectBindingsResponse> ReplacePersonalSourceObjectBindingsAsync(ReplacePersonalSourceObjectBindingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReplacePersonalSourceObjectBindingsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -38152,6 +44358,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38235,6 +44453,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38372,6 +44602,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38437,6 +44679,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38550,6 +44804,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38615,6 +44881,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38703,20 +44981,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a user.</para>
+        /// <para>Resets a user password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets the password of a user through OpenAPI.
+        /// <para>Resets a user password through OpenAPI.
         ///     Business orchestration:
-        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
-        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
-        ///     2. Returns the reset result.
+        ///     1. Call UserManagementService.reset_member_password and pass in password_encrypted (required).
+        ///        -&gt; The service internally performs RSA decryption, complexity check, bcrypt hashing, and data writing.
+        ///     2. Return the reset result.
         ///     Error codes:
         ///     - ERR.User.NotFound: The user does not exist.
-        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
-        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
+        ///     - ERR.User.NotInTenant: The user is not in the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user has no password credentials (not of the WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38736,6 +45014,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38772,20 +45062,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a user.</para>
+        /// <para>Resets a user password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets the password of a user through OpenAPI.
+        /// <para>Resets a user password through OpenAPI.
         ///     Business orchestration:
-        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
-        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
-        ///     2. Returns the reset result.
+        ///     1. Call UserManagementService.reset_member_password and pass in password_encrypted (required).
+        ///        -&gt; The service internally performs RSA decryption, complexity check, bcrypt hashing, and data writing.
+        ///     2. Return the reset result.
         ///     Error codes:
         ///     - ERR.User.NotFound: The user does not exist.
-        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
-        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
+        ///     - ERR.User.NotInTenant: The user is not in the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user has no password credentials (not of the WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38805,6 +45095,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -38841,20 +45143,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a user.</para>
+        /// <para>Resets a user password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets the password of a user through OpenAPI.
+        /// <para>Resets a user password through OpenAPI.
         ///     Business orchestration:
-        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
-        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
-        ///     2. Returns the reset result.
+        ///     1. Call UserManagementService.reset_member_password and pass in password_encrypted (required).
+        ///        -&gt; The service internally performs RSA decryption, complexity check, bcrypt hashing, and data writing.
+        ///     2. Return the reset result.
         ///     Error codes:
         ///     - ERR.User.NotFound: The user does not exist.
-        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
-        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
+        ///     - ERR.User.NotInTenant: The user is not in the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user has no password credentials (not of the WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38873,20 +45175,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a user.</para>
+        /// <para>Resets a user password.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets the password of a user through OpenAPI.
+        /// <para>Resets a user password through OpenAPI.
         ///     Business orchestration:
-        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
-        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
-        ///     2. Returns the reset result.
+        ///     1. Call UserManagementService.reset_member_password and pass in password_encrypted (required).
+        ///        -&gt; The service internally performs RSA decryption, complexity check, bcrypt hashing, and data writing.
+        ///     2. Return the reset result.
         ///     Error codes:
         ///     - ERR.User.NotFound: The user does not exist.
-        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
-        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
+        ///     - ERR.User.NotInTenant: The user is not in the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user has no password credentials (not of the WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39124,6 +45426,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39193,6 +45507,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39310,6 +45636,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39375,6 +45713,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39488,6 +45838,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39553,6 +45915,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39666,6 +46040,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39727,6 +46113,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39849,6 +46247,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -39919,6 +46329,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40061,6 +46483,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40129,6 +46563,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40264,6 +46710,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40333,6 +46791,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40474,6 +46944,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40555,6 +47037,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40694,6 +47188,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ArgumentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Arguments, "arguments", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40785,6 +47291,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ArgumentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Arguments, "arguments", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -40945,6 +47463,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.DraftChangeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DraftChangeIds, "draftChangeIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41033,6 +47563,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.DraftChangeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DraftChangeIds, "draftChangeIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41186,6 +47728,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41269,6 +47823,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41424,6 +47990,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41507,6 +48085,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41654,6 +48244,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41737,6 +48339,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41885,6 +48499,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -41965,6 +48591,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -42096,6 +48734,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -42161,6 +48811,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -42279,6 +48941,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -42353,6 +49027,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -42502,11 +49188,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TaskExecutionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskExecution, "taskExecution", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -42566,6 +49268,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskExecutionShrink))
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingEnabled))
+            {
+                body["thinkingEnabled"] = request.ThinkingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingLevel))
+            {
+                body["thinkingLevel"] = request.ThinkingLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
             {
@@ -42641,11 +49351,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TaskExecutionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskExecution, "taskExecution", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -42705,6 +49431,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskExecutionShrink))
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingEnabled))
+            {
+                body["thinkingEnabled"] = request.ThinkingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingLevel))
+            {
+                body["thinkingLevel"] = request.ThinkingLevel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
             {
@@ -42789,10 +49523,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
-        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
-        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
-        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
+        /// <item><description>source_type is fixed to FILE, scope is fixed to PERSONAL, and platform is fixed to LOCAL.</description></item>
+        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
+        /// <item><description>If the destination folder ID (directoryId) is not specified, the system will automatically attach the file to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the user who will invoke the API.</description></item>
+        /// <item><description>Multiple authentication methods, such as AK, BearerToken, and APP, are supported to authenticate and perform security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -42836,11 +49570,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TaskExecutionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskExecution, "taskExecution", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -42901,6 +49651,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingEnabled))
+            {
+                body["thinkingEnabled"] = request.ThinkingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingLevel))
+            {
+                body["thinkingLevel"] = request.ThinkingLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
             {
                 body["workMode"] = request.WorkMode;
@@ -42936,10 +49694,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
-        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
-        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
-        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
+        /// <item><description>source_type is fixed to FILE, scope is fixed to PERSONAL, and platform is fixed to LOCAL.</description></item>
+        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
+        /// <item><description>If the destination folder ID (directoryId) is not specified, the system will automatically attach the file to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the user who will invoke the API.</description></item>
+        /// <item><description>Multiple authentication methods, such as AK, BearerToken, and APP, are supported to authenticate and perform security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -42983,11 +49741,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TaskExecutionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskExecution, "taskExecution", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
             {
                 body["content"] = request.Content;
@@ -43048,6 +49822,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingEnabled))
+            {
+                body["thinkingEnabled"] = request.ThinkingEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingLevel))
+            {
+                body["thinkingLevel"] = request.ThinkingLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
             {
                 body["workMode"] = request.WorkMode;
@@ -43083,10 +49865,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
-        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
-        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
-        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
+        /// <item><description>source_type is fixed to FILE, scope is fixed to PERSONAL, and platform is fixed to LOCAL.</description></item>
+        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
+        /// <item><description>If the destination folder ID (directoryId) is not specified, the system will automatically attach the file to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the user who will invoke the API.</description></item>
+        /// <item><description>Multiple authentication methods, such as AK, BearerToken, and APP, are supported to authenticate and perform security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -43115,10 +49897,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API operation uploads a file to the My Resources section of a specified digital employee.</description></item>
-        /// <item><description>The source_type parameter is fixed to FILE, the scope parameter is fixed to PERSONAL, and the platform parameter is fixed to LOCAL.</description></item>
-        /// <item><description>You must provide an OSS persistence address (filePath) for the file. Other information, such as the public access URL and the original file name, is optional.</description></item>
-        /// <item><description>If you do not specify a target folder ID (directoryId), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure that the folder belongs to the personal folder of the user who invokes the API.</description></item>
-        /// <item><description>You can authenticate through multiple methods (such as AK, BearerToken, and APP) for security authentication.</description></item>
+        /// <item><description>source_type is fixed to FILE, scope is fixed to PERSONAL, and platform is fixed to LOCAL.</description></item>
+        /// <item><description>The file must be provided with an OSS persistence address (filePath). Other information, such as the public access URL and original file name, is optional.</description></item>
+        /// <item><description>If the destination folder ID (directoryId) is not specified, the system will automatically attach the file to the default root folder of the current digital employee. If it is specified, ensure that the folder belongs to the personal folder of the user who will invoke the API.</description></item>
+        /// <item><description>Multiple authentication methods, such as AK, BearerToken, and APP, are supported to authenticate and perform security authentication.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -43164,6 +49946,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -43233,6 +50027,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -43325,12 +50131,258 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Sets the visibility scope of an enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Configures the Settings for the read access scope of a knowledge base, folder, or resource. To invoke this operation, you must have knowledge base management permissions on the target knowledge base, because knowledge base management permissions do not automatically grant read access to the content.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SetKnowledgeBaseVisibilityRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetKnowledgeBaseVisibilityResponse
+        /// </returns>
+        public SetKnowledgeBaseVisibilityResponse SetKnowledgeBaseVisibilityWithOptions(SetKnowledgeBaseVisibilityRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetKnowledgeBaseVisibilityShrinkRequest request = new SetKnowledgeBaseVisibilityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
+            {
+                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CascadeMode))
+            {
+                body["cascadeMode"] = request.CascadeMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                body["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIdsShrink))
+            {
+                body["userGroupIds"] = request.UserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityMode))
+            {
+                body["visibilityMode"] = request.VisibilityMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetKnowledgeBaseVisibility",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/setKnowledgeBaseVisibility",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetKnowledgeBaseVisibilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the visibility scope of an enterprise knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configures the Settings for the read access scope of a knowledge base, folder, or resource. To invoke this operation, you must have knowledge base management permissions on the target knowledge base, because knowledge base management permissions do not automatically grant read access to the content.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SetKnowledgeBaseVisibilityRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetKnowledgeBaseVisibilityResponse
+        /// </returns>
+        public async Task<SetKnowledgeBaseVisibilityResponse> SetKnowledgeBaseVisibilityWithOptionsAsync(SetKnowledgeBaseVisibilityRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetKnowledgeBaseVisibilityShrinkRequest request = new SetKnowledgeBaseVisibilityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
+            {
+                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CascadeMode))
+            {
+                body["cascadeMode"] = request.CascadeMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                body["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIdsShrink))
+            {
+                body["userGroupIds"] = request.UserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityMode))
+            {
+                body["visibilityMode"] = request.VisibilityMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetKnowledgeBaseVisibility",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/setKnowledgeBaseVisibility",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetKnowledgeBaseVisibilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the visibility scope of an enterprise knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configures the Settings for the read access scope of a knowledge base, folder, or resource. To invoke this operation, you must have knowledge base management permissions on the target knowledge base, because knowledge base management permissions do not automatically grant read access to the content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetKnowledgeBaseVisibilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetKnowledgeBaseVisibilityResponse
+        /// </returns>
+        public SetKnowledgeBaseVisibilityResponse SetKnowledgeBaseVisibility(SetKnowledgeBaseVisibilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SetKnowledgeBaseVisibilityWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the visibility scope of an enterprise knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configures the Settings for the read access scope of a knowledge base, folder, or resource. To invoke this operation, you must have knowledge base management permissions on the target knowledge base, because knowledge base management permissions do not automatically grant read access to the content.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetKnowledgeBaseVisibilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetKnowledgeBaseVisibilityResponse
+        /// </returns>
+        public async Task<SetKnowledgeBaseVisibilityResponse> SetKnowledgeBaseVisibilityAsync(SetKnowledgeBaseVisibilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SetKnowledgeBaseVisibilityWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43350,6 +50402,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -43390,12 +50454,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43415,6 +50479,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -43455,12 +50531,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43479,12 +50555,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the personal pin status of a work item for a valid member.</para>
+        /// <para>Sets the personal pin status of a work item for a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43528,6 +50604,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -43593,6 +50681,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -43701,6 +50801,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["sessionId"] = request.SessionId;
@@ -43751,6 +50863,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["sessionId"] = request.SessionId;
@@ -43844,9 +50968,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastEventId))
             {
                 query["lastEventId"] = request.LastEventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -43899,9 +51035,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastEventId))
             {
                 query["lastEventId"] = request.LastEventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -44008,6 +51156,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.AnswersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Answers, "answers", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44075,6 +51235,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.AnswersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Answers, "answers", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44202,6 +51374,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.MembersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Members, "members", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44297,6 +51481,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.MembersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Members, "members", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44438,6 +51634,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44503,6 +51711,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44635,6 +51855,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "objectIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44723,6 +51955,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "objectIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44883,6 +52127,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -44969,6 +52225,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45318,6 +52586,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TargetUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetUserIds, "targetUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45389,6 +52669,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.TargetUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetUserIds, "targetUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45477,18 +52769,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
+        /// <para>Updates the authorization mode of usage permissions for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the authorization mode for digital employee usage permissions.
-        ///     Business logic:
-        ///     1. Constructs an AuthContext from the identity.
-        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
-        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
-        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
-        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
+        /// <para>Switches the authorization mode of usage permissions for a digital employee.
+        /// Business logic:</para>
+        /// <ol>
+        /// <item><description>Constructs an AuthContext from the identity.</description></item>
+        /// <item><description>Delegates the execution to AgentAuthorizationAuthorizedService.update_auth_mode.</description></item>
+        /// <item><description>Pre-checks: MANAGE permission and agent existence. This is executed by the AuthorizedService layer, which performs authentication before exposing the existence of the agent.</description></item>
+        /// <item><description>SPECIFIED_USERS: Explicit authorization is required for usage.</description></item>
+        /// <item><description>ALL_USERS: All users can use the digital employee without authorization. Management permissions remain unaffected.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -45508,6 +52802,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45544,18 +52850,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
+        /// <para>Updates the authorization mode of usage permissions for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the authorization mode for digital employee usage permissions.
-        ///     Business logic:
-        ///     1. Constructs an AuthContext from the identity.
-        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
-        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
-        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
-        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
+        /// <para>Switches the authorization mode of usage permissions for a digital employee.
+        /// Business logic:</para>
+        /// <ol>
+        /// <item><description>Constructs an AuthContext from the identity.</description></item>
+        /// <item><description>Delegates the execution to AgentAuthorizationAuthorizedService.update_auth_mode.</description></item>
+        /// <item><description>Pre-checks: MANAGE permission and agent existence. This is executed by the AuthorizedService layer, which performs authentication before exposing the existence of the agent.</description></item>
+        /// <item><description>SPECIFIED_USERS: Explicit authorization is required for usage.</description></item>
+        /// <item><description>ALL_USERS: All users can use the digital employee without authorization. Management permissions remain unaffected.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -45575,6 +52883,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45611,18 +52931,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
+        /// <para>Updates the authorization mode of usage permissions for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the authorization mode for digital employee usage permissions.
-        ///     Business logic:
-        ///     1. Constructs an AuthContext from the identity.
-        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
-        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
-        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
-        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
+        /// <para>Switches the authorization mode of usage permissions for a digital employee.
+        /// Business logic:</para>
+        /// <ol>
+        /// <item><description>Constructs an AuthContext from the identity.</description></item>
+        /// <item><description>Delegates the execution to AgentAuthorizationAuthorizedService.update_auth_mode.</description></item>
+        /// <item><description>Pre-checks: MANAGE permission and agent existence. This is executed by the AuthorizedService layer, which performs authentication before exposing the existence of the agent.</description></item>
+        /// <item><description>SPECIFIED_USERS: Explicit authorization is required for usage.</description></item>
+        /// <item><description>ALL_USERS: All users can use the digital employee without authorization. Management permissions remain unaffected.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -45641,18 +52963,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
+        /// <para>Updates the authorization mode of usage permissions for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Switches the authorization mode for digital employee usage permissions.
-        ///     Business logic:
-        ///     1. Constructs an AuthContext from the identity.
-        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
-        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
-        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
-        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
+        /// <para>Switches the authorization mode of usage permissions for a digital employee.
+        /// Business logic:</para>
+        /// <ol>
+        /// <item><description>Constructs an AuthContext from the identity.</description></item>
+        /// <item><description>Delegates the execution to AgentAuthorizationAuthorizedService.update_auth_mode.</description></item>
+        /// <item><description>Pre-checks: MANAGE permission and agent existence. This is executed by the AuthorizedService layer, which performs authentication before exposing the existence of the agent.</description></item>
+        /// <item><description>SPECIFIED_USERS: Explicit authorization is required for usage.</description></item>
+        /// <item><description>ALL_USERS: All users can use the digital employee without authorization. Management permissions remain unaffected.</description></item>
+        /// </ol>
         /// </description>
         /// 
         /// <param name="request">
@@ -45696,6 +53020,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45761,6 +53097,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45887,6 +53235,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -45973,6 +53333,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46095,13 +53467,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a knowledge graph.</para>
+        /// <para>Updates the basic information of a semantic graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
-        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        /// <para>Quickly updates the metadata (displayName or businessProfile) of a graph and synchronously updates the active record.
+        ///     You must specify at least one of displayName and businessProfile. Otherwise, the ERR.GraphSchema.QuickUpdateNoFieldsToUpdate error is returned.
         ///     Error codes:
         ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
         ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
@@ -46126,6 +53498,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46166,13 +53550,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a knowledge graph.</para>
+        /// <para>Updates the basic information of a semantic graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
-        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        /// <para>Quickly updates the metadata (displayName or businessProfile) of a graph and synchronously updates the active record.
+        ///     You must specify at least one of displayName and businessProfile. Otherwise, the ERR.GraphSchema.QuickUpdateNoFieldsToUpdate error is returned.
         ///     Error codes:
         ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
         ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
@@ -46197,6 +53581,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46237,13 +53633,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a knowledge graph.</para>
+        /// <para>Updates the basic information of a semantic graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
-        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        /// <para>Quickly updates the metadata (displayName or businessProfile) of a graph and synchronously updates the active record.
+        ///     You must specify at least one of displayName and businessProfile. Otherwise, the ERR.GraphSchema.QuickUpdateNoFieldsToUpdate error is returned.
         ///     Error codes:
         ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
         ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
@@ -46267,13 +53663,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic information of a knowledge graph.</para>
+        /// <para>Updates the basic information of a semantic graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
-        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        /// <para>Quickly updates the metadata (displayName or businessProfile) of a graph and synchronously updates the active record.
+        ///     You must specify at least one of displayName and businessProfile. Otherwise, the ERR.GraphSchema.QuickUpdateNoFieldsToUpdate error is returned.
         ///     Error codes:
         ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
         ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
@@ -46297,12 +53693,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// <para>Modifies a material directory in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// <para>Only the folder creator or a workspace administrator with storage management permissions who is an active member can modify the folder. Internal root folders and referenced folders cannot be modified. An empty character string clears the description, while null or an omitted value leaves it unchanged. At least one of the name or description parameters must be non-null.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46322,6 +53718,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46366,12 +53774,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// <para>Modifies a material directory in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// <para>Only the folder creator or a workspace administrator with storage management permissions who is an active member can modify the folder. Internal root folders and referenced folders cannot be modified. An empty character string clears the description, while null or an omitted value leaves it unchanged. At least one of the name or description parameters must be non-null.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46391,6 +53799,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46435,12 +53855,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// <para>Modifies a material directory in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// <para>Only the folder creator or a workspace administrator with storage management permissions who is an active member can modify the folder. Internal root folders and referenced folders cannot be modified. An empty character string clears the description, while null or an omitted value leaves it unchanged. At least one of the name or description parameters must be non-null.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46459,12 +53879,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// <para>Modifies a material directory in a collaboration workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// <para>Only the folder creator or a workspace administrator with storage management permissions who is an active member can modify the folder. Internal root folders and referenced folders cannot be modified. An empty character string clears the description, while null or an omitted value leaves it unchanged. At least one of the name or description parameters must be non-null.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46483,12 +53903,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the body content of a collaborative share resource.</para>
+        /// <para>Modifies the body of a collaboration workspace material.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
+        /// <para>Valid members who are the creator or workspace administrators with storage management permissions can edit physical materials. References are read-only. TEXT and local txt/md formats are generally supported. Leading and trailing whitespaces are removed from TEXT. Existing materials with skip_parse continue to follow the parsing exemption and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46508,6 +53928,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46552,12 +53984,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the body content of a collaborative share resource.</para>
+        /// <para>Modifies the body of a collaboration workspace material.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
+        /// <para>Valid members who are the creator or workspace administrators with storage management permissions can edit physical materials. References are read-only. TEXT and local txt/md formats are generally supported. Leading and trailing whitespaces are removed from TEXT. Existing materials with skip_parse continue to follow the parsing exemption and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46577,6 +54009,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46621,12 +54065,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the body content of a collaborative share resource.</para>
+        /// <para>Modifies the body of a collaboration workspace material.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
+        /// <para>Valid members who are the creator or workspace administrators with storage management permissions can edit physical materials. References are read-only. TEXT and local txt/md formats are generally supported. Leading and trailing whitespaces are removed from TEXT. Existing materials with skip_parse continue to follow the parsing exemption and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46645,12 +54089,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the body content of a collaborative share resource.</para>
+        /// <para>Modifies the body of a collaboration workspace material.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Valid members who are the creator or storage management administrator can edit physical resources. References are read-only. TEXT and local txt/md files are typically supported. Leading and trailing whitespace is trimmed for TEXT. Existing resources with skip_parse retain the no-parse and local file name extension rules.</para>
+        /// <para>Valid members who are the creator or workspace administrators with storage management permissions can edit physical materials. References are read-only. TEXT and local txt/md formats are generally supported. Leading and trailing whitespaces are removed from TEXT. Existing materials with skip_parse continue to follow the parsing exemption and local file name extension rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46677,11 +54121,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
-        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
-        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>The tenantId parameter is optional. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the directoryId of the directory to be modified. The name, description, and parentDirectoryId parameters are optional. If you do not specify these parameters, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>If you specify a new parentDirectoryId, the system checks whether the new parent directory belongs to the current tenant and whether the change causes circular references.</description></item>
+        /// <item><description>For security, this operation supports multiple authentication methods, such as AK, BearerToken, and APP. It also supports Resource Access Management (RAM) permission control and operation auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46702,6 +54146,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46754,11 +54210,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
-        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
-        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>The tenantId parameter is optional. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the directoryId of the directory to be modified. The name, description, and parentDirectoryId parameters are optional. If you do not specify these parameters, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>If you specify a new parentDirectoryId, the system checks whether the new parent directory belongs to the current tenant and whether the change causes circular references.</description></item>
+        /// <item><description>For security, this operation supports multiple authentication methods, such as AK, BearerToken, and APP. It also supports Resource Access Management (RAM) permission control and operation auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46779,6 +54235,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46831,11 +54299,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
-        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
-        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>The tenantId parameter is optional. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the directoryId of the directory to be modified. The name, description, and parentDirectoryId parameters are optional. If you do not specify these parameters, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>If you specify a new parentDirectoryId, the system checks whether the new parent directory belongs to the current tenant and whether the change causes circular references.</description></item>
+        /// <item><description>For security, this operation supports multiple authentication methods, such as AK, BearerToken, and APP. It also supports Resource Access Management (RAM) permission control and operation auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46863,11 +54331,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
-        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
-        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
-        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>The tenantId parameter is optional. If you do not specify this parameter, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the directoryId of the directory to be modified. The name, description, and parentDirectoryId parameters are optional. If you do not specify these parameters, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>If you specify a new parentDirectoryId, the system checks whether the new parent directory belongs to the current tenant and whether the change causes circular references.</description></item>
+        /// <item><description>For security, this operation supports multiple authentication methods, such as AK, BearerToken, and APP. It also supports Resource Access Management (RAM) permission control and operation auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46883,6 +54351,224 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateKnowledgeBaseDirectoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the LLM Wiki (OKF) switch and automatic execution schedule for a standard enterprise knowledge base, and returns the saved configuration and task status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requires an active member identity in the current tenant and knowledge base management permissions for the target knowledge base. Invoke GetKnowledgeBaseSmartIndexConfiguration first to obtain the revision, and use expectedRevision to prevent concurrent overwrites. This operation performs a full save. Omitting cronExpression changes the schedule to manual. To retain the original schedule, you must commit both cronExpression and timezone. Switching from disabled to enabled creates a new artifact directory, an asynchronous full build task, and a bill. If the quota pre-check fails, the system will deny the enabling request. Keeping it enabled only updates the schedule and does not proactively trigger new builds. You cannot toggle the switch when you execute the task. If artifacts exist when disabled, asynchronous cleanup is initiated, and you cannot re-enable it until cleanup is complete. A successful save does not indicate that the build or billing is complete. The revision increments by 1 after each successful save. In case of a timeout, read the actual result first and do not blindly replay requests with old versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public UpdateKnowledgeBaseSmartIndexConfigurationResponse UpdateKnowledgeBaseSmartIndexConfigurationWithOptions(UpdateKnowledgeBaseSmartIndexConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                body["cronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedRevision))
+            {
+                body["expectedRevision"] = request.ExpectedRevision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBaseSmartIndexConfiguration",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateKnowledgeBaseSmartIndexConfiguration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseSmartIndexConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the LLM Wiki (OKF) switch and automatic execution schedule for a standard enterprise knowledge base, and returns the saved configuration and task status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requires an active member identity in the current tenant and knowledge base management permissions for the target knowledge base. Invoke GetKnowledgeBaseSmartIndexConfiguration first to obtain the revision, and use expectedRevision to prevent concurrent overwrites. This operation performs a full save. Omitting cronExpression changes the schedule to manual. To retain the original schedule, you must commit both cronExpression and timezone. Switching from disabled to enabled creates a new artifact directory, an asynchronous full build task, and a bill. If the quota pre-check fails, the system will deny the enabling request. Keeping it enabled only updates the schedule and does not proactively trigger new builds. You cannot toggle the switch when you execute the task. If artifacts exist when disabled, asynchronous cleanup is initiated, and you cannot re-enable it until cleanup is complete. A successful save does not indicate that the build or billing is complete. The revision increments by 1 after each successful save. In case of a timeout, read the actual result first and do not blindly replay requests with old versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseSmartIndexConfigurationResponse> UpdateKnowledgeBaseSmartIndexConfigurationWithOptionsAsync(UpdateKnowledgeBaseSmartIndexConfigurationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                body["cronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedRevision))
+            {
+                body["expectedRevision"] = request.ExpectedRevision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBaseSmartIndexConfiguration",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateKnowledgeBaseSmartIndexConfiguration",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseSmartIndexConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the LLM Wiki (OKF) switch and automatic execution schedule for a standard enterprise knowledge base, and returns the saved configuration and task status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requires an active member identity in the current tenant and knowledge base management permissions for the target knowledge base. Invoke GetKnowledgeBaseSmartIndexConfiguration first to obtain the revision, and use expectedRevision to prevent concurrent overwrites. This operation performs a full save. Omitting cronExpression changes the schedule to manual. To retain the original schedule, you must commit both cronExpression and timezone. Switching from disabled to enabled creates a new artifact directory, an asynchronous full build task, and a bill. If the quota pre-check fails, the system will deny the enabling request. Keeping it enabled only updates the schedule and does not proactively trigger new builds. You cannot toggle the switch when you execute the task. If artifacts exist when disabled, asynchronous cleanup is initiated, and you cannot re-enable it until cleanup is complete. A successful save does not indicate that the build or billing is complete. The revision increments by 1 after each successful save. In case of a timeout, read the actual result first and do not blindly replay requests with old versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public UpdateKnowledgeBaseSmartIndexConfigurationResponse UpdateKnowledgeBaseSmartIndexConfiguration(UpdateKnowledgeBaseSmartIndexConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateKnowledgeBaseSmartIndexConfigurationWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the LLM Wiki (OKF) switch and automatic execution schedule for a standard enterprise knowledge base, and returns the saved configuration and task status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requires an active member identity in the current tenant and knowledge base management permissions for the target knowledge base. Invoke GetKnowledgeBaseSmartIndexConfiguration first to obtain the revision, and use expectedRevision to prevent concurrent overwrites. This operation performs a full save. Omitting cronExpression changes the schedule to manual. To retain the original schedule, you must commit both cronExpression and timezone. Switching from disabled to enabled creates a new artifact directory, an asynchronous full build task, and a bill. If the quota pre-check fails, the system will deny the enabling request. Keeping it enabled only updates the schedule and does not proactively trigger new builds. You cannot toggle the switch when you execute the task. If artifacts exist when disabled, asynchronous cleanup is initiated, and you cannot re-enable it until cleanup is complete. A successful save does not indicate that the build or billing is complete. The revision increments by 1 after each successful save. In case of a timeout, read the actual result first and do not blindly replay requests with old versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseSmartIndexConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseSmartIndexConfigurationResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseSmartIndexConfigurationResponse> UpdateKnowledgeBaseSmartIndexConfigurationAsync(UpdateKnowledgeBaseSmartIndexConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateKnowledgeBaseSmartIndexConfigurationWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46917,6 +54603,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -46987,6 +54685,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -47119,6 +54829,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -47189,6 +54911,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -47316,6 +55050,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -47385,6 +55131,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -47528,11 +55286,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescriptionShrink))
             {
                 body["description"] = request.DescriptionShrink;
@@ -47655,11 +55429,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPreference))
+            {
+                body["autoPreference"] = request.AutoPreference;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DescriptionShrink))
             {
                 body["description"] = request.DescriptionShrink;
@@ -47814,6 +55604,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -47913,6 +55715,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ShareUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ShareUserIds, "shareUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48057,6 +55871,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48129,6 +55955,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48231,15 +56069,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Updates the directory information of an enterprise knowledge base and modifies the digital employee association and AI version summary configuration for a standard enterprise root.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Requires management permissions for the target knowledge base. For a standard enterprise root, directory information, digital employee associations, and version summaries can be saved simultaneously. If validation or writing fails, the entire operation is rolled back. When modifying the configuration, you cannot pass a non-null parentId to move it to a subdirectory at the same time. Omitted or null configuration fields retain their original values, while false and empty arrays are explicit configuration values. Smart indexes are saved separately through UpdateKnowledgeBaseSmartIndexConfiguration, and the two calls do not constitute a cross-API transaction.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateTenantDirectoryRequest
         /// </param>
         /// <param name="headers">
@@ -48252,15 +56090,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// UpdateTenantDirectoryResponse
         /// </returns>
-        public UpdateTenantDirectoryResponse UpdateTenantDirectoryWithOptions(UpdateTenantDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateTenantDirectoryResponse UpdateTenantDirectoryWithOptions(UpdateTenantDirectoryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTenantDirectoryShrinkRequest request = new UpdateTenantDirectoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingObjectNames))
+            {
+                request.OperatingObjectNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingObjectNames, "operatingObjectNames", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeRecordEnabled))
+            {
+                body["changeRecordEnabled"] = request.ChangeRecordEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -48272,6 +56132,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OoVisibilityMode))
+            {
+                body["ooVisibilityMode"] = request.OoVisibilityMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectNamesShrink))
+            {
+                body["operatingObjectNames"] = request.OperatingObjectNamesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
             {
@@ -48304,15 +56172,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Updates the directory information of an enterprise knowledge base and modifies the digital employee association and AI version summary configuration for a standard enterprise root.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Requires management permissions for the target knowledge base. For a standard enterprise root, directory information, digital employee associations, and version summaries can be saved simultaneously. If validation or writing fails, the entire operation is rolled back. When modifying the configuration, you cannot pass a non-null parentId to move it to a subdirectory at the same time. Omitted or null configuration fields retain their original values, while false and empty arrays are explicit configuration values. Smart indexes are saved separately through UpdateKnowledgeBaseSmartIndexConfiguration, and the two calls do not constitute a cross-API transaction.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateTenantDirectoryRequest
         /// </param>
         /// <param name="headers">
@@ -48325,15 +56193,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// UpdateTenantDirectoryResponse
         /// </returns>
-        public async Task<UpdateTenantDirectoryResponse> UpdateTenantDirectoryWithOptionsAsync(UpdateTenantDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateTenantDirectoryResponse> UpdateTenantDirectoryWithOptionsAsync(UpdateTenantDirectoryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateTenantDirectoryShrinkRequest request = new UpdateTenantDirectoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperatingObjectNames))
+            {
+                request.OperatingObjectNamesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperatingObjectNames, "operatingObjectNames", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeRecordEnabled))
+            {
+                body["changeRecordEnabled"] = request.ChangeRecordEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -48345,6 +56235,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OoVisibilityMode))
+            {
+                body["ooVisibilityMode"] = request.OoVisibilityMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectNamesShrink))
+            {
+                body["operatingObjectNames"] = request.OperatingObjectNamesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
             {
@@ -48377,12 +56275,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Updates the directory information of an enterprise knowledge base and modifies the digital employee association and AI version summary configuration for a standard enterprise root.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Requires management permissions for the target knowledge base. For a standard enterprise root, directory information, digital employee associations, and version summaries can be saved simultaneously. If validation or writing fails, the entire operation is rolled back. When modifying the configuration, you cannot pass a non-null parentId to move it to a subdirectory at the same time. Omitted or null configuration fields retain their original values, while false and empty arrays are explicit configuration values. Smart indexes are saved separately through UpdateKnowledgeBaseSmartIndexConfiguration, and the two calls do not constitute a cross-API transaction.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48401,12 +56299,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Updates the directory information of an enterprise knowledge base and modifies the digital employee association and AI version summary configuration for a standard enterprise root.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies knowledge base folder information.</para>
+        /// <para>Requires management permissions for the target knowledge base. For a standard enterprise root, directory information, digital employee associations, and version summaries can be saved simultaneously. If validation or writing fails, the entire operation is rolled back. When modifying the configuration, you cannot pass a non-null parentId to move it to a subdirectory at the same time. Omitted or null configuration fields retain their original values, while false and empty arrays are explicit configuration values. Smart indexes are saved separately through UpdateKnowledgeBaseSmartIndexConfiguration, and the two calls do not constitute a cross-API transaction.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48430,16 +56328,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies user information through OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parse roleCodes → role_ids
-        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
-        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
-        ///     4. Return HTTP 200 if all steps succeed
-        ///     Execution order notes:
-        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
-        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
-        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
+        /// <para>Modifies user information.
+        ///     Workflow:
+        ///     1. Parse roleCodes into role_ids.
+        ///     2. If isActive changes, switch the status first, including protection for the last super administrator.
+        ///     3. Call update_tenant_member to modify other fields such as displayName, roleCodes, and userGroupIds.
+        ///     4. Return HTTP 200 if all steps succeed.
+        ///     Execution sequence:
+        ///     - The isActive status change is written before other fields. The two steps are not in the same transaction.
+        ///     - If validation fails, such as protection for the last super administrator, an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change is persisted to the database but a subsequent step throws an exception, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -48469,6 +56367,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48522,16 +56432,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies user information through OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parse roleCodes → role_ids
-        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
-        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
-        ///     4. Return HTTP 200 if all steps succeed
-        ///     Execution order notes:
-        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
-        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
-        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
+        /// <para>Modifies user information.
+        ///     Workflow:
+        ///     1. Parse roleCodes into role_ids.
+        ///     2. If isActive changes, switch the status first, including protection for the last super administrator.
+        ///     3. Call update_tenant_member to modify other fields such as displayName, roleCodes, and userGroupIds.
+        ///     4. Return HTTP 200 if all steps succeed.
+        ///     Execution sequence:
+        ///     - The isActive status change is written before other fields. The two steps are not in the same transaction.
+        ///     - If validation fails, such as protection for the last super administrator, an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change is persisted to the database but a subsequent step throws an exception, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -48561,6 +56471,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48614,16 +56536,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies user information through OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parse roleCodes → role_ids
-        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
-        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
-        ///     4. Return HTTP 200 if all steps succeed
-        ///     Execution order notes:
-        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
-        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
-        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
+        /// <para>Modifies user information.
+        ///     Workflow:
+        ///     1. Parse roleCodes into role_ids.
+        ///     2. If isActive changes, switch the status first, including protection for the last super administrator.
+        ///     3. Call update_tenant_member to modify other fields such as displayName, roleCodes, and userGroupIds.
+        ///     4. Return HTTP 200 if all steps succeed.
+        ///     Execution sequence:
+        ///     - The isActive status change is written before other fields. The two steps are not in the same transaction.
+        ///     - If validation fails, such as protection for the last super administrator, an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change is persisted to the database but a subsequent step throws an exception, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48647,16 +56569,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Modifies user information through OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parse roleCodes → role_ids
-        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
-        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
-        ///     4. Return HTTP 200 if all steps succeed
-        ///     Execution order notes:
-        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
-        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
-        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
+        /// <para>Modifies user information.
+        ///     Workflow:
+        ///     1. Parse roleCodes into role_ids.
+        ///     2. If isActive changes, switch the status first, including protection for the last super administrator.
+        ///     3. Call update_tenant_member to modify other fields such as displayName, roleCodes, and userGroupIds.
+        ///     4. Return HTTP 200 if all steps succeed.
+        ///     Execution sequence:
+        ///     - The isActive status change is written before other fields. The two steps are not in the same transaction.
+        ///     - If validation fails, such as protection for the last super administrator, an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change is persisted to the database but a subsequent step throws an exception, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48681,7 +56603,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation supports atomic updates to user group information, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
+        /// <para>This operation atomically updates the information of a user group, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving it to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48701,6 +56623,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48755,7 +56689,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation supports atomic updates to user group information, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
+        /// <para>This operation atomically updates the information of a user group, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving it to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48775,6 +56709,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48829,7 +56775,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation supports atomic updates to user group information, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
+        /// <para>This operation atomically updates the information of a user group, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving it to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48854,7 +56800,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This operation supports atomic updates to user group information, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
+        /// <para>This operation atomically updates the information of a user group, including but not limited to the user group name, description, and its position in the organizational structure (by setting a new parent user group ID or moving it to the root node). Note that when attempting to move a user group to the root node, you must not provide a non-null <c>parentId</c> value at the same time. Additionally, if you do not want to modify certain fields such as <c>userGroupName</c> or <c>description</c>, you can omit these parameters.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48906,6 +56852,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -48991,6 +56949,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49146,6 +57116,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.WorkflowTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowTemplateIds, "workflowTemplateIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49261,6 +57243,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.WorkflowTemplateIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkflowTemplateIds, "workflowTemplateIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49415,6 +57409,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ResponsibleUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResponsibleUserIds, "responsibleUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49501,6 +57507,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.ResponsibleUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ResponsibleUserIds, "responsibleUserIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49595,12 +57613,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -49626,6 +57644,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.DefinitionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Definition, "definition", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49682,12 +57712,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -49713,6 +57743,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
                 request.DefinitionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Definition, "definition", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49769,12 +57811,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49793,12 +57835,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Overwrites and updates a workflow template with valid members. The last save takes effect.</para>
+        /// <para>Overwrites and updates a workflow template for active members. The last save takes effect.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49863,6 +57905,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -49953,6 +58007,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -50304,6 +58370,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -50369,6 +58447,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppToken))
+            {
+                query["appToken"] = request.AppToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserCode))
+            {
+                query["opsUserCode"] = request.OpsUserCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsUserId))
+            {
+                query["opsUserId"] = request.OpsUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;

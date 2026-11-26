@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalVoiceMeetingRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If this parameter is passed, the operation is performed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The pipeline description.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +62,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object name, optional).</para>
+        /// <para>The name of the digital employee, which is the name of the operating object. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -62,10 +72,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The list of resource tag JSON strings.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;Key&quot;,&quot;Meeting&quot;]</para>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The list of resource tags in JSON string format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Important&quot;, &quot;Meeting&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]

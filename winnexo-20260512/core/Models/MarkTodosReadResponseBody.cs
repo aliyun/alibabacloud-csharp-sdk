@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of unread to-do items remaining after the operation.</para>
+        /// <para>The number of remaining unread to-do items after the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

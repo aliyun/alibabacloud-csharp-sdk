@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListSourceUsageStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group to which the resource belongs, such as cg_101. If you specify this parameter, a group workspace task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</para>
+        /// <para>The platform application token issued by the console. If specified, the operation is executed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the collaboration group to which the resource belongs, such as cg_101. If specified, a group workspace task is created, and the caller must be a valid group member. If left empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1112</para>
@@ -34,14 +44,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The event type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>HealthCheck</para>
+        /// <para>ALL</para>
         /// </summary>
         [NameInMap("eventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The root IDs of the enterprise knowledge bases, which are available only for TENANT. The knowledge bases are filtered based on current directory bindings, not historical ownership. Maximum number of items: 100.</para>
+        /// <para>The root IDs of enterprise knowledge bases, available only for TENANT. The IDs are filtered based on current directory bindings rather than historical ownership. A maximum of 100 items are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;kb_9401&quot;]</para>
@@ -49,6 +59,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("knowledgeBaseIds")]
         [Validation(Required=false)]
         public List<string> KnowledgeBaseIds { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
 
         /// <summary>
         /// <para>The current page number.</para>
@@ -71,11 +101,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The report perspective. Valid values: TENANT (enterprise knowledge), GROUP (a single workspace), and ALL_GROUPS (all workspaces of the current tenant, only for platform super administrators).</para>
+        /// <para>The report perspective. Valid values: TENANT for enterprise knowledge, GROUP for a single workspace, and ALL_GROUPS for all workspaces of the current tenant (available only to platform super administrators).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Report perspective: TENANT for enterprise knowledge, GROUP for a single workspace, ALL_GROUPS for all workspaces of the current tenant (platform super administrator only). Valid values: TENANT, GROUP, ALL_GROUPS</para>
+        /// <para>TENANT</para>
         /// </summary>
         [NameInMap("scopeType")]
         [Validation(Required=false)]
@@ -85,24 +115,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The content of the sort clause.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>retrievalCount</para>
         /// </summary>
         [NameInMap("sortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</para>
+        /// <para>Specifies the sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC and DESC. The values are case-insensitive.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>asc</para>
+        /// <para>ASC</para>
         /// </summary>
         [NameInMap("sortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the associated sources.</para>
+        /// <para>The associated source IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;src_9401&quot;]</para>

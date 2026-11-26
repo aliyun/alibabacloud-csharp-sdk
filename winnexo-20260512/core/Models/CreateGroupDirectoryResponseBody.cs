@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>SUCCESS indicates success. In failure cases, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
+        /// <para>SUCCESS indicates success. For failures, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The description of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProjectDescription</para>
+        /// <para>Project Description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The folder type.</para>
+        /// <para>The directory type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GROUP</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The root folder ID of the knowledge base.</para>
+        /// <para>The knowledge base root directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_root</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string KbRootDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The name of the worksheet.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProjectFiles</para>
+        /// <para>Project Materials</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_parent</para>

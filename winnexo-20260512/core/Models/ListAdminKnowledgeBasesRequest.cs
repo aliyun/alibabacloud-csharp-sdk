@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAdminKnowledgeBasesRequest : TeaModel {
         /// <summary>
+        /// <para>The platform application token issued by the console. If this parameter is passed, the operation is performed as the user specified by opsUserId or opsUserCode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wn_app_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("appToken")]
+        [Validation(Required=false)]
+        public string AppToken { get; set; }
+
+        /// <summary>
         /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
@@ -20,17 +30,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy search on form component data.</para>
+        /// <para>The keyword for fuzzy search of component data in the form.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleKeyword</para>
+        /// <para>Sample keyword</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// <para>The proxy user code, which is unique within the tenant. This parameter is used only when the application credential is configured as source_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alice</para>
+        /// </summary>
+        [NameInMap("opsUserCode")]
+        [Validation(Required=false)]
+        public string OpsUserCode { get; set; }
+
+        /// <summary>
+        /// <para>The proxy user ID, which is the WINNEXO platform user ID. This parameter is used only when the application credential is configured as winnexo_uid.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("opsUserId")]
+        [Validation(Required=false)]
+        public string OpsUserId { get; set; }
+
+        /// <summary>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,11 +80,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field by which the results are sorted. Valid values:</para>
+        /// <para>The field by which to sort the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>event_time: the event creation time.</description></item>
-        /// <item><description>event_execute_start_time: the event execution time.</description></item>
-        /// <item><description>event_execute_finish_time: the event completion time.</description></item>
+        /// <item><description>event_time: the event creation time</description></item>
+        /// <item><description>event_execute_start_time: the event execution start time</description></item>
+        /// <item><description>event_execute_finish_time: the event execution finish time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +95,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</para>
+        /// <para>The sort order. This parameter takes effect only when the sort field is specified. Valid values: ASC and DESC. The values are case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -75,17 +105,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The list of source types.</para>
+        /// <para>The list of service source types.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>[&quot;K8S,SAE_K8S_SERVICE,FC3,VIP,DNS,AI,AGENT,CloudFlow,MSE_NACOS&quot;]</para>
         /// </summary>
         [NameInMap("sourceTypes")]
         [Validation(Required=false)]
         public List<string> SourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID to which the task belongs.</para>
+        /// <para>The ID of the tenant to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

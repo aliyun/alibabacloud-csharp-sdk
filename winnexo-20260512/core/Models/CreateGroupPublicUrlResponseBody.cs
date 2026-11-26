@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The ID of the folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The project group ID.</para>
+        /// <para>The ID of the project group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_delivery</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base name.</para>
+        /// <para>The name of the knowledge base.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-toolset-80a4520e-b35c-4e8b-acf7-3a01c7307522</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OriginalUrl { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The permission scope.</para>
+        /// <para>The scope of permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PERSONAL</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The source ID.</para>
+        /// <para>The ID of the source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>
@@ -110,13 +110,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The refund status. If a refund is in progress, query to confirm the refund status. Valid values:</para>
+        /// <para>The refund status. If a refund is in progress, you must query and confirm the refund status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCESS: All succeeded.</description></item>
+        /// <item><description>SUCCESS: All operations succeeded.</description></item>
         /// <item><description>FAIL: Failed.</description></item>
         /// <item><description>WAIT_PAY: Waiting for refund.</description></item>
         /// <item><description>EXPIRE: Expired.</description></item>
-        /// <item><description>PAYING: Refund in progress.</description></item>
+        /// <item><description>PAYING: Refunding.</description></item>
         /// <item><description>TERMINATE: Refund terminated.</description></item>
         /// </list>
         /// 

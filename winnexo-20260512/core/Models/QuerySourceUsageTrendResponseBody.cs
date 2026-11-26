@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The start time of the natural bucket with the selected time zone. The first bucket may start earlier than the startTime.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The start time of the natural bucket with the selected time zone. The first bucket may start earlier than the startTime</para>
+            /// <para>Start time of the natural bucket with the selected time zone. The first bucket may start earlier than the startTime</para>
             /// </summary>
             [NameInMap("bucketStart")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of times used in agents.</para>
+            /// <para>The number of times used by the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

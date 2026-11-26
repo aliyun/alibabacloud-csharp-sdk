@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListCollaborationGroupsResponseBodyItems> Items { get; set; }
         public class ListCollaborationGroupsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the collaboration space.</para>
+            /// <para>The collaboration space ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg_9401</para>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name of the space.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Workflow To-Do Test</para>
+            /// <para>Workflow To-do Test</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the space. Currently, only ACTIVE is returned.</para>
+            /// <para>The space status. Currently, only ACTIVE is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The common error message.</para>
+        /// <para>The common error description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>You do not have permissions to access tenant 2147483647 because the user does not belong to the tenant</para>
+        /// <para>Access denied to tenant 2147483647. The user does not belong to this tenant</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c9cf6cb3-3f5c-4994-a8a1-c93379a6f5cf</para>

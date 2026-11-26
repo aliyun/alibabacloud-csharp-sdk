@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The list of input attachments.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>[{&quot;resourceKind&quot;:&quot;FILE&quot;,&quot;resourceId&quot;:&quot;file_9401&quot;,&quot;refUrl&quot;:&quot;<a href="https://files.winnexo.aliyun.com/report.md%22,%22title%22:%22Sales">https://files.winnexo.aliyun.com/report.md&quot;,&quot;title&quot;:&quot;Sales</a> Report&quot;,&quot;contentType&quot;:&quot;text/markdown&quot;,&quot;sizeBytes&quot;:2048}]</para>
         /// </summary>
         [NameInMap("attachments")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The access URL of the attachment, prefixed with an OpenAPI 302 redirect.</para>
+            /// <para>The access URL of the attachment (OpenAPI 302 front end).</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKind { get; set; }
 
             /// <summary>
-            /// <para>The size of the attachment in bytes.</para>
+            /// <para>The attachment size in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The business status.</para>
+        /// <para>The business status in the seven-state model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PROCESSING</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? CanManage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the visibility scope can be adjusted independently.</para>
+        /// <para>Indicates whether the caller can independently adjust the visibility scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The collaboration workspace ID.</para>
+        /// <para>The collaboration space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The list of user IDs of the collaborators.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>[10001,10002]</para>
         /// </summary>
         [NameInMap("collaboratorUserIds")]
         [Validation(Required=false)]
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The creation time, in ISO 8601 format.</para>
+        /// <para>The time when the item was created (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemType { get; set; }
 
         /// <summary>
-        /// <para>The time when the item last entered the processing state, in ISO 8601 format.</para>
+        /// <para>The time when the item last entered the processing state (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -332,10 +332,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? LegacyTopic { get; set; }
 
         /// <summary>
-        /// <para>The list of user IDs for visible members.</para>
+        /// <para>The list of user IDs of members who can view the item.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>[10001,10002]</para>
         /// </summary>
         [NameInMap("memberUserIds")]
         [Validation(Required=false)]
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The modification time, in ISO 8601 format.</para>
+        /// <para>The time when the item was last modified (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the item is pinned by the caller.</para>
+        /// <para>Indicates whether the item is pinned to the top by the caller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ProgressTotal { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution ID of the task.</para>
+        /// <para>The task execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceExecutionId { get; set; }
 
         /// <summary>
-        /// <para>The source ID of the task.</para>
+        /// <para>The task source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTaskId { get; set; }
 
         /// <summary>
-        /// <para>The source name of the task.</para>
+        /// <para>The task source name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -452,7 +452,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTaskName { get; set; }
 
         /// <summary>
-        /// <para>The trigger key of the task.</para>
+        /// <para>The task trigger key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTriggerKey { get; set; }
 
         /// <summary>
-        /// <para>The source type of the task.</para>
+        /// <para>The task source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -482,7 +482,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The time zone when the task is triggered.</para>
+        /// <para>The task trigger time zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -492,7 +492,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TriggerTimezone { get; set; }
 
         /// <summary>
-        /// <para>The trigger time of the task, in ISO 8601 format.</para>
+        /// <para>The time when the task was triggered (ISO 8601).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TriggeredAt { get; set; }
 
         /// <summary>
-        /// <para>The optimistic version number.</para>
+        /// <para>The optimistic locking version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string WorkItemId { get; set; }
 
         /// <summary>
-        /// <para>The four-state workflow status projection.</para>
+        /// <para>The workflow status projection in the four-state model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -555,7 +555,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The list of IDs of the bound workflow templates.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>[&quot;tpl_9401&quot;,&quot;tpl_9402&quot;]</para>
         /// </summary>
         [NameInMap("workflowTemplateIds")]
         [Validation(Required=false)]
