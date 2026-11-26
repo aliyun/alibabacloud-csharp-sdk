@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentAccuracyTestRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom agent to be tested for accuracy.</para>
+        /// <para>The ID of the custom agent that requires accuracy testing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-xxxxxxxxxxxxxxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
-        /// <para>Deprecated.</para>
+        /// <para><b>[Deprecated]</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Dataset { get; set; }
 
         /// <summary>
-        /// <para>The data source. We recommend that you configure this in the custom agent.</para>
+        /// <para>The data source. Configure it in the custom agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;isInternal&quot;:&quot;N&quot;,&quot;TableIds&quot;:[&quot;51<em><b>70&quot;,&quot;51</b></em>71&quot;],&quot;DataSourceType&quot;:&quot;database&quot;,&quot;Database&quot;:&quot;internal_data_employees&quot;,&quot;DmsInstanceId&quot;:&quot;27<em><b>5&quot;,&quot;DmsDatabaseId&quot;:&quot;71</b></em>04&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;],&quot;FileId&quot;:&quot;rm-
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether sessions are displayed after analysis. This parameter is not supported.</para>
+        /// <para>Specifies whether to display sessions after analysis. This feature is not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("NeedDelete")]
         [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxxxxxxxxxxxxx</para>
+        /// <para>1abc2de34fg56hijk7l8mnopq</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

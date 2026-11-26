@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public GetDataAgentTaskModelUsageResponseBodyData Data { get; set; }
         public class GetDataAgentTaskModelUsageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The acceleration ratio, which indicates the speed improvement brought by subtask parallelism.</para>
+            /// <para>The acceleration ratio, which is the speedup brought by the parallel execution of subtasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.8</para>
@@ -25,6 +25,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("AccelerationRatio")]
             [Validation(Required=false)]
             public double? AccelerationRatio { get; set; }
+
+            /// <summary>
+            /// <para>The peak concurrency.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("PeakConcurrency")]
+            [Validation(Required=false)]
+            public double? PeakConcurrency { get; set; }
 
             /// <summary>
             /// <para>The number of throttled sessions.</para>
@@ -35,6 +45,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("RateLimitedSessionCount")]
             [Validation(Required=false)]
             public long? RateLimitedSessionCount { get; set; }
+
+            /// <summary>
+            /// <para>The total queueing time for the large language model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>11220</para>
+            /// </summary>
+            [NameInMap("TotalLlmQueueDuration")]
+            [Validation(Required=false)]
+            public double? TotalLlmQueueDuration { get; set; }
 
             /// <summary>
             /// <para>The total throttling duration of all sessions.</para>
@@ -99,7 +119,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when a request exception occurs.</para>
+        /// <para>The error code, which is returned when a request exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DMS-DA-40411</para>
@@ -109,7 +129,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message, which is returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -119,7 +139,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67E910F2-***695C</para>
@@ -129,7 +149,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The request is successful.</description></item>
         /// <item><description><b>false</b>: The request fails.</description></item>

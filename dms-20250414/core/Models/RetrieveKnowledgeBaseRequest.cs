@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>A filter for the data, specified as a SQL <c>WHERE</c> clause.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</para>
+        /// <para>title = &quot;test&quot; AND name like &quot;test%&quot;</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// </c></pre>
         /// 
         /// <b>Example:</b>
-        /// <para>{ \&quot;Weight\&quot;: { \&quot;alpha\&quot;: 0.5 } }</para>
+        /// <para>{ &quot;Weight&quot;: { &quot;alpha&quot;: 0.5 } }</para>
         /// </summary>
         [NameInMap("HybridSearchArgs")]
         [Validation(Required=false)]

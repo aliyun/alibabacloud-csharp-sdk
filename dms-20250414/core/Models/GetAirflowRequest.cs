@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetAirflowRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Airflow instance.</para>
+        /// <para>The Airflow instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

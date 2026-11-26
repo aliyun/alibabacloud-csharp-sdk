@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<string> CustomAirflowCfg { get; set; }
 
             /// <summary>
-            /// <para>The directory scanned for DAGs.</para>
+            /// <para>The directory for scanning DAGs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/dags</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DeployErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The description of the Airflow instance.</para>
+            /// <para>The Airflow description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>order schedule</para>
@@ -149,6 +149,13 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether data lineage is enabled.</para>
+            /// </summary>
+            [NameInMap("EnableLineage")]
+            [Validation(Required=false)]
+            public bool? EnableLineage { get; set; }
 
             /// <summary>
             /// <para>Specifies whether to enable serverless workers.</para>
@@ -178,7 +185,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a worker to exit.</para>
+            /// <para>The timeout period for worker exit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -188,7 +195,27 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public int? GracefulShutdownTimeout { get; set; }
 
             /// <summary>
-            /// <para>The name of the Object Storage Service (OSS) bucket.</para>
+            /// <para>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("LineageReplicas")]
+            [Validation(Required=false)]
+            public int? LineageReplicas { get; set; }
+
+            /// <summary>
+            /// <para>The merged lineage service specification, which uses the same tier as AppSpec.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SMALL</para>
+            /// </summary>
+            [NameInMap("LineageSpec")]
+            [Validation(Required=false)]
+            public string LineageSpec { get; set; }
+
+            /// <summary>
+            /// <para>The name of the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>osstest</para>
@@ -208,7 +235,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssPath { get; set; }
 
             /// <summary>
-            /// <para>The directory scanned for Airflow plugins.</para>
+            /// <para>The directory for scanning Airflow plugins.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/plugins</para>
@@ -228,7 +255,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RequirementFile { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the installation package.</para>
+            /// <para>The configuration of the installation package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jieba==0.42</para>
@@ -318,7 +345,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID.</para>
+            /// <para>The zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-j</para>

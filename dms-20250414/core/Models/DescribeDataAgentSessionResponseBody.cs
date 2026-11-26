@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DescribeDataAgentSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned struct.</para>
+        /// <para>The returned data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -141,8 +141,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The ID of the mounted capability.</para>
                 /// <list type="bullet">
-                /// <item><description>If Type is set to skill, the value indicates the skill ID.</description></item>
-                /// <item><description>If Type is set to dms_kb, the value indicates the knowledge base ID.</description></item>
+                /// <item><description>If Type is set to skill, this parameter indicates the skill ID.</description></item>
+                /// <item><description>If Type is set to dms_kb, this parameter indicates the knowledge base ID.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The type. Valid values:</para>
+                /// <para>The capability type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>skill: skill</description></item>
                 /// <item><description>dms_kb: knowledge base</description></item>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The OSS download URL of the session playback history.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>https://<em><b>aliyun.com</b></em></para>
                 /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The data source category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>CHAT</b>: The data source is specified in a conversation by calling the CreateDataAgentSession or SendChatMessage operation.</description></item>
+                /// <item><description><b>CHAT</b>: The data source is specified in the conversation by calling the CreateDataAgentSession or SendChatMessage operation.</description></item>
                 /// <item><description><b>CUSTOM_AGENT</b>: The data source comes from the preset analysis data scope in a custom agent.</description></item>
                 /// </list>
                 /// 
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The content of the historical conversation message.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Help me check the sales of restaurants in the UK in 2022</para>
+                /// <para>Show me the sales of restaurants in the UK in 2022</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The send time of the historical conversation message.</para>
+                /// <para>The time when the historical conversation message was sent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1790650646000</para>
@@ -310,14 +310,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>The custom agent for the intelligent development session preview.</para>
+            /// <para>The custom agent for intelligent development session preview.</para>
             /// </summary>
             [NameInMap("PreviewCustomAgent")]
             [Validation(Required=false)]
             public DescribeDataAgentSessionResponseBodyDataPreviewCustomAgent PreviewCustomAgent { get; set; }
             public class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgent : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud main account ID.</para>
+                /// <para>The ID of the Alibaba Cloud main account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16738266********</para>
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentCallbackConfig CallbackConfig { get; set; }
                 public class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentCallbackConfig : TeaModel {
                     /// <summary>
-                    /// <para>The callback tool invocation parameters.</para>
+                    /// <para>The parameters used to invoke callback tool calling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string CallbackArgs { get; set; }
 
                     /// <summary>
-                    /// <para>The prompt used to generate callback tool invocation parameters.</para>
+                    /// <para>The prompt used to generate the parameters to invoke callback tool calling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>send web report to <a href="mailto:123456@163.com">123456@163.com</a></para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string CallbackPrompt { get; set; }
 
                     /// <summary>
-                    /// <para>The timing for callback tool invocation.</para>
+                    /// <para>The timing to invoke callback tool calling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -490,13 +490,13 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentExecutionConfig ExecutionConfig { get; set; }
                 public class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentExecutionConfig : TeaModel {
                     /// <summary>
-                    /// <para>The tendency of the agent to ask follow-up questions to clarify requirements. <b>This parameter takes effect only when SkipAskHuman is set to false and SkipPlan is set to false.</b> Valid values: 0 to 1.</para>
-                    /// <para>The following list describes some tendency values:</para>
+                    /// <para>The tendency of the agent to ask follow-up questions to clarify requirements. <b>This parameter takes effect only when SkipAskHuman is set to false and SkipPlan is set to false.</b> Valid values: 0 to 1.
+                    /// The following list describes some tendency values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0.0: Do not ask questions. The agent does not ask the user any questions, skips confirmation after generating a plan, and directly executes the plan.</description></item>
+                    /// <item><description>0.0: Do not ask questions. The agent does not ask the user questions, skips confirmation after generating the plan, and directly executes the plan.</description></item>
                     /// <item><description>0.1: Confirm the plan only. The agent confirms the generated plan only once and does not ask additional questions about requirements or details.</description></item>
                     /// <item><description>0.4: Ask questions when the task is blocked. The agent handles the task autonomously by default and asks questions only when the task cannot proceed or be completed.</description></item>
-                    /// <item><description>0.7: Ask questions when key criteria are uncertain. The agent proactively asks questions when there is critical ambiguity in the goals, scope, business criteria, or acceptance criteria.</description></item>
+                    /// <item><description>0.7: Ask questions when key criteria are uncertain. The agent proactively asks questions when critical ambiguity exists in the goals, scope, business criteria, or acceptance criteria.</description></item>
                     /// <item><description>1.0: Fully align throughout the process. The agent proactively clarifies requirements during planning and execution, and continuously confirms when encountering important ambiguities, assumptions, or solution branches.</description></item>
                     /// </list>
                     /// 
@@ -508,7 +508,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public double? ClarificationTendency { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether appending data sources in the session is prohibited.</para>
+                    /// <para>Specifies whether to prohibit appending data sources in the session.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -518,7 +518,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? ForbiddenAppendDataSource { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether user inquiries during the process are prohibited.</para>
+                    /// <para>Specifies whether to prohibit user inquiries during the process.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -528,7 +528,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? SkipAskHuman { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the plan confirmation step is skipped.</para>
+                    /// <para>Specifies whether to skip the plan confirmation step.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? SkipPlan { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether all SQL confirmations are skipped.</para>
+                    /// <para>Specifies whether to skip all SQL confirmations.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -548,7 +548,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? SkipSqlConfirm { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the confirmation for generating a web report is skipped.</para>
+                    /// <para>Specifies whether to skip the confirmation for generating web reports.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -624,10 +624,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public List<DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentKnowledgeConfigList> KnowledgeConfigList { get; set; }
                 public class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentKnowledgeConfigList : TeaModel {
                     /// <summary>
-                    /// <para>The access type. If this parameter is not specified, the default value is mcp. Valid values:</para>
+                    /// <para>The access type. If you do not specify this parameter, the default value is mcp. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>mcp: MCP access. You must specify the McpServerId parameter.</description></item>
-                    /// <item><description>dms_kb: DMS knowledge base access. You must specify the KbUuid parameter.</description></item>
+                    /// <item><description>mcp: Access through MCP. You must specify the McpServerId parameter.</description></item>
+                    /// <item><description>dms_kb: Access through a DMS knowledge base. You must specify the KbUuid parameter.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -810,7 +810,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentScheduleTaskConfig ScheduleTaskConfig { get; set; }
                 public class DescribeDataAgentSessionResponseBodyDataPreviewCustomAgentScheduleTaskConfig : TeaModel {
                     /// <summary>
-                    /// <para>The cron expression for scheduled runs.</para>
+                    /// <para>The cron expression for scheduled execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 0 ? * 1-7</para>
@@ -820,7 +820,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string CronExpression { get; set; }
 
                     /// <summary>
-                    /// <para>The question for scheduled runs.</para>
+                    /// <para>The question for scheduled execution.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Analyze the data and provide the report</para>
@@ -881,11 +881,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The web report theme. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>default: default</description></item>
-                /// <item><description>journal: journal</description></item>
-                /// <item><description>legacy: legacy</description></item>
-                /// <item><description>neobrutalism: stylized</description></item>
-                /// <item><description>infographic: infographic</description></item>
+                /// <item><description>default: Default.</description></item>
+                /// <item><description>journal: Journal.</description></item>
+                /// <item><description>legacy: Legacy.</description></item>
+                /// <item><description>neobrutalism: Neobrutalism.</description></item>
+                /// <item><description>infographic: Infographic.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -915,7 +915,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<DescribeDataAgentSessionResponseBodyDataRecallResults> RecallResults { get; set; }
             public class DescribeDataAgentSessionResponseBodyDataRecallResults : TeaModel {
                 /// <summary>
-                /// <para>The content of the recalled knowledge chunk.</para>
+                /// <para>The content of the recalled knowledge block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sky is blue</para>
@@ -925,7 +925,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified when the index is created, such as l2, ip, or cosine.</para>
+                /// <para>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified during index creation, such as l2, ip, or cosine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.65</para>
@@ -947,7 +947,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the session is favorited by the current logged-on user.</para>
+            /// <para>Indicates whether the item is favorited by the current logged-on user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -976,7 +976,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The usage stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>debug</b>: Debug stage.</description></item>
+                /// <item><description><b>debug</b>: Debugging stage.</description></item>
                 /// <item><description><b>prod</b>: Production stage.</description></item>
                 /// </list>
                 /// 
@@ -998,7 +998,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? EnableSearch { get; set; }
 
                 /// <summary>
-                /// <para>The encryption key for storing artifacts in OSS, including built-in and user OSS. This key is typically specified in CreateDataAgentSession.</para>
+                /// <para>The encryption key for storing artifacts in OSS, including built-in and user OSS. This is typically specified in CreateDataAgentSession.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ay***1Te</para>
@@ -1062,9 +1062,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
                 /// <summary>
                 /// <para>The report page width.</para>
+                /// <para>Unit: mm.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>300mm</para>
+                /// <para>300</para>
                 /// </summary>
                 [NameInMap("ReportPageWidth")]
                 [Validation(Required=false)]

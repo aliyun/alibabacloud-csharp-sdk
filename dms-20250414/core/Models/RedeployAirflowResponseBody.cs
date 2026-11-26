@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The redeployment result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;Responses\&quot;: {\&quot;responses\&quot;: [{\&quot;Uuid\&quot;: \&quot;af-63ly5o1yuf076ifrpbxpka396\&quot;, \&quot;Success\&quot;: True}]}}</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Root")]
         [Validation(Required=false)]

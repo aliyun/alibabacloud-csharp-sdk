@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class SetWorkspaceQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the access denial.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NOT_FOUND</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SetWorkspaceQuotaResponseBodyData Data { get; set; }
         public class SetWorkspaceQuotaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The compute unit (CU) quota.</para>
+            /// <para>The CU quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? CuQuota { get; set; }
 
             /// <summary>
-            /// <para>The amount of compute unit (CU) quota used.</para>
+            /// <para>The CU quota usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? CuQuotaUsage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the billing instance.</para>
+            /// <para>The billing instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2zehld3y1tphzctyyq7o</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>The status of the order.</para>
+            /// <para>The order status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Catched</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance.</para>
+            /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20923*****7291</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>A human-readable message about the request\&quot;s outcome.</para>
+        /// <para>The log information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This record is being collected, please wait for a moment.</para>

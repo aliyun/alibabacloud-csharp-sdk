@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateDataAgentAccuracyTestRequest : TeaModel {
         /// <summary>
-        /// <para>The accuracy test instance ID.</para>
+        /// <para>The instance ID of the accuracy test.</para>
         /// 
         /// <b>Example:</b>
         /// <para>at-106n4rg17gv9fxxxxxxxxxx</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The data source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</para>
+        /// <para>[{&quot;DataSourceType&quot;:&quot;database&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;DmsInstanceId&quot;:&quot;27xxxxx&quot;,&quot;DmsDatabaseId&quot;:&quot;752xxxxx&quot;,&quot;Database&quot;:&quot;employees&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;,&quot;departments&quot;]}]</para>
         /// </summary>
         [NameInMap("Dataset")]
         [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>Specifies whether to display sessions after analysis. This parameter is currently not supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>no use</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("NeedDelete")]
         [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8wfig6l33n4f4xxxxxxxxxx</para>

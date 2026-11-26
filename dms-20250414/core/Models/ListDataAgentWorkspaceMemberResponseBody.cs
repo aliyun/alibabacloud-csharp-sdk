@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string MemberId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user\&quot;s role in the workspace.</para>
+                /// <para>The name of the user&quot;s role in the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>member</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>no use</para>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("TotalElements")]
             [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>no use</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalPages")]
             [Validation(Required=false)]

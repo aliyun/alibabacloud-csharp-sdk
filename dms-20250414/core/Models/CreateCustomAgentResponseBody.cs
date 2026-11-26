@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public CreateCustomAgentResponseBodyData Data { get; set; }
         public class CreateCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The custom agent type. Valid values:</para>
+            /// <para>The type of the custom agent. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Default: The system-built-in custom agent.</description></item>
             /// <item><description>Common: The common custom agent.</description></item>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud main account.</para>
+            /// <para>The parent Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public CreateCustomAgentResponseBodyDataCallbackConfig CallbackConfig { get; set; }
             public class CreateCustomAgentResponseBodyDataCallbackConfig : TeaModel {
                 /// <summary>
-                /// <para>The parameters to invoke the callback tool.</para>
+                /// <para>The parameters used to invoke the callback tool.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;ID&quot;:&quot;test&quot;}</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CallbackArgs { get; set; }
 
                 /// <summary>
-                /// <para>The prompt for generating parameters to invoke the callback tool.</para>
+                /// <para>The prompt used to generate parameters to invoke the callback tool.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>send web report to <a href="mailto:123456@163.com">123456@163.com</a></para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public CreateCustomAgentResponseBodyDataExecutionConfig ExecutionConfig { get; set; }
             public class CreateCustomAgentResponseBodyDataExecutionConfig : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to prohibit appending data sources in a session.</para>
+                /// <para>Specifies whether to prohibit appending data sources in the session.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? ForbiddenAppendDataSource { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to prohibit user inquiries during the process.</para>
+                /// <para>Specifies whether to disable user inquiries during the process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? SkipSqlConfirm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to skip the confirmation for generating a web report.</para>
+                /// <para>Specifies whether to skip the web report drawing confirmation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -265,9 +265,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <b>Example:</b>
             /// <para>Analysis framework:</para>
             /// <ol>
-            /// <item><description>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
-            /// <item><description>Segment data by new and returning customers, channels, and regions to identify growth sources and shortcomings.</description></item>
-            /// <item><description>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to identify drop-off stages</description></item>
+            /// <item><description>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis to analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
+            /// <item><description>Segment data by new and existing customers, channels, and regions to identify growth sources and shortcomings.</description></item>
+            /// <item><description>Conduct funnel analysis based on the user behavior path (browse -&gt; add to cart -&gt; pay) to locate churn points</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Instruction")]
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Instruction { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a periodic task is configured.</para>
+            /// <para>Indicates whether a scheduled task is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -291,9 +291,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>Core metric definitions:</para>
             /// <ol>
             /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
-            /// <item><description>Order volume refers to the number of valid orders placed per day.</description></item>
+            /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
             /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</description></item>
-            /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+            /// <item><description>Conversion rate = Number of paid orders / UV, which reflects the traffic conversion efficiency</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The next execution time of the periodic task.</para>
+            /// <para>The next run time of the scheduled task.</para>
             /// <list type="bullet">
             /// <item><description>Timestamp format.</description></item>
             /// </list>
@@ -490,14 +490,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The periodic task configuration.</para>
+            /// <para>The scheduled task configuration.</para>
             /// </summary>
             [NameInMap("ScheduleTaskConfig")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataScheduleTaskConfig ScheduleTaskConfig { get; set; }
             public class CreateCustomAgentResponseBodyDataScheduleTaskConfig : TeaModel {
                 /// <summary>
-                /// <para>The cron expression for time-based scheduling.</para>
+                /// <para>The cron expression for periodic scheduling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 0 ? * 1-7</para>
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The question for the scheduled task.</para>
+                /// <para>The query for the periodic task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Analyze this data and provide a brief report</para>
@@ -529,7 +529,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>The custom agent status.</para>
+            /// <para>The status of the custom agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NEW</para>

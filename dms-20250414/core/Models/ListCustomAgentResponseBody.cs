@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<ListCustomAgentResponseBodyDataContent> Content { get; set; }
             public class ListCustomAgentResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The custom agent type. Valid values:</para>
+                /// <para>The type of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Default: The system built-in custom agent.</description></item>
-                /// <item><description>Common: The common custom agent.</description></item>
+                /// <item><description>Default: System-built-in custom agent.</description></item>
+                /// <item><description>Common: Regular custom agent.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AgentType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud main account.</para>
+                /// <para>The Alibaba Cloud parent account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16738266********</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AliyunParentId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account.</para>
+                /// <para>The Alibaba Cloud account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20372822********</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AliyunUid { get; set; }
 
                 /// <summary>
-                /// <para>The callback feature configuration.</para>
+                /// <para>The callback configuration.</para>
                 /// </summary>
                 [NameInMap("CallbackConfig")]
                 [Validation(Required=false)]
                 public ListCustomAgentResponseBodyDataContentCallbackConfig CallbackConfig { get; set; }
                 public class ListCustomAgentResponseBodyDataContentCallbackConfig : TeaModel {
                     /// <summary>
-                    /// <para>The callback tool invocation parameters.</para>
+                    /// <para>The parameters to invoke the callback tool calling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;ID&quot;:&quot;test&quot;}</para>
@@ -75,20 +75,20 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string CallbackArgs { get; set; }
 
                     /// <summary>
-                    /// <para>The prompt for generating callback tool invocation parameters.</para>
+                    /// <para>The prompt for generating parameters to invoke the callback tool calling.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Invoke the send_email tool to send the web report to <a href="mailto:123456@163.com">123456@163.com</a></para>
+                    /// <para>send report to <a href="mailto:123456@163.com">123456@163.com</a></para>
                     /// </summary>
                     [NameInMap("CallbackPrompt")]
                     [Validation(Required=false)]
                     public string CallbackPrompt { get; set; }
 
                     /// <summary>
-                    /// <para>The timing for callback tool invocation.</para>
+                    /// <para>The timing to invoke the callback tool calling.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The web report rendering is completed</para>
+                    /// <para>0</para>
                     /// </summary>
                     [NameInMap("CallbackTime")]
                     [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     /// <para>The callback tool identifier.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>For example, MCP server ID (6te...g7a)</para>
+                    /// <para>Mcp serverId (6te...g7a)</para>
                     /// </summary>
                     [NameInMap("ToolId")]
                     [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CreatorUserName { get; set; }
 
                 /// <summary>
-                /// <para>The custom agent ID.</para>
+                /// <para>The ID of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ca-4y3ca4khkcu**********ysf</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 ///   &quot;personal&quot; : {
                 ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
                 ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-                ///     &quot;Database&quot; : &quot;Test table</b></b></b>.xlsx&quot;,
+                ///     &quot;Database&quot; : &quot;test</b></b></b>.xlsx&quot;,
                 ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
                 ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
                 ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -178,10 +178,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public int? DefaultAgent { get; set; }
 
                 /// <summary>
-                /// <para>The custom agent description.</para>
+                /// <para>The description of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Agent test description</para>
+                /// <para>Agent description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public ListCustomAgentResponseBodyDataContentExecutionConfig ExecutionConfig { get; set; }
                 public class ListCustomAgentResponseBodyDataContentExecutionConfig : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to prohibit appending data sources in the session.</para>
+                    /// <para>Specifies whether to prohibit appending data sources during the session.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? ForbiddenAppendDataSource { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to prohibit user inquiries during the process.</para>
+                    /// <para>Specifies whether to disable user inquiries during the process.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? SkipSqlConfirm { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to skip the web report rendering confirmation.</para>
+                    /// <para>Specifies whether to skip the confirmation for generating the web report.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -283,8 +283,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>Analysis framework:</para>
                 /// <ol>
                 /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
-                /// <item><description>Segment by new and existing customers, channels, and regions to identify growth sources and shortcomings.</description></item>
-                /// <item><description>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</description></item>
+                /// <item><description>Segment data by new and returning customers, channels, and regions to identify growth drivers and weaknesses.</description></item>
+                /// <item><description>Conduct funnel analysis based on the user behavior path (browse -&gt; add to cart -&gt; pay) to locate churn points</description></item>
                 /// </ol>
                 /// </summary>
                 [NameInMap("Instruction")]
@@ -307,10 +307,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <b>Example:</b>
                 /// <para>Core metric definitions:</para>
                 /// <ol>
-                /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</description></item>
-                /// <item><description>Order volume is the number of valid daily orders.</description></item>
-                /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</description></item>
-                /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+                /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
+                /// <item><description>Order volume refers to the number of valid orders placed per day.</description></item>
+                /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</description></item>
+                /// <item><description>Conversion rate = Number of paid orders / UV, which reflects the traffic conversion efficiency</description></item>
                 /// </ol>
                 /// </summary>
                 [NameInMap("Knowledge")]
@@ -327,8 +327,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     /// <summary>
                     /// <para>The access type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>mcp: MCP access.</description></item>
-                    /// <item><description>dms_kb: DMS knowledge base access.</description></item>
+                    /// <item><description>mcp: Access through MCP.</description></item>
+                    /// <item><description>dms_kb: Access through DMS knowledge base.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string KbUuid { get; set; }
 
                     /// <summary>
-                    /// <para>The MCP server ID.</para>
+                    /// <para>The ID of the MCP server.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nhdpt9adf6ac**********ca</para>
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 }
 
                 /// <summary>
-                /// <para>The knowledge semantic configuration list.</para>
+                /// <para>The list of knowledge semantic configurations.</para>
                 /// </summary>
                 [NameInMap("KnowledgeSemanticConfigList")]
                 [Validation(Required=false)]
@@ -434,10 +434,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ModifierUserName { get; set; }
 
                 /// <summary>
-                /// <para>The custom agent name.</para>
+                /// <para>The name of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Agent test name</para>
+                /// <para>Sample agent name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -464,7 +464,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string OfflineTime { get; set; }
 
                 /// <summary>
-                /// <para>The recommended question list.</para>
+                /// <para>The list of recommended questions.</para>
                 /// <list type="bullet">
                 /// <item><description>You can configure up to 10 recommended questions.</description></item>
                 /// </list>
@@ -484,7 +484,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The reference historical session ID.</para>
+                /// <para>The referenced historical session ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>99crainsjnve******vynid</para>
@@ -531,7 +531,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string Query { get; set; }
 
                     /// <summary>
-                    /// <para>The reference historical session ID.</para>
+                    /// <para>The ID of the referenced historical session.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4m24*****mg7j2v</para>
@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 }
 
                 /// <summary>
-                /// <para>The custom agent status.</para>
+                /// <para>The status of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RELEASED</para>
@@ -563,7 +563,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string TextReportConfig { get; set; }
 
                 /// <summary>
-                /// <para>The user-specified skill list.</para>
+                /// <para>The list of user-specified skills.</para>
                 /// </summary>
                 [NameInMap("UserSpecifiedSkillList")]
                 [Validation(Required=false)]
@@ -661,7 +661,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call fails.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>

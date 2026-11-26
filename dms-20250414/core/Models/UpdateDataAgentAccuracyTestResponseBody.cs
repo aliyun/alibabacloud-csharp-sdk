@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The description of the evaluation item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Customer Agent\&quot;s Evaluation</para>
+            /// <para>Customer Agent&quot;s Evaluation</para>
             /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when an exception occurs.</para>
+        /// <para>The error code returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The request is successful.                                 </description></item>
         /// <item><description><b>false</b>: The request fails.</description></item>

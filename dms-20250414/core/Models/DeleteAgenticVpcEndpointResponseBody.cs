@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteAgenticVpcEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deletion acceptance result. For duplicate requests, downstream errors are retained and idempotence is not guaranteed.</para>
+        /// <para>The deletion acceptance result. For duplicate requests, downstream errors are retained, and idempotence is not guaranteed.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string EndpointId { get; set; }
 
             /// <summary>
-            /// <para>The deletion status. A value of DELETING only indicates that the asynchronous deletion request is accepted, not that the deletion in the cloud is complete.</para>
+            /// <para>The deletion status. A value of DELETING only indicates that the asynchronous deletion request is accepted, and does not indicate that the deletion in the cloud is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RELEASED</para>

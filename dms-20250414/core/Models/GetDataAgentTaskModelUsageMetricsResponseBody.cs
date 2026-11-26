@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentTaskModelUsageMetricsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of time-series TPM metrics for model usage. The usage at each time point is returned in chronological order.</para>
+        /// <para>The list of time-series metrics of TPM for model usage, which returns the usage at each time point in chronological order.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,6 +27,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
+            /// <para>The concurrency value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("Concurrency")]
+            [Validation(Required=false)]
+            public double? Concurrency { get; set; }
+
+            /// <summary>
             /// <para>The end time of the statistical interval for the time-series point. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The TPM at the time-series point, which represents the number of tokens consumed in the statistical interval.</para>
+            /// <para>The TPM of the time-series point, which is the number of tokens consumed in the statistical interval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>

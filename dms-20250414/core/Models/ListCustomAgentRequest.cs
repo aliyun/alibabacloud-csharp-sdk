@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The custom agent type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Default: system built-in custom agent</description></item>
+        /// <item><description>Default: built-in custom agent</description></item>
         /// <item><description>Common: regular custom agent</description></item>
         /// </list>
         /// 
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The search keyword. Supports fuzzy search for custom agent names and descriptions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test agent</para>
+        /// <para>Test Agent</para>
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]

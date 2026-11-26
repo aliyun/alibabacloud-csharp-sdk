@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string IsInternal { get; set; }
 
             /// <summary>
-            /// <para>The name of the user\&quot;s OSS bucket.</para>
+            /// <para>The name of the user&quot;s OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bgc-hangzhou-test-bucket</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user\&quot;s OSS bucket is used.</para>
+            /// <para>Indicates whether the user&quot;s OSS bucket is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

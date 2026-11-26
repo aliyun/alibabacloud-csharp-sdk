@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;dt\&quot;: \&quot;2022-10-14\&quot;}</para>
+        /// <para>{&quot;dt&quot;: &quot;2022-10-14&quot;}</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The number of retries if scheduling fails.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("Retry")]
         [Validation(Required=false)]

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The name of the user\&quot;s role in the workspace.</para>
+            /// <para>The name of the user&quot;s role in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>

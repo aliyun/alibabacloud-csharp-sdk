@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentTaskModelUsageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</para>
+        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is no more than one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no more than one month.</para>
+        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is no more than one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735747200</para>

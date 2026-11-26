@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListAirflowsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NOT_FOUND</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The error code. This parameter is returned when an error occurs.</para>
+        /// <para>The error code returned when an exception occurs in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NesLoKLEdIZrKhDT7I2gS****</para>
@@ -80,21 +80,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Root")]
         [Validation(Required=false)]
         public ListAirflowsResponseBodyRoot Root { get; set; }
         public class ListAirflowsResponseBodyRoot : TeaModel {
             /// <summary>
-            /// <para>The list of data.</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListAirflowsResponseBodyRootList> List { get; set; }
             public class ListAirflowsResponseBodyRootList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Airflow instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>af-7a6ygsh80d****</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AirflowName { get; set; }
 
                 /// <summary>
-                /// <para>The specifications of the Airflow instance.</para>
+                /// <para>The specification of the Airflow instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SMALL</para>
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AppType { get; set; }
 
                 /// <summary>
-                /// <para>The custom configuration.</para>
+                /// <para>The custom configurations.</para>
                 /// </summary>
                 [NameInMap("CustomAirflowCfg")]
                 [Validation(Required=false)]
                 public List<string> CustomAirflowCfg { get; set; }
 
                 /// <summary>
-                /// <para>The DAGs folder that Airflow scans.</para>
+                /// <para>The DAG directory scanned by Airflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default/dags</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string DagsDir { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned when the deployment fails.</para>
+                /// <para>The deployment error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>quota exists</para>
@@ -171,6 +171,13 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether data lineage is enabled.</para>
+                /// </summary>
+                [NameInMap("EnableLineage")]
+                [Validation(Required=false)]
+                public bool? EnableLineage { get; set; }
+
+                /// <summary>
                 /// <para>The time when the Airflow instance was created.</para>
                 /// 
                 /// <b>Example:</b>
@@ -179,6 +186,26 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [NameInMap("GmtCreated")]
                 [Validation(Required=false)]
                 public string GmtCreated { get; set; }
+
+                /// <summary>
+                /// <para>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("LineageReplicas")]
+                [Validation(Required=false)]
+                public int? LineageReplicas { get; set; }
+
+                /// <summary>
+                /// <para>The merged specification of the lineage service, which uses the same tier as the Airflow specification.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SMALL</para>
+                /// </summary>
+                [NameInMap("LineageSpec")]
+                [Validation(Required=false)]
+                public string LineageSpec { get; set; }
 
                 /// <summary>
                 /// <para>The name of the OSS bucket.</para>
@@ -191,7 +218,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string OssBucketName { get; set; }
 
                 /// <summary>
-                /// <para>The path in OSS.</para>
+                /// <para>The OSS path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/airflow</para>
@@ -201,7 +228,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string OssPath { get; set; }
 
                 /// <summary>
-                /// <para>The plugins folder that Airflow scans.</para>
+                /// <para>The plugin directory scanned by Airflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default/plugins</para>
@@ -211,7 +238,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string PluginsDir { get; set; }
 
                 /// <summary>
-                /// <para>The path to the file that contains the dependencies.</para>
+                /// <para>The file path of the dependency package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default/requirements.txt</para>
@@ -231,7 +258,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The path to the script that is loaded when Airflow starts.</para>
+                /// <para>The directory of scripts loaded when Airflow starts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default/startup.sh</para>
@@ -241,7 +268,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string StartupFile { get; set; }
 
                 /// <summary>
-                /// <para>The status of the Airflow instance.</para>
+                /// <para>The instance status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEPLOYED</para>
@@ -281,7 +308,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public int? WorkerServerlessReplicas { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the DMS workspace.</para>
+                /// <para>The DMS workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8630242382****</para>
@@ -291,7 +318,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string WorkspaceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone in the region.</para>
+                /// <para>The zone ID in the region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -303,7 +330,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>The total number of matching Airflow instances.</para>
+            /// <para>The total number of Airflow instances that meet the query conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -315,12 +342,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.                                 </description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

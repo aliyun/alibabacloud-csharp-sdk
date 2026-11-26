@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The type of the Agent to which the Access Token belongs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HUMAN_BOUND: fully inherits the permissions of the associated user.</description></item>
-            /// <item><description>PERMISSION_NARROW: narrows the permissions based on the associated user\&quot;s permission baseline.</description></item>
+            /// <item><description>PERMISSION_NARROW: narrows the permissions based on the associated user&quot;s permission baseline.</description></item>
             /// <item><description>AGENT_BOUND: inherits the permissions of the parent Agent.</description></item>
             /// <item><description>STANDALONE: holds permissions as an independent identity principal.</description></item>
             /// </list>

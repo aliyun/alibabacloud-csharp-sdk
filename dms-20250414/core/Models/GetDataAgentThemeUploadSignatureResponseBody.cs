@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssCredential { get; set; }
 
             /// <summary>
-            /// <para>The signature time in the format of yyyyMMdd\&quot;T\&quot;HHmmss\&quot;Z\&quot;.</para>
+            /// <para>The signature time in the format of yyyyMMdd&quot;T&quot;HHmmss&quot;Z&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20260101T135341Z</para>

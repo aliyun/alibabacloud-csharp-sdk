@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentTaskModelUsageMetricsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is up to one month.</para>
+        /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is up to one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended time range is up to one month.</para>
+        /// <para>The end time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is up to one month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735747200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of billing instance IDs to query.</para>
+        /// <para>The list of billing instance IDs to be queried.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

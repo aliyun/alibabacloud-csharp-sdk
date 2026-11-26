@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The content of the SQL template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>select count(1) from sales where dt = \&quot;2026-08-01\&quot;</para>
+        /// <para>select count(1) from sales where dt = &quot;2026-08-01&quot;</para>
         /// </summary>
         [NameInMap("Expr")]
         [Validation(Required=false)]

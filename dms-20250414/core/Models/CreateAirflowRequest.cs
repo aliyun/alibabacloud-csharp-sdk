@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The DAG directory scanned by Airflow.</para>
+        /// <para>The directory scanned by Airflow for DAGs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/dags</para>
@@ -79,14 +79,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Worker elasticity.</para>
+        /// <para>Specifies whether to enable data lineage. For Airflow 2.x, this feature is always disabled, and the lineage specification and number of replicas are ignored.</para>
+        /// </summary>
+        [NameInMap("EnableLineage")]
+        [Validation(Required=false)]
+        public bool? EnableLineage { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable elasticity for workers.</para>
         /// </summary>
         [NameInMap("EnableServerless")]
         [Validation(Required=false)]
         public bool? EnableServerless { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the Worker to gracefully shut down.</para>
+        /// <para>The timeout period for a worker to gracefully shut down.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -94,6 +101,26 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("GracefulShutdownTimeout")]
         [Validation(Required=false)]
         public int? GracefulShutdownTimeout { get; set; }
+
+        /// <summary>
+        /// <para>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("LineageReplicas")]
+        [Validation(Required=false)]
+        public int? LineageReplicas { get; set; }
+
+        /// <summary>
+        /// <para>The specification of the lineage service. It uses the same tier as the Airflow instance specification.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SMALL</para>
+        /// </summary>
+        [NameInMap("LineageSpec")]
+        [Validation(Required=false)]
+        public string LineageSpec { get; set; }
 
         /// <summary>
         /// <para>The name of the OSS bucket.</para>
@@ -118,7 +145,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OssPath { get; set; }
 
         /// <summary>
-        /// <para>The plugin directory scanned by the Airflow instance.</para>
+        /// <para>The directory scanned by the Airflow instance for plugins.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/plugins</para>
@@ -128,7 +155,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PluginsDir { get; set; }
 
         /// <summary>
-        /// <para>The path of the package installation file.</para>
+        /// <para>The path to the installation package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/requirements.txt</para>
@@ -149,7 +176,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The startup script of the Airflow container.</para>
+        /// <para>The startup script for the Airflow container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/startup.sh</para>
@@ -170,7 +197,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -181,7 +208,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The number of extended Worker node replicas.</para>
+        /// <para>The number of worker node extensions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -192,7 +219,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? WorkerServerlessReplicas { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Data Management workspace.</para>
+        /// <para>The DMS workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -203,7 +230,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID within the region.</para>
+        /// <para>The zone ID in the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

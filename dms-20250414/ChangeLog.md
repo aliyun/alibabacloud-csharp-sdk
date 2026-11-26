@@ -1,3 +1,6 @@
+2026-11-26 Version: 5.0.0
+- Generated csharp 2025-04-14 for Dms.
+
 2026-11-11 Version: 4.7.0
 - Support API BatchCreateDataLakePartitions.
 - Support API GetMyAgenticNotificationChannelAuthorizeUrl.

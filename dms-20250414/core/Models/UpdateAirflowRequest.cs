@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateAirflowRequest : TeaModel {
         /// <summary>
-        /// <para>The unique key ID of the Airflow instance.</para>
+        /// <para>The unique key ID of Airflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowName { get; set; }
 
         /// <summary>
-        /// <para>The specification description of the Airflow instance.</para>
+        /// <para>The specification description of Airflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMALL</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public List<DataMountInfo> DataMountInfoList { get; set; }
 
         /// <summary>
-        /// <para>The description of the Airflow instance.</para>
+        /// <para>The description of Airflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test airflow</para>
@@ -78,6 +78,13 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable data lineage. For Airflow 2.x, this feature is always disabled, and the lineage specifications and number of replicas are ignored.</para>
+        /// </summary>
+        [NameInMap("EnableLineage")]
+        [Validation(Required=false)]
+        public bool? EnableLineage { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable serverless workers.</para>
         /// </summary>
         [NameInMap("EnableServerless")]
@@ -85,7 +92,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? EnableServerless { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for a worker to exit.</para>
+        /// <para>The timeout period for worker exit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -93,6 +100,26 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("GracefulShutdownTimeout")]
         [Validation(Required=false)]
         public int? GracefulShutdownTimeout { get; set; }
+
+        /// <summary>
+        /// <para>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("LineageReplicas")]
+        [Validation(Required=false)]
+        public int? LineageReplicas { get; set; }
+
+        /// <summary>
+        /// <para>The merged lineage service specification, which uses the same tier as AppSpec.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SMALL</para>
+        /// </summary>
+        [NameInMap("LineageSpec")]
+        [Validation(Required=false)]
+        public string LineageSpec { get; set; }
 
         /// <summary>
         /// <para>The plugin directory scanned by Airflow.</para>
@@ -115,7 +142,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequirementFile { get; set; }
 
         /// <summary>
-        /// <para>The script loaded at startup of the Airflow instance.</para>
+        /// <para>The script loaded when the Airflow instance starts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/startup.sh</para>

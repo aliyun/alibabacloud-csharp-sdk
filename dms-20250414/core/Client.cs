@@ -670,198 +670,6 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple partitions for a data lakehouse table.</para>
-        /// </summary>
-        /// 
-        /// <param name="tmpReq">
-        /// BatchCreateDataLakePartitionsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// BatchCreateDataLakePartitionsResponse
-        /// </returns>
-        public BatchCreateDataLakePartitionsResponse BatchCreateDataLakePartitionsWithOptions(BatchCreateDataLakePartitionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BatchCreateDataLakePartitionsShrinkRequest request = new BatchCreateDataLakePartitionsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PartitionInputs))
-            {
-                request.PartitionInputsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PartitionInputs, "PartitionInputs", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
-            {
-                query["CatalogName"] = request.CatalogName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
-            {
-                query["DbName"] = request.DbName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IfNotExists))
-            {
-                query["IfNotExists"] = request.IfNotExists;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedResult))
-            {
-                query["NeedResult"] = request.NeedResult;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
-            {
-                query["TableName"] = request.TableName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionInputsShrink))
-            {
-                body["PartitionInputs"] = request.PartitionInputsShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "BatchCreateDataLakePartitions",
-                Version = "2025-04-14",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<BatchCreateDataLakePartitionsResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates multiple partitions for a data lakehouse table.</para>
-        /// </summary>
-        /// 
-        /// <param name="tmpReq">
-        /// BatchCreateDataLakePartitionsRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// BatchCreateDataLakePartitionsResponse
-        /// </returns>
-        public async Task<BatchCreateDataLakePartitionsResponse> BatchCreateDataLakePartitionsWithOptionsAsync(BatchCreateDataLakePartitionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
-            BatchCreateDataLakePartitionsShrinkRequest request = new BatchCreateDataLakePartitionsShrinkRequest();
-            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PartitionInputs))
-            {
-                request.PartitionInputsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PartitionInputs, "PartitionInputs", "json");
-            }
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogName))
-            {
-                query["CatalogName"] = request.CatalogName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbName))
-            {
-                query["DbName"] = request.DbName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IfNotExists))
-            {
-                query["IfNotExists"] = request.IfNotExists;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedResult))
-            {
-                query["NeedResult"] = request.NeedResult;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
-            {
-                query["TableName"] = request.TableName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tid))
-            {
-                query["Tid"] = request.Tid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
-            {
-                query["WorkspaceId"] = request.WorkspaceId;
-            }
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionInputsShrink))
-            {
-                body["PartitionInputs"] = request.PartitionInputsShrink;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "BatchCreateDataLakePartitions",
-                Version = "2025-04-14",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<BatchCreateDataLakePartitionsResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates multiple partitions for a data lakehouse table.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// BatchCreateDataLakePartitionsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// BatchCreateDataLakePartitionsResponse
-        /// </returns>
-        public BatchCreateDataLakePartitionsResponse BatchCreateDataLakePartitions(BatchCreateDataLakePartitionsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return BatchCreateDataLakePartitionsWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Creates multiple partitions for a data lakehouse table.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// BatchCreateDataLakePartitionsRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// BatchCreateDataLakePartitionsResponse
-        /// </returns>
-        public async Task<BatchCreateDataLakePartitionsResponse> BatchCreateDataLakePartitionsAsync(BatchCreateDataLakePartitionsRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await BatchCreateDataLakePartitionsWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</para>
         /// </summary>
         /// 
@@ -1670,6 +1478,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLineage))
+            {
+                query["EnableLineage"] = request.EnableLineage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
             {
                 query["EnableServerless"] = request.EnableServerless;
@@ -1677,6 +1489,14 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
             {
                 query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageReplicas))
+            {
+                query["LineageReplicas"] = request.LineageReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageSpec))
+            {
+                query["LineageSpec"] = request.LineageSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
@@ -1799,6 +1619,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLineage))
+            {
+                query["EnableLineage"] = request.EnableLineage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
             {
                 query["EnableServerless"] = request.EnableServerless;
@@ -1806,6 +1630,14 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
             {
                 query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageReplicas))
+            {
+                query["LineageReplicas"] = request.LineageReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageSpec))
+            {
+                query["LineageSpec"] = request.LineageSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
@@ -3879,7 +3711,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// <para>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3926,7 +3758,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// <para>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3973,7 +3805,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// <para>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3996,7 +3828,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// <para>After deletion, no new connections can be established for this data source, and it cannot be recovered by calling the enable operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6038,7 +5870,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed description of a custom agent based on the custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6084,7 +5916,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed description of a custom agent based on the custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6130,7 +5962,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed description of a custom agent based on the custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6148,7 +5980,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed description of a custom agent based on the custom agent ID.</para>
+        /// <para>Queries the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8422,7 +8254,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration and status of an Airflow instance.</para>
+        /// <para>Queries the details of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8468,7 +8300,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration and status of an Airflow instance.</para>
+        /// <para>Queries the details of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8514,7 +8346,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration and status of an Airflow instance.</para>
+        /// <para>Queries the details of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8532,7 +8364,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration and status of an Airflow instance.</para>
+        /// <para>Queries the details of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8991,7 +8823,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9064,7 +8896,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9137,7 +8969,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9160,7 +8992,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary data of DataAgent analysis tasks within a specified time range, including the number of models used, total number of model calls, total tokens consumed, and peak TPM. This data is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9178,12 +9010,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the token consumption at each time point at a minute-level granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9251,12 +9083,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the token consumption at each time point at a minute-level granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9324,12 +9156,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the token consumption at each time point at a minute-level granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9347,12 +9179,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range, returning token consumption at each time point at a minute-level granularity.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the token consumption at each time point at a minute-level granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analysis task model usage within a specified time range. It returns the number of tokens consumed in each statistical interval at a minute-level granularity to help you analyze the trend of model usage over time.</para>
+        /// <para>Queries the time-series metrics of tokens per minute (TPM) for DataAgent analytical task model usage within a specified time range, and returns the number of tokens consumed in each statistical interval at a minute-level granularity to analyze the trend of model usage over time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19294,12 +19126,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the quota for a specific workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19357,12 +19189,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the quota for a specific workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19420,12 +19252,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the quota for a specific workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19443,12 +19275,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Sets the quota for a specific workspace.</para>
+        /// <para>Sets the workspace quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20626,6 +20458,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLineage))
+            {
+                query["EnableLineage"] = request.EnableLineage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
             {
                 query["EnableServerless"] = request.EnableServerless;
@@ -20633,6 +20469,14 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
             {
                 query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageReplicas))
+            {
+                query["LineageReplicas"] = request.LineageReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageSpec))
+            {
+                query["LineageSpec"] = request.LineageSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginsDir))
             {
@@ -20731,6 +20575,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableLineage))
+            {
+                query["EnableLineage"] = request.EnableLineage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
             {
                 query["EnableServerless"] = request.EnableServerless;
@@ -20738,6 +20586,14 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
             {
                 query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageReplicas))
+            {
+                query["LineageReplicas"] = request.LineageReplicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineageSpec))
+            {
+                query["LineageSpec"] = request.LineageSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginsDir))
             {
@@ -20831,7 +20687,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the accuracy test item.</para>
+        /// <para>Updates an accuracy test item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20930,7 +20786,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the accuracy test item.</para>
+        /// <para>Updates an accuracy test item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21029,7 +20885,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the accuracy test item.</para>
+        /// <para>Updates an accuracy test item.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21052,7 +20908,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the accuracy test item.</para>
+        /// <para>Updates an accuracy test item.</para>
         /// </description>
         /// 
         /// <param name="request">

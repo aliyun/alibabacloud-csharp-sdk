@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetAirflowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NOT_FOUND</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Root")]
         [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<string> CustomAirflowCfg { get; set; }
 
             /// <summary>
-            /// <para>The DAG directory that Airflow scans.</para>
+            /// <para>The DAG directory scanned by Airflow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/dags</para>
@@ -144,7 +144,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>Specifies whether data lineage is enabled.</para>
+            /// </summary>
+            [NameInMap("EnableLineage")]
+            [Validation(Required=false)]
+            public bool? EnableLineage { get; set; }
+
+            /// <summary>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-12T05:46:01.000+0000</para>
@@ -152,6 +159,26 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("GmtCreated")]
             [Validation(Required=false)]
             public string GmtCreated { get; set; }
+
+            /// <summary>
+            /// <para>The number of replicas for the lineage service. The default value is 1 when enabled. If omitted during an update, the original value is retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("LineageReplicas")]
+            [Validation(Required=false)]
+            public int? LineageReplicas { get; set; }
+
+            /// <summary>
+            /// <para>The merged lineage service specifications, which use the same tier as the application specifications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SMALL</para>
+            /// </summary>
+            [NameInMap("LineageSpec")]
+            [Validation(Required=false)]
+            public string LineageSpec { get; set; }
 
             /// <summary>
             /// <para>The name of the OSS bucket.</para>
@@ -174,7 +201,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OssPath { get; set; }
 
             /// <summary>
-            /// <para>The plugin directory that Airflow scans.</para>
+            /// <para>The plugin directory scanned by Airflow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/plugins</para>
@@ -194,7 +221,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The path to the Python dependencies file (requirements.txt).</para>
+            /// <para>The configuration file for dependency packages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/requirements.txt</para>
@@ -204,7 +231,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RequirementFile { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group.</para>
+            /// <para>The security group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2ze9gj646bkv****</para>
@@ -214,7 +241,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The startup script that runs before Airflow starts.</para>
+            /// <para>The script loaded before Airflow starts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/startup.sh</para>
@@ -224,7 +251,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string StartupFile { get; set; }
 
             /// <summary>
-            /// <para>The status of the Airflow instance.</para>
+            /// <para>The Airflow instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEPLOYED</para>
@@ -234,7 +261,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1931trfxkvf74v****</para>
@@ -244,7 +271,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zevqv4obraqd5p****</para>
@@ -264,7 +291,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public int? WorkerServerlessReplicas { get; set; }
 
             /// <summary>
-            /// <para>The ID of the DMS workspace.</para>
+            /// <para>The Data Management (DMS) workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8630242382****</para>
@@ -274,7 +301,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID.</para>
+            /// <para>The zone ID in the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>
@@ -286,12 +313,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. The following values are returned:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.                                 </description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

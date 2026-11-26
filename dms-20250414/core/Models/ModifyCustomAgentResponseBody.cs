@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The custom agent type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Default: The system-built-in custom agent. Each workspace can have at most one Default type, and it cannot be deleted.</description></item>
-            /// <item><description>Common: A common custom agent.</description></item>
+            /// <item><description>Default: The built-in custom agent. Each workspace can have at most one Default agent, which cannot be deleted.</description></item>
+            /// <item><description>Common: A regular custom agent.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud main account.</para>
+            /// <para>The main Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public ModifyCustomAgentResponseBodyDataCallbackConfig CallbackConfig { get; set; }
             public class ModifyCustomAgentResponseBodyDataCallbackConfig : TeaModel {
                 /// <summary>
-                /// <para>The parameters to invoke callback tool calling.</para>
+                /// <para>The callback tool calling parameters to invoke.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;ID&quot;:&quot;test&quot;}</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The description of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test agent description</para>
+            /// <para>Agent test description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public ModifyCustomAgentResponseBodyDataExecutionConfig ExecutionConfig { get; set; }
             public class ModifyCustomAgentResponseBodyDataExecutionConfig : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to prohibit appending data sources in a session.</para>
+                /// <para>Specifies whether to disable appending data sources during the session.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? SkipSqlConfirm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to skip the confirmation for generating a web report.</para>
+                /// <para>Specifies whether to skip the web report generation confirmation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -265,9 +265,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <b>Example:</b>
             /// <para>Analysis framework:</para>
             /// <ol>
-            /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
-            /// <item><description>Segment by new and existing customers, channels, and regions to identify growth drivers and weaknesses.</description></item>
-            /// <item><description>Conduct funnel analysis based on user behavior paths (browse → add to cart → pay) to locate churn points</description></item>
+            /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis to analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
+            /// <item><description>Segment by new and returning customers, channels, and regions to identify growth drivers and shortcomings.</description></item>
+            /// <item><description>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to locate churn points</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Instruction")]
@@ -292,8 +292,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <ol>
             /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both successfully paid and unpaid orders.</description></item>
             /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
-            /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</description></item>
-            /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+            /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</description></item>
+            /// <item><description>Conversion rate = paid orders / UV, reflecting the traffic conversion efficiency</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
@@ -310,8 +310,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The access type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>mcp: Access through MCP.</description></item>
-                /// <item><description>dms_kb: Access through the DMS knowledge base.</description></item>
+                /// <item><description>mcp: access through MCP</description></item>
+                /// <item><description>dms_kb: access through the DMS knowledge base</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The name of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test agent name</para>
+            /// <para>Agent test name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The text report requires that all numbers be spelled out in words instead of using Arabic numerals</para>
+            /// <para>For the text report, do not use Arabic numerals. Convert all numbers to Chinese numerals</para>
             /// </summary>
             [NameInMap("TextReportConfig")]
             [Validation(Required=false)]
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The web report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The web report requires that all numbers be spelled out in words instead of using Arabic numerals</para>
+            /// <para>For the web report, do not use Arabic numerals. Convert all numbers to Chinese numerals</para>
             /// </summary>
             [NameInMap("WebReportConfig")]
             [Validation(Required=false)]

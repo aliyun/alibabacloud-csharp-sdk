@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The status of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0 PENDING,1 RUNNING,2 COMPLETED,3 STOPPED,4 FAILED</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

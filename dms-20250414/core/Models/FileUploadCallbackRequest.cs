@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Filename { get; set; }
 
         /// <summary>
-        /// <para>The name of the user\&quot;s OSS bucket.</para>
+        /// <para>The name of the user&quot;s OSS bucket.</para>
         /// <list type="bullet">
-        /// <item><description>Specify this parameter to use a file in the user\&quot;s OSS bucket and register the file as a data center file through the callback.</description></item>
+        /// <item><description>Specify this parameter to use a file in the user&quot;s OSS bucket and register the file as a data center file through the callback.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

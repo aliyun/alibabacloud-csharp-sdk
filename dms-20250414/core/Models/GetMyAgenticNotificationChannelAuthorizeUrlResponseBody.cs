@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AuthorizeUrl { get; set; }
 
             /// <summary>
-            /// <para>The callback URL after the authorization is completed. You must add this URL to the redirect URL whitelist of the tenant\&quot;s Lark application. Otherwise, the authorization fails.</para>
+            /// <para>The callback URL after the authorization is completed. You must add this URL to the redirect URL whitelist of the tenant&quot;s Lark application. Otherwise, the authorization fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://aig-dms-cn-hangzhou.aliyuncs.com/oauth/mobile/feishu/bind">https://aig-dms-cn-hangzhou.aliyuncs.com/oauth/mobile/feishu/bind</a></para>
