@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Dimension { get; set; }
 
         /// <summary>
-        /// <para>The full-text index fields. Separate multiple fields with commas (,).</para>
+        /// <para>The fields used for full-text retrieval. Multiple fields are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,content</para>
@@ -52,8 +52,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The metadata of the vector data, which is a JSON string in MAP format. The key represents the field name, and the value represents the data type.</para>
         /// <remarks>
-        /// <para>Warning: The id, vector, and to_tsvector fields are reserved and cannot be used.</warning></para>
+        /// <para>Warning: The id, vector, and to_tsvector fields are reserved and cannot be used.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;title&quot;:&quot;text&quot;,&quot;content&quot;:&quot;text&quot;}</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The tokenizer used for full-text index.</para>
+        /// <para>The tokenizer used for full-text retrieval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh_cn</para>
@@ -122,8 +125,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: The execution is successful.</description></item>
-        /// <item><description><b>fail</b>: The execution fails.</description></item>
+        /// <item><description><b>success</b>: The execution succeeded.</description></item>
+        /// <item><description><b>fail</b>: The execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +137,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether sparse vectors are supported.</para>
+        /// <para>Indicates whether sparse vectors are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

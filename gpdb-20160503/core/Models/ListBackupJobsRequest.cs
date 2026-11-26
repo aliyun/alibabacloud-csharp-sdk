@@ -12,10 +12,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Automated</description></item>
-        /// <item><description>Manual</description></item>
+        /// <item><description>Automated: automatic backup</description></item>
+        /// <item><description>Manual: manual backup</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, all backup sets are returned.</para>
+        /// <para>If this parameter is not specified, all backup tasks are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Automated</para>
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

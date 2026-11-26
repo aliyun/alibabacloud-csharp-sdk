@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UploadDocumentAsyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID, which is used to check the job status or cancel the job.</para>
+        /// <para>The job ID, which is used to check the job status or cancel the job later.</para>
         /// 
         /// <b>Example:</b>
         /// <para>231460f8-75dc-405e-a669-0c5204887e91</para>
@@ -40,11 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The creation status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>success: The document was uploaded.</description></item>
-        /// <item><description>fail: The document failed to be uploaded.</description></item>
-        /// </list>
+        /// <para>The creation status. Valid values: success: Successful. fail: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

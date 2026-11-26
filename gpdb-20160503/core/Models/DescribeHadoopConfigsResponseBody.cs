@@ -12,11 +12,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The name of the configuration file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>hdfs-site</description></item>
-        /// <item><description>core-site</description></item>
-        /// <item><description>yarn-site</description></item>
-        /// <item><description>mapred-site</description></item>
-        /// <item><description>hive-site</description></item>
+        /// <item><description><para>hdfs-site</para>
+        /// </description></item>
+        /// <item><description><para>core-site</para>
+        /// </description></item>
+        /// <item><description><para>yarn-site</para>
+        /// </description></item>
+        /// <item><description><para>mapred-site</para>
+        /// </description></item>
+        /// <item><description><para>hive-site</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,9 +35,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The configuration value.</para>
         /// 
         /// <b>Example:</b>
-        /// <?xml version="1.0"?>
+        /// <?xml version="1.0" ?>
         /// <configuration>
         ///     <property>
+        ///         <name>hive.exec.reducers.bytes.per.reducer</name>
+        ///         <value>256000000</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>hive.stats.column.autogather</name>
+        ///         <value>false</value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("ConfigValue")]
         [Validation(Required=false)]

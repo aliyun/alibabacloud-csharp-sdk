@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RebalanceDBInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests.</para>
-        /// <para>The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure idempotence. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88**********</para>
@@ -22,7 +20,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

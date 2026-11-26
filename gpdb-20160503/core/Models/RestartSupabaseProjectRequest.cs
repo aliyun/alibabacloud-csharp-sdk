@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RestartSupabaseProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The Supabase project ID.</para>
+        /// <para>The ID of the Supabase project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Specifies the region in which to query or perform the operation.</para>
+        /// <para>The region ID. Specifies the region for the query or operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

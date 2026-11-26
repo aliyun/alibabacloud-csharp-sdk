@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,24 +36,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>20</b></description></item>
+        /// <item><description><b>30</b></description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>
-        /// <para>Default value: <b>20</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The role state of the node. It specifies whether a primary/secondary switchover occurs. Valid values:</para>
+        /// <para>The role status of the node, which indicates whether a primary/secondary switchover has occurred. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: The node role is normal. No primary/secondary switchover occurs.</description></item>
-        /// <item><description><b>reverse</b>: The node role is reversed. A primary/secondary switchover occurs.</description></item>
+        /// <item><description><b>normal</b>: The role status is normal, indicating that no primary/secondary switchover has occurred.</description></item>
+        /// <item><description><b>reverse</b>: The role is reversed, indicating that a primary/secondary switchover has occurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,12 +64,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RolePreferd { get; set; }
 
         /// <summary>
-        /// <para>The running state of the node. Valid values:</para>
+        /// <para>The running status of the node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>UP</b>: The node is running.</description></item>
-        /// <item><description><b>DOWN</b>: The node is faulty.</description></item>
+        /// <item><description><b>DOWN</b>: The node has failed.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the information about nodes in all running states is returned.</para>
+        /// <para>If you do not specify this parameter, information about nodes in all running statuses is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UP</para>
@@ -79,12 +79,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StartStatus { get; set; }
 
         /// <summary>
-        /// <para>The data synchronization state of the node. Valid values:</para>
+        /// <para>The synchronization status of the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>synced</b>: The node data is synchronized.</description></item>
-        /// <item><description><b>notSyncing</b>: The node data is not synchronized.</description></item>
+        /// <item><description><b>synced</b>: The node is synchronized.</description></item>
+        /// <item><description><b>notSyncing</b>: The node is not synchronized.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the information about nodes in all synchronization states is returned.</para>
+        /// <para>If you do not specify this parameter, information about nodes in all synchronization statuses is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>synced</para>

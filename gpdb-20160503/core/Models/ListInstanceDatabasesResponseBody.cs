@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListInstanceDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including the instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The queried databases.</para>
+        /// <para>The list of queried databases.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -32,9 +32,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The database name.</para>
             /// <list type="bullet">
-            /// <item><description>Only contain letters, digits, and underscores (_).</description></item>
-            /// <item><description>Must start with a letter.</description></item>
-            /// <item><description>Up to 63 characters in length.</description></item>
+            /// <item><description><para>The name can contain only letters, digits, and underscores (_).</para>
+            /// </description></item>
+            /// <item><description><para>The name must start with a letter.</para>
+            /// </description></item>
+            /// <item><description><para>The name cannot exceed 63 characters in length.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>

@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The error message.</para>
-        /// <para>This parameter is returned only if the request fails.</para>
+        /// <para>This parameter is returned only when the API operation fails.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Sample error message</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// <para>If the request was successful, <b>success</b> is returned. If the request failed, this parameter is not returned.</para>
+        /// <para>The execution status of the API operation.</para>
+        /// <para>If the execution is successful, <b>success</b> is returned. If the execution fails, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

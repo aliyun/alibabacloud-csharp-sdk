@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModifyParameterLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried parameter modification logs.</para>
+        /// <para>The change history.</para>
         /// </summary>
         [NameInMap("Changelogs")]
         [Validation(Required=false)]
         public List<DescribeModifyParameterLogResponseBodyChangelogs> Changelogs { get; set; }
         public class DescribeModifyParameterLogResponseBodyChangelogs : TeaModel {
             /// <summary>
-            /// <para>The effective time.</para>
+            /// <para>The effective period.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-05-05T11:22:22Z</para>
+            /// <para>2023-01-03T17:00:00Z</para>
             /// </summary>
             [NameInMap("EffectTime")]
             [Validation(Required=false)]
             public string EffectTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the parameter.</para>
+            /// <para>The parameter name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testkey</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParameterValid { get; set; }
 
             /// <summary>
-            /// <para>The original value of the parameter.</para>
+            /// <para>The parameter value before the modification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParameterValueAfter { get; set; }
 
             /// <summary>
-            /// <para>The new value of the parameter.</para>
+            /// <para>The parameter value after the modification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7565770E-7C45-462D-BA4A-8A5396F2CAD1</para>
+        /// <para>4FA1F1D1-50A6-4F60-9A78-5752F2076A53</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the SSL certificate.</para>
+        /// <para>The SSL certificate information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*.gpdbmaster.xxx.rds.aliyuncs.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CertCommonName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D5FF8636-37F6-4CE0-8002-F8734C62C686</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether SSL encryption is enabled.</para>
+        /// <para>Indicates whether Secure Sockets Layer (SSL) encryption is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: SSL encryption is enabled.</description></item>
+        /// <item><description><b>false</b>: SSL encryption is disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

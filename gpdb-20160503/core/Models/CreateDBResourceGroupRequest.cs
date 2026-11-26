@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,25 +28,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the resource group.</para>
+        /// <para>The resource group configuration.</para>
         /// <remarks>
+        /// <ol>
+        /// <item><description>CpuRateLimit: the percentage of CPU resources available to the resource group. Unit: %.</description></item>
+        /// <item><description>MemoryLimit: the percentage of memory resources available to the resource group. Unit: %.</description></item>
+        /// <item><description>MemorySharedQuota: the percentage of memory resources shared among transactions submitted to the resource group. Unit: %. Default value: 80.</description></item>
+        /// <item><description>MemorySpillRatio: the memory usage threshold for memory-intensive transactions. When a transaction reaches this threshold, it spills to disk. Unit: %. Default value: 0.</description></item>
+        /// <item><description>Concurrency: the maximum number of concurrent transactions allowed for the resource group. Default value: 20.</description></item>
+        /// </ol>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>CpuRateLimit: the percentage of CPU resources that are available for the resource group. Unit: %.</para>
-        /// </description></item>
-        /// <item><description><para>MemoryLimit: the percentage of memory resources that are available for the resource group. Unit: %.</para>
-        /// </description></item>
-        /// <item><description><para>MemorySharedQuota: the percentage of memory resources shared among transactions that are submitted to the resource group. Unit: %. Default value: 80.</para>
-        /// </description></item>
-        /// <item><description><para>MemorySpillRatio: the memory spill ratio for memory-intensive transactions. When the memory that is used by memory-intensive transactions reaches this value, data is spilled to disks. Unit: %. Default value: 0.</para>
-        /// </description></item>
-        /// <item><description><para>Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.</para>
-        /// </description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;CpuRateLimit&quot;:&quot;10&quot;,&quot;MemoryLimit&quot;:&quot;12&quot;,&quot;MemorySharedQuota&quot;:&quot;20&quot;,&quot;MemorySpillRatio&quot;:&quot;75&quot;,&quot;Concurrency&quot;:&quot;3&quot;}</para>
+        /// <para>{&quot;CpuRateLimit&quot;:10,&quot;MemoryLimit&quot;:12,&quot;MemorySharedQuota&quot;:20,&quot;MemorySpillRatio&quot;:75,&quot;Concurrency&quot;:3}</para>
         /// </summary>
         [NameInMap("ResourceGroupConfig")]
         [Validation(Required=false)]

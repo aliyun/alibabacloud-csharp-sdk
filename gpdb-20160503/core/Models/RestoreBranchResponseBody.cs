@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RestoreBranchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The branch ID that uniquely identifies a Supabase branch.</para>
+        /// <para>The branch ID, which uniquely identifies a Supabase branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-xxxx</para>

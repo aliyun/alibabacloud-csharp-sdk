@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySupabaseProjectResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The specification change type.</para>
+        /// <para>The modification type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage size, in GB.</para>
+        /// <para>The storage capacity. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

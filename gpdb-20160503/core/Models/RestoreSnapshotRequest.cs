@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RestoreSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</para>
+        /// <para>The idempotency token used to ensure that repeated requests do not execute the same operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Specifies the region in which to query or perform the operation.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the restored branch. If not specified, the backend generates a name automatically.</para>
+        /// <para>The name of the restored branch. If you do not specify this parameter, the backend generates a name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>restore_preview</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RestoredBranchName { get; set; }
 
         /// <summary>
-        /// <para>The snapshot LSN used for restoration.</para>
+        /// <para>The snapshot LSN used for the restoration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RestoredLsn { get; set; }
 
         /// <summary>
-        /// <para>The target branch ID. If not specified, the backend selects the target branch based on the restoration process.</para>
+        /// <para>The target branch ID. If you do not specify this parameter, the backend selects the target branch based on the restoration process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-main</para>

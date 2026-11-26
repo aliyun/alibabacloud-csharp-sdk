@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSnapshotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The branch ID to which the snapshot belongs.</para>
+        /// <para>The ID of the branch to which the snapshot belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The LSN for the snapshot. You must specify either this parameter or SnapshotTimestamp. If this parameter is specified, the snapshot is created based on the specified LSN.</para>
+        /// <para>The log sequence number (LSN) for the snapshot. You must specify either this parameter or SnapshotTimestamp. If specified, the snapshot is created based on this LSN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/3522648</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The actual point in time corresponding to the created snapshot.</para>
+        /// <para>The actual point in time when the snapshot was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-08T09:11:12Z</para>

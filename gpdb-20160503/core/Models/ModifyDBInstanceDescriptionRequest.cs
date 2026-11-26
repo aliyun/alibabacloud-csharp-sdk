@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyDBInstanceDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the instance.</para>
-        /// <para>The description must be 2 to 256 characters in length. It cannot start with http:// or https://.</para>
+        /// <para>The description of the instance. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +21,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>Instance ID of the instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +35,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para><b>[Deprecated]</b> You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

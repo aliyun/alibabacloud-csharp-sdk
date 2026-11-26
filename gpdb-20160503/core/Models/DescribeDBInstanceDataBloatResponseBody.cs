@@ -17,8 +17,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<DescribeDBInstanceDataBloatResponseBodyItems> Items { get; set; }
         public class DescribeDBInstanceDataBloatResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The data bloat coefficient. The bloat coefficient is calculated by using the following formula:</para>
-            /// <para>Number of dead rows counted by the system / Number of live rows counted by the system.</para>
+            /// <para>The data bloat coefficient. The formula for calculating the bloat coefficient is as follows:</para>
+            /// <para>Number of dead rows counted by the system / Number of active rows counted by the system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.03</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BloatCeoff { get; set; }
 
             /// <summary>
-            /// <para>The size of the bloated data, which indicates the amount of space that can be reclaimed.</para>
+            /// <para>The size of the bloated table, which indicates the amount of space that can be released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.2MB</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             /// <summary>
             /// <para>The expected table size.</para>
-            /// <para>The expected table size is the estimated size of the table when no data bloat occurs.</para>
+            /// <para>The expected table size is the estimated table size when no data bloat occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1MB</para>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The storage type of the table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Heap Table</b>: heap table</description></item>
-            /// <item><description><b>Append-Only Heap Table</b>: append-only heap table</description></item>
-            /// <item><description><b>Append-Only Columnar Table</b>: column-oriented table</description></item>
+            /// <item><description><b>Heap Table</b>: Heap table.</description></item>
+            /// <item><description><b>Append-Only Heap Table</b>: Append-Only heap table.</description></item>
+            /// <item><description><b>Append-Only Columnar Table</b>: Column-oriented table.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string TimeLastUpdated { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was last vacuumed. The time is displayed in UTC.</para>
+            /// <para>The time when the table was last vacuumed (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-08T16:00:00Z</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>

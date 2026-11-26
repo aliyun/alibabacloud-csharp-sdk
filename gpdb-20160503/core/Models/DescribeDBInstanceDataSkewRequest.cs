@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceDataSkewRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>order by condition</para>
+        /// <para>The sorting condition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{Field: TableSkew, Type: Desc}</para>
+        /// <para>{Field: TableSize, Type: Desc}</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

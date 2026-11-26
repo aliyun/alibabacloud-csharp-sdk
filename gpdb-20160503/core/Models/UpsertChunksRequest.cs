@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The filter condition for the data to be updated, in the format of an SQL WHERE clause.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>title = \&quot;seagull\&quot;</para>
+            /// <para>title = &quot;seagull&quot;</para>
             /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]

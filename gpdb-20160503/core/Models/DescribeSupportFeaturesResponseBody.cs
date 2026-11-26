@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeSupportFeaturesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>63E5BE60-91FF-57F1-B873-7F1EB734B93D_2724</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The features supported by the instance. Valid values:</para>
+        /// <para>The features supported by the current instance. Currently, you can query only the following features:</para>
         /// <list type="bullet">
-        /// <item><description>sample_data: sample dataset. For more information, see <a href="https://help.aliyun.com/document_detail/452278.html">Sample dataset</a>.</description></item>
-        /// <item><description>diagnose_and_optimize: diagnostics and optimization. For more information, see <a href="https://help.aliyun.com/document_detail/323453.html">Diagnostics and optimization</a>.</description></item>
+        /// <item><description>sample_data: Sample dataset. For more information, see <a href="https://help.aliyun.com/document_detail/452278.html">Sample dataset</a>.</description></item>
+        /// <item><description>diagnose_and_optimize: Diagnostics and optimization. For more information, see <a href="https://help.aliyun.com/document_detail/323453.html">Diagnostics and optimization</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

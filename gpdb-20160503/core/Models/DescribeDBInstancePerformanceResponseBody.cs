@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gpdb</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The queried performance metrics.</para>
+        /// <para>The list of performance metric values for the instance.</para>
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public List<string> PerformanceKeys { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E85244A-AB47-46A3-A3AD-5F307DCB407E</para>

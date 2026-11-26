@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Filter condition for the data to be updated, in SQL WHERE format. This field cannot be empty at the same time as the Ids field.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>business_value = \&quot;chat_file_1\&quot;</para>
+        /// <para>business_value = &quot;chat_file_1&quot;</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to search for error logs.</para>
+        /// <para>The keyword in the error logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>error</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The log level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: displays logs of all levels.</description></item>
-        /// <item><description><b>PANIC</b>: displays only panic-level logs.</description></item>
-        /// <item><description><b>FATAL</b>: displays only fatal-level logs.</description></item>
-        /// <item><description><b>ERROR</b>: displays only error-level logs.</description></item>
+        /// <item><description><b>ALL</b>: Displays logs of all levels.</description></item>
+        /// <item><description><b>PANIC</b>: Displays only panic-level logs.</description></item>
+        /// <item><description><b>FATAL</b>: Displays only fatal-level logs.</description></item>
+        /// <item><description><b>ERROR</b>: Displays only error-level logs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>title = \&quot;test\&quot; AND name like \&quot;test%\&quot;</para>
+        /// <para>title = &quot;test&quot; AND name like &quot;test%&quot;</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]

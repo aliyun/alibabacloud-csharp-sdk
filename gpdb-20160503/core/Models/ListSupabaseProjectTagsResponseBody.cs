@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details.</para>
+        /// <para>The tag resource details.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]

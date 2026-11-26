@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The format is <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time. The time span between the start time and the end time cannot exceed seven days.</para>
+        /// <para>The end time must be later than the start time, and the time interval between the start time and the end time cannot exceed seven days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The execution duration. Unit: seconds.</para>
+        /// <para>The execution duration, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ExecuteCost { get; set; }
 
         /// <summary>
-        /// <para>The execution state. Valid values:</para>
+        /// <para>The execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: success</description></item>
-        /// <item><description>0: failure</description></item>
-        /// <item><description>0,1 or 1,0: all</description></item>
+        /// <item><description>1: Success.</description></item>
+        /// <item><description>0: Failure.</description></item>
+        /// <item><description>0,1 or 1,0: All.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ExecuteState { get; set; }
 
         /// <summary>
-        /// <para>The maximum execution duration of slow SQL queries. The value must be greater than or equal to 0. Unit: seconds.</para>
+        /// <para>The maximum execution duration of slow SQL queries. The value must be greater than or equal to 0, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MaxExecuteCost { get; set; }
 
         /// <summary>
-        /// <para>The minimum execution duration of slow SQL queries. The value must be greater than or equal to 0. Unit: seconds.</para>
+        /// <para>The minimum execution duration of slow SQL queries. The value must be greater than or equal to 0, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The type of the executed SQL statement.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If the <b>OperationClass</b> parameter is specified, the value of <b>OperationType</b> must belong to the corresponding language type. For example, if <b>OperationClass</b> is set to <b>DQL</b>, the value of <b>OperationType</b> must be a DQL-type SQL statement, such as <b>SELECT</b>.</description></item>
+        /// <item><description>If the <b>OperationClass</b> parameter is specified, the value of <b>OperationType</b> must belong to the corresponding language type. For example, if the value of <b>OperationClass</b> is <b>DQL</b>, the value of <b>OperationType</b> must be a <b>DQL</b> SQL statement, such as <b>SELECT</b>.</description></item>
         /// <item><description>If the <b>OperationClass</b> parameter is not specified, the value of <b>OperationType</b> can be any type of SQL statement.</description></item>
         /// <item><description>If neither the <b>OperationClass</b> nor the <b>OperationType</b> parameter is specified, all types of SQL statements are returned.</description></item>
         /// </list>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SourceIP { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. The format is <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC time).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

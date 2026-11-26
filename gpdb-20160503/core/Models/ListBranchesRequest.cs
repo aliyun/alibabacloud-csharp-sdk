@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListBranchesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of entries to return for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The cursor for paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response.</para>
+        /// <para>The cursor for the paging query. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned from the previous query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>10</description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The parent branch ID. Specifies the parent branch for a new branch or as a query filter condition.</para>
+        /// <para>The ID of the parent branch. This parameter is used to specify the parent branch for a new branch or a query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-main</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ParentBranchId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</para>
+        /// <para>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region of the primary branch is inherited by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Supports fuzzy search by branch ID or branch name.</para>
+        /// <para>The search keyword. Fuzzy search by branch ID or branch name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -88,12 +88,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Search { get; set; }
 
         /// <summary>
-        /// <para>The sort field.</para>
+        /// <para>The sorting field.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BranchName: sorts by branch name.</description></item>
-        /// <item><description>CreateTime: sorts by creation time.</description></item>
-        /// <item><description>LastRunTime: sorts by last run time.</description></item>
+        /// <item><description>BranchName: Sort by branch name.</description></item>
+        /// <item><description>CreateTime: Sort by creation time.</description></item>
+        /// <item><description>LastRunTime: Sort by last run time.</description></item>
         /// </list>
         /// <para>Default value: CreateTime.</para>
         /// 
@@ -105,11 +105,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort direction.</para>
+        /// <para>The sorting order.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending order.</description></item>
-        /// <item><description>Desc: descending order.</description></item>
+        /// <item><description>Asc: Ascending order.</description></item>
+        /// <item><description>Desc: Descending order.</description></item>
         /// </list>
         /// <para>Default value: Desc.</para>
         /// 

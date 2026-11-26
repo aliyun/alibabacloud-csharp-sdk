@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public double? RerankFactor { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the reranking model used to rerank the merged multi-channel results.</para>
+        /// <para>The reranking model parameters used to rerank the merged multi-channel results.</para>
         /// </summary>
         [NameInMap("RerankModel")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SourceCollectionShrink { get; set; }
 
         /// <summary>
-        /// <para>The number of top results to return after multi-channel recall results are merged.</para>
+        /// <para>The number of top results to return after the multi-channel recall results are merged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

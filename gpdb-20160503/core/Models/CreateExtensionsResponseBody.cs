@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateExtensionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the extension that you want to install. Multiple extension names are separated with commas (,).</para>
+        /// <para>The extensions to install. Separate multiple extensions with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>citext, dblink</para>

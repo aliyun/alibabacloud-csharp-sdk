@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataReDistributeInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data redistribution information.</para>
+        /// <para>The data redistribution task information.</para>
         /// </summary>
         [NameInMap("DataReDistributeInfo")]
         [Validation(Required=false)]
         public DescribeDataReDistributeInfoResponseBodyDataReDistributeInfo DataReDistributeInfo { get; set; }
         public class DescribeDataReDistributeInfoResponseBodyDataReDistributeInfo : TeaModel {
             /// <summary>
-            /// <para>The execution information. If an error occurs, the error message is returned.</para>
+            /// <para>The runtime information. If an error occurs, detailed error information is displayed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redistributing</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The progress of data redistribution. Unit: %.</para>
+            /// <para>The data redistribution progress, in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The execution type. The value <b>immediate</b> is returned, indicating immediate execution.</para>
+            /// <para>The execution type. The value is fixed as <b>immediate</b>, which indicates immediate execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>immediate</para>

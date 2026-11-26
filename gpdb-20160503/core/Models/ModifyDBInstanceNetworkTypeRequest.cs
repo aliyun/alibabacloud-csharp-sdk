@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new network type of the instance. Valid values:</para>
+        /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>VPC</description></item>
-        /// <item><description>Classic</description></item>
+        /// <item><description>VPC: VPC.</description></item>
+        /// <item><description>Classic: classic network.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The internal IP address of the instance.</para>
+        /// <para>The internal IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.XX.XX</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID of the instance.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp19ame5m1r3oejns****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the instance. This parameter must be specified when VPCId is specified.</para>
+        /// <para>The vSwitch ID. This parameter is required if you specify a VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1cpq8mr64paltkb****</para>

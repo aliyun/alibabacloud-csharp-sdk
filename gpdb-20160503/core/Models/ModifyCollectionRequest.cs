@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>A JSON string that specifies the operations to add or modify metadata fields. For the required format, see the example.</para>
         /// <para>Use this parameter to add new metadata fields, rename existing metadata fields, or perform implicit data type conversion on existing fields.</para>
         /// <para>Details:</para>
-        /// <para>To add a new metadata field, set <c>operations[*].operator = add</c>. Then, use <c>operations[*].newMetaName</c> to specify the field\&quot;s name, <c>operations[*].newMetaType</c> for its data type, and <c>operations[*].fullTextRetrieval</c> to enable full-text retrieval for it.</para>
+        /// <para>To add a new metadata field, set <c>operations[*].operator = add</c>. Then, use <c>operations[*].newMetaName</c> to specify the field&quot;s name, <c>operations[*].newMetaType</c> for its data type, and <c>operations[*].fullTextRetrieval</c> to enable full-text retrieval for it.</para>
         /// <para>To modify an existing metadata field, set <c>operations[*].operator = replace</c>. You must specify the current field name in <c>operations[*].oldMetaName</c>. To rename the field, provide the new name in <c>operations[*].newMetaName</c>. To change its data type, provide the new type in <c>operations[*].newMetaType</c>.</para>
         /// <remarks>
         /// <list type="bullet">

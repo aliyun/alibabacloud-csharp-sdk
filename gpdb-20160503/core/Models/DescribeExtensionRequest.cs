@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeExtensionRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> Interface to query the details of all AnalyticDB PostgreSQL Instances in the target region, including Instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,11 +24,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Database name.</para>
+        /// <para>The name of the database.</para>
         /// <list type="bullet">
-        /// <item><description>Only contain letters, digits, and underscores (_).</description></item>
-        /// <item><description>Must start with a letter.</description></item>
-        /// <item><description>Up to 63 characters in length.</description></item>
+        /// <item><description><para>It can contain only letters, digits, and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter.</para>
+        /// </description></item>
+        /// <item><description><para>It cannot exceed 63 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The extension name.</para>
+        /// <para>The name of the extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

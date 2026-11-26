@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of items.</para>
+        /// <para>The list of plans.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListApiKeysResponseBodyItems> Items { get; set; }
         public class ListApiKeysResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The service IDs.</para>
+            /// <para>The service ID.</para>
             /// </summary>
             [NameInMap("AuthServices")]
             [Validation(Required=false)]
             public List<ListApiKeysResponseBodyItemsAuthServices> AuthServices { get; set; }
             public class ListApiKeysResponseBodyItemsAuthServices : TeaModel {
                 /// <summary>
-                /// <para>The service IDs.</para>
+                /// <para>The service ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agdb-xxxxxx</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to return in this request.</para>
+        /// <para>The maximum number of records to return for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next paging query.</para>
+        /// <para>The start token for the next paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

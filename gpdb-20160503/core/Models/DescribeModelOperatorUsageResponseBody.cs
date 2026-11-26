@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModelOperatorUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</para>
+        /// <para>The end time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-02T00:00Z</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The collection of metric values.</para>
+            /// <para>The metric value set.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeModelOperatorUsageResponseBodyKeysSeries> Series { get; set; }
             public class DescribeModelOperatorUsageResponseBodyKeysSeries : TeaModel {
                 /// <summary>
-                /// <para>The API key ID. This value is returned only when GroupBy contains api_key.</para>
+                /// <para>This value is returned only when GroupBy includes api_key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public int? ApiKeyId { get; set; }
 
                 /// <summary>
-                /// <para>The model name when GroupBy contains model. The api_key_id string when GroupBy contains only api_key.</para>
+                /// <para>The model name if GroupBy includes model, or the api_key_id string if GroupBy includes only api_key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen3.6-plus</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public List<DescribeModelOperatorUsageResponseBodyKeysSeriesValues> Values { get; set; }
                 public class DescribeModelOperatorUsageResponseBodyKeysSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>The specific metric information, consisting of a timestamp and a metric value.</para>
+                    /// <para>The specific metric information, which consists of the time and the metric value.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The actual bucket size used, in seconds.</para>
+        /// <para>The final bucket size used in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</para>
+        /// <para>The start time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-01T00:00Z</para>

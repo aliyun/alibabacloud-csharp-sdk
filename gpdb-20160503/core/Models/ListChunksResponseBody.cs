@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

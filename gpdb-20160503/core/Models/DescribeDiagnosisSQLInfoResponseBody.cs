@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The execution duration of the query. Unit: seconds.</para>
+        /// <para>The total execution duration of the query, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string QueryID { get; set; }
 
         /// <summary>
-        /// <para>The information about the operator.</para>
+        /// <para>The operator information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;children\&quot;:********\&quot;startTime\&quot;:1660719602199}</para>
+        /// <para>{&quot;children&quot;:********&quot;startTime&quot;:1660719602199}</para>
         /// </summary>
         [NameInMap("QueryPlan")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SQLStmt { get; set; }
 
         /// <summary>
-        /// <para>The ID of the session that contains the query.</para>
+        /// <para>The ID of the session to which the query belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>658****</para>
@@ -90,17 +90,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SessionID { get; set; }
 
         /// <summary>
-        /// <para>The sequence of metrics.</para>
+        /// <para>The sorting structure based on metrics.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;costSort\&quot;:******:\&quot;Seq Scan-9\&quot;,\&quot;value\&quot;:0.0}]}</para>
+        /// <para>{&quot;costSort&quot;:******:&quot;Seq Scan-9&quot;,&quot;value&quot;:0.0}]}</para>
         /// </summary>
         [NameInMap("SortedMetrics")]
         [Validation(Required=false)]
         public string SortedMetrics { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1660719602199</para>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The execution state of the query. Valid values:</para>
+        /// <para>The execution status of the SQL statement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>running</b></description></item>
-        /// <item><description><b>finished</b></description></item>
+        /// <item><description><b>running</b>: The SQL statement is being executed.</description></item>
+        /// <item><description><b>finished</b>: The execution of the SQL statement is complete.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The information about the execution plan.</para>
+        /// <para>The query plan information.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>Seq Scan on example_table</para>
         /// </summary>
         [NameInMap("TextPlan")]
         [Validation(Required=false)]

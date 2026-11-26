@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>running</b>: Downloading.</description></item>
-            /// <item><description><b>finished</b>: Completed.</description></item>
-            /// <item><description><b>failed</b>: Download failed.</description></item>
+            /// <item><description><b>running</b>: The download is in progress.</description></item>
+            /// <item><description><b>finished</b>: The download is completed.</description></item>
+            /// <item><description><b>failed</b>: The download failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

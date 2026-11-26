@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The list of backup sets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataBackupsResponseBodyItems> Items { get; set; }
         public class DescribeDataBackupsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The UTC time when the backup ended. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</para>
+            /// <para>The end time of the backup. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-22T12:01:43Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupEndTime { get; set; }
 
             /// <summary>
-            /// <para>The local time when the backup ended. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</para>
+            /// <para>The end time of the backup in local time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-22 20:00:25</para>
@@ -37,11 +37,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupEndTimeLocal { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to generate the backup set. Valid values:</para>
+            /// <para>The backup method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Logical</b>: logical backup</description></item>
-            /// <item><description><b>Physical</b>: physical backup</description></item>
-            /// <item><description><b>Snapshot</b>: snapshot backup</description></item>
+            /// <item><description><b>Physical</b>: physical backup.</description></item>
+            /// <item><description><b>Snapshot</b>: snapshot backup.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,16 +52,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             /// <summary>
             /// <para>The backup mode.</para>
-            /// <para>Valid values for full backup:</para>
+            /// <para>Valid values for full backups:</para>
             /// <list type="bullet">
-            /// <item><description>Automated: automatic backup</description></item>
-            /// <item><description>Manual: manual backup</description></item>
+            /// <item><description><b>Automated</b>: automatic backup performed by the system.</description></item>
+            /// <item><description><b>Manual</b>: manual backup.</description></item>
             /// </list>
-            /// <para>Valid values for point-in-time backup:</para>
+            /// <para>Valid values for restorable points:</para>
             /// <list type="bullet">
-            /// <item><description>Automated: point-in-time backup after full backup</description></item>
-            /// <item><description>Manual: manual point-in-time backup</description></item>
-            /// <item><description>Period: point-in-time backup that is triggered by a backup policy</description></item>
+            /// <item><description><b>Automated</b>: restorable point generated after a full backup.</description></item>
+            /// <item><description><b>Manual</b>: restorable point manually triggered by the user.</description></item>
+            /// <item><description><b>Period</b>: restorable point periodically triggered by the backup policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +92,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? BackupSize { get; set; }
 
             /// <summary>
-            /// <para>The UTC time when the backup started. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</para>
+            /// <para>The start time of the backup. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-22T12:00:25Z</para>
@@ -103,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupStartTime { get; set; }
 
             /// <summary>
-            /// <para>The local time when the backup started. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</para>
+            /// <para>The start time of the backup in local time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2011-05-30 03:29:00</para>
@@ -115,8 +114,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The status of the backup set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Success</description></item>
-            /// <item><description>Failure</description></item>
+            /// <item><description><b>Success</b>: successful.</description></item>
+            /// <item><description><b>Failure</b>: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +126,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of a point-in-time backup set or the full backup set.</para>
+            /// <para>The name of the restorable point or the full backup set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adbpgbackup_555*****_20211222200019</para>
@@ -138,8 +137,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>For full backup, this parameter indicates the point in time at which the data in the data backup file is consistent.</description></item>
-            /// <item><description>For point-in-time backup, this parameter indicates that the returned point in time is a timestamp.</description></item>
+            /// <item><description>Full backup: the timestamp of the consistency point in time.</description></item>
+            /// <item><description>Restorable point: the timestamp of the restorable point in time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,7 +149,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? ConsistentTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gp-bp**************-master</para>
@@ -160,10 +159,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the backup. Valid values:</para>
+            /// <para>The backup type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DATA: full backup</description></item>
-            /// <item><description>RESTOREPOI: point-in-time backup</description></item>
+            /// <item><description><b>DATA</b>: full backup.</description></item>
+            /// <item><description><b>RESTOREPOI</b>: restorable point.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +185,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of backup sets on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -196,7 +195,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3E387971-33A5-5019-AD7F-DC**********</para>
@@ -206,7 +205,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total backup set size. Unit: Byte.</para>
+        /// <para>The total size of the backup sets. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1111111111</para>
@@ -216,7 +215,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? TotalBackupSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

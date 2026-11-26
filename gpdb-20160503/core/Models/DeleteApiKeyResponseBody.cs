@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>API KEY ID。</para>
+        /// <para>The API key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-xxxxxx</para>

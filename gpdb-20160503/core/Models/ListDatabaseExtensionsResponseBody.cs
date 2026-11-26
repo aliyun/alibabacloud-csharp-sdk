@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListDatabaseExtensionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of plug-ins.</para>
+        /// <para>The list of extensions.</para>
         /// </summary>
         [NameInMap("Extensions")]
         [Validation(Required=false)]
         public List<ListDatabaseExtensionsResponseBodyExtensions> Extensions { get; set; }
         public class ListDatabaseExtensionsResponseBodyExtensions : TeaModel {
             /// <summary>
-            /// <para>The plug-in description.</para>
+            /// <para>The description of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhparser</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The plug-in name.</para>
+            /// <para>The name of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhparser</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ExtensionName { get; set; }
 
             /// <summary>
-            /// <para>The plug-in status.</para>
+            /// <para>The status of the extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>installed</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region is inherited from the primary branch by default.</para>
+        /// <para>The region ID. This parameter is required when you create a primary branch. When you create a child branch, it inherits the region of the primary branch by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

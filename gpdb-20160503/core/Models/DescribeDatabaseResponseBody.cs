@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The permission control information.</para>
+        /// <para>The access control information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>=Tc/test_001\ntest_001=CTc/test_001</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The character set.</para>
-        /// <para>For more information about the value range, see Document <a href="https://www.postgresql.org/docs/current/multibyte.html">https://www.postgresql.org/docs/current/multibyte.html</a>.</para>
+        /// <para>For the valid values, refer to the References at <a href="https://www.postgresql.org/docs/current/multibyte.html">https://www.postgresql.org/docs/current/multibyte.html</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UTF8</para>
@@ -31,15 +31,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CharacterSetName { get; set; }
 
         /// <summary>
-        /// <para>Database locale parameter that specifies string comparison and sorting rules.</para>
+        /// <para>The locale setting of the database, which specifies the string comparison and sorting rules.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The locale must be compatible with the character set specified by the CharacterSetName parameter.</para>
-        /// </description></item>
-        /// <item><description><para>Collate: You can query available collations using the command SELECT DISTINCT collname FROM pg_collation;. If not specified, the default value is en_US.utf8.</para>
-        /// </description></item>
+        /// <item><description>The locale must be compatible with the character set specified by the CharacterSetName parameter.</description></item>
+        /// <item><description>Valid values: You can run the SELECT DISTINCT collname FROM pg_collation; command to query the valid values. If this parameter is not specified, the default value is en_US.utf8.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>en_US.utf8</para>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collate { get; set; }
 
         /// <summary>
-        /// <para>Limits the number of concurrent connections. -1 indicates unlimited.</para>
+        /// <para>The maximum number of concurrent connections. A value of -1 indicates no limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -59,15 +57,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ConnLimit { get; set; }
 
         /// <summary>
-        /// <para>Database locale parameter that specifies character classification and case conversion rules.</para>
+        /// <para>The locale setting of the database, which specifies the character classification and case conversion rules.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The locale must be compatible with the character set specified by the CharacterSetName parameter.</para>
-        /// </description></item>
-        /// <item><description><para>You can execute the SELECT DISTINCT collctype FROM pg_collation; statement to obtain the field value. The default value is en_US.utf8.</para>
-        /// </description></item>
+        /// <item><description>The locale must be compatible with the character set specified by the CharacterSetName parameter.</description></item>
+        /// <item><description>You can run the SELECT DISTINCT collctype FROM pg_collation; command to query the valid values. If this parameter is not specified, the default value is en_US.utf8.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>en_US.utf8</para>
@@ -77,7 +73,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Ctype { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-xxxxxxxxx</para>
@@ -87,11 +83,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// <list type="bullet">
-        /// <item><description>Only contain letters, digits, and underscores (_).</description></item>
-        /// <item><description>Must start with a letter.</description></item>
-        /// <item><description>Up to 63 characters in length.</description></item>
+        /// <item><description><para>It can contain only letters, digits, and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter.</para>
+        /// </description></item>
+        /// <item><description><para>It cannot exceed 63 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +101,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The database comment.</para>
+        /// <para>The description of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A user management database storing customer profiles.</para>
@@ -112,12 +111,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The owner of the table.</para>
+        /// <para>The owner of the database.</para>
         /// <list type="bullet">
-        /// <item><description>Contain lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>Must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
-        /// <item><description>Cannot start with gp.</description></item>
-        /// <item><description>Must be 2 to 16 characters in length.</description></item>
+        /// <item><description><para>It can contain only lowercase letters, digits, and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a lowercase letter and end with a lowercase letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>It cannot start with gp.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 16 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +131,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -138,7 +141,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The database size.</para>
+        /// <para>The size of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000 MB</para>
@@ -148,7 +151,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Size { get; set; }
 
         /// <summary>
-        /// <para>The database tablespace.</para>
+        /// <para>The tablespace of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg_default</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot the request.</para>
+        /// <para>The ID of the request. You can use the ID to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model operator service corresponding to the sales order. The return of this ID does not indicate that the service has been activated. You can call ListModelOperatorServices to query the subsequent status.</para>
+        /// <para>The ID of the model operator service that corresponds to the sales order. The return of this ID does not indicate that the service has been activated. You can call ListModelOperatorServices to query the subsequent status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adbpg-mo-123456789abc</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API operation to view the instance IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the recall results. Default value: false.</para>
+        /// <para>Specifies whether to return the retrieval results. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public ChatWithKnowledgeBaseStreamRequestKnowledgeParams KnowledgeParams { get; set; }
         public class ChatWithKnowledgeBaseStreamRequestKnowledgeParams : TeaModel {
             /// <summary>
-            /// <para>The method used to merge multiple knowledge bases. Default value: RRF. Valid values:</para>
+            /// <para>The method for merging multiple knowledge bases. Default value: RRF. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RRF</description></item>
             /// <item><description>Weight</description></item>
@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The reranking factor. If this value is not empty, a reranking is performed on the vector retrieval results. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
+            /// <para>The reranking factor. If this value is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>When document chunks are sparse, the reranking efficiency is low.</description></item>
-            /// <item><description>We recommend that the number of reranked items (TopK × Factor, rounded up) does not exceed 50.</description></item>
+            /// <item><description>When document chunks are sparse, reranking is slow.</description></item>
+            /// <item><description>The number of reranked items (TopK × Factor, rounded up) should not exceed 50.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public double? RerankFactor { get; set; }
 
             /// <summary>
-            /// <para>The reranking model parameters used to rerank the final merged results after multi-way merging.</para>
+            /// <para>The reranking model parameters used to rerank the merged results from multiple retrieval paths.</para>
             /// </summary>
             [NameInMap("RerankModel")]
             [Validation(Required=false)]
             public ChatWithKnowledgeBaseStreamRequestKnowledgeParamsRerankModel RerankModel { get; set; }
             public class ChatWithKnowledgeBaseStreamRequestKnowledgeParamsRerankModel : TeaModel {
                 /// <summary>
-                /// <para>This parameter can be set when RerankModel.Name is set to qwen3-rerank. It adds a description for the custom sorting task type, which guides the model to adopt different sorting strategies.</para>
+                /// <para>This parameter can be configured when RerankModel.Name is set to qwen3-rerank. It specifies the description of a custom sorting task type to guide the model to adopt different sorting strategies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The knowledge base.</para>
+            /// <para>The source knowledge bases.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SourceCollection")]
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public List<ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollection> SourceCollection { get; set; }
             public class ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollection : TeaModel {
                 /// <summary>
-                /// <para>The name of the collection to be recalled.</para>
+                /// <para>The name of the collection to be retrieved.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// <para>The namespace.</para>
                 /// <remarks>
-                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API operation to view the list.</para>
+                /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// <para>The password for the namespace.</para>
                 /// <remarks>
-                /// <para>This value is specified when you call the CreateNamespace API operation.</para>
+                /// <para>This value is specified when you call the CreateNamespace operation.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -197,10 +197,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollectionQueryParams QueryParams { get; set; }
                 public class ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollectionQueryParams : TeaModel {
                     /// <summary>
-                    /// <para>The filter condition for the data to be updated, in the SQL WHERE format.</para>
+                    /// <para>The filter condition for the data, in the SQL WHERE clause format.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>method_id=\&quot;e41695f0-2851-40ac-b21d-dd337b60d71c\&quot;</para>
+                    /// <para>method_id=&quot;e41695f0-2851-40ac-b21d-dd337b60d71c&quot;</para>
                     /// </summary>
                     [NameInMap("Filter")]
                     [Validation(Required=false)]
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollectionQueryParamsGraphSearchArgs GraphSearchArgs { get; set; }
                     public class ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollectionQueryParamsGraphSearchArgs : TeaModel {
                         /// <summary>
-                        /// <para>The top number of entities and relationship edges to return. Default value: 60.</para>
+                        /// <para>The number of top entities and relationship edges to return. Default value: 60.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>60</para>
@@ -236,11 +236,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     }
 
                     /// <summary>
-                    /// <para>The dual-path recall algorithm. Default value: empty, which means the vector and full-text scores are directly compared and sorted. Valid values:</para>
+                    /// <para>The dual-path recall algorithm. Default value: empty, which means the vector and full-text scores are directly compared and sorted.</para>
+                    /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>RRF: Reciprocal Rank Fusion. It uses a parameter k to control the fusion effect. For details, see HybridSearchArgs.</description></item>
-                    /// <item><description>Weight: Weighted sorting. It uses a parameter alpha to control the weight of vector and full-text scores before sorting. For details, see HybridSearchArgs.</description></item>
-                    /// <item><description>Cascaded: Full-text retrieval is performed first, followed by vector retrieval based on the full-text results.</description></item>
+                    /// <item><description>RRF: reciprocal rank fusion. A parameter k is used to control the fusion effect. For more information, see the HybridSearchArgs configuration.</description></item>
+                    /// <item><description>Weight: weighted sorting. A parameter alpha is used to control the weight of vector and full-text scores before sorting. For more information, see the HybridSearchArgs configuration.</description></item>
+                    /// <item><description>Cascaded: full-text retrieval is performed first, followed by vector retrieval based on the results.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -251,9 +252,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string HybridSearch { get; set; }
 
                     /// <summary>
-                    /// <para>The algorithm parameters for dual-path recall. Currently, RRF and Weight are supported:</para>
+                    /// <para>The algorithm parameters for dual-path retrieval. RRF and Weight are supported:</para>
                     /// <list type="bullet">
-                    /// <item><description>RRF: Specifies the constant k in the score calculation formula <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. Format:</description></item>
+                    /// <item><description>RRF: specifies the constant k in the score calculation formula <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. Format:</description></item>
                     /// </list>
                     /// <pre><c>{ 
                     ///    &quot;RRF&quot;: {
@@ -262,7 +263,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     /// }
                     /// </c></pre>
                     /// <list type="bullet">
-                    /// <item><description>Weight: The calculation formula is <c>alpha * vector_score + (1-alpha) * text_score</c>. The parameter alpha represents the weight of vector and full-text retrieval scores, ranging from 0 to 1. A value of 0 indicates full-text only, and 1 indicates vector only. Format:</description></item>
+                    /// <item><description>Weight: the calculation formula is <c>alpha * vector_score + (1-alpha) * text_score</c>. The parameter alpha represents the weight of vector and full-text retrieval scores, ranging from 0 to 1. A value of 0 indicates full-text only, and 1 indicates vector only. Format:</description></item>
                     /// </list>
                     /// <pre><c>{ 
                     ///    &quot;Weight&quot;: {
@@ -270,6 +271,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     ///    }
                     /// }
                     /// </c></pre>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{&quot;RRF&quot;:{&quot;k&quot;:60}}</para>
                     /// </summary>
                     [NameInMap("HybridSearchArgs")]
                     [Validation(Required=false)]
@@ -279,8 +283,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     /// <para>The method used to build the vector index. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>l2: Euclidean distance.</description></item>
-                    /// <item><description>ip: Inner product distance.</description></item>
-                    /// <item><description>cosine: Cosine similarity.</description></item>
+                    /// <item><description>ip: dot product (inner product) distance.</description></item>
+                    /// <item><description>cosine: cosine similarity.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -291,10 +295,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string Metrics { get; set; }
 
                     /// <summary>
-                    /// <para>The recall window. If this value is not empty, the context of the retrieval results is added to the response. The format is an array of two elements: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</para>
+                    /// <para>The recall window. If this value is not empty, the context of the retrieval results is additionally returned. The format is an array of two elements: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</para>
                     /// <remarks>
                     /// <list type="bullet">
-                    /// <item><description>We recommend that you use this parameter when documents are split into excessively small chunks and retrieval may lose context information.</description></item>
+                    /// <item><description>Use this parameter when document chunks are too small and retrieval may lose context information.</description></item>
                     /// <item><description>Reranking takes precedence over windowing. That is, reranking is performed before windowing.</description></item>
                     /// </list>
                     /// </remarks>
@@ -307,11 +311,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public List<long?> RecallWindow { get; set; }
 
                     /// <summary>
-                    /// <para>The reranking factor. If this value is not empty, a reranking is performed on the vector retrieval results. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
+                    /// <para>The reranking factor. If this value is not empty, the vector retrieval results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
                     /// <remarks>
                     /// <list type="bullet">
-                    /// <item><description>When document chunks are sparse, the reranking efficiency is low.</description></item>
-                    /// <item><description>We recommend that the number of reranked items (TopK × Factor, rounded up) does not exceed 50.</description></item>
+                    /// <item><description>When document chunks are sparse, reranking is slow.</description></item>
+                    /// <item><description>The number of reranked items (TopK × Factor, rounded up) should not exceed 50.</description></item>
                     /// </list>
                     /// </remarks>
                     /// 
@@ -330,7 +334,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel RerankModel { get; set; }
                     public class ChatWithKnowledgeBaseStreamRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel : TeaModel {
                         /// <summary>
-                        /// <para>This parameter can be set when RerankModel.Name is set to qwen3-rerank. It adds a description for the custom sorting task type, which guides the model to adopt different sorting strategies.</para>
+                        /// <para>This parameter can be configured when RerankModel.Name is set to qwen3-rerank. It specifies the description of a custom sorting task type to guide the model to adopt different sorting strategies.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
@@ -350,7 +354,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The metadata fields that participate in reranking. Separate multiple fields with commas (,). By default, only the document content (content) is used for reranking. The field names must be defined in the Metadata of the Collection.</para>
+                        /// <para>Specifies the metadata fields that participate in reranking. Separate multiple fields with commas (,). By default, only the document content (content) is used for reranking. The field names must be defined in the Metadata of the Collection.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>title</para>
@@ -386,7 +390,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The number of top results to return after the recall results of multiple vector collections are merged.</para>
+            /// <para>The number of top results to return after the recall results from multiple vector collections are merged.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -428,7 +432,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>You are a helpful assistant.</para>
+                /// <para>&quot;You are a helpful assistant.&quot;</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -528,7 +532,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     /// <para>The description of the function tool.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Get weather.</para>
+                    /// <para>&quot;Get the weather.&quot;</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -545,7 +549,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The JSON Schema for the function parameters.</para>
+                    /// <para>The JSON Schema of the function parameters.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{&quot;type&quot;: &quot;object&quot;, ...}</para>
@@ -585,7 +589,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PromptParams { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The ID of the region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

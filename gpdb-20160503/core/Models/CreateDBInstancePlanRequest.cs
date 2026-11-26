@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of <b>PlanType</b> and <b>PlanScheduleType</b>. The following section describes the PlanConfig parameter.</para>
+        /// <para>The detailed information about the execution plan. The value must be in JSON format. The content must be adjusted based on the values of the <b>PlanType</b> and <b>PlanScheduleType</b> parameters. For more information, see the following supplementary instructions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,18 +49,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PlanDesc { get; set; }
 
         /// <summary>
-        /// <para>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end time of the plan. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter must be specified only when <b>PlanScheduleType</b> is set to <b>Regular</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the plan stops until the plan is deleted.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required only when <b>PlanScheduleType</b> is set to <b>Regular</b>.</description></item>
+        /// <item><description>This parameter is optional. If you do not specify an end time, the plan stops when the cycle ends.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-04-17T23:00Z</para>
+        /// <para>2023-04-17T23:00:00Z</para>
         /// </summary>
         [NameInMap("PlanEndDate")]
         [Validation(Required=false)]
@@ -80,8 +78,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The execution mode of the plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpone</b>: The plan is executed later.</description></item>
-        /// <item><description><b>Regular</b>: The plan is executed periodically.</description></item>
+        /// <item><description><b>Postpone</b>: execute later.</description></item>
+        /// <item><description><b>Regular</b>: periodic execution.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -93,18 +91,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PlanScheduleType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the plan. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter must be specified only when <b>PlanScheduleType</b> is set to <b>Regular</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the current time is used.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required only when <b>PlanScheduleType</b> is set to <b>Regular</b>.</description></item>
+        /// <item><description>If you do not specify this parameter, the current time is used by default.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2022-04-17T23:00Z</para>
+        /// <para>2022-04-17T23:00:00Z</para>
         /// </summary>
         [NameInMap("PlanStartDate")]
         [Validation(Required=false)]
@@ -113,14 +109,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The type of the plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PauseResume</b>: pauses and resumes an instance.</description></item>
-        /// <item><description><b>Resize</b>: changes the number of compute nodes.</description></item>
-        /// <item><description><b>ModifySpec</b>: changes compute node specifications.</description></item>
+        /// <item><description><b>PauseResume</b>: automatic start and stop.</description></item>
+        /// <item><description><b>Resize</b>: instance upgrade/downgrade, which increases or decreases the number of compute nodes.</description></item>
+        /// <item><description><b>ModifySpec</b>: specification change, which changes the node specifications.</description></item>
+        /// <item><description><b>InPlaceModifySpec</b>: in-place elastic scaling, which scales the compute resources on the local node without changing the base specifications.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify the value to ModifySpec only for instances in elastic storage mode.</description></item>
-        /// <item><description>You can specify the value to ModifySpec only for instances in elastic storage mode.</description></item>
+        /// <item><description>Instance upgrade/downgrade is supported only for instances in Serverless mode.</description></item>
+        /// <item><description>Specification changes are supported only for instances in elastic storage mode.</description></item>
+        /// <item><description>In-place elastic scaling is supported only for high availability (HA) instances in elastic storage mode.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

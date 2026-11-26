@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Specifies the region in which to query or perform the operation.</para>
+        /// <para>The region ID. This parameter restricts the query or operation to a specific region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

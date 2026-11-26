@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DownloadSlowSQLRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z. The time must be in UTC. The end time must be later than the start time.</para>
-        /// <para>Defaults to the current time</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
+        /// <para>Default value: the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-04T17:00:00Z</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The search keyword.</para>
+        /// <para>The query keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The longest execution duration. Unit: seconds.</para>
+        /// <para>The maximum execution duration. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MinDuration { get; set; }
 
         /// <summary>
-        /// <para>Sort criteria.</para>
+        /// <para>The sorting condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{Field: SchemaName, Type: Desc}</para>
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z.</para>
-        /// <para>Defaults to the current time minus 5 minutes.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
+        /// <para>Default value: 5 minutes before the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-04T16:00:00Z</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The database account.</para>
+        /// <para>The database username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_user</para>

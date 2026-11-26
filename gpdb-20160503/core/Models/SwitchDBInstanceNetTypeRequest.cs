@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class SwitchDBInstanceNetTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the custom endpoint.</para>
+        /// <para>The prefix of the custom endpoint:</para>
         /// <list type="bullet">
-        /// <item><description>The prefix can contain lowercase letters, digits, and hyphens (-) and must start with a lowercase letter.</description></item>
-        /// <item><description>The prefix can be up to 30 characters in length.</description></item>
+        /// <item><description>It consists of lowercase letters, digits, and hyphens, and must start with a letter.</description></item>
+        /// <item><description>It can be up to 30 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test1234</para>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("ConnectionStringPrefix")]
         [Validation(Required=false)]
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2361776.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2361776.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5xxxxxxx</para>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3306</para>
+        /// <para>5432</para>
         /// </summary>
         [NameInMap("Port")]
         [Validation(Required=false)]

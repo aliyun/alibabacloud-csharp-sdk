@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeKnowledgeBaseResults { get; set; }
 
         /// <summary>
-        /// <para>The knowledge retrieval parameter object. If this parameter is not specified, only chat is performed.</para>
+        /// <para>The knowledge retrieval parameters. If this parameter is not specified, only chat is performed.</para>
         /// </summary>
         [NameInMap("KnowledgeParams")]
         [Validation(Required=false)]
         public string KnowledgeParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The large language model (LLM) call parameter object.</para>
+        /// <para>The call parameter object for the large language model (LLM).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ModelParams")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataSharePerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:10Z</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:00Z</para>

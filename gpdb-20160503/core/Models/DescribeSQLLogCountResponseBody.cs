@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The set of returned values.</para>
+            /// <para>The collection of return values.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeSQLLogCountResponseBodyItemsSeries> Series { get; set; }
             public class DescribeSQLLogCountResponseBodyItemsSeries : TeaModel {
                 /// <summary>
-                /// <para>The returned values.</para>
+                /// <para>The return values.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeSQLLogCountResponseBodyItemsSeriesValues> Values { get; set; }
                 public class DescribeSQLLogCountResponseBodyItemsSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>None.</para>
+                    /// <para>The list of audit log statistical points. Each element contains the generation time and count of audit logs.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]

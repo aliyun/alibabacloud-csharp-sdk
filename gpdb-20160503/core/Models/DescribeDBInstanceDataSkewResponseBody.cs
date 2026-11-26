@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceDataSkewResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about data skew.</para>
+        /// <para>The list of data skew details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the data skew case. All data skew cases are sorted by severity in descending order.</para>
+            /// <para>The sequence number. The entries are sorted in descending order of data skew.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string TableSize { get; set; }
 
             /// <summary>
-            /// <para>The skew ratio of the table. Valid values: 0 to 100. Unit: %. A greater value indicates that the table is more severely skewed. A smaller value indicates less impact on query performance. A value of 0 indicates no data skew.</para>
+            /// <para>The data skew percentage of the table. Valid values: 0 to 100. Unit: %. A larger value indicates more severe data skew. A smaller value is more beneficial to the query performance of the database. A value of 0 indicates no data skew.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.23</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string TableSkew { get; set; }
 
             /// <summary>
-            /// <para>The time when the table was last deleted, inserted, or updated.</para>
+            /// <para>The time when the table was last updated by a DELETE, INSERT, or UPDATE operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-09-08T20:00:00Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

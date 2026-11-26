@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpsertCollectionDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Successful</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The upload status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The upload succeeded.</description></item>
+        /// <item><description><b>fail</b>: The upload failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

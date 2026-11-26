@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The processing result of the active query.</para>
+        /// <para>The processing results of the active queries.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<HandleActiveSQLRecordResponseBodyResults> Results { get; set; }
         public class HandleActiveSQLRecordResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The process ID, which is a unique identifier of the query.</para>
+            /// <para>The process ID, which is the unique identifier of the active query SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3003925</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the processing was successful. Valid values:</para>
+            /// <para>The status of the processing result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b></description></item>
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>: The processing failed.</description></item>
+            /// <item><description><b>true</b>: The processing succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,10 +63,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>: The execution failed.</description></item>
+        /// <item><description><b>true</b>: The execution succeeded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

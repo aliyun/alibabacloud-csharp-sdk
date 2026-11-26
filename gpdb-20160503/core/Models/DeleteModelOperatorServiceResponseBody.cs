@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteModelOperatorServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the model operator service for which the release is accepted. The return of this field does not indicate that the cleanup of underlying resources is complete.</para>
+        /// <para>The ID of the model operator service accepted for release. The return of this field does not indicate that the cleanup of underlying resources is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adbpg-mo-123456789abc</para>

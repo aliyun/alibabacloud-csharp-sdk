@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You must specify at least one of ResourceId and Tag.</para>
+        /// <para>You must specify at least one of the ResourceId and Tag parameters.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The list of tags.</para>
         /// <remarks>
-        /// <para>You must specify at least one of ResourceId and Tag.</para>
+        /// <para>You must specify at least one of the ResourceId and Tag parameters.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Tag")]
@@ -61,12 +61,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public class ListSupabaseProjectTagsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key. The tag key must be 1 to 64 characters in length.</para>
-            /// <para>Tag.N is used to exactly match Supabase instances that have the specified tags bound. A tag is a key-value pair.</para>
+            /// <para><c>Tag.N</c> is used to precisely search for AnalyticDB for PostgreSQL instances that are bound to specific tags. It consists of a key-value pair.</para>
             /// <para>Valid values of N: 1 to 20.</para>
             /// <list type="bullet">
-            /// <item><description>If you specify only Tag.N.Key, all instances associated with the specified tag key are returned.</description></item>
-            /// <item><description>If you specify only Tag.N.Value, the error message <c>InvalidParameter.TagValue</c> is returned.</description></item>
-            /// <item><description>If you specify multiple tag key-value pairs at the same time, only instances that match all the specified tag key-value pairs are returned.</description></item>
+            /// <item><description>If only <c>Tag.N.Key</c> is specified, all instances associated with the tag key are returned.</description></item>
+            /// <item><description>If only <c>Tag.N.Value</c> is specified, the <c>InvalidParameter.TagValue</c> error is returned.</description></item>
+            /// <item><description>If multiple tag key-value pairs are specified, only AnalyticDB for PostgreSQL instances that match all the specified tag key-value pairs are returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set. If you specify BackupId, the details of the backup set are returned.</para>
+        /// <para>The ID of the backup set. If this parameter is specified, the details of the backup set are queried.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the information about all backup sets of an instance, including backup set IDs.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the information about all backup sets of the target instance, including the backup set IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Automated</description></item>
-        /// <item><description>Manual</description></item>
+        /// <item><description>Automated: automatic backup.</description></item>
+        /// <item><description>Manual: manual backup.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, all backup sets are returned.</para>
+        /// <para>If you do not specify this parameter, all backup modes are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Automated</para>
@@ -38,12 +38,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The state of the backup set. Valid values:</para>
+        /// <para>The status of the backup set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Success</description></item>
-        /// <item><description>Failed</description></item>
+        /// <item><description>Success: The backup is completed.</description></item>
+        /// <item><description>Failed: The backup failed.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, all backup sets are returned.</para>
+        /// <para>If you do not specify this parameter, backup sets in all states are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BackupStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The backup type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>DATA</b>: full backup.</description></item>
-        /// <item><description><b>RESTOREPOI</b>: point-in-time recovery backup.</description></item>
+        /// <item><description><b>RESTOREPOI</b>: restorable point.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the backup sets of full backup are returned.</para>
+        /// <para>If you do not specify this parameter, full backup sets are returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DATA</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2011-06-01T16:00Z</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1</para>
+        /// <para>The page number. The value must be a positive integer. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2011-06-01T15:00Z</para>

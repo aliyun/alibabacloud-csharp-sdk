@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <list type="bullet">
         /// <item><description><para>See <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a> for the list of supported data types.</para>
         /// </description></item>
-        /// <item><description><para>The \&quot;money\&quot; data type is not supported.</para>
+        /// <item><description><para>The &quot;money&quot; data type is not supported.</para>
         /// </description></item>
         /// </list>
         /// </remarks>

@@ -12,11 +12,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The name of the configuration file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>hdfs-site</description></item>
-        /// <item><description>core-site</description></item>
-        /// <item><description>yarn-site</description></item>
-        /// <item><description>mapred-site</description></item>
-        /// <item><description>hive-site</description></item>
+        /// <item><description><para>hdfs-site: hdfs-site.xml file</para>
+        /// </description></item>
+        /// <item><description><para>core-site: core-site.xml file</para>
+        /// </description></item>
+        /// <item><description><para>yarn-site: yarn-site.xml file</para>
+        /// </description></item>
+        /// <item><description><para>mapred-site: mapred-site.xml file</para>
+        /// </description></item>
+        /// <item><description><para>hive-site: hive-site.xml file</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The E-MapReduce (EMR) Hadoop cluster ID.</para>
+        /// <para>The EMR instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,9 +55,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EmrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

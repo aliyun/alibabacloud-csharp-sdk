@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The extension ID.</para>
+        /// <para>The ID of the extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>37</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ExtensionId { get; set; }
 
         /// <summary>
-        /// <para>The extension name.</para>
+        /// <para>The name of the extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zhparser</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ExtensionName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether an instance restart is required after you install the extension.</para>
+        /// <para>Indicates whether the instance must be restarted to install the extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IsInstallNeedRestart { get; set; }
 
         /// <summary>
-        /// <para>Whether it is the latest version extension.</para>
+        /// <para>Indicates whether the extension is the latest version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string LatestVersion { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>

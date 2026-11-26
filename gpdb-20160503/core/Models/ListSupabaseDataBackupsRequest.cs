@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The backup mode. Valid values: Automated: automatic backup performed by the system; Manual: manual backup.</para>
+        /// <para>The backup pattern. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Automated: automatic backup.</description></item>
+        /// <item><description>Manual: manual backup.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Automated</para>
@@ -30,7 +34,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The status of the backup set. Valid values: Success: successful; Failed: failed.</para>
+        /// <para>The status of the backup set. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Success: successful.</description></item>
+        /// <item><description>Failed: failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -40,7 +48,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BackupStatus { get; set; }
 
         /// <summary>
-        /// <para>The backup type. Valid values: DATA: full backup; RESTOREPOI: restorable point.</para>
+        /// <para>The backup type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DATA: full backup.</description></item>
+        /// <item><description>RESTOREPOI: restorable point.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DATA</para>
@@ -70,7 +82,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The paging query token. Do not specify this parameter for the first request. For subsequent requests, specify the NextToken value returned by the previous response.</para>
+        /// <para>The paging mark for paged query. Do not specify this parameter for the first request. For subsequent requests, specify the NextToken value returned by the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -80,7 +92,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than 0 and not exceed the maximum value of an integer. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of an integer. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

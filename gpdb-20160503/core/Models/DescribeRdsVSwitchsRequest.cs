@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list and zone list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs and zone IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -53,15 +53,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID of the instance.</para>
+        /// <para>The VPC ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPC IDs.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter must be specified.</para>
-        /// </description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query available VPC IDs.</description></item>
+        /// <item><description>This parameter is required.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp*******************</para>
@@ -71,9 +69,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone.</para>
+        /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list and zone list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs and zone IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The recommended upgrade version in the format of &quot;major version,minor version&quot; (separated by a comma). The first value is the target version for major engine version upgrade, and the second value is the target version for minor engine version update.</para>
+        /// <para>The recommended upgrade version in the format of &quot;major version,minor version&quot; (separated by a comma). The former is the target major major engine version upgrade, and the latter is the target minor major engine version upgrade.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mm.v7.4.2.7-202608031659,mm.v7.3.2.12-202608071438</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceDiagnosisSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The group ID.</para>
+        /// <para>The list of node details for the instance.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NodeAddress { get; set; }
 
             /// <summary>
-            /// <para>The node group ID.</para>
+            /// <para>The group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -77,12 +77,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NodePort { get; set; }
 
             /// <summary>
-            /// <para>The initial role of the node. Valid values:</para>
+            /// <para>The original role of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>primary</b>: primary node.</description></item>
-            /// <item><description><b>mirror</b>: secondary node.</description></item>
+            /// <item><description><b>primary</b>: The primary node.</description></item>
+            /// <item><description><b>mirror</b>: The mirror node.</description></item>
             /// </list>
-            /// <para>If the value of this parameter is the same as that of <b>NodeRole</b>, no primary/secondary switchover occurs. If the value of this parameter is different from that of <b>NodeRole</b>, a primary/secondary switchover occurs.</para>
+            /// <para>If the value of this parameter is the same as the value of the <b>NodeRole</b> parameter, no role reversal (primary/secondary switchover) has occurred. If the values are different, a role reversal has occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>primary</para>
@@ -92,11 +92,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NodePreferredRole { get; set; }
 
             /// <summary>
-            /// <para>The data synchronization state of the node. Valid values:</para>
+            /// <para>The data synchronization status of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Synced</b>: The node data is synchronized.</description></item>
-            /// <item><description><b>Not Syncing</b>: The node data is not synchronized.</description></item>
-            /// <item><description><b>No sync required</b>: Data synchronization is not required. This value may be returned only for the coordinator node.</description></item>
+            /// <item><description><b>Synced</b>: The data is synchronized.</description></item>
+            /// <item><description><b>Not Syncing</b>: The data is not synchronized.</description></item>
+            /// <item><description><b>No sync required</b>: No synchronization is required. This mode applies only to coordinator nodes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The current role of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>primary</b>: primary node.</description></item>
-            /// <item><description><b>mirror</b>: secondary node.</description></item>
+            /// <item><description><b>primary</b>: The primary node.</description></item>
+            /// <item><description><b>mirror</b>: The mirror node.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NodeRole { get; set; }
 
             /// <summary>
-            /// <para>The running state of the node. Valid values:</para>
+            /// <para>The running status of the node. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>UP</b>: The node is running.</description></item>
-            /// <item><description><b>DOWN</b>: The node is faulty.</description></item>
+            /// <item><description><b>DOWN</b>: The node has failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,11 +135,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NodeStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the node. Valid values:</para>
+            /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>master</b>: primary coordinator node.</description></item>
-            /// <item><description><b>slave</b>: standby coordinator node.</description></item>
-            /// <item><description><b>segment</b>: compute node.</description></item>
+            /// <item><description><b>master</b>: The coordinator node.</description></item>
+            /// <item><description><b>slave</b>: The secondary coordinator node.</description></item>
+            /// <item><description><b>segment</b>: The compute node.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The state information about the coordinator node.</para>
+        /// <para>The statistics information about the status of coordinator nodes.</para>
         /// </summary>
         [NameInMap("MasterStatusInfo")]
         [Validation(Required=false)]
         public DescribeDBInstanceDiagnosisSummaryResponseBodyMasterStatusInfo MasterStatusInfo { get; set; }
         public class DescribeDBInstanceDiagnosisSummaryResponseBodyMasterStatusInfo : TeaModel {
             /// <summary>
-            /// <para>The number of abnormal nodes.</para>
+            /// <para>The number of nodes in the abnormal state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? ExceptionNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The number of normal nodes.</para>
+            /// <para>The number of nodes in the normal state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? NormalNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes whose roles are reversed.</para>
+            /// <para>The number of nodes whose roles have been switched due to a primary/secondary switchover.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? NotSyncingNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes whose roles are normal.</para>
+            /// <para>The number of nodes with normal roles.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -241,14 +241,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state information about compute nodes.</para>
+        /// <para>The statistics information about the status of compute nodes.</para>
         /// </summary>
         [NameInMap("SegmentStatusInfo")]
         [Validation(Required=false)]
         public DescribeDBInstanceDiagnosisSummaryResponseBodySegmentStatusInfo SegmentStatusInfo { get; set; }
         public class DescribeDBInstanceDiagnosisSummaryResponseBodySegmentStatusInfo : TeaModel {
             /// <summary>
-            /// <para>The number of abnormal nodes.</para>
+            /// <para>The number of nodes in the abnormal state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? ExceptionNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The number of normal nodes.</para>
+            /// <para>The number of nodes in the normal state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? NormalNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes whose roles are reversed.</para>
+            /// <para>The number of nodes whose roles have been switched due to a primary/secondary switchover.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? NotSyncingNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes whose roles are normal.</para>
+            /// <para>The number of nodes with normal roles.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

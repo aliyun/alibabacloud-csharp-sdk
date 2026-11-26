@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDiagnosisRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.</para>
+        /// <para>The list of SQL queries.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the query. Unit: seconds.</para>
+            /// <para>The total execution duration of the query. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the query. It is a unique identifier of the query.</para>
+            /// <para>The ID of the query, which is the unique identifier of the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022042612465401000000012903151998970</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SQLStmt { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the SQL statement needs to be truncated. Valid values:</para>
+            /// <para>Specifies whether the SQL statement is truncated. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The SQL statement needs to be truncated.</description></item>
-            /// <item><description><b>false</b>: The SQL statement does not need to be truncated.</description></item>
+            /// <item><description><b>true</b>: The SQL statement is truncated.</description></item>
+            /// <item><description><b>false</b>: The SQL statement is not truncated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? SQLTruncated { get; set; }
 
             /// <summary>
-            /// <para>The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.</para>
+            /// <para>The truncation threshold of the SQL statement. The value is the number of characters in the string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5120</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public int? SQLTruncatedThreshold { get; set; }
 
             /// <summary>
-            /// <para>The ID of the session that contains the query.</para>
+            /// <para>The ID of the session to which the query belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SessionID { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The start time of the query. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1651877940000</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution state of the query. Valid values:</para>
+            /// <para>The execution status of the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>running</b>: The query is being executed.</description></item>
-            /// <item><description><b>finished</b>: The query is complete.</description></item>
+            /// <item><description><b>running</b>: The query is running.</description></item>
+            /// <item><description><b>finished</b>: The query is completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The name of the database account.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adbpguser</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

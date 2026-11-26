@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>API KEY ID。</para>
+        /// <para>The API key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

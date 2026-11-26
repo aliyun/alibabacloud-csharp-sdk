@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The performance metric series.</para>
+            /// <para>The series of the performance metric.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The list of performance metric values, which consists of one or more values.</para>
+                /// <para>The list of performance metric values. The list contains one or more values.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues> Values { get; set; }
                 public class DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>The performance metric value.</para>
+                    /// <para>The value of the performance metric.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]

@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     /// <para>The document content.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The weather in Hangzhou is sunny.</para>
+                    /// <para>The weather in Hangzhou is sunny</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>The list of tool invocation responses.</para>
+                    /// <para>The list of tool calling invoke responses.</para>
                     /// </summary>
                     [NameInMap("ToolCalls")]
                     [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public ChatWithKnowledgeBaseResponseBodyChatCompletionChoicesMessageToolCallsFunction Function { get; set; }
                         public class ChatWithKnowledgeBaseResponseBodyChatCompletionChoicesMessageToolCallsFunction : TeaModel {
                             /// <summary>
-                            /// <para>The arguments of the called function.</para>
+                            /// <para>The arguments for the called function.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{&quot;city&quot;:&quot;hangzhou&quot;}</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The ordinal number of the tool invocation.</para>
+                        /// <para>The ordinal number of the tool calling invoke.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <para>The document content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>AnalyticDB PostgreSQL vector database.</para>
+                /// <para>ADBPG vector database</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The public URL of the image in the query result. The default validity period is 2 hours. You can specify the validity period by using the UrlExpiration request parameter.</para>
+                /// <para>The public URL of the query result image. The default validity period is 2 hours. You can specify the validity period by using the UrlExpiration request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a">http://viapi-customer-pop.oss-cn-shanghai.aliyuncs.com/b4d8_207196811002111319_570c0e199f03428f812ab21fcc00dd6a</a></para>
@@ -320,6 +320,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
                 /// <summary>
                 /// <para>The metadata.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;update_time&quot;:1749348435357,&quot;title&quot;:&quot;example&quot;}</para>
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
@@ -336,7 +339,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public double? RerankScore { get; set; }
 
                 /// <summary>
-                /// <para>The source of the retrieve results. 1 indicates AISearch, 2 indicates full-text index, and 3 indicates dual-channel recall.</para>
+                /// <para>The source of the retrieve result. A value of 1 indicates AISearch. A value of 2 indicates full-text index. A value of 3 indicates dual-channel recall.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -346,7 +349,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? RetrievalSource { get; set; }
 
                 /// <summary>
-                /// <para>The similarity score of this data entry. The scoring algorithm is related to the algorithm specified when the index is created, such as l2, ip, or cosine.</para>
+                /// <para>The similarity score of this data entry. The scoring algorithm depends on the algorithm specified during index creation, such as l2, ip, or cosine.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -384,8 +387,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The API execution status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b>: The execution is successful.</description></item>
-            /// <item><description><b>fail</b>: The execution fails.</description></item>
+            /// <item><description><b>success</b>: The execution was successful.</description></item>
+            /// <item><description><b>fail</b>: The execution failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -406,7 +409,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? Tokens { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens or entries consumed for document understanding or embedding.</para>
+            /// <para>The number of tokens or items consumed for document understanding or embedding.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
@@ -415,7 +418,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// <para>The number of tokens used for vectorization.</para>
                 /// <remarks>
-                /// <para>A token is the smallest unit into which the input text is split. A token can be a word, a phrase, a punctuation mark, or a character.</para>
+                /// <para>A token is the smallest unit into which input text is divided. A token can be a word, a phrase, a punctuation mark, or a character.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -442,8 +445,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: The operation is successful.</description></item>
-        /// <item><description><b>fail</b>: The operation fails.</description></item>
+        /// <item><description><b>success</b>: Successful.</description></item>
+        /// <item><description><b>fail</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

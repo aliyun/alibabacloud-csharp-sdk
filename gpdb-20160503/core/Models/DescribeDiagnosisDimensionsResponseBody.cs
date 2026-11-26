@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDiagnosisDimensionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The names of the databases.</para>
+        /// <para>The database names.</para>
         /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The names of the database accounts.</para>
+        /// <para>The usernames.</para>
         /// </summary>
         [NameInMap("UserNames")]
         [Validation(Required=false)]

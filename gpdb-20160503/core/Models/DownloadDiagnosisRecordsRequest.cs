@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DownloadDiagnosisRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-07T07:59Z</para>
@@ -45,12 +45,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the file that contains the query diagnostic information. Valid values:</para>
+        /// <para>The language of the downloaded file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: simplified Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
-        /// <item><description><b>ja</b>: Japanese</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese</description></item>
+        /// <item><description><b>zh</b>: Simplified Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>ja</b>: Japanese.</description></item>
+        /// <item><description><b>zh-tw</b>: Traditional Chinese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,15 +61,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The filter condition on queries. The value is in the JSON format. Valid values:</para>
+        /// <para>The query filter conditions in JSON format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</c>: filters the top 100 queries that are the most time-consuming.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: filters completed queries.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</c>: filters running queries.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Max&quot;:&quot;200&quot;}</c>: filters the queries that consume less than 200 milliseconds.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;200&quot;,&quot;Max&quot;:&quot;60000&quot;}</c>: filters the queries that consume 200 milliseconds or more and less than 1 minute.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;60000&quot;}</c>: filters the queries that consume 1 minute or more.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</c>: filters the queries that consume 30 milliseconds or more and less than 50 milliseconds. You can customize a filter condition by setting <b>Min</b> and <b>Max</b>.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</c>: The 100 queries with the longest execution duration.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: Completed queries.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</c>: Running queries.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Max&quot;:&quot;200&quot;}</c>: Short-duration queries, which are queries with an execution duration of less than 200 milliseconds.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;200&quot;,&quot;Max&quot;:&quot;60000&quot;}</c>: Medium-duration queries, which are queries with an execution duration of 200 milliseconds or more but less than 1 minute.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;60000&quot;}</c>: Long-duration queries, which are queries with an execution duration of 1 minute or more.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</c>: Custom-duration queries. You can specify the minimum and maximum execution duration of the queries. <b>Min</b> specifies the minimum execution duration, and <b>Max</b> specifies the maximum execution duration. Unit: milliseconds.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string QueryCondition { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-05-07T06:59Z</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adbpguser</para>

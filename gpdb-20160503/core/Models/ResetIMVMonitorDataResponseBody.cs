@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ResetIMVMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: Execution failed.</description></item>
-        /// <item><description><b>true</b>: Execution succeeded.</description></item>
+        /// <item><description><b>false</b>: The execution failed.</description></item>
+        /// <item><description><b>true</b>: The execution succeeded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

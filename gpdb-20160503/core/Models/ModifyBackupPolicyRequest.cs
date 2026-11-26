@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for which data backups are retained. Default value: 7. Maximum value: 7. Valid values: 1 to 7.</para>
+        /// <para>The data backup retention period. Default value: 7. Maximum value: 7. Valid values: 1 to 7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specified region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,9 +36,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic recovery point creation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Disabled.
-        /// Default value: true.</description></item>
+        /// <item><description>true (default): enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,13 +79,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The frequency of recovery points. Valid values:</para>
+        /// <para>The recovery point frequency. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Every hour.</description></item>
-        /// <item><description><b>2</b>: Every two hours.</description></item>
-        /// <item><description><b>4</b>: Every four hours.</description></item>
-        /// <item><description><b>8</b>: Every eight hours.
-        /// Default value: <b>1</b>.</description></item>
+        /// <item><description><b>1</b> (default): every hour.</description></item>
+        /// <item><description><b>2</b>: every two hours.</description></item>
+        /// <item><description><b>4</b>: every four hours.</description></item>
+        /// <item><description><b>8</b>: every eight hours.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

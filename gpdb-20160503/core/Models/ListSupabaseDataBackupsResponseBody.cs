@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupEndTime { get; set; }
 
             /// <summary>
-            /// <para>The local time representation of the backup end time. Format: yyyy-MM-ddTHH:mm:ssZ. The current return value is in Beijing time (UTC+8). The trailing Z is a fixed character in the compatibility format and does not indicate the zero time zone. To parse the time in a standard format, use BackupEndTime.</para>
+            /// <para>The local time representation of the backup end time. Format: yyyy-MM-ddTHH:mm:ssZ. The returned value is in Beijing time (UTC+8). The trailing Z is a fixed character for format compatibility and does not indicate the UTC+0 time zone. To parse the time in a standard format, use BackupEndTime.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-09T09:24:44Z</para>
@@ -37,7 +37,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupEndTimeLocal { get; set; }
 
             /// <summary>
-            /// <para>The backup method. Valid values: Physical: physical backup; Snapshot: snapshot backup.</para>
+            /// <para>The backup method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Physical: physical backup.</description></item>
+            /// <item><description>Snapshot: snapshot backup.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Snapshot</para>
@@ -48,15 +52,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
             /// <summary>
             /// <para>The backup mode.</para>
-            /// <para>Valid values for full backups:</para>
+            /// <para>Valid values for automatic backups:</para>
             /// <list type="bullet">
-            /// <item><description><b>Automated</b>: automatic backup performed by the system.</description></item>
+            /// <item><description><b>Automated</b>: automatic system backup.</description></item>
             /// <item><description><b>Manual</b>: manual backup.</description></item>
             /// </list>
             /// <para>Valid values for restorable points:</para>
             /// <list type="bullet">
-            /// <item><description><b>Automated</b>: restorable point after a full backup.</description></item>
-            /// <item><description><b>Manual</b>: restorable point manually triggered by the user.</description></item>
+            /// <item><description><b>Automated</b>: restorable point after a automatic backup.</description></item>
+            /// <item><description><b>Manual</b>: restorable point manually triggered by a user.</description></item>
             /// <item><description><b>Period</b>: restorable point triggered periodically based on the backup policy.</description></item>
             /// </list>
             /// 
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupStartTime { get; set; }
 
             /// <summary>
-            /// <para>The local time representation of the backup start time. Format: yyyy-MM-ddTHH:mm:ssZ. The current return value is in Beijing time (UTC+8). The trailing Z is a fixed character in the compatibility format and does not indicate the zero time zone. To parse the time in a standard format, use BackupStartTime.</para>
+            /// <para>The local time representation of the backup start time. Format: yyyy-MM-ddTHH:mm:ssZ. The returned value is in Beijing time (UTC+8). The trailing Z is a fixed character for format compatibility and does not indicate the UTC+0 time zone. To parse the time in a standard format, use BackupStartTime.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-09T09:23:02Z</para>
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BaksetName { get; set; }
 
             /// <summary>
-            /// <para>The consistency point in time. The value is a UNIX timestamp in seconds. For a full backup, this indicates the consistency point in time of the backup. For a restorable point, this indicates the point in time to which data can be restored.</para>
+            /// <para>The consistency point in time. The value is a UNIX timestamp in seconds. For a full backup, this parameter indicates the consistency point in time of the backup. For a restorable point, this parameter indicates the restorable point in time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1791508983</para>

@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned.</para>
-        /// <para>This parameter is returned only if the request fails.</para>
+        /// <para>The error message.</para>
+        /// <para>This parameter is returned only when the API call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Failed to modify vector configuration.</para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The API execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The execution succeeded.</description></item>
+        /// <item><description><b>false</b>: The execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

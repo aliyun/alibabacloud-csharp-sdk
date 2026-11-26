@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service ID.</para>
+        /// <para>The ID of the service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

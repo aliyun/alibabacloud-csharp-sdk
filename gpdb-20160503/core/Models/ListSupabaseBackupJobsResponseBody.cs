@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupMode { get; set; }
 
             /// <summary>
-            /// <para>The status of the backup task. Known statuses include: schedule (waiting for scheduling) and backup (in progress).</para>
+            /// <para>The status of the backup task. Known statuses include: schedule (waiting to be scheduled) and backup (in progress).</para>
             /// 
             /// <b>Example:</b>
             /// <para>backup</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BackupStatus { get; set; }
 
             /// <summary>
-            /// <para>The progress of the backup task in percentage, such as 0%. This value may be an empty string when the task is in the schedule state.</para>
+            /// <para>The progress percentage of the backup task, such as 0%. This value may be an empty string when the task is in the schedule state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0%</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Process { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup task. The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format. This value may be an empty string when the task is in the schedule state.</para>
+            /// <para>The start time of the backup task. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format. This value may be an empty string when the task is in the schedule state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-09T04:37:01Z</para>

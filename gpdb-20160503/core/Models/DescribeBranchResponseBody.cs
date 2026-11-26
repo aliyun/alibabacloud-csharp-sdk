@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeBranchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The branch information. Each element represents a Supabase branch.</para>
+        /// <para>The list of branches. Each element represents a Supabase branch.</para>
         /// </summary>
         [NameInMap("Branch")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string BranchId { get; set; }
 
             /// <summary>
-            /// <para>The branch name.</para>
+            /// <para>The name of the branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The branch description.</para>
+            /// <para>The description of the branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test branch</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the branch expires and is automatically deleted, in ISO 8601 UTC format.</para>
+            /// <para>The time when the branch is automatically deleted upon expiration, in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-08T09:11:12Z</para>
@@ -77,8 +77,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>The initialization source of the branch.</para>
-            /// <para>Valid values:</para>
+            /// <para>The initialization source of the branch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ParentData: Copies the schema and data from the parent branch. This is the default value.</description></item>
             /// <item><description>SchemaOnly: Copies only the schema structure.</description></item>
@@ -92,7 +91,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string InitSource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default branch.</para>
+            /// <para>Indicates whether the branch is the default branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -102,7 +101,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The parent branch ID, which specifies the parent branch of a new branch or a query condition.</para>
+            /// <para>The ID of the parent branch, which is used to specify the parent branch for a new branch or a query condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-main</para>
@@ -112,7 +111,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentBranchId { get; set; }
 
             /// <summary>
-            /// <para>The parent branch name. This value is empty or displayed as - for the primary branch.</para>
+            /// <para>The name of the parent branch. For a primary branch, this value is empty or displayed as a hyphen (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>main</para>
@@ -122,7 +121,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentBranchName { get; set; }
 
             /// <summary>
-            /// <para>The LSN of the parent branch at the time this branch was created.</para>
+            /// <para>The LSN of the parent branch when the branch was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0/3522648</para>
@@ -132,11 +131,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentLSN { get; set; }
 
             /// <summary>
-            /// <para>The data synchronization point in time selected from the parent branch when this branch was created, in ISO 8601 UTC format.</para>
-            /// <para>Description:</para>
+            /// <para>The data synchronization point in time selected when the branch was created from the parent branch, in ISO 8601 UTC format.</para>
+            /// <para>Note:</para>
             /// <list type="bullet">
-            /// <item><description>For child branches, this value indicates the point in time of the parent branch selected during creation.</description></item>
-            /// <item><description>If no parent branch exists, the value 1970-01-01T00:00:00.000Z is returned.</description></item>
+            /// <item><description>For a child branch, the point in time of the parent branch selected during creation is returned.</description></item>
+            /// <item><description>If the branch has no parent branch, 1970-01-01T00:00:00.000Z is returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,7 +146,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The Supabase project ID that corresponds to the primary branch.</para>
+            /// <para>The ID of the Supabase project that corresponds to the primary branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spb-xxxx</para>
@@ -157,7 +156,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether branch protection is enabled. A value of true indicates that branch protection is enabled. A value of false indicates that branch protection is disabled.</para>
+            /// <para>Indicates whether branch protection is enabled. A value of true indicates that branch protection is enabled, and a value of false indicates that branch protection is disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -167,11 +166,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? Protected { get; set; }
 
             /// <summary>
-            /// <para>The service type.</para>
-            /// <para>Valid values:</para>
+            /// <para>The service type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Supabase: Supabase service.</description></item>
-            /// <item><description>Memory: Memory service.</description></item>
+            /// <item><description>Supabase: Supabase service</description></item>
+            /// <item><description>Memory: Memory service</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,7 +180,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The Supabase project ID that corresponds to the current branch.</para>
+            /// <para>The ID of the Supabase project that corresponds to the current branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spb-xxxx</para>
@@ -192,7 +190,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SpbProjectId { get; set; }
 
             /// <summary>
-            /// <para>The branch status.</para>
+            /// <para>The status of the branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -202,7 +200,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of branch tags.</para>
+            /// <para>The list of tags for the branch.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

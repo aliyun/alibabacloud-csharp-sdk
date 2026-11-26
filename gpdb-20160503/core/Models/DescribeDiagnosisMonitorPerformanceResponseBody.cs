@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDiagnosisMonitorPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of query execution.</para>
+        /// <para>The list of SQL queries.</para>
         /// </summary>
         [NameInMap("Performances")]
         [Validation(Required=false)]
         public List<DescribeDiagnosisMonitorPerformanceResponseBodyPerformances> Performances { get; set; }
         public class DescribeDiagnosisMonitorPerformanceResponseBodyPerformances : TeaModel {
             /// <summary>
-            /// <para>The execution duration of the query. Unit: milliseconds.</para>
+            /// <para>The total execution time of the query. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The ID of the query. It is a unique identifier of the query.</para>
+            /// <para>The ID of the query, which is the unique identifier of the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022042612465401000000012903151998970</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string QueryID { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The start time of the query. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1651877940000</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution state of the query. Valid values:</para>
+            /// <para>The execution status of the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>running</b>: The query is being executed.</description></item>
-            /// <item><description><b>finished</b>: The query is complete.</description></item>
+            /// <item><description><b>running</b>: Running.</description></item>
+            /// <item><description><b>finished</b>: Completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The name of the database account.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adbpguser</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PerformancesThreshold { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the queries are truncated when the number of queries exceeds the threshold. Valid values:</para>
+        /// <para>Indicates whether the number of queries is truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The queries are truncated.</description></item>
-        /// <item><description><b>false</b>: The queries are not truncated.</description></item>
+        /// <item><description><b>true</b>: Truncated.</description></item>
+        /// <item><description><b>false</b>: Not truncated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>Instance ID of the instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The wait period for the instance that has no traffic to become idle. Minimum value: 60. Default value: 600. Unit: seconds.</para>
+        /// <para>The idle release wait time. After the instance has no service traffic for the specified duration, the instance enters the idle state. Unit: seconds. Minimum value: 60. Default value: 600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? IdleTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The threshold of computing resources. Valid values: 8 to 32. Unit: AnalyticDB Compute Units (ACUs).</para>
+        /// <para>The compute resource threshold. Valid values: 8 to 32. Unit: ACU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>

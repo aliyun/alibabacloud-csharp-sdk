@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PostPay: pay-as-you-go. This is the default value.</description></item>
-        /// <item><description>PrePay: subscription. You must also specify UsedTime and Period.</description></item>
+        /// <item><description>PrePay: subscription. If you set this parameter to PrePay, you must also specify UsedTime and Period.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is required when PayType is set to PrePay. Valid values: Month and Year. This parameter is used together with UsedTime and is not required for pay-as-you-go.</para>
+        /// <para>The unit of the subscription duration. This parameter is required when PayType is set to PrePay. Valid values: Month and Year. This parameter is used together with UsedTime. This parameter is not required for pay-as-you-go services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the service belongs. This parameter is required and must be consistent with the request endpoint and the purchase region.</para>
+        /// <para>The ID of the region where the service resides. This parameter is required and must be consistent with the request endpoint and the purchase region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required when PayType is set to PrePay. The value must be a positive integer string, and the unit is specified by Period. The actual available duration is subject to the sales configurations. This parameter is not required for pay-as-you-go.</para>
+        /// <para>The subscription duration. This parameter is required when PayType is set to PrePay. The value must be a string of a positive integer, and the unit is specified by Period. The actual available subscription duration is subject to the sales configurations. This parameter is not required for pay-as-you-go services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

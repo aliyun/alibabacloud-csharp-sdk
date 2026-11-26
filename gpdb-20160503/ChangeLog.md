@@ -1,3 +1,7 @@
+2026-11-26 Version: 3.16.1
+- Update API CreateDBInstance: add request parameters AutoRenew.
+
+
 2026-11-13 Version: 3.16.0
 - Support API CreateModelOperatorService.
 - Support API DeleteModelOperatorApiKey.

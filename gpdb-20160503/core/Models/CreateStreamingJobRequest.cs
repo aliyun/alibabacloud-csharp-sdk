@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         ///         TYPE: int
         ///       FORMAT: delimited
         ///       DELIMITED_OPTION:
-        ///         DELIMITER: \&quot;|\&quot;
+        ///         DELIMITER: &quot;|&quot;
         ///     VALUE:
         ///       COLUMNS:
         ///       - TYPE: integer
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         ///         NAME: l_comment
         ///       FORMAT: delimited
         ///       DELIMITED_OPTION:
-        ///         DELIMITER: \&quot;|\&quot;
+        ///         DELIMITER: &quot;|&quot;
         ///     ERROR_LIMIT: 10
         ///   OUTPUT:
         ///     SCHEMA: adbpgss_test

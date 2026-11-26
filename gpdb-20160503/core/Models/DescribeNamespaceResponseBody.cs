@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The namespace information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;{}&quot;}</para>
         /// </summary>
         [NameInMap("NamespaceInfo")]
         [Validation(Required=false)]
@@ -67,10 +70,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution status of the API operation. Valid values:</para>
+        /// <para>The API execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: The execution is successful.</description></item>
-        /// <item><description><b>fail</b>: The execution fails.</description></item>
+        /// <item><description><b>success</b>: The execution succeeded.</description></item>
+        /// <item><description><b>fail</b>: The execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

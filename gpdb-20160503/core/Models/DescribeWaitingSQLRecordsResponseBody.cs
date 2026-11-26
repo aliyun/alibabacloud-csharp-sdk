@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeWaitingSQLRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of lock diagnostics records.</para>
+        /// <para>The list of queries.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Database { get; set; }
 
             /// <summary>
-            /// <para>The ID of the process that uniquely identifies the query.</para>
+            /// <para>The process ID, which is the unique identifier of the SQL statement for the waiting query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string PID { get; set; }
 
             /// <summary>
-            /// <para>The SQL statement of the query.</para>
+            /// <para>The SQL text of the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Select * from t1,t2 where t1.id=t2.id;</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SQLStmt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the session that contains the query.</para>
+            /// <para>The ID of the session to which the query belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SessionID { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. This value is in the timestamp format. Unit: milliseconds.</para>
+            /// <para>The start time of the query. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1660902033374</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The waiting state of the query. Valid values:</para>
+            /// <para>The wait status of the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>LockWaiting</b></description></item>
-            /// <item><description><b>ResourceWaiting</b></description></item>
+            /// <item><description><b>LockWaiting</b>: The query is waiting for a lock.</description></item>
+            /// <item><description><b>ResourceWaiting</b>: The query is waiting for resources.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The database account that is used to perform the query.</para>
+            /// <para>The user who executed the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testUser</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string User { get; set; }
 
             /// <summary>
-            /// <para>The waiting period of the query. Unit: milliseconds.</para>
+            /// <para>The wait time of the SQL statement, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26911000</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

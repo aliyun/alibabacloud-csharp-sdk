@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The name of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The name of the account.</para>
+        /// <para>The password of the database account.</para>
+        /// <list type="bullet">
+        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>Special characters include: <c>!@#$%^&amp;*()_+-=</c></description></item>
+        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +37,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>Before you call this operation, make sure that the following requirements are met:</para>
-        /// <list type="bullet">
-        /// <item><description>The instance is in the running state.</description></item>
-        /// <item><description>The instance is not locked.</description></item>
-        /// </list>
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the target region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

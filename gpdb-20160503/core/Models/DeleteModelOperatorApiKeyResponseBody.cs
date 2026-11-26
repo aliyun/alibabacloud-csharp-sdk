@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteModelOperatorApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the API key for which the deletion is accepted. The return of this field does not indicate that the underlying cleanup is complete.</para>
+        /// <para>The ID of the API key whose deletion is accepted. The return of this field does not indicate that the underlying cleanup is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to locate and troubleshoot the request.</para>
+        /// <para>The request ID. You can use this ID to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeRdsVpcsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>53924AF0-1628-5AA2-9C95-D4**********</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried VPCs.</para>
+        /// <para>The list of VPCs.</para>
         /// </summary>
         [NameInMap("Vpcs")]
         [Validation(Required=false)]
         public DescribeRdsVpcsResponseBodyVpcs Vpcs { get; set; }
         public class DescribeRdsVpcsResponseBodyVpcs : TeaModel {
             /// <summary>
-            /// <para>The queried VPC.</para>
+            /// <para>The VPC information.</para>
             /// </summary>
             [NameInMap("Vpc")]
             [Validation(Required=false)]
             public List<DescribeRdsVpcsResponseBodyVpcsVpc> Vpc { get; set; }
             public class DescribeRdsVpcsResponseBodyVpcsVpc : TeaModel {
                 /// <summary>
-                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// <para><b>[Deprecated]</b> This parameter is deprecated. No value is returned for this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string AliUid { get; set; }
 
                 /// <summary>
-                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// <para><b>[Deprecated]</b> This parameter is deprecated. No value is returned for this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// <para><b>[Deprecated]</b> This parameter is deprecated. No value is returned for this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                /// <para><b>[Deprecated]</b> This parameter is deprecated. No value is returned for this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// <para>Indicates whether the VPC is the default VPC. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><b>true</b>: yes</description></item>
+                /// <item><description><b>false</b>: no</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the instance.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// <para>The state of the VPC. If <b>Available</b> is returned, the VPC is available.</para>
+                /// <para>The status of the VPC. A value of <b>Available</b> indicates that the VPC is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The queried vSwitches.</para>
+                /// <para>The list of vSwitches.</para>
                 /// </summary>
                 [NameInMap("VSwitchs")]
                 [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string CidrBlock { get; set; }
 
                     /// <summary>
-                    /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                    /// <para><b>[Deprecated]</b> This parameter is deprecated. No value is returned for this parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string GmtCreate { get; set; }
 
                     /// <summary>
-                    /// <para>An invalid parameter. It is no longer returned when you call this operation.</para>
+                    /// <para><b>[Deprecated]</b> This parameter is deprecated. No value is returned for this parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -157,8 +157,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     /// <summary>
                     /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b></description></item>
+                    /// <item><description><b>true</b>: yes</description></item>
+                    /// <item><description><b>false</b>: no</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public bool? IsDefault { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the zone to which the vSwitch belongs.</para>
+                    /// <para>The zone to which the vSwitch belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-i</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string IzNo { get; set; }
 
                     /// <summary>
-                    /// <para>The state of the vSwitch. If <b>Available</b> is returned, the vSwitch is available.</para>
+                    /// <para>The status of the vSwitch. A value of <b>Available</b> indicates that the vSwitch is available.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Available</para>

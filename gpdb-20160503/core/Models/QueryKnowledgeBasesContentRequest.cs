@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public QueryKnowledgeBasesContentRequestMergeMethodArgsWeight Weight { get; set; }
             public class QueryKnowledgeBasesContentRequestMergeMethodArgsWeight : TeaModel {
                 /// <summary>
-                /// <para>The array of weights for each SourceCollection.</para>
+                /// <para>The weight array for each SourceCollection.</para>
                 /// </summary>
                 [NameInMap("Weights")]
                 [Validation(Required=false)]
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public double? RerankFactor { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the reranking model used to rerank the merged multi-channel results.</para>
+        /// <para>The reranking model parameters used to rerank the merged multi-channel results.</para>
         /// </summary>
         [NameInMap("RerankModel")]
         [Validation(Required=false)]
         public QueryKnowledgeBasesContentRequestRerankModel RerankModel { get; set; }
         public class QueryKnowledgeBasesContentRequestRerankModel : TeaModel {
             /// <summary>
-            /// <para>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Adds a custom description for the sorting task type. You can use this parameter to guide the model to adopt different sorting strategies.</para>
+            /// <para>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Adds a custom sorting task type description. This parameter guides the model to adopt different sorting strategies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The name of the document collection.</para>
             /// <remarks>
-            /// <para>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</para>
+            /// <para>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view the created document collections.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The namespace.</para>
             /// <remarks>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to view the namespace list.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -202,14 +202,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string NamespacePassword { get; set; }
 
             /// <summary>
-            /// <para>The filter condition for the data to be updated, in the SQL WHERE clause format.</para>
+            /// <para>The filter condition for the data, in the SQL WHERE clause format.</para>
             /// </summary>
             [NameInMap("QueryParams")]
             [Validation(Required=false)]
             public QueryKnowledgeBasesContentRequestSourceCollectionQueryParams QueryParams { get; set; }
             public class QueryKnowledgeBasesContentRequestSourceCollectionQueryParams : TeaModel {
                 /// <summary>
-                /// <para>The filter condition for the data to be queried, in the SQL WHERE clause format. It is an expression that returns a Boolean value (true or false). The condition can be a simple comparison operator such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), or less than or equal to (&lt;=). It can also be a more complex expression combined with logical operators (AND, OR, NOT), or a condition using keywords such as IN, BETWEEN, and LIKE.</para>
+                /// <para>The filter condition for the data to be queried, in the SQL WHERE clause format. This is an expression that returns a Boolean value (true or false). The condition can be a simple comparison operator, such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), or less than or equal to (&lt;=). It can also be a more complex expression that combines logical operators (AND, OR, NOT), or a condition that uses keywords such as IN, BETWEEN, and LIKE.</para>
                 /// <remarks>
                 /// <list type="bullet">
                 /// <item><description>For detailed syntax, refer to <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</description></item>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>id = \&quot;llm-52tvykqt6u67iw73_j6ovptwjk7_file_6ce3da1f7e69495d9f491f2180c86973_11967297\&quot;</para>
+                /// <para>id = &quot;llm-52tvykqt6u67iw73_j6ovptwjk7_file_6ce3da1f7e69495d9f491f2180c86973_11967297&quot;</para>
                 /// </summary>
                 [NameInMap("Filter")]
                 [Validation(Required=false)]
@@ -253,11 +253,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 }
 
                 /// <summary>
-                /// <para>The multi-channel recall algorithm. Default value: empty, which means directly comparing and sorting the scores of dense vectors and full text. Valid values:</para>
+                /// <para>The multi-channel recall algorithm. Default value: empty, which means the scores of dense vectors and full-text retrieve are directly compared and reranked.</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>RRF: Reciprocal Rank Fusion. A parameter k is used to control the fusion effect. For more information, see the HybridSearchArgs configuration.</description></item>
-                /// <item><description>Weight: Weighted sorting. Parameters are used to control the score weights of vectors and full text before sorting. For more information, see the HybridSearchArgs configuration.</description></item>
-                /// <item><description>Cascaded: Full-text retrieve is performed first, followed by vector retrieve based on the full-text retrieve results.</description></item>
+                /// <item><description>Weight: Weighted reranking. Parameters are used to control the score weights of vectors and full-text retrieve before reranking. For more information, see the HybridSearchArgs configuration.</description></item>
+                /// <item><description>Cascaded: full-text retrieve is performed first, followed by vector retrieve based on the full-text retrieve results.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -268,9 +269,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string HybridSearch { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm parameters for multi-channel recall. Currently, RRF and Weight are supported. You can use HybridPathsSetting to specify the recall of dense vectors (dense), sparse vectors (sparse), and full-text index (fulltext). If this value is empty, dense vectors (dense) and full-text index (fulltext) are recalled by default.</para>
+                /// <para>The algorithm parameters for multi-channel recall. RRF and Weight are supported. You can use HybridPathsSetting to specify the recall of dense vectors, sparse vectors, and full-text retrieve. If this value is empty, dense vectors and full-text retrieve are recalled by default.</para>
                 /// <list type="bullet">
-                /// <item><description>RRF: Specifies the constant k in the score calculation formula 1/(k+rank_i). The value must be a positive integer greater than 1. Format:</description></item>
+                /// <item><description>RRF: Specifies the constant k in the score calculation formula <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. Format:</description></item>
                 /// </list>
                 /// <pre><c>{
                 ///   &quot;HybridPathsSetting&quot;: {
@@ -283,8 +284,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// </c></pre>
                 /// <list type="bullet">
                 /// <item><description>Weight: <list type="bullet">
-                /// <item><description>Dual-channel recall (HybridPathsSetting is not specified, only alpha is specified):<list type="bullet">
-                /// <item><description>Calculation formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter represents the score weight of dense vectors and full-text index retrieve score. The value ranges from 0 to 1, where 0 indicates full-text index only and 1 indicates dense vectors only:</description></item>
+                /// <item><description>Dual-channel recall (HybridPathsSetting is not specified, and only alpha is specified):<list type="bullet">
+                /// <item><description>Calculation formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter represents the retrieve score weight of dense vectors and full-text retrieve. Valid values: 0 to 1. A value of 0 indicates full-text retrieve only, and a value of 1 indicates dense vectors only. Format:</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -298,7 +299,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// </c></pre>
                 /// <list type="bullet">
                 /// <item><description>Triple-channel recall pattern:<list type="bullet">
-                /// <item><description>Calculation formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. Here, dense, sparse, and fulltext represent the weights of dense vectors, sparse vectors, and full-text index, respectively. The value must be greater than or equal to 0. The system automatically performs normalization on the weights to 0 to 1 (that is, normalized_x = x / (dense + sparse + fulltext)).</description></item>
+                /// <item><description>Calculation formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. The dense, sparse, and fulltext parameters represent the weights of dense vectors, sparse vectors, and full-text retrieve, respectively. Valid values: greater than or equal to 0. The system automatically performs normalization of the weights to 0 to 1 (that is, normalized_x = x / (dense + sparse + fulltext)). Format:</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -313,6 +314,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 ///   }
                 /// }
                 /// </c></pre>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;RRF&quot;:{&quot;k&quot;:60}}</para>
                 /// </summary>
                 [NameInMap("HybridSearchArgs")]
                 [Validation(Required=false)]
@@ -358,7 +362,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string OrderBy { get; set; }
 
                 /// <summary>
-                /// <para>The recall window. If this value is not empty, the context of the retrieval results is additionally returned. The format is an array of two elements: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</para>
+                /// <para>The recall window. If this value is not empty, the context of the retrieval results is additionally returned. The value must be an array of two elements in the List&lt;A, B&gt; format, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</para>
                 /// <remarks>
                 /// <list type="bullet">
                 /// <item><description>We recommend that you use this parameter when document chunks are too small and retrieval may lose context information.</description></item>
@@ -390,14 +394,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public double? RerankFactor { get; set; }
 
                 /// <summary>
-                /// <para>The parameters of the reranking model.</para>
+                /// <para>The reranking model parameters.</para>
                 /// </summary>
                 [NameInMap("RerankModel")]
                 [Validation(Required=false)]
                 public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel RerankModel { get; set; }
                 public class QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel : TeaModel {
                     /// <summary>
-                    /// <para>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Adds a custom description for the sorting task type. You can use this parameter to guide the model to adopt different sorting strategies.</para>
+                    /// <para>This parameter can be set when RerankModel.Name is set to qwen3-rerank. Adds a custom sorting task type description. This parameter guides the model to adopt different sorting strategies.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
@@ -453,7 +457,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The number of top results to return after multi-channel recall results are merged.</para>
+        /// <para>The number of top results to return after the multi-channel recall results are merged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

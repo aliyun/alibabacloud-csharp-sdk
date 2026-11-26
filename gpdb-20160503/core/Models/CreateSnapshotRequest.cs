@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token. Ensures that repeated requests do not result in duplicate operations.</para>
+        /// <para>The idempotency token. It ensures that duplicate requests do not execute the same operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The LSN for the snapshot. You must specify either this parameter or SnapshotTimestamp. If this parameter is specified, the snapshot is created based on the specified LSN.</para>
+        /// <para>The log sequence number (LSN) for the snapshot. You must specify either this parameter or SnapshotTimestamp. If specified, the snapshot is created based on this LSN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/3522648</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Lsn { get; set; }
 
         /// <summary>
-        /// <para>The Supabase project ID.</para>
+        /// <para>The ID of the Supabase project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Specifies the region in which to perform the operation.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The point in time for the snapshot. You must specify either this parameter or Lsn. If this parameter is specified, the snapshot is created based on the specified point in time.</para>
+        /// <para>The point in time for the snapshot. You must specify either this parameter or Lsn. If specified, the snapshot is created based on this point in time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-08T09:11:12Z</para>

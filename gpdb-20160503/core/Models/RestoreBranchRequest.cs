@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RestoreBranchRequest : TeaModel {
         /// <summary>
-        /// <para>The branch ID that uniquely identifies a Supabase branch.</para>
+        /// <para>The branch ID, which uniquely identifies a Supabase branch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The client idempotency token that ensures the idempotence of retry requests.</para>
+        /// <para>The client token that is used to ensure the idempotence of retry requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426614174000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The backup branch name. If specified, automatic creation of a backup branch is performed before recovery.</para>
+        /// <para>The name of the backup branch. If you specify this parameter, automatic creation of a backup branch is performed before you recover the branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>backup-main</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PreserveUnderName { get; set; }
 
         /// <summary>
-        /// <para>The Supabase project ID associated with the primary branch.</para>
+        /// <para>The ID of the Supabase project to which the primary branch belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</para>
+        /// <para>The region ID. This parameter is required when you create a primary branch. When you create a child branch, the region ID of the primary branch is inherited by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source branch from which to recover.</para>
+        /// <para>The ID of the source branch for the restoration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SourceBranchId { get; set; }
 
         /// <summary>
-        /// <para>The LSN of the source branch to recover to.</para>
+        /// <para>The LSN of the source branch for the restoration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/3522648</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SourceBranchLsn { get; set; }
 
         /// <summary>
-        /// <para>The point in time of the source branch to recover to. The value must be within the recoverable time window.</para>
+        /// <para>The point in time of the source branch for the restoration. The specified point in time must be within the restorable window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-08T09:11:12Z</para>

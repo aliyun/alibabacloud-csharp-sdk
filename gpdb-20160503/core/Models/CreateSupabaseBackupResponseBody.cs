@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSupabaseBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup job. You can call ListSupabaseBackupJobs to query the status and progress of the job.</para>
+        /// <para>The backup job ID. You can call ListSupabaseBackupJobs to query the status and progress of the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

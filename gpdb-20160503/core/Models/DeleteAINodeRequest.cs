@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteAINodeRequest : TeaModel {
         /// <summary>
-        /// <para>The number of AINodes to be deleted.</para>
+        /// <para>The number of AI nodes to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? AINodeNum { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AINode resource pool.</para>
+        /// <para>The ID of the AI node pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aipool-xxxx</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of AINodes to be deleted.</para>
+        /// <para>The list of AI nodes to delete.</para>
         /// </summary>
         [NameInMap("NodeNames")]
         [Validation(Required=false)]

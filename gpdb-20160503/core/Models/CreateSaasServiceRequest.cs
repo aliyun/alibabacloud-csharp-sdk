@@ -22,13 +22,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you leave this parameter empty, a Free type is created by default.</description></item>
-        /// <item><description>The subscription billing method offers discounts for purchases of one year or longer. Select a billing method as needed.</description></item>
+        /// <item><description>If you do not specify this parameter, a free service is created by default.</description></item>
+        /// <item><description>In subscription mode, you can get a discount if you purchase a subscription with a duration of one year or longer. Select a billing method as needed.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -40,13 +40,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the duration for which you want to purchase the resource. Valid values:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: month.</description></item>
-        /// <item><description><b>Year</b>: year.</description></item>
+        /// <item><description><b>Month</b>: month</description></item>
+        /// <item><description><b>Year</b>: year</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when you create a subscription instance.</para>
+        /// <para>This parameter is required when you create a subscription service.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>Deprecated.</para>
+        /// <para><b>[Deprecated]</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>deprecated</para>
@@ -92,13 +92,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The duration for which you want to purchase the resource. Valid values:</para>
+        /// <para>The subscription duration of the purchased resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the valid values are 1 to 11.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the valid values are 1 to 3.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Month</b>, valid values are 1 to 11.</description></item>
+        /// <item><description>If <b>Period</b> is set to <b>Year</b>, valid values are 1 to 3.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when you create a subscription instance.</para>
+        /// <para>This parameter is required when you create a subscription service.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

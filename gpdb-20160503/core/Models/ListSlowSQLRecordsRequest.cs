@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListSlowSQLRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb01</para>
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z. The time must be in UTC. The end time must be later than the start time.</para>
-        /// <para>Defaults to the current time.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</para>
+        /// <para>Default value: The current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-04T17:00:00Z</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The search keyword.</para>
+        /// <para>The query keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The longest execution duration. Unit: seconds.</para>
+        /// <para>The maximum execution duration. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -75,26 +75,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MinDuration { get; set; }
 
         /// <summary>
-        /// <para>Sort criteria (JSON string). {&quot;Field&quot;:&quot;QueryStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</para>
-        /// <para>Field: Specifies the field to sort by.</para>
+        /// <para>The sorting conditions in JSON format. Example: {&quot;Field&quot;:&quot;QueryStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}.</para>
+        /// <para>Field: the field to sort by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>QueryID: Query ID.</description></item>
-        /// <item><description>UserName: The username.</description></item>
-        /// <item><description>DBName: The name of the database.</description></item>
-        /// <item><description>QueryStartTime: The start time.</description></item>
-        /// <item><description>QueryEndTime: The end time.</description></item>
-        /// <item><description>DurationTime: The execution duration of the query.</description></item>
-        /// <item><description>Optimizer.</description></item>
-        /// <item><description>LockWaitTime: The lock waiting time.</description></item>
-        /// <item><description>QueueWaitTime: Time in Queue.</description></item>
-        /// <item><description>CpuTimeMs: CPU time.</description></item>
-        /// <item><description>MemBytes: The memory usage.</description></item>
-        /// <item><description>SpillBytes: Spill File Size.</description></item>
+        /// <item><description><para>QueryID: the query ID.</para>
+        /// </description></item>
+        /// <item><description><para>UserName: the username.</para>
+        /// </description></item>
+        /// <item><description><para>DBName: the database name.</para>
+        /// </description></item>
+        /// <item><description><para>QueryStartTime: the start time.</para>
+        /// </description></item>
+        /// <item><description><para>QueryEndTime: the end time.</para>
+        /// </description></item>
+        /// <item><description><para>DurationTime: the execution duration.</para>
+        /// </description></item>
+        /// <item><description><para>Optimizer: the optimizer.</para>
+        /// </description></item>
+        /// <item><description><para>LockWaitTime: the lock wait time.</para>
+        /// </description></item>
+        /// <item><description><para>QueueWaitTime: the queue wait time.</para>
+        /// </description></item>
+        /// <item><description><para>CpuTimeMs: the CPU time.</para>
+        /// </description></item>
+        /// <item><description><para>MemBytes: the memory usage.</para>
+        /// </description></item>
+        /// <item><description><para>SpillBytes: the size of spilled files.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Type: Sort order.</para>
+        /// <para>Type: the sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Desc: descending.</description></item>
-        /// <item><description>Asc: ascending.</description></item>
+        /// <item><description><para>Desc: descending order.</para>
+        /// </description></item>
+        /// <item><description><para>Asc: ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +119,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be a positive integer in the range [1, 100]. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and less than or equal to 100.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -141,8 +156,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time must be in UTC and formatted as yyyy-MM-ddTHH:mmZ.</para>
-        /// <para>Defaults to the current time minus 5 minutes.</para>
+        /// <para>The start time of the query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>Default value: 5 minutes before the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-04T16:00:00Z</para>
@@ -152,7 +167,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The account name.</para>
+        /// <para>The database username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_user</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The type of the database account that you want to query. Valid values: Super, Normal, and All. Default value: Super. If you set this parameter to Super, the information about the privileged account is returned. If you set this parameter to Normal, the information about all standard accounts is returned. If you set this parameter to All, the information about all database accounts is returned.</para>
+        /// <para>The account type. Default value: Super, which specifies that privileged accounts are queried. If this parameter is set to Normal, standard accounts are queried. If this parameter is set to All, all accounts are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Super</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB for PostgreSQL instances in the target region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

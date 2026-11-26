@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The service description.</para>
+        /// <para>The description of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pxf for hdfs data source</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HadoopCoreConf { get; set; }
 
         /// <summary>
-        /// <para>The external service type. Valid values:</para>
+        /// <para>The type of the external service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>emr</description></item>
         /// <item><description>hadoop: self-managed Hadoop.</description></item>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HadoopCreateType { get; set; }
 
         /// <summary>
-        /// <para>The addresses and hostnames of the source nodes in the Hadoop cluster in the /etc/hosts file.</para>
+        /// <para>The IP addresses and hostnames of the source nodes in the Hadoop cluster in the /etc/hosts file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.220.128 master-1-1.c-xxx.cn-shanghai.emr.aliyuncs.com
@@ -161,17 +161,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The content string of the Hadoop mapred-site.xml file. This parameter is required when you enable HDFS external tables.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <?xml version="1.0" ?>
+        /// <configuration>
+        /// </configuration>
         /// </summary>
         [NameInMap("MapReduceConf")]
         [Validation(Required=false)]
         public string MapReduceConf { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
-        /// </remarks>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

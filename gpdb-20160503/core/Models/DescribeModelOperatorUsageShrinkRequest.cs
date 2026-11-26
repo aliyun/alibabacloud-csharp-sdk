@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The list of API key IDs. Separate multiple IDs with commas (,). If this parameter is not specified, all API key IDs under the instance ID are used by default.</para>
         /// <remarks>
-        /// <para>The list can contain up to 50 items.</para>
+        /// <para>A maximum of 50 items can be included in the list.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ApiKeyIds")]
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ApiKeyIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</para>
+        /// <para>The end time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time, and the interval between the start time and end time cannot exceed 7 days.</para>
+        /// <para>The end time must be later than the start time, and the interval between the start time and the end time cannot exceed 7 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The dimension by which to split the series. Separate multiple dimensions with commas (,). The order is not significant. Valid values:</para>
+        /// <para>The dimension for splitting series. Separate multiple dimensions with commas (,). The order does not matter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>model (default): splits by model.</description></item>
-        /// <item><description>api_key: splits by API key.</description></item>
-        /// <item><description>model,api_key: splits by model and API key.</description></item>
+        /// <item><description>model (default): Splits by model.</description></item>
+        /// <item><description>api_key: Splits by API key.</description></item>
+        /// <item><description>model,api_key: Splits by model and API key.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,13 +50,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The list of metrics. Separate multiple metrics with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>request_count: the number of requests.</description></item>
-        /// <item><description>success_count: the number of successful requests.</description></item>
-        /// <item><description>error_count: the number of failed requests.</description></item>
-        /// <item><description>success_rate: the request success rate.</description></item>
-        /// <item><description>input_token: the number of input tokens.</description></item>
-        /// <item><description>output_token: the number of output tokens.</description></item>
-        /// <item><description>total_token: the total number of tokens.</description></item>
+        /// <item><description>request_count: The number of requests.</description></item>
+        /// <item><description>success_count: The number of successful requests.</description></item>
+        /// <item><description>error_count: The number of failed requests.</description></item>
+        /// <item><description>success_rate: The request success rate.</description></item>
+        /// <item><description>input_token: The number of input tokens.</description></item>
+        /// <item><description>output_token: The number of output tokens.</description></item>
+        /// <item><description>total_token: The total number of tokens.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Keys")]
@@ -75,23 +75,23 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description><ol>
-        /// <item><description>If Period is not specified, the default value is determined by the following rules:</description></item>
+        /// <item><description>If Period is not specified, the default value is selected based on the following rules:</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Window range ≤ 1 hour: Period = 1.</description></item>
+        /// <item><description>If the time window is less than or equal to 1 hour, Period is set to 1.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Window range ≤ 1 day: Period = 60.</description></item>
+        /// <item><description>If the time window is less than or equal to 1 day, Period is set to 60.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Window range ≤ 7 days: Period = 60.</description></item>
+        /// <item><description>If the time window is less than or equal to 7 days, Period is set to 60.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>When Period is set to 1, the window must be ≤ 1 day.</description></item>
+        /// <item><description>If Period is set to 1, the time window must be less than or equal to 1 day.</description></item>
         /// </ol>
         /// </description></item>
         /// </list>
@@ -105,9 +105,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</para>
+        /// <para>The start time of the query. The format is <i>YYYY-MM-DDThh:mmZ</i> (UTC time).</para>
         /// <remarks>
-        /// <para>Only metrics within the last 30 days can be queried.</para>
+        /// <para>You can query only metrics from the last 30 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
