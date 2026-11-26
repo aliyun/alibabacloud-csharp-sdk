@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAvailableVscsRequest : TeaModel {
         /// <summary>
-        /// <para>The cross-account authorization role chain, used for cross-account VSC queries in ECS or EFLO scenarios.</para>
+        /// <para>The cross-account authorization role chain, which is used to query VSCs across accounts in ECS or EFLO scenarios.</para>
         /// </summary>
         [NameInMap("Arns")]
         [Validation(Required=false)]
@@ -39,11 +39,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The role type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>service</description></item>
-            /// <item><description>user</description></item>
-            /// </list>
+            /// <para>The role type. Valid values: service and user.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,11 +63,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The compute instance type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ECS</description></item>
-        /// <item><description>EFLO</description></item>
-        /// </list>
+        /// <para>The compute instance type. Valid values: ECS and EFLO.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

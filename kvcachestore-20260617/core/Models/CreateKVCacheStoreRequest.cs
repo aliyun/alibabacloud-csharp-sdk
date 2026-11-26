@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class CreateKVCacheStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The storage capacity in GiB. The minimum capacity is 300 TiB (307200 GiB), and the capacity is scaled out in increments of 300 TiB.</para>
+        /// <para>The storage capacity, in GiB. The minimum capacity is 300 TiB (307,200 GiB), and the capacity scales in increments of 300 TiB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. The token can be up to 64 characters in length. We recommend that you use a UUID.</para>
+        /// <para>The client token that is used to ensure request idempotence. The token can be up to 64 characters in length. Use a UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YOUR_CLIENT_TOKEN</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The KVCacheStore description. The description must be 2 to 256 characters in length and can contain English and Chinese characters. The description cannot start with http:// or https://. Default value: empty.</para>
+        /// <para>The description of the KVCacheStore. The description must be 2 to 256 characters in length and cannot start with http:// or https://. Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No description</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The HPN cluster ID, which is used to create an affinity scheduling relationship between the KVCacheStore and the specified HPN cluster. After creation, the KVCacheStore may have affinity relationships with multiple HPN clusters based on network topology. You can call GetKVCacheStore to query the available HPN clusters.</para>
+        /// <para>The HPN cluster ID, which is used to create an affinity scheduling relationship between the KVCacheStore and the specified HPN cluster. After the KVCacheStore is created, it may have affinity relationships with multiple HPN clusters based on network topology. You can call the GetKVCacheStore operation to query the available HPN clusters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>The KVCacheStore name. The name must be 2 to 128 characters in length and can contain characters from the Unicode letter category (including English and Chinese characters) and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-). If this parameter is not specified, the default value is the KVCacheStore ID.</para>
+        /// <para>The name of the KVCacheStore. The name must be 2 to 128 characters in length and can contain letters and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-). If this parameter is not specified, the default value is the KVCacheStore ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sc-data-warehouse-server</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values: POSTPAY (pay-as-you-go). Default value: POSTPAY.</para>
+        /// <para>The billing method. Valid value: POSTPAY (pay-as-you-go). Default value: POSTPAY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The region ID in which to create the KVCacheStore. You can call DescribeRegions to query the list of available regions.</para>
+        /// <para>The ID of the region where the KVCacheStore is created. You can call the DescribeRegions operation to query the list of activated regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzafsjd7i4qaq</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource tag key-value pairs. A maximum of 20 tags are supported. This overrides the parent TagDTO type and uses the same Tag type as returned by Get/List operations.</para>
+        /// <para>The list of tag key-value pairs for the resource. A maximum of 20 tags are supported. This parameter overrides the parent TagDTO type and uses the Tag type that is consistent with the Get and List responses.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The zone ID. You can call DescribeZones to query the list of zones in the specified region.</para>
+        /// <para>The zone ID. You can call the DescribeZones operation to query the list of zones in the specified region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

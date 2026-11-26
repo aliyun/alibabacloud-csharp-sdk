@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAvailableHpnZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of available HpnZones for instances.</para>
+        /// <para>The list of available HpnZones for the instances.</para>
         /// </summary>
         [NameInMap("InstanceHpnZones")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             }
 
             /// <summary>
-            /// <para>The ID of the KVCacheStore instance.</para>
+            /// <para>The KVCacheStore instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kvcs-xxxxx</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAvailableHpnZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the KVCacheStore instances. Separate multiple IDs with commas. You can specify 1 to 100 IDs.</para>
+        /// <para>The list of KVCacheStore instance IDs. Separate multiple IDs with commas. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KvcsIds")]

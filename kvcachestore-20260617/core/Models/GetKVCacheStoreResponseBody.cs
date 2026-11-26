@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public GetKVCacheStoreResponseBodyKvCacheStore KvCacheStore { get; set; }
         public class GetKVCacheStoreResponseBodyKvCacheStore : TeaModel {
             /// <summary>
-            /// <para>The storage capacity in GiB.</para>
+            /// <para>The storage capacity, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The creation time in ISO 8601 format.</para>
+            /// <para>The time when the instance was created. The time follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-18T10:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The instance description.</para>
+            /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>production kvcachestore</para>
@@ -47,12 +47,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The extra status information. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CapacityExpanding: The capacity is being expanded.</description></item>
-            /// <item><description>CapacityExpandSuccess: The capacity expansion succeeded.</description></item>
-            /// <item><description>CapacityExpandFail: The capacity expansion failed.</description></item>
-            /// </list>
+            /// <para>The extra status information. Valid values: CapacityExpanding, CapacityExpandSuccess, and CapacityExpandFail.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CapacityExpanding</para>
@@ -62,7 +57,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string ExtraStatus { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The cluster number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -72,7 +67,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string HpnZone { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kvcs-xxxxx</para>
@@ -82,7 +77,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, use ListKVCacheInstanceAttachInfo.</para>
+            /// <para>The ID of the file system-level mount point. The mount point is shared by instances in the same file system. For more information, call the ListKVCacheInstanceAttachInfo operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mp-xxxxx</para>
@@ -92,7 +87,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string MountPointId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>production-instance</para>
@@ -102,11 +97,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The payment type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PREPAY: subscription.</description></item>
-            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
-            /// </list>
+            /// <para>The billing method. Valid values: PREPAY and POSTPAY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -126,7 +117,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekzrwkxbdvkctq</para>
@@ -136,15 +127,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The instance status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The instance is being created.</description></item>
-            /// <item><description>Available: The instance is available.</description></item>
-            /// <item><description>InUse: The instance is in use.</description></item>
-            /// <item><description>Stopping: The instance is being stopped.</description></item>
-            /// <item><description>Stopped: The instance is stopped.</description></item>
-            /// <item><description>Deleting: The instance is being deleted.</description></item>
-            /// </list>
+            /// <para>The instance status. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE</para>
@@ -154,14 +137,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of resource tags.</para>
+            /// <para>The tags of the resource.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetKVCacheStoreResponseBodyKvCacheStoreTags> Tags { get; set; }
             public class GetKVCacheStoreResponseBodyKvCacheStoreTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the resource.</para>
+                /// <para>The key of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ac-cus-tag-6</para>
@@ -171,7 +154,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the resource.</para>
+                /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>advanced</para>
@@ -183,10 +166,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             }
 
             /// <summary>
-            /// <para>The instance type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>kvcs: KVCacheStore (CPFS).</description></item>
-            /// </list>
+            /// <para>The instance type, such as kvcs (KVCacheStore, CPFS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>kvcs</para>
@@ -208,7 +188,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The request ID. A request ID is returned regardless of whether the call is successful.</para>
+        /// <para>The ID of the request. The request ID is returned regardless of whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FB5E9-F9E8-52F5-9C56-2CDF479CBEB2</para>

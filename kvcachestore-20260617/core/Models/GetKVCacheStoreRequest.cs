@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class GetKVCacheStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The KvCacheStore instance ID.</para>
+        /// <para>The ID of the KvCacheStore instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public List<AttachKVCacheStoreResponseBodyAttachResults> AttachResults { get; set; }
         public class AttachKVCacheStoreResponseBodyAttachResults : TeaModel {
             /// <summary>
-            /// <para>The error code returned upon failure. This value is null upon success.</para>
+            /// <para>The error code returned when the operation fails. This parameter is null when the operation succeeds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidStatus.OperationDenied</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned upon failure. This value is null upon success.</para>
+            /// <para>The error message returned when the operation fails. This parameter is null when the operation succeeds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The operation is not allowed for instance in ATTACHED status.</para>
@@ -47,13 +47,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The operation result. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ATTACHING: The request has been accepted and the asynchronous mount is in progress.</description></item>
-            /// <item><description>ATTACHED: Idempotent. The mount is already complete.</description></item>
-            /// <item><description>Success: The synchronous verification passed and the asynchronous operation is complete.</description></item>
-            /// <item><description>Failed: The operation failed.</description></item>
-            /// </list>
+            /// <para>The operation result. Valid values: ATTACHING (the request is accepted and the asynchronous mounting is in progress), ATTACHED (idempotent: the mounting is complete), Success (synchronous verification passed and asynchronous mounting is complete), and Failed (the operation failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ATTACHING</para>
@@ -63,7 +57,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The VSC ID on the compute side.</para>
+            /// <para>The ID of the VSC on the compute side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-001</para>
@@ -75,7 +69,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The request ID. A request ID is returned regardless of whether the call is successful.</para>
+        /// <para>The request ID. This ID is returned regardless of whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7BEF1E2-7E56-5BF1-8E36-77A51C5812F1</para>

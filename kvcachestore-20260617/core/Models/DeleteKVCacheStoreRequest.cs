@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class DeleteKVCacheStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The KvCacheStore instance ID. Only instances in the following states can be deleted: Available and Stopped. Instances in other states cannot be deleted.</para>
+        /// <para>The KVCacheStore instance ID. Only instances in the Available or Stopped state can be deleted. Instances in other states cannot be deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

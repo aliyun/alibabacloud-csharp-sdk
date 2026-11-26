@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoresResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of KVCacheStore instances. Each element contains the following parameters: KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</para>
+        /// <para>The list of KVCacheStores. Each element contains sub-parameters such as KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</para>
         /// </summary>
         [NameInMap("KVCacheStores")]
         [Validation(Required=false)]
         public List<ListKVCacheStoresResponseBodyKVCacheStores> KVCacheStores { get; set; }
         public class ListKVCacheStoresResponseBodyKVCacheStores : TeaModel {
             /// <summary>
-            /// <para>The storage capacity, in GiB.</para>
+            /// <para>The storage capacity. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The creation time in ISO 8601 format.</para>
+            /// <para>The time when the instance was created. The time follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-18T10:00:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, use the ListKVCacheInstanceAttachInfo operation.</para>
+            /// <para>The file system-level mount point ID. This mount point is shared by instances within the same file system. For more information, call the ListKVCacheInstanceAttachInfo operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mp-xxxxx</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The payment type. Valid values: PREPAY and POSTPAY.</para>
+            /// <para>The billing method. Valid values: PREPAY and POSTPAY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             }
 
             /// <summary>
-            /// <para>The instance type. Valid values: kvcs (KVCacheStore, CPFS).</para>
+            /// <para>The instance type. Valid value: kvcs (KVCacheStore, CPFS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>preview</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries returned per pagination request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty when no more data is available. This parameter is valid only for cursor-based pagination.</para>
+        /// <para>The cursor for the next page. If no more data is available, this parameter is empty. This parameter is valid only when cursor pagination is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The current page number. This parameter is valid only for page number-based pagination.</para>
+        /// <para>The current page number. This parameter is valid only when page number pagination is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. This parameter is valid only for page number-based pagination.</para>
+        /// <para>The number of entries per page. This parameter is valid only when page number pagination is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages. This parameter is returned only for page number-based pagination.</para>
+        /// <para>The total number of pages. This parameter is returned only when page number pagination is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public int? PageTotal { get; set; }
 
         /// <summary>
-        /// <para>The request ID. A request ID is returned regardless of whether the call is successful.</para>
+        /// <para>The request ID. This ID is returned regardless of whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56AC37CD-388E-5D21-951B-C50D16D8E812</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances. This parameter is returned only for page number-based pagination. For cursor-based pagination, the value is -1.</para>
+        /// <para>The total number of instances. This parameter is returned only when page number pagination is used. If cursor pagination is used, the value is -1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
