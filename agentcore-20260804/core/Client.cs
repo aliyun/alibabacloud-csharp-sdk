@@ -560,6 +560,342 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>申请知识库资产上传地址</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>登记资产上传会话，返回 assetId、uploadId 和实际状态；仅有效的 UPLOADING 会话返回限定其 original 对象的限时 PUT 地址。使用 PUT 上传文件二进制，不使用 JSON 或 multipart 包装，本期文件大小为 1 字节至 50 MiB。clientToken 可选；提供时，省略 assetId 将依据租户、工作空间、知识库和 clientToken 稳定派生资产 ID，便于首次响应丢失后的定位。同时省略 assetId 和 clientToken 时，每次请求创建新资产。未提供 clientToken 时按新的上传意图处理，不保证跨请求重试幂等。覆盖已有资产必须设置 overwrite=true；该参数仅授权覆盖，不强制重新导入。提供 clientToken 时，仅对该资产最近一次 Begin 保存的 token 幂等；后续 Begin（包括省略 clientToken 的请求）会替换最近请求标识。命中且规范化请求相同则复用上传会话，参数不同返回 409，包括 sourceETag 不同；token 不命中则按新的上传意图校验和受理，即使该 token 曾用于更早的上传。来源版本去重独立于 clientToken：指定稳定 assetId、overwrite=true 且提供 sourceETag 时，若来源身份及版本、导入参数和有效处理配置均未变化，即使未提供 clientToken，也可复用当前 uploadId 和加工代次；显式提供且命中最近 token 时仍要求完整规范化请求相同。复用有效 UPLOADING 会话时刷新同一对象路径的签名；复用 PENDING、PROCESSING 或 COMPLETED 会话时返回实际状态且不返回上传地址，PENDING 按相同 taskKey 补交调度，来源版本相同不表示处理完成。客户端 token 幂等命中后的失败状态只返回当前状态；新的上传意图遇到 FAILED、上传意图过期或来源、导入参数、有效处理配置变化时创建新的 uploadId、内部对象路径及加工代次。未提供 sourceETag 时不启用来源版本去重，可使用不同 clientToken 或不提供 clientToken，按新的上传意图重新导入；覆盖已有资产仍须 overwrite=true。新结果发布前仍使用旧发布版本。每个会话的原件对象仍必须禁止覆盖，签名头通过 headers 返回。完成 PUT 上传后，使用返回的 assetId 和 uploadId 调用 CompleteAssetUpload。携带 sourceETag 的 Begin 命中当前上传目标时，PENDING 会按相同 taskKey 补交调度，返回 PENDING、PROCESSING 或 COMPLETED 后无需再次上传或确认；显式提供相同 clientToken 且未传 sourceETag 的 PENDING 重放仍须重试 CompleteAssetUpload，以恢复受理结果未知的调度。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BeginAssetUploadRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginAssetUploadResponse
+        /// </returns>
+        public BeginAssetUploadResponse BeginAssetUploadWithOptions(string workspaceId, string knowledgeBaseId, BeginAssetUploadRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BeginAssetUploadShrinkRequest request = new BeginAssetUploadShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BeginAssetUpload",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/begin-upload",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BeginAssetUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请知识库资产上传地址</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>登记资产上传会话，返回 assetId、uploadId 和实际状态；仅有效的 UPLOADING 会话返回限定其 original 对象的限时 PUT 地址。使用 PUT 上传文件二进制，不使用 JSON 或 multipart 包装，本期文件大小为 1 字节至 50 MiB。clientToken 可选；提供时，省略 assetId 将依据租户、工作空间、知识库和 clientToken 稳定派生资产 ID，便于首次响应丢失后的定位。同时省略 assetId 和 clientToken 时，每次请求创建新资产。未提供 clientToken 时按新的上传意图处理，不保证跨请求重试幂等。覆盖已有资产必须设置 overwrite=true；该参数仅授权覆盖，不强制重新导入。提供 clientToken 时，仅对该资产最近一次 Begin 保存的 token 幂等；后续 Begin（包括省略 clientToken 的请求）会替换最近请求标识。命中且规范化请求相同则复用上传会话，参数不同返回 409，包括 sourceETag 不同；token 不命中则按新的上传意图校验和受理，即使该 token 曾用于更早的上传。来源版本去重独立于 clientToken：指定稳定 assetId、overwrite=true 且提供 sourceETag 时，若来源身份及版本、导入参数和有效处理配置均未变化，即使未提供 clientToken，也可复用当前 uploadId 和加工代次；显式提供且命中最近 token 时仍要求完整规范化请求相同。复用有效 UPLOADING 会话时刷新同一对象路径的签名；复用 PENDING、PROCESSING 或 COMPLETED 会话时返回实际状态且不返回上传地址，PENDING 按相同 taskKey 补交调度，来源版本相同不表示处理完成。客户端 token 幂等命中后的失败状态只返回当前状态；新的上传意图遇到 FAILED、上传意图过期或来源、导入参数、有效处理配置变化时创建新的 uploadId、内部对象路径及加工代次。未提供 sourceETag 时不启用来源版本去重，可使用不同 clientToken 或不提供 clientToken，按新的上传意图重新导入；覆盖已有资产仍须 overwrite=true。新结果发布前仍使用旧发布版本。每个会话的原件对象仍必须禁止覆盖，签名头通过 headers 返回。完成 PUT 上传后，使用返回的 assetId 和 uploadId 调用 CompleteAssetUpload。携带 sourceETag 的 Begin 命中当前上传目标时，PENDING 会按相同 taskKey 补交调度，返回 PENDING、PROCESSING 或 COMPLETED 后无需再次上传或确认；显式提供相同 clientToken 且未传 sourceETag 的 PENDING 重放仍须重试 CompleteAssetUpload，以恢复受理结果未知的调度。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BeginAssetUploadRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginAssetUploadResponse
+        /// </returns>
+        public async Task<BeginAssetUploadResponse> BeginAssetUploadWithOptionsAsync(string workspaceId, string knowledgeBaseId, BeginAssetUploadRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BeginAssetUploadShrinkRequest request = new BeginAssetUploadShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BeginAssetUpload",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/begin-upload",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BeginAssetUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请知识库资产上传地址</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>登记资产上传会话，返回 assetId、uploadId 和实际状态；仅有效的 UPLOADING 会话返回限定其 original 对象的限时 PUT 地址。使用 PUT 上传文件二进制，不使用 JSON 或 multipart 包装，本期文件大小为 1 字节至 50 MiB。clientToken 可选；提供时，省略 assetId 将依据租户、工作空间、知识库和 clientToken 稳定派生资产 ID，便于首次响应丢失后的定位。同时省略 assetId 和 clientToken 时，每次请求创建新资产。未提供 clientToken 时按新的上传意图处理，不保证跨请求重试幂等。覆盖已有资产必须设置 overwrite=true；该参数仅授权覆盖，不强制重新导入。提供 clientToken 时，仅对该资产最近一次 Begin 保存的 token 幂等；后续 Begin（包括省略 clientToken 的请求）会替换最近请求标识。命中且规范化请求相同则复用上传会话，参数不同返回 409，包括 sourceETag 不同；token 不命中则按新的上传意图校验和受理，即使该 token 曾用于更早的上传。来源版本去重独立于 clientToken：指定稳定 assetId、overwrite=true 且提供 sourceETag 时，若来源身份及版本、导入参数和有效处理配置均未变化，即使未提供 clientToken，也可复用当前 uploadId 和加工代次；显式提供且命中最近 token 时仍要求完整规范化请求相同。复用有效 UPLOADING 会话时刷新同一对象路径的签名；复用 PENDING、PROCESSING 或 COMPLETED 会话时返回实际状态且不返回上传地址，PENDING 按相同 taskKey 补交调度，来源版本相同不表示处理完成。客户端 token 幂等命中后的失败状态只返回当前状态；新的上传意图遇到 FAILED、上传意图过期或来源、导入参数、有效处理配置变化时创建新的 uploadId、内部对象路径及加工代次。未提供 sourceETag 时不启用来源版本去重，可使用不同 clientToken 或不提供 clientToken，按新的上传意图重新导入；覆盖已有资产仍须 overwrite=true。新结果发布前仍使用旧发布版本。每个会话的原件对象仍必须禁止覆盖，签名头通过 headers 返回。完成 PUT 上传后，使用返回的 assetId 和 uploadId 调用 CompleteAssetUpload。携带 sourceETag 的 Begin 命中当前上传目标时，PENDING 会按相同 taskKey 补交调度，返回 PENDING、PROCESSING 或 COMPLETED 后无需再次上传或确认；显式提供相同 clientToken 且未传 sourceETag 的 PENDING 重放仍须重试 CompleteAssetUpload，以恢复受理结果未知的调度。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginAssetUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginAssetUploadResponse
+        /// </returns>
+        public BeginAssetUploadResponse BeginAssetUpload(string workspaceId, string knowledgeBaseId, BeginAssetUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BeginAssetUploadWithOptions(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请知识库资产上传地址</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>登记资产上传会话，返回 assetId、uploadId 和实际状态；仅有效的 UPLOADING 会话返回限定其 original 对象的限时 PUT 地址。使用 PUT 上传文件二进制，不使用 JSON 或 multipart 包装，本期文件大小为 1 字节至 50 MiB。clientToken 可选；提供时，省略 assetId 将依据租户、工作空间、知识库和 clientToken 稳定派生资产 ID，便于首次响应丢失后的定位。同时省略 assetId 和 clientToken 时，每次请求创建新资产。未提供 clientToken 时按新的上传意图处理，不保证跨请求重试幂等。覆盖已有资产必须设置 overwrite=true；该参数仅授权覆盖，不强制重新导入。提供 clientToken 时，仅对该资产最近一次 Begin 保存的 token 幂等；后续 Begin（包括省略 clientToken 的请求）会替换最近请求标识。命中且规范化请求相同则复用上传会话，参数不同返回 409，包括 sourceETag 不同；token 不命中则按新的上传意图校验和受理，即使该 token 曾用于更早的上传。来源版本去重独立于 clientToken：指定稳定 assetId、overwrite=true 且提供 sourceETag 时，若来源身份及版本、导入参数和有效处理配置均未变化，即使未提供 clientToken，也可复用当前 uploadId 和加工代次；显式提供且命中最近 token 时仍要求完整规范化请求相同。复用有效 UPLOADING 会话时刷新同一对象路径的签名；复用 PENDING、PROCESSING 或 COMPLETED 会话时返回实际状态且不返回上传地址，PENDING 按相同 taskKey 补交调度，来源版本相同不表示处理完成。客户端 token 幂等命中后的失败状态只返回当前状态；新的上传意图遇到 FAILED、上传意图过期或来源、导入参数、有效处理配置变化时创建新的 uploadId、内部对象路径及加工代次。未提供 sourceETag 时不启用来源版本去重，可使用不同 clientToken 或不提供 clientToken，按新的上传意图重新导入；覆盖已有资产仍须 overwrite=true。新结果发布前仍使用旧发布版本。每个会话的原件对象仍必须禁止覆盖，签名头通过 headers 返回。完成 PUT 上传后，使用返回的 assetId 和 uploadId 调用 CompleteAssetUpload。携带 sourceETag 的 Begin 命中当前上传目标时，PENDING 会按相同 taskKey 补交调度，返回 PENDING、PROCESSING 或 COMPLETED 后无需再次上传或确认；显式提供相同 clientToken 且未传 sourceETag 的 PENDING 重放仍须重试 CompleteAssetUpload，以恢复受理结果未知的调度。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BeginAssetUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BeginAssetUploadResponse
+        /// </returns>
+        public async Task<BeginAssetUploadResponse> BeginAssetUploadAsync(string workspaceId, string knowledgeBaseId, BeginAssetUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BeginAssetUploadWithOptionsAsync(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CompleteAssetUploadRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteAssetUploadResponse
+        /// </returns>
+        public CompleteAssetUploadResponse CompleteAssetUploadWithOptions(string workspaceId, string knowledgeBaseId, string assetId, CompleteAssetUploadRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CompleteAssetUploadShrinkRequest request = new CompleteAssetUploadShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CompleteAssetUpload",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/complete-upload",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CompleteAssetUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CompleteAssetUploadRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteAssetUploadResponse
+        /// </returns>
+        public async Task<CompleteAssetUploadResponse> CompleteAssetUploadWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, CompleteAssetUploadRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CompleteAssetUploadShrinkRequest request = new CompleteAssetUploadShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CompleteAssetUpload",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/complete-upload",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CompleteAssetUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompleteAssetUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteAssetUploadResponse
+        /// </returns>
+        public CompleteAssetUploadResponse CompleteAssetUpload(string workspaceId, string knowledgeBaseId, string assetId, CompleteAssetUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CompleteAssetUploadWithOptions(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms a specified upload session by using the workspaceId, knowledgeBaseId, and assetId in the path and the uploadId in the request body. The server verifies tenant and resource ownership, requires the uploadId to match the current upload session and the upload_epoch to equal the current next_epoch, and then performs a HEAD operation on the bound original object to verify its existence, actual size of 1 byte to 50 MiB, and content type. Using the metadata and chunking configuration saved during acceptance, the server enters the pending state through a CAS operation that includes the upload identity, target generation, UPLOADING status, and deletion marker. Repeatedly confirming the same accepted upload that is still the current target returns the existing status without incrementing the generation or creating a new task. If the scheduling acceptance result is unknown, the server resubmits the task by using the same taskKey. When a subsequent overwrite upload, edit, or rebuild replaces the target, a delayed Complete request returns a status conflict and does not overwrite the new task or resurrect deleted assets. Non-retryable processing failures remain in the FAILED state and are not requeued by the Complete request.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CompleteAssetUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CompleteAssetUploadResponse
+        /// </returns>
+        public async Task<CompleteAssetUploadResponse> CompleteAssetUploadAsync(string workspaceId, string knowledgeBaseId, string assetId, CompleteAssetUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CompleteAssetUploadWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Converts an MCP service to free-edit mode.</para>
         /// </summary>
         /// 
@@ -2398,7 +2734,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// <para>Issues a local debugging token for a running high-code agent in a specified workspace. The latest configuration of the agent must be in effect. The workspace must have inbound access enabled for the selected network and debug routing configured. The token is valid for 1 hour from the time of issuance. After the token expires, you can call this operation again to obtain a new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2444,7 +2780,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// <para>Issues a local debugging token for a running high-code agent in a specified workspace. The latest configuration of the agent must be in effect. The workspace must have inbound access enabled for the selected network and debug routing configured. The token is valid for 1 hour from the time of issuance. After the token expires, you can call this operation again to obtain a new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2490,7 +2826,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// <para>Issues a local debugging token for a running high-code agent in a specified workspace. The latest configuration of the agent must be in effect. The workspace must have inbound access enabled for the selected network and debug routing configured. The token is valid for 1 hour from the time of issuance. After the token expires, you can call this operation again to obtain a new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2509,7 +2845,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Issues a local debug token for a running high-code agent in a specified workspace. The latest configuration of the agent must take effect. The workspace must enable inbound access for the selected network and complete debug routing preparations. The token is valid for 1 hour from the time of issuance. You can call this operation again to obtain a new token after the token expires.</para>
+        /// <para>Issues a local debugging token for a running high-code agent in a specified workspace. The latest configuration of the agent must be in effect. The workspace must have inbound access enabled for the selected network and debug routing configured. The token is valid for 1 hour from the time of issuance. After the token expires, you can call this operation again to obtain a new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4078,6 +4414,180 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateImageCacheWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public CreateKnowledgeBaseResponse CreateKnowledgeBaseWithOptions(string workspaceId, CreateKnowledgeBaseRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeBaseShrinkRequest request = new CreateKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseResponse> CreateKnowledgeBaseWithOptionsAsync(string workspaceId, CreateKnowledgeBaseRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeBaseShrinkRequest request = new CreateKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public CreateKnowledgeBaseResponse CreateKnowledgeBase(string workspaceId, CreateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateKnowledgeBaseWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a knowledge base in a specified workspace of the current tenant, and persistently binds the trusted tenantId and workspaceId. The creation process is asynchronous, and the response returns the resource status. You can query the status and lastError by calling GetKnowledgeBase or ListKnowledgeBases.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseResponse> CreateKnowledgeBaseAsync(string workspaceId, CreateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateKnowledgeBaseWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7442,6 +7952,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAssetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAssetResponse
+        /// </returns>
+        public DeleteAssetResponse DeleteAssetWithOptions(string workspaceId, string knowledgeBaseId, string assetId, DeleteAssetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAsset",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAssetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAssetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAssetResponse
+        /// </returns>
+        public async Task<DeleteAssetResponse> DeleteAssetWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, DeleteAssetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAsset",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAssetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAssetResponse
+        /// </returns>
+        public DeleteAssetResponse DeleteAsset(string workspaceId, string knowledgeBaseId, string assetId, DeleteAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAssetWithOptions(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Writes a deletion tombstone for an asset and initiates asynchronous cleanup. The server authenticates the request, verifies tenant and resource ownership, and checks for existing DELETING or DELETED tombstones. Duplicate requests for assets already in the deletion process return the current status without retriggering the deletion. For undeleted assets that are eligible for deletion, the control plane conditionally writes a tombstone. The operation returns the registered processing status, which does not indicate that the physical data cleanup is complete.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAssetResponse
+        /// </returns>
+        public async Task<DeleteAssetResponse> DeleteAssetAsync(string workspaceId, string knowledgeBaseId, string assetId, DeleteAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAssetWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a specified credential in a workspace and the ciphertext hosted in the credential service. After the deletion, agents bound to the credential can no longer obtain the credential content.</para>
         /// </summary>
         /// 
@@ -8604,6 +9252,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteImageCacheWithOptionsAsync(imageId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the Deleting or Deleted state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the DELETING or DELETED state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public DeleteKnowledgeBaseResponse DeleteKnowledgeBaseWithOptions(string workspaceId, string knowledgeBaseId, DeleteKnowledgeBaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the Deleting or Deleted state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the DELETING or DELETED state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseResponse> DeleteKnowledgeBaseWithOptionsAsync(string workspaceId, string knowledgeBaseId, DeleteKnowledgeBaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the Deleting or Deleted state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the DELETING or DELETED state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public DeleteKnowledgeBaseResponse DeleteKnowledgeBase(string workspaceId, string knowledgeBaseId, DeleteKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteKnowledgeBaseWithOptions(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the Deleting or Deleted state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously deletes a knowledge base. Verifies the trusted tenant identity, workspace ownership, and access permissions for the knowledge base. If the resource is already in the DELETING or DELETED state, repeated deletion requests return the current state without re-initiating cleanup. After the deletion is accepted, GetKnowledgeBase indicates that the resource does not exist, and ListKnowledgeBases no longer displays the resource. The system continues to clean up physical data in the background.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseResponse> DeleteKnowledgeBaseAsync(string workspaceId, string knowledgeBaseId, DeleteKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteKnowledgeBaseWithOptionsAsync(workspaceId, knowledgeBaseId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13332,6 +14118,420 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetResponse
+        /// </returns>
+        public GetAssetResponse GetAssetWithOptions(string workspaceId, string knowledgeBaseId, string assetId, GetAssetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAsset",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetResponse
+        /// </returns>
+        public async Task<GetAssetResponse> GetAssetWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, GetAssetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAsset",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetResponse
+        /// </returns>
+        public GetAssetResponse GetAsset(string workspaceId, string knowledgeBaseId, string assetId, GetAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAssetWithOptions(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the asset management properties and current processing status. For upload, rebuild, and chunk content editing operations, poll the status of this API until it returns COMPLETED or FAILED. For failure causes, refer to lastError. The publishedResultAvailable field indicates whether the published result is still available. This API does not accept clientToken and does not return receipts for chunkUpdate or historical modifications. If a deletion request is accepted, the API returns a resource not found error.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetResponse
+        /// </returns>
+        public async Task<GetAssetResponse> GetAssetAsync(string workspaceId, string knowledgeBaseId, string assetId, GetAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAssetWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetDownloadUrlResponse
+        /// </returns>
+        public GetAssetDownloadUrlResponse GetAssetDownloadUrlWithOptions(string workspaceId, string knowledgeBaseId, string assetId, GetAssetDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssetDownloadUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/download-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetDownloadUrlResponse
+        /// </returns>
+        public async Task<GetAssetDownloadUrlResponse> GetAssetDownloadUrlWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, GetAssetDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAssetDownloadUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/download-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAssetDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetDownloadUrlResponse
+        /// </returns>
+        public GetAssetDownloadUrlResponse GetAssetDownloadUrl(string workspaceId, string knowledgeBaseId, string assetId, GetAssetDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAssetDownloadUrlWithOptions(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns a time-limited download URL for the published original file of an asset, using a unified OSS public endpoint. Returns a status conflict if the asset is not published during initial processing. The published original file remains downloadable during re-chunking or editing, subject to validation of current permissions, enabled status, and deletion status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAssetDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAssetDownloadUrlResponse
+        /// </returns>
+        public async Task<GetAssetDownloadUrlResponse> GetAssetDownloadUrlAsync(string workspaceId, string knowledgeBaseId, string assetId, GetAssetDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAssetDownloadUrlWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChunkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChunkResponse
+        /// </returns>
+        public GetChunkResponse GetChunkWithOptions(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, GetChunkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChunk",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/chunks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(chunkSeq),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChunkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChunkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChunkResponse
+        /// </returns>
+        public async Task<GetChunkResponse> GetChunkWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, GetChunkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChunk",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/chunks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(chunkSeq),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChunkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChunkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChunkResponse
+        /// </returns>
+        public GetChunkResponse GetChunk(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, GetChunkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetChunkWithOptions(workspaceId, knowledgeBaseId, assetId, chunkSeq, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a chunk in the currently published generation based on its 1-based logical sequence number within the asset, and verifies the ownership relationship between the chunk and the asset.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChunkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChunkResponse
+        /// </returns>
+        public async Task<GetChunkResponse> GetChunkAsync(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, GetChunkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetChunkWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, chunkSeq, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a specified credential and returns a list of agents bound to the credential. The credential content is returned in a masked format.</para>
         /// </summary>
         /// 
@@ -16262,6 +17462,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetImageCacheWithOptionsAsync(imageId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public GetKnowledgeBaseResponse GetKnowledgeBaseWithOptions(string workspaceId, string knowledgeBaseId, GetKnowledgeBaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseResponse> GetKnowledgeBaseWithOptionsAsync(string workspaceId, string knowledgeBaseId, GetKnowledgeBaseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public GetKnowledgeBaseResponse GetKnowledgeBase(string workspaceId, string knowledgeBaseId, GetKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetKnowledgeBaseWithOptions(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the public information, configuration, and current lifecycle status of a knowledge base in a specified workspace of the current tenant. The status and lastError fields indicate the creation and deletion progress and failure causes.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKnowledgeBaseResponse
+        /// </returns>
+        public async Task<GetKnowledgeBaseResponse> GetKnowledgeBaseAsync(string workspaceId, string knowledgeBaseId, GetKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetKnowledgeBaseWithOptionsAsync(workspaceId, knowledgeBaseId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -20896,6 +22234,362 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAssetsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetsResponse
+        /// </returns>
+        public ListAssetsResponse ListAssetsWithOptions(string workspaceId, string knowledgeBaseId, ListAssetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileNamePrefix))
+            {
+                query["fileNamePrefix"] = request.FileNamePrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssets",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAssetsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetsResponse
+        /// </returns>
+        public async Task<ListAssetsResponse> ListAssetsWithOptionsAsync(string workspaceId, string knowledgeBaseId, ListAssetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileNamePrefix))
+            {
+                query["fileNamePrefix"] = request.FileNamePrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAssets",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAssetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetsResponse
+        /// </returns>
+        public ListAssetsResponse ListAssets(string workspaceId, string knowledgeBaseId, ListAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAssetsWithOptions(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for undeleted assets in a knowledge base based on the file name prefix and processing status. The results are sorted in descending order by the most recent upload time, and then by assetId in descending order for identical upload times. The upload time refers to the acceptance time of the most recent BeginAssetUpload request. It is updated upon overwrite uploads but remains unchanged for replays with the same token or when you deduplicate the source. It does not represent the processing time. The list index is updated asynchronously and may experience brief delays. The totalCount is cached for 60 seconds based on the resource scope and filter conditions, which may result in brief staleness. Stop paging only when nextToken is empty. If the legacy table lacks the upload time column or sorting index, a ServiceUnavailable error is returned. In this case, use a newly created knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAssetsResponse
+        /// </returns>
+        public async Task<ListAssetsResponse> ListAssetsAsync(string workspaceId, string knowledgeBaseId, ListAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAssetsWithOptionsAsync(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
+        public ListChunksResponse ListChunksWithOptions(string workspaceId, string knowledgeBaseId, ListChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetId))
+            {
+                query["assetId"] = request.AssetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChunks",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/chunks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChunksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
+        public async Task<ListChunksResponse> ListChunksWithOptionsAsync(string workspaceId, string knowledgeBaseId, ListChunksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetId))
+            {
+                query["assetId"] = request.AssetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChunks",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/chunks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChunksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
+        public ListChunksResponse ListChunks(string workspaceId, string knowledgeBaseId, ListChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListChunksWithOptions(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query for currently published chunks in a knowledge base. Results can be filtered by asset, keyword, and enabled status. If an assetId is specified, results are sorted by chunkSeq, and the nextToken is attached to the current publish result of the asset. A VersionConflict (409) error is returned if the publish result changes. If no assetId is specified, results are sorted by assetId and chunkSeq, and a full-base snapshot is not guaranteed. The token is always attached to the tenant, workspace, knowledge base, filter conditions, and sorting.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChunksResponse
+        /// </returns>
+        public async Task<ListChunksResponse> ListChunksAsync(string workspaceId, string knowledgeBaseId, ListChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListChunksWithOptionsAsync(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the official and enterprise models available for the enabled QoderCLI connector. The service retrieves models in real time by using the saved API key and organization ID, and deduplicates them by model ID.</para>
         /// </summary>
         /// 
@@ -22884,6 +24578,164 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListImageCachesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public ListKnowledgeBasesResponse ListKnowledgeBasesWithOptions(string workspaceId, ListKnowledgeBasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBases",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public async Task<ListKnowledgeBasesResponse> ListKnowledgeBasesWithOptionsAsync(string workspaceId, ListKnowledgeBasesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeBases",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeBasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public ListKnowledgeBasesResponse ListKnowledgeBases(string workspaceId, ListKnowledgeBasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListKnowledgeBasesWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries knowledge bases in a specified workspace of the current tenant by using paging. Each returned item includes the status and lastError fields, which can be used to query the creation and deletion progress of knowledge bases and the causes of failures.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeBasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeBasesResponse
+        /// </returns>
+        public async Task<ListKnowledgeBasesResponse> ListKnowledgeBasesAsync(string workspaceId, ListKnowledgeBasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListKnowledgeBasesWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -27891,7 +29743,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// <para>Validates a single direct-connect MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not provided. The server discovers them automatically, prioritizing the modern protocol and falling back to the legacy protocol only if the modern one is unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the protocol conversion compatibility of the gateway. If the direct connection protocol check passes but no capabilities are declared, the status is still SUCCESS. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration. It also sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business APIs defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation API, does not accept validation-specific headers, and does not execute tools/call. A success response from the API only indicates that the validation request has been processed. The actual origin server result is indicated by data.status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27948,7 +29800,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// <para>Validates a single direct-connect MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not provided. The server discovers them automatically, prioritizing the modern protocol and falling back to the legacy protocol only if the modern one is unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the protocol conversion compatibility of the gateway. If the direct connection protocol check passes but no capabilities are declared, the status is still SUCCESS. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration. It also sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business APIs defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation API, does not accept validation-specific headers, and does not execute tools/call. A success response from the API only indicates that the validation request has been processed. The actual origin server result is indicated by data.status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -28005,7 +29857,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// <para>Validates a single direct-connect MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not provided. The server discovers them automatically, prioritizing the modern protocol and falling back to the legacy protocol only if the modern one is unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the protocol conversion compatibility of the gateway. If the direct connection protocol check passes but no capabilities are declared, the status is still SUCCESS. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration. It also sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business APIs defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation API, does not accept validation-specific headers, and does not execute tools/call. A success response from the API only indicates that the validation request has been processed. The actual origin server result is indicated by data.status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28029,7 +29881,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Validates a single direct MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not passed. The server discovers them automatically, prioritizing the validation of the modern protocol and falling back to the legacy protocol only if the modern one is confirmed to be unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the external protocol conversion compatibility of the gateway. A direct connection protocol check is still considered SUCCESS even if no capabilities are declared. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration, and sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business interfaces defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation interface, does not accept detection-specific headers, and does not execute tools/call. A success response from the interface only indicates that the validation request has been processed. The origin server result is indicated by data.status.</para>
+        /// <para>Validates a single direct-connect MCP or HTTP origin server before creating an MCP. This operation does not require an MCP resource ID, create resources, or persist probe results. For direct connections, the protocol, transport method, and version are not provided. The server discovers them automatically, prioritizing the modern protocol and falling back to the legacy protocol only if the modern one is unsupported. The returned backend protocol and transport method can be used for creation configurations and do not limit the protocol conversion compatibility of the gateway. If the direct connection protocol check passes but no capabilities are declared, the status is still SUCCESS. For HTTP, the operation validates the complete OpenAPI definition and origin server authentication configuration. It also sends a HEAD request without business parameters or origin server credentials to the configured address to check connectivity. It does not select or execute business APIs defined in the specification, nor does it verify whether the credentials are accepted by the origin server. It only accepts origin server configurations supported by the creation API, does not accept validation-specific headers, and does not execute tools/call. A success response from the API only indicates that the validation request has been processed. The actual origin server result is indicated by data.status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29166,6 +31018,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RevokeMemoryWithOptionsAsync(workspaceId, memoryStoreName, memoryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchKnowledgeBaseResponse
+        /// </returns>
+        public SearchKnowledgeBaseResponse SearchKnowledgeBaseWithOptions(string workspaceId, string knowledgeBaseId, SearchKnowledgeBaseRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SearchKnowledgeBaseShrinkRequest request = new SearchKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SearchKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchKnowledgeBaseResponse
+        /// </returns>
+        public async Task<SearchKnowledgeBaseResponse> SearchKnowledgeBaseWithOptionsAsync(string workspaceId, string knowledgeBaseId, SearchKnowledgeBaseRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SearchKnowledgeBaseShrinkRequest request = new SearchKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchKnowledgeBaseResponse
+        /// </returns>
+        public SearchKnowledgeBaseResponse SearchKnowledgeBase(string workspaceId, string knowledgeBaseId, SearchKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SearchKnowledgeBaseWithOptions(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes keyword, vector, or hybrid search on published and authorized results in a specified knowledge base. Search parameters take effect in the order of the current request, knowledge base search configuration, and system default values. Metadata filtering uses a JSON expression tree and does not accept OTS DSL or tenant fields. The actual number of results after filtering and permission verification may be less than topK. The search feature provides eventual consistency, and newly published results become searchable after index synchronization. Reading candidates still verifies the current publish pointer and permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchKnowledgeBaseResponse
+        /// </returns>
+        public async Task<SearchKnowledgeBaseResponse> SearchKnowledgeBaseAsync(string workspaceId, string knowledgeBaseId, SearchKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SearchKnowledgeBaseWithOptionsAsync(workspaceId, knowledgeBaseId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -30332,6 +32346,504 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateAgentSpecWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAssetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAssetResponse
+        /// </returns>
+        public UpdateAssetResponse UpdateAssetWithOptions(string workspaceId, string knowledgeBaseId, string assetId, UpdateAssetRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAssetShrinkRequest request = new UpdateAssetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAsset",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAssetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAssetRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAssetResponse
+        /// </returns>
+        public async Task<UpdateAssetResponse> UpdateAssetWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, UpdateAssetRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAssetShrinkRequest request = new UpdateAssetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAsset",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAssetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAssetResponse
+        /// </returns>
+        public UpdateAssetResponse UpdateAsset(string workspaceId, string knowledgeBaseId, string assetId, UpdateAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAssetWithOptions(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the asset name, enabled status, metadata patch, or asset-level chunking configuration. At least one of these items must be provided in the request. Metadata is incrementally merged, and chunkConfiguration triggers asynchronous rechunking. Changes that affect retrieval projections cause the backend to create a new generation and conditionally publish it. Before publication, previously published results remain readable as long as the asset is not disabled, deleted, or unauthorized, and published results are not modified in place. Processing failures in the current phase are not retried. For assets in the FAILED state, only the name or enabled status can be modified. Submitting metadata or chunkConfiguration returns InvalidAssetState.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAssetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAssetResponse
+        /// </returns>
+        public async Task<UpdateAssetResponse> UpdateAssetAsync(string workspaceId, string knowledgeBaseId, string assetId, UpdateAssetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAssetWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateChunkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunkResponse
+        /// </returns>
+        public UpdateChunkResponse UpdateChunkWithOptions(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, UpdateChunkRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateChunkShrinkRequest request = new UpdateChunkShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChunk",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/chunks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(chunkSeq),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChunkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateChunkRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunkResponse
+        /// </returns>
+        public async Task<UpdateChunkResponse> UpdateChunkWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, UpdateChunkRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateChunkShrinkRequest request = new UpdateChunkShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChunk",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/chunks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(chunkSeq),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChunkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChunkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunkResponse
+        /// </returns>
+        public UpdateChunkResponse UpdateChunk(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, UpdateChunkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateChunkWithOptions(workspaceId, knowledgeBaseId, assetId, chunkSeq, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the content or enabled status of a chunk by its logical sequence number. You must pass back the opaque chunkToken returned by the query operation. When only the enabled status is modified, the system synchronously writes to OTS after reading the currently published result, validating the token, and fixing the target at the beginning of the request. Enabling or disabling is allowed when a published result exists and is not deleted, including the PENDING, PROCESSING, and FAILED states, without waiting for FC. New results published during this process are not followed, rolled back, or appended with post-write version conflicts. New results are not guaranteed to inherit concurrent enable or disable operations. Indexes are synchronized asynchronously, which may cause a brief delay in retrieval. Modifying the content is only allowed when the status is COMPLETED. The system asynchronously computes the target vectors and publishes the complete result. You can call GetAsset to query the current status, lastError, and publishedResultAvailable of the document. Content edits with the same clientToken are idempotently replayed with the original result. An expired token at the beginning of the request returns Chunk.VersionConflict. Execution generations are managed only on the backend.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChunkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunkResponse
+        /// </returns>
+        public async Task<UpdateChunkResponse> UpdateChunkAsync(string workspaceId, string knowledgeBaseId, string assetId, string chunkSeq, UpdateChunkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateChunkWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, chunkSeq, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启停 Chunk</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>同步启停同一资产中 1 至 100 个 Chunk。每项必填 chunkSeq、chunkToken、enabled，序号不得重复，不支持正文。请求开始读取当前已发布结果，校验全部令牌后固定目标；已过期令牌整次返回 Chunk.VersionConflict。已有发布结果且未删除即可启停，包括 PENDING、PROCESSING、FAILED，不等待 FC。期间新结果发布不追随、不回滚，也不追加写后版本冲突；新结果不保证继承并发启停。写入允许部分成功，检查 results 和 failedCount。索引异步同步，检索可能短暂延迟。不调用 FC，不需要 clientToken 或轮询。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunksResponse
+        /// </returns>
+        public UpdateChunksResponse UpdateChunksWithOptions(string workspaceId, string knowledgeBaseId, string assetId, UpdateChunksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateChunksShrinkRequest request = new UpdateChunksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChunks",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/chunks",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChunksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启停 Chunk</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>同步启停同一资产中 1 至 100 个 Chunk。每项必填 chunkSeq、chunkToken、enabled，序号不得重复，不支持正文。请求开始读取当前已发布结果，校验全部令牌后固定目标；已过期令牌整次返回 Chunk.VersionConflict。已有发布结果且未删除即可启停，包括 PENDING、PROCESSING、FAILED，不等待 FC。期间新结果发布不追随、不回滚，也不追加写后版本冲突；新结果不保证继承并发启停。写入允许部分成功，检查 results 和 failedCount。索引异步同步，检索可能短暂延迟。不调用 FC，不需要 clientToken 或轮询。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateChunksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunksResponse
+        /// </returns>
+        public async Task<UpdateChunksResponse> UpdateChunksWithOptionsAsync(string workspaceId, string knowledgeBaseId, string assetId, UpdateChunksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateChunksShrinkRequest request = new UpdateChunksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChunks",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId) + "/assets/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(assetId) + "/chunks",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChunksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启停 Chunk</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>同步启停同一资产中 1 至 100 个 Chunk。每项必填 chunkSeq、chunkToken、enabled，序号不得重复，不支持正文。请求开始读取当前已发布结果，校验全部令牌后固定目标；已过期令牌整次返回 Chunk.VersionConflict。已有发布结果且未删除即可启停，包括 PENDING、PROCESSING、FAILED，不等待 FC。期间新结果发布不追随、不回滚，也不追加写后版本冲突；新结果不保证继承并发启停。写入允许部分成功，检查 results 和 failedCount。索引异步同步，检索可能短暂延迟。不调用 FC，不需要 clientToken 或轮询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunksResponse
+        /// </returns>
+        public UpdateChunksResponse UpdateChunks(string workspaceId, string knowledgeBaseId, string assetId, UpdateChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateChunksWithOptions(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量启停 Chunk</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>同步启停同一资产中 1 至 100 个 Chunk。每项必填 chunkSeq、chunkToken、enabled，序号不得重复，不支持正文。请求开始读取当前已发布结果，校验全部令牌后固定目标；已过期令牌整次返回 Chunk.VersionConflict。已有发布结果且未删除即可启停，包括 PENDING、PROCESSING、FAILED，不等待 FC。期间新结果发布不追随、不回滚，也不追加写后版本冲突；新结果不保证继承并发启停。写入允许部分成功，检查 results 和 failedCount。索引异步同步，检索可能短暂延迟。不调用 FC，不需要 clientToken 或轮询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChunksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChunksResponse
+        /// </returns>
+        public async Task<UpdateChunksResponse> UpdateChunksAsync(string workspaceId, string knowledgeBaseId, string assetId, UpdateChunksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateChunksWithOptionsAsync(workspaceId, knowledgeBaseId, assetId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32644,6 +35156,180 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateIdentityProviderSCIMWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public UpdateKnowledgeBaseResponse UpdateKnowledgeBaseWithOptions(string workspaceId, string knowledgeBaseId, UpdateKnowledgeBaseRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeBaseShrinkRequest request = new UpdateKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseResponse> UpdateKnowledgeBaseWithOptionsAsync(string workspaceId, string knowledgeBaseId, UpdateKnowledgeBaseRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKnowledgeBaseShrinkRequest request = new UpdateKnowledgeBaseShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKnowledgeBase",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/knowledge-bases/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(knowledgeBaseId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public UpdateKnowledgeBaseResponse UpdateKnowledgeBase(string workspaceId, string knowledgeBaseId, UpdateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateKnowledgeBaseWithOptions(workspaceId, knowledgeBaseId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the name, description, chunking, or search configuration of a knowledge base. The metadataSchema, embeddingModel, and embeddingDimension cannot be modified after creation. The chunking configuration applies only to subsequently uploaded assets and does not implicitly rebuild existing assets.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<UpdateKnowledgeBaseResponse> UpdateKnowledgeBaseAsync(string workspaceId, string knowledgeBaseId, UpdateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateKnowledgeBaseWithOptionsAsync(workspaceId, knowledgeBaseId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

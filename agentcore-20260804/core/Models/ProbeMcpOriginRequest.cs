@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ProbeMcpOriginRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of the origin server configuration must not exceed that of the creation interface. The control fields for this validation only restrict the validation scope and do not extend the origin server access configuration.</para>
+        /// <para>The scope of the origin server configuration does not exceed that of the creation API. The control fields for this validation only restrict the validation scope and do not extend the origin server onboarding configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public ProbeMcpOriginRequestBody Body { get; set; }
         public class ProbeMcpOriginRequestBody : TeaModel {
             /// <summary>
-            /// <para>A single HTTP(S) URL that reuses the addresses of the origin server used during creation. Embedded credentials, batch addresses, or protected targets are not accepted.</para>
+            /// <para>A single HTTP(S) URL that reuses the addresses of the origin server from the creation API. Embedded credentials, multiple addresses, or protected targets are not accepted.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>Reuses the enabled, directProxy, and httpToMcp origin server authentication fields and validations from the creation interface. When enabled is set to true, you must provide a configuration that matches the access type. codePackage or additional headers are not accepted.</para>
+            /// <para>Reuses the enabled, directProxy, and httpToMcp origin server authentication fields and validations from the creation API. If enabled is set to true, you must provide a configuration that matches the access type. codePackage or additional headers are not accepted.</para>
             /// </summary>
             [NameInMap("auth")]
             [Validation(Required=false)]
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the configuration.</para>
+                /// <para>Specifies whether to enable this configuration.</para>
                 /// </summary>
                 [NameInMap("enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The list of backend authentication configurations for HTTP-to-MCP.</para>
+                /// <para>The list of backend authentication configurations for HTTP to MCP.</para>
                 /// </summary>
                 [NameInMap("httpToMcp")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Applicable only to HTTP. Reuses the JSON or YAML string semantics from the creation interface. This field is required when validating the definition. Remote documents or references are not automatically fetched.</para>
+            /// <para>Used only for HTTP. Reuses the JSON or YAML string semantics from the creation API. This field is required when validating the definition. Remote documents or references are not automatically fetched.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;openapi&quot;:&quot;3.0.3&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;Inventory API&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;paths&quot;:{&quot;/inventory&quot;:{&quot;get&quot;:{&quot;operationId&quot;:&quot;listInventory&quot;,&quot;responses&quot;:{&quot;200&quot;:{&quot;description&quot;:&quot;OK&quot;}}}}}}</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SwaggerConfig { get; set; }
 
             /// <summary>
-            /// <para>Valid values: DIRECT_PROXY or HTTP_TO_MCP. CODE_PACKAGE is not accepted.</para>
+            /// <para>The access type. Valid values: DIRECT_PROXY and HTTP_TO_MCP. CODE_PACKAGE is not supported.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -1,3 +1,23 @@
+2026-11-26 Version: 3.8.0
+- Support API BeginAssetUpload.
+- Support API CompleteAssetUpload.
+- Support API CreateKnowledgeBase.
+- Support API DeleteAsset.
+- Support API DeleteKnowledgeBase.
+- Support API GetAsset.
+- Support API GetAssetDownloadUrl.
+- Support API GetChunk.
+- Support API GetKnowledgeBase.
+- Support API ListAssets.
+- Support API ListChunks.
+- Support API ListKnowledgeBases.
+- Support API SearchKnowledgeBase.
+- Support API UpdateAsset.
+- Support API UpdateChunk.
+- Support API UpdateChunks.
+- Support API UpdateKnowledgeBase.
+
+
 2026-11-23 Version: 3.7.0
 - Support API CreateCustomAgentDebugToken.
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateCustomAgentDebugTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The network type used for local debugging. INTERNET indicates public network access. INTRANET indicates access over a virtual private cloud (VPC).</para>
+        /// <para>The network type used for local debugging. INTERNET indicates public network access, and INTRANET indicates access over a virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

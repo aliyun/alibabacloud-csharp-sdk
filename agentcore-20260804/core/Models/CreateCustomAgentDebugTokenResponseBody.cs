@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateCustomAgentDebugTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. SUCCESS is returned if the call is successful.</para>
+        /// <para>The business status code. SUCCESS is returned if the call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The debug token issued in this request, the token fingerprint, and the corresponding resource and network information.</para>
+        /// <para>The debugging token, token fingerprint, and the corresponding resource and network information issued in this request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BootstrapToken { get; set; }
 
             /// <summary>
-            /// <para>The network type used for the token, which is the same as the networkType parameter in the request.</para>
+            /// <para>The network type used by the token, which is the same as the networkType parameter in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INTERNET</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The fingerprint used to identify the issued token, which can be used to troubleshoot issuance records.</para>
+            /// <para>The fingerprint used to identify the issued token. You can use the fingerprint to troubleshoot issuance records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c4f5b8813a0d</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The description of the request processing result.</para>
+        /// <para>The description of the request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, which can be used for troubleshooting.</para>
+        /// <para>The unique identifier of the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2B17684-703A-4F29-9D14-30C334A85162</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

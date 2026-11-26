@@ -556,7 +556,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The description of the agent\&quot;s purpose.</para>
+            /// <para>The description of the agent&quot;s purpose.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom agent for providing conversation services</para>

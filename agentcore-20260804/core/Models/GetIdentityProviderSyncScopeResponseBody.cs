@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>AllAuthorized: the full authorized scope, which is restricted by the application\&quot;s address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
+                /// <para>AllAuthorized: the full authorized scope, which is restricted by the application&quot;s address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>

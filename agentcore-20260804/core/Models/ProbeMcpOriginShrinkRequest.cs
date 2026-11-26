@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ProbeMcpOriginShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of the origin server configuration must not exceed that of the creation interface. The control fields for this validation only restrict the validation scope and do not extend the origin server access configuration.</para>
+        /// <para>The scope of the origin server configuration does not exceed that of the creation API. The control fields for this validation only restrict the validation scope and do not extend the origin server onboarding configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
