@@ -42,6 +42,152 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddScriptHotWordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddScriptHotWordResponse
+        /// </returns>
+        public AddScriptHotWordResponse AddScriptHotWordWithOptions(AddScriptHotWordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWord))
+            {
+                body["hotWord"] = request.HotWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                body["scriptRecordId"] = request.ScriptRecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddScriptHotWord",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/addScriptHotWord",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddScriptHotWordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddScriptHotWordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddScriptHotWordResponse
+        /// </returns>
+        public async Task<AddScriptHotWordResponse> AddScriptHotWordWithOptionsAsync(AddScriptHotWordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWord))
+            {
+                body["hotWord"] = request.HotWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                body["scriptRecordId"] = request.ScriptRecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddScriptHotWord",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/addScriptHotWord",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddScriptHotWordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddScriptHotWordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddScriptHotWordResponse
+        /// </returns>
+        public AddScriptHotWordResponse AddScriptHotWord(AddScriptHotWordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddScriptHotWordWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddScriptHotWordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddScriptHotWordResponse
+        /// </returns>
+        public async Task<AddScriptHotWordResponse> AddScriptHotWordAsync(AddScriptHotWordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddScriptHotWordWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>添加文案反馈</para>
         /// </summary>
         /// 
@@ -4554,6 +4700,136 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteIndividuationTextWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteScriptHotWordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScriptHotWordResponse
+        /// </returns>
+        public DeleteScriptHotWordResponse DeleteScriptHotWordWithOptions(DeleteScriptHotWordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWordId))
+            {
+                query["hotWordId"] = request.HotWordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteScriptHotWord",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/deleteScriptHotWord",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteScriptHotWordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteScriptHotWordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScriptHotWordResponse
+        /// </returns>
+        public async Task<DeleteScriptHotWordResponse> DeleteScriptHotWordWithOptionsAsync(DeleteScriptHotWordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWordId))
+            {
+                query["hotWordId"] = request.HotWordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteScriptHotWord",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/deleteScriptHotWord",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteScriptHotWordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteScriptHotWordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScriptHotWordResponse
+        /// </returns>
+        public DeleteScriptHotWordResponse DeleteScriptHotWord(DeleteScriptHotWordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteScriptHotWordWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteScriptHotWordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteScriptHotWordResponse
+        /// </returns>
+        public async Task<DeleteScriptHotWordResponse> DeleteScriptHotWordAsync(DeleteScriptHotWordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteScriptHotWordWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9314,6 +9590,160 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>检索剧本热词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryScriptHotWordListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryScriptHotWordListResponse
+        /// </returns>
+        public QueryScriptHotWordListResponse QueryScriptHotWordListWithOptions(QueryScriptHotWordListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWord))
+            {
+                query["hotWord"] = request.HotWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                query["scriptRecordId"] = request.ScriptRecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryScriptHotWordList",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/listScriptHotWord",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryScriptHotWordListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检索剧本热词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryScriptHotWordListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryScriptHotWordListResponse
+        /// </returns>
+        public async Task<QueryScriptHotWordListResponse> QueryScriptHotWordListWithOptionsAsync(QueryScriptHotWordListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWord))
+            {
+                query["hotWord"] = request.HotWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                query["scriptRecordId"] = request.ScriptRecordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryScriptHotWordList",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/listScriptHotWord",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryScriptHotWordListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检索剧本热词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryScriptHotWordListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryScriptHotWordListResponse
+        /// </returns>
+        public QueryScriptHotWordListResponse QueryScriptHotWordList(QueryScriptHotWordListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryScriptHotWordListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检索剧本热词列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryScriptHotWordListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryScriptHotWordListResponse
+        /// </returns>
+        public async Task<QueryScriptHotWordListResponse> QueryScriptHotWordListAsync(QueryScriptHotWordListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryScriptHotWordListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询会话信息</para>
         /// </summary>
         /// 
@@ -11892,6 +12322,152 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateAgentWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateScriptHotWordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptHotWordResponse
+        /// </returns>
+        public UpdateScriptHotWordResponse UpdateScriptHotWordWithOptions(UpdateScriptHotWordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWord))
+            {
+                body["hotWord"] = request.HotWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWordId))
+            {
+                body["hotWordId"] = request.HotWordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScriptHotWord",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/updateScriptHotWord",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScriptHotWordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateScriptHotWordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptHotWordResponse
+        /// </returns>
+        public async Task<UpdateScriptHotWordResponse> UpdateScriptHotWordWithOptionsAsync(UpdateScriptHotWordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWord))
+            {
+                body["hotWord"] = request.HotWord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotWordId))
+            {
+                body["hotWordId"] = request.HotWordId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScriptHotWord",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/updateScriptHotWord",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScriptHotWordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateScriptHotWordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptHotWordResponse
+        /// </returns>
+        public UpdateScriptHotWordResponse UpdateScriptHotWord(UpdateScriptHotWordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateScriptHotWordWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新剧本热词</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateScriptHotWordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScriptHotWordResponse
+        /// </returns>
+        public async Task<UpdateScriptHotWordResponse> UpdateScriptHotWordAsync(UpdateScriptHotWordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateScriptHotWordWithOptionsAsync(request, headers, runtime);
         }
 
     }
