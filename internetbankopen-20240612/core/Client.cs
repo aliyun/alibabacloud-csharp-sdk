@@ -22,10 +22,6 @@ namespace AlibabaCloud.SDK.InternetBankOpen20240612
             AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
             this._spi = gatewayClient;
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-beijing", "internetbankopen.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("internetbankopen", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
