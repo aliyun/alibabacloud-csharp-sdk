@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         /// <para><b>The Flink SQL draft, which must be a self-contained and complete DDL and DML statement.</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>CREATE TEMPORARY TABLE src (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;datagen\&quot;); CREATE TEMPORARY TABLE sink (id BIGINT) WITH (\&quot;connector\&quot; = \&quot;print\&quot;); INSERT INTO sink SELECT id FROM src;</para>
+        /// <para>CREATE TEMPORARY TABLE src (id BIGINT) WITH (&quot;connector&quot; = &quot;datagen&quot;); CREATE TEMPORARY TABLE sink (id BIGINT) WITH (&quot;connector&quot; = &quot;print&quot;); INSERT INTO sink SELECT id FROM src;</para>
         /// </summary>
         [NameInMap("DraftSql")]
         [Validation(Required=false)]

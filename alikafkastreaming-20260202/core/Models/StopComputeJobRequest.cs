@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class StopComputeJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the compute instance, excluding the region name.</para>
+        /// <para>The ID of the computing instance, excluding the region name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute job.</para>
+        /// <para>The name of the computing job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +41,22 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The job stop strategy. Default value: <c>CANCEL</c> if omitted.</para>
+        /// <list type="bullet">
+        /// <item><description><c>CANCEL</c>: Stops the job directly and skips the current savepoint.</description></item>
+        /// <item><description><c>STOP_WITH_SAVEPOINT</c>: Creates a savepoint and then stops the job.</description></item>
+        /// <item><description><c>STOP_WITH_DRAIN</c>: Stops the job in drain mode and creates a savepoint, triggering the output of event time windows.</description></item>
+        /// </list>
+        /// <para>Strategies with savepoints apply only to running production jobs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>STOP_WITH_SAVEPOINT</para>
+        /// </summary>
+        [NameInMap("StopStrategy")]
+        [Validation(Required=false)]
+        public string StopStrategy { get; set; }
 
     }
 

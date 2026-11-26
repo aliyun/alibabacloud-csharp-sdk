@@ -1,3 +1,7 @@
+2026-11-26 Version: 2.0.3
+- Update API StopComputeJob: add request parameters StopStrategy.
+
+
 2026-11-24 Version: 2.0.2
 - Generated csharp 2026-02-02 for AlikafkaStreaming.
 

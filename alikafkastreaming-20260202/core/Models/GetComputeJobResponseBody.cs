@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SQL validation or compilation failed: Column \&quot;xxx\&quot; not found</para>
+            /// <para>SQL validation or compilation failed: Column &quot;xxx&quot; not found</para>
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]

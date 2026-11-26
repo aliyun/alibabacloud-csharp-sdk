@@ -3010,14 +3010,14 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a compute job in a specified region and instance.</para>
+        /// <para>Stops a computing job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>This operation stops the production or debug running instance of a specified computing job.</description></item>
         /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
@@ -3048,6 +3048,10 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopStrategy))
+            {
+                query["StopStrategy"] = request.StopStrategy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3069,14 +3073,14 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a compute job in a specified region and instance.</para>
+        /// <para>Stops a computing job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>This operation stops the production or debug running instance of a specified computing job.</description></item>
         /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
@@ -3107,6 +3111,10 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StopStrategy))
+            {
+                query["StopStrategy"] = request.StopStrategy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3128,14 +3136,14 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a compute job in a specified region and instance.</para>
+        /// <para>Stops a computing job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>This operation stops the production or debug running instance of a specified computing job.</description></item>
         /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
@@ -3155,14 +3163,14 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a compute job in a specified region and instance.</para>
+        /// <para>Stops a computing job in a specified region and instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation stops the production or debug runtime instance of a specified compute job.</description></item>
+        /// <item><description>This operation stops the production or debug running instance of a specified computing job.</description></item>
         /// <item><description>A successful response indicates that the stop request has been accepted, but it does not mean that the job stops immediately.</description></item>
         /// </list>
         /// </description>
