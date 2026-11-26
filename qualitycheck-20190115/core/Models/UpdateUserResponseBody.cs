@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the request succeeded. Use this field to determine if the request succeeded: \<c>true\\</c> for success; \<c>false\\</c>/\<c>null\\</c> for failure.</para>
+        /// <para>Indicates if the request succeeded. Use this field to determine if the request succeeded: `true` for success; `false`/`null` for failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

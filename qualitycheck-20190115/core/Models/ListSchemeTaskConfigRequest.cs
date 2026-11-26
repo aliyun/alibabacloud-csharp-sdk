@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListSchemeTaskConfigRequest : TeaModel {
         /// <summary>
-        /// <para>baseMeAgentId</para>
+        /// <para>The ID of the business workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>The request parameter JSON. For details, see the supplementary description of request parameters.</para>
+        /// <para>The input JSON string. For more information, see the supplementary description of request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:10,&quot;sourceDataType&quot;:&quot;1&quot;}</para>

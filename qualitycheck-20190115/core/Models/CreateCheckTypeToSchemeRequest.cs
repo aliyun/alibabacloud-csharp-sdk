@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
     public class CreateCheckTypeToSchemeRequest : TeaModel {
         /// <summary>
         /// <para>Workspace ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]

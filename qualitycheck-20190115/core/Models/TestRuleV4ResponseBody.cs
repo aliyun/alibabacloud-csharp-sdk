@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         public string Tid { get; set; }
 
                         /// <summary>
-                        /// <para>The position of the character that follows the highlighted keyword. The character at the \<c>to\\</c> position is not included in the highlight. For example, if \<c>from\\</c> is 0 and \<c>to\\</c> is 3, the highlighted keyword consists of the characters at indices 0, 1, and 2. The maximum value is one less than the total number of characters in the sentence.</para>
+                        /// <para>The position of the character that follows the highlighted keyword. The character at the `to` position is not included in the highlight. For example, if `from` is 0 and `to` is 3, the highlighted keyword consists of the characters at indices 0, 1, and 2. The maximum value is one less than the total number of characters in the sentence.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3</para>
@@ -454,7 +454,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public string JudgeNodeName { get; set; }
 
                 /// <summary>
-                /// <para>Lambda expression. Example: a&amp;\&amp;b.</para>
+                /// <para>Lambda expression. Example: a&amp;&amp;b.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a&amp;&amp;b</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListRulesV4ResponseBody : TeaModel {
         /// <summary>
-        /// <para>Business type. This field has no practical use. Ignore it.</para>
+        /// <para>The business type. This parameter has no practical meaning and can be ignored.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public int? BusinessType { get; set; }
 
         /// <summary>
-        /// <para>Result code. <b>200</b> means success. Any other value means failure. Callers can use this field to identify the cause of failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can determine the cause of the failure based on this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>219</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<RuleCountInfo> Data { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error details if the request failed. Returns <b>successful</b> if the request succeeded.</para>
+        /// <para>The error details when an error occurs, or <b>successful</b> when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Error details if the request failed. Use this field when multiple messages are returned.</para>
+        /// <para>The error details when an error occurs. This parameter is used when multiple messages are returned.</para>
         /// </summary>
         [NameInMap("Messages")]
         [Validation(Required=false)]
         public List<string> Messages { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of rows per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96138D8D-8D26-4E41-BFF4-77AED1088BBD</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Callers can use this field to determine success: true means success. <b>false</b> or <b>null</b> means failure.</para>
+        /// <para>Indicates whether the request is successful. You can determine whether the request is successful based on this parameter. A value of <b>true</b> indicates success. A value of <b>false</b> or <b>null</b> indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of data entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>219</para>

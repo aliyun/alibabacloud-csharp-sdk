@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
     public class UpdateRuleByIdRequest : TeaModel {
         /// <summary>
         /// <para>Workspace ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>Returns the IDs and names of quality inspection schemes associated with this rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ReturnRelatedSchemes")]
         [Validation(Required=false)]

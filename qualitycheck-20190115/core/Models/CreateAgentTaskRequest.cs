@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>The complete <b>JSON string</b> information. For details, see the following sections.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;\&quot;:\&quot;\&quot;}</para>
+        /// <para>{&quot;&quot;:&quot;&quot;}</para>
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

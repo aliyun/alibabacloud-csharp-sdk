@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class RevertAssignedSessionGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the baseMeAgent.</para>
+        /// <para>The business workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>For more information, see the description of the request parameters.</para>
+        /// <para>For more information, see the supplementary description of request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;isSchemeData&quot;:1,&quot;forceRevertSessionGroup&quot;:true,&quot;sessionGroupIdList&quot;:[&quot;1&quot;]}</para>

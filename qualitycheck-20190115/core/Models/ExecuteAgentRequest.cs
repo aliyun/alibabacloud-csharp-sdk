@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ExecuteAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the business workspace.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>The complete JSON string. For more information, see the following detailed description.</para>
+        /// <para>The complete JSON string. For more information, see the following details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string JsonStr { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Server-Sent Events (SSE) responses. Set to true to enable SSE responses. Default value: false.</para>
+        /// <para>Specifies whether to enable Server-Sent Events (SSE) responses. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

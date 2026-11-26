@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>If an error occurs, this field contains error details. If the request succeeds, the value is \<c>successful\\</c>.</para>
+        /// <para>If an error occurs, this field contains error details. If the request succeeds, the value is `successful`.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Use this field to check the request status. A value of \<c>true\\</c> means success. A value of \<c>false\\</c> or \<c>null\\</c> means failure.</para>
+        /// <para>Indicates whether the request succeeded. Use this field to check the request status. A value of `true` means success. A value of `false` or `null` means failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

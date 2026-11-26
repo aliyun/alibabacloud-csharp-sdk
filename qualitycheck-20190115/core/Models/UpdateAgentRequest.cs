@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The business space ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

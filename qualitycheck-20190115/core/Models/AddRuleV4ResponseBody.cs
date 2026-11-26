@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class AddRuleV4ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. \<c>**200**\\</c> indicates that the request was successful. Other values indicate that the request failed. You can use this parameter to identify the cause of a failure.</para>
+        /// <para>The result code. `**200**` indicates that the request was successful. Other values indicate that the request failed. You can use this parameter to identify the cause of a failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>The ID of the new rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>82546</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. \<c>true\\</c>: The request was successful. \<c>false\\</c> or \<c>null\\</c>: The request failed.</para>
+        /// <para>Indicates whether the request was successful. `true`: The request was successful. `false` or `null`: The request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

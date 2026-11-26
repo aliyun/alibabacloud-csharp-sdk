@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class DeleteAsrVocabResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> means success. Any other value means failure. Use this field to identify the cause of failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, and other values indicate failure. You can determine the cause of the failure based on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The hotword ID you specified as vocabId.</para>
+        /// <para>The hot word ID, which is the specified vocabId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>71b1795ac8634bd8bdf4d3878480c7c2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Details about the error if the request fails. If the request succeeds, the value is <b>successful</b>.</para>
+        /// <para>The error details if an error occurs, or <b>successful</b> if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Use this field to check the result:</para>
+        /// <para>Indicates whether the request is successful. You can determine whether the request is successful based on this field:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b> means success.</para>
-        /// </description></item>
-        /// <item><description><para>false or <b>null</b> means failure.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false/null</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

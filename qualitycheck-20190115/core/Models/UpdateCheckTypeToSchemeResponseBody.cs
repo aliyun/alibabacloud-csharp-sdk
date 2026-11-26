@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateCheckTypeToSchemeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. This code helps identify the cause of a failed request.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can determine the cause of the failure based on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details if the request fails. If the request is successful, the value is <b>successful</b>.</para>
+        /// <para>The error details if an error occurs, or <b>successful</b> if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of true indicates success. A value of false or null indicates failure.</para>
+        /// <para>Indicates whether the request is successful. A value of true indicates success, and a value of false or null indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

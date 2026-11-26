@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of a failure.</para>
+        /// <para>The result code. A value of 200 indicates success, and other values indicate failure. You can determine the cause of the failure based on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? ChildCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the label was created.</para>
+            /// <para>The time when the tag was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1748428991000</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The label description.</para>
+            /// <para>The tag description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>用于归集售后服务相关的所有意图与 FAQ</para>
+            /// <para>Used to aggregate all intents and FAQs related to after-sales services</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Level { get; set; }
 
             /// <summary>
-            /// <para>The time when the label was last modified.</para>
+            /// <para>The time when the tag was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1748428991000</para>
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The label name.</para>
+            /// <para>The tag name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>售后问题</para>
+            /// <para>After-sales issues</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent label node.</para>
+            /// <para>The parent tag node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? ParentTagId { get; set; }
 
             /// <summary>
-            /// <para>The label ID.</para>
+            /// <para>The tag ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>The error message, if any.</para>
+        /// <para>The error message returned if an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -129,11 +129,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

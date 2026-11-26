@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>Business type. This field has no practical meaning and can be ignored.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>忽略</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("BusinessType")]
         [Validation(Required=false)]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>The username of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>zhangsan</para>
             /// </summary>
             [NameInMap("CreateUserName")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>The name of the quality check plan.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>示例质检方案</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>The username of the user who last updated the plan.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>lisi</para>
             /// </summary>
             [NameInMap("UpdateUserName")]
             [Validation(Required=false)]

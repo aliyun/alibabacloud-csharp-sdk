@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details if the request fails. If the request is successful, the value is \<c>successful\\</c>.</para>
+        /// <para>The error details if the request fails. If the request is successful, the value is `successful`.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of \<c>true\\</c> indicates success. A value of \<c>false\\</c> or \<c>null\\</c> indicates failure.</para>
+        /// <para>Indicates whether the request was successful. A value of `true` indicates success. A value of `false` or `null` indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

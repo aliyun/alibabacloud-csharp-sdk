@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>Conversation Name</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx</para>
+        /// <para>示例对话</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

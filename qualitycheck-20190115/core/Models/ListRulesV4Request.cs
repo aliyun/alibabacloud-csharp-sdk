@@ -10,44 +10,47 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListRulesV4Request : TeaModel {
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The ID of the business workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("BaseMeAgentId")]
         [Validation(Required=false)]
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>Name of the business that owns the rule.</para>
+        /// <para>The name of the business to which the rule belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>所有业务</para>
+        /// <para>All businesses</para>
         /// </summary>
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
         public string BusinessName { get; set; }
 
         /// <summary>
-        /// <para>Top-level business category.</para>
+        /// <para>The major business category.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("BusinessRange")]
         [Validation(Required=false)]
         public int? BusinessRange { get; set; }
 
         /// <summary>
-        /// <para>Category name.</para>
+        /// <para>The category name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>分类名称A</para>
+        /// <para>Category name A</para>
         /// </summary>
         [NameInMap("CategoryName")]
         [Validation(Required=false)]
         public string CategoryName { get; set; }
 
         /// <summary>
-        /// <para>Whether to count the total number of items.</para>
+        /// <para>Specifies whether to count the total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public bool? CountTotal { get; set; }
 
         /// <summary>
-        /// <para>ID of the rule creator. Same as CreateUserId. Specify one only.</para>
+        /// <para>The ID of the rule creator. This parameter is equivalent to CreateUserId. Specify only one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string CreateEmpid { get; set; }
 
         /// <summary>
-        /// <para>ID of the rule creator. Same as CreateEmpId. Specify one only.</para>
+        /// <para>The ID of the rule creator. This parameter is equivalent to CreateEmpid. Specify only one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? CreateUserId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Filter by creation time (right boundary).</para>
+        /// <para>The end time for filtering by creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-29 19:11:09</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>ID of the rule updater. Same as UpdateUserId. Specify one only.</para>
+        /// <para>The ID of the rule updater. This parameter is equivalent to UpdateUserId. Specify only one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string LastUpdateEmpid { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -127,14 +130,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Required fields.</para>
+        /// <para>The required fields.</para>
         /// </summary>
         [NameInMap("RequireInfos")]
         [Validation(Required=false)]
         public List<string> RequireInfos { get; set; }
 
         /// <summary>
-        /// <para>Search by rule ID.</para>
+        /// <para>The rule ID to search for.</para>
         /// 
         /// <b>Example:</b>
         /// <para>895EAD5312634F5AA708E3B3FA79662E</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? Rid { get; set; }
 
         /// <summary>
-        /// <para>Search by rule ID or rule name.</para>
+        /// <para>The rule ID or rule name to search for.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xx</para>
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RuleIdOrRuleName { get; set; }
 
         /// <summary>
-        /// <para>Scoring type.</para>
+        /// <para>The scoring type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? RuleScoreSingleType { get; set; }
 
         /// <summary>
-        /// <para>Rule category.</para>
+        /// <para>The rule category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// <para>Quality inspection scheme ID.</para>
+        /// <para>The ID of the quality inspection plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000090</para>
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? SchemeId { get; set; }
 
         /// <summary>
-        /// <para>Source type.</para>
+        /// <para>The source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -194,7 +197,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? SourceType { get; set; }
 
         /// <summary>
-        /// <para>Filter by creation time (left boundary).</para>
+        /// <para>The start time for filtering by creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-29 18:11:09</para>
@@ -204,7 +207,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Rule status.</para>
+        /// <para>The rule status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -213,12 +216,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// <para>The rule type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21</para>
+        /// </summary>
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>Type value of the rule category that the rule belongs to.</para>
+        /// <para>The type value of the rule type to which the rule belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -228,17 +237,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Type { get; set; }
 
         /// <summary>
-        /// <para>Name of the rule category that the rule belongs to.</para>
+        /// <para>The name of the rule type to which the rule belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>所有类型</para>
+        /// <para>All types</para>
         /// </summary>
         [NameInMap("TypeName")]
         [Validation(Required=false)]
         public string TypeName { get; set; }
 
         /// <summary>
-        /// <para>Filter by update time (right boundary).</para>
+        /// <para>The end time for filtering by update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-29 18:11:09</para>
@@ -248,7 +257,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string UpdateEndTime { get; set; }
 
         /// <summary>
-        /// <para>Filter by update time (left boundary).</para>
+        /// <para>The start time for filtering by update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-29 16:11:09</para>
@@ -258,7 +267,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string UpdateStartTime { get; set; }
 
         /// <summary>
-        /// <para>ID of the rule updater. Same as LastUpdateEmpId. Specify one only.</para>
+        /// <para>The ID of the rule updater. This parameter is equivalent to LastUpdateEmpid. Specify only one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

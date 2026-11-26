@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListQualityCheckSchemeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of <b>200</b> indicates success. Other values indicate a failure. Use this code to identify the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public List<ListQualityCheckSchemeResponseBodyData> Data { get; set; }
         public class ListQualityCheckSchemeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the scheme was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-10T09:34Z</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>The name of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("CreateUserName")]
             [Validation(Required=false)]
             public string CreateUserName { get; set; }
 
             /// <summary>
-            /// <para>The data type of the quality check scheme. Valid values: 0 (text) and 1 (audio).</para>
+            /// <para>The data type of the quality check scheme. Valid values: 0: text; 1: audio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>售前使用</para>
+            /// <para>Pre-sales use</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -94,14 +94,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public List<ListQualityCheckSchemeResponseBodyDataRuleList> RuleList { get; set; }
             public class ListQualityCheckSchemeResponseBodyDataRuleList : TeaModel {
                 /// <summary>
-                /// <para>The rule information. This parameter is reserved for future use. Currently, only one rule is returned.</para>
+                /// <para>The rule information. Only one rule is included here and reserved for future extensions.</para>
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
                 public List<ListQualityCheckSchemeResponseBodyDataRuleListRules> Rules { get; set; }
                 public class ListQualityCheckSchemeResponseBodyDataRuleListRules : TeaModel {
                     /// <summary>
-                    /// <para>The quality check dimension to which the item belongs.</para>
+                    /// <para>The quality check dimension to which the rule belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     /// <para>The name of the check item.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试规则</para>
+                    /// <para>Test rule</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public long? Rid { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to calculate a score. Valid values: 1 (no score) and 3 (score).</para>
+                    /// <para>Specifies whether the score is calculated. Valid values: 1: not calculated; 3: calculated.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public int? ScoreNum { get; set; }
 
                     /// <summary>
-                    /// <para>The scoring type. Valid values: 0 (Points are added or deducted each time the rule is triggered) and 1 (A one-time score is given when the rule is triggered).</para>
+                    /// <para>The scoring type. Valid values: 0: add or deduct points after the rule is triggered; 1: award a one-time score after the rule is triggered.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public int? ScoreNumType { get; set; }
 
                     /// <summary>
-                    /// <para>The scoring method. Valid values: 1 (add points) and 3 (deduct points).</para>
+                    /// <para>The score adjustment type. Valid values: 1: add points; 3: deduct points.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     public int? ScoreType { get; set; }
 
                     /// <summary>
-                    /// <para>The application scenario of the check item. Valid values: 10 (common check item) and 11 (SOP flow check item).</para>
+                    /// <para>The common scenarios of the check item. Valid values: 10: common check item. 11: SOP flow check item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 /// <para>The name of the quality check dimension.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>服务规范性检测</para>
+                /// <para>Service compliance check</para>
                 /// </summary>
                 [NameInMap("CheckName")]
                 [Validation(Required=false)]
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public int? CheckType { get; set; }
 
                 /// <summary>
-                /// <para>The enabled status. Valid values: 0 (disabled) and 1 (enabled).</para>
+                /// <para>The enable status. Valid values: 0: disabled; 1: enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public int? Score { get; set; }
 
                 /// <summary>
-                /// <para>An internal parameter. You can ignore this parameter.</para>
+                /// <para>An internal field. Ignore this field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? SchemeId { get; set; }
 
             /// <summary>
-            /// <para>The status of the quality check scheme. Valid values: 0 (deleted), 1 (published), 2 (unpublished), and 3 (updated but not published).</para>
+            /// <para>The status of the quality check scheme. Valid values: 0: deleted; 1: published; 2: unpublished; 3: updated and unpublished.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the quality check scheme template. Valid values: 1 (built-in) and 2 (user-defined).</para>
+            /// <para>The type of the quality check scheme template. Valid values: 1: built-in; 2: custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? TemplateType { get; set; }
 
             /// <summary>
-            /// <para>The type of the quality check scheme. Valid values: 0 (built-in) and 1 (user-defined).</para>
+            /// <para>The type of the quality check scheme. Valid values: 0: built-in; 1: custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the scheme was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-10T10:34Z</para>
@@ -294,10 +294,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the user who last updated the scheme.</para>
+            /// <para>The name of the updater.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>李四</para>
+            /// <para>Li Si</para>
             /// </summary>
             [NameInMap("UpdateUserName")]
             [Validation(Required=false)]
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>The returned message. If the request is successful, \<c>successful\\</c> is returned. If the request fails, an error message is returned.</para>
+        /// <para>The error message returned when an error occurs. The value is successful when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -356,17 +356,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An internal parameter. You can ignore this parameter.</para>
+        /// <para>An internal field. Ignore this field.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XXX</para>
+        /// <para>Deprecated field</para>
         /// </summary>
         [NameInMap("ResultCountId")]
         [Validation(Required=false)]
         public string ResultCountId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of true indicates success. A value of <b>false</b> or <b>null</b> indicates failure.</para>
+        /// <para>Indicates whether the request is successful. <b>true</b> indicates that the request is successful. <b>false</b> or <b>null</b> indicates that the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

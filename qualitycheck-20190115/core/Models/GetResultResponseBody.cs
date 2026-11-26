@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Result code. <c>200</c> indicates success. Any other value indicates failure. Use this field to identify the cause of failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, and any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -886,7 +886,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>Error details if the request failed. Returns successful if the request succeeded.</para>
+        /// <para>The error message. If an error occurs, this field displays the error details. If the request is successful, the value is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -896,7 +896,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -906,7 +906,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -916,7 +916,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3CEA0495-341B-4482-9AD9-8191EF4***</para>
@@ -926,7 +926,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Reserved field. Ignore this field.</para>
+        /// <para>The reserved field. This field is currently unused and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
@@ -936,7 +936,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string ResultCountId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. A value of true means success. A value of false or null means failure.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false or null: The request failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

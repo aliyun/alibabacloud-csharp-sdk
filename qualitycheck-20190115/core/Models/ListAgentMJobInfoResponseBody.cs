@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The error message, if an error occurs.</para>
+            /// <para>The error message returned if an error occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>successful</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <item><description>readyAnalysis: The task is pending analysis.</description></item>
             /// <item><description>running: The task is running.</description></item>
             /// <item><description>error: The task failed.</description></item>
-            /// <item><description>finish: The task is complete.</description></item>
+            /// <item><description>finish: The task is completed.</description></item>
             /// <item><description>fileUploadUser: The user-specified file is uploaded.</description></item>
             /// <item><description>fileUploadSystem: The system-generated file is uploaded.</description></item>
             /// <item><description>expired: The task has expired.</description></item>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string TaskEndTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled task ID.</para>
+            /// <para>The ID of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20250728-8B43DF47-24DB-1CED-8D74-2AB204187D45</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>The error message, if an error occurs.</para>
+        /// <para>The error message returned if an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -139,11 +139,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false/null: The request failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful. A value of true indicates success, and a value of false or null indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

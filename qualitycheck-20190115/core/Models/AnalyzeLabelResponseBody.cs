@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class AnalyzeLabelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas other values indicate failure. You can determine the cause of the failure based on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error message, if any.</para>
+        /// <para>The error message returned if an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. true: The call was successful. false: The call failed.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

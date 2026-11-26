@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UploadAudioDataRequest : TeaModel {
         /// <summary>
-        /// <para>The business space ID. In multi-business space scenarios, this parameter specifies the business space to use. Default value: the default business space.</para>
+        /// <para>The workspace ID. This parameter is used to select a specific workspace in multi-workspace scenarios. Default value: the default workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>The complete JSON string. For details about the content, see the following detailed information.</para>
+        /// <para>The complete JSON string. For details, see the following information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

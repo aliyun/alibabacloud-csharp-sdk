@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetResultToReviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>Result code. <b>200</b> means success. Any other value means failure. Use this field to identify the cause.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, and any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Detailed response data.</para>
+        /// <para>The detailed response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetResultToReviewResponseBodyData Data { get; set; }
         public class GetResultToReviewResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Protocol used in the audio URL. Possible values: http, https.</para>
+            /// <para>The manual review score.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("ArtificialScore")]
+            [Validation(Required=false)]
+            public float? ArtificialScore { get; set; }
+
+            /// <summary>
+            /// <para>The protocol of the audio URL. Valid values: http and https.</para>
             /// 
             /// <b>Example:</b>
             /// <para>https</para>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string AudioScheme { get; set; }
 
             /// <summary>
-            /// <para>Audio URL without the protocol prefix (http\:// or https\://). Combine with AudioScheme to form the full URL.</para>
+            /// <para>The audio URL, excluding http:// and https://. This value and AudioScheme form the complete URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sca-ccc-test.oss-cn-beijing.aliyuncs.com/xxxxx</para>
@@ -47,10 +57,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string AudioURL { get; set; }
 
             /// <summary>
-            /// <para>Review comments.</para>
+            /// <para>The review comments.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx</para>
+            /// <para>Approved</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
@@ -113,7 +123,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             }
 
             /// <summary>
-            /// <para>File ID.</para>
+            /// <para>The file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e790e6c919d84b82b64ee*****</para>
@@ -123,7 +133,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>File name.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.wav</para>
@@ -526,6 +536,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string OperatorName { get; set; }
 
+                    [NameInMap("ReviewErrorRule")]
+                    [Validation(Required=false)]
+                    public GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule ReviewErrorRule { get; set; }
+                    public class GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRule : TeaModel {
+                        [NameInMap("reviewErrorRule")]
+                        [Validation(Required=false)]
+                        public List<GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule> ReviewErrorRule { get; set; }
+                        public class GetResultToReviewResponseBodyDataReviewHistoryListReviewHistoryReviewErrorRuleReviewErrorRule : TeaModel {
+                            [NameInMap("Rid")]
+                            [Validation(Required=false)]
+                            public long? Rid { get; set; }
+
+                        }
+
+                    }
+
                     [NameInMap("ReviewManagerType")]
                     [Validation(Required=false)]
                     public string ReviewManagerType { get; set; }
@@ -601,7 +627,22 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             }
 
             /// <summary>
-            /// <para>Current task status. 0: incomplete. 1: complete. Use this field to check completion. Any other value indicates an error.</para>
+            /// <para>The automated check score.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("SmartCheckScore")]
+            [Validation(Required=false)]
+            public float? SmartCheckScore { get; set; }
+
+            /// <summary>
+            /// <para>The current status of the task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: The task is not completed.</description></item>
+            /// <item><description>1: The task is completed.
+            /// You can use this field to determine whether the task is completed. Any other value indicates an error.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -611,7 +652,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection score.</para>
+            /// <para>The quality inspection score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -621,7 +662,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? TotalScore { get; set; }
 
             /// <summary>
-            /// <para>File ID.</para>
+            /// <para>The file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6fa76916-3ce6-45d8-ac64-01b7f31***</para>
@@ -633,7 +674,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>Error details if the call fails. Returns <b>successful</b> on success.</para>
+        /// <para>The error details when an error occurs, or <b>successful</b> when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -643,7 +684,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>82C91484-B2D5-4D2A-A21F-A6D73F4***</para>
@@ -653,7 +694,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. true means success. <b>false</b> or <b>null</b> means failure.</para>
+        /// <para>Indicates whether the request is successful. <b>true</b> indicates success, and <b>false</b> or <b>null</b> indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

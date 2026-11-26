@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

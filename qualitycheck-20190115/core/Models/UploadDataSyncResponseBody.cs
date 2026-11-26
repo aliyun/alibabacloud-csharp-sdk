@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UploadDataSyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. The caller can determine the cause of failure based on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>The error details when an error occurs. The value is <b>successful</b> when the request succeeds.</para>
+        /// <para>The error details when an error occurs, or <b>successful</b> when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false/null.</para>
+        /// <para>Indicates whether the request is successful. The caller can determine whether the request is successful based on this field. A value of true indicates success. A value of false or null indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

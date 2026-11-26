@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The message returned. If the request is successful, \<c>successful\\</c> is returned. If the request fails, an error message is returned.</para>
+        /// <para>The message returned. If the request is successful, `successful` is returned. If the request fails, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

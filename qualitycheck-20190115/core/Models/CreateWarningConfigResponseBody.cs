@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Error details when an error occurs. Returns \&quot;successful\&quot; on success.</para>
+        /// <para>Error details when an error occurs. Returns &quot;successful&quot; on success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

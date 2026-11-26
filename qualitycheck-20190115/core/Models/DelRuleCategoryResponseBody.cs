@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>4B0A8DCD-0DDF-5E80-8B9C-0A2F68B3403B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class CreateAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, and other values indicate failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The AgentId of the task.</para>
+        /// <para>The ID of the agent for the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The error message, if any.</para>
+        /// <para>The error message. This field is returned if an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
+        /// <para>Specifies whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

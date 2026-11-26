@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListSchemeTaskConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Result code. <b>200</b> indicates success. Other values indicate failure. Callers can use this field to determine the cause of failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can determine the cause of the failure based on this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Total entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -256,17 +256,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>This field marks the data. When querying more than 10,000 entries using GetResult, include the \<c>lastDataId\\</c> of the last entry from the previous query in each request parameter.</para>
+        /// <para>The identifier of the current data record. When you use the GetResult operation to query more than 10,000 data records, you must include the lastDataId value of the last data record from the previous query result in the request parameters of each subsequent request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("LastDataId")]
         [Validation(Required=false)]
         public string LastDataId { get; set; }
 
         /// <summary>
-        /// <para>Provides error details on failure. For success, it is <b>successful</b>.</para>
+        /// <para>The error details when an error occurs, or <b>successful</b> when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>Current page.</para>
+        /// <para>The current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Entries displayed per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4B0A8DCD-0DDF-5E80-8B9C-0A2F68B3403B</para>
@@ -316,17 +316,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Internal field. Ignore it.</para>
+        /// <para>An internal field. Ignore this field.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>忽略</para>
+        /// <para>Ignore</para>
         /// </summary>
         [NameInMap("ResultCountId")]
         [Validation(Required=false)]
         public string ResultCountId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Callers can use this field to determine if the request succeeded: \<c>true\\</c> for success, \<c>false\\</c>/\<c>null\\</c> for failure.</para>
+        /// <para>Indicates whether the request is successful. You can determine whether the request is successful based on this field. A value of true indicates success, and a value of false or null indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

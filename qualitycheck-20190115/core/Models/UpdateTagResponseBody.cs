@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UpdateTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public UpdateTagResponseBodyData Data { get; set; }
         public class UpdateTagResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the label node was created.</para>
+            /// <para>The time when the tag node was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1748428991000</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The label description.</para>
+            /// <para>The tag description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>涵盖退款、退货、维修、咨询等售后链路</para>
+            /// <para>Covers after-sales processes such as refunds, returns, repairs, and consultations</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the label node was last modified.</para>
+            /// <para>The time when the tag node was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1748431368000</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The label name.</para>
+            /// <para>The tag name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>售后服务</para>
+            /// <para>After-sales service</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent label node.</para>
+            /// <para>The ID of the parent tag node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? ParentTagId { get; set; }
 
             /// <summary>
-            /// <para>The label ID.</para>
+            /// <para>The tag ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>

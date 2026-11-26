@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class RunCompletionMessageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of messages that form the conversation history and the current prompt.</para>
+        /// <para>The list of messages in the model request.</para>
         /// </summary>
         [NameInMap("Messages")]
         [Validation(Required=false)]
         public string MessagesShrink { get; set; }
 
         /// <summary>
-        /// <para>The model specification to use. Valid values: <c>TYXM_PLUS</c> and <c>TYXM_TURBO</c>.</para>
+        /// <para>The model specification. Valid values: TYXM_PLUS and TYXM_TURBO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TYXM_PLUS</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to stream the response using Server-Sent Events (SSE). If <c>true</c>, the response is streamed. Defaults to <c>false</c>.</para>
+        /// <para>Specifies whether to enable Server-Sent Events (SSE) responses. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

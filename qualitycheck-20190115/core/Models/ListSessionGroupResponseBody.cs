@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ListSessionGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of \<c>200\\</c> indicates that the request was successful. Other values indicate that the request failed.</para>
+        /// <para>The result code. A value of `200` indicates that the request was successful. Other values indicate that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -179,14 +179,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>The data marker. To retrieve more than 10,000 records, include the LastDataId from the previous response in the next request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("LastDataId")]
         [Validation(Required=false)]
         public string LastDataId { get; set; }
 
         /// <summary>
-        /// <para>The error details if the request fails. \<c>successful\\</c> is returned if the request is successful.</para>
+        /// <para>The error details if the request fails. `successful` is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string ResultCountId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of \<c>true\\</c> indicates that the request was successful. A value of \<c>false\\</c> or \<c>null\\</c> indicates that the request failed.</para>
+        /// <para>Indicates whether the request was successful. A value of `true` indicates that the request was successful. A value of `false` or `null` indicates that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

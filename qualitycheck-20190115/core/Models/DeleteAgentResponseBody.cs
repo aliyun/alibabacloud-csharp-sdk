@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error message, if any.</para>
+        /// <para>The error message returned if an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false/null: The request failed.</para>
+        /// <para>Indicates whether the request is successful. A value of true indicates success. A value of false or null indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

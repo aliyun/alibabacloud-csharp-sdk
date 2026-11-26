@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to copy the rule. Set this to \<c>true\\</c> to copy the rule.</para>
+        /// <para>Specifies whether to copy the rule. Set this to `true` to copy the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

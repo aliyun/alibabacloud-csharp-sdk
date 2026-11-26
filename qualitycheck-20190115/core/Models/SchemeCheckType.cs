@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>Rule Name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>示例规则</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>Flow name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>示例流程</para>
             /// </summary>
             [NameInMap("TaskFlowName")]
             [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 /// <para>Rule Name</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>示例规则</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 /// <para>flow name</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx</para>
+                /// <para>示例流程</para>
                 /// </summary>
                 [NameInMap("TaskFlowName")]
                 [Validation(Required=false)]
@@ -268,14 +268,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>flow name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>示例流程</para>
             /// </summary>
             [NameInMap("TaskFlowName")]
             [Validation(Required=false)]
             public string TaskFlowName { get; set; }
 
             /// <summary>
-            /// <para>\&quot;Flow version: 0: tree, 1: graph\&quot;</para>
+            /// <para>&quot;Flow version: 0: tree, 1: graph&quot;</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

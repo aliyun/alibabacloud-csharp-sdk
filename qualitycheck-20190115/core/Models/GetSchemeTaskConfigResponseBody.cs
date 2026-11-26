@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>Matching value for on-the-fly recording data</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>{\&quot;start\&quot;:\&quot;2022-09-01 00:00:00\&quot;,\&quot;end\&quot;:\&quot;2022-09-30 00:00:00\&quot;}</para>
+                        /// <para>{&quot;start&quot;:&quot;2022-09-01 00:00:00&quot;,&quot;end&quot;:&quot;2022-09-30 00:00:00&quot;}</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]

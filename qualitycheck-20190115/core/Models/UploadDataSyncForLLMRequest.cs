@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;tickets\&quot;:[{\&quot;dialogue\&quot;:[{\&quot;role\&quot;:\&quot;Agent\&quot;,\&quot;words\&quot;:\&quot;Yes\&quot;,\&quot;end\&quot;:0,\&quot;beginTime\&quot;:1783909236618,\&quot;begin\&quot;:0}],\&quot;tid\&quot;:\&quot;20260713-20240612032225161783909236618\&quot;}],\&quot;commonRuleIds\&quot;:[\&quot;20773\&quot;]}</para>
+        /// <para>{&quot;tickets&quot;:[{&quot;dialogue&quot;:[{&quot;role&quot;:&quot;Agent&quot;,&quot;words&quot;:&quot;Yes&quot;,&quot;end&quot;:0,&quot;beginTime&quot;:1783909236618,&quot;begin&quot;:0}],&quot;tid&quot;:&quot;20260713-20240612032225161783909236618&quot;}],&quot;commonRuleIds&quot;:[&quot;20773&quot;]}</para>
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

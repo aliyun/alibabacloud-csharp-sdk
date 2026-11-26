@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetLabelAnalysisResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetLabelAnalysisResultResponseBodyData Data { get; set; }
         public class GetLabelAnalysisResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of input tokens accumulated during this task.</para>
+            /// <para>The total number of input tokens for this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7371</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? InputTokens { get; set; }
 
             /// <summary>
-            /// <para>The total number of output tokens accumulated during this task.</para>
+            /// <para>The total number of output tokens for this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>355</para>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             public List<GetLabelAnalysisResultResponseBodyDataTagListChildrenChildrenChildrenChildren> Children { get; set; }
                             public class GetLabelAnalysisResultResponseBodyDataTagListChildrenChildrenChildrenChildren : TeaModel {
                                 /// <summary>
-                                /// <para>The description of the tag analysis.</para>
+                                /// <para>The tag analysis description.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>当前层级未命中有效标签</para>
+                                /// <para>No valid tag was matched at the current level</para>
                                 /// </summary>
                                 [NameInMap("Remarks")]
                                 [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 /// <para>The tag name.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>无效会话</para>
+                                /// <para>Invalid session</para>
                                 /// </summary>
                                 [NameInMap("TagName")]
                                 [Validation(Required=false)]
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             }
 
                             /// <summary>
-                            /// <para>The description of the tag analysis.</para>
+                            /// <para>The tag analysis description.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</para>
+                            /// <para>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</para>
                             /// </summary>
                             [NameInMap("Remarks")]
                             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             /// <para>The tag name.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>千问×高德</para>
+                            /// <para>Qwen × Amap</para>
                             /// </summary>
                             [NameInMap("TagName")]
                             [Validation(Required=false)]
@@ -126,10 +126,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         }
 
                         /// <summary>
-                        /// <para>The description of the tag analysis.</para>
+                        /// <para>The tag analysis description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</para>
+                        /// <para>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</para>
                         /// </summary>
                         [NameInMap("Remarks")]
                         [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The tag name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>千问×高德</para>
+                        /// <para>Qwen × Amap</para>
                         /// </summary>
                         [NameInMap("TagName")]
                         [Validation(Required=false)]
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     }
 
                     /// <summary>
-                    /// <para>The description of the tag analysis.</para>
+                    /// <para>The tag analysis description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</para>
+                    /// <para>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</para>
                     /// </summary>
                     [NameInMap("Remarks")]
                     [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     /// <para>The tag name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>千问×高德</para>
+                    /// <para>Qwen × Amap</para>
                     /// </summary>
                     [NameInMap("TagName")]
                     [Validation(Required=false)]
@@ -170,10 +170,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
                 /// <summary>
-                /// <para>The description of the tag analysis.</para>
+                /// <para>The tag analysis description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>用户在千问内通过高德打车支付17元失败，转支付宝后变原价；客服围绕支付失败与余额、实名认证、授权绑定进行排查。问题发生在千问调用高德打车场景，属千问×高德。</para>
+                /// <para>The user failed to pay 17 CNY for an Amap ride-hailing service within Qwen. After switching to Alipay, the price changed to the original price. Customer service investigated the payment failure, balance, real-name verification, and authorization binding. The issue occurred in the scenario where Qwen calls the Amap ride-hailing service, which belongs to Qwen × Amap</para>
                 /// </summary>
                 [NameInMap("Remarks")]
                 [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 /// <para>The tag name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>千问×高德</para>
+                /// <para>Qwen × Amap</para>
                 /// </summary>
                 [NameInMap("TagName")]
                 [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             }
 
             /// <summary>
-            /// <para>The total number of tokens accumulated during this task.</para>
+            /// <para>The total number of tokens for this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7726</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? TotalTokens { get; set; }
 
             /// <summary>
-            /// <para>The total number of Qwen-Plus model calls accumulated during this task.</para>
+            /// <para>The total number of times the Qwen-Plus model was called for this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? TyxmPlusCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of Qwen-Turbo model calls accumulated during this task.</para>
+            /// <para>The total number of times the Qwen-Turbo model was called for this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -244,11 +244,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

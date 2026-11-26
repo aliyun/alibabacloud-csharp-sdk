@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetResultRequest : TeaModel {
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>Full JSON string. See the detailed description below.</para>
+        /// <para>The complete JSON string. For more information, see the following details.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

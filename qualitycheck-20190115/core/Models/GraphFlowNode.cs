@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GraphFlowNode : TeaModel {
         /// <summary>
-        /// <para>Operator information.</para>
+        /// <para>The operator information.</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<ConditionBasicInfo> Conditions { get; set; }
 
         /// <summary>
-        /// <para>Used for frontend display.</para>
+        /// <para>The content for frontend display.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Node ID.</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Index</para>
+        /// <para>The index.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,24 +47,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Index { get; set; }
 
         /// <summary>
-        /// <para>Node name</para>
+        /// <para>The node name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>开始节点</para>
+        /// <para>Start node</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Child nodes</para>
+        /// <para>The child nodes.</para>
         /// </summary>
         [NameInMap("NextNodes")]
         [Validation(Required=false)]
         public List<GraphFlowNodeNextNodes> NextNodes { get; set; }
         public class GraphFlowNodeNextNodes : TeaModel {
             /// <summary>
-            /// <para>Quality check dimension</para>
+            /// <para>The quality check dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? CheckType { get; set; }
 
             /// <summary>
-            /// <para>Flow branch priority. A smaller value indicates higher priority.</para>
+            /// <para>The flow branch priority. A smaller value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Index { get; set; }
 
             /// <summary>
-            /// <para>Lambda expression for the next hop.</para>
+            /// <para>The Lambda expression for the next hop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string Lambda { get; set; }
 
             /// <summary>
-            /// <para>Conditional branch name.</para>
+            /// <para>The conditional branch name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Next node ID.</para>
+            /// <para>The subsequent node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31533</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? NextNodeId { get; set; }
 
             /// <summary>
-            /// <para>Operators to follow.</para>
+            /// <para>The monitored operators.</para>
             /// </summary>
             [NameInMap("Triggers")]
             [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>Node Type</para>
+        /// <para>The node type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>startNode</para>
@@ -133,14 +133,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>Node properties</para>
+        /// <para>The node properties.</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public GraphFlowNodeProperties Properties { get; set; }
         public class GraphFlowNodeProperties : TeaModel {
             /// <summary>
-            /// <para>1: Do not auto-review.</para>
+            /// <para>The auto review setting. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Disables automatic review.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -150,7 +153,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? AutoReview { get; set; }
 
             /// <summary>
-            /// <para>Enable branch judgment.</para>
+            /// <para>Specifies whether branch judgment is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -160,7 +163,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public bool? BranchJudge { get; set; }
 
             /// <summary>
-            /// <para>Maximum N sentences to check.</para>
+            /// <para>The maximum number of sentences to check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? CheckMoreSize { get; set; }
 
             /// <summary>
-            /// <para>Quality check dimension</para>
+            /// <para>The quality check dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -180,7 +183,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? CheckType { get; set; }
 
             /// <summary>
-            /// <para>General operator logic.</para>
+            /// <para>The common operator logic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a</para>
@@ -190,17 +193,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string Lambda { get; set; }
 
             /// <summary>
-            /// <para>Role when the type is \<c>single\\</c>.</para>
+            /// <para>The role when the type is single.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>客户</para>
+            /// <para>Customer</para>
             /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>Is scored.</para>
+            /// <para>Specifies whether scoring is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -210,14 +213,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? RuleScoreType { get; set; }
 
             /// <summary>
-            /// <para>Indicates expression when the type is \<c>single\\</c>.</para>
+            /// <para>Indicates whether expression is enabled when the type is single.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Deprecated field</para>
             /// </summary>
             [NameInMap("SayType")]
             [Validation(Required=false)]
             public string SayType { get; set; }
 
             /// <summary>
-            /// <para>Score value</para>
+            /// <para>The score value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -227,7 +233,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? ScoreNum { get; set; }
 
             /// <summary>
-            /// <para>0: Add or deduct points after the rule is triggered; 1: Score once after the rule is triggered.</para>
+            /// <para>The score number type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Adds or deducts points after the rule is triggered.</description></item>
+            /// <item><description>1: Assigns a one-time score after the rule is triggered.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -237,7 +247,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? ScoreNumType { get; set; }
 
             /// <summary>
-            /// <para>0: Score when the node is hit.</para>
+            /// <para>The score rule hit type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Scores when the node is hit.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -247,7 +260,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? ScoreRuleHitType { get; set; }
 
             /// <summary>
-            /// <para>1: Add points; 3: Deduct points; default is 1.</para>
+            /// <para>The score type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Adds points.</description></item>
+            /// <item><description>3: Deducts points.
+            /// Default value: 1.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -257,17 +275,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? ScoreType { get; set; }
 
             /// <summary>
-            /// <para>Operators to follow.</para>
+            /// <para>The monitored operators.</para>
             /// </summary>
             [NameInMap("Triggers")]
             [Validation(Required=false)]
             public List<string> Triggers { get; set; }
 
             /// <summary>
-            /// <para>Property type</para>
+            /// <para>The property type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx</para>
+            /// <para>Deprecated field</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -276,7 +294,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>Rule ID. \<c>rid\\</c> is empty if the rule is not persisted. If the rule is persisted, \<c>rid\\</c> equals \<c>ID\\</c>.</para>
+        /// <para>The rule ID. If the rule is not saved to the database, the value is empty. If the rule is saved, the value equals the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -286,7 +304,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? Rid { get; set; }
 
         /// <summary>
-        /// <para>Whether to use operator matching or legacy matching.</para>
+        /// <para>Specifies whether to use operator matching or legacy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

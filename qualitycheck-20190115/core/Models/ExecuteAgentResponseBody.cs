@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class ExecuteAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 indicates success.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExecuteAgentResponseBodyData Data { get; set; }
         public class ExecuteAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>If streaming output is used, this value is null during generation. When generation is complete, the value is stop if the generation ended due to a stop token.</para>
+            /// <para>The reason why the generation finished. For streaming output, this field is null during generation. If the generation stops due to a stop token, the value is stop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stop</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <para>The result returned by the large language model.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这段对话似乎是客服与客户之间关于一个服务或产品的讨论，但具体内容难以明确理解，因为对话中的言语比较零散和抽象。</para>
+            /// <para>This conversation appears to be a discussion between a customer service representative and a customer about a service or product, but the specific content is difficult to understand clearly because the language in the conversation is relatively fragmented and abstract</para>
             /// </summary>
             [NameInMap("Text")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public long? TotalTokens { get; set; }
 
             /// <summary>
-            /// <para>The number of times the plus model was used.</para>
+            /// <para>The number of times the plus model is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string TyxmPlusCount { get; set; }
 
             /// <summary>
-            /// <para>The number of times the turbo model was used.</para>
+            /// <para>The number of times the turbo model is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. The caller can use this field to determine whether the request was successful. Valid values: <b>true</b>: The request was successful. <b>false/null</b>: The request failed.</para>
+        /// <para>Indicates whether the request is successful. You can use this field to determine the request result. <b>true</b> indicates success. <b>false</b> or <b>null</b> indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

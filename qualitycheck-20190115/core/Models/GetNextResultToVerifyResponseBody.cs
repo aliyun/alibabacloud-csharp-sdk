@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether manual verification has been performed. Possible values: \<c>false\\</c>: Not yet verified; \<c>true\\</c>: Already verified.</para>
+            /// <para>Indicates whether manual verification has been performed. Possible values: `false`: Not yet verified; `true`: Already verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>Error details if an error occurs. If successful, the value is \&quot;successful\&quot;.</para>
+        /// <para>Error details if an error occurs. If successful, the value is &quot;successful&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. The caller can determine if the request was successful using this field: \<c>true\\</c> indicates success; \<c>false\\</c>/\<c>null\\</c> indicates failure.</para>
+        /// <para>Indicates whether the request was successful. The caller can determine if the request was successful using this field: `true` indicates success; `false`/`null` indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

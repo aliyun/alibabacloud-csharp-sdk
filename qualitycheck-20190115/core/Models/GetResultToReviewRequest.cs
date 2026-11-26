@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetResultToReviewRequest : TeaModel {
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>Full JSON string. See the detailed description below.</para>
+        /// <para>The complete JSON string. For more information, see the following details.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;taskId&quot;:&quot;任务ID&quot;,“ fileId”:&quot;文件ID&quot;}</para>
+        /// <para>{&quot;taskId&quot;:&quot;Task ID&quot;,&quot;fileId&quot;:&quot;File ID&quot;}</para>
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]

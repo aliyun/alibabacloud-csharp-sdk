@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Qualitycheck";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("qualitycheck", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -435,7 +438,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs tag categorization.</para>
+        /// <para>Analyzes tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -481,7 +484,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs tag categorization.</para>
+        /// <para>Analyzes tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -527,7 +530,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs tag categorization.</para>
+        /// <para>Analyzes tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -545,7 +548,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs tag categorization.</para>
+        /// <para>Analyzes tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1679,6 +1682,134 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpEventConfigResponse
+        /// </returns>
+        public CreateHttpEventConfigResponse CreateHttpEventConfigWithOptions(CreateHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHttpEventConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpEventConfigResponse
+        /// </returns>
+        public async Task<CreateHttpEventConfigResponse> CreateHttpEventConfigWithOptionsAsync(CreateHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHttpEventConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpEventConfigResponse
+        /// </returns>
+        public CreateHttpEventConfigResponse CreateHttpEventConfig(CreateHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateHttpEventConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHttpEventConfigResponse
+        /// </returns>
+        public async Task<CreateHttpEventConfigResponse> CreateHttpEventConfigAsync(CreateHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateHttpEventConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a label mining task.</para>
         /// </summary>
         /// 
@@ -2243,7 +2374,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a label node.</para>
+        /// <para>Creates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2289,7 +2420,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a label node.</para>
+        /// <para>Creates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2335,7 +2466,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a label node.</para>
+        /// <para>Creates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2353,7 +2484,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a label node.</para>
+        /// <para>Creates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3159,7 +3290,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hotword group.</para>
+        /// <para>Deletes a hot word group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3205,7 +3336,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hotword group.</para>
+        /// <para>Deletes a hot word group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3251,7 +3382,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hotword group.</para>
+        /// <para>Deletes a hot word group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3269,7 +3400,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hotword group.</para>
+        /// <para>Deletes a hot word group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3823,6 +3954,134 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes the HTTP callback event configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpEventConfigResponse
+        /// </returns>
+        public DeleteHttpEventConfigResponse DeleteHttpEventConfigWithOptions(DeleteHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpEventConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the HTTP callback event configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpEventConfigResponse
+        /// </returns>
+        public async Task<DeleteHttpEventConfigResponse> DeleteHttpEventConfigWithOptionsAsync(DeleteHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHttpEventConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the HTTP callback event configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpEventConfigResponse
+        /// </returns>
+        public DeleteHttpEventConfigResponse DeleteHttpEventConfig(DeleteHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteHttpEventConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the HTTP callback event configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHttpEventConfigResponse
+        /// </returns>
+        public async Task<DeleteHttpEventConfigResponse> DeleteHttpEventConfigAsync(DeleteHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteHttpEventConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>You can delete a quality check plan from the Quality Check Plan Management page by clicking the Delete button on the right side of the plan. The Apsara Stack API endpoint is ip:port/api/qcs/DeleteQualityCheckScheme.json.</para>
         /// </summary>
         /// 
@@ -3955,7 +4214,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
+        /// <para>Deletes a quality check rule. Corresponds to the frontend feature location: Quality check rule configuration - Delete. Corresponds to the Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4017,7 +4276,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
+        /// <para>Deletes a quality check rule. Corresponds to the frontend feature location: Quality check rule configuration - Delete. Corresponds to the Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4079,7 +4338,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
+        /// <para>Deletes a quality check rule. Corresponds to the frontend feature location: Quality check rule configuration - Delete. Corresponds to the Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4103,7 +4362,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation deletes a quality check rule. You can access it from the Quality Check Rule Configuration page in the Apsara Stack console. The API endpoint is ip:port/api/client/DeleteRule.json.</para>
+        /// <para>Deletes a quality check rule. Corresponds to the frontend feature location: Quality check rule configuration - Delete. Corresponds to the Apsara Stack URL: ip:port/api/client/DeleteRule.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5580,8 +5839,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
-        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
+        /// <para>You can query data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, as well as data for dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query the data by task ID or time range. By default, the response of this operation returns only a subset of parameters. You can use the requiredFields request parameter to specify the fields to be returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5632,8 +5890,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
-        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
+        /// <para>You can query data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, as well as data for dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query the data by task ID or time range. By default, the response of this operation returns only a subset of parameters. You can use the requiredFields request parameter to specify the fields to be returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5684,8 +5941,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
-        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
+        /// <para>You can query data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, as well as data for dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query the data by task ID or time range. By default, the response of this operation returns only a subset of parameters. You can use the requiredFields request parameter to specify the fields to be returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5708,8 +5964,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
-        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
+        /// <para>You can query data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, as well as data for dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query the data by task ID or time range. By default, the response of this operation returns only a subset of parameters. You can use the requiredFields request parameter to specify the fields to be returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6111,7 +6366,135 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of tag categorization analysis.</para>
+        /// <para>获取HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpEventConfigResponse
+        /// </returns>
+        public GetHttpEventConfigResponse GetHttpEventConfigWithOptions(GetHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHttpEventConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpEventConfigResponse
+        /// </returns>
+        public async Task<GetHttpEventConfigResponse> GetHttpEventConfigWithOptionsAsync(GetHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetHttpEventConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpEventConfigResponse
+        /// </returns>
+        public GetHttpEventConfigResponse GetHttpEventConfig(GetHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetHttpEventConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetHttpEventConfigResponse
+        /// </returns>
+        public async Task<GetHttpEventConfigResponse> GetHttpEventConfigAsync(GetHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetHttpEventConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries tag analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6157,7 +6540,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of tag categorization analysis.</para>
+        /// <para>Queries tag analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6203,7 +6586,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of tag categorization analysis.</para>
+        /// <para>Queries tag analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6221,7 +6604,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of tag categorization analysis.</para>
+        /// <para>Queries tag analysis results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6751,12 +7134,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
+        /// <para>Queries quality check results. Some results are returned only when explicitly specified by the requiredFields request parameter. Set the region to China (Hangzhou) (cn-hangzhou).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// <para>Queries data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, and data of dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query data by task ID or time range. By default, the response includes only a subset of parameters. You can use the requiredFields request parameter to specify the fields to return.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6802,12 +7185,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
+        /// <para>Queries quality check results. Some results are returned only when explicitly specified by the requiredFields request parameter. Set the region to China (Hangzhou) (cn-hangzhou).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// <para>Queries data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, and data of dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query data by task ID or time range. By default, the response includes only a subset of parameters. You can use the requiredFields request parameter to specify the fields to return.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6853,12 +7236,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
+        /// <para>Queries quality check results. Some results are returned only when explicitly specified by the requiredFields request parameter. Set the region to China (Hangzhou) (cn-hangzhou).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// <para>Queries data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, and data of dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query data by task ID or time range. By default, the response includes only a subset of parameters. You can use the requiredFields request parameter to specify the fields to return.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6876,12 +7259,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query quality inspection results. Some fields require the requiredFields parameter to be explicitly specified in the request. Set the service endpoint (Region) to Hangzhou (cn-hangzhou).</para>
+        /// <para>Queries quality check results. Some results are returned only when explicitly specified by the requiredFields request parameter. Set the region to China (Hangzhou) (cn-hangzhou).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query data uploaded using <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>. You can also query data from dataset-based quality inspection tasks created with <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can search by task ID (taskId) or by time range.</para>
+        /// <para>Queries data uploaded by calling <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, and data of dataset quality check tasks submitted by calling <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query data by task ID or time range. By default, the response includes only a subset of parameters. You can use the requiredFields request parameter to specify the fields to return.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6899,7 +7282,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
+        /// <para>Retrieves the quality check result details of a specified file for review. The details include the transcribed text, recording URL, and information about matched check items. You can use this information to listen to the recording, view the transcribed text, and locate the matched check items to review the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6945,7 +7328,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
+        /// <para>Retrieves the quality check result details of a specified file for review. The details include the transcribed text, recording URL, and information about matched check items. You can use this information to listen to the recording, view the transcribed text, and locate the matched check items to review the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6991,7 +7374,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
+        /// <para>Retrieves the quality check result details of a specified file for review. The details include the transcribed text, recording URL, and information about matched check items. You can use this information to listen to the recording, view the transcribed text, and locate the matched check items to review the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7009,7 +7392,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quality inspection results for a specified file. The response includes the transcript, audio URL, and details of detected rule hits. You can use this information to review the file by listening to the audio, reading the transcript, and locating where rules were triggered.</para>
+        /// <para>Retrieves the quality check result details of a specified file for review. The details include the transcribed text, recording URL, and information about matched check items. You can use this information to listen to the recording, view the transcribed text, and locate the matched check items to review the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8247,7 +8630,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// <para>Retrieves the specified configuration by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8299,7 +8682,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// <para>Retrieves the specified configuration by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8351,7 +8734,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// <para>Retrieves the specified configuration by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8375,7 +8758,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration that is specified by its ID.</para>
+        /// <para>Retrieves the specified configuration by ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8547,7 +8930,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a label node.</para>
+        /// <para>Queries the details of a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8593,7 +8976,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a label node.</para>
+        /// <para>Queries the details of a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8639,7 +9022,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a label node.</para>
+        /// <para>Queries the details of a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8657,7 +9040,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a label node.</para>
+        /// <para>Queries the details of a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9103,7 +9486,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists AI analysis assistant tasks.</para>
+        /// <para>Lists the tasks of the AI analysis assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9149,7 +9532,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists AI analysis assistant tasks.</para>
+        /// <para>Lists the tasks of the AI analysis assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9195,7 +9578,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists AI analysis assistant tasks.</para>
+        /// <para>Lists the tasks of the AI analysis assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9213,7 +9596,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists AI analysis assistant tasks.</para>
+        /// <para>Lists the tasks of the AI analysis assistant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9791,7 +10174,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration - List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9939,7 +10322,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration - List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10087,7 +10470,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration - List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10105,7 +10488,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Frontend location: Quality inspection rule configuration — List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Inspection Rule Configuration - List. Apsara Stack URL: ip:port/api/rule/GetRulesCountList.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10123,7 +10506,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
+        /// <para>Corresponds to the frontend feature location: Task Management. Apsara Stack URL: ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10169,7 +10552,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
+        /// <para>Corresponds to the frontend feature location: Task Management. Apsara Stack URL: ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10215,7 +10598,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
+        /// <para>Corresponds to the frontend feature location: Task Management. Apsara Stack URL: ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10233,7 +10616,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used for the Task Management feature on the frontend. The Apsara Stack URL is ip:port/api/task/ListSchemeTaskInfo.json.</para>
+        /// <para>Corresponds to the frontend feature location: Task Management. Apsara Stack URL: ip:port/api/task/ListSchemeTaskInfo.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10555,7 +10938,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of label nodes.</para>
+        /// <para>Queries the list of tag nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10601,7 +10984,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of label nodes.</para>
+        /// <para>Queries the list of tag nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10647,7 +11030,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of label nodes.</para>
+        /// <para>Queries the list of tag nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10665,7 +11048,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of label nodes.</para>
+        /// <para>Queries the list of tag nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11327,7 +11710,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Check Plan Management - Task Results - Session Groups - Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11379,7 +11762,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Check Plan Management - Task Results - Session Groups - Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11431,7 +11814,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Check Plan Management - Task Results - Session Groups - Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11455,7 +11838,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use this feature in the frontend console under Plan Management &gt; Task Result &gt; Session Group &gt; Batch Revoke. The Apsara Stack URL for this operation is <c>ip:port/api/job/RevertAssignedSessionGroup.json</c>.</para>
+        /// <para>Corresponds to the frontend feature location: Quality Check Plan Management - Task Results - Session Groups - Batch Revoke. Apsara Stack URL: ip:port/api/job/RevertAssignedSessionGroup.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11475,7 +11858,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
+        /// <para>Invokes a large language model in the Message protocol format to obtain analysis results. The API supports standard HTTP and HTTP Server-Sent Events (SSE) protocols. You can select a protocol based on your requirements.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11531,7 +11914,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
+        /// <para>Invokes a large language model in the Message protocol format to obtain analysis results. The API supports standard HTTP and HTTP Server-Sent Events (SSE) protocols. You can select a protocol based on your requirements.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11587,7 +11970,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
+        /// <para>Invokes a large language model in the Message protocol format to obtain analysis results. The API supports standard HTTP and HTTP Server-Sent Events (SSE) protocols. You can select a protocol based on your requirements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11605,7 +11988,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation calls a large model using the message protocol to generate a response. You can make calls using standard HTTP for a complete response or use Server-Sent Events (SSE) for a streaming response.</para>
+        /// <para>Invokes a large language model in the Message protocol format to obtain analysis results. The API supports standard HTTP and HTTP Server-Sent Events (SSE) protocols. You can select a protocol based on your requirements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11903,7 +12286,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a new dataset quality check task.</para>
+        /// <para>Creates a dataset quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11949,7 +12332,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a new dataset quality check task.</para>
+        /// <para>Creates a dataset quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11995,7 +12378,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a new dataset quality check task.</para>
+        /// <para>Creates a dataset quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12013,7 +12396,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a new dataset quality check task.</para>
+        /// <para>Creates a dataset quality inspection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12031,12 +12414,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// <para>Saves review results. This operation is supported only for legacy intelligent dialogue analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// <para>Manually reviews files that have completed quality inspection. After the review is complete, call this operation to save the review results. This allows you to manually verify whether the rules identified as hits by the system are actual hits or false positives. You can refer to the file review feature in the console. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File review</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12082,12 +12465,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// <para>Saves review results. This operation is supported only for legacy intelligent dialogue analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// <para>Manually reviews files that have completed quality inspection. After the review is complete, call this operation to save the review results. This allows you to manually verify whether the rules identified as hits by the system are actual hits or false positives. You can refer to the file review feature in the console. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File review</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12133,12 +12516,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// <para>Saves review results. This operation is supported only for legacy intelligent dialogue analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// <para>Manually reviews files that have completed quality inspection. After the review is complete, call this operation to save the review results. This allows you to manually verify whether the rules identified as hits by the system are actual hits or false positives. You can refer to the file review feature in the console. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File review</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12156,12 +12539,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save review results. This is only supported by the legacy Smart Conversation Analysis.</para>
+        /// <para>Saves review results. This operation is supported only for legacy intelligent dialogue analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can manually review files after quality inspection. After completing the review, call this API to save the review results. This involves manually reviewing rules identified by the system as hits to determine if they are true hits or false positives. Refer to the file review feature on the console page. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File Review</a>.</para>
+        /// <para>Manually reviews files that have completed quality inspection. After the review is complete, call this operation to save the review results. This allows you to manually verify whether the rules identified as hits by the system are actual hits or false positives. You can refer to the file review feature in the console. For more information, see <a href="https://help.aliyun.com/document_detail/139653.html#h2-u6587u4EF6u590Du68385">File review</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12499,6 +12882,138 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>测试HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TestHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestHttpEventConfigResponse
+        /// </returns>
+        public TestHttpEventConfigResponse TestHttpEventConfigWithOptions(TestHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestHttpEventConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>测试HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TestHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestHttpEventConfigResponse
+        /// </returns>
+        public async Task<TestHttpEventConfigResponse> TestHttpEventConfigWithOptionsAsync(TestHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TestHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TestHttpEventConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>测试HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TestHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestHttpEventConfigResponse
+        /// </returns>
+        public TestHttpEventConfigResponse TestHttpEventConfig(TestHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TestHttpEventConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>测试HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TestHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TestHttpEventConfigResponse
+        /// </returns>
+        public async Task<TestHttpEventConfigResponse> TestHttpEventConfigAsync(TestHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TestHttpEventConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TestRuleV4 is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
         /// </summary>
         /// 
@@ -12512,6 +13027,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// TestRuleV4Response
         /// </returns>
+        [Obsolete("OpenAPI TestRuleV4 is deprecated")]
+        // Deprecated
         public TestRuleV4Response TestRuleV4WithOptions(TestRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12543,6 +13060,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<TestRuleV4Response>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TestRuleV4 is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
@@ -12558,6 +13079,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// TestRuleV4Response
         /// </returns>
+        [Obsolete("OpenAPI TestRuleV4 is deprecated")]
+        // Deprecated
         public async Task<TestRuleV4Response> TestRuleV4WithOptionsAsync(TestRuleV4Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -12589,6 +13112,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return TeaModel.ToObject<TestRuleV4Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TestRuleV4 is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
@@ -12601,12 +13128,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// TestRuleV4Response
         /// </returns>
+        [Obsolete("OpenAPI TestRuleV4 is deprecated")]
+        // Deprecated
         public TestRuleV4Response TestRuleV4(TestRuleV4Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return TestRuleV4WithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI TestRuleV4 is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Frontend location: Quality Check Rule Configuration &gt; Test. Apsara Stack URL: http://<ip>:<port>/api/client/TestRule.json.</para>
@@ -12619,6 +13152,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// <returns>
         /// TestRuleV4Response
         /// </returns>
+        [Obsolete("OpenAPI TestRuleV4 is deprecated")]
+        // Deprecated
         public async Task<TestRuleV4Response> TestRuleV4Async(TestRuleV4Request request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12883,7 +13418,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
+        /// <para>Updates the check type for a quality inspection scheme. Frontend location: Quality Inspection Scheme Management &gt; Create or Edit Quality Inspection Task &gt; Edit icon next to the quality inspection dimension name. Apsara Stack URL: ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12929,7 +13464,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
+        /// <para>Updates the check type for a quality inspection scheme. Frontend location: Quality Inspection Scheme Management &gt; Create or Edit Quality Inspection Task &gt; Edit icon next to the quality inspection dimension name. Apsara Stack URL: ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12975,7 +13510,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
+        /// <para>Updates the check type for a quality inspection scheme. Frontend location: Quality Inspection Scheme Management &gt; Create or Edit Quality Inspection Task &gt; Edit icon next to the quality inspection dimension name. Apsara Stack URL: ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12993,7 +13528,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can access this operation from the frontend by navigating to Plan Management &gt; Create Quality Inspection Task or Edit &gt; Edit icon next to the quality inspection dimension name. The Apsara Stack endpoint is ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
+        /// <para>Updates the check type for a quality inspection scheme. Frontend location: Quality Inspection Scheme Management &gt; Create or Edit Quality Inspection Task &gt; Edit icon next to the quality inspection dimension name. Apsara Stack URL: ip:port/api/qcs/UpdateCheckTypeToScheme.json.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13007,6 +13542,134 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCheckTypeToSchemeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpEventConfigResponse
+        /// </returns>
+        public UpdateHttpEventConfigResponse UpdateHttpEventConfigWithOptions(UpdateHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHttpEventConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpEventConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpEventConfigResponse
+        /// </returns>
+        public async Task<UpdateHttpEventConfigResponse> UpdateHttpEventConfigWithOptionsAsync(UpdateHttpEventConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateHttpEventConfig",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateHttpEventConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpEventConfigResponse
+        /// </returns>
+        public UpdateHttpEventConfigResponse UpdateHttpEventConfig(UpdateHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateHttpEventConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改HTTP回调事件配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateHttpEventConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateHttpEventConfigResponse
+        /// </returns>
+        public async Task<UpdateHttpEventConfigResponse> UpdateHttpEventConfigAsync(UpdateHttpEventConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateHttpEventConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14323,7 +14986,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label node.</para>
+        /// <para>Updates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14369,7 +15032,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label node.</para>
+        /// <para>Updates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14415,7 +15078,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label node.</para>
+        /// <para>Updates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14433,7 +15096,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a label node.</para>
+        /// <para>Updates a tag node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14983,37 +15646,37 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</para>
+        /// <para>Uploads offline voice quality inspection data (recorded session files) for hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Cloud Call Center (CCC) without the need for development, allowing you to push call data to Smart Conversation Analysis (SCA) with a single click. Scenario 2: Integrates with a self-managed call center system, where each generated recording is pushed to SCA for analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Process description</h3>
-        /// <para>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</para>
+        /// <h3>Workflow</h3>
+        /// <para>Call the API to upload audio for quality inspection =&gt; Convert the audio file to text =&gt; Separate the text into roles (agent and customer) based on the specified track splitting method =&gt; Analyze the text by using quality inspection rules =&gt; Complete the quality inspection.</para>
         /// <h3>Task execution efficiency</h3>
-        /// <para>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</para>
-        /// <h3>Recording file URL requirements</h3>
+        /// <para>The execution speed of a task depends on the speed of converting the audio file to text. Ideally, a 5-minute audio file can be transcribed within 2 minutes. However, if the file transcription service has a large queue, a waiting time is required. Generally, the transcription is completed within 6 hours, except when a large amount of data is uploaded at a time (more than 500 hours of audio uploaded within half an hour). After the transcription is completed, the quality inspection analysis is performed in milliseconds.</para>
+        /// <h3>Requirements for audio file URLs</h3>
         /// <list type="bullet">
-        /// <item><description>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</description></item>
-        /// <item><description>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</description></item>
-        /// <item><description>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</description></item>
-        /// <item><description>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</description></item>
-        /// <item><description>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</description></item>
-        /// <item><description>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</description></item>
+        /// <item><description>Supports single-track or dual-track audio files in WAV or MP3 format. The file size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Committing local files is not supported. The access permissions of the audio file must be public.</description></item>
+        /// <item><description>The URL must contain only a domain name, not an IP address. The URL cannot contain spaces. Avoid using Chinese characters in the URL.</description></item>
+        /// <item><description>After the audio is converted to text, the system deletes the downloaded audio file and does not retain a copy.</description></item>
+        /// <item><description>If your audio URL has an expiration time, for example, the audio is stored in Alibaba Cloud OSS and an expiration time is specified when the URL is generated, we recommend that you set the expiration time to at least 12 hours, or preferably set the expiration time in Settings to 24 hours if conditions permit. This is because file transcription takes time and may occasionally be queued. If the queue is long, the audio is downloaded only when the transcription starts. A longer expiration time prevents the URL from expiring before the audio is downloaded.</description></item>
+        /// <item><description>After the quality inspection analysis is completed, the URL you provided is still used to play the audio when you review the file in the console. Therefore, you must ensure that the URL remains active for a long time. Otherwise, the audio cannot be played.</description></item>
         /// </list>
-        /// <h3>Role separation description</h3>
-        /// <para>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
-        /// Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</para>
+        /// <h3>Role separation</h3>
+        /// <para>After the audio is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. Therefore, you must separate the roles based on specific rules. The accuracy of role separation is crucial because the rules used for quality inspection analysis often have role restrictions (that is, a rule only checks the agent or the customer). Incorrect role separation greatly affects the accuracy of the quality inspection results.
+        /// Audio files are generally divided into single-track (mono) and dual-track (dual-channel/stereo) types:</para>
         /// <list type="bullet">
-        /// <item><description>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</description></item>
-        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</description></item>
+        /// <item><description>Single-track audio: The voices of the agent and the customer are stored on a single track. After the audio file is converted to text, the system uses a built-in algorithm to separate the conversation into two roles. You can set a list of keywords that the agent may say. The system analyzes the transcribed text sentence by sentence from top to bottom. If a sentence hits a keyword, the role of the sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the uncontrollability of the conversation content (for example, the two roles may interrupt each other or speak at the same time), role separation for single-track audio cannot be 100% accurate. We strongly recommend that you save audio files as dual-track audio.</description></item>
+        /// <item><description>Dual-track audio: The voices of the agent and the customer are stored on two separate tracks. Even if the conversation overlaps, the system can accurately distinguish the roles when the audio is converted to text. You can specify the agent and the customer by using the serviceChannel and clientChannel request parameters.</description></item>
         /// </list>
-        /// <h3>Retrieve quality inspection analysis results</h3>
-        /// <para>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</para>
+        /// <h3>Obtain quality inspection analysis results</h3>
+        /// <para>Because audio file recognition is not real-time, you must obtain the quality inspection analysis results asynchronously. You can use one of the following three methods to obtain the results:</para>
         /// <list type="bullet">
-        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</description></item>
-        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</description></item>
-        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <c>getResult</c> operation to asynchronously retrieve results. Check whether the <c>status</c> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</description></item>
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After you receive a message, call the GetResult operation to obtain the detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify callbackUrl in the request parameters. After the node is completed, the system initiates a callback. After you receive the callback, call the GetResult operation to obtain the detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a node ID (taskId). You can use the taskId to poll the <c>getResult</c> operation to asynchronously obtain the results and check whether the <c>status</c> response parameter indicates completion. We recommend that you do not set the polling interval too short. Normally, the analysis is completed within a few minutes. We recommend that you set the polling interval to 30 seconds or more. (Not recommended)</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15060,37 +15723,37 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</para>
+        /// <para>Uploads offline voice quality inspection data (recorded session files) for hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Cloud Call Center (CCC) without the need for development, allowing you to push call data to Smart Conversation Analysis (SCA) with a single click. Scenario 2: Integrates with a self-managed call center system, where each generated recording is pushed to SCA for analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Process description</h3>
-        /// <para>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</para>
+        /// <h3>Workflow</h3>
+        /// <para>Call the API to upload audio for quality inspection =&gt; Convert the audio file to text =&gt; Separate the text into roles (agent and customer) based on the specified track splitting method =&gt; Analyze the text by using quality inspection rules =&gt; Complete the quality inspection.</para>
         /// <h3>Task execution efficiency</h3>
-        /// <para>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</para>
-        /// <h3>Recording file URL requirements</h3>
+        /// <para>The execution speed of a task depends on the speed of converting the audio file to text. Ideally, a 5-minute audio file can be transcribed within 2 minutes. However, if the file transcription service has a large queue, a waiting time is required. Generally, the transcription is completed within 6 hours, except when a large amount of data is uploaded at a time (more than 500 hours of audio uploaded within half an hour). After the transcription is completed, the quality inspection analysis is performed in milliseconds.</para>
+        /// <h3>Requirements for audio file URLs</h3>
         /// <list type="bullet">
-        /// <item><description>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</description></item>
-        /// <item><description>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</description></item>
-        /// <item><description>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</description></item>
-        /// <item><description>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</description></item>
-        /// <item><description>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</description></item>
-        /// <item><description>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</description></item>
+        /// <item><description>Supports single-track or dual-track audio files in WAV or MP3 format. The file size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Committing local files is not supported. The access permissions of the audio file must be public.</description></item>
+        /// <item><description>The URL must contain only a domain name, not an IP address. The URL cannot contain spaces. Avoid using Chinese characters in the URL.</description></item>
+        /// <item><description>After the audio is converted to text, the system deletes the downloaded audio file and does not retain a copy.</description></item>
+        /// <item><description>If your audio URL has an expiration time, for example, the audio is stored in Alibaba Cloud OSS and an expiration time is specified when the URL is generated, we recommend that you set the expiration time to at least 12 hours, or preferably set the expiration time in Settings to 24 hours if conditions permit. This is because file transcription takes time and may occasionally be queued. If the queue is long, the audio is downloaded only when the transcription starts. A longer expiration time prevents the URL from expiring before the audio is downloaded.</description></item>
+        /// <item><description>After the quality inspection analysis is completed, the URL you provided is still used to play the audio when you review the file in the console. Therefore, you must ensure that the URL remains active for a long time. Otherwise, the audio cannot be played.</description></item>
         /// </list>
-        /// <h3>Role separation description</h3>
-        /// <para>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
-        /// Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</para>
+        /// <h3>Role separation</h3>
+        /// <para>After the audio is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. Therefore, you must separate the roles based on specific rules. The accuracy of role separation is crucial because the rules used for quality inspection analysis often have role restrictions (that is, a rule only checks the agent or the customer). Incorrect role separation greatly affects the accuracy of the quality inspection results.
+        /// Audio files are generally divided into single-track (mono) and dual-track (dual-channel/stereo) types:</para>
         /// <list type="bullet">
-        /// <item><description>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</description></item>
-        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</description></item>
+        /// <item><description>Single-track audio: The voices of the agent and the customer are stored on a single track. After the audio file is converted to text, the system uses a built-in algorithm to separate the conversation into two roles. You can set a list of keywords that the agent may say. The system analyzes the transcribed text sentence by sentence from top to bottom. If a sentence hits a keyword, the role of the sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the uncontrollability of the conversation content (for example, the two roles may interrupt each other or speak at the same time), role separation for single-track audio cannot be 100% accurate. We strongly recommend that you save audio files as dual-track audio.</description></item>
+        /// <item><description>Dual-track audio: The voices of the agent and the customer are stored on two separate tracks. Even if the conversation overlaps, the system can accurately distinguish the roles when the audio is converted to text. You can specify the agent and the customer by using the serviceChannel and clientChannel request parameters.</description></item>
         /// </list>
-        /// <h3>Retrieve quality inspection analysis results</h3>
-        /// <para>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</para>
+        /// <h3>Obtain quality inspection analysis results</h3>
+        /// <para>Because audio file recognition is not real-time, you must obtain the quality inspection analysis results asynchronously. You can use one of the following three methods to obtain the results:</para>
         /// <list type="bullet">
-        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</description></item>
-        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</description></item>
-        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <c>getResult</c> operation to asynchronously retrieve results. Check whether the <c>status</c> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</description></item>
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After you receive a message, call the GetResult operation to obtain the detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify callbackUrl in the request parameters. After the node is completed, the system initiates a callback. After you receive the callback, call the GetResult operation to obtain the detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a node ID (taskId). You can use the taskId to poll the <c>getResult</c> operation to asynchronously obtain the results and check whether the <c>status</c> response parameter indicates completion. We recommend that you do not set the polling interval too short. Normally, the analysis is completed within a few minutes. We recommend that you set the polling interval to 30 seconds or more. (Not recommended)</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15137,37 +15800,37 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</para>
+        /// <para>Uploads offline voice quality inspection data (recorded session files) for hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Cloud Call Center (CCC) without the need for development, allowing you to push call data to Smart Conversation Analysis (SCA) with a single click. Scenario 2: Integrates with a self-managed call center system, where each generated recording is pushed to SCA for analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Process description</h3>
-        /// <para>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</para>
+        /// <h3>Workflow</h3>
+        /// <para>Call the API to upload audio for quality inspection =&gt; Convert the audio file to text =&gt; Separate the text into roles (agent and customer) based on the specified track splitting method =&gt; Analyze the text by using quality inspection rules =&gt; Complete the quality inspection.</para>
         /// <h3>Task execution efficiency</h3>
-        /// <para>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</para>
-        /// <h3>Recording file URL requirements</h3>
+        /// <para>The execution speed of a task depends on the speed of converting the audio file to text. Ideally, a 5-minute audio file can be transcribed within 2 minutes. However, if the file transcription service has a large queue, a waiting time is required. Generally, the transcription is completed within 6 hours, except when a large amount of data is uploaded at a time (more than 500 hours of audio uploaded within half an hour). After the transcription is completed, the quality inspection analysis is performed in milliseconds.</para>
+        /// <h3>Requirements for audio file URLs</h3>
         /// <list type="bullet">
-        /// <item><description>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</description></item>
-        /// <item><description>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</description></item>
-        /// <item><description>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</description></item>
-        /// <item><description>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</description></item>
-        /// <item><description>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</description></item>
-        /// <item><description>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</description></item>
+        /// <item><description>Supports single-track or dual-track audio files in WAV or MP3 format. The file size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Committing local files is not supported. The access permissions of the audio file must be public.</description></item>
+        /// <item><description>The URL must contain only a domain name, not an IP address. The URL cannot contain spaces. Avoid using Chinese characters in the URL.</description></item>
+        /// <item><description>After the audio is converted to text, the system deletes the downloaded audio file and does not retain a copy.</description></item>
+        /// <item><description>If your audio URL has an expiration time, for example, the audio is stored in Alibaba Cloud OSS and an expiration time is specified when the URL is generated, we recommend that you set the expiration time to at least 12 hours, or preferably set the expiration time in Settings to 24 hours if conditions permit. This is because file transcription takes time and may occasionally be queued. If the queue is long, the audio is downloaded only when the transcription starts. A longer expiration time prevents the URL from expiring before the audio is downloaded.</description></item>
+        /// <item><description>After the quality inspection analysis is completed, the URL you provided is still used to play the audio when you review the file in the console. Therefore, you must ensure that the URL remains active for a long time. Otherwise, the audio cannot be played.</description></item>
         /// </list>
-        /// <h3>Role separation description</h3>
-        /// <para>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
-        /// Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</para>
+        /// <h3>Role separation</h3>
+        /// <para>After the audio is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. Therefore, you must separate the roles based on specific rules. The accuracy of role separation is crucial because the rules used for quality inspection analysis often have role restrictions (that is, a rule only checks the agent or the customer). Incorrect role separation greatly affects the accuracy of the quality inspection results.
+        /// Audio files are generally divided into single-track (mono) and dual-track (dual-channel/stereo) types:</para>
         /// <list type="bullet">
-        /// <item><description>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</description></item>
-        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</description></item>
+        /// <item><description>Single-track audio: The voices of the agent and the customer are stored on a single track. After the audio file is converted to text, the system uses a built-in algorithm to separate the conversation into two roles. You can set a list of keywords that the agent may say. The system analyzes the transcribed text sentence by sentence from top to bottom. If a sentence hits a keyword, the role of the sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the uncontrollability of the conversation content (for example, the two roles may interrupt each other or speak at the same time), role separation for single-track audio cannot be 100% accurate. We strongly recommend that you save audio files as dual-track audio.</description></item>
+        /// <item><description>Dual-track audio: The voices of the agent and the customer are stored on two separate tracks. Even if the conversation overlaps, the system can accurately distinguish the roles when the audio is converted to text. You can specify the agent and the customer by using the serviceChannel and clientChannel request parameters.</description></item>
         /// </list>
-        /// <h3>Retrieve quality inspection analysis results</h3>
-        /// <para>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</para>
+        /// <h3>Obtain quality inspection analysis results</h3>
+        /// <para>Because audio file recognition is not real-time, you must obtain the quality inspection analysis results asynchronously. You can use one of the following three methods to obtain the results:</para>
         /// <list type="bullet">
-        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</description></item>
-        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</description></item>
-        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <c>getResult</c> operation to asynchronously retrieve results. Check whether the <c>status</c> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</description></item>
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After you receive a message, call the GetResult operation to obtain the detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify callbackUrl in the request parameters. After the node is completed, the system initiates a callback. After you receive the callback, call the GetResult operation to obtain the detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a node ID (taskId). You can use the taskId to poll the <c>getResult</c> operation to asynchronously obtain the results and check whether the <c>status</c> response parameter indicates completion. We recommend that you do not set the polling interval too short. Normally, the analysis is completed within a few minutes. We recommend that you set the polling interval to 30 seconds or more. (Not recommended)</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15186,37 +15849,37 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</para>
+        /// <para>Uploads offline voice quality inspection data (recorded session files) for hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Cloud Call Center (CCC) without the need for development, allowing you to push call data to Smart Conversation Analysis (SCA) with a single click. Scenario 2: Integrates with a self-managed call center system, where each generated recording is pushed to SCA for analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Process description</h3>
-        /// <para>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</para>
+        /// <h3>Workflow</h3>
+        /// <para>Call the API to upload audio for quality inspection =&gt; Convert the audio file to text =&gt; Separate the text into roles (agent and customer) based on the specified track splitting method =&gt; Analyze the text by using quality inspection rules =&gt; Complete the quality inspection.</para>
         /// <h3>Task execution efficiency</h3>
-        /// <para>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</para>
-        /// <h3>Recording file URL requirements</h3>
+        /// <para>The execution speed of a task depends on the speed of converting the audio file to text. Ideally, a 5-minute audio file can be transcribed within 2 minutes. However, if the file transcription service has a large queue, a waiting time is required. Generally, the transcription is completed within 6 hours, except when a large amount of data is uploaded at a time (more than 500 hours of audio uploaded within half an hour). After the transcription is completed, the quality inspection analysis is performed in milliseconds.</para>
+        /// <h3>Requirements for audio file URLs</h3>
         /// <list type="bullet">
-        /// <item><description>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</description></item>
-        /// <item><description>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</description></item>
-        /// <item><description>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</description></item>
-        /// <item><description>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</description></item>
-        /// <item><description>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</description></item>
-        /// <item><description>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</description></item>
+        /// <item><description>Supports single-track or dual-track audio files in WAV or MP3 format. The file size must be less than 512 MB.</description></item>
+        /// <item><description>The URL must be accessible over HTTP. Committing local files is not supported. The access permissions of the audio file must be public.</description></item>
+        /// <item><description>The URL must contain only a domain name, not an IP address. The URL cannot contain spaces. Avoid using Chinese characters in the URL.</description></item>
+        /// <item><description>After the audio is converted to text, the system deletes the downloaded audio file and does not retain a copy.</description></item>
+        /// <item><description>If your audio URL has an expiration time, for example, the audio is stored in Alibaba Cloud OSS and an expiration time is specified when the URL is generated, we recommend that you set the expiration time to at least 12 hours, or preferably set the expiration time in Settings to 24 hours if conditions permit. This is because file transcription takes time and may occasionally be queued. If the queue is long, the audio is downloaded only when the transcription starts. A longer expiration time prevents the URL from expiring before the audio is downloaded.</description></item>
+        /// <item><description>After the quality inspection analysis is completed, the URL you provided is still used to play the audio when you review the file in the console. Therefore, you must ensure that the URL remains active for a long time. Otherwise, the audio cannot be played.</description></item>
         /// </list>
-        /// <h3>Role separation description</h3>
-        /// <para>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
-        /// Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</para>
+        /// <h3>Role separation</h3>
+        /// <para>After the audio is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. Therefore, you must separate the roles based on specific rules. The accuracy of role separation is crucial because the rules used for quality inspection analysis often have role restrictions (that is, a rule only checks the agent or the customer). Incorrect role separation greatly affects the accuracy of the quality inspection results.
+        /// Audio files are generally divided into single-track (mono) and dual-track (dual-channel/stereo) types:</para>
         /// <list type="bullet">
-        /// <item><description>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</description></item>
-        /// <item><description>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</description></item>
+        /// <item><description>Single-track audio: The voices of the agent and the customer are stored on a single track. After the audio file is converted to text, the system uses a built-in algorithm to separate the conversation into two roles. You can set a list of keywords that the agent may say. The system analyzes the transcribed text sentence by sentence from top to bottom. If a sentence hits a keyword, the role of the sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the uncontrollability of the conversation content (for example, the two roles may interrupt each other or speak at the same time), role separation for single-track audio cannot be 100% accurate. We strongly recommend that you save audio files as dual-track audio.</description></item>
+        /// <item><description>Dual-track audio: The voices of the agent and the customer are stored on two separate tracks. Even if the conversation overlaps, the system can accurately distinguish the roles when the audio is converted to text. You can specify the agent and the customer by using the serviceChannel and clientChannel request parameters.</description></item>
         /// </list>
-        /// <h3>Retrieve quality inspection analysis results</h3>
-        /// <para>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</para>
+        /// <h3>Obtain quality inspection analysis results</h3>
+        /// <para>Because audio file recognition is not real-time, you must obtain the quality inspection analysis results asynchronously. You can use one of the following three methods to obtain the results:</para>
         /// <list type="bullet">
-        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</description></item>
-        /// <item><description>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</description></item>
-        /// <item><description>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <c>getResult</c> operation to asynchronously retrieve results. Check whether the <c>status</c> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</description></item>
+        /// <item><description>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After you receive a message, call the GetResult operation to obtain the detailed results. (Recommended)</description></item>
+        /// <item><description>Callback: Specify callbackUrl in the request parameters. After the node is completed, the system initiates a callback. After you receive the callback, call the GetResult operation to obtain the detailed results.</description></item>
+        /// <item><description>Polling: The operation returns a node ID (taskId). You can use the taskId to poll the <c>getResult</c> operation to asynchronously obtain the results and check whether the <c>status</c> response parameter indicates completion. We recommend that you do not set the polling interval too short. Normally, the analysis is completed within a few minutes. We recommend that you set the polling interval to 30 seconds or more. (Not recommended)</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15427,15 +16090,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real-time text-based quality inspection.</para>
+        /// <para>Performs real-time quality inspection on text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</para>
+        /// <para>Pushes text data to be inspected in a specific format to SCA, performs real-time quality inspection and analysis on the text data based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which usually uploads the complete conversation text after a conversation ends, real-time text quality inspection can push the text to SCA for analysis after a role finishes speaking one or more sentences, providing higher real-time performance. Special notes:</para>
         /// <list type="bullet">
-        /// <item><description>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</description></item>
-        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</description></item>
+        /// <item><description>If the pushed text is a single sentence from a role, some operators in the rules, such as context repetition check, interruption check, and call silence check, will become invalid due to the lack of conversation context.</description></item>
+        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query the quality inspection results through the API.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15482,15 +16145,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real-time text-based quality inspection.</para>
+        /// <para>Performs real-time quality inspection on text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</para>
+        /// <para>Pushes text data to be inspected in a specific format to SCA, performs real-time quality inspection and analysis on the text data based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which usually uploads the complete conversation text after a conversation ends, real-time text quality inspection can push the text to SCA for analysis after a role finishes speaking one or more sentences, providing higher real-time performance. Special notes:</para>
         /// <list type="bullet">
-        /// <item><description>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</description></item>
-        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</description></item>
+        /// <item><description>If the pushed text is a single sentence from a role, some operators in the rules, such as context repetition check, interruption check, and call silence check, will become invalid due to the lack of conversation context.</description></item>
+        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query the quality inspection results through the API.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15537,15 +16200,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real-time text-based quality inspection.</para>
+        /// <para>Performs real-time quality inspection on text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</para>
+        /// <para>Pushes text data to be inspected in a specific format to SCA, performs real-time quality inspection and analysis on the text data based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which usually uploads the complete conversation text after a conversation ends, real-time text quality inspection can push the text to SCA for analysis after a role finishes speaking one or more sentences, providing higher real-time performance. Special notes:</para>
         /// <list type="bullet">
-        /// <item><description>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</description></item>
-        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</description></item>
+        /// <item><description>If the pushed text is a single sentence from a role, some operators in the rules, such as context repetition check, interruption check, and call silence check, will become invalid due to the lack of conversation context.</description></item>
+        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query the quality inspection results through the API.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15564,15 +16227,15 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs real-time text-based quality inspection.</para>
+        /// <para>Performs real-time quality inspection on text.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</para>
+        /// <para>Pushes text data to be inspected in a specific format to SCA, performs real-time quality inspection and analysis on the text data based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which usually uploads the complete conversation text after a conversation ends, real-time text quality inspection can push the text to SCA for analysis after a role finishes speaking one or more sentences, providing higher real-time performance. Special notes:</para>
         /// <list type="bullet">
-        /// <item><description>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</description></item>
-        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</description></item>
+        /// <item><description>If the pushed text is a single sentence from a role, some operators in the rules, such as context repetition check, interruption check, and call silence check, will become invalid due to the lack of conversation context.</description></item>
+        /// <item><description>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query the quality inspection results through the API.</description></item>
         /// </list>
         /// </description>
         /// 

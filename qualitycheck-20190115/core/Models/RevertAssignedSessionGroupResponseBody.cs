@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class RevertAssignedSessionGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. Use this code to identify the cause of a failed request.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>If the request fails, this parameter provides error details. If the request succeeds, the value is \<c>successful\\</c>.</para>
+        /// <para>The error message. If an error occurs, this field returns the error details. If the request is successful, this field returns &quot;successful&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -60,13 +60,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// <para>The caller can use this field to determine whether the request succeeded.</para>
+        /// <para>Indicates whether the request is successful. You can use this field to determine whether the request is successful:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false or <b>null</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false/null</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

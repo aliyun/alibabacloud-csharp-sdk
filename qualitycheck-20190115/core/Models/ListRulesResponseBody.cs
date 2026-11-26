@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? RuleType { get; set; }
 
             /// <summary>
-            /// <para>The type value of the rule\&quot;s rule type.</para>
+            /// <para>The type value of the rule&quot;s rule type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule\&quot;s rule type.</para>
+            /// <para>The name of the rule&quot;s rule type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>服务规范</para>

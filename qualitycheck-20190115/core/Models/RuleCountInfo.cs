@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public int? Deny { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the rule is active. \<c>0\\</c>: No. \<c>1\\</c>: Yes.</para>
+        /// <para>Indicates if the rule is active. `0`: No. `1`: Yes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the rule is active for the entire lifecycle. \<c>0\\</c>: No. \<c>1\\</c>: Yes.</para>
+        /// <para>Indicates if the rule is active for the entire lifecycle. `0`: No. `1`: Yes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? Rid { get; set; }
 
         /// <summary>
-        /// <para>The scoring type. \<c>8\\</c>: No score is set.</para>
+        /// <para>The scoring type. `8`: No score is set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

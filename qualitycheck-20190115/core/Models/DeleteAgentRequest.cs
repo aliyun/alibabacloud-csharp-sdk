@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>A JSON-formatted string. For more information about the complete JSON string, see the following details.</para>
+        /// <para>The JSON-formatted string. For the complete JSON string information, see the following details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;id\&quot;:486}</para>
+        /// <para>{&quot;id&quot;:486}</para>
         /// </summary>
         [NameInMap("JsonStr")]
         [Validation(Required=false)]
