@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>User\&quot;s department.</para>
+            /// <para>User&quot;s department.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试部</para>

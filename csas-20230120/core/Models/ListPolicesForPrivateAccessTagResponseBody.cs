@@ -115,13 +115,13 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     /// <summary>
                     /// <para>The value of the user group attribute.</para>
                     /// <list type="bullet">
-                    /// <item><description><para>If the user group type is <b>username</b>, this indicates the username\&quot;s value. The length is 1 to 128 characters. It supports Chinese characters, uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</para>
+                    /// <item><description><para>If the user group type is <b>username</b>, this indicates the username&quot;s value. The length is 1 to 128 characters. It supports Chinese characters, uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</para>
                     /// </description></item>
-                    /// <item><description><para>If the user group type is <b>department</b>, this indicates the department\&quot;s value. For example: OU=Department 1,OU=SASE DingTalk.</para>
+                    /// <item><description><para>If the user group type is <b>department</b>, this indicates the department&quot;s value. For example: OU=Department 1,OU=SASE DingTalk.</para>
                     /// </description></item>
-                    /// <item><description><para>If the user group type is <b>email</b>, this indicates the mailbox\&quot;s value. For example: username\@example.com.</para>
+                    /// <item><description><para>If the user group type is <b>email</b>, this indicates the mailbox&quot;s value. For example: username@example.com.</para>
                     /// </description></item>
-                    /// <item><description><para>If the user group type is <b>telephone</b>, this indicates the mobile phone\&quot;s value. For example: 13900001234.</para>
+                    /// <item><description><para>If the user group type is <b>telephone</b>, this indicates the mobile phone&quot;s value. For example: 13900001234.</para>
                     /// </description></item>
                     /// </list>
                     /// 

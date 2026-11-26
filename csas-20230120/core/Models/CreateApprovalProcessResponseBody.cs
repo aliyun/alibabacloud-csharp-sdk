@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The description of the approval process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Process for approving employees\&quot; temporary access to internal network applications</para>
+            /// <para>Process for approving employees&quot; temporary access to internal network applications</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

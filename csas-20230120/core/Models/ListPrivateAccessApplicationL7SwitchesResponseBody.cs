@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7Switches> L7Switches { get; set; }
         public class ListPrivateAccessApplicationL7SwitchesResponseBodyL7Switches : TeaModel {
             /// <summary>
-            /// <para>The ID of the internal-facing application.</para>
+            /// <para>The ID of the internal access application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-application-bbbc550d7c6e4db6</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public int? Begin { get; set; }
 
                 /// <summary>
-                /// <para>The end port. The value must be greater than or equal to the start port.</para>
+                /// <para>The end port. Must be greater than or equal to the start port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>24</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The source IP marking switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
-            /// <item><description><b>Disabled</b>: Disabled.</description></item>
+            /// <item><description><b>Disabled</b>: Disabled.**</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SrcIpMarkStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the internal-facing access policy. Valid values:</para>
+            /// <para>The status of the internal access policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>
@@ -121,14 +121,23 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public int? TimeoutSec { get; set; }
 
+            /// <summary>
+            /// <para>The URL access whitelist rules for the application. These rules take effect only when Status is set to Enabled. An empty value indicates that URLs and request methods are not restricted. A request passes the URL check only when the request path and method meet any group of rules at the same time. Otherwise, the request is blocked. Passing the URL check does not allow requests that are already blocked by an access policy.</para>
+            /// </summary>
             [NameInMap("UrlAccessPaths")]
             [Validation(Required=false)]
             public List<ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths> UrlAccessPaths { get; set; }
             public class ListPrivateAccessApplicationL7SwitchesResponseBodyL7SwitchesUrlAccessPaths : TeaModel {
+                /// <summary>
+                /// <para>The list of HTTP request methods allowed for the paths in this group. An empty value indicates that request methods are not restricted.</para>
+                /// </summary>
                 [NameInMap("AllowMethods")]
                 [Validation(Required=false)]
                 public List<string> AllowMethods { get; set; }
 
+                /// <summary>
+                /// <para>The list of URL paths allowed for access in this group. The list must contain at least 1 path and up to 20 paths. This parameter matches the path part in the request, excluding the protocol, domain name, and query parameters.</para>
+                /// </summary>
                 [NameInMap("Urls")]
                 [Validation(Required=false)]
                 public List<string> Urls { get; set; }
@@ -150,7 +159,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string UserMarkStatus { get; set; }
 
             /// <summary>
-            /// <para>The host bypass prevention switch. Valid values:</para>
+            /// <para>The host anti-bypass switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>

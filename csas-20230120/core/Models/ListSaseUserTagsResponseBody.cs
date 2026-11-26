@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The description of the user label.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>These are the company\&quot;s employees</para>
+            /// <para>These are the company&quot;s employees</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

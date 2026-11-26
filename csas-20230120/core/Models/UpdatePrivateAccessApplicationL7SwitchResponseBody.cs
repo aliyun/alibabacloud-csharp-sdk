@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdatePrivateAccessApplicationL7SwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Layer 7 access switch configurations of the internal access application after the update.</para>
+        /// <para>The Layer 7 access switch configuration of the internal access application after this update.</para>
         /// </summary>
         [NameInMap("L7Switch")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DownloadAuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The effective port ranges for Layer 7 access, which are the intersection of the ports specified in this request and the configured port ranges of the internal access application. If Status is set to <b>Disabled</b>, an empty set is returned.</para>
+            /// <para>The effective port ranges for Layer 7 access, which are the intersection of the ports specified in this request and the port ranges already configured for the internal access application. An empty set is returned when Status is set to <b>Disabled</b>.</para>
             /// </summary>
             [NameInMap("PortRanges")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The request timeout period, in seconds.</para>
+            /// <para>The request timeout period in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -121,14 +121,23 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public int? TimeoutSec { get; set; }
 
+            /// <summary>
+            /// <para>The URL access whitelist rules for the application. This parameter takes effect only when Status is set to Enabled. An empty value indicates that URLs and request methods are not restricted. A request passes the URL check only when the request path and the method meet any group of rules at the same time. Otherwise, the request is blocked. Passing the URL check does not allow requests that are already blocked by an access policy.</para>
+            /// </summary>
             [NameInMap("UrlAccessPaths")]
             [Validation(Required=false)]
             public List<UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths> UrlAccessPaths { get; set; }
             public class UpdatePrivateAccessApplicationL7SwitchResponseBodyL7SwitchUrlAccessPaths : TeaModel {
+                /// <summary>
+                /// <para>The list of HTTP request methods allowed for the paths in this group. An empty value indicates that request methods are not restricted.</para>
+                /// </summary>
                 [NameInMap("AllowMethods")]
                 [Validation(Required=false)]
                 public List<string> AllowMethods { get; set; }
 
+                /// <summary>
+                /// <para>The list of URL paths allowed for access in this group. You must specify at least 1 path and up to 20 paths. The paths match the path part in the request, excluding the protocol, domain name, and query parameters.</para>
+                /// </summary>
                 [NameInMap("Urls")]
                 [Validation(Required=false)]
                 public List<string> Urls { get; set; }
@@ -150,7 +159,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string UserMarkStatus { get; set; }
 
             /// <summary>
-            /// <para>The Host bypass prevention switch. Valid values:</para>
+            /// <para>The host bypass prevention switch. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Disabled</b>: Disabled.</description></item>

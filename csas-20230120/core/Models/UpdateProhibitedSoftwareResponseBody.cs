@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>The directory where the process is located.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>C:\\autotest</para>
+                /// <para>C:\autotest</para>
                 /// </summary>
                 [NameInMap("Directory")]
                 [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>The directory where the process is located.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>C:\\autotest</para>
+                /// <para>C:\autotest</para>
                 /// </summary>
                 [NameInMap("Directory")]
                 [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>The directory where the process is located.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>C:\\autotest</para>
+                /// <para>C:\autotest</para>
                 /// </summary>
                 [NameInMap("Directory")]
                 [Validation(Required=false)]

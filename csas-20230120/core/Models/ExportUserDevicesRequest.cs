@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public bool? SharingStatus { get; set; }
 
         /// <summary>
-        /// <para>Username. Must be 1 to 128 characters long. Supports Chinese, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</para>
+        /// <para>Username. Must be 1 to 128 characters long. Supports Chinese, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>王先生</para>

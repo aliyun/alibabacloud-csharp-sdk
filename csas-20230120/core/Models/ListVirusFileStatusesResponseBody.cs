@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Department { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the user\&quot;s endpoint device that detected this virus file.</para>
+            /// <para>The unique identifier of the user&quot;s endpoint device that detected this virus file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36efa42d-2c32-c4dc-e3fc-8541e33a****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string FileMd5 { get; set; }
 
             /// <summary>
-            /// <para>The absolute path of the virus file on the user\&quot;s endpoint device.</para>
+            /// <para>The absolute path of the virus file on the user&quot;s endpoint device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C:\Users\Public\Downloads\setup.exe</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The hostname of the user\&quot;s endpoint device.</para>
+            /// <para>The hostname of the user&quot;s endpoint device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DESKTOP-8A3F</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the disposition, in the format yyyy-MM-dd HH:mm:ss (UTC+8). The later of the actual disposition time on the user\&quot;s endpoint device and the time when the administrator initiated the disposition is used. A hyphen (-) is returned when no disposition has been performed.</para>
+            /// <para>The effective period of the disposition, in the format yyyy-MM-dd HH:mm:ss (UTC+8). The later of the actual disposition time on the user&quot;s endpoint device and the time when the administrator initiated the disposition is used. A hyphen (-) is returned when no disposition has been performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-21 09:31:45</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ScanTaskId { get; set; }
 
             /// <summary>
-            /// <para>The execution result description of the disposition or scan, reported by the user\&quot;s endpoint device. If a disposition record exists, the execution result of the disposition task is returned. Otherwise, the execution result of the scan task is returned.</para>
+            /// <para>The execution result description of the disposition or scan, reported by the user&quot;s endpoint device. If a disposition record exists, the execution result of the disposition task is returned. Otherwise, the execution result of the scan task is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quarantine success</para>

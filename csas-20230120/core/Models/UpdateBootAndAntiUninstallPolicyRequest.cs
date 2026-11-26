@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>Dialog content.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</para>
+                /// <para>After uninstalling, the device can no longer be used for company work, and it will lose access to the company&quot;s intranet!</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]

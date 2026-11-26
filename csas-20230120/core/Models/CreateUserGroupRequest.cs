@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <summary>
             /// <para>The value of the user group attribute.</para>
             /// <list type="bullet">
-            /// <item><description><para>If UserGroupType is set to <b>username</b>, this parameter specifies the username value. The value must be 1 to 128 characters long. It can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</para>
+            /// <item><description><para>If UserGroupType is set to <b>username</b>, this parameter specifies the username value. The value must be 1 to 128 characters long. It can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</para>
             /// </description></item>
             /// <item><description><para>If UserGroupType is set to <b>department</b>, this parameter specifies the department value. For example: OU=Department 1,OU=SASE DingTalk.</para>
             /// </description></item>
-            /// <item><description><para>If UserGroupType is set to <b>email</b>, this parameter specifies the email address. For example: username\@example.com.</para>
+            /// <item><description><para>If UserGroupType is set to <b>email</b>, this parameter specifies the email address. For example: username@example.com.</para>
             /// </description></item>
             /// <item><description><para>If UserGroupType is set to <b>telephone</b>, this parameter specifies the mobile phone number. For example: 13900001234.</para>
             /// </description></item>

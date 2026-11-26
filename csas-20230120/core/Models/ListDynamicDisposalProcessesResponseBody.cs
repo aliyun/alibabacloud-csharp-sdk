@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<ListDynamicDisposalProcessesResponseBodyDisposalProcesses> DisposalProcesses { get; set; }
         public class ListDynamicDisposalProcessesResponseBodyDisposalProcesses : TeaModel {
             /// <summary>
-            /// <para>User\&quot;s department.</para>
+            /// <para>User&quot;s department.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IT</para>

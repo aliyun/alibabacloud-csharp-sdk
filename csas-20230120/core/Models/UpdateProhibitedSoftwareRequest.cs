@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>C:\\autotest</para>
+            /// <para>C:\autotest</para>
             /// </summary>
             [NameInMap("Directory")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>C:\\autotest</para>
+            /// <para>C:\autotest</para>
             /// </summary>
             [NameInMap("Directory")]
             [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The directory where the process is located. If you specify this parameter, only processes with the same name in this directory are matched. If you leave this parameter empty, processes in any directory are matched. The directory can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>C:\\autotest</para>
+            /// <para>C:\autotest</para>
             /// </summary>
             [NameInMap("Directory")]
             [Validation(Required=false)]

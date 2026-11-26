@@ -689,7 +689,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                         /// <para>The firewall.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>[{\&quot;Platform\&quot;:\&quot;windows\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;macos\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;linux\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;}]</para>
+                        /// <para>[{&quot;Platform&quot;:&quot;windows&quot;,&quot;Status&quot;:&quot;disabled&quot;},{&quot;Platform&quot;:&quot;macos&quot;,&quot;Status&quot;:&quot;disabled&quot;},{&quot;Platform&quot;:&quot;linux&quot;,&quot;Status&quot;:&quot;disabled&quot;}]</para>
                         /// </summary>
                         [NameInMap("Firewall")]
                         [Validation(Required=false)]

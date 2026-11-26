@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<ListUsersResponseBodyUsers> Users { get; set; }
         public class ListUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The user\&quot;s department.</para>
+            /// <para>The user&quot;s department.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试部</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Department { get; set; }
 
             /// <summary>
-            /// <para>The user\&quot;s email address.</para>
+            /// <para>The user&quot;s email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a***@example.net</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string IdpName { get; set; }
 
             /// <summary>
-            /// <para>The user\&quot;s phone number.</para>
+            /// <para>The user&quot;s phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1381111****</para>

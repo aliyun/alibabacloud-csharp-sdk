@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The user\&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</para>
+        /// <para>The user&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试部</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The device ID. You can get the device ID from the <c>DeviceTag</c> parameter returned by the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><para><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</para>
+        /// <item><description><para><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user&quot;s device.</para>
         /// </description></item>
         /// <item><description><para><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</para>
         /// </description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <summary>
         /// <para>The user ID. You can get the user ID from the <c>SaseUserId</c> parameter returned by the following operations:</para>
         /// <list type="bullet">
-        /// <item><description><para><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</para>
+        /// <item><description><para><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user&quot;s device.</para>
         /// </description></item>
         /// <item><description><para><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</para>
         /// </description></item>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> Statuses { get; set; }
 
         /// <summary>
-        /// <para>The username. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</para>
+        /// <para>The username. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>王先生</para>

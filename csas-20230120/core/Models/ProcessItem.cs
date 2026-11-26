@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ProcessItem : TeaModel {
         /// <summary>
-        /// <para>The bundle ID of the application to which the process belongs. The example value com.apple.Terminal is the bundle ID of the macOS Terminal application.</para>
+        /// <para>The bundle identifier of the application to which the process belongs. For example, com.apple.Terminal is the bundle identifier of the macOS Terminal application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.apple.Terminal</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string BundleId { get; set; }
 
         /// <summary>
-        /// <para>The operating system type of the user endpoint device to which the process belongs. Valid values:</para>
+        /// <para>The operating system type of the user terminal device to which the process belongs. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>windows: Windows.</description></item>
         /// <item><description>macOS: macOS.</description></item>

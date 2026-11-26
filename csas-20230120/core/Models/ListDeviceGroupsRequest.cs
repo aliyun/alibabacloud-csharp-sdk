@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListDeviceGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page displayed during paging in a paged query. Valid values: 1 to 10000.</para>
+        /// <para>The page number for paging in the paged query. Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the device groups. Duplicate IDs are not allowed.</para>
+        /// <para>The IDs of the device groups. Duplicate values are not allowed.</para>
         /// </summary>
         [NameInMap("DeviceGroupIds")]
         [Validation(Required=false)]
         public List<string> DeviceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the device tag. The name can be up to 128 characters in length and supports Chinese characters and uppercase and lowercase English letters. It can also contain digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the device group. The name can be up to 128 characters in length and supports Chinese characters and English letters. It can also contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Public service system user group</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page in the Settings for paging in the paged query. Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

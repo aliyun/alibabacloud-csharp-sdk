@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>The description text collected for an MCP, tool, or skill. This is not returned if missing. Aggregated lists only return descriptions that are consistent within the group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>读取并整理指定目录中的文档。</para>
+        /// <para>Read and organize the documents in the specified directory.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

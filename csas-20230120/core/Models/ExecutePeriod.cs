@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ExecutePeriod : TeaModel {
         /// <summary>
-        /// <para>The effective days of the week configuration. Used when ValidType is set to Weekly.</para>
+        /// <para>The effective days of the week configuration. This parameter is used when ValidType is set to Weekly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Monday&quot;:true,&quot;Tuesday&quot;:true,&quot;Wednesday&quot;:true,&quot;Thursday&quot;:true,&quot;Friday&quot;:true,&quot;Saturday&quot;:false,&quot;Sunday&quot;:false}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public ExecutePeriodEffectDay EffectDay { get; set; }
         public class ExecutePeriodEffectDay : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Friday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Friday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Monday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Monday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Saturday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Saturday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Sunday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Sunday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Thursday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Thursday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Tuesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public bool? Tuesday { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect, and a value of false indicates that the policy does not take effect.</para>
+            /// <para>Specifies whether the policy takes effect on Wednesday when ValidType is set to Weekly. A value of true indicates that the policy takes effect. A value of false indicates that the policy does not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public ExecutePeriodEffectTime EffectTime { get; set; }
         public class ExecutePeriodEffectTime : TeaModel {
             /// <summary>
-            /// <para>The end time of the daily effective time range. It uses the 24-hour HH:mm format and is interpreted based on the current system time zone of the server. It must not be earlier than Start.</para>
+            /// <para>The end time of the daily effective time range. It uses the 24-hour HH:mm format and is interpreted based on the current system time zone of the server. The value cannot be earlier than Start.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23:59</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public ExecutePeriodScheduleEffect ScheduleEffect { get; set; }
         public class ExecutePeriodScheduleEffect : TeaModel {
             /// <summary>
-            /// <para>The frequency unit for periodic execution. It is used together with Interval to specify the execution cycle. For example, a value of day indicates daily execution.</para>
+            /// <para>The frequency unit for periodic execution. This parameter is used together with Interval to specify the execution cycle. For example, a value of day indicates daily execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>day</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <list type="bullet">
         /// <item><description><b>Once</b>: Single execution mode. Used in combination with ExecuteMode=Once.</description></item>
         /// <item><description><b>Interval</b>: Periodic execution at a specified frequency. Used in combination with ExecuteMode=Schedule.</description></item>
-        /// <item><description><b>Weekly</b>: Weekly execution on selected days. Used in combination with ExecuteMode=Schedule and EffectDay.</description></item>
+        /// <item><description><b>Weekly</b>: Execution on selected days of the week. Used in combination with ExecuteMode=Schedule and EffectDay.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

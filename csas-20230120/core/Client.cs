@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加设备归属标识</para>
+        /// <para>Adds MAC addresses, system serial numbers, and BIOS serial numbers to the device ownership list of the current tenant in batches. Returns the record IDs in the input order of the added items after the transaction commit. Existing identities and duplicates within the batch are skipped. Returns an empty list if no records are added in the batch. The added IDs can be used to query or remove the records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加设备归属标识</para>
+        /// <para>Adds MAC addresses, system serial numbers, and BIOS serial numbers to the device ownership list of the current tenant in batches. Returns the record IDs in the input order of the added items after the transaction commit. Existing identities and duplicates within the batch are skipped. Returns an empty list if no records are added in the batch. The added IDs can be used to query or remove the records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加设备归属标识</para>
+        /// <para>Adds MAC addresses, system serial numbers, and BIOS serial numbers to the device ownership list of the current tenant in batches. Returns the record IDs in the input order of the added items after the transaction commit. Existing identities and duplicates within the batch are skipped. Returns an empty list if no records are added in the batch. The added IDs can be used to query or remove the records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加设备归属标识</para>
+        /// <para>Adds MAC addresses, system serial numbers, and BIOS serial numbers to the device ownership list of the current tenant in batches. Returns the record IDs in the input order of the added items after the transaction commit. Existing identities and duplicates within the batch are skipped. Returns an empty list if no records are added in the batch. The added IDs can be used to query or remove the records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17395,7 +17395,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备归属标识</para>
+        /// <para>Performs a paging query on the device ownership identifiers of the current tenant. You can filter the results by identifier type, record ID, or the intersection of both. The IDs returned by the batch add operation can be used to query newly added records. The returned record IDs can be used for batch removal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17424,6 +17424,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierType))
             {
                 body["IdentifierType"] = request.IdentifierType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierValues))
+            {
+                bodyFlat["IdentifierValues"] = request.IdentifierValues;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -17463,7 +17467,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备归属标识</para>
+        /// <para>Performs a paging query on the device ownership identifiers of the current tenant. You can filter the results by identifier type, record ID, or the intersection of both. The IDs returned by the batch add operation can be used to query newly added records. The returned record IDs can be used for batch removal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17492,6 +17496,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierType))
             {
                 body["IdentifierType"] = request.IdentifierType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdentifierValues))
+            {
+                bodyFlat["IdentifierValues"] = request.IdentifierValues;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -17531,7 +17539,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备归属标识</para>
+        /// <para>Performs a paging query on the device ownership identifiers of the current tenant. You can filter the results by identifier type, record ID, or the intersection of both. The IDs returned by the batch add operation can be used to query newly added records. The returned record IDs can be used for batch removal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17549,7 +17557,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备归属标识</para>
+        /// <para>Performs a paging query on the device ownership identifiers of the current tenant. You can filter the results by identifier type, record ID, or the intersection of both. The IDs returned by the batch add operation can be used to query newly added records. The returned record IDs can be used for batch removal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17567,7 +17575,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging for the paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17621,7 +17629,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging for the paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17675,7 +17683,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging for the paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17693,7 +17701,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging in a paged query.</para>
+        /// <para>Queries the list of device groups under the current Alibaba Cloud account by using paging for the paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20707,7 +20715,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Layer 7 switches of internal-facing applications in batches.</para>
+        /// <para>Queries the Layer 7 switches for internal access applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20745,7 +20753,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Layer 7 switches of internal-facing applications in batches.</para>
+        /// <para>Queries the Layer 7 switches for internal access applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20783,7 +20791,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Layer 7 switches of internal-facing applications in batches.</para>
+        /// <para>Queries the Layer 7 switches for internal access applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20801,7 +20809,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Layer 7 switches of internal-facing applications in batches.</para>
+        /// <para>Queries the Layer 7 switches for internal access applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25799,7 +25807,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除设备归属标识</para>
+        /// <para>Removes device ownership identifiers for the current tenant in batches by record ID. You can obtain the IDs from the responses of the query and batch add operations. If any ID does not exist or does not belong to the current tenant, the entire batch fails and an InvalidParameter error is returned. After the identifiers are removed, device ownership is still determined by other matching items and explicit ownership configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25847,7 +25855,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除设备归属标识</para>
+        /// <para>Removes device ownership identifiers for the current tenant in batches by record ID. You can obtain the IDs from the responses of the query and batch add operations. If any ID does not exist or does not belong to the current tenant, the entire batch fails and an InvalidParameter error is returned. After the identifiers are removed, device ownership is still determined by other matching items and explicit ownership configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25895,7 +25903,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除设备归属标识</para>
+        /// <para>Removes device ownership identifiers for the current tenant in batches by record ID. You can obtain the IDs from the responses of the query and batch add operations. If any ID does not exist or does not belong to the current tenant, the entire batch fails and an InvalidParameter error is returned. After the identifiers are removed, device ownership is still determined by other matching items and explicit ownership configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25913,7 +25921,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除设备归属标识</para>
+        /// <para>Removes device ownership identifiers for the current tenant in batches by record ID. You can obtain the IDs from the responses of the query and batch add operations. If any ID does not exist or does not belong to the current tenant, the entire batch fails and an InvalidParameter error is returned. After the identifiers are removed, device ownership is still determined by other matching items and explicit ownership configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29463,7 +29471,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
+        /// <para>Updates the Layer 7 switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29547,7 +29555,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
+        /// <para>Updates the Layer 7 switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29631,7 +29639,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
+        /// <para>Updates the Layer 7 switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29649,7 +29657,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Layer 7 access switch for an internal access application.</para>
+        /// <para>Updates the Layer 7 switch for an internal access application.</para>
         /// </summary>
         /// 
         /// <param name="request">

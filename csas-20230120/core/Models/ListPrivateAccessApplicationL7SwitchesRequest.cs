@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPrivateAccessApplicationL7SwitchesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the internal-facing applications. You can specify up to 100 internal-facing application IDs.</para>
+        /// <para>The IDs of the internal access applications. You can specify up to 100 application IDs.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
         [Validation(Required=false)]

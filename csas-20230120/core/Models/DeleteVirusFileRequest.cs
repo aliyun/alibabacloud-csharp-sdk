@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteVirusFileRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the user\&quot;s endpoint device where the virus file is located. The value can be up to 64 characters in length. You can obtain the value from the following operation:</para>
+        /// <para>The unique identifier of the user&quot;s endpoint device where the virus file is located. The value can be up to 64 characters in length. You can obtain the value from the following operation:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</description></item>
         /// </list>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string FileMd5 { get; set; }
 
         /// <summary>
-        /// <para>The full path of the virus file on the user\&quot;s endpoint device. Only records with a handling action of Fail can be deleted. You can obtain the value from the following operation:</para>
+        /// <para>The full path of the virus file on the user&quot;s endpoint device. Only records with a handling action of Fail can be deleted. You can obtain the value from the following operation:</para>
         /// <list type="bullet">
         /// <item><description><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</description></item>
         /// </list>

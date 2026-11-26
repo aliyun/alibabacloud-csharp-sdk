@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// </description></item>
                 /// <item><description><para>If UserGroupType is set to <b>department</b>, this parameter specifies the value of the department. Example: OU=Department 1,OU=SASE DingTalk.</para>
                 /// </description></item>
-                /// <item><description><para>If UserGroupType is set to <b>email</b>, this parameter specifies the value of the email address. Example: username\@example.com.</para>
+                /// <item><description><para>If UserGroupType is set to <b>email</b>, this parameter specifies the value of the email address. Example: username@example.com.</para>
                 /// </description></item>
                 /// <item><description><para>If UserGroupType is set to <b>telephone</b>, this parameter specifies the value of the mobile phone number. Example: 13900001234.</para>
                 /// </description></item>
