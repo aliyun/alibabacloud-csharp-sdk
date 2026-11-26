@@ -1,3 +1,6 @@
+2026-11-26 Version: 3.16.2
+- Generated csharp 2016-05-03 for gpdb.
+
 2026-11-26 Version: 3.16.1
 - Update API CreateDBInstance: add request parameters AutoRenew.
 
