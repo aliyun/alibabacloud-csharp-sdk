@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ArticleStatus { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>BOTH</para>
+        /// </summary>
+        [NameInMap("DeliveryMode")]
+        [Validation(Required=false)]
+        public string DeliveryMode { get; set; }
+
+        /// <summary>
         /// <para>The GEO diagnostic item references.</para>
         /// </summary>
         [NameInMap("DiagnosisReferences")]
@@ -65,6 +73,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("FailReason")]
         [Validation(Required=false)]
         public string FailReason { get; set; }
+
+        [NameInMap("NeedsAttention")]
+        [Validation(Required=false)]
+        public bool? NeedsAttention { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PLAN</para>
+        /// </summary>
+        [NameInMap("OriginType")]
+        [Validation(Required=false)]
+        public string OriginType { get; set; }
 
         /// <summary>
         /// <para>The content plan ID.</para>
@@ -124,6 +144,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SkipReason { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>PENDING</para>
+        /// </summary>
+        [NameInMap("SocialStatus")]
+        [Validation(Required=false)]
+        public string SocialStatus { get; set; }
+
+        /// <summary>
         /// <para>The topic status.</para>
         /// 
         /// <b>Example:</b>
@@ -152,6 +180,30 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("TopicId")]
         [Validation(Required=false)]
         public string TopicId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>draft_example001</para>
+        /// </summary>
+        [NameInMap("WebsiteDraftId")]
+        [Validation(Required=false)]
+        public string WebsiteDraftId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>WS20261126000000000001</para>
+        /// </summary>
+        [NameInMap("WebsiteId")]
+        [Validation(Required=false)]
+        public string WebsiteId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
+        [NameInMap("WebsiteStatus")]
+        [Validation(Required=false)]
+        public string WebsiteStatus { get; set; }
 
         /// <summary>
         /// <para>The writing direction, which only describes the structure and perspective.</para>

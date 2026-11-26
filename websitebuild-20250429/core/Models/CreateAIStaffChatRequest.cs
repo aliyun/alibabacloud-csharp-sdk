@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ChatId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>27d4520e-90ab-49a2-a164-7d48e8a82115</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>

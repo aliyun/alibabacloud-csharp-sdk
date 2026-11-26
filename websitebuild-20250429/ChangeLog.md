@@ -1,3 +1,7 @@
+2026-11-26 Version: 2.37.3
+- Update API CreateAIStaffChat: add request parameters ClientToken.
+
+
 2026-11-25 Version: 2.37.2
 - Update API GetAppPublishStatus: add request parameters PublishOrderId.
 - Update API GetAppPublishStatus: add response parameters Body.Module.ArtifactDigest.

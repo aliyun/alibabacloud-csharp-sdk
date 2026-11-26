@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DocumentId { get; set; }
 
+        [NameInMap("Enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
         /// <summary>
         /// <para>The stable error code for main processing failures.</para>
         /// 
@@ -109,6 +113,22 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("KeyTopics")]
         [Validation(Required=false)]
         public List<string> KeyTopics { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>bkb_example001</para>
+        /// </summary>
+        [NameInMap("KnowledgeBaseId")]
+        [Validation(Required=false)]
+        public string KnowledgeBaseId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>bkm_example001</para>
+        /// </summary>
+        [NameInMap("MaterialId")]
+        [Validation(Required=false)]
+        public string MaterialId { get; set; }
 
         /// <summary>
         /// <para>The one-line summary, which is used only to construct search queries and cannot be used as factual evidence.</para>

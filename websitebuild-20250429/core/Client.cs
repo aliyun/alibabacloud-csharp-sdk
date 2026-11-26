@@ -1805,6 +1805,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             {
                 body["ChatId"] = request.ChatId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {
                 body["ConversationId"] = request.ConversationId;
@@ -1873,6 +1877,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
             {
                 body["ChatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {

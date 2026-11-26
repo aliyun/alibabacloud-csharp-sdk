@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public long? ConfigRevision { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>BOTH</para>
+        /// </summary>
+        [NameInMap("DeliveryMode")]
+        [Validation(Required=false)]
+        public string DeliveryMode { get; set; }
+
+        /// <summary>
         /// <para>The completion time of the GEO diagnosis, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
@@ -178,6 +186,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("Timezone")]
         [Validation(Required=false)]
         public string Timezone { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>WS20261126000000000001</para>
+        /// </summary>
+        [NameInMap("WebsiteId")]
+        [Validation(Required=false)]
+        public string WebsiteId { get; set; }
 
         /// <summary>
         /// <para>The weekly generation days, where ISO weekday 1 represents Monday and 7 represents Sunday.</para>
