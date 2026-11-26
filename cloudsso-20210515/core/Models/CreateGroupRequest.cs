@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
     public class CreateGroupRequest : TeaModel {
         /// <summary>
         /// <para>The description of the group.</para>
-        /// <para>The description can be up to 1,024 characters in length.</para>
+        /// <para>Length: The description can be up to 1024 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a group.</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The name of the group.</para>
-        /// <para>The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).\<c>\\</c></para>
-        /// <para>The name can be up to 128 characters in length.</para>
+        /// <para>Format: The name can contain letters, digits, and the special characters <c>_-.</c>.</para>
+        /// <para>Length: The name can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestGroup</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the RAM user provisioning.</para>
+        /// <para>The Resource Access Management (RAM) user synchronization information.</para>
         /// </summary>
         [NameInMap("UserProvisioning")]
         [Validation(Required=false)]
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</para>
+            /// <para>The deletion policy. This policy specifies how to handle the synchronized Resource Access Management (RAM) users when the Resource Access Management (RAM) user synchronization is deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</para>
-            /// </description></item>
-            /// <item><description><para>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</para>
-            /// </description></item>
+            /// <item><description>Delete: Delete. When the Resource Access Management (RAM) user synchronization is deleted, the Resource Access Management (RAM) users that have been synchronized from CloudSSO to RAM are deleted.</description></item>
+            /// <item><description>Keep: Keep. When the Resource Access Management (RAM) user synchronization is deleted, the Resource Access Management (RAM) users that have been synchronized from CloudSSO to RAM are retained.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource directory.</para>
+            /// <para>The ID of the CloudSSO directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-003qew84****</para>
@@ -73,12 +71,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</para>
+            /// <para>The conflict resolution policy. This policy specifies how to handle conflicts when a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <c>_sso</c>.</para>
-            /// </description></item>
-            /// <item><description><para>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</para>
-            /// </description></item>
+            /// <item><description>KeepBoth: Keep both. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system appends the _sso suffix to the username of the CloudSSO user and attempts to create a RAM user with the new username.</description></item>
+            /// <item><description>TakeOver: Take over. When a CloudSSO user is synchronized to Resource Access Management (RAM) user with the same name already exists, the system directly replaces the existing RAM user with the synchronized CloudSSO user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DuplicationStrategy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource directory belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the CloudSSO directory belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639738******</para>
@@ -99,12 +95,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string OwnerPk { get; set; }
 
             /// <summary>
-            /// <para>The identity ID of the RAM user provisioning. Valid values:</para>
+            /// <para>The ID of the identity for the Resource Access Management (RAM) user synchronization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
-            /// </description></item>
-            /// <item><description><para>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
-            /// </description></item>
+            /// <item><description>If <c>PrincipalType</c> is set to <c>Group</c>, the value is the ID of the CloudSSO group (g-********).</description></item>
+            /// <item><description>If <c>PrincipalType</c> is set to <c>User</c>, the value is the ID of the CloudSSO user (u-********).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,12 +109,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalId { get; set; }
 
             /// <summary>
-            /// <para>The identity name of the RAM user provisioning. Valid values:</para>
+            /// <para>The name of the identity for the Resource Access Management (RAM) user synchronization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the name of a CloudSSO user group.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the name of a CloudSSO user.</para>
-            /// </description></item>
+            /// <item><description>If <c>PrincipalType</c> is set to <c>Group</c>, the value is the name of the CloudSSO group.</description></item>
+            /// <item><description>If <c>PrincipalType</c> is set to <c>User</c>, the value is the CloudSSO username.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,12 +123,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalName { get; set; }
 
             /// <summary>
-            /// <para>The identity type of the RAM user provisioning. Valid values:</para>
+            /// <para>The type of the Resource Access Management (RAM) user synchronization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>User: The identity of the RAM user provisioning is a CloudSSO user.</para>
-            /// </description></item>
-            /// <item><description><para>Group: The identity of the RAM user provisioning is a CloudSSO user group.</para>
-            /// </description></item>
+            /// <item><description>User: The Resource Access Management (RAM) user synchronization is a CloudSSO user.</description></item>
+            /// <item><description>Group: The Resource Access Management (RAM) user synchronization is a CloudSSO group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,12 +137,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The status of the RAM user provisioning. Valid values:</para>
+            /// <para>The status of the Resource Access Management (RAM) user synchronization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Enabled</para>
-            /// </description></item>
-            /// <item><description><para>Disabled</para>
-            /// </description></item>
+            /// <item><description>Enabled: The Resource Access Management (RAM) user synchronization is enabled.</description></item>
+            /// <item><description>Disabled: The Resource Access Management (RAM) user synchronization is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.</para>
+            /// <para>The ID of the destination for the Resource Access Management (RAM) user synchronization. Currently, the value is the ID of the account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1743382******</para>
@@ -173,7 +161,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the object for which you create the RAM user provisioning. The value is fixed as the name of the member in the resource directory.</para>
+            /// <para>The name of the destination for the Resource Access Management (RAM) user synchronization. Currently, the value is the name of the account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testTargetName</para>
@@ -183,14 +171,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The path of the resource directory in which you create the RAM user provisioning for the member.</para>
+            /// <para>The path of the destination account in a resource directory for the Resource Access Management (RAM) user synchronization.</para>
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The object for which you create the RAM user provisioning. The value is fixed as <c>RD-Account</c>.</para>
+            /// <para>The type of the destination for the Resource Access Management (RAM) user synchronization. Currently, the value is <c>RD-Account</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RD-Account</para>
@@ -200,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is displayed in UTC.</para>
+            /// <para>The update time. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-28T03:55:42Z</para>
@@ -210,7 +198,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RAM user provisioning.</para>
+            /// <para>The ID of the Resource Access Management (RAM) user synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>up-002axzhapcbz6e63****</para>

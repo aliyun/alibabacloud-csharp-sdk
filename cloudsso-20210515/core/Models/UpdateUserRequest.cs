@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The new description of the user.</para>
+        /// <para>The description of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a user.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewDescription { get; set; }
 
         /// <summary>
-        /// <para>The new display name of the user.</para>
+        /// <para>The display name of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliceLee</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The new email address of the user.</para>
+        /// <para>The email address of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:AliceLee@example.com">AliceLee@example.com</a></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewEmail { get; set; }
 
         /// <summary>
-        /// <para>The new first name of the user.</para>
+        /// <para>The first name of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewFirstName { get; set; }
 
         /// <summary>
-        /// <para>The new last name of the user.</para>
+        /// <para>The last name of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Lee</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NewLastName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>u-00q8wbq42wiltcrk****</para>

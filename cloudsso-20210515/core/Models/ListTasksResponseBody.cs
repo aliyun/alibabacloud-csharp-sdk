@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
+        /// <para>Indicates whether the returned results are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The returned results are truncated.</description></item>
+        /// <item><description>false: The returned results are not truncated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -36,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token used to return the next page of the query results.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the value of <c>IsTruncated</c> is <c>true</c>.</para>
+        /// <para>This parameter is returned only if IsTruncated is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C0DA2DFC-EB18-59EF-BD82-C30862EBA3A3</para>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task.</para>
+            /// <para>The end time of the task. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-09T05:50:50Z</para>
@@ -96,9 +94,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The cause of the task failure.</para>
+            /// <para>The reason why the task failed.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when the value of <c>Status</c> is <c>Failed</c>.</para>
+            /// <para>This parameter is returned only if Status is set to Failed.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -109,6 +107,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string FailureReason { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account to which the authorization target belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
             /// </summary>
@@ -139,10 +139,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the CloudSSO identity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>User</para>
-            /// </description></item>
-            /// <item><description><para>Group</para>
-            /// </description></item>
+            /// <item><description>User: The CloudSSO user.</description></item>
+            /// <item><description>Group: The CloudSSO group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task.</para>
+            /// <para>The start time of the task. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-09T05:50:50Z</para>
@@ -163,14 +161,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>InProgress: The task is running.</para>
-            /// </description></item>
-            /// <item><description><para>Success: The task is successful.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: The task failed.</para>
-            /// </description></item>
+            /// <item><description>InProgress: The task is running.</description></item>
+            /// <item><description>Success: The task succeeded.</description></item>
+            /// <item><description>Failed: The task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,7 +176,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
+            /// <para>The ID of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
@@ -191,7 +186,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-test</para>
@@ -201,22 +196,25 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The path ID of the task object in the resource directory.</para>
+            /// <para>The path ID of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The path name of the task object in the resource directory.</para>
+            /// <para>The path name of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task object.</para>
-            /// <para>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</para>
+            /// <para>The type of the task target.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RD-Account: The task target is an account in a resource directory.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RD-Account</para>
@@ -226,7 +224,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the job.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-sh5k4gesm6twlrqb****</para>
@@ -236,16 +234,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task type. Valid values:</para>
+            /// <para>The type of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ProvisionAccessConfiguration: An access configuration is provisioned.</para>
-            /// </description></item>
-            /// <item><description><para>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</para>
-            /// </description></item>
-            /// <item><description><para>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</para>
-            /// </description></item>
-            /// <item><description><para>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</para>
-            /// </description></item>
+            /// <item><description>ProvisionAccessConfiguration: Access configuration deployment.</description></item>
+            /// <item><description>DeprovisionAccessConfiguration: Removes access configuration provisioning.</description></item>
+            /// <item><description>CreateAccessAssignment: Grants authorization to an account in a resource directory.</description></item>
+            /// <item><description>DeleteAccessAssignment: Removes authorization from an account in a resource directory.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -258,7 +252,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the conditional request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListAccessConfigurationProvisioningsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The accounts for which the access configuration is provisioned.</para>
+        /// <para>The list of access configuration provisionings.</para>
         /// </summary>
         [NameInMap("AccessConfigurationProvisionings")]
         [Validation(Required=false)]
         public List<ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings> AccessConfigurationProvisionings { get; set; }
         public class ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings : TeaModel {
             /// <summary>
-            /// <para>The ID of the access configuration.</para>
+            /// <para>The access configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ac-00ccule7tadaijxc****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
-            /// <para>The first time when the access configuration was provisioned.</para>
+            /// <para>The time when the first provisioning succeeded. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-26T08:54:14Z</para>
@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The Alibaba Cloud account ID of the provisioning target.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
             /// </summary>
@@ -55,14 +57,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string OriginTargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom policy that is created for an account in the resource directory.</para>
+            /// <para>The Policy Name of the custom policy created in the account in a resource directory.</para>
             /// </summary>
             [NameInMap("RAMPolicyNames")]
             [Validation(Required=false)]
             public List<string> RAMPolicyNames { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role that is created for an account in the resource directory.</para>
+            /// <para>The name of the RAM role created in the account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunReservedSSO-VPC-Admin</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string RAMRoleName { get; set; }
 
             /// <summary>
-            /// <para>The name of the Security Assertion Markup Language (SAML) identity provider (IdP) that is created within an account in the resource directory.</para>
+            /// <para>The name of the SAML IdP created in the account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunReservedSSO-d-00fc2p61****</para>
@@ -82,14 +84,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string SAMLProviderName { get; set; }
 
             /// <summary>
-            /// <para>The status of the access configuration. Valid values:</para>
+            /// <para>The provisioning status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Provisioned: The access configuration is provisioned.</para>
-            /// </description></item>
-            /// <item><description><para>ReprovisionRequired: The access configuration needs to be re-provisioned.</para>
-            /// </description></item>
-            /// <item><description><para>DeprovisionFailed: The access configuration failed to be provisioned.</para>
-            /// </description></item>
+            /// <item><description>Provisioned: The provisioning succeeded.</description></item>
+            /// <item><description>ReprovisionRequired: Reprovisioning is required.</description></item>
+            /// <item><description>DeprovisionFailed: The provisioning failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,8 +99,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
-            /// <para>If the value of TargetType is <c>RD-Account</c>, the value of this parameter is the UID of an account in the resource directory.</para>
+            /// <para>The target ID.</para>
+            /// <para>If the target type is RD-Account, this parameter indicates the UID of the account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101522521960****</para>
@@ -111,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SharedServices_5009****</para>
@@ -121,22 +120,25 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The path ID of the task object in the resource directory.</para>
+            /// <para>The path ID of the target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The path name of the task object in the resource directory.</para>
+            /// <para>The path name of the target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task object.</para>
-            /// <para>Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
+            /// <para>The target type.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RD-Account: The target is an account in a resource directory.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RD-Account</para>
@@ -146,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The last time when the access configuration was provisioned.</para>
+            /// <para>The time when the latest provisioning succeeded. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-26T08:54:18Z</para>
@@ -158,12 +160,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
+        /// <para>Indicates whether the returned results are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The results are truncated.</description></item>
+        /// <item><description>false: The results are not truncated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -184,9 +184,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token used to return the next page of query results.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the value of <c>IsTruncated</c> is <c>true</c>.</para>
+        /// <para>This parameter is returned only when IsTruncated is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the filter conditions specified in the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

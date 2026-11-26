@@ -10,15 +10,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class DeleteUserProvisioningRequest : TeaModel {
         /// <summary>
-        /// <para>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</para>
+        /// <para>The deletion policy. The policy for processing synchronized RAM users when a RAM user synchronization is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</para>
-        /// </description></item>
-        /// <item><description><para>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</para>
-        /// </description></item>
+        /// <item><description>Delete: Deletes the RAM users that have been synchronized from CloudSSO to Resource Access Management (RAM) user synchronization is deleted.</description></item>
+        /// <item><description>Keep: Retains the RAM users that have been synchronized from CloudSSO to Resource Access Management (RAM) user synchronization is deleted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.</para>
+        /// <para>If this parameter is left empty, the deletion policy specified when the RAM user synchronization was created is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DeletionStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-003qew84****</para>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RAM user provisioning.</para>
+        /// <para>The ID of the Resource Access Management (RAM) user synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>up-002axzhapcbz6e63****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class AddPermissionPolicyToAccessConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access configuration.</para>
+        /// <para>The access configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac-00jhtfl8thteu6uj****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string AccessConfigurationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the inline policy.</para>
-        /// <para>The value can be up to 4,096 characters in length.</para>
-        /// <para>If you set <c>PermissionPolicyType</c> to <c>Inline</c>, you must specify this parameter. For more information about the syntax and structure of RAM policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</para>
+        /// <para>The content of the inline policy.</para>
+        /// <para>Length: up to 4,096 characters.</para>
+        /// <para>This parameter is required when PermissionPolicyType is set to Inline. For more information about the syntax and structure of an access policy, see <a href="https://help.aliyun.com/document_detail/93739.html">Access policy syntax and structure</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</para>
@@ -42,12 +42,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string InlinePolicyDocument { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The name of the access policy. Details:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>PermissionPolicyType</c> to <c>System</c>, you must set PermissionPolicyName to the name of a system policy. You can obtain the name of the system policy from RAM.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>PermissionPolicyType</c> to <c>Inline</c>, you must set PermissionPolicyName to the name of an inline policy. A custom value is supported. The value can be up to 32 characters in length.</para>
-        /// </description></item>
+        /// <item><description>If PermissionPolicyType is set to System, this parameter specifies the name of the system policy. Because RAM system policies are reused, obtain the system policy name from RAM.</description></item>
+        /// <item><description>If PermissionPolicyType is set to Inline, this parameter specifies the name of the inline policy. You can customize this parameter. The name can be up to 32 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,12 +56,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string PermissionPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The type of the policy. Valid values:</para>
+        /// <para>The type of the access policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>System: system policy. Resource Access Management (RAM) system policies are reused.</para>
-        /// </description></item>
-        /// <item><description><para>Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</para>
-        /// </description></item>
+        /// <item><description>System: system policy. System policies from Resource Access Management (RAM) are reused.</description></item>
+        /// <item><description>Inline: inline policy. A custom policy written based on the syntax and structure of RAM access policies.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

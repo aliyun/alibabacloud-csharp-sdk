@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the group.</para>
+        /// <para>The ID of the user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>g-00jqzghi2n3o5hkh****</para>

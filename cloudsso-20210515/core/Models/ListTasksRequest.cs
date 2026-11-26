@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access configuration. The ID can be used to filter access permissions.</para>
+        /// <para>The ID of the access configuration. This parameter is used as a filter condition for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac-00jhtfl8thteu6uj****</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The filter condition.</para>
-        /// <para>The condition is not case-sensitive. The condition must be in the StartTime ge YYYY-MM-DDTHH:mm:SSZ format. You must set YYYY-MM-DDTHH:mm:SSZ to a value that is no more than 7 days from the current time. ge indicates Greater Than or Equals.</para>
-        /// <para>For example, if you set the Filter parameter to StartTime ge 2021-03-15T01:12:23Z, the operation queries the tasks from 2021-03-15T01:12:23 GMT.</para>
+        /// <para>Format: <Attribute> <Operator> <Value>. The format is not case-sensitive. <Attribute> only supports StartTime. <Operator> only supports ge (greater than or equal to). <Value> must be in the YYYY-MM-DDTHH:mm:ssZ format and can only be a time within the last 7 days.</para>
+        /// <para>Example: Filter = &quot;StartTime ge 2021-03-15T01:12:23Z&quot;. This example queries the list of tasks starting from 2021-03-15T01:12:23Z.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the operation queries the tasks within the previous 24 hours by default.</para>
+        /// <para>If you do not specify this parameter, the list of tasks created within the last 24 hours is returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 20.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the <c>NextToken</c> parameter.</para>
-        /// <para>When you call this operation for the first time, if the total number of entries to return exceeds the value of <c>MaxResults</c>, the entries are truncated. Only the entries that match the value of <c>MaxResults</c> are returned, and the excess entries are not returned. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and <c>NextToken</c> is returned. In the next call, you can use the value of <c>NextToken</c> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <c>IsTruncated</c> becomes <c>false</c>. This way, all entries are returned.</para>
+        /// <para>The token used to return the next page of the query results. You do not need to specify NextToken when you call this operation for the first time.</para>
+        /// <para>When you call this operation for the first time, if the total number of returned entries exceeds the value of MaxResults, the returned data is truncated. Only the number of entries specified by MaxResults is returned, the IsTruncated response parameter is set to true, and a NextToken value is returned. You can use the returned NextToken value to call this operation again while keeping other request parameters unchanged to query the truncated data. You can repeat this process until IsTruncated is set to false, which indicates that all data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</para>
@@ -68,15 +68,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</para>
+        /// <para>The ID of the CloudSSO identity. This parameter is used as a filter condition for the query. Details:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</para>
-        /// </description></item>
+        /// <item><description>If PrincipalType is set to User, PrincipalId is the ID of the CloudSSO user.</description></item>
+        /// <item><description>If PrincipalType is set to Group, PrincipalId is the ID of the CloudSSO group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>PrincipalId</c> and <c>PrincipalType</c>.</para>
+        /// <para>PrincipalId and PrincipalType must be specified at the same time to serve as a valid filter condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,15 +85,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string PrincipalId { get; set; }
 
         /// <summary>
-        /// <para>The type of the CloudSSO identity. The type can be used to filter access permissions. Valid values:</para>
+        /// <para>The type of the CloudSSO identity. This parameter is used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>User</para>
-        /// </description></item>
-        /// <item><description><para>Group</para>
-        /// </description></item>
+        /// <item><description>User: The CloudSSO user.</description></item>
+        /// <item><description>Group: The CloudSSO group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>PrincipalId</c> and <c>PrincipalType</c>.</para>
+        /// <para>PrincipalId and PrincipalType must be specified at the same time to serve as a valid filter condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,14 +102,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string PrincipalType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task. The ID can be used to filter tasks. Valid values:</para>
+        /// <para>The status of the task. This parameter is used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>InProgress: The task is running.</para>
-        /// </description></item>
-        /// <item><description><para>Success: The task is successful.</para>
-        /// </description></item>
-        /// <item><description><para>Failed: The task failed.</para>
-        /// </description></item>
+        /// <item><description>InProgress: The task is running.</description></item>
+        /// <item><description>Success: The task succeeded.</description></item>
+        /// <item><description>Failed: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,9 +117,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task object. The ID can be used to filter access permissions.</para>
+        /// <para>The ID of the task target. This parameter is used as a filter condition for the query.</para>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>TargetId and TargetType must be specified at the same time to serve as a valid filter condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -137,10 +130,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task object. The type can be used to filter access permissions.</para>
-        /// <para>Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
+        /// <para>The type of the task target. This parameter is used as a filter condition for the query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RD-Account: The task target is an account in a resource directory.</description></item>
+        /// </list>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>TargetId and TargetType must be specified at the same time to serve as a valid filter condition.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,16 +146,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. The type can be used to filter tasks. Valid values:</para>
+        /// <para>The type of the node. This parameter is used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ProvisionAccessConfiguration: An access configuration is provisioned.</para>
-        /// </description></item>
-        /// <item><description><para>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</para>
-        /// </description></item>
-        /// <item><description><para>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</para>
-        /// </description></item>
-        /// <item><description><para>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</para>
-        /// </description></item>
+        /// <item><description>ProvisionAccessConfiguration: Access configuration deployment.</description></item>
+        /// <item><description>DeprovisionAccessConfiguration: Removes access configuration provisioning.</description></item>
+        /// <item><description>CreateAccessAssignment: Grants authorization to an account in a resource directory.</description></item>
+        /// <item><description>DeleteAccessAssignment: Removes authorization from an account in a resource directory.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

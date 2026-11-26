@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "cloudsso";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloudsso", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,13 +42,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Security Assertion Markup Language (SAML) signing certificate.</para>
+        /// <para>Adds a SAML signing certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to two SAML signing certificates.
-        /// This topic provides an example on how to add a SAML signing certificate to the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of adding a new SAML signing certificate to the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -91,13 +94,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Security Assertion Markup Language (SAML) signing certificate.</para>
+        /// <para>Adds a SAML signing certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to two SAML signing certificates.
-        /// This topic provides an example on how to add a SAML signing certificate to the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of adding a new SAML signing certificate to the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -143,13 +146,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Security Assertion Markup Language (SAML) signing certificate.</para>
+        /// <para>Adds a SAML signing certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to two SAML signing certificates.
-        /// This topic provides an example on how to add a SAML signing certificate to the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of adding a new SAML signing certificate to the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -167,13 +170,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Security Assertion Markup Language (SAML) signing certificate.</para>
+        /// <para>Adds a SAML signing certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>You can add up to two SAML signing certificates.
-        /// This topic provides an example on how to add a SAML signing certificate to the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of adding a new SAML signing certificate to the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -191,12 +194,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a policy to an access configuration.</para>
+        /// <para>Adds an access policy to an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to add the system policy <c>AliyunECSFullAccess</c> to the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This topic provides an example of adding the system policy AliyunECSFullAccess to the access configuration ac-00jhtfl8thteu6uj****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -254,12 +257,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a policy to an access configuration.</para>
+        /// <para>Adds an access policy to an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to add the system policy <c>AliyunECSFullAccess</c> to the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This topic provides an example of adding the system policy AliyunECSFullAccess to the access configuration ac-00jhtfl8thteu6uj****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -317,12 +320,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a policy to an access configuration.</para>
+        /// <para>Adds an access policy to an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to add the system policy <c>AliyunECSFullAccess</c> to the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This topic provides an example of adding the system policy AliyunECSFullAccess to the access configuration ac-00jhtfl8thteu6uj****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -340,12 +343,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a policy to an access configuration.</para>
+        /// <para>Adds an access policy to an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to add the system policy <c>AliyunECSFullAccess</c> to the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This topic provides an example of adding the system policy AliyunECSFullAccess to the access configuration ac-00jhtfl8thteu6uj****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -363,13 +366,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user to a group.</para>
+        /// <para>Adds a user to a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot add users to SCIM-synchronized user groups.
+        /// This topic provides an example of adding the user <c>u-00q8wbq42wiltcrk****</c> to the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -419,13 +422,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user to a group.</para>
+        /// <para>Adds a user to a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot add users to SCIM-synchronized user groups.
+        /// This topic provides an example of adding the user <c>u-00q8wbq42wiltcrk****</c> to the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -475,13 +478,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user to a group.</para>
+        /// <para>Adds a user to a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot add users to SCIM-synchronized user groups.
+        /// This topic provides an example of adding the user <c>u-00q8wbq42wiltcrk****</c> to the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -499,13 +502,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a user to a group.</para>
+        /// <para>Adds a user to a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to add the user <c>u-00q8wbq42wiltcrk****</c> to the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot add users to SCIM-synchronized user groups.
+        /// This topic provides an example of adding the user <c>u-00q8wbq42wiltcrk****</c> to the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -523,13 +526,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a Security Assertion Markup Language (SAML) identity provider (IdP).</para>
+        /// <para>Clears the configuration of the SAML IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
-        /// This topic provides an example on how to clear the configurations of the SAML IdP within the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
+        /// This topic provides an example to clear the configuration of the SAML IdP in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -571,13 +574,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a Security Assertion Markup Language (SAML) identity provider (IdP).</para>
+        /// <para>Clears the configuration of the SAML IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
-        /// This topic provides an example on how to clear the configurations of the SAML IdP within the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
+        /// This topic provides an example to clear the configuration of the SAML IdP in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -619,13 +622,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a Security Assertion Markup Language (SAML) identity provider (IdP).</para>
+        /// <para>Clears the configuration of the SAML IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
-        /// This topic provides an example on how to clear the configurations of the SAML IdP within the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
+        /// This topic provides an example to clear the configuration of the SAML IdP in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -643,13 +646,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the configurations of a Security Assertion Markup Language (SAML) identity provider (IdP).</para>
+        /// <para>Clears the configuration of the SAML IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
-        /// This topic provides an example on how to clear the configurations of the SAML IdP within the directory <c>d-00fc2p61****</c>.</para>
+        /// <para>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
+        /// This topic provides an example to clear the configuration of the SAML IdP in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -667,14 +670,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns access permissions on an account in your resource directory to a user or a group by using an access configuration.</para>
+        /// <para>Configures the Settings for the users or user groups allowed to access an account in a resource directory, along with their corresponding access permissions (access configurations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// For more information about how to assign permissions on an account in your resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Overview of multi-account authorization</a>.
-        /// This topic provides an example on how to assign access permissions on the account <c>114240524784****</c> in your resource directory to the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the TaskId in the response parameter to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and execute a query for the node status.
+        /// For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
+        /// This topic provides an example on how to configure permissions for the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> on the account in a resource directory <c>114240524784****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>, so that the CloudSSO user can access the authorized resources in the account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -740,14 +743,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns access permissions on an account in your resource directory to a user or a group by using an access configuration.</para>
+        /// <para>Configures the Settings for the users or user groups allowed to access an account in a resource directory, along with their corresponding access permissions (access configurations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// For more information about how to assign permissions on an account in your resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Overview of multi-account authorization</a>.
-        /// This topic provides an example on how to assign access permissions on the account <c>114240524784****</c> in your resource directory to the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the TaskId in the response parameter to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and execute a query for the node status.
+        /// For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
+        /// This topic provides an example on how to configure permissions for the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> on the account in a resource directory <c>114240524784****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>, so that the CloudSSO user can access the authorized resources in the account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -813,14 +816,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns access permissions on an account in your resource directory to a user or a group by using an access configuration.</para>
+        /// <para>Configures the Settings for the users or user groups allowed to access an account in a resource directory, along with their corresponding access permissions (access configurations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// For more information about how to assign permissions on an account in your resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Overview of multi-account authorization</a>.
-        /// This topic provides an example on how to assign access permissions on the account <c>114240524784****</c> in your resource directory to the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the TaskId in the response parameter to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and execute a query for the node status.
+        /// For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
+        /// This topic provides an example on how to configure permissions for the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> on the account in a resource directory <c>114240524784****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>, so that the CloudSSO user can access the authorized resources in the account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -838,14 +841,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns access permissions on an account in your resource directory to a user or a group by using an access configuration.</para>
+        /// <para>Configures the Settings for the users or user groups allowed to access an account in a resource directory, along with their corresponding access permissions (access configurations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// For more information about how to assign permissions on an account in your resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Overview of multi-account authorization</a>.
-        /// This topic provides an example on how to assign access permissions on the account <c>114240524784****</c> in your resource directory to the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the TaskId in the response parameter to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and execute a query for the node status.
+        /// For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
+        /// This topic provides an example on how to configure permissions for the CloudSSO user <c>u-00q8wbq42wiltcrk****</c> on the account in a resource directory <c>114240524784****</c> by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>, so that the CloudSSO user can access the authorized resources in the account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -869,7 +872,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
-        /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
+        /// This topic provides an example of creating an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -937,7 +940,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
-        /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
+        /// This topic provides an example of creating an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1005,7 +1008,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
-        /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
+        /// This topic provides an example of creating an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1029,7 +1032,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
-        /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
+        /// This topic provides an example of creating an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1052,14 +1055,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
-        /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
+        /// <h3>Usage notes</h3>
+        /// <para>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
+        /// You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, we recommend that you select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>You can create only one directory for a management account.</description></item>
-        /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
+        /// <item><description>You can create only one directory for each management account.</description></item>
+        /// <item><description>To change the region of the directory, you must delete the existing directory and create a new one in another region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1107,14 +1110,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
-        /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
+        /// <h3>Usage notes</h3>
+        /// <para>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
+        /// You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, we recommend that you select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>You can create only one directory for a management account.</description></item>
-        /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
+        /// <item><description>You can create only one directory for each management account.</description></item>
+        /// <item><description>To change the region of the directory, you must delete the existing directory and create a new one in another region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1162,14 +1165,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
-        /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
+        /// <h3>Usage notes</h3>
+        /// <para>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
+        /// You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, we recommend that you select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>You can create only one directory for a management account.</description></item>
-        /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
+        /// <item><description>You can create only one directory for each management account.</description></item>
+        /// <item><description>To change the region of the directory, you must delete the existing directory and create a new one in another region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1193,14 +1196,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
-        /// To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
+        /// <h3>Usage notes</h3>
+        /// <para>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
+        /// You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, we recommend that you select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
         /// This topic provides an example on how to create a directory named <c>example</c> in the China (Shanghai) region.</para>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>You can create only one directory for a management account.</description></item>
-        /// <item><description>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</description></item>
+        /// <item><description>You can create only one directory for each management account.</description></item>
+        /// <item><description>To change the region of the directory, you must delete the existing directory and create a new one in another region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1219,12 +1222,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a group named <c>TestGroup</c>.</para>
+        /// <para>This topic provides an example of creating a group named <c>TestGroup</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1274,12 +1277,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a group named <c>TestGroup</c>.</para>
+        /// <para>This topic provides an example of creating a group named <c>TestGroup</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1329,12 +1332,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a group named <c>TestGroup</c>.</para>
+        /// <para>This topic provides an example of creating a group named <c>TestGroup</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1352,12 +1355,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group.</para>
+        /// <para>Creates a user group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create a group named <c>TestGroup</c>.</para>
+        /// <para>This topic provides an example of creating a group named <c>TestGroup</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1375,13 +1378,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a SCIM server credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
-        /// This topic provides an example on how to create a SCIM credential within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of creating a SCIM server credential in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1423,13 +1426,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a SCIM server credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
-        /// This topic provides an example on how to create a SCIM credential within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of creating a SCIM server credential in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1471,13 +1474,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a SCIM server credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
-        /// This topic provides an example on how to create a SCIM credential within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of creating a SCIM server credential in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1495,13 +1498,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Creates a SCIM server credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
-        /// This topic provides an example on how to create a SCIM credential within the directory <c>d-00fc2p61****</c>.</para>
+        /// This topic provides an example of creating a SCIM server credential in the <c>d-00fc2p61****</c> directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1519,7 +1522,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user by calling CreateUser.</para>
+        /// <para>Creates a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1593,7 +1596,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user by calling CreateUser.</para>
+        /// <para>Creates a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1667,7 +1670,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user by calling CreateUser.</para>
+        /// <para>Creates a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1685,7 +1688,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user by calling CreateUser.</para>
+        /// <para>Creates a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1703,12 +1706,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a RAM user provisioning for a member in your resource directory to create a RAM user that has the same username as a CloudSSO user. This way, the CloudSSO user can access the resources of the member as the RAM user.</para>
+        /// <para>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in the destination account in a resource directory, and then use the Resource Access Management (RAM) user to access resources in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1778,12 +1781,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a RAM user provisioning for a member in your resource directory to create a RAM user that has the same username as a CloudSSO user. This way, the CloudSSO user can access the resources of the member as the RAM user.</para>
+        /// <para>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in the destination account in a resource directory, and then use the Resource Access Management (RAM) user to access resources in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1853,12 +1856,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a RAM user provisioning for a member in your resource directory to create a RAM user that has the same username as a CloudSSO user. This way, the CloudSSO user can access the resources of the member as the RAM user.</para>
+        /// <para>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in the destination account in a resource directory, and then use the Resource Access Management (RAM) user to access resources in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1876,12 +1879,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can create a RAM user provisioning for a member in your resource directory to create a RAM user that has the same username as a CloudSSO user. This way, the CloudSSO user can access the resources of the member as the RAM user.</para>
+        /// <para>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in the destination account in a resource directory, and then use the Resource Access Management (RAM) user to access resources in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1899,13 +1902,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the access permissions on an account in a resource directory.</para>
+        /// <para>Removes the authorization from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to remove the access permissions on the account <c>114240524784****</c> in the resource directory from the CloudSSO user <c>u-00q8wbq42wiltcrk****</c>. The access permissions are assigned by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> parameter in the response to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the node execute status.
+        /// This topic provides an example on how to remove the authorization that allows the CloudSSO user u-00q8wbq42wiltcrk**** to use the access configuration ac-00jhtfl8thteu6uj**** on the account in a resource directory 114240524784****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1975,13 +1978,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the access permissions on an account in a resource directory.</para>
+        /// <para>Removes the authorization from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to remove the access permissions on the account <c>114240524784****</c> in the resource directory from the CloudSSO user <c>u-00q8wbq42wiltcrk****</c>. The access permissions are assigned by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> parameter in the response to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the node execute status.
+        /// This topic provides an example on how to remove the authorization that allows the CloudSSO user u-00q8wbq42wiltcrk**** to use the access configuration ac-00jhtfl8thteu6uj**** on the account in a resource directory 114240524784****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2051,13 +2054,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the access permissions on an account in a resource directory.</para>
+        /// <para>Removes the authorization from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to remove the access permissions on the account <c>114240524784****</c> in the resource directory from the CloudSSO user <c>u-00q8wbq42wiltcrk****</c>. The access permissions are assigned by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> parameter in the response to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the node execute status.
+        /// This topic provides an example on how to remove the authorization that allows the CloudSSO user u-00q8wbq42wiltcrk**** to use the access configuration ac-00jhtfl8thteu6uj**** on the account in a resource directory 114240524784****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2075,13 +2078,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the access permissions on an account in a resource directory.</para>
+        /// <para>Removes the authorization from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to remove the access permissions on the account <c>114240524784****</c> in the resource directory from the CloudSSO user <c>u-00q8wbq42wiltcrk****</c>. The access permissions are assigned by using the access configuration <c>ac-00jhtfl8thteu6uj****</c>.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> parameter in the response to invoke <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the node execute status.
+        /// This topic provides an example on how to remove the authorization that allows the CloudSSO user u-00q8wbq42wiltcrk**** to use the access configuration ac-00jhtfl8thteu6uj**** on the account in a resource directory 114240524784****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2104,10 +2107,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete an access configuration, you must deprovision the access configuration from the members of the resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete an access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2162,10 +2165,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete an access configuration, you must deprovision the access configuration from the members of the resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete an access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2220,10 +2223,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete an access configuration, you must deprovision the access configuration from the members of the resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete an access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2246,10 +2249,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete the access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete an access configuration, you must deprovision the access configuration from the members of the resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete an access configuration whose ID is <c>ac-001j9mcm3k7335bc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2272,18 +2275,18 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>No resources are contained in the directory that you want to delete.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a directory, make sure that the directory does not contain any resources. Specifically:</para>
         /// <list type="bullet">
-        /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
-        /// <item><description>Users are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
-        /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
-        /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
-        /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Remove all authorizations for users and groups on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Delete users. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
+        /// <item><description>Delete groups. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
+        /// <item><description>Delete access configurations. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
+        /// <item><description>Delete SCIM credentials. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
+        /// <item><description>Delete single sign-on configurations. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete a directory with the ID <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2330,18 +2333,18 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>No resources are contained in the directory that you want to delete.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a directory, make sure that the directory does not contain any resources. Specifically:</para>
         /// <list type="bullet">
-        /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
-        /// <item><description>Users are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
-        /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
-        /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
-        /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Remove all authorizations for users and groups on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Delete users. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
+        /// <item><description>Delete groups. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
+        /// <item><description>Delete access configurations. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
+        /// <item><description>Delete SCIM credentials. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
+        /// <item><description>Delete single sign-on configurations. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete a directory with the ID <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2388,18 +2391,18 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>No resources are contained in the directory that you want to delete.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a directory, make sure that the directory does not contain any resources. Specifically:</para>
         /// <list type="bullet">
-        /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
-        /// <item><description>Users are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
-        /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
-        /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
-        /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Remove all authorizations for users and groups on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Delete users. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
+        /// <item><description>Delete groups. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
+        /// <item><description>Delete access configurations. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
+        /// <item><description>Delete SCIM credentials. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
+        /// <item><description>Delete single sign-on configurations. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete a directory with the ID <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2422,18 +2425,18 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>No resources are contained in the directory that you want to delete.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a directory, make sure that the directory does not contain any resources. Specifically:</para>
         /// <list type="bullet">
-        /// <item><description>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
-        /// <item><description>Users are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
-        /// <item><description>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
-        /// <item><description>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
-        /// <item><description>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
-        /// <item><description>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
+        /// <item><description>Remove all authorizations for users and groups on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Delete users. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</description></item>
+        /// <item><description>Delete groups. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</description></item>
+        /// <item><description>Delete access configurations. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</description></item>
+        /// <item><description>Delete SCIM credentials. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</description></item>
+        /// <item><description>Delete single sign-on configurations. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to delete a directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>This topic provides an example on how to delete a directory with the ID <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2451,20 +2454,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes a specified group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user group, ensure that the user group is not associated with the following resources. Otherwise, the deletion will be failed.</para>
         /// <list type="bullet">
-        /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user group on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2510,20 +2513,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes a specified group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user group, ensure that the user group is not associated with the following resources. Otherwise, the deletion will be failed.</para>
         /// <list type="bullet">
-        /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user group on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2569,20 +2572,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes a specified group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user group, ensure that the user group is not associated with the following resources. Otherwise, the deletion will be failed.</para>
         /// <list type="bullet">
-        /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user group on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2600,20 +2603,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>Deletes a specified group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user group, ensure that the user group is not associated with the following resources. Otherwise, the deletion will be failed.</para>
         /// <list type="bullet">
-        /// <item><description>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user group on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the group <c>g-00jqzghi2n3o5hkh****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
+        /// This topic provides an example on how to delete the user group <c>g-00jqzghi2n3o5hkh****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2795,13 +2798,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
-        /// This topic provides an example on how to delete the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
+        /// <para>After a SCIM credential is deleted, synchronization tasks that use the SCIM credential will fail.
+        /// This topic provides an example of deleting a SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2847,13 +2850,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
-        /// This topic provides an example on how to delete the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
+        /// <para>After a SCIM credential is deleted, synchronization tasks that use the SCIM credential will fail.
+        /// This topic provides an example of deleting a SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2899,13 +2902,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
-        /// This topic provides an example on how to delete the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
+        /// <para>After a SCIM credential is deleted, synchronization tasks that use the SCIM credential will fail.
+        /// This topic provides an example of deleting a SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2923,13 +2926,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Deletes a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
-        /// This topic provides an example on how to delete the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
+        /// <para>After a SCIM credential is deleted, synchronization tasks that use the SCIM credential will fail.
+        /// This topic provides an example of deleting a SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2947,21 +2950,205 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes the security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to delete the security information bound to a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After the deletion, the user is no longer associated with the original security email address, and any previously unconsumed verification links and password reset links also become invalid.</description></item>
+        /// <item><description>If the user is not currently bound to a security email address, calling this operation directly returns a success response.
+        /// This topic provides an example of deleting the security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityInfoResponse
+        /// </returns>
+        public DeleteSecurityInfoResponse DeleteSecurityInfoWithOptions(DeleteSecurityInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecurityInfo",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecurityInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to delete the security information bound to a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After the deletion, the user is no longer associated with the original security email address, and any previously unconsumed verification links and password reset links also become invalid.</description></item>
+        /// <item><description>If the user is not currently bound to a security email address, calling this operation directly returns a success response.
+        /// This topic provides an example of deleting the security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityInfoResponse
+        /// </returns>
+        public async Task<DeleteSecurityInfoResponse> DeleteSecurityInfoWithOptionsAsync(DeleteSecurityInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSecurityInfo",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSecurityInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to delete the security information bound to a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After the deletion, the user is no longer associated with the original security email address, and any previously unconsumed verification links and password reset links also become invalid.</description></item>
+        /// <item><description>If the user is not currently bound to a security email address, calling this operation directly returns a success response.
+        /// This topic provides an example of deleting the security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityInfoResponse
+        /// </returns>
+        public DeleteSecurityInfoResponse DeleteSecurityInfo(DeleteSecurityInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSecurityInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to delete the security information bound to a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After the deletion, the user is no longer associated with the original security email address, and any previously unconsumed verification links and password reset links also become invalid.</description></item>
+        /// <item><description>If the user is not currently bound to a security email address, calling this operation directly returns a success response.
+        /// This topic provides an example of deleting the security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSecurityInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSecurityInfoResponse
+        /// </returns>
+        public async Task<DeleteSecurityInfoResponse> DeleteSecurityInfoAsync(DeleteSecurityInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSecurityInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user, ensure that the user is not associated with the following resources. Otherwise, the deletion will result in a failed state:</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>MFA devices: You must delete the MFA device attached to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You cannot delete a SCIM-synchronized user when SCIM synchronization is enabled.
+        /// This topic provides an example of deleting a user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3012,16 +3199,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user, ensure that the user is not associated with the following resources. Otherwise, the deletion will result in a failed state:</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>MFA devices: You must delete the MFA device attached to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You cannot delete a SCIM-synchronized user when SCIM synchronization is enabled.
+        /// This topic provides an example of deleting a user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3072,16 +3259,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user, ensure that the user is not associated with the following resources. Otherwise, the deletion will result in a failed state:</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>MFA devices: You must delete the MFA device attached to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You cannot delete a SCIM-synchronized user when SCIM synchronization is enabled.
+        /// This topic provides an example of deleting a user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3104,16 +3291,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Before you delete a user, ensure that the user is not associated with the following resources. Otherwise, the deletion will result in a failed state:</para>
         /// <list type="bullet">
-        /// <item><description>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
-        /// <item><description>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
+        /// <item><description>MFA devices: You must delete the MFA device attached to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</description></item>
+        /// <item><description>Authorization: You must remove the authorization of the user on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</description></item>
         /// <item><description>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
-        /// This topic provides an example on how to delete the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You cannot delete a SCIM-synchronized user when SCIM synchronization is enabled.
+        /// This topic provides an example of deleting a user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3131,7 +3318,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes DeleteUserProvisioning to delete a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3181,7 +3368,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes DeleteUserProvisioning to delete a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3231,7 +3418,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes DeleteUserProvisioning to delete a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3249,7 +3436,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes DeleteUserProvisioning to delete a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3267,7 +3454,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning event.</para>
+        /// <para>Invokes DeleteUserProvisioningEvent to delete a Resource Access Management (RAM) user synchronization event that failed to execute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3317,7 +3504,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning event.</para>
+        /// <para>Invokes DeleteUserProvisioningEvent to delete a Resource Access Management (RAM) user synchronization event that failed to execute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3367,7 +3554,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning event.</para>
+        /// <para>Invokes DeleteUserProvisioningEvent to delete a Resource Access Management (RAM) user synchronization event that failed to execute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3385,7 +3572,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) user provisioning event.</para>
+        /// <para>Invokes DeleteUserProvisioningEvent to delete a Resource Access Management (RAM) user synchronization event that failed to execute.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3403,13 +3590,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>De-provisions an access configuration from an account in your resource directory.</para>
+        /// <para>Deprovisions an access configuration from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to de-provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response parameters to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of deprovisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3467,13 +3654,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>De-provisions an access configuration from an account in your resource directory.</para>
+        /// <para>Deprovisions an access configuration from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to de-provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response parameters to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of deprovisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3531,13 +3718,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>De-provisions an access configuration from an account in your resource directory.</para>
+        /// <para>Deprovisions an access configuration from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to de-provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response parameters to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of deprovisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3555,13 +3742,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>De-provisions an access configuration from an account in your resource directory.</para>
+        /// <para>Deprovisions an access configuration from an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to de-provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response parameters to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of deprovisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> from the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3581,6 +3768,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <summary>
         /// <para>Disables the delegated administrator account of CloudSSO.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>禁用云SSO委派管理员账号。禁用后，该账号不能再管理云SSO；您可以随时重新启用。</para>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>目标账号必须是资源目录的成员账号，管理账号本身不能作为委派管理员账号。</description></item>
+        /// <item><description>该成员账号已由资源目录管理账号注册为云SSO委派管理员（可信服务标识为<c>cloudsso.aliyuncs.com</c>），并已通过EnableDelegateAccount启用。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableDelegateAccountRequest
@@ -3624,6 +3821,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>Disables the delegated administrator account of CloudSSO.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>禁用云SSO委派管理员账号。禁用后，该账号不能再管理云SSO；您可以随时重新启用。</para>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>目标账号必须是资源目录的成员账号，管理账号本身不能作为委派管理员账号。</description></item>
+        /// <item><description>该成员账号已由资源目录管理账号注册为云SSO委派管理员（可信服务标识为<c>cloudsso.aliyuncs.com</c>），并已通过EnableDelegateAccount启用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableDelegateAccountRequest
         /// </param>
@@ -3666,6 +3873,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>Disables the delegated administrator account of CloudSSO.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>禁用云SSO委派管理员账号。禁用后，该账号不能再管理云SSO；您可以随时重新启用。</para>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>目标账号必须是资源目录的成员账号，管理账号本身不能作为委派管理员账号。</description></item>
+        /// <item><description>该成员账号已由资源目录管理账号注册为云SSO委派管理员（可信服务标识为<c>cloudsso.aliyuncs.com</c>），并已通过EnableDelegateAccount启用。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableDelegateAccountRequest
         /// </param>
@@ -3683,6 +3900,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <summary>
         /// <para>Disables the delegated administrator account of CloudSSO.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>禁用云SSO委派管理员账号。禁用后，该账号不能再管理云SSO；您可以随时重新启用。</para>
+        /// <h2>前提条件</h2>
+        /// <list type="bullet">
+        /// <item><description>目标账号必须是资源目录的成员账号，管理账号本身不能作为委派管理员账号。</description></item>
+        /// <item><description>该成员账号已由资源目录管理账号注册为云SSO委派管理员（可信服务标识为<c>cloudsso.aliyuncs.com</c>），并已通过EnableDelegateAccount启用。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableDelegateAccountRequest
@@ -3807,13 +4034,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the delegated administrator account of CloudSSO.</para>
+        /// <para>Enables a CloudSSO delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the management account of a resource directory to specify a member of the resource directory as the delegated administrator account of CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
-        /// After the delegated administrator account of CloudSSO is specified, you can call this operation to enable the delegated administrator account of CloudSSO to manage CloudSSO resources.</para>
+        /// <para>The management account of a resource directory can set a member of the resource directory as a CloudSSO delegated administrator account. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
+        /// After the configuration is complete, you can call this operation to enable the CloudSSO delegated administrator account to manage CloudSSO.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3855,13 +4082,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the delegated administrator account of CloudSSO.</para>
+        /// <para>Enables a CloudSSO delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the management account of a resource directory to specify a member of the resource directory as the delegated administrator account of CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
-        /// After the delegated administrator account of CloudSSO is specified, you can call this operation to enable the delegated administrator account of CloudSSO to manage CloudSSO resources.</para>
+        /// <para>The management account of a resource directory can set a member of the resource directory as a CloudSSO delegated administrator account. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
+        /// After the configuration is complete, you can call this operation to enable the CloudSSO delegated administrator account to manage CloudSSO.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3903,13 +4130,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the delegated administrator account of CloudSSO.</para>
+        /// <para>Enables a CloudSSO delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the management account of a resource directory to specify a member of the resource directory as the delegated administrator account of CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
-        /// After the delegated administrator account of CloudSSO is specified, you can call this operation to enable the delegated administrator account of CloudSSO to manage CloudSSO resources.</para>
+        /// <para>The management account of a resource directory can set a member of the resource directory as a CloudSSO delegated administrator account. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
+        /// After the configuration is complete, you can call this operation to enable the CloudSSO delegated administrator account to manage CloudSSO.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3927,13 +4154,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the delegated administrator account of CloudSSO.</para>
+        /// <para>Enables a CloudSSO delegated administrator account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use the management account of a resource directory to specify a member of the resource directory as the delegated administrator account of CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
-        /// After the delegated administrator account of CloudSSO is specified, you can call this operation to enable the delegated administrator account of CloudSSO to manage CloudSSO resources.</para>
+        /// <para>The management account of a resource directory can set a member of the resource directory as a CloudSSO delegated administrator account. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
+        /// After the configuration is complete, you can call this operation to enable the CloudSSO delegated administrator account to manage CloudSSO.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4351,12 +4578,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a directory.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4398,12 +4625,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a directory.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4445,12 +4672,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a directory.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4468,12 +4695,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a directory.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the directory whose ID is <c>d-00fc2p61****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a directory whose ID is <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5879,6 +6106,310 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the security information of a specified CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information (currently only security email addresses are supported) bound to a specified CloudSSO user and its verification status.</para>
+        /// <remarks>
+        /// <para>If the user has not configured a security email address, the response does not include the <c>SecurityEmail</c> field.
+        /// This topic provides an example to query the security information of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoResponse
+        /// </returns>
+        public GetSecurityInfoResponse GetSecurityInfoWithOptions(GetSecurityInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecurityInfo",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecurityInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security information of a specified CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information (currently only security email addresses are supported) bound to a specified CloudSSO user and its verification status.</para>
+        /// <remarks>
+        /// <para>If the user has not configured a security email address, the response does not include the <c>SecurityEmail</c> field.
+        /// This topic provides an example to query the security information of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoResponse
+        /// </returns>
+        public async Task<GetSecurityInfoResponse> GetSecurityInfoWithOptionsAsync(GetSecurityInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecurityInfo",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecurityInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security information of a specified CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information (currently only security email addresses are supported) bound to a specified CloudSSO user and its verification status.</para>
+        /// <remarks>
+        /// <para>If the user has not configured a security email address, the response does not include the <c>SecurityEmail</c> field.
+        /// This topic provides an example to query the security information of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoResponse
+        /// </returns>
+        public GetSecurityInfoResponse GetSecurityInfo(GetSecurityInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSecurityInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security information of a specified CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information (currently only security email addresses are supported) bound to a specified CloudSSO user and its verification status.</para>
+        /// <remarks>
+        /// <para>If the user has not configured a security email address, the response does not include the <c>SecurityEmail</c> field.
+        /// This topic provides an example to query the security information of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoResponse
+        /// </returns>
+        public async Task<GetSecurityInfoResponse> GetSecurityInfoAsync(GetSecurityInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSecurityInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security information management preferences of a CloudSSO directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information management preferences of a specified CloudSSO directory and check whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal. This topic provides an example to query the security information management preferences of the <c>d-00fc2p61****</c> directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoPreferenceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoPreferenceResponse
+        /// </returns>
+        public GetSecurityInfoPreferenceResponse GetSecurityInfoPreferenceWithOptions(GetSecurityInfoPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecurityInfoPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecurityInfoPreferenceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security information management preferences of a CloudSSO directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information management preferences of a specified CloudSSO directory and check whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal. This topic provides an example to query the security information management preferences of the <c>d-00fc2p61****</c> directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoPreferenceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoPreferenceResponse
+        /// </returns>
+        public async Task<GetSecurityInfoPreferenceResponse> GetSecurityInfoPreferenceWithOptionsAsync(GetSecurityInfoPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSecurityInfoPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSecurityInfoPreferenceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security information management preferences of a CloudSSO directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information management preferences of a specified CloudSSO directory and check whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal. This topic provides an example to query the security information management preferences of the <c>d-00fc2p61****</c> directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoPreferenceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoPreferenceResponse
+        /// </returns>
+        public GetSecurityInfoPreferenceResponse GetSecurityInfoPreference(GetSecurityInfoPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSecurityInfoPreferenceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the security information management preferences of a CloudSSO directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to query the security information management preferences of a specified CloudSSO directory and check whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal. This topic provides an example to query the security information management preferences of the <c>d-00fc2p61****</c> directory.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSecurityInfoPreferenceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSecurityInfoPreferenceResponse
+        /// </returns>
+        public async Task<GetSecurityInfoPreferenceResponse> GetSecurityInfoPreferenceAsync(GetSecurityInfoPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSecurityInfoPreferenceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the status of CloudSSO.</para>
         /// </summary>
         /// 
@@ -5967,12 +6498,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an asynchronous task.</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6018,12 +6549,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an asynchronous task.</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6069,12 +6600,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an asynchronous task.</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6092,12 +6623,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an asynchronous task.</para>
+        /// <para>Queries the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the information about the task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
+        /// <para>This topic provides an example of querying the details of a task whose ID is <c>t-shfqw1u1edszvxw5****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7315,12 +7846,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access permissions that are assigned.</para>
+        /// <para>Queries access assignments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the assigned access permissions on the account <c>114240524784****</c> in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.</para>
+        /// <para>This topic provides an example of querying the access assignments on the account in a resource directory <c>114240524784****</c>. The response shows that one access assignment record exists on the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7394,12 +7925,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access permissions that are assigned.</para>
+        /// <para>Queries access assignments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the assigned access permissions on the account <c>114240524784****</c> in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.</para>
+        /// <para>This topic provides an example of querying the access assignments on the account in a resource directory <c>114240524784****</c>. The response shows that one access assignment record exists on the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7473,12 +8004,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access permissions that are assigned.</para>
+        /// <para>Queries access assignments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the assigned access permissions on the account <c>114240524784****</c> in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.</para>
+        /// <para>This topic provides an example of querying the access assignments on the account in a resource directory <c>114240524784****</c>. The response shows that one access assignment record exists on the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7496,12 +8027,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access permissions that are assigned.</para>
+        /// <para>Queries access assignments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the assigned access permissions on the account <c>114240524784****</c> in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.</para>
+        /// <para>This topic provides an example of querying the access assignments on the account in a resource directory <c>114240524784****</c>. The response shows that one access assignment record exists on the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7519,12 +8050,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access configurations that are provisioned.</para>
+        /// <para>Queries access configuration provisionings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the accounts for which the access permission <c>ac-00ccule7tadaijxc****</c> is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.</para>
+        /// <para>This topic provides an example of querying the deployment list of the access configuration <c>ac-00ccule7tadaijxc****</c>. The response shows that the access configuration is deployed in two accounts, each being an account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7594,12 +8125,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access configurations that are provisioned.</para>
+        /// <para>Queries access configuration provisionings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the accounts for which the access permission <c>ac-00ccule7tadaijxc****</c> is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.</para>
+        /// <para>This topic provides an example of querying the deployment list of the access configuration <c>ac-00ccule7tadaijxc****</c>. The response shows that the access configuration is deployed in two accounts, each being an account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7669,12 +8200,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access configurations that are provisioned.</para>
+        /// <para>Queries access configuration provisionings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the accounts for which the access permission <c>ac-00ccule7tadaijxc****</c> is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.</para>
+        /// <para>This topic provides an example of querying the deployment list of the access configuration <c>ac-00ccule7tadaijxc****</c>. The response shows that the access configuration is deployed in two accounts, each being an account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7692,12 +8223,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the access configurations that are provisioned.</para>
+        /// <para>Queries access configuration provisionings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the accounts for which the access permission <c>ac-00ccule7tadaijxc****</c> is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.</para>
+        /// <para>This topic provides an example of querying the deployment list of the access configuration <c>ac-00ccule7tadaijxc****</c>. The response shows that the access configuration is deployed in two accounts, each being an account in a resource directory.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9087,13 +9618,164 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asynchronous tasks.</para>
+        /// <para>Queries the associations between resources and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public ListTagResourcesResponse ListTagResourcesWithOptions(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the associations between resources and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public async Task<ListTagResourcesResponse> ListTagResourcesWithOptionsAsync(ListTagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTagResources",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the associations between resources and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public ListTagResourcesResponse ListTagResources(ListTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the associations between resources and tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTagResourcesResponse
+        /// </returns>
+        public async Task<ListTagResourcesResponse> ListTagResourcesAsync(ListTagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using <c>Filter</c>.
-        /// This topic provides an example on how to query the tasks within the previous 24 hours.</para>
+        /// <para>By default, this operation queries the list of tasks created within the last 24 hours. You can query tasks created within the last 7 days at most. You can use the Filter parameter to specify the start time of the query. This topic provides an example on how to query the list of tasks created within the last 24 hours.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9175,13 +9857,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asynchronous tasks.</para>
+        /// <para>Queries a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using <c>Filter</c>.
-        /// This topic provides an example on how to query the tasks within the previous 24 hours.</para>
+        /// <para>By default, this operation queries the list of tasks created within the last 24 hours. You can query tasks created within the last 7 days at most. You can use the Filter parameter to specify the start time of the query. This topic provides an example on how to query the list of tasks created within the last 24 hours.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9263,13 +9944,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asynchronous tasks.</para>
+        /// <para>Queries a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using <c>Filter</c>.
-        /// This topic provides an example on how to query the tasks within the previous 24 hours.</para>
+        /// <para>By default, this operation queries the list of tasks created within the last 24 hours. You can query tasks created within the last 7 days at most. You can use the Filter parameter to specify the start time of the query. This topic provides an example on how to query the list of tasks created within the last 24 hours.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9287,13 +9967,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asynchronous tasks.</para>
+        /// <para>Queries a list of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using <c>Filter</c>.
-        /// This topic provides an example on how to query the tasks within the previous 24 hours.</para>
+        /// <para>By default, this operation queries the list of tasks created within the last 24 hours. You can query tasks created within the last 7 days at most. You can use the Filter parameter to specify the start time of the query. This topic provides an example on how to query the list of tasks created within the last 24 hours.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9791,13 +10470,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions an access configuration for an account in your resource directory.</para>
+        /// <para>Invokes ProvisionAccessConfiguration to perform access configuration provisioning and deployment for an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> for the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of provisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> to the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9855,13 +10534,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions an access configuration for an account in your resource directory.</para>
+        /// <para>Invokes ProvisionAccessConfiguration to perform access configuration provisioning and deployment for an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> for the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of provisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> to the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9919,13 +10598,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions an access configuration for an account in your resource directory.</para>
+        /// <para>Invokes ProvisionAccessConfiguration to perform access configuration provisioning and deployment for an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> for the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of provisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> to the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9943,13 +10622,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provisions an access configuration for an account in your resource directory.</para>
+        /// <para>Invokes ProvisionAccessConfiguration to perform access configuration provisioning and deployment for an account in a resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <c>TaskId</c> response parameter.
-        /// This topic provides an example on how to provision the access configuration <c>ac-00jhtfl8thteu6uj****</c> for the account <c>114240524784****</c> in your resource directory.</para>
+        /// <para>This API operation is asynchronous. You can use the <c>TaskId</c> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+        /// This topic provides an example of provisioning the access configuration <c>ac-00jhtfl8thteu6uj****</c> to the account in a resource directory <c>114240524784****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10448,10 +11127,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
+        /// <para>When a user forgets their password, the password expires, or the password poses a security risk, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
-        /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
+        /// <para>You cannot reset user passwords after single sign-on (SSO) is enabled.
+        /// This topic provides an example of resetting the password of the user <c>u-00q8wbq42wiltcrk****</c> by using a system-generated password.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10485,6 +11164,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["RequirePasswordResetForNextLogin"] = request.RequirePasswordResetForNextLogin;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetMethod))
+            {
+                query["ResetMethod"] = request.ResetMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -10515,10 +11198,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
+        /// <para>When a user forgets their password, the password expires, or the password poses a security risk, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
-        /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
+        /// <para>You cannot reset user passwords after single sign-on (SSO) is enabled.
+        /// This topic provides an example of resetting the password of the user <c>u-00q8wbq42wiltcrk****</c> by using a system-generated password.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10552,6 +11235,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["RequirePasswordResetForNextLogin"] = request.RequirePasswordResetForNextLogin;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetMethod))
+            {
+                query["ResetMethod"] = request.ResetMethod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -10582,10 +11269,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
+        /// <para>When a user forgets their password, the password expires, or the password poses a security risk, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
-        /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
+        /// <para>You cannot reset user passwords after single sign-on (SSO) is enabled.
+        /// This topic provides an example of resetting the password of the user <c>u-00q8wbq42wiltcrk****</c> by using a system-generated password.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10609,10 +11296,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
+        /// <para>When a user forgets their password, the password expires, or the password poses a security risk, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
-        /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
+        /// <para>You cannot reset user passwords after single sign-on (SSO) is enabled.
+        /// This topic provides an example of resetting the password of the user <c>u-00q8wbq42wiltcrk****</c> by using a system-generated password.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10763,6 +11450,194 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RetryUserProvisioningEventWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification message to the unverified security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to send a verification email to the currently unverified security information of a specified CloudSSO user. Currently, only security email addresses are supported. After the user completes verification by using the verification link in the email, the status of the security email address changes to verified (<c>active</c>).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <c>SetSecurityInfo</c> to set a security email address for the user, and the security email address must be in the pending verification state (<c>pending</c>). If the user does not have a security email address configured or the security email address is already verified, calling this operation returns an error.</description></item>
+        /// <item><description>The verification link is valid for 72 hours. Resending the verification email generates a new verification link, and the previous link automatically becomes invalid.</description></item>
+        /// <item><description>This operation is subject to rate limits. By default, you can send a maximum of one verification email per minute and five verification emails per hour for a single user.
+        /// This topic provides an example on how to send a verification email to the unverified security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationMessageResponse
+        /// </returns>
+        public SendVerificationMessageResponse SendVerificationMessageWithOptions(SendVerificationMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendVerificationMessage",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendVerificationMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification message to the unverified security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to send a verification email to the currently unverified security information of a specified CloudSSO user. Currently, only security email addresses are supported. After the user completes verification by using the verification link in the email, the status of the security email address changes to verified (<c>active</c>).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <c>SetSecurityInfo</c> to set a security email address for the user, and the security email address must be in the pending verification state (<c>pending</c>). If the user does not have a security email address configured or the security email address is already verified, calling this operation returns an error.</description></item>
+        /// <item><description>The verification link is valid for 72 hours. Resending the verification email generates a new verification link, and the previous link automatically becomes invalid.</description></item>
+        /// <item><description>This operation is subject to rate limits. By default, you can send a maximum of one verification email per minute and five verification emails per hour for a single user.
+        /// This topic provides an example on how to send a verification email to the unverified security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationMessageResponse
+        /// </returns>
+        public async Task<SendVerificationMessageResponse> SendVerificationMessageWithOptionsAsync(SendVerificationMessageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SendVerificationMessage",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SendVerificationMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification message to the unverified security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to send a verification email to the currently unverified security information of a specified CloudSSO user. Currently, only security email addresses are supported. After the user completes verification by using the verification link in the email, the status of the security email address changes to verified (<c>active</c>).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <c>SetSecurityInfo</c> to set a security email address for the user, and the security email address must be in the pending verification state (<c>pending</c>). If the user does not have a security email address configured or the security email address is already verified, calling this operation returns an error.</description></item>
+        /// <item><description>The verification link is valid for 72 hours. Resending the verification email generates a new verification link, and the previous link automatically becomes invalid.</description></item>
+        /// <item><description>This operation is subject to rate limits. By default, you can send a maximum of one verification email per minute and five verification emails per hour for a single user.
+        /// This topic provides an example on how to send a verification email to the unverified security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationMessageResponse
+        /// </returns>
+        public SendVerificationMessageResponse SendVerificationMessage(SendVerificationMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SendVerificationMessageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a verification message to the unverified security information of a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to send a verification email to the currently unverified security information of a specified CloudSSO user. Currently, only security email addresses are supported. After the user completes verification by using the verification link in the email, the status of the security email address changes to verified (<c>active</c>).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must call <c>SetSecurityInfo</c> to set a security email address for the user, and the security email address must be in the pending verification state (<c>pending</c>). If the user does not have a security email address configured or the security email address is already verified, calling this operation returns an error.</description></item>
+        /// <item><description>The verification link is valid for 72 hours. Resending the verification email generates a new verification link, and the previous link automatically becomes invalid.</description></item>
+        /// <item><description>This operation is subject to rate limits. By default, you can send a maximum of one verification email per minute and five verification emails per hour for a single user.
+        /// This topic provides an example on how to send a verification email to the unverified security email address of the user <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SendVerificationMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SendVerificationMessageResponse
+        /// </returns>
+        public async Task<SendVerificationMessageResponse> SendVerificationMessageAsync(SendVerificationMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SendVerificationMessageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11631,6 +12506,658 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetSCIMSynchronizationStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information for a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set or modify the security information for a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Each user can be bound to only one security email address. If the user is already bound to another security email address, calling this operation replaces it with the new email address, resets the verification status to pending (<c>pending</c>), and invalidates any previously unconsumed verification and password reset links. If the provided email address is the same as the currently bound one (case-insensitive), the operation rejects the duplicate binding.</description></item>
+        /// <item><description>Calling this operation does not automatically send a verification email. After the security email address is set, it remains in the pending verification state (<c>pending</c>). You must call <c>SendVerificationMessage</c> to send a verification email, and the email address takes effect (<c>active</c>) only after the user completes the verification.
+        /// This topic provides an example on how to set the security email address <c>Alice@example.com</c> for the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoResponse
+        /// </returns>
+        public SetSecurityInfoResponse SetSecurityInfoWithOptions(SetSecurityInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEmail))
+            {
+                query["SecurityEmail"] = request.SecurityEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSecurityInfo",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSecurityInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information for a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set or modify the security information for a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Each user can be bound to only one security email address. If the user is already bound to another security email address, calling this operation replaces it with the new email address, resets the verification status to pending (<c>pending</c>), and invalidates any previously unconsumed verification and password reset links. If the provided email address is the same as the currently bound one (case-insensitive), the operation rejects the duplicate binding.</description></item>
+        /// <item><description>Calling this operation does not automatically send a verification email. After the security email address is set, it remains in the pending verification state (<c>pending</c>). You must call <c>SendVerificationMessage</c> to send a verification email, and the email address takes effect (<c>active</c>) only after the user completes the verification.
+        /// This topic provides an example on how to set the security email address <c>Alice@example.com</c> for the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoResponse
+        /// </returns>
+        public async Task<SetSecurityInfoResponse> SetSecurityInfoWithOptionsAsync(SetSecurityInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEmail))
+            {
+                query["SecurityEmail"] = request.SecurityEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerifyType))
+            {
+                query["VerifyType"] = request.VerifyType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSecurityInfo",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSecurityInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information for a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set or modify the security information for a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Each user can be bound to only one security email address. If the user is already bound to another security email address, calling this operation replaces it with the new email address, resets the verification status to pending (<c>pending</c>), and invalidates any previously unconsumed verification and password reset links. If the provided email address is the same as the currently bound one (case-insensitive), the operation rejects the duplicate binding.</description></item>
+        /// <item><description>Calling this operation does not automatically send a verification email. After the security email address is set, it remains in the pending verification state (<c>pending</c>). You must call <c>SendVerificationMessage</c> to send a verification email, and the email address takes effect (<c>active</c>) only after the user completes the verification.
+        /// This topic provides an example on how to set the security email address <c>Alice@example.com</c> for the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoResponse
+        /// </returns>
+        public SetSecurityInfoResponse SetSecurityInfo(SetSecurityInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetSecurityInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information for a CloudSSO user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set or modify the security information for a specified CloudSSO user. Currently, only security email addresses are supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Each user can be bound to only one security email address. If the user is already bound to another security email address, calling this operation replaces it with the new email address, resets the verification status to pending (<c>pending</c>), and invalidates any previously unconsumed verification and password reset links. If the provided email address is the same as the currently bound one (case-insensitive), the operation rejects the duplicate binding.</description></item>
+        /// <item><description>Calling this operation does not automatically send a verification email. After the security email address is set, it remains in the pending verification state (<c>pending</c>). You must call <c>SendVerificationMessage</c> to send a verification email, and the email address takes effect (<c>active</c>) only after the user completes the verification.
+        /// This topic provides an example on how to set the security email address <c>Alice@example.com</c> for the user <c>u-00q8wbq42wiltcrk****</c> in the directory <c>d-00fc2p61****</c>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoResponse
+        /// </returns>
+        public async Task<SetSecurityInfoResponse> SetSecurityInfoAsync(SetSecurityInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetSecurityInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information management preferences for a directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set the security information management preferences for a specified directory. This controls whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal.</para>
+        /// <remarks>
+        /// <para>This configuration only controls the self-service management permissions of users in the CloudSSO user portal. It does not affect the ability of CloudSSO administrators to manage user security email addresses by using API operations.
+        /// This topic provides an example to show how to disable the permission for users to manage their security email addresses in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoPreferenceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoPreferenceResponse
+        /// </returns>
+        public SetSecurityInfoPreferenceResponse SetSecurityInfoPreferenceWithOptions(SetSecurityInfoPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserManageSecurityEmail))
+            {
+                query["AllowUserManageSecurityEmail"] = request.AllowUserManageSecurityEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSecurityInfoPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSecurityInfoPreferenceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information management preferences for a directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set the security information management preferences for a specified directory. This controls whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal.</para>
+        /// <remarks>
+        /// <para>This configuration only controls the self-service management permissions of users in the CloudSSO user portal. It does not affect the ability of CloudSSO administrators to manage user security email addresses by using API operations.
+        /// This topic provides an example to show how to disable the permission for users to manage their security email addresses in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoPreferenceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoPreferenceResponse
+        /// </returns>
+        public async Task<SetSecurityInfoPreferenceResponse> SetSecurityInfoPreferenceWithOptionsAsync(SetSecurityInfoPreferenceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserManageSecurityEmail))
+            {
+                query["AllowUserManageSecurityEmail"] = request.AllowUserManageSecurityEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetSecurityInfoPreference",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetSecurityInfoPreferenceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information management preferences for a directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set the security information management preferences for a specified directory. This controls whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal.</para>
+        /// <remarks>
+        /// <para>This configuration only controls the self-service management permissions of users in the CloudSSO user portal. It does not affect the ability of CloudSSO administrators to manage user security email addresses by using API operations.
+        /// This topic provides an example to show how to disable the permission for users to manage their security email addresses in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoPreferenceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoPreferenceResponse
+        /// </returns>
+        public SetSecurityInfoPreferenceResponse SetSecurityInfoPreference(SetSecurityInfoPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetSecurityInfoPreferenceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the security information management preferences for a directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudSSO administrators can call this operation to set the security information management preferences for a specified directory. This controls whether CloudSSO users in the directory are allowed to manage their security email addresses in the CloudSSO user portal.</para>
+        /// <remarks>
+        /// <para>This configuration only controls the self-service management permissions of users in the CloudSSO user portal. It does not affect the ability of CloudSSO administrators to manage user security email addresses by using API operations.
+        /// This topic provides an example to show how to disable the permission for users to manage their security email addresses in the <c>d-00fc2p61****</c> directory.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetSecurityInfoPreferenceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetSecurityInfoPreferenceResponse
+        /// </returns>
+        public async Task<SetSecurityInfoPreferenceResponse> SetSecurityInfoPreferenceAsync(SetSecurityInfoPreferenceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetSecurityInfoPreferenceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tags resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public TagResourcesResponse TagResourcesWithOptions(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tags resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public async Task<TagResourcesResponse> TagResourcesWithOptionsAsync(TagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TagResources",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tags resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public TagResourcesResponse TagResources(TagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Tags resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TagResourcesResponse
+        /// </returns>
+        public async Task<TagResourcesResponse> TagResourcesAsync(TagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public UntagResourcesResponse UntagResourcesWithOptions(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKey))
+            {
+                query["TagKey"] = request.TagKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public async Task<UntagResourcesResponse> UntagResourcesWithOptionsAsync(UntagResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.All))
+            {
+                query["All"] = request.All;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagKey))
+            {
+                query["TagKey"] = request.TagKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UntagResources",
+                Version = "2021-05-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public UntagResourcesResponse UntagResources(UntagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UntagResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes tags from resources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UntagResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UntagResourcesResponse
+        /// </returns>
+        public async Task<UntagResourcesResponse> UntagResourcesAsync(UntagResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12635,12 +14162,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to disable the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.</para>
+        /// <para>This topic provides an example of disabling the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the credential is disabled, synchronization tasks that use this SCIM credential will fail. You can call this operation again to enable the SCIM credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12690,12 +14217,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to disable the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.</para>
+        /// <para>This topic provides an example of disabling the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the credential is disabled, synchronization tasks that use this SCIM credential will fail. You can call this operation again to enable the SCIM credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12745,12 +14272,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to disable the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.</para>
+        /// <para>This topic provides an example of disabling the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the credential is disabled, synchronization tasks that use this SCIM credential will fail. You can call this operation again to enable the SCIM credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12768,12 +14295,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</para>
+        /// <para>Enables or disables a SCIM credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to disable the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.</para>
+        /// <para>This topic provides an example of disabling the SCIM credential whose ID is <c>scimcred-004whl0kvfwcypbi****</c>. After the credential is disabled, synchronization tasks that use this SCIM credential will fail. You can call this operation again to enable the SCIM credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12791,14 +14318,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a user.</para>
+        /// <para>Updates user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
+        /// <para>You can modify the <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> of a user as needed. You cannot modify the <c>UserName</c> of a user.</para>
         /// <remarks>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot modify the information of SCIM-synchronized users.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12865,14 +14392,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a user.</para>
+        /// <para>Updates user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
+        /// <para>You can modify the <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> of a user as needed. You cannot modify the <c>UserName</c> of a user.</para>
         /// <remarks>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot modify the information of SCIM-synchronized users.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12939,14 +14466,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a user.</para>
+        /// <para>Updates user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
+        /// <para>You can modify the <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> of a user as needed. You cannot modify the <c>UserName</c> of a user.</para>
         /// <remarks>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot modify the information of SCIM-synchronized users.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12965,14 +14492,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies information about a user.</para>
+        /// <para>Updates user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
+        /// <para>You can modify the <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> of a user as needed. You cannot modify the <c>UserName</c> of a user.</para>
         /// <remarks>
-        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>When SCIM synchronization is enabled, you cannot modify the information of SCIM-synchronized users.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13155,7 +14682,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes UpdateUserProvisioning to modify a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13213,7 +14740,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes UpdateUserProvisioning to modify a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13271,7 +14798,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes UpdateUserProvisioning to modify a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13289,7 +14816,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Resource Access Management (RAM) user provisioning.</para>
+        /// <para>Invokes UpdateUserProvisioning to modify a Resource Access Management (RAM) user synchronization.</para>
         /// </summary>
         /// 
         /// <param name="request">

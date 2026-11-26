@@ -1,0 +1,62 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cloudsso20210515.Models
+{
+    public class SetSecurityInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>The directory ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d-00fc2p61****</para>
+        /// </summary>
+        [NameInMap("DirectoryId")]
+        [Validation(Required=false)]
+        public string DirectoryId { get; set; }
+
+        /// <summary>
+        /// <para>The security email address of the user.</para>
+        /// <para>The value can be up to 64 characters in length, must conform to the standard email format, and cannot contain whitespace characters. The security email address of each user in the same directory must be unique. The uniqueness check is case-insensitive, but the original case is preserved when the address is saved.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:Alice@example.com">Alice@example.com</a></para>
+        /// </summary>
+        [NameInMap("SecurityEmail")]
+        [Validation(Required=false)]
+        public string SecurityEmail { get; set; }
+
+        /// <summary>
+        /// <para>The user ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>u-00q8wbq42wiltcrk****</para>
+        /// </summary>
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
+
+        /// <summary>
+        /// <para>The verification type for the security information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SecurityEmail: security email address.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SecurityEmail</para>
+        /// </summary>
+        [NameInMap("VerifyType")]
+        [Validation(Required=false)]
+        public string VerifyType { get; set; }
+
+    }
+
+}

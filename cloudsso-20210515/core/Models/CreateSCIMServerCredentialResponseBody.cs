@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the SCIM credential.</para>
+        /// <para>The SCIM server credential information.</para>
         /// </summary>
         [NameInMap("SCIMServerCredential")]
         [Validation(Required=false)]
         public CreateSCIMServerCredentialResponseBodySCIMServerCredential SCIMServerCredential { get; set; }
         public class CreateSCIMServerCredentialResponseBodySCIMServerCredential : TeaModel {
             /// <summary>
-            /// <para>The time when the SCIM credential was created.</para>
+            /// <para>The time when the SCIM server credential was created. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-09T08:12:52Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SCIM credential.</para>
+            /// <para>The ID of the SCIM server credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scimcred-004whl0kvfwcypbi****</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The SCIM credential.</para>
+            /// <para>The SCIM server credential secret.</para>
             /// <remarks>
-            /// <para>The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</para>
+            /// <para>The SCIM server credential secret is returned only when the credential is created and cannot be queried later. Store it securely.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CredentialSecret { get; set; }
 
             /// <summary>
-            /// <para>The type of the SCIM credential.</para>
+            /// <para>The type of the SCIM server credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BearerToken</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the directory.</para>
+            /// <para>The directory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-00fc2p61****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The time when the SCIM credential expires.</para>
+            /// <para>The time when the SCIM server credential expires. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-09T08:12:52Z</para>
@@ -90,7 +90,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.</para>
+            /// <para>The status of the SCIM server credential. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enabled: The credential is enabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>

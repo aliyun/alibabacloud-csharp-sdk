@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account to which the deployment target belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
             /// </summary>
@@ -57,12 +59,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>InProgress: The task is running.</para>
-            /// </description></item>
-            /// <item><description><para>Success: The task is successful.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: The task failed.</para>
-            /// </description></item>
+            /// <item><description>InProgress: The task is in progress.</description></item>
+            /// <item><description>Success: The task succeeded.</description></item>
+            /// <item><description>Failed: The task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
+            /// <para>The ID of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
@@ -83,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-test</para>
@@ -93,21 +92,24 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The path ID of the task object in the resource directory.</para>
+            /// <para>The path ID of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The path name of the task object in the resource directory.</para>
+            /// <para>The path name of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</para>
+            /// <para>The type of the task target. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RD-Account: The task target is an account in a resource directory.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RD-Account</para>
@@ -127,7 +129,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task type. The value is fixed as DeprovisionAccessConfiguration, which indicates that the access configuration is de-provisioned.</para>
+            /// <para>The task type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DeprovisionAccessConfiguration: The task deprovisions the access configuration.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DeprovisionAccessConfiguration</para>

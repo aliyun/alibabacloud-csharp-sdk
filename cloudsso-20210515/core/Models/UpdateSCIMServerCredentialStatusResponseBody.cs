@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the SCIM credential.</para>
+        /// <para>The SCIM credential information.</para>
         /// </summary>
         [NameInMap("SCIMServerCredential")]
         [Validation(Required=false)]
         public UpdateSCIMServerCredentialStatusResponseBodySCIMServerCredential SCIMServerCredential { get; set; }
         public class UpdateSCIMServerCredentialStatusResponseBodySCIMServerCredential : TeaModel {
             /// <summary>
-            /// <para>The time when the SCIM credential was created.</para>
+            /// <para>The creation time of the SCIM credential. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-09T08:12:52Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the directory.</para>
+            /// <para>The directory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-00fc2p61****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The time when the SCIM credential expires.</para>
+            /// <para>The expiration time of the SCIM credential. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-09T08:12:52Z</para>
@@ -79,10 +79,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the SCIM credential. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Enabled: The SCIM credential is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>Disabled: The SCIM credential is disabled.</para>
-            /// </description></item>
+            /// <item><description>Enabled: Enabled.</description></item>
+            /// <item><description>Disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

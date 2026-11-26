@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class EnableDelegateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delegated administrator account of CloudSSO.</para>
+        /// <para>The ID of the CloudSSO delegated administrator account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180658567986****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListAccessConfigurationProvisioningsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access configuration. The ID can be used to filter access permissions.</para>
+        /// <para>The access configuration ID used as a filter condition for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac-00ccule7tadaijxc****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string AccessConfigurationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 20.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the <c>NextToken</c> parameter.</para>
-        /// <para>When you call this operation for the first time, if the total number of entries to return exceeds the value of <c>MaxResults</c>, the entries are truncated. Only the entries that match the value of <c>MaxResults</c> are returned, and the excess entries are not returned. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and <c>NextToken</c> is returned. In the next call, you can use the value of <c>NextToken</c> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <c>IsTruncated</c> becomes <c>false</c>. This way, all entries are returned.</para>
+        /// <para>The token used to return the next page of query results. You do not need to specify NextToken when you call this operation for the first time.</para>
+        /// <para>When you call this operation for the first time, if the total number of returned entries exceeds the value of MaxResults, the returned results are truncated. Only the number of entries specified by MaxResults is returned, the IsTruncated parameter is set to true, and a NextToken is returned. You can use the returned NextToken to call this operation again to query the truncated entries while keeping other request parameters unchanged. You can repeat this process until IsTruncated is set to false, which indicates that all entries are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</para>
@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the provisioning target.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>114240524784****</para>
         /// </summary>
@@ -61,14 +63,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string OriginTargetId { get; set; }
 
         /// <summary>
-        /// <para>The status of the access configuration. The value can be used to filter accounts. Valid values:</para>
+        /// <para>The provisioning status used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Provisioned: The access configuration is provisioned.</para>
-        /// </description></item>
-        /// <item><description><para>ReprovisionRequired: The access configuration needs to be re-provisioned.</para>
-        /// </description></item>
-        /// <item><description><para>DeprovisionFailed: The access configuration failed to be provisioned.</para>
-        /// </description></item>
+        /// <item><description>Provisioned: The provisioning succeeded.</description></item>
+        /// <item><description>ReprovisionRequired: Reprovisioning is required.</description></item>
+        /// <item><description>DeprovisionFailed: The provisioning failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,9 +78,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string ProvisioningStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task object. The ID can be used to filter access permissions.</para>
+        /// <para>The target ID used as a filter condition for the query.</para>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You must specify both TargetId and TargetType for them to take effect as filter conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,10 +91,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task object. The type can be used to filter access permissions.</para>
-        /// <para>Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
+        /// <para>The target type used as a filter condition for the query.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RD-Account: The target is an account in a resource directory.</description></item>
+        /// </list>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You must specify both TargetId and TargetType for them to take effect as filter conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

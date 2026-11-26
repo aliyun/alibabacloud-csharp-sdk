@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the user.</para>
+        /// <para>The user information.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public UpdateUserResponseBodyUser User { get; set; }
         public class UpdateUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created. The value is displayed in UTC.</para>
+            /// <para>The time when the user was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T03:03:42Z</para>
@@ -87,12 +87,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string LastName { get; set; }
 
             /// <summary>
-            /// <para>The type of the user. Valid values:</para>
+            /// <para>The provisioning type of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Manual: The user is manually created.</para>
-            /// </description></item>
-            /// <item><description><para>Synchronized: The user is synchronized from an external identity provider (IdP).</para>
-            /// </description></item>
+            /// <item><description>Manual: Manually created.</description></item>
+            /// <item><description>Synchronized: Synchronized from an external source.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,10 +103,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Enabled: The logon of the user is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>Disabled: The logon of the user is disabled.</para>
-            /// </description></item>
+            /// <item><description>Enabled: Enabled.</description></item>
+            /// <item><description>Disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the user was modified. The value is displayed in UTC.</para>
+            /// <para>The time when the user was updated (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T07:32:32Z</para>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u-00q8wbq42wiltcrk****</para>
@@ -139,7 +135,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The username of the user.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>

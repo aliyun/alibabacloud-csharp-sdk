@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class CreateAccessAssignmentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access configuration.</para>
+        /// <para>The access configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac-00jhtfl8thteu6uj****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string AccessConfigurationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the authorization target.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>114240524784****</para>
         /// </summary>
@@ -38,12 +40,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string OriginTargetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CloudSSO identity.</para>
+        /// <para>The CloudSSO identity ID. Details:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</para>
-        /// </description></item>
+        /// <item><description>If <c>PrincipalType</c> is set to <c>User</c>, <c>PrincipalId</c> is the CloudSSO user ID.</description></item>
+        /// <item><description>If <c>PrincipalType</c> is set to <c>Group</c>, <c>PrincipalId</c> is the CloudSSO group ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,12 +54,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string PrincipalId { get; set; }
 
         /// <summary>
-        /// <para>The type of the CloudSSO identity. Valid values:</para>
+        /// <para>The CloudSSO identity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>User</para>
-        /// </description></item>
-        /// <item><description><para>Group</para>
-        /// </description></item>
+        /// <item><description>User: A user.</description></item>
+        /// <item><description>Group: A group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string PrincipalType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task object.</para>
+        /// <para>The ID of the deployment target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>114240524784****</para>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
+        /// <para>The target type of the task. Valid values: RD-Account: The task target is an account in a resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RD-Account</para>

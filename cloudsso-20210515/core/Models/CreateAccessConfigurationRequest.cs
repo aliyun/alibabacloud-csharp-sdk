@@ -11,8 +11,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
     public class CreateAccessConfigurationRequest : TeaModel {
         /// <summary>
         /// <para>The name of the access configuration.</para>
-        /// <para>Format: contains letters, digits, or hyphens (-).</para>
-        /// <para>Length: up to 32 characters.</para>
+        /// <para>Format: The name can contain letters, digits, and hyphens (-).</para>
+        /// <para>Length: The name can be up to 32 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS-Admin</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The description of the access configuration.</para>
-        /// <para>Length: up to 1024 characters.</para>
+        /// <para>Length: The description can be up to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is an access configuration.</para>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The initial access page.</para>
-        /// <para>The page address that a CloudSSO user initially accesses when using the access configuration to access an account in a resource directory.</para>
-        /// <para>The page must be an Alibaba Cloud Management Console page. Default value: empty, which indicates that the user is redirected to the homepage of the Alibaba Cloud Management Console.</para>
+        /// <para>The URL of the initial page that is accessed when a CloudSSO user accesses an account in a resource directory by using the access configuration.</para>
+        /// <para>The page must be an Alibaba Cloud Management Console page. By default, this parameter is empty, which indicates that the user is redirected to the homepage of the Alibaba Cloud Management Console.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The session duration.</para>
-        /// <para>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</para>
+        /// <para>The maximum duration of a session when a CloudSSO user accesses an account in a resource directory by using the access configuration.</para>
         /// <para>Unit: seconds.</para>
         /// <para>Valid values: 900 to 43200 (15 minutes to 12 hours).</para>
         /// <para>Default value: 3600 (1 hour).</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? SessionDuration { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

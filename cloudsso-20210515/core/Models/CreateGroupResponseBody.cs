@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class CreateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the group.</para>
+        /// <para>The group information.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public CreateGroupResponseBodyGroup Group { get; set; }
         public class CreateGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// <para>The time when the group was created.</para>
+            /// <para>The time when the group was created. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01T02:38:27Z</para>
@@ -57,7 +57,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The type of the group. The value is fixed as Manual, which indicates that the group is manually created.</para>
+            /// <para>The type of the group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Manual: The group is manually created.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Manual</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string ProvisionType { get; set; }
 
             /// <summary>
-            /// <para>The time when the information about the group was modified.</para>
+            /// <para>The time when the group was updated. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-01T02:38:27Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ProvisionAccessConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access configuration.</para>
+        /// <para>The access configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac-00jhtfl8thteu6uj****</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the deployment target belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>114240524784****</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string OriginTargetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task object.</para>
+        /// <para>The ID of the task target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>114240524784****</para>
@@ -48,7 +50,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
+        /// <para>The target type of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RD-Account: The task target is an account in a resource directory.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>RD-Account</para>

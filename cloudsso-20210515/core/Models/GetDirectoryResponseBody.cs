@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the directory.</para>
+        /// <para>The directory information.</para>
         /// </summary>
         [NameInMap("Directory")]
         [Validation(Required=false)]
         public GetDirectoryResponseBodyDirectory Directory { get; set; }
         public class GetDirectoryResponseBodyDirectory : TeaModel {
             /// <summary>
-            /// <para>The time when the directory was created.</para>
+            /// <para>The time when the directory was created. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-30T08:35:26Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the directory.</para>
+            /// <para>The directory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-00fc2p61****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DirectoryName { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the directory.</para>
+            /// <para>The ID of the region where the directory is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The time when the directory was modified.</para>
+            /// <para>The time when the directory was updated. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-25T07:18:46Z</para>

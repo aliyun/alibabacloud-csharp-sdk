@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class CreateDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the directory.</para>
+        /// <para>The directory information.</para>
         /// </summary>
         [NameInMap("Directory")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the directory.</para>
+            /// <para>The directory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-00fc2p61****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The time when the directory was modified. The time is displayed in UTC.</para>
+            /// <para>The time when the directory was updated. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-10T04:04:04Z</para>

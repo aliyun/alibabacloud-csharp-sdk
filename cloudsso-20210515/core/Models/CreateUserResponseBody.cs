@@ -21,13 +21,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The user information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;UserId&quot;:&quot;u-00bikzkuzbb58luh****&quot;,&quot;UserName&quot;:&quot;<a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a>&quot;,&quot;Status&quot;:&quot;Enabled&quot;}</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public CreateUserResponseBodyUser User { get; set; }
         public class CreateUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created (UTC).</para>
+            /// <para>The time when the user was created. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T03:03:42Z</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string LastName { get; set; }
 
             /// <summary>
-            /// <para>The type of the user. Valid values:</para>
+            /// <para>The provisioning type of the user. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Manual: Manually created.</description></item>
             /// <item><description>Synchronized: Synchronized from an external source.</description></item>
@@ -116,6 +119,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
             /// <summary>
             /// <para>The list of tags.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;Key&quot;:&quot;Project&quot;,&quot;Value&quot;:&quot;Test&quot;}]</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             }
 
             /// <summary>
-            /// <para>The time when the user was last modified (UTC).</para>
+            /// <para>The time when the user was updated. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T03:03:42Z</para>

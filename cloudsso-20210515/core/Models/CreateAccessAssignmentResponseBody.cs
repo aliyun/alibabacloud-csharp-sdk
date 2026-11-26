@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried task.</para>
+        /// <para>The task information.</para>
         /// </summary>
         [NameInMap("Task")]
         [Validation(Required=false)]
         public CreateAccessAssignmentResponseBodyTask Task { get; set; }
         public class CreateAccessAssignmentResponseBodyTask : TeaModel {
             /// <summary>
-            /// <para>The ID of the access configuration.</para>
+            /// <para>The access configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ac-00jhtfl8thteu6uj****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationId { get; set; }
 
             /// <summary>
-            /// <para>The name of the access configuration.</para>
+            /// <para>The access configuration name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS-Admin</para>
@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
+            /// <para>The Alibaba Cloud account ID of the authorization target.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
             /// </summary>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string OriginTargetId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CloudSSO identity.</para>
+            /// <para>The CloudSSO identity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u-00q8wbq42wiltcrk****</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalId { get; set; }
 
             /// <summary>
-            /// <para>The name of the CloudSSO identity.</para>
+            /// <para>The CloudSSO identity name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>
@@ -75,12 +77,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalName { get; set; }
 
             /// <summary>
-            /// <para>The type of the CloudSSO identity. Valid values:</para>
+            /// <para>The CloudSSO identity type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>User</para>
-            /// </description></item>
-            /// <item><description><para>Group</para>
-            /// </description></item>
+            /// <item><description>User: A user.</description></item>
+            /// <item><description>Group: A group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,12 +93,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>InProgress: The task is running.</para>
-            /// </description></item>
-            /// <item><description><para>Success: The task is successful.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: The task failed.</para>
-            /// </description></item>
+            /// <item><description>InProgress: The task is in progress.</description></item>
+            /// <item><description>Success: The task is successful.</description></item>
+            /// <item><description>Failed: The task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
+            /// <para>The ID of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
@@ -119,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-test</para>
@@ -129,21 +126,21 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The path ID of the task object in the resource directory.</para>
+            /// <para>The path ID of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The path name of the task object in the resource directory.</para>
+            /// <para>The path name of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</para>
+            /// <para>The target type of the task. Valid values: RD-Account: The task target is an account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RD-Account</para>
@@ -153,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the job.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-sh6tceylhvgejpip****</para>
@@ -163,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task type. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.</para>
+            /// <para>The task type. Valid values: CreateAccessAssignment: The task is an authorization task for an account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreateAccessAssignment</para>

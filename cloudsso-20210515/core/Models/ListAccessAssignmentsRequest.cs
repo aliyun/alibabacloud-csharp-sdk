@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListAccessAssignmentsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access configuration. The ID can be used to filter access permissions.</para>
+        /// <para>The ID of the access configuration. This parameter is used as a filter condition for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac-00jhtfl8thteu6uj****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string AccessConfigurationId { get; set; }
 
         /// <summary>
-        /// <para>The directory ID.</para>
+        /// <para>The ID of the directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 20.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the <c>NextToken</c> parameter.</para>
-        /// <para>When you call this operation for the first time, if the total number of entries to return exceeds the value of <c>MaxResults</c>, the entries are truncated. Only the entries that match the value of <c>MaxResults</c> are returned, and the excess entries are not returned. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and <c>NextToken</c> is returned. In the next call, you can use the value of <c>NextToken</c> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <c>IsTruncated</c> becomes <c>false</c>. This way, all entries are returned.</para>
+        /// <para>The token for the next page of query results. You do not need to specify <c>NextToken</c> when you call this operation for the first time.</para>
+        /// <para>When you call this operation for the first time, if the total number of returned entries exceeds the value of <c>MaxResults</c>, the returned entries are truncated. Only the number of entries specified by <c>MaxResults</c> is returned, the <c>IsTruncated</c> parameter is set to <c>true</c>, and a <c>NextToken</c> value is returned. You can use the returned <c>NextToken</c> value to call this operation again to query the truncated entries while keeping other request parameters unchanged. You can repeat this process until <c>IsTruncated</c> is set to <c>false</c>, which indicates that all entries are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</para>
@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the authorization target belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>114240524784****</para>
         /// </summary>
@@ -61,15 +63,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string OriginTargetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</para>
+        /// <para>The ID of the CloudSSO identity, which is used as a filter condition for the query. Details:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>PrincipalType</c> to User, set <c>PrincipalId</c> to the ID of the CloudSSO user.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>PrincipalType</c> to Group, set <c>PrincipalId</c> to the ID of the CloudSSO group.</para>
-        /// </description></item>
+        /// <item><description>If <c>PrincipalType</c> is set to User, <c>PrincipalId</c> is the ID of the CloudSSO user.</description></item>
+        /// <item><description>If <c>PrincipalType</c> is set to Group, <c>PrincipalId</c> is the ID of the CloudSSO group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both PrincipalId and <c>PrincipalType</c>.\<c>\\</c></para>
+        /// <para>You must specify both <c>PrincipalId</c> and <c>PrincipalType</c> for the filter condition to take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,15 +80,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string PrincipalId { get; set; }
 
         /// <summary>
-        /// <para>The type of the CloudSSO identity. The type can be used to filter access permissions. Valid values:</para>
+        /// <para>The type of the CloudSSO identity, which is used as a filter condition for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>User</para>
-        /// </description></item>
-        /// <item><description><para>Group</para>
-        /// </description></item>
+        /// <item><description>User: user.</description></item>
+        /// <item><description>Group: group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both PrincipalId and <c>PrincipalType</c>.\<c>\\</c></para>
+        /// <para>You must specify both <c>PrincipalId</c> and <c>PrincipalType</c> for the filter condition to take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,9 +97,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string PrincipalType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task object. The ID can be used to filter access permissions.</para>
+        /// <para>The ID of the task target, which is used as a filter condition for the query.</para>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You must specify both <c>TargetId</c> and <c>TargetType</c> for the filter condition to take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,10 +110,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task object. The type can be used to filter access permissions.</para>
-        /// <para>Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
+        /// <para>The type of the task target, which is used as a filter condition for the query.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RD-Account: The task target is an account in a resource directory.</description></item>
+        /// </list>
         /// <remarks>
-        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You must specify both <c>TargetId</c> and <c>TargetType</c> for the filter condition to take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -1,3 +1,16 @@
+2026-11-26 Version: 1.8.0
+- Support API DeleteSecurityInfo.
+- Support API GetSecurityInfo.
+- Support API GetSecurityInfoPreference.
+- Support API ListTagResources.
+- Support API SendVerificationMessage.
+- Support API SetSecurityInfo.
+- Support API SetSecurityInfoPreference.
+- Support API TagResources.
+- Support API UntagResources.
+- Update API ResetUserPassword: add request parameters ResetMethod.
+
+
 2026-09-03 Version: 1.7.0
 - Support API GetAttributePassingSetting.
 - Support API UpdateAttributePassingSetting.

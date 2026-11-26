@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Statement\&quot;: [{\&quot;Action\&quot;: \&quot;<em>\&quot;,\&quot;Effect\&quot;: \&quot;Allow\&quot;,\&quot;Resource\&quot;: \&quot;</em>\&quot;}],\&quot;Version\&quot;: \&quot;1\&quot;}</para>
+            /// <para>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</para>
             /// </summary>
             [NameInMap("PermissionPolicyDocument")]
             [Validation(Required=false)]

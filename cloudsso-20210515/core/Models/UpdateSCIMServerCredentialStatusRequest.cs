@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The new status of the SCIM credential. Valid values:</para>
+        /// <para>The status of the SCIM credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Enabled: The SCIM credential is enabled.</para>
-        /// </description></item>
-        /// <item><description><para>Disabled: The SCIM credential is disabled.</para>
-        /// </description></item>
+        /// <item><description>Enabled: Enabled.</description></item>
+        /// <item><description>Disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

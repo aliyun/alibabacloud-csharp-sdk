@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task.</para>
+            /// <para>The end time of the task. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-05T02:58:08Z</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The cause of the task failure.</para>
+            /// <para>The reason why the task failed.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of <c>Status</c> is <c>Failed</c>.</para>
+            /// <para>This parameter is returned only when <c>Status</c> is <c>Failed</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string FailureReason { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account to which the target belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17xxxxxxxxxxxx73</para>
             /// </summary>
@@ -98,10 +100,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalName { get; set; }
 
             /// <summary>
-            /// <para>The type of the CloudSSO identity. Valid values:</para>
+            /// <para>The CloudSSO identity type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>User</description></item>
-            /// <item><description>Group</description></item>
+            /// <item><description>User: user.</description></item>
+            /// <item><description>Group: user group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task.</para>
+            /// <para>The start time of the task. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-05T02:58:07Z</para>
@@ -124,8 +126,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>InProgress: The task is running.</description></item>
-            /// <item><description>Success: The task is successful.</description></item>
+            /// <item><description>InProgress: The task is in progress.</description></item>
+            /// <item><description>Success: The task succeeded.</description></item>
             /// <item><description>Failed: The task failed.</description></item>
             /// </list>
             /// 
@@ -137,7 +139,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
+            /// <para>The ID of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
@@ -147,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-test</para>
@@ -157,21 +159,21 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The path ID of the task object in the resource directory.</para>
+            /// <para>The path ID of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The path name of the task object in the resource directory.</para>
+            /// <para>The path name of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</para>
+            /// <para>The task target type. Valid values: RD-Account, which indicates that the task target is an account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RD-Account</para>
@@ -193,10 +195,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ProvisionAccessConfiguration: An access configuration is provisioned.</description></item>
-            /// <item><description>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</description></item>
-            /// <item><description>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</description></item>
-            /// <item><description>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</description></item>
+            /// <item><description>ProvisionAccessConfiguration: Deploys the access configuration.</description></item>
+            /// <item><description>DeprovisionAccessConfiguration: Removes the access configuration deployment.</description></item>
+            /// <item><description>CreateAccessAssignment: Grants authorization to an account in a resource directory.</description></item>
+            /// <item><description>DeleteAccessAssignment: Revokes authorization from an account in a resource directory.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

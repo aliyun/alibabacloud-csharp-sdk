@@ -172,9 +172,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The identity ID of the RAM user provisioning. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set the <c>PrincipalType</c> parameter to <c>Group</c>, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
+            /// <item><description><para>If you set the <c>PrincipalType</c> parameter to <c>Group</c>, the value of this parameter is the ID of a CloudSSO user group (g-********).</para>
             /// </description></item>
-            /// <item><description><para>If you set the <c>PrincipalType</c> parameter to <c>User</c>, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
+            /// <item><description><para>If you set the <c>PrincipalType</c> parameter to <c>User</c>, the value of this parameter is the ID of a CloudSSO user (u-********).</para>
             /// </description></item>
             /// </list>
             /// 
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
             /// <summary>
             /// <para>The ID of the object for which you create the RAM user provisioning.</para>
-            /// <para>The value is fixed as the ID of the account in the resource directory.\<c>\\</c>\<c>\\</c></para>
+            /// <para>The value is fixed as the ID of the account in the resource directory.````</para>
             /// 
             /// <b>Example:</b>
             /// <para>153218*******</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
             /// <summary>
             /// <para>The name of the object for which you create the RAM user provisioning.</para>
-            /// <para>If <c>RD-Account</c> is returned, the value of this parameter is the name of the account that is used to access the instance.\<c>\\</c></para>
+            /// <para>If <c>RD-Account</c> is returned, the value of this parameter is the name of the account that is used to access the instance.``</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleRdMember</para>

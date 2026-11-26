@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListAccessAssignmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access permissions that are assigned.</para>
+        /// <para>The list of access assignments.</para>
         /// </summary>
         [NameInMap("AccessAssignments")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
-            /// <para>The time when the access permissions were assigned.</para>
+            /// <para>The time when the access assignment was successful. The time follows the RFC 3339 standard and is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-04T10:03:08Z</para>
@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account to which the authorization target belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
             /// </summary>
@@ -77,10 +79,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the CloudSSO identity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>User</para>
-            /// </description></item>
-            /// <item><description><para>Group</para>
-            /// </description></item>
+            /// <item><description>User: user.</description></item>
+            /// <item><description>Group: group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
+            /// <para>The ID of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114240524784****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-test</para>
@@ -111,22 +111,25 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The path ID of the task object in the resource directory.</para>
+            /// <para>The path ID of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPath")]
             [Validation(Required=false)]
             public string TargetPath { get; set; }
 
             /// <summary>
-            /// <para>The path name of the task object in the resource directory.</para>
+            /// <para>The path name of the task target in the resource directory.</para>
             /// </summary>
             [NameInMap("TargetPathName")]
             [Validation(Required=false)]
             public string TargetPathName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task object.</para>
-            /// <para>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</para>
+            /// <para>The type of the task target.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RD-Account: The task target is an account in a resource directory.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RD-Account</para>
@@ -138,12 +141,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
+        /// <para>Indicates whether the returned result is truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The result is truncated.</description></item>
+        /// <item><description>false: The result is not truncated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,7 +155,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -164,9 +165,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page of query results.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the value of IsTruncated is <c>true</c>.\<c>\\</c></para>
+        /// <para>This parameter is returned only when <c>IsTruncated</c> is set to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -177,7 +178,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66898413-EB80-556D-9429-06FE3548F672</para>
@@ -187,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the filter conditions specified in the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

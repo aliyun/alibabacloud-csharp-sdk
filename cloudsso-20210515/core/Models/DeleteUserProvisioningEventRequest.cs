@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class DeleteUserProvisioningEventRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-003qew84****</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RAM user provisioning event.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2636305.html">ListUserProvisioningEvents</a> operation to query the value of <c>EventId</c>.</para>
+        /// <para>The ID of the Resource Access Management (RAM) user synchronization event.</para>
+        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/2636305.html">ListUserProvisioningEvents</a> to retrieve the <c>EventId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>upe-wjKyNDmZvyZOiRcJ****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RAM user provisioning.</para>
+        /// <para>The ID of the Resource Access Management (RAM) user synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>up-002axzhapcbz6e63****</para>
