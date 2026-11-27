@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineAgentDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Agent service data.</para>
+        /// <para>The agent service data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetHotlineAgentDetailResponseBodyData Data { get; set; }
         public class GetHotlineAgentDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Agent ID.</para>
+            /// <para>The agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2235****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? AgentId { get; set; }
 
             /// <summary>
-            /// <para>Agent status. Valid values: <b>1~6</b>.</para>
+            /// <para>The agent status. Valid values: <b>1</b> to <b>6</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? AgentStatus { get; set; }
 
             /// <summary>
-            /// <para>Agent status code. Valid values:  </para>
+            /// <para>The agent status code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AgentCheckout</b>: Agent logged off.  </description></item>
-            /// <item><description><b>AgentReady</b>: Agent idle.  </description></item>
-            /// <item><description><b>AgentBreak</b>: Agent on break.  </description></item>
-            /// <item><description><b>AgentAcw</b>: Post-processing after a call.  </description></item>
-            /// <item><description><b>AgentBusyForCall</b>: In a call.</description></item>
+            /// <item><description><b>AgentCheckout</b>: off duty</description></item>
+            /// <item><description><b>AgentReady</b>: idle</description></item>
+            /// <item><description><b>AgentBreak</b>: on break</description></item>
+            /// <item><description><b>AgentAcw</b>: in after-call work</description></item>
+            /// <item><description><b>AgentBusyForCall</b>: on a call</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string AgentStatusCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the agent is assigned. Valid values:<br><b>false</b>: Not assigned (no call).<br><b>true</b>: Assigned (in a call).</para>
+            /// <para>Indicates whether the agent is assigned. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>false</b>: not assigned (no active calls)</description></item>
+            /// <item><description><b>true</b>: assigned (active calls)</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -74,13 +78,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public bool? Assigned { get; set; }
 
             /// <summary>
-            /// <para>Break type. Valid values:  </para>
+            /// <para>The break type. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Short break.  </description></item>
-            /// <item><description><b>2</b>: Meal break.  </description></item>
-            /// <item><description><b>3</b>: Meeting.  </description></item>
-            /// <item><description><b>4</b>: Coaching.  </description></item>
-            /// <item><description><b>5</b>: Training.</description></item>
+            /// <item><description><b>1</b>: break</description></item>
+            /// <item><description><b>2</b>: meal</description></item>
+            /// <item><description><b>3</b>: meeting</description></item>
+            /// <item><description><b>4</b>: coaching</description></item>
+            /// <item><description><b>5</b>: training</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,17 +95,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? RestType { get; set; }
 
             /// <summary>
-            /// <para>Tenant ID to which the agent belongs, corresponding to the instance ID in the input parameter.</para>
+            /// <para>The ID of the tenant to which the agent belongs. This ID corresponds to the instance ID in the request parameters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ccc_xp_pre-cn-***</para>
+            /// <para>205282</para>
             /// </summary>
             [NameInMap("TenantId")]
             [Validation(Required=false)]
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>Heartbeat signature.</para>
+            /// <para>The heartbeat signature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dnthF_oinHg7JMJDmKqex3Ux****</para>
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -133,7 +137,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -143,10 +147,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: successful</description></item>
+        /// <item><description><b>false</b>: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListHotlineRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. A return value of Success indicates that the request succeeded.</para>
+        /// <para>The status code. A value of Success indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Hotline session information.</para>
+        /// <para>The hotline session information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListHotlineRecordResponseBodyData> Data { get; set; }
         public class ListHotlineRecordResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Session ID. This corresponds to the acid in WebSocket after an inbound call.</para>
+            /// <para>The session ID. This is the acid value in the WebSocket after an inbound call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100365558</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string CallId { get; set; }
 
             /// <summary>
-            /// <para>Connection ID.</para>
+            /// <para>The connection ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100365548</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>Recording end UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The timestamp when the recording ended. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16128694810</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Recording start UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The timestamp when the recording started. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16128694110</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>Recording file URL.</para>
+            /// <para>The URL of the recording file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com</a></para>
@@ -79,17 +79,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -99,7 +99,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

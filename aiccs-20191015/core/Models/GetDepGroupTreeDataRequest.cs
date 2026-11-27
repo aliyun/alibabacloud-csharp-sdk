@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetDepGroupTreeDataRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID.
-        /// You can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> API and view the <b>AgentId</b> parameter in the response to obtain the agent ID.</para>
+        /// <para>The agent ID.</para>
+        /// <para>You can call the <a href="https://www.alibabacloud.com/help/en/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> operation and view the <b>AgentId</b> response parameter to obtain the agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? AgentId { get; set; }
 
         /// <summary>
-        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.
-        /// You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The AICCS instance ID.
+        /// You can obtain the ID in the <b>Instance Management</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

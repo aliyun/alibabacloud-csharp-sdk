@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiVoiceAgentDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The agent details.</para>
+        /// <para>The agent details data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigEventConfig EventConfig { get; set; }
                 public class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigEventConfig : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to hang up when an intelligent answering service is detected.</para>
+                    /// <para>Specifies whether to hang up when an AI call assistant is detected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public bool? CallAssistantHangup { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether intelligent answering service detection is enabled.</para>
+                    /// <para>Specifies whether to enable the recognition of AI call assistants.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public bool? CallAssistantRecognize { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the first silence triggers the model.</para>
+                    /// <para>Specifies whether the first silence invokes the model.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -104,8 +104,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     /// <para>The silence duration.</para>
                     /// <remarks>
                     /// <list type="bullet">
-                    /// <item><description>Maximum value: 15s.</description></item>
-                    /// <item><description>Minimum value: 3s.</description></item>
+                    /// <item><description>Maximum value: 15.</description></item>
+                    /// <item><description>Minimum value: 3.</description></item>
                     /// </list>
                     /// </remarks>
                     /// 
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? MuteDuration { get; set; }
 
                     /// <summary>
-                    /// <para>The number of consecutive silence events before the system proactively hangs up.</para>
+                    /// <para>The number of consecutive silence events after which the call is actively disconnected.</para>
                     /// <remarks>
                     /// <list type="bullet">
                     /// <item><description>Maximum value: 5.</description></item>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? MuteHangupNum { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum call duration. The call is automatically hung up after the timeout. Unit: seconds.</para>
+                    /// <para>The maximum call duration. The call is automatically disconnected after a timeout. Unit: seconds.</para>
                     /// <remarks>
                     /// <list type="bullet">
                     /// <item><description>Maximum value: 3600.</description></item>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig TtsConfig { get; set; }
                 public class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentCallConfigTtsConfig : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether background sound is enabled.</para>
+                    /// <para>Specifies whether to enable background sound.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? BackgroundSound { get; set; }
 
                     /// <summary>
-                    /// <para>The background sound volume. Valid values: 0: low. 1: medium. 2: high.</para>
+                    /// <para>The background sound volume. Valid values: 0 (low), 1 (medium), and 2 (high).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? BackgroundVolume { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether audio mixing is enabled.</para>
+                    /// <para>Specifies whether to enable audio mixing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -208,11 +208,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? MixingTemplate { get; set; }
 
                     /// <summary>
-                    /// <para>The voice speed during TTS playback.</para>
+                    /// <para>The TTS playback speed.</para>
                     /// <remarks>
                     /// <list type="bullet">
                     /// <item><description>Valid values: -200 to 200. Default value: 0.</description></item>
-                    /// <item><description>If no value is specified, the voice speed configured in the large model application is used by default.</description></item>
+                    /// <item><description>If you do not specify a value, the voice speed configured in the large model application is used by default.</description></item>
                     /// </list>
                     /// </remarks>
                     /// 
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     /// <remarks>
                     /// <list type="bullet">
                     /// <item><description>Valid values: 0 to 100. Default value: 0.</description></item>
-                    /// <item><description>If no value is specified, the volume configured in the large model application is used by default.</description></item>
+                    /// <item><description>If you do not specify a value, the volume configured in the large model application is used by default.</description></item>
                     /// </list>
                     /// </remarks>
                     /// 
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string VoiceCode { get; set; }
 
                     /// <summary>
-                    /// <para>The voice type. Valid values: SYSTEM: system voice. COSYCLONE: cloned voice. BL-CUSTOM: custom premium cloned voice.</para>
+                    /// <para>The voice type. Valid values: SYSTEM (system voice), COSYCLONE (cloned voice), and BL-CUSTOM (custom premium cloned voice).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Sample value</para>
@@ -311,24 +311,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? BusinessType { get; set; }
 
                 /// <summary>
-                /// <para>The list of subtask configurations.</para>
+                /// <para>The list of child task configurations.</para>
                 /// </summary>
                 [NameInMap("ChildTaskList")]
                 [Validation(Required=false)]
                 public List<QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigChildTaskList> ChildTaskList { get; set; }
                 public class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigChildTaskList : TeaModel {
                     /// <summary>
-                    /// <para>The subtask description.</para>
+                    /// <para>The child task description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>新用户邀约: \&quot;喂，家长您好！我是***<b>的王老师，我们现在有</b>课程100个试听名额，想帮宝贝安排一下体验，您看什么时候比较方便呢？\</para>
+                    /// <para>New user invitation: &quot;Hello, parent! I am Teacher Wang from *****. We currently have 100 trial spots for the ** course and would like to schedule a trial class for your child. When would be a convenient time for you?&quot;\</para>
                     /// </summary>
                     [NameInMap("ChildTaskDescription")]
                     [Validation(Required=false)]
                     public string ChildTaskDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The subtask name.</para>
+                    /// <para>The child task name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Opening and invitation</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string ChildTaskName { get; set; }
 
                     /// <summary>
-                    /// <para>The unique ID of the subtask.</para>
+                    /// <para>The unique ID of the child task.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>280cd4bf-*******df472c</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether custom exception handling is enabled.</para>
+                /// <para>Specifies whether to enable custom exception handling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -363,31 +363,31 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The custom exception file ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>OSS文件ID</para>
+                /// <para>OSS file ID</para>
                 /// </summary>
                 [NameInMap("CustomExceptionFileId")]
                 [Validation(Required=false)]
                 public string CustomExceptionFileId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the custom exception file.</para>
+                /// <para>The custom exception file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>异常测试文件.xlsx</para>
+                /// <para>Exception test file.xlsx</para>
                 /// </summary>
                 [NameInMap("CustomExceptionFileName")]
                 [Validation(Required=false)]
                 public string CustomExceptionFileName { get; set; }
 
                 /// <summary>
-                /// <para><b>[Deprecated]</b> This field is deprecated and will be removed in the future.</para>
+                /// <para><b>[Deprecated]</b> This field is deprecated and will be removed in a future release.</para>
                 /// </summary>
                 [NameInMap("CustomExceptionList")]
                 [Validation(Required=false)]
                 public List<QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigCustomExceptionList> CustomExceptionList { get; set; }
                 public class QueryAiVoiceAgentDetailResponseBodyDataAiVoiceAgentModelConfigCustomExceptionList : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to output as an exception tag.</para>
+                    /// <para>Specifies whether it is output as an exception tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para><b>[Deprecated]</b> This field is deprecated and will be removed in the future.</para>
+                /// <para><b>[Deprecated]</b> This field is deprecated and will be removed in a future release.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CustomExceptionUrlPath { get; set; }
 
                 /// <summary>
-                /// <para>The language style.</para>
+                /// <para>The voice style.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The description of the advanced task flow.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>This outbound call communicates with parents through three core steps, ........ 3. User needs &gt; Proactive introduction</para>
+                /// <para>This outbound call communicates with parents through three core steps... 3. User needs &gt; Proactive introduction</para>
                 /// </summary>
                 [NameInMap("FlowDesc")]
                 [Validation(Required=false)]
@@ -479,14 +479,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public List<string> KnowledgeDocNameList { get; set; }
 
                 /// <summary>
-                /// <para>The list of original file names of knowledge base documents.</para>
+                /// <para>The list of original file names of the knowledge base documents.</para>
                 /// </summary>
                 [NameInMap("KnowledgeDocOriginalNameList")]
                 [Validation(Required=false)]
                 public List<string> KnowledgeDocOriginalNameList { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a knowledge base is associated.</para>
+                /// <para>Specifies whether to associate a knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -523,10 +523,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the main intent.</para>
+                    /// <para>The main intent description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Call effectiveness rating: A, B, C, D (A is the best)</para>
+                    /// <para>Call performance rating: A, B, C, D (A is the best)</para>
                     /// </summary>
                     [NameInMap("MainPurposeDescription")]
                     [Validation(Required=false)]
@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                         /// <para>The description of the valid value.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Strong intent</para>
+                        /// <para>Strong intention</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -575,7 +575,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     /// <para>The main intent name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Call effectiveness rating</para>
+                    /// <para>Call performance rating</para>
                     /// </summary>
                     [NameInMap("MainPurposeName")]
                     [Validation(Required=false)]
@@ -594,7 +594,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>The output tag configurations.</para>
+                /// <para>The output tag configuration.</para>
                 /// </summary>
                 [NameInMap("OutputTagConfig")]
                 [Validation(Required=false)]
@@ -702,14 +702,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     /// <para>The variable description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The car series the user is interested in</para>
+                    /// <para>The vehicle series that the user is interested in</para>
                     /// </summary>
                     [NameInMap("PhoneTagDescription")]
                     [Validation(Required=false)]
                     public string PhoneTagDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The list of enumeration values for the variable. This field is present only when the variable value type is ENUM.</para>
+                    /// <para>The list of enumeration values for the variable. This field is available only when the variable value type is ENUM.</para>
                     /// </summary>
                     [NameInMap("PhoneTagEnum")]
                     [Validation(Required=false)]
@@ -719,7 +719,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                         /// <para>The description of the enumeration value.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>The customer completely rejects retention</para>
+                        /// <para>The customer completely refuses retention</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -761,14 +761,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     /// <para>The Chinese name of the variable.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>意向车系</para>
+                    /// <para>Intended vehicle series</para>
                     /// </summary>
                     [NameInMap("PhoneTagName")]
                     [Validation(Required=false)]
                     public string PhoneTagName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the variable is required.</para>
+                    /// <para>Specifies whether the variable is required.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -800,7 +800,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>The opening statement.</para>
+                /// <para>The opening speech.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hello, this is ******</para>
@@ -810,7 +810,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Prologue { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the opening greeting recording audio file. This field has a value only when StartWordType is set to 1.</para>
+                /// <para>The URL of the opening remark audio file. This field has a value only when StartWordType is set to 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Sample value</para>
@@ -820,7 +820,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string RecordingFile { get; set; }
 
                 /// <summary>
-                /// <para>The opening statement type. Valid values: 0: text. 1: recording.</para>
+                /// <para>The opening speech type. Valid values: 0: Text. 1: Recording.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -833,7 +833,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The system role.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Course sales</para>
+                /// <para>Course sales representative</para>
                 /// </summary>
                 [NameInMap("SysRole")]
                 [Validation(Required=false)]
@@ -902,7 +902,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? Status { get; set; }
 
             /// <summary>
-            /// <para>The language style name.</para>
+            /// <para>The voice style name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Friendly</para>
@@ -936,8 +936,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: Success.</description></item>
+        /// <item><description><b>false</b>: Failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetCustomerInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,31 +20,34 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Membership information.</para>
+        /// <para>The member information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCustomerInfoResponseBodyData Data { get; set; }
         public class GetCustomerInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Custom fields.</para>
+            /// <para>The custom fields.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</para>
             /// </summary>
             [NameInMap("CustomizeFields")]
             [Validation(Required=false)]
             public Dictionary<string, object> CustomizeFields { get; set; }
 
             /// <summary>
-            /// <para>Nickname.</para>
+            /// <para>The nickname.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试会员</para>
+            /// <para>Test member</para>
             /// </summary>
             [NameInMap("Nick")]
             [Validation(Required=false)]
             public string Nick { get; set; }
 
             /// <summary>
-            /// <para>External ID.</para>
+            /// <para>The external ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6666666</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string OuterId { get; set; }
 
             /// <summary>
-            /// <para>Profile picture.</para>
+            /// <para>The profile picture.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ">https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLSW7XPFlJDwVunXP8pr84TvltwtLlNqTlOVSFeM3bCgn57mAB4JuZZmvMW0qicqW0PyzyUdZpxiaFQ</a></para>
@@ -64,17 +67,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Photo { get; set; }
 
             /// <summary>
-            /// <para>Real name.</para>
+            /// <para>The real name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>刘测试</para>
+            /// <para>Liu Test</para>
             /// </summary>
             [NameInMap("RealName")]
             [Validation(Required=false)]
             public string RealName { get; set; }
 
             /// <summary>
-            /// <para>Membership ID.</para>
+            /// <para>The member ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>823456789023</para>
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DF6A3FB7-A5AA-43BE-A65B</para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

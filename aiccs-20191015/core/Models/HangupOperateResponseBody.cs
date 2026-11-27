@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class HangupOperateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of \&quot;OK\&quot; indicates that the request was successful.</para>
+        /// <para>The status code. A value of &quot;OK&quot; indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

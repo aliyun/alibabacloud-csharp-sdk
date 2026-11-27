@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The branch ID. If this parameter is left empty, the currently active branch is automatically used.</para>
+        /// <para>The branch ID. If left empty, the current active branch is automatically selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The version ID. If this parameter is left empty, the latest published version of the corresponding branch is used. This parameter must be used together with BranchId.</para>
+        /// <para>The version ID. If left empty, the latest published version of the corresponding branch is used. This parameter must be used together with BranchId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListChatRecordDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("ResultData")]
         [Validation(Required=false)]
         public ListChatRecordDetailResponseBodyResultData ResultData { get; set; }
         public class ListChatRecordDetailResponseBodyResultData : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>Query result data.</para>
+            /// <para>The query result.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListChatRecordDetailResponseBodyResultDataData> Data { get; set; }
             public class ListChatRecordDetailResponseBodyResultDataData : TeaModel {
                 /// <summary>
-                /// <para>Online End Time.</para>
+                /// <para>The end time of the online session.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1614578410000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>A list of detailed online session information.</para>
+                /// <para>The list of online session details.</para>
                 /// </summary>
                 [NameInMap("MessageList")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     /// <para>The content of the sent message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>你好</para>
+                    /// <para>Hello</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? CreateTime { get; set; }
 
                     /// <summary>
-                    /// <para>Message type.</para>
+                    /// <para>The message type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MSG</para>
@@ -131,10 +131,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string SenderName { get; set; }
 
                     /// <summary>
-                    /// <para>The type of sender. Valid values:</para>
+                    /// <para>The type of the sender. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>1</b>: Membership</description></item>
-                    /// <item><description><b>2</b>: Customer service</description></item>
+                    /// <item><description><b>1</b>: customer.</description></item>
+                    /// <item><description><b>2</b>: customer service representative.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>Servicer Account</para>
+                /// <para>The account of the customer service representative.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:123@123.com">123@123.com</a></para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Page size</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? OnePageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? TotalPage { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

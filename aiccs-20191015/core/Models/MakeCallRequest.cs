@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class MakeCallRequest : TeaModel {
         /// <summary>
-        /// <para>Called number.</para>
+        /// <para>The called number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
-        /// <para>Calling number.</para>
+        /// <para>The calling number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
-        /// <para>Operation code.</para>
+        /// <para>The operation code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CommandCode { get; set; }
 
         /// <summary>
-        /// <para>Pass-through business information.</para>
+        /// <para>The pass-through business information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;bizId&quot;: 23323}</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ExtInfo { get; set; }
 
         /// <summary>
-        /// <para>External account ID.</para>
+        /// <para>The external account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterAccountId { get; set; }
 
         /// <summary>
-        /// <para>External account type.</para>
+        /// <para>The external account type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

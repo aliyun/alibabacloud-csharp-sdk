@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class LlmSmartCallEncryptRequest : TeaModel {
         /// <summary>
-        /// <para>The application code for the large language model.</para>
+        /// <para>The code of the large language model application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string EncryptCalledNumber { get; set; }
 
         /// <summary>
-        /// <para>A user-defined ID for the outbound call.</para>
+        /// <para>The custom outId specified by the customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsa*******sad</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the large language model\&quot;s prompt.</para>
+        /// <para>The prompt parameters for the large language model application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;prompt&quot;:&quot;推荐一部电影&quot;}</para>
+        /// <para>{&quot;prompt&quot;:&quot;Recommend a movie&quot;}</para>
         /// </summary>
         [NameInMap("PromptParam")]
         [Validation(Required=false)]
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the large language model\&quot;s opening statement.</para>
+        /// <para>The greeting parameters for the large language model application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;小明&quot;,&quot;address&quot;:&quot;浙江省杭州市&quot;}</para>
+        /// <para>{&quot;name&quot;:&quot;Xiao Ming&quot;,&quot;address&quot;:&quot;Hangzhou, Zhejiang&quot;}</para>
         /// </summary>
         [NameInMap("StartWordParam")]
         [Validation(Required=false)]

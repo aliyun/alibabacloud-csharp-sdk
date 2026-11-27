@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AttachTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code. A value of OK indicates that the request succeeded.</para>
+        /// <para>The status code of the request. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The quantity of successfully appended entries.</para>
+        /// <para>The number of successfully appended records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 

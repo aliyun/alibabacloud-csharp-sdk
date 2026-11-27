@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ChangeChatAgentStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Current agent status. Valid values:</para>
+        /// <para>The current agent status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Offline</description></item>
-        /// <item><description><b>3</b>: On break</description></item>
+        /// <item><description><b>0</b>: Offline.</description></item>
+        /// <item><description><b>3</b>: Break.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DF6A3FB7-A5AA-43BE-A65B</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

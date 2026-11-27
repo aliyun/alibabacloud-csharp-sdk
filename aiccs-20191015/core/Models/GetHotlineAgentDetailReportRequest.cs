@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<long?> DepIds { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp of the end date. Unit: milliseconds.</para>
+        /// <para>The end date timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<long?> GroupIds { get; set; }
 
         /// <summary>
-        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.</para>
-        /// <para>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The AICCS instance ID.
+        /// You can obtain the instance ID in the <b>Instances</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp of the start date. Unit: milliseconds.</para>
+        /// <para>The start date timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

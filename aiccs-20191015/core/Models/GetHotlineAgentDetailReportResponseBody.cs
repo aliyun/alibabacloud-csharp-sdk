@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineAgentDetailReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of &quot;Success&quot; indicates that the request succeeded.</para>
+        /// <para>The status code. A value of Success indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Query result data.</para>
+        /// <para>The query result data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetHotlineAgentDetailReportResponseBodyData Data { get; set; }
         public class GetHotlineAgentDetailReportResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Description of returned columns.</para>
+            /// <para>The descriptions of the returned columns.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<GetHotlineAgentDetailReportResponseBodyDataColumns> Columns { get; set; }
             public class GetHotlineAgentDetailReportResponseBodyDataColumns : TeaModel {
                 /// <summary>
-                /// <para>Metric.</para>
+                /// <para>The metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>realName</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Metric description.</para>
+                /// <para>The metric description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>客服姓名</para>
+                /// <para>Agent name</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Current page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>Number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The returned data result.</para>
+            /// <para>The returned data results.</para>
             /// </summary>
             [NameInMap("Rows")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Rows { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API was invoked successfully. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

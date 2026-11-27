@@ -14,28 +14,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>The action command: play / flush / hangup / sendDtmf.</para>
+        /// <para>The action command. Valid values: play, flush, hangup, and sendDtmf.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Command")]
         [Validation(Required=false)]
         public string Command { get; set; }
 
         /// <summary>
-        /// <para>The extension parameter, a JSON character string. The metric description for each command:</para>
+        /// <para>The extension parameters in JSON character string format. Metric description for each command:</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Param")]
         [Validation(Required=false)]

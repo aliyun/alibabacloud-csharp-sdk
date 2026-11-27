@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetDepGroupTreeDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of Success indicates that the request succeeded.</para>
+        /// <para>The status code. A value of Success indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Department information.</para>
+        /// <para>The department information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The department name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>部门A</para>
+            /// <para>Department A</para>
             /// </summary>
             [NameInMap("DepGroupName")]
             [Validation(Required=false)]
             public string DepGroupName { get; set; }
 
             /// <summary>
-            /// <para>Skill group data.</para>
+            /// <para>The skill group data.</para>
             /// </summary>
             [NameInMap("GroupDTOS")]
             [Validation(Required=false)]
             public List<GetDepGroupTreeDataResponseBodyDataGroupDTOS> GroupDTOS { get; set; }
             public class GetDepGroupTreeDataResponseBodyDataGroupDTOS : TeaModel {
                 /// <summary>
-                /// <para>The name of the skill group.</para>
+                /// <para>The skill group name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>自动化技能组</para>
+                /// <para>Automated skill group</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListRolesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Role information.</para>
+        /// <para>The role information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListRolesResponseBodyData> Data { get; set; }
         public class ListRolesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Tenant ID.</para>
+            /// <para>The tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? BuId { get; set; }
 
             /// <summary>
-            /// <para>Role code.</para>
+            /// <para>The role code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Creation Time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
+            /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-01-03T20:25:33Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Role description.</para>
+            /// <para>The description of the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Admin</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>ID of the group to which the role belongs.</para>
+            /// <para>The ID of the role group to which the role belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? RoleGroupId { get; set; }
 
             /// <summary>
-            /// <para>Name of the role group to which the role belongs.</para>
+            /// <para>The name of the role group to which the role belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>角色组名称</para>
+            /// <para>Role group name</para>
             /// </summary>
             [NameInMap("RoleGroupName")]
             [Validation(Required=false)]
             public string RoleGroupName { get; set; }
 
             /// <summary>
-            /// <para>Role ID.</para>
+            /// <para>The role ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? RoleId { get; set; }
 
             /// <summary>
-            /// <para>Role name.</para>
+            /// <para>The name of the role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>企业管理员</para>
+            /// <para>Enterprise administrator</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// <para>The HTTP status code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -109,17 +109,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CancelAiCallDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why the access was denied.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public CancelAiCallDetailsResponseBodyData Data { get; set; }
         public class CancelAiCallDetailsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of calls that could not be canceled.</para>
+            /// <para>The number of unsuccessful cancellations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>75</para>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>Details about the failed cancellations. This is a map where the key is the failed detail ID or phone number, and the value is the reason for the failure.</para>
+            /// <para>The details of failed cancellations. This parameter is a map where the key is the ID or phone number of the failed detail record, and the value is the reason for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///   &quot;176********&quot;: &quot;明细记录当前状态不可取消&quot;
+            ///   &quot;176********&quot;: &quot;The detail record cannot be canceled in its current state&quot;
             /// }</para>
             /// </summary>
             [NameInMap("FailedDetails")]
@@ -59,14 +59,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public Dictionary<string, object> FailedDetails { get; set; }
 
             /// <summary>
-            /// <para>The result code of the cancellation. Valid values:</para>
+            /// <para>The cancellation result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ALL_FAILED: All cancellations failed.</para>
-            /// </description></item>
-            /// <item><description><para>ALL_SUCCEED: All cancellations succeeded.</para>
-            /// </description></item>
-            /// <item><description><para>PART_FAILED: Some cancellations failed.</para>
-            /// </description></item>
+            /// <item><description>ALL_FAILED: All cancellations failed.</description></item>
+            /// <item><description>ALL_SUCCEED: All cancellations succeeded.</description></item>
+            /// <item><description>PART_FAILED: Some cancellations failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ResultCode { get; set; }
 
             /// <summary>
-            /// <para>The number of calls that were successfully canceled.</para>
+            /// <para>The number of successful cancellations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>81</para>
@@ -87,7 +84,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? SucceedCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of items.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -99,10 +96,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -119,12 +116,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was called successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetQualityProjectDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A return value of 200 indicates that the request succeeded.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Quality inspection job information.</para>
+        /// <para>The quality inspection task information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetQualityProjectDetailResponseBodyData Data { get; set; }
         public class GetQualityProjectDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Inspection frequency type. Valid values:</para>
+            /// <para>The check frequency type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Periodic quality inspection</description></item>
-            /// <item><description><b>4</b>: Ad hoc quality inspection</description></item>
+            /// <item><description><b>1</b>: Periodic quality inspection.</description></item>
+            /// <item><description><b>4</b>: Ad-hoc quality inspection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? CheckFreqType { get; set; }
 
             /// <summary>
-            /// <para>Creation Time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-04-07 18:07:18</para>
@@ -51,21 +51,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection sampling scope.</para>
+            /// <para>The quality inspection sampling scope.</para>
             /// </summary>
             [NameInMap("DepList")]
             [Validation(Required=false)]
             public List<long?> DepList { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection sampling scope.</para>
+            /// <para>The quality inspection sampling scope.</para>
             /// </summary>
             [NameInMap("GroupList")]
             [Validation(Required=false)]
             public List<long?> GroupList { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection job ID.</para>
+            /// <para>The ID of the quality inspection task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15977801</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Updated At.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-04-07 18:07:19</para>
@@ -85,24 +85,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection job name</para>
+            /// <para>The name of the quality inspection task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>自动化质检任务</para>
+            /// <para>Automated quality inspection task</para>
             /// </summary>
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection rule IDs.</para>
+            /// <para>The IDs of the quality inspection rules.</para>
             /// </summary>
             [NameInMap("QualityRuleIds")]
             [Validation(Required=false)]
             public List<long?> QualityRuleIds { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection type. Fixed value: <b>1</b> (Consultation).</para>
+            /// <para>The quality inspection type. The value is fixed to <b>1</b> (consulting).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -112,17 +112,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? QualityType { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection sampling scope.</para>
+            /// <para>The quality inspection sampling scope.</para>
             /// </summary>
             [NameInMap("ServicerList")]
             [Validation(Required=false)]
             public List<long?> ServicerList { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection job status. Valid values:  </para>
+            /// <para>The status of the quality inspection task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Start  </description></item>
-            /// <item><description><b>1</b>: Shutdown</description></item>
+            /// <item><description><b>0</b>: Started.</description></item>
+            /// <item><description><b>1</b>: Stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Quality inspection job version number.</para>
+            /// <para>The version number of the quality inspection task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -145,17 +145,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

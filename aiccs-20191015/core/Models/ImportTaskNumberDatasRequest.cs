@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <list type="bullet">
         /// <item><description>EXCEL</description></item>
         /// <item><description>JSON<remarks>
-        /// <para>Notice: API calls currently support only the JSON data type.</para>
+        /// <para>Notice: API calls currently support only the JSON data type.</notice></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>The encryption method. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -36,9 +38,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EncryptionType { get; set; }
 
         /// <summary>
-        /// <para>The OSS file path. This parameter is optional.</para>
+        /// <para>The Object Storage Service (OSS) file path. This parameter is optional.</para>
         /// <remarks>
-        /// <para>API calls do not currently support the Excel data type. Therefore, uploading an OSS file path is currently unavailable.</para>
+        /// <para>API calls do not currently support the Excel data type. Therefore, you cannot specify an OSS file path.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>If DataType is set to JSON, upload data through this field. A maximum of 1000 records can be uploaded at a time.</para>
+        /// <para>If DataType is set to JSON, you must use this field to upload data. You can upload a maximum of 1,000 entries at a time.</para>
         /// </summary>
         [NameInMap("PhoneNumberList")]
         [Validation(Required=false)]

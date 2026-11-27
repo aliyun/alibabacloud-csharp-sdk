@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>The task detail ID. View the task detail ID in the upper-left corner of the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console, or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation.</para>
+        /// <para>The task detail ID. You can view the task detail ID in the upper-left corner of the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> page, or call the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation to obtain the task detail ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9662*************</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DetailId { get; set; }
 
         /// <summary>
-        /// <para>The external business serial number reserved for external input. You can use a unique ID for business association.</para>
+        /// <para>The custom business transaction ID passed from external systems. You can use a unique ID to associate business data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123******</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The task ID. View the task ID in the <b>Call Task Management</b> console or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</para>
+        /// <para>The task ID. You can view the task ID on the <b>Call Task Management</b> page or call the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation to obtain the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

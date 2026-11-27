@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class SendCcoSmartCallOperateRequest : TeaModel {
         /// <summary>
-        /// <para>Unique receipt ID of the call. This can be obtained from the response of the <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a> API.</para>
+        /// <para>The unique receipt ID of the call. You can obtain this ID from the response of the <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the action to be performed for the called number during an Intelligent Outbound Call.  </para>
+        /// <para>The action to be initiated by the called number during the intelligent outbound call.</para>
         /// <remarks>
-        /// <para>Currently, only the <b>parallelBridge</b> parameter is supported, which indicates bridging the called number with a call center agent.</para>
+        /// <para>Currently, only the <b>parallelBridge</b> value is supported, which specifies that the action is to bridge the called number with a call center agent.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Extension field.</para>
+        /// <para>The extended field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Param</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>Product name. Default value: <b>aiccs</b>.</para>
+        /// <para>The product name. Default value: <b>aiccs</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aiccs</para>

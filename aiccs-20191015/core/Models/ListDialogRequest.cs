@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListDialogRequest : TeaModel {
         /// <summary>
-        /// <para>The called number. You can view the called number in the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> interface or retrieve it by invoking the <a href="https://help.aliyun.com/document_detail/2718009.html">ListTaskDetail</a> API. The <b>Called</b> parameter in the API response is the called number.</para>
+        /// <para>The called number. You can view the called number on the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2718009.html">ListTaskDetail</a> operation. The <b>Called</b> parameter returned by the operation is the called number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unique job ID of the robot outbound call task. You can view it in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or obtain it by invoking the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> API.</para>
+        /// <para>The unique task ID of the robot call task. You can view the ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/223556.html">CreateTask</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

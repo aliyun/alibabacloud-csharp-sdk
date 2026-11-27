@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineMessageLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. A return value of &quot;Success&quot; indicates that the request succeeded.</para>
+        /// <para>The status code. A value of Success indicates that the request succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Voice messages.</para>
+        /// <para>The voice message information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The session content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>您好。</para>
+            /// <para>Hello</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Mid { get; set; }
 
             /// <summary>
-            /// <para>The sender type. Valid values:  </para>
+            /// <para>The sender type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Membership  </description></item>
-            /// <item><description><b>2</b>: Agent</description></item>
+            /// <item><description><b>1</b>: member</description></item>
+            /// <item><description><b>2</b>: agent</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -113,7 +113,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call succeeded.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Robot ID, which is also the script ID. You can view it on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface or obtain it by using the <a href="https://help.aliyun.com/document_detail/2717998.html">ListAiccsRobot</a> API.</para>
+        /// <para>The chatbot ID, which is the dialog flow ID. You can view the ID on the <a href="https://aiccs.console.aliyun.com/patter/list">Dialog Flow Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2717998.html">ListAiccsRobot</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;code\&quot;:\&quot;InvalidApiKey\&quot;,\&quot;message\&quot;:\&quot;Invalid API-key provided.\&quot;,\&quot;request_id\&quot;:\&quot;dd14065e-3dd5-90a1-b8ee-d6c80891defe\&quot;}</para>
+            /// <para>{&quot;code&quot;:&quot;InvalidApiKey&quot;,&quot;message&quot;:&quot;Invalid API-key provided.&quot;,&quot;request_id&quot;:&quot;dd14065e-3dd5-90a1-b8ee-d6c80891defe&quot;}</para>
             /// </summary>
             [NameInMap("ErrorMsg")]
             [Validation(Required=false)]

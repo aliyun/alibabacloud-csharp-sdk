@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryConversationDetailInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -49,21 +49,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <summary>
             /// <para>The call result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CALL_FORWARDING: Call forwarding.</description></item>
-            /// <item><description>INCOMING_CALL_BARRED: Incoming call barred.</description></item>
-            /// <item><description>CALL_REJECTED: Call rejected.</description></item>
-            /// <item><description>ANSWERED: Answered by user.</description></item>
-            /// <item><description>USER_BUSY: Callee busy.</description></item>
-            /// <item><description>POWERED_OFF: Powered off.</description></item>
-            /// <item><description>NO_USER_RESPONSE: Out of service area.</description></item>
-            /// <item><description>OPERATOR_BLOCK: Blocked by carrier.</description></item>
-            /// <item><description>OTHERS: Other status.</description></item>
-            /// <item><description>SUSPEND: Service suspended.</description></item>
-            /// <item><description>CANCEL: Canceled by caller.</description></item>
-            /// <item><description>INVALID_NUMBER: Invalid number.</description></item>
-            /// <item><description>UNAVAILABLE: Temporarily unavailable.</description></item>
-            /// <item><description>NETWORK_BUSY: Network busy.</description></item>
-            /// <item><description>NO_ANSWER: No answer.</description></item>
+            /// <item><description>CALL_FORWARDING: call forwarding</description></item>
+            /// <item><description>INCOMING_CALL_BARRED: incoming calls barred</description></item>
+            /// <item><description>CALL_REJECTED: call rejected</description></item>
+            /// <item><description>ANSWERED: answered</description></item>
+            /// <item><description>USER_BUSY: user busy</description></item>
+            /// <item><description>POWERED_OFF: powered off</description></item>
+            /// <item><description>NO_USER_RESPONSE: no user response</description></item>
+            /// <item><description>OPERATOR_BLOCK: blocked by the carrier</description></item>
+            /// <item><description>OTHERS: other statuses</description></item>
+            /// <item><description>SUSPEND: suspended</description></item>
+            /// <item><description>CANCEL: canceled by the caller</description></item>
+            /// <item><description>INVALID_NUMBER: invalid number</description></item>
+            /// <item><description>UNAVAILABLE: temporarily unavailable</description></item>
+            /// <item><description>NETWORK_BUSY: network busy</description></item>
+            /// <item><description>NO_ANSWER: no answer</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string CallResult { get; set; }
 
             /// <summary>
-            /// <para>The callee number.</para>
+            /// <para>The called number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>186******</para>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string CallerPhone { get; set; }
 
             /// <summary>
-            /// <para>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The format is as follows:</para>
+            /// <para>The chat record information. The structure is a JSON array. The chat records are sorted in chronological order. Details:</para>
             /// <pre><code class="language-json">[
             ///     {
             ///         &quot;content&quot;:&quot;Chat content&quot;,
-            ///         &quot;role&quot;:&quot;Role&quot;,//Valid values: user, assistant (robot)
+            ///         &quot;role&quot;:&quot;Role&quot;,//Valid values: user (user), assistant (chatbot)
             ///     }
             /// ]
             /// </c></pre>
@@ -106,51 +106,51 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <b>Example:</b>
             /// <para>[
             ///   {
-            ///     &quot;content&quot;: &quot;111您好，年龄222，性别男，我这边是<b>汽车的官方顾问，我们新出了一款车型为</b>；<b>已经上市了，售价</b>万元起，<b>分钟破*台，您看要不了解一下？&quot;,
+            ///     &quot;content&quot;: &quot;111 Hello, age 222, male. I am the official consultant of ** Automobile. We have launched a new model **; ** is now on the market, starting at ** 10,000 yuan, with * units sold in ** minutes. Would you like to learn more?&quot;,
             ///     &quot;role&quot;: &quot;assistant&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;&lt;客户打断&gt;哎，你是谁？&quot;,
+            ///     &quot;content&quot;: &quot;<Customer interrupts> Hey, who are you?&quot;,
             ///     &quot;role&quot;: &quot;user&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;&lt;客户打断&gt;你再说一遍。&quot;,
+            ///     &quot;content&quot;: &quot;<Customer interrupts> Say that again.&quot;,
             ///     &quot;role&quot;: &quot;user&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;哎，我没听清。&quot;,
+            ///     &quot;content&quot;: &quot;Hey, I didn&quot;t catch that.&quot;,
             ///     &quot;role&quot;: &quot;user&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;你在说什么？&quot;,
+            ///     &quot;content&quot;: &quot;What are you saying?&quot;,
             ///     &quot;role&quot;: &quot;user&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;您好，&quot;,
+            ///     &quot;content&quot;: &quot;Hello,&quot;,
             ///     &quot;role&quot;: &quot;assistant&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;我是</b>汽车总部销售服务顾问。&quot;,
+            ///     &quot;content&quot;: &quot;I am the sales service consultant at the ** Automobile headquarters.&quot;,
             ///     &quot;role&quot;: &quot;assistant&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;我们最近推出了一款新车**，想了解一下您是否对这款车型感兴趣？&quot;,
+            ///     &quot;content&quot;: &quot;We recently launched a new car, **. Would you like to know if you are interested in this model?&quot;,
             ///     &quot;role&quot;: &quot;assistant&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;&lt;客户打断&gt;哎，那我是谁？&quot;,
+            ///     &quot;content&quot;: &quot;<Customer interrupts> Hey, then who am I?&quot;,
             ///     &quot;role&quot;: &quot;user&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;你在说什么呢？&quot;,
+            ///     &quot;content&quot;: &quot;What are you talking about?&quot;,
             ///     &quot;role&quot;: &quot;user&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;抱歉打扰了，111先生。&quot;,
+            ///     &quot;content&quot;: &quot;Sorry to bother you, Mr. 111.&quot;,
             ///     &quot;role&quot;: &quot;assistant&quot;
             ///   },
             ///   {
-            ///     &quot;content&quot;: &quot;祝您生活愉快！再见！&quot;,
+            ///     &quot;content&quot;: &quot;Have a great day! Goodbye!&quot;,
             ///     &quot;role&quot;: &quot;assistant&quot;
             ///   }
             /// ]</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ConversationRecord { get; set; }
 
             /// <summary>
-            /// <para>The call duration, in seconds. The value is 0 if the call is not connected.</para>
+            /// <para>The duration of the call. The value is 0 if the call is not connected. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -170,28 +170,36 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? Duration { get; set; }
 
             /// <summary>
+            /// <para>The encryption method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: no encryption</description></item>
+            /// <item><description>1: MD5</description></item>
+            /// <item><description>2: SHA256</description></item>
+            /// <item><description>3: SM3</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para>Sample value</para>
             /// </summary>
             [NameInMap("EncryptionType")]
             [Validation(Required=false)]
             public string EncryptionType { get; set; }
 
             /// <summary>
-            /// <para>The failure reason.</para>
+            /// <para>The reason for the failure.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Actively canceled</para>
+            /// <para>Canceled by the caller</para>
             /// </summary>
             [NameInMap("FailedReason")]
             [Validation(Required=false)]
             public string FailedReason { get; set; }
 
             /// <summary>
-            /// <para>The hangup direction. Valid values:</para>
+            /// <para>The party that hung up. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: User.</description></item>
-            /// <item><description><b>1</b>: Robot.</description></item>
+            /// <item><description><b>0</b>: user</description></item>
+            /// <item><description><b>1</b>: chatbot</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,7 +210,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string HangupDirection { get; set; }
 
             /// <summary>
-            /// <para>The major intent.</para>
+            /// <para>The primary intent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>D</para>
@@ -212,7 +220,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string MajorIntent { get; set; }
 
             /// <summary>
-            /// <para>The external business serial number. You can use a unique ID for business association.</para>
+            /// <para>The external business transaction ID. You can use a unique ID to associate business data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bb3bc32d-54b8-49c4-80d3-61583417d22e</para>
@@ -229,7 +237,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public List<QueryConversationDetailInfoResponseBodyDataOutputTags> OutputTags { get; set; }
             public class QueryConversationDetailInfoResponseBodyDataOutputTags : TeaModel {
                 /// <summary>
-                /// <para>The tag ID.</para>
+                /// <para>The ID of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9ca2*****************************</para>
@@ -239,17 +247,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The tag description.</para>
+                /// <para>The description of the tag.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Evaluate the customer\&quot;s interest in the vehicle model and purchase likelihood</para>
+                /// <para>Evaluate the customer&quot;s interest in the car model and likelihood of purchase</para>
                 /// </summary>
                 [NameInMap("OutputTagDescription")]
                 [Validation(Required=false)]
                 public string OutputTagDescription { get; set; }
 
                 /// <summary>
-                /// <para>The tag name.</para>
+                /// <para>The name of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Customer intent level</para>
@@ -259,10 +267,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string OutputTagName { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[&quot;High (very positive, high conversion probability)&quot;]</para>
+                /// <para>[&quot;High (very positive, high probability of conversion)&quot;]</para>
                 /// </summary>
                 [NameInMap("OutputTagValue")]
                 [Validation(Required=false)]
@@ -271,7 +279,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>The time when the call was answered. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the call was answered. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1754617273000</para>
@@ -281,7 +289,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PickUpTime { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the recording file. This field is available only after a recording file is generated.</para>
+            /// <para>The download URL of the recording file. This field is returned only after the recording file is generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>https://********</para>
@@ -291,7 +299,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string RecordingFileDownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The time when the call ended. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the call ended. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -301,7 +309,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the call started. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the call started. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123123123123</para>
@@ -311,7 +319,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? StartCallTime { get; set; }
 
             /// <summary>
-            /// <para>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> in Voice Messaging.</para>
+            /// <para>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> of Voice Messaging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200005</para>
@@ -321,24 +329,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string StatusCode { get; set; }
 
             /// <summary>
-            /// <para>The call status information returned by the carrier.</para>
+            /// <para>The call status message returned by the carrier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Call ended (dual call)</para>
+            /// <para>Call ended (two-way call)</para>
             /// </summary>
             [NameInMap("StatusMsg")]
             [Validation(Required=false)]
             public string StatusMsg { get; set; }
 
             /// <summary>
-            /// <para>The list of call variables. These are the call variables associated with the call task you created.</para>
+            /// <para>The list of call variables. These are the call variables associated with the call task that you created.</para>
             /// </summary>
             [NameInMap("Variables")]
             [Validation(Required=false)]
             public List<QueryConversationDetailInfoResponseBodyDataVariables> Variables { get; set; }
             public class QueryConversationDetailInfoResponseBodyDataVariables : TeaModel {
                 /// <summary>
-                /// <para>The variable ID.</para>
+                /// <para>The ID of the variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
@@ -348,7 +356,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The variable key.</para>
+                /// <para>The key of the variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -358,7 +366,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The variable name.</para>
+                /// <para>The name of the variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Name</para>
@@ -368,11 +376,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the variable is required. Valid values:</para>
+                /// <para>Specifies whether the variable is required. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Required.</para>
+                /// <item><description><para>true: yes</para>
                 /// </description></item>
-                /// <item><description><para>false: Not required.</para>
+                /// <item><description><para>false: no</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -384,7 +392,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public bool? Required { get; set; }
 
                 /// <summary>
-                /// <para>The variable source.</para>
+                /// <para>The source of the variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Sample value</para>
@@ -394,10 +402,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The variable value.</para>
+                /// <para>The value of the variable.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>John</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -411,7 +419,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -428,10 +436,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: yes</description></item>
+        /// <item><description><b>false</b>: no</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

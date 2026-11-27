@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class SubmitAudioNoteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access is denied.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The recording notes task ID returned after successful submission. This value corresponds to the CallId in the subsequent asynchronous notes result callback.</para>
+        /// <para>The ID of the audio note task returned after a successful submission, which is the CallId in the subsequent asynchronous audio note result callback.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000000000001_100000000000000002</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789012</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful.</para>
+        /// <para>Indicates whether the API operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

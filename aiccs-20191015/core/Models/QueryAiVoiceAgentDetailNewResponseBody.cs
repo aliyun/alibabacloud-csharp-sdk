@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiVoiceAgentDetailNewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public QueryAiVoiceAgentDetailNewResponseBodyData Data { get; set; }
         public class QueryAiVoiceAgentDetailNewResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The intelligent outbound voice call configuration.</para>
+            /// <para>The voice configuration for intelligent outbound calls.</para>
             /// </summary>
             [NameInMap("AgentCallConfig")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public QueryAiVoiceAgentDetailNewResponseBodyDataAgentCallConfigEventConfig EventConfig { get; set; }
                 public class QueryAiVoiceAgentDetailNewResponseBodyDataAgentCallConfigEventConfig : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to hang up when intelligent answering is detected.</para>
+                    /// <para>Specifies whether to hang up when an AI answering assistant is detected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public bool? CallAssistantHangup { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether intelligent answering recognition is enabled.</para>
+                    /// <para>Specifies whether AI answering assistant recognition is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public bool? CallAssistantRecognize { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the first silence event triggers the model.</para>
+                    /// <para>Specifies whether the first mute event triggers the model.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public bool? MuteActive { get; set; }
 
                     /// <summary>
-                    /// <para>The silence duration in seconds. Minimum: 3s. Maximum: 15s.</para>
+                    /// <para>The mute duration in seconds. The minimum value is 3 and the maximum value is 15.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? MuteDuration { get; set; }
 
                     /// <summary>
-                    /// <para>The number of consecutive silence events before the call is automatically hung up. Minimum: 1. Maximum: 5.</para>
+                    /// <para>The number of consecutive mute events that trigger an automatic hang-up. The minimum value is 1 and the maximum value is 5.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? MuteHangupNum { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum call duration in seconds. Minimum: 600s. Maximum: 3600s. The call is automatically hung up after the timeout.</para>
+                    /// <para>The maximum call duration in seconds. The minimum value is 600 and the maximum value is 3600. The call is automatically disconnected after a timeout.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>The opening statement.</para>
+                /// <para>The opening remark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hello, this is ******</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Prologue { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the opening statement recording audio file. This parameter has a value only when StartWordType is set to 1.</para>
+                /// <para>The URL of the audio file for the opening remark recording. This parameter has a value only when StartWordType is set to 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/oss-file-key</para>
@@ -133,7 +133,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string RecordingFile { get; set; }
 
                 /// <summary>
-                /// <para>The opening statement type. 0: text. 1: recording.</para>
+                /// <para>The type of the opening remark. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Text.</description></item>
+                /// <item><description>1: Recording.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? StartWordType { get; set; }
 
                 /// <summary>
-                /// <para>The transfer-to-agent configuration.</para>
+                /// <para>The agent transfer configuration.</para>
                 /// </summary>
                 [NameInMap("TransferConfig")]
                 [Validation(Required=false)]
@@ -160,7 +164,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string CalledNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The caller number.</para>
+                    /// <para>The calling number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123111122222</para>
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string CallerNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The caller number type.</para>
+                    /// <para>The calling number type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>48</para>
@@ -180,7 +184,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? CallerNumberType { get; set; }
 
                     /// <summary>
-                    /// <para>The answering party number, such as a user mobile number, customer service agent number, or robot number.</para>
+                    /// <para>The answering party number, such as the user&quot;s mobile phone number, customer service agent number, or machine number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123111122222</para>
@@ -200,7 +204,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? CallingNumberType { get; set; }
 
                     /// <summary>
-                    /// <para>The customer line code.</para>
+                    /// <para>The customer route code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -230,7 +234,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string ExtraInfo { get; set; }
 
                     /// <summary>
-                    /// <para>The prompt displayed when the transfer to a human agent fails.</para>
+                    /// <para>The prompt message for a failed transfer to a human agent.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Failure description</para>
@@ -240,7 +244,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string FailureContent { get; set; }
 
                     /// <summary>
-                    /// <para>The agent line code.</para>
+                    /// <para>The agent route code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SEAT_CTI_A_NET</para>
@@ -250,7 +254,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string SeatRouteCode { get; set; }
 
                     /// <summary>
-                    /// <para>The agent line name.</para>
+                    /// <para>The agent route name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Human agent</para>
@@ -270,7 +274,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string TransferBizId { get; set; }
 
                     /// <summary>
-                    /// <para>The prompt displayed when the call is transferred to a human agent.</para>
+                    /// <para>The prompt message for transferring to a human agent.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Prompt message</para>
@@ -280,7 +284,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string TransferContent { get; set; }
 
                     /// <summary>
-                    /// <para>The transfer-to-agent type.</para>
+                    /// <para>The agent transfer type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>73</para>
@@ -319,7 +323,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public long? BackgroundSound { get; set; }
 
                     /// <summary>
-                    /// <para>The background sound volume. Valid values: 0: low. 1: medium. 2: high.</para>
+                    /// <para>The background sound volume. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>0: Low.</description></item>
+                    /// <item><description>1: Medium.</description></item>
+                    /// <item><description>2: High.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -369,7 +378,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string ResourceId { get; set; }
 
                     /// <summary>
-                    /// <para>The voice speed for TTS playback. Valid values: -200 to 200. Default value: 0.</para>
+                    /// <para>The voice speed during TTS playback. Valid values: -200 to 200. Default value: 0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -389,7 +398,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string TtsStyle { get; set; }
 
                     /// <summary>
-                    /// <para>The volume for TTS playback. Valid values: 0 to 100.</para>
+                    /// <para>The volume during TTS playback. Valid values: 0 to 100.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>88</para>
@@ -410,12 +419,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                     /// <summary>
                     /// <para>The TTS voice type. Valid values:</para>
-                    /// <para><c>VOICE_TYPE_SYSTEM</c>: system voice.</para>
-                    /// <para><c>VOICE_TYPE_CLONE</c>: cloned voice.</para>
-                    /// <para><c>VOICE_TYPE_DOUBAO</c>: Doubao voice.</para>
-                    /// <para><c>VOICE_TYPE_MINIMAX</c>: Minimax voice.</para>
-                    /// <para><c>VOICE_TYPE_OPENTTS</c>: open voice.</para>
-                    /// <para><c>VOICE_TYPE_BL_CUSTOM</c>: custom premium cloned voice.</para>
+                    /// <list type="bullet">
+                    /// <item><description><c>VOICE_TYPE_SYSTEM</c>: System voice.</description></item>
+                    /// <item><description><c>VOICE_TYPE_CLONE</c>: Cloned voice.</description></item>
+                    /// <item><description><c>VOICE_TYPE_DOUBAO</c>: Doubao voice.</description></item>
+                    /// <item><description><c>VOICE_TYPE_MINIMAX</c>: Minimax voice.</description></item>
+                    /// <item><description><c>VOICE_TYPE_OPENTTS</c>: Open voice.</description></item>
+                    /// <item><description><c>VOICE_TYPE_BL_CUSTOM</c>: Custom premium cloned voice.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>VOICE_TYPE_SYSTEM</para>
@@ -427,7 +438,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>The hot word library ID.</para>
+                /// <para>The hot word vocabulary ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>afb2c43**********83e6df30551c11f7</para>
@@ -511,7 +522,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The agent description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used for daily testing</para>
+            /// <para>For daily testing</para>
             /// </summary>
             [NameInMap("AgentDesc")]
             [Validation(Required=false)]
@@ -530,8 +541,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <summary>
             /// <para>The building method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: prompt mode.</description></item>
-            /// <item><description>1: dialog flow mode.</description></item>
+            /// <item><description>0: Prompt mode.</description></item>
+            /// <item><description>1: Dialog flow mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -554,8 +565,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <summary>
             /// <para>The deployment status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: not effective (NOT_EFFECT).</description></item>
-            /// <item><description>1: effective (EFFECT).</description></item>
+            /// <item><description>0: Not effective (NOT_EFFECT).</description></item>
+            /// <item><description>1: Effective (EFFECT).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -603,7 +614,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public QueryAiVoiceAgentDetailNewResponseBodyDataKnowledgeConfig KnowledgeConfig { get; set; }
             public class QueryAiVoiceAgentDetailNewResponseBodyDataKnowledgeConfig : TeaModel {
                 /// <summary>
-                /// <para>The collection of knowledge bases.</para>
+                /// <para>The knowledge base collection.</para>
                 /// </summary>
                 [NameInMap("KnowledgeIds")]
                 [Validation(Required=false)]
@@ -649,7 +660,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether RAG retrieval is enabled.</para>
+                    /// <para>Specifies whether RAG retrieval is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -663,7 +674,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>The call variable configurations.</para>
+            /// <para>The call variable configuration.</para>
             /// </summary>
             [NameInMap("PhoneTagConfig")]
             [Validation(Required=false)]
@@ -680,7 +691,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The available values for the call variable label.</para>
+                /// <para>The available values for the call variable tag.</para>
                 /// </summary>
                 [NameInMap("PhoneTagEnum")]
                 [Validation(Required=false)]
@@ -697,7 +708,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The label ID.</para>
+                    /// <para>The tag ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -707,7 +718,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The label value.</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>male</para>
@@ -739,7 +750,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string PhoneTagName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the call variable is required.</para>
+                /// <para>Specifies whether the call variable is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -759,7 +770,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string PhoneTagSource { get; set; }
 
                 /// <summary>
-                /// <para>The type of the call variable. Valid values: TEXT (text type) and ENUM (enumeration type).</para>
+                /// <para>The type of the call variable. Valid values: TEXT for text type, and ENUM for enumerable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENUM</para>
@@ -774,7 +785,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The scenario.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Personal customer lead conversion</para>
+            /// <para>Individual customer lead conversion</para>
             /// </summary>
             [NameInMap("Scene")]
             [Validation(Required=false)]
@@ -784,14 +795,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The service direction.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>Sample value sample value</para>
             /// </summary>
             [NameInMap("ServiceDirection")]
             [Validation(Required=false)]
             public string ServiceDirection { get; set; }
 
             /// <summary>
-            /// <para>The call summary configuration.</para>
+            /// <para>The call notes configuration.</para>
             /// </summary>
             [NameInMap("SummaryConfig")]
             [Validation(Required=false)]
@@ -825,7 +836,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                         /// <para>The tag.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Tag1</para>
+                        /// <para>Tag 1</para>
                         /// </summary>
                         [NameInMap("Tag")]
                         [Validation(Required=false)]
@@ -860,7 +871,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the main intent.</para>
+                    /// <para>The main intent description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Description of the main intent</para>
@@ -887,7 +898,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>The unique ID of the label.</para>
+                        /// <para>The unique ID of the tag.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>tag_12345</para>
@@ -909,7 +920,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the main intent.</para>
+                    /// <para>The main intent name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Customer inquiry handling</para>
@@ -919,7 +930,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string MainPurposeName { get; set; }
 
                     /// <summary>
-                    /// <para>The value type of the main intent. Valid values: TEXT (text type) and ENUM (enumeration type).</para>
+                    /// <para>The value type of the main intent. Valid values: TEXT for text type, and ENUM for enumerable type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ENUM</para>
@@ -931,7 +942,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 }
 
                 /// <summary>
-                /// <para>The output tag configurations.</para>
+                /// <para>The output tag configuration.</para>
                 /// </summary>
                 [NameInMap("OutputTagConfig")]
                 [Validation(Required=false)]
@@ -951,7 +962,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     /// <para>The description of the output tag.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The user\&quot;s willingness to purchase the product</para>
+                    /// <para>User willingness to purchase the product</para>
                     /// </summary>
                     [NameInMap("OutputTagDescription")]
                     [Validation(Required=false)]
@@ -997,7 +1008,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the output tag.</para>
+                    /// <para>The output tag name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Purchase willingness</para>
@@ -1007,7 +1018,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                     public string OutputTagName { get; set; }
 
                     /// <summary>
-                    /// <para>The value type of the output tag. Valid values: TEXT (text type) and ENUM (enumeration type).</para>
+                    /// <para>The value type of the output tag. Valid values: TEXT for text type, and ENUM for enumerable type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ENUM</para>
@@ -1051,9 +1062,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string VersionName { get; set; }
 
             /// <summary>
-            /// <para>The version publish status. Valid values:</para>
+            /// <para>The publish status of the version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Not published.</description></item>
+            /// <item><description>0: Unpublished.</description></item>
             /// <item><description>1: Published.</description></item>
             /// <item><description>2: Draft.</description></item>
             /// </list>
@@ -1066,7 +1077,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? VersionPublishStatus { get; set; }
 
             /// <summary>
-            /// <para>The most recent publish time of the version. Format: YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The last publish time of the version. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-15 10:30:00</para>
@@ -1098,7 +1109,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Specifies whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>

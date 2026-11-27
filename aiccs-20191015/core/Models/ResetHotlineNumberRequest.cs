@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ResetHotlineNumberRequest : TeaModel {
         /// <summary>
-        /// <para>Number description.</para>
+        /// <para>The description of the hotline number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>热线号码</para>
+        /// <para>Hotline number</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the number is used for inbound calls.</para>
+        /// <para>Specifies whether the hotline number is used for inbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableInbound { get; set; }
 
         /// <summary>
-        /// <para>Whether inbound call satisfaction evaluation is enabled.</para>
+        /// <para>Specifies whether to enable the satisfaction survey for inbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableInboundEvaluation { get; set; }
 
         /// <summary>
-        /// <para>Whether used for outbound calls.</para>
+        /// <para>Specifies whether the hotline number is used for outbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableOutbound { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether outbound satisfaction evaluation is enabled.</para>
+        /// <para>Specifies whether to enable the satisfaction survey for outbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,12 +65,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableOutboundEvaluation { get; set; }
 
         /// <summary>
-        /// <para>Satisfaction level. Valid values:</para>
+        /// <para>The satisfaction survey level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b>: Two-level (Satisfied, Not Satisfied)</description></item>
-        /// <item><description><b>3</b>: Three-level (Satisfied, Neutral, Not Satisfied)</description></item>
-        /// <item><description><b>4</b>: Four-level (Very Satisfied, Satisfied, Neutral, Not Satisfied)</description></item>
-        /// <item><description><b>5</b>: Five-level (Very Satisfied, Satisfied, Neutral, Not Satisfied, Very Poor)</description></item>
+        /// <item><description><b>2</b>: level 2 (satisfied, dissatisfied)</description></item>
+        /// <item><description><b>3</b>: level 3 (satisfied, neutral, dissatisfied)</description></item>
+        /// <item><description><b>4</b>: level 4 (very satisfied, satisfied, neutral, dissatisfied)</description></item>
+        /// <item><description><b>5</b>: level 5 (very satisfied, satisfied, neutral, dissatisfied, very poor)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? EvaluationLevel { get; set; }
 
         /// <summary>
-        /// <para>Hotline number.</para>
+        /// <para>The hotline number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string HotlineNumber { get; set; }
 
         /// <summary>
-        /// <para>The IVR flow ID for inbound calls.</para>
+        /// <para>The ID of the inbound Interactive Voice Response (IVR) flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? InboundFlowId { get; set; }
 
         /// <summary>
-        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the console.</para>
+        /// <para>Instance ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain instance ID from the AICCS console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether outbound calls apply to all departments.</para>
+        /// <para>Specifies whether outbound calls apply to all departments.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? OutboundAllDepart { get; set; }
 
         /// <summary>
-        /// <para>Outbound call effective scope.</para>
+        /// <para>The effective scope of outbound calls.</para>
         /// </summary>
         [NameInMap("OutboundRangeList")]
         [Validation(Required=false)]
         public List<ResetHotlineNumberRequestOutboundRangeList> OutboundRangeList { get; set; }
         public class ResetHotlineNumberRequestOutboundRangeList : TeaModel {
             /// <summary>
-            /// <para>Effective department ID.</para>
+            /// <para>The ID of the effective department.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -141,9 +141,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? DepartmentId { get; set; }
 
             /// <summary>
-            /// <para>List of effective skill groups.</para>
+            /// <para>The list of effective skill groups.</para>
             /// <remarks>
-            /// <para>If the skill group list is empty, the setting applies to the entire department. Otherwise, it applies only to the specified skill groups under the department.</para>
+            /// <para>If the skill group list is empty, the configuration applies to the entire department. Otherwise, it applies only to the specified skill groups under the department.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("GroupIdList")]

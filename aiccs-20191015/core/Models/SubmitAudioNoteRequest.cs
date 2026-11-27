@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class SubmitAudioNoteRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the notes agent. Specify the ID of a published recording notes agent.</para>
+        /// <para>The ID of the audio note agent. You must specify the ID of an online audio note agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The custom task ID defined by the business side. This ID is used to associate external business records during callbacks or troubleshooting.</para>
+        /// <para>The custom task ID defined by your business system, used to associate external business records for callbacks or troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>biz-001</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The storage path of the recording file in OSS. Use the FilePath returned by the upload address retrieval operation.</para>
+        /// <para>The storage path of the audio file in OSS. You must use the FilePath returned by the operation for obtaining the upload URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the LLM model used for notes inference. If this parameter is not specified, the default model configuration of the agent is used.</para>
+        /// <para>The ID of the large language model (LLM) used for audio note inference. If you do not specify this parameter, the default model configuration of the agent is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>88</para>

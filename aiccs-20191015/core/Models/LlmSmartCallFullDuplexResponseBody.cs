@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class LlmSmartCallFullDuplexResponseBody : TeaModel {
         /// <summary>
-        /// <para>The call record ID that identifies a call record.</para>
+        /// <para>The call record ID, which is used to identify a call record.</para>
         /// <remarks>
-        /// <para>When you call the LlmSmartCall operation to initiate an LLM-based outbound call, this call record ID (CallId) is returned.</para>
+        /// <para>When you call the LlmSmartCall operation for large model outbound calls, this call record ID, namely CallId, is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

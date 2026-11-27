@@ -57,37 +57,45 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The agent name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>TestAgent.</para>
+                /// <para>Test agent</para>
                 /// </summary>
                 [NameInMap("AgentName")]
                 [Validation(Required=false)]
                 public string AgentName { get; set; }
 
                 /// <summary>
+                /// <para>The application code.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>Sample value.</para>
+                /// <para>Sample value</para>
                 /// </summary>
                 [NameInMap("ApplicationCode")]
                 [Validation(Required=false)]
                 public string ApplicationCode { get; set; }
 
                 /// <summary>
+                /// <para>The application name.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>Sample value.</para>
+                /// <para>Sample value</para>
                 /// </summary>
                 [NameInMap("ApplicationName")]
                 [Validation(Required=false)]
                 public string ApplicationName { get; set; }
 
                 /// <summary>
+                /// <para>The call expiration date.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>Sample value.</para>
+                /// <para>Sample value</para>
                 /// </summary>
                 [NameInMap("CallExpireDate")]
                 [Validation(Required=false)]
                 public string CallExpireDate { get; set; }
 
                 /// <summary>
+                /// <para>The call expiration duration in minutes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>39</para>
                 /// </summary>
@@ -96,6 +104,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? CallExpireMinutes { get; set; }
 
                 /// <summary>
+                /// <para>The call expiration type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>72</para>
                 /// </summary>
@@ -124,7 +134,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CompleteRate { get; set; }
 
                 /// <summary>
-                /// <para>The task concurrency.</para>
+                /// <para>The concurrency of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -134,7 +144,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ConcurrentCount { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The creation time. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748932499000</para>
@@ -144,7 +154,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of calls made on the current day.</para>
+                /// <para>The number of voice calls on the current day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
@@ -154,7 +164,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? DayCallCount { get; set; }
 
                 /// <summary>
-                /// <para>The daily connection rate. Daily connection rate = number of connections on the current day ÷ number of calls on the current day (DayCallCount).</para>
+                /// <para>The connection rate on the current day. The daily connection rate is calculated by dividing the number of connected calls on the current day by the number of voice calls on the current day (DayCallCount).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>74.14%</para>
@@ -174,7 +184,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? DayImportCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of failed task executions.</para>
+                /// <para>The total number of failures for the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>61</para>
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? FailedCount { get; set; }
 
                 /// <summary>
-                /// <para>The historical connection rate. Historical connection rate = historical number of connections ÷ total number of calls (TotalCallCount).</para>
+                /// <para>The historical connection rate. The historical connection rate is calculated by dividing the historical number of connected calls by the total number of voice calls (TotalCallCount).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>95.89%</para>
@@ -194,7 +204,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string HistoryConnectRate { get; set; }
 
                 /// <summary>
-                /// <para>The actual start time of the task. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The actual start time of the task. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748932499000</para>
@@ -204,17 +214,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? RealStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The reason for startup failure.</para>
+                /// <para>The reason for the start failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Agent is offline.</para>
+                /// <para>The agent is offline</para>
                 /// </summary>
                 [NameInMap("StartFailedReason")]
                 [Validation(Required=false)]
                 public string StartFailedReason { get; set; }
 
                 /// <summary>
-                /// <para>The scheduled start time of the task. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The scheduled start time of the task. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748932499000</para>
@@ -234,7 +244,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? Status { get; set; }
 
                 /// <summary>
-                /// <para>The total number of successful task executions.</para>
+                /// <para>The total number of successes for the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>36</para>
@@ -257,14 +267,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The task name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>TestTask.</para>
+                /// <para>Test task</para>
                 /// </summary>
                 [NameInMap("TaskName")]
                 [Validation(Required=false)]
                 public string TaskName { get; set; }
 
                 /// <summary>
-                /// <para>The total number of calls made by the task.</para>
+                /// <para>The total number of voice calls for the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>58</para>
@@ -274,7 +284,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? TotalCallCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of task items.</para>
+                /// <para>The total count of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>71</para>
@@ -318,10 +328,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned when the call is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Invalid parameter.</para>
+        /// <para>Invalid parameter</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -338,10 +348,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: successful.</description></item>
-        /// <item><description><b>false</b>: failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

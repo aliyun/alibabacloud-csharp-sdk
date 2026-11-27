@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ApplicationCode { get; set; }
 
         /// <summary>
-        /// <para><b>CalledNumber</b><br>The phone number that receives the intelligent outbound call.</para>
+        /// <para><b>CalledNumber</b><br>The called number that receives the intelligent outbound call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
-        /// <para><b>CallerNumber</b><br>The calling number.</para>
+        /// <para><b>CallerNumber</b><br>The caller number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallerNumber { get; set; }
 
         /// <summary>
-        /// <para><b>OutId</b><br>The external ID. The value must be 1 to 15 bytes in length.</para>
+        /// <para><b>OutId</b><br>The external ID. The length is 1 to 15 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>out123</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OutId { get; set; }
 
         /// <summary>
-        /// <para><b>SessionTimeout</b><br>The maximum call duration. The call is automatically ended when the specified duration is exceeded. Unit: seconds. Maximum value: 3600.</para>
+        /// <para><b>SessionTimeout</b><br>The maximum call duration. The call is automatically hung up after a timeout. Unit: seconds. The maximum call duration is 3,600 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -63,17 +63,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? SessionTimeout { get; set; }
 
         /// <summary>
-        /// <para><b>StartWordParam</b><br>The opening greeting variable. Format: JSON. Specify the variable name and parameter, for example, <c>{&quot;custom&quot;:&quot;XXX&quot;}</c>.</para>
+        /// <para><b>StartWordParam</b><br>The opening remark variables. Format: JSON. The format is opening remark variable name + parameter, such as <c>{&quot;custom&quot;:&quot;XXX&quot;}</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;tailnumber\&quot;:\&quot;7898\&quot;,\&quot;platformOrder\&quot;:\&quot;\&quot;,\&quot;signatory\&quot;:\&quot;客户\&quot;}</para>
+        /// <para>{&quot;tailnumber&quot;:&quot;7898&quot;,&quot;platformOrder&quot;:&quot;&quot;,&quot;signatory&quot;:&quot;Customer&quot;}</para>
         /// </summary>
         [NameInMap("StartWordParam")]
         [Validation(Required=false)]
         public string StartWordParamShrink { get; set; }
 
         /// <summary>
-        /// <para>The voice speed. Valid values: 0 to 100. If this parameter is not specified, the value configured in the application is used.</para>
+        /// <para>The voice speed. Valid values: 0 to 100. If you do not specify this parameter, the value configured in the application is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? TtsSpeed { get; set; }
 
         /// <summary>
-        /// <para>The voice code from the personalized voice interface. If this parameter is not specified, the value configured in the application is used.</para>
+        /// <para>The voice code for the personalized voice. If you do not specify this parameter, the value configured in the application is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V745A7CED</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TtsVoiceCode { get; set; }
 
         /// <summary>
-        /// <para>The volume. Valid values: -200 to 200. If this parameter is not specified, the value configured in the application is used.</para>
+        /// <para>The volume. Valid values: -200 to 200. If you do not specify this parameter, the value configured in the application is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

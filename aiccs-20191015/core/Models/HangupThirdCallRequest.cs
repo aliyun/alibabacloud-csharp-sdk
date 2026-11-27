@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class HangupThirdCallRequest : TeaModel {
         /// <summary>
-        /// <para>Agent account name (agent logon name)</para>
+        /// <para>The name of the agent account, which is the logon name of the agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The acid from the WebSocket after an incoming call</para>
+        /// <para>The acid value in the WebSocket after an inbound call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7719786</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>Unique ID of the customer request, used for idempotency validation; can be generated using UUID</para>
+        /// <para>The unique ID of the client request, which is used to ensure idempotence. You can use a UUID to generate the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The connId from the WebSocket after an incoming call</para>
+        /// <para>The connId value in the WebSocket after an inbound call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7719788</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ConnectionId { get; set; }
 
         /// <summary>
-        /// <para>Artificial Intelligence Cloud Call Service (AICCS) instance ID, visible in the Artificial Intelligence Cloud Call Service console</para>
+        /// <para>The ID of the AICCS instance. You can view the instance ID in the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The jobId from the WebSocket after an incoming call</para>
+        /// <para>The jobId value in the WebSocket after an inbound call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7719787</para>

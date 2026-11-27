@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The voice code for a custom voice. You can find it on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page.</para>
+        /// <para>The personalized voice code. You can view the voice code on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Personalized Voices</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V9A******</para>
@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TtsVoiceCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the TTS voice. Valid values:</para>
-        /// <para><c>SYSTEM</c>: system voice.</para>
-        /// <para><c>COSYCLONE</c>: cloned voice.</para>
-        /// <para><c>BL-CUSTOM</c>: premium custom voice.</para>
+        /// <para>The enumeration value of the TTS voice type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>SYSTEM</c>: system voice.</description></item>
+        /// <item><description><c>COSYCLONE</c>: cloned voice.</description></item>
+        /// <item><description><c>BL-CUSTOM</c>: custom premium cloned voice.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>

@@ -242,6 +242,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                 /// <summary>
                 /// <para>The large field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;test&quot;:&quot;test&quot;,&quot;test2&quot;:1}</para>
                 /// </summary>
                 [NameInMap("ExtAttrsString")]
                 [Validation(Required=false)]

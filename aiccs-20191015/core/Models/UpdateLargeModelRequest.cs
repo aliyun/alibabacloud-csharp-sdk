@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Controls the randomness of the model\&quot;s output. A higher value increases randomness, and a lower value makes the output more deterministic.</para>
+        /// <para>Controls the randomness of the model&quot;s output. A higher value increases randomness, and a lower value makes the output more deterministic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1</para>

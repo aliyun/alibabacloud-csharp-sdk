@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryConversationDetailInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The task batch ID. This is the batch ID returned when callee data is imported. View the task batch ID on the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> page, or use the batch ID returned when importing callee data by calling the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operation.</para>
+        /// <para>The task batch ID. This is the batch ID returned when you import called numbers. You can view the task batch ID on the <b>Call task management</b> &gt; <b>Details</b> &gt; <b>Execution records</b> page or obtain the batch ID returned when you call the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operation to import called numbers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string BatchId { get; set; }
 
         /// <summary>
-        /// <para>The task detail ID. View the task detail ID in the upper-left corner of the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> page, or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation.</para>
+        /// <para>The task detail ID. You can view the task detail ID in the upper-left corner of the <b>Call task management</b> &gt; <b>Details</b> &gt; <b>Execution records</b> &gt; <b>Completed</b> &gt; <b>Call details</b> page or call the <a href="https://help.aliyun.com/document_detail/2926853.html">QueryAiCallDetailPage</a> operation to obtain the task detail ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The task ID. View the task ID on the <b>Call Task Management</b> page or retrieve it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</para>
+        /// <para>The task ID. You can view the task ID on the <b>Call task management</b> page or call the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation to obtain the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

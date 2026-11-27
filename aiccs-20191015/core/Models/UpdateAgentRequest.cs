@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.  </para>
+        /// <para>The account name of the agent, which is the mobile phone number or email address specified during account registration. The account name must be unique within the instance.</para>
         /// <remarks>
-        /// <para>Update is not supported.</para>
+        /// <para>This parameter cannot be updated.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</para>
+        /// <para>The unique ID of the client request. This parameter is used for idempotence verification. You can use a UUID to generate the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
@@ -34,18 +34,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Agent\&quot;s display name.</para>
+        /// <para>The display name of the agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XX测试</para>
+        /// <para>XX Test</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>AICCS instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The ID of the Artificial Intelligence Cloud Call Service instance.
+        /// You can obtain the instance ID from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,14 +57,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Skill groups to which the agent belongs.</para>
+        /// <para>The skill group to which the agent belongs.</para>
         /// </summary>
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
         public List<long?> SkillGroupId { get; set; }
 
         /// <summary>
-        /// <para>List of skill groups to which the agent belongs.</para>
+        /// <para>The list of skill groups to which the agent belongs.</para>
         /// </summary>
         [NameInMap("SkillGroupIdList")]
         [Validation(Required=false)]

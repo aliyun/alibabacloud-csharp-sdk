@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The dialog content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;content\&quot;:\&quot;您好。\&quot;,\&quot;role\&quot;:\&quot;assistant\&quot;},{\&quot;content\&quot;:\&quot;不用了。\&quot;,\&quot;role\&quot;:\&quot;user\&quot;},{\&quot;content\&quot;:\&quot;呃，不用了，再见，谢谢。\&quot;,\&quot;role\&quot;:\&quot;user\&quot;}]</para>
+            /// <para>[{&quot;content&quot;:&quot;您好。&quot;,&quot;role&quot;:&quot;assistant&quot;},{&quot;content&quot;:&quot;不用了。&quot;,&quot;role&quot;:&quot;user&quot;},{&quot;content&quot;:&quot;呃，不用了，再见，谢谢。&quot;,&quot;role&quot;:&quot;user&quot;}]</para>
             /// </summary>
             [NameInMap("DialogContent")]
             [Validation(Required=false)]

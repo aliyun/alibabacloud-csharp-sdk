@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListHotlineRecordRequest : TeaModel {
         /// <summary>
-        /// <para>Session ID. This corresponds to the acid in WebSocket after an inbound call.</para>
+        /// <para>The session ID. This is the acid value in the WebSocket after an inbound call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>Unique customer request ID. Used for idempotency validation. You can generate it using UUID.</para>
+        /// <para>The unique ID of the client request. It is used to ensure idempotency. You can generate the value by using a UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</para>
+        /// <para>Instance ID of the AICCS instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

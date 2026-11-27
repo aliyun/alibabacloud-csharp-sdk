@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiCallTaskPageRequest : TeaModel {
         /// <summary>
-        /// <para>The agent name. The system performs a fuzzy match based on the agent name.</para>
+        /// <para>The agent name. The system performs a fuzzy search based on the agent name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestAgent.</para>
+        /// <para>Test agent</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging. Settings for the number of rows per page.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -63,8 +63,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
         /// <summary>
         /// <para>The creation source. Valid values:</para>
-        /// <para>0: created by agent.</para>
-        /// <para>1: created by engine.</para>
+        /// <list type="bullet">
+        /// <item><description>0: Created by an agent.</description></item>
+        /// <item><description>1: Created by the engine.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -76,10 +78,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INIT: init (not started).</description></item>
-        /// <item><description>FAILED: startup failed.</description></item>
-        /// <item><description>RUNNING: running.</description></item>
-        /// <item><description>STOPPED: stopped.</description></item>
+        /// <item><description>INIT: Initialized (not started).</description></item>
+        /// <item><description>FAILED: Failed to start.</description></item>
+        /// <item><description>RUNNING: Running.</description></item>
+        /// <item><description>STOPPED: Stopped.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,10 +102,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task name. The system performs a fuzzy match based on the task name.</para>
+        /// <para>The task name. The system performs a fuzzy search based on the task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestTask.</para>
+        /// <para>Test task</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

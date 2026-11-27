@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListRobotCallDialogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code. OK indicates that the request was successful.</para>
+        /// <para>The status code of the request. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The script content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>I am a customer service representative from XX. I noticed that you previously looked for a job with us. I am doing a follow-up. How is your work going?</para>
+            /// <para>I am a customer service representative from XX. I noticed that you previously looked for a job with us, so I am making a follow-up call. How is your current job going?</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The node type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Opening</para>
+            /// <para>Opening statement</para>
             /// </summary>
             [NameInMap("NodeType")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The intent label.</para>
+            /// <para>The intent tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Rejection</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The start time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The start time. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621483557000</para>
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The operation was successful.</description></item>
+        /// <item><description><b>false</b>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

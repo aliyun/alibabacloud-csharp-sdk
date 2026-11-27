@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddHotlineNumberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of &quot;Success&quot; indicates that the request succeeded.</para>
+        /// <para>The status code. A return value of Success indicates that the request succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

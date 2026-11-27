@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetConfigNumListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A return value of &quot;Success&quot; indicates that the request succeeded.</para>
+        /// <para>The status code. A value of Success indicates that the request succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number list.</para>
+        /// <para>The list of phone numbers.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<string> Data { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -47,7 +47,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call succeeded.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

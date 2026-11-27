@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineCallActionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetHotlineCallActionResponseBodyData Data { get; set; }
         public class GetHotlineCallActionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Customer ID.</para>
+            /// <para>The customer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8999****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? ActionId { get; set; }
 
             /// <summary>
-            /// <para>Tenant ID.</para>
+            /// <para>The tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2367****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? BuId { get; set; }
 
             /// <summary>
-            /// <para>Callout ID.</para>
+            /// <para>The call ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1122****</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? CalloutId { get; set; }
 
             /// <summary>
-            /// <para>Call name.</para>
+            /// <para>The call name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>王XX</para>
+            /// <para>Wang XX</para>
             /// </summary>
             [NameInMap("CalloutName")]
             [Validation(Required=false)]
             public string CalloutName { get; set; }
 
             /// <summary>
-            /// <para>Ticket ID.</para>
+            /// <para>The ticket ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1138902****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? CaseId { get; set; }
 
             /// <summary>
-            /// <para>Channel ID.</para>
+            /// <para>The channel ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2377****</para>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ChannelId { get; set; }
 
             /// <summary>
-            /// <para>Channel Type. Valid values:</para>
+            /// <para>The channel type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Hotline.</description></item>
-            /// <item><description><b>2</b>: Online.</description></item>
+            /// <item><description><b>1</b>: hotline.</description></item>
+            /// <item><description><b>2</b>: online.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? ChannelType { get; set; }
 
             /// <summary>
-            /// <para>Department ID.</para>
+            /// <para>The department ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1223****</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string IsTransfer { get; set; }
 
             /// <summary>
-            /// <para>Membership ID.</para>
+            /// <para>The member ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7856876****</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? MemberId { get; set; }
 
             /// <summary>
-            /// <para>Membership List.</para>
+            /// <para>The list of members.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8900****</para>
@@ -141,17 +141,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string MemberList { get; set; }
 
             /// <summary>
-            /// <para>Membership name.</para>
+            /// <para>The name of the member.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>匿名会员</para>
+            /// <para>Anonymous Member</para>
             /// </summary>
             [NameInMap("MemberName")]
             [Validation(Required=false)]
             public string MemberName { get; set; }
 
             /// <summary>
-            /// <para>Agent ID.</para>
+            /// <para>The agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1332****</para>
@@ -161,17 +161,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? ServicerId { get; set; }
 
             /// <summary>
-            /// <para>Agent name.</para>
+            /// <para>The name of the customer service representative.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>XX测试</para>
+            /// <para>XX Test</para>
             /// </summary>
             [NameInMap("ServicerName")]
             [Validation(Required=false)]
             public string ServicerName { get; set; }
 
             /// <summary>
-            /// <para>Sub-touch ID.</para>
+            /// <para>The sub-touch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3423****</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? SubTouchId { get; set; }
 
             /// <summary>
-            /// <para>Job ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345****</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>Touch ID.</para>
+            /// <para>The touch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2235****</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE339D98-9BD3-4413-B165</para>
@@ -223,10 +223,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The API call is successful.</description></item>
+        /// <item><description><b>false</b>: The API call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

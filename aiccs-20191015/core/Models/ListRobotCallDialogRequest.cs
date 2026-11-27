@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListRobotCallDialogRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the call. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and obtain the value from the <b>Data</b> field in the response.</para>
+        /// <para>The unique ID of the call. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and view the <b>Data</b> response parameter to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>The creation time. Format: YYYY-MM-DD hh:mm:ss. The time must be specified precisely. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and obtain the value from the <b>date</b> parameter in the <b>Response Header</b>.</para>
+        /// <para>The creation time. Format: YYYY-MM-DD hh:mm:ss. The time must be accurate to the second. You can call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation and view the <b>date</b> parameter in the <b>Response Header</b> to obtain the time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

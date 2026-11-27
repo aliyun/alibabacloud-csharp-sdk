@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CancelAiCallDetailsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The batch ID. This ID is returned when you import callee data. You can find the task batch ID on the <b>Call Task Management</b>&gt;<b>Details</b>&gt;<b>Execution Record</b> page, or use the import batch ID that is returned by the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> API operation. If DetailIdList is specified, this parameter is invalid.</para>
+        /// <para>The batch ID. This is the batch ID returned when callee data is imported. You can view the batch ID on the <b>Call task management</b> &gt; <b>Details</b> &gt; <b>Execution records</b> page, or use the batch ID returned when you call the <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operation to import callee data. If the DetailIdList parameter is specified, this parameter is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4253331213*****</para>
@@ -20,15 +20,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string BatchId { get; set; }
 
         /// <summary>
-        /// <para>A list of detail IDs. If you specify this parameter, <c>BatchId</c> and <c>PhoneNumbers</c> are ignored.</para>
+        /// <para>The list of task detail IDs. If this parameter is specified, it takes precedence, and the BatchId and PhoneNumbers parameters are invalid.</para>
         /// </summary>
         [NameInMap("DetailIdList")]
         [Validation(Required=false)]
         public string DetailIdListShrink { get; set; }
 
         /// <summary>
+        /// <para>The encryption method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: No encryption.</description></item>
+        /// <item><description>1: MD5.</description></item>
+        /// <item><description>2: SHA256.</description></item>
+        /// <item><description>3: SM3.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>36</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("EncryptionType")]
         [Validation(Required=false)]
@@ -39,7 +47,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A list of phone numbers. This parameter takes effect only when <c>BatchId</c> is also specified.</para>
+        /// <para>The list of phone numbers. To use this parameter, you must specify the BatchId parameter. Otherwise, this parameter is considered invalid.</para>
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
@@ -54,7 +62,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You can view the task ID on the <b>Call Task Management</b> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</para>
+        /// <para>The task ID. You can view the task ID on the <b>Call task management</b> page or obtain the task ID by calling the <a href="https://help.aliyun.com/document_detail/2926799.html">QueryAiCallTaskPage</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

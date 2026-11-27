@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineRuntimeInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The agent account name. It is unique within the instance (logon name).</para>
+        /// <para>The agent account name. The name is unique within the instance and used as the logon name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.  </para>
-        /// <para>You can log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> and view the instance ID in <b>Instance Management</b>.</para>
+        /// <para>The instance ID. Log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a> and view the instance ID in <b>Instance Management</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

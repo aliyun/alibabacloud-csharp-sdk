@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>Customer information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;caseId\&quot;:2323****}</para>
+        /// <para>{&quot;caseId&quot;:2323****}</para>
         /// </summary>
         [NameInMap("CustomerInfo")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiCallDetailPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public QueryAiCallDetailPageResponseBodyData Data { get; set; }
         public class QueryAiCallDetailPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of task detail data.</para>
+            /// <para>The list of task details.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? BranchVersionId { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the outbound call detail. Format: YYYY-MM-DD HH:mm:ss.</para>
+                /// <para>The expiration time of the outbound call detail. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2026-07-30 20:00:20</para>
+                /// <para>1785412820000</para>
                 /// </summary>
                 [NameInMap("CallExpireTime")]
                 [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CalledNumber { get; set; }
 
                 /// <summary>
-                /// <para>The calling time. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The call time. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748948749000</para>
@@ -144,11 +144,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ConversationDuration { get; set; }
 
                 /// <summary>
-                /// <para>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The structure is as follows:</para>
+                /// <para>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. Details:</para>
                 /// <pre><code class="language-json">[
                 ///     {
                 ///         &quot;content&quot;:&quot;Chat content&quot;,
-                ///         &quot;role&quot;:&quot;Role&quot;,//Valid values: user and assistant (bot).
+                ///         &quot;role&quot;:&quot;Role&quot;,//Valid values: user (user), assistant (robot)
                 ///     }
                 /// ]
                 /// </c></pre>
@@ -156,52 +156,52 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <b>Example:</b>
                 /// <para>[
                 ///     {
-                ///         &quot;content&quot;: &quot;111您好，年龄222，性别男，我这边是<b>汽车的官方顾问，我们新出了一款车型为</b>；<b>已经上市了，售价</b>万元起，<b>分钟破*台，您看要不了解一下？&quot;,
+                ///         &quot;content&quot;: &quot;Hello 111, age 222, gender male. I am the official consultant for ** Motors. We have launched a new model, **. ** is now on the market with a starting price of ** 10,000 yuan. It sold * units in ** minutes. Would you like to learn more?&quot;,
                 ///         &quot;role&quot;: &quot;assistant&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，你是谁？&quot;,
-                ///         &quot;role&quot;: &quot;user&quot;,
+                ///         &quot;content&quot;: &quot;<Customer interruption> Hey, who are you?&quot;,
+                ///         &quot;role&quot;: &quot;user&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;&lt;客户打断&gt;你再说一遍。&quot;,
-                ///         &quot;role&quot;: &quot;user&quot;,
+                ///         &quot;content&quot;: &quot;<Customer interruption> Say that again.&quot;,
+                ///         &quot;role&quot;: &quot;user&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;哎，我没听清。&quot;,
-                ///         &quot;role&quot;: &quot;user&quot;,
+                ///         &quot;content&quot;: &quot;Hey, I didn&quot;t catch that.&quot;,
+                ///         &quot;role&quot;: &quot;user&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;你在说什么？&quot;,
-                ///         &quot;role&quot;: &quot;user&quot;,
+                ///         &quot;content&quot;: &quot;What are you saying?&quot;,
+                ///         &quot;role&quot;: &quot;user&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;您好，&quot;,
-                ///         &quot;role&quot;: &quot;assistant&quot;,
+                ///         &quot;content&quot;: &quot;Hello,&quot;,
+                ///         &quot;role&quot;: &quot;assistant&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;我是</b>汽车总部销售服务顾问。&quot;,
-                ///         &quot;role&quot;: &quot;assistant&quot;,
+                ///         &quot;content&quot;: &quot;I am a sales service consultant at ** Motors headquarters.&quot;,
+                ///         &quot;role&quot;: &quot;assistant&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;我们最近推出了一款新车**，想了解一下您是否对这款车型感兴趣？&quot;,
-                ///         &quot;role&quot;: &quot;assistant&quot;,
+                ///         &quot;content&quot;: &quot;We recently launched a new car, **. I would like to know if you are interested in this model.&quot;,
+                ///         &quot;role&quot;: &quot;assistant&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;&lt;客户打断&gt;哎，那我是谁？&quot;,
-                ///         &quot;role&quot;: &quot;user&quot;,
+                ///         &quot;content&quot;: &quot;<Customer interruption> Hey, then who am I?&quot;,
+                ///         &quot;role&quot;: &quot;user&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;你在说什么呢？&quot;,
-                ///         &quot;role&quot;: &quot;user&quot;,
+                ///         &quot;content&quot;: &quot;What are you talking about?&quot;,
+                ///         &quot;role&quot;: &quot;user&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;抱歉打扰了，111先生。&quot;,
-                ///         &quot;role&quot;: &quot;assistant&quot;,
+                ///         &quot;content&quot;: &quot;Sorry to bother you, Mr. 111.&quot;,
+                ///         &quot;role&quot;: &quot;assistant&quot;
                 ///     },
                 ///     {
-                ///         &quot;content&quot;: &quot;祝您生活愉快！再见！&quot;,
-                ///         &quot;role&quot;: &quot;assistant&quot;,
+                ///         &quot;content&quot;: &quot;Have a great day! Goodbye!&quot;,
+                ///         &quot;role&quot;: &quot;assistant&quot;
                 ///     }
                 /// ]</para>
                 /// </summary>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string DetailId { get; set; }
 
                 /// <summary>
-                /// <para>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</para>
+                /// <para>The encryption method. Valid values: 0: No encryption. 1: MD5. 2: SHA256. 3: SM3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string FailedReason { get; set; }
 
                 /// <summary>
-                /// <para>The import time. This value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The import time. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748948749000</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ImportedTime { get; set; }
 
                 /// <summary>
-                /// <para>The major intent.</para>
+                /// <para>The primary intent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>A</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Options { get; set; }
 
                 /// <summary>
-                /// <para>The external business serial number reserved for external input. You can use a unique ID for business association.</para>
+                /// <para>The custom business transaction ID provided by the caller. You can use a unique ID to associate the business.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>outId</para>
@@ -310,14 +310,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <summary>
                 /// <para>The task detail status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: Initialization.</description></item>
+                /// <item><description>0: Initialized.</description></item>
                 /// <item><description>1: Waiting for call.</description></item>
                 /// <item><description>2: Waiting for retry.</description></item>
                 /// <item><description>3: Calling.</description></item>
                 /// <item><description>4: Call ended.</description></item>
                 /// <item><description>5: Call failed.</description></item>
                 /// </list>
-                /// <para>Only 4 and 5 are desired states.</para>
+                /// <para>Only 4 and 5 are final states.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>

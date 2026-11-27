@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListDialogResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request status code. A return value of OK indicates that the request succeeded.</para>
+        /// <para>The request status code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Call interaction content.</para>
+        /// <para>The call interaction content.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDialogResponseBodyData> Data { get; set; }
         public class ListDialogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Dialogue content.</para>
+            /// <para>The script content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>您好</para>
+            /// <para>Hello</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>File Type.</para>
+            /// <para>The node type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>Speaking role. Valid values:</para>
+            /// <para>The role of the speaker. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>robot: Bot.</para>
+            /// <item><description><para>robot: The speaker is a robot.</para>
             /// </description></item>
-            /// <item><description><para>user: User.</para>
+            /// <item><description><para>user: The speaker is a user.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -63,17 +63,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>Intent label.</para>
+            /// <para>The intent tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>肯定</para>
+            /// <para>Affirmative</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>Start Time. UNIX timestamp format, in milliseconds.</para>
+            /// <para>The start time. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1619763900718</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Status code description.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</para>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API invocation succeeded. Valid values:  </para>
+        /// <para>Indicates whether the operation was called successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.  </description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

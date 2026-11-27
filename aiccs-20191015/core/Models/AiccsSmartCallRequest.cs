@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledShowNumber { get; set; }
 
         /// <summary>
-        /// <para>The dynamic extension ID reserved for the caller. This ID is returned in the callback URL for the caller\&quot;s development identifier.</para>
+        /// <para>The dynamic extension ID reserved for the caller. This ID is returned in the callback URL for the caller&quot;s development identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2234****</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The TTS parameter string in JSON format. This parameter must correspond to the TTS parameters in VoiceCode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;{\&quot;name\&quot;:\&quot;Hello\&quot;}&quot;</para>
+        /// <para>&quot;{&quot;name&quot;:&quot;Hello&quot;}&quot;</para>
         /// </summary>
         [NameInMap("VoiceCodeParam")]
         [Validation(Required=false)]

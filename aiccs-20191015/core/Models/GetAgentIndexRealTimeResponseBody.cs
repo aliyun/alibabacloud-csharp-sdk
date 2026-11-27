@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAgentIndexRealTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,31 +20,31 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data list.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAgentIndexRealTimeResponseBodyData Data { get; set; }
         public class GetAgentIndexRealTimeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Description of returned columns.</para>
+            /// <para>The descriptions of the returned columns.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<GetAgentIndexRealTimeResponseBodyDataColumns> Columns { get; set; }
             public class GetAgentIndexRealTimeResponseBodyDataColumns : TeaModel {
                 /// <summary>
-                /// <para>Metric.</para>
+                /// <para>The metric.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>客服ID</para>
+                /// <para>Agent ID</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Metric description.</para>
+                /// <para>The metric description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>servicerId</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Returned data results.</para>
+            /// <para>The returned data results.</para>
             /// </summary>
             [NameInMap("Rows")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Rows { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -115,9 +115,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded. Valid values:  </para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.  </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 

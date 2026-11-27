@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddModelApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code. A value of OK indicates that the request was successful.</para>
+        /// <para>The status code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C93B345-F702-5449-BA7E-7D110D4BF798</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the API operation is successfully called.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

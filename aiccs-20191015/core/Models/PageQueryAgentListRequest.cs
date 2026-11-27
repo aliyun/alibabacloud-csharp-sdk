@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The agent name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestAgent</para>
+        /// <para>Test agent</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

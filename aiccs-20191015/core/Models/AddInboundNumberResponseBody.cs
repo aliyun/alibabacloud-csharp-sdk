@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddInboundNumberResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about why access was denied.</para>
+        /// <para>The detailed reason for the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<AddInboundNumberResponseBodyData> Data { get; set; }
         public class AddInboundNumberResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The inbound number.</para>
+            /// <para>The inbound phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234234238**33</para>
@@ -50,14 +50,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The error description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>号码不合法</para>
+            /// <para>Invalid number</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the number was added successfully. <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+            /// <para>Indicates whether the inbound number was added successfully. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Added successfully.</description></item>
+            /// <item><description>false: Failed to add.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -89,12 +93,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

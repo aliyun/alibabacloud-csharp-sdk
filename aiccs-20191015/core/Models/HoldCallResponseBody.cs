@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class HoldCallResponseBody : TeaModel {
         /// <summary>
-        /// <para>Fault encoding</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Fault description</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used to trail the cause of a fault</para>
+        /// <para>The request ID used to trace the error cause.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded</para>
+        /// <para>Indicates whether the API call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

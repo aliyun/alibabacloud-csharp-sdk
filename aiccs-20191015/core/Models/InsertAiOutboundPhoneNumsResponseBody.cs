@@ -20,41 +20,41 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Import result.</para>
+        /// <para>The import result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public InsertAiOutboundPhoneNumsResponseBodyData Data { get; set; }
         public class InsertAiOutboundPhoneNumsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Details of failed numbers.</para>
+            /// <para>The details of the failed numbers.</para>
             /// </summary>
             [NameInMap("FailInfo")]
             [Validation(Required=false)]
             public List<InsertAiOutboundPhoneNumsResponseBodyDataFailInfo> FailInfo { get; set; }
             public class InsertAiOutboundPhoneNumsResponseBodyDataFailInfo : TeaModel {
                 /// <summary>
-                /// <para>Custom business information.</para>
+                /// <para>The custom business information.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx</para>
+                /// <para>cycuaqmw</para>
                 /// </summary>
                 [NameInMap("BizData")]
                 [Validation(Required=false)]
                 public string BizData { get; set; }
 
                 /// <summary>
-                /// <para>Description of the failure reason.</para>
+                /// <para>The description of the failure reason.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>号码格式异常</para>
+                /// <para>Invalid number format</para>
                 /// </summary>
                 [NameInMap("Msg")]
                 [Validation(Required=false)]
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// <para>The callee number for outbound calls.</para>
+                /// <para>The outbound called number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>150****0000</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Number of successfully imported entries.</para>
+            /// <para>The number of successfully imported numbers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>Total number of imported entries.</para>
+            /// <para>The total number of imported numbers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.  </para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.  </description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The operation was successful.</description></item>
+        /// <item><description><b>false</b>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

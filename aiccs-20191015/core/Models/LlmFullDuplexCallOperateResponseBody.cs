@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class LlmFullDuplexCallOperateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only when RAM authentication fails.</para>
+        /// <para>The details of the access denial. This field is returned only when RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,20 +20,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code. A value of Success indicates that the request was successful.</para>
+        /// <para>The status code. Success indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the command execution. Valid values:</para>
+        /// <para>The command execution result.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The command was executed.</description></item>
-        /// <item><description><b>false</b>: The command failed to be executed.</description></item>
+        /// <item><description><b>true</b>: The command is executed successfully.</description></item>
+        /// <item><description><b>false</b>: The command execution fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the API operation is called successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

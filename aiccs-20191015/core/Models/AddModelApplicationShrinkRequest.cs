@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestApplication</para>
+        /// <para>Test application</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable call-connected event push. Disabled by default.</para>
+        /// <para>Specifies whether to enable push notifications for call connected events. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -42,17 +42,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? CallConnectedTriggerModel { get; set; }
 
         /// <summary>
-        /// <para>The scenario name.</para>
+        /// <para>The name of the scenario.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestScenario</para>
+        /// <para>Test scenario</para>
         /// </summary>
         [NameInMap("DyvmsSceneName")]
         [Validation(Required=false)]
         public string DyvmsSceneName { get; set; }
 
         /// <summary>
-        /// <para>The model code.</para>
+        /// <para>The code of the model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// <para>The model version.</para>
+        /// <para>The version of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ModelVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the first mute event triggers the model.</para>
+        /// <para>Specifies whether to trigger the model upon the first mute event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MuteDuration { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive mute events before the system proactively hangs up the call.</para>
+        /// <para>The number of consecutive mute events required to actively hang up the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>The qualification ID.</para>
+        /// <para>The ID of the qualification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85</para>
@@ -127,17 +127,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? QualificationId { get; set; }
 
         /// <summary>
-        /// <para>The qualification name.</para>
+        /// <para>The name of the qualification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestQualification</para>
+        /// <para>Test qualification</para>
         /// </summary>
         [NameInMap("QualificationName")]
         [Validation(Required=false)]
         public string QualificationName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the recorded audio file for the opening statement. This parameter is required when the opening statement type is set to 1.</para>
+        /// <para>The URL of the audio recording file for the opening remark. This parameter is required when the opening remark type is set to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The speech script content.</para>
+        /// <para>The content of the speech script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test speech script</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string SpeechContent { get; set; }
 
         /// <summary>
-        /// <para>The speech script ID.</para>
+        /// <para>The ID of the speech script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>88</para>
@@ -185,18 +185,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? SpeechId { get; set; }
 
         /// <summary>
-        /// <para>The opening statement.</para>
+        /// <para>The opening remark.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello, this is an opening statement</para>
+        /// <para>Hello, this is an opening remark</para>
         /// </summary>
         [NameInMap("StartWord")]
         [Validation(Required=false)]
         public string StartWord { get; set; }
 
         /// <summary>
-        /// <para>The type of the opening statement.</para>
+        /// <para>The type of the opening remark.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? StartWordType { get; set; }
 
         /// <summary>
-        /// <para>The text-to-speech (TTS) configuration, including voice, volume, and speed.</para>
+        /// <para>The text-to-speech (TTS) configuration, including the voice, volume, and speed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TtsConfig")]
@@ -214,10 +214,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TtsConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The usage description.</para>
+        /// <para>The usage.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TestUsage</para>
+        /// <para>Test usage</para>
         /// </summary>
         [NameInMap("UsageDesc")]
         [Validation(Required=false)]

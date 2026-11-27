@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class EditQualityRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AICCS instance. You can obtain the instance ID in the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc_xp_pre***</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The list of keywords.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KeyWords")]
@@ -24,28 +29,49 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<string> KeyWords { get; set; }
 
         /// <summary>
+        /// <para>The keyword match type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Matches any keyword.</description></item>
+        /// <item><description><b>2</b>: Matches all keywords.</description></item>
+        /// <item><description><b>3</b>: Matches no keyword.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]
         public int? MatchType { get; set; }
 
         /// <summary>
+        /// <para>The name of the quality check rule.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Automated quality check rule</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the quality check item rule.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5369</para>
         /// </summary>
         [NameInMap("QualityRuleId")]
         [Validation(Required=false)]
         public long? QualityRuleId { get; set; }
 
         /// <summary>
+        /// <para>The tag of the quality check rule.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>638</para>
         /// </summary>
         [NameInMap("RuleTag")]
         [Validation(Required=false)]

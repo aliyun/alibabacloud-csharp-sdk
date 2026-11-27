@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CreateAiCallTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for the access denial.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class LlmSmartCallRequest : TeaModel {
         /// <summary>
-        /// <para>LLM application code. View it in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface.</para>
+        /// <para>The code of the large language model application. You can view the code on the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ApplicationCode { get; set; }
 
         /// <summary>
-        /// <para>Business parameters. These parameters are passed to the customer model when invoking the customer model.</para>
+        /// <para>The custom business parameters. When you call this API operation, you can pass custom parameters to the large language model gateway. When the large language model gateway requests the customer model, this parameter is passed to the customer model.</para>
+        /// <list type="bullet">
+        /// <item><description><para><a href="https://www.alibabacloud.com/help/en/model-studio/invoke-workflow-application/#6e644d5a7b3ia">Model Studio workflow application: Parameter passing</a>. Example: <c>biz_params = {&quot;city&quot;: &quot;Hangzhou&quot;}</c></para>
+        /// </description></item>
+        /// <item><description><para><a href="https://www.alibabacloud.com/help/en/model-studio/call-single-agent-application/#b774db7cdc0aa">Model Studio agent application: Pass custom parameters</a>. Example:
+        /// <c>biz_params = { &quot;user_prompt_params&quot;: &quot;{\&quot;city\&quot;:\&quot;Beijing\&quot;}&quot; }</c></para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>biz_params = {
-        ///   &quot;user_prompt_params&quot;: &quot;{\&quot;city\&quot;:\&quot;北京\&quot;}&quot;
+        ///   &quot;user_prompt_params&quot;: &quot;{&quot;city&quot;:&quot;Beijing&quot;}&quot;
         /// }</para>
         /// </summary>
         [NameInMap("BizParam")]
@@ -33,7 +40,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public Dictionary<string, object> BizParam { get; set; }
 
         /// <summary>
-        /// <para>Called number that receives the intelligent outbound call.</para>
+        /// <para>The called number that receives the intelligent outbound call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +51,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
-        /// <para>Caller number. This parameter is required and supports only numbers from the Chinese mainland. View available numbers in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</para>
+        /// <para>The caller number. This parameter is required and supports only numbers in the Chinese mainland. Go to the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of Voice Service to view the number.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you use a self-managed line, you must pass the number of the self-managed line.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>132****2054</para>
@@ -54,11 +66,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallerNumber { get; set; }
 
         /// <summary>
-        /// <para>Customer-provided ingest endpoint encoding.</para>
+        /// <para>The code of the self-managed line.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you use your own line, contact Alibaba Cloud support to enable this feature.</description></item>
-        /// <item><description>The line encoding is provided by Alibaba Cloud support. Do not set this parameter if you do not have one.</description></item>
+        /// <item><description>If you need to use a self-managed line, contact operations to enable this feature. After the self-managed line is approved, the line code is returned. If no line code is returned, do not specify this parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -70,9 +81,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CustomerLineCode { get; set; }
 
         /// <summary>
-        /// <para>The extension number of the X number, up to 5 digits.</para>
+        /// <para>The extension number of the X number. The extension number cannot exceed 5 digits.</para>
         /// <remarks>
-        /// <para>Notice: Fill this field only in AXN extension mode. If no extension number exists, do not fill it.</para>
+        /// <para>Notice: This parameter is required only in AXN extension number mode. If no extension number exists, do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +94,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Extension { get; set; }
 
         /// <summary>
-        /// <para>An ID reserved for the caller. This ID will be returned to the caller through a receipt message. Length: 1–15 bytes.</para>
+        /// <para>The ID reserved for the caller. This ID is returned to the caller in the receipt message. When the large language model gateway requests the customer model, this parameter is passed to the customer model. The length is 1 to 15 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>222356****</para>
@@ -93,11 +104,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OutId { get; set; }
 
         /// <summary>
-        /// <para>Prompt variable. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and click Details to view the prompt variables you created.</para>
+        /// <para>The prompt variables. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page and click Details to view the prompt variables of the large language model application that you created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///   &quot;style&quot;: &quot;温柔&quot;
+        ///   &quot;style&quot;: &quot;gentle&quot;
         /// }</para>
         /// </summary>
         [NameInMap("PromptParam")]
@@ -105,11 +116,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public Dictionary<string, object> PromptParam { get; set; }
 
         /// <summary>
-        /// <para>Maximum call duration. The call is automatically disconnected after timeout. Unit: seconds.</para>
+        /// <para>The maximum call duration. The call is automatically disconnected after the timeout period. Unit: seconds.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 3600 s.</description></item>
-        /// <item><description>Minimum value: 600 s.</description></item>
+        /// <item><description>Maximum value: 3600.</description></item>
+        /// <item><description>Minimum value: 600.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -121,12 +132,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? SessionTimeout { get; set; }
 
         /// <summary>
-        /// <para>Start-word variables. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">LLM Application Management</a> interface and click Details to view the start-word variables of your created LLM application.</para>
+        /// <para>The opening remark variables. Go to the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Large Language Model Application Management</a> page and click Details to view the opening remark variables of the large language model application that you created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///   &quot;name&quot;: &quot;小明&quot;,
-        ///   &quot;address&quot;: &quot;浙江省杭州市&quot;
+        ///   &quot;name&quot;: &quot;Xiaoming&quot;,
+        ///   &quot;address&quot;: &quot;Hangzhou, Zhejiang&quot;
         /// }</para>
         /// </summary>
         [NameInMap("StartWordParam")]
@@ -134,11 +145,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public Dictionary<string, object> StartWordParam { get; set; }
 
         /// <summary>
-        /// <para>Voice speed during TTS playback.</para>
+        /// <para>The speech rate for TTS playback.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Value range: -200 to 200. Default value is 0.</description></item>
-        /// <item><description>If this parameter is not set, the voice speed configured in the LLM application is used by default.</description></item>
+        /// <item><description>Valid values: -200 to 200. Default value: 0.</description></item>
+        /// <item><description>If you do not specify this parameter, the speech rate configured for the large language model application is used by default.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -150,11 +161,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? TtsSpeed { get; set; }
 
         /// <summary>
-        /// <para>The voice code used for TTS playback.</para>
+        /// <para>The voice code for text-to-speech (TTS) playback.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If no value is set, the voice code configured in the LLM application is used by default.</description></item>
-        /// <item><description>You can use the <a href="https://help.aliyun.com/document_detail/2926668.html">ListAvailableTts</a> API to view all available voice codes.</description></item>
+        /// <item><description>If you do not specify this parameter, the voice code configured for the large language model application is used by default.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/2926668.html">ListAvailableTts</a> API operation to query all voice codes.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -169,8 +180,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The volume for TTS playback.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Value range: 0–100. Default value is 0.</description></item>
-        /// <item><description>If no value is set, the volume configured in the LLM application is used by default.</description></item>
+        /// <item><description>Valid values: 0 to 100. Default value: 0.</description></item>
+        /// <item><description>If you do not specify this parameter, the volume configured for the large language model application is used by default.</description></item>
         /// </list>
         /// </remarks>
         /// 

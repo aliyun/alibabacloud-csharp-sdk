@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAiOutboundTaskListRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for job creation. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time for task creation. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1617761765000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CreateTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time for job creation. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time for task creation. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1615083365000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The AICCS instance ID. You can obtain the instance ID in the <b>Instances</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page size. The value must be greater than <b>0</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. The value must be greater than <b>0</b>. Default value: <b>20</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filter condition.</para>
+        /// <para>The filter condition.</para>
         /// <remarks>
-        /// <para>Matches job ID or performs fuzzy matching on job name.</para>
+        /// <para>Matches the task ID or performs a fuzzy match on the task name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>Job status. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not started.</description></item>
-        /// <item><description><b>1</b>: In progress.</description></item>
-        /// <item><description><b>2</b>: Paused by the system.</description></item>
-        /// <item><description><b>3</b>: Manually paused.</description></item>
-        /// <item><description><b>4</b>: Completed.</description></item>
-        /// <item><description><b>5</b>: Stopped.</description></item>
+        /// <item><description><b>0</b>: not started</description></item>
+        /// <item><description><b>1</b>: in progress</description></item>
+        /// <item><description><b>2</b>: paused by the system</description></item>
+        /// <item><description><b>3</b>: paused manually</description></item>
+        /// <item><description><b>4</b>: completed</description></item>
+        /// <item><description><b>5</b>: terminated</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>Task Type. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b>: Predictive outbound call.</description></item>
-        /// <item><description><b>3</b>: Automated outbound call.</description></item>
+        /// <item><description><b>2</b>: predictive outbound call</description></item>
+        /// <item><description><b>3</b>: automatic outbound call</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

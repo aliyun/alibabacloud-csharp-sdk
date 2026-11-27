@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddInboundNumberShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the large model application.</para>
+        /// <para>The code of the large language model application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ApplicationCode { get; set; }
 
         /// <summary>
-        /// <para>A list of inbound numbers.</para>
+        /// <para>The list of inbound numbers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InboundNumbers")]
@@ -29,7 +29,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InboundNumbersShrink { get; set; }
 
         /// <summary>
-        /// <para>The line type. Valid values: <c>1</c> (cloud communication resource) and <c>2</c> (customer-owned line).</para>
+        /// <para>The line type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Cloud communication resource.</description></item>
+        /// <item><description>2: Customer-provided line.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? InboundType { get; set; }
 
         /// <summary>
-        /// <para>The code for the custom line.</para>
+        /// <para>The custom line code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JILIANG_*****_TEST_NET</para>

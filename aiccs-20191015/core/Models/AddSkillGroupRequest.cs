@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddSkillGroupRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the external department.</para>
+        /// <para>The ID of the external department.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterDepartmentId { get; set; }
 
         /// <summary>
-        /// <para>Type of the external department.</para>
+        /// <para>The type of the external department.</para>
         /// 
         /// <b>Example:</b>
         /// <para>type_invalid</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterDepartmentType { get; set; }
 
         /// <summary>
-        /// <para>ID of the external skill group.</para>
+        /// <para>The ID of the external skill group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,18 +41,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterGroupId { get; set; }
 
         /// <summary>
-        /// <para>Name of the external skill group.</para>
+        /// <para>The name of the external skill group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>热线技能组</para>
+        /// <para>Hotline skill group</para>
         /// </summary>
         [NameInMap("OuterGroupName")]
         [Validation(Required=false)]
         public string OuterGroupName { get; set; }
 
         /// <summary>
-        /// <para>Type of the external skill group.</para>
+        /// <para>The type of the external skill group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

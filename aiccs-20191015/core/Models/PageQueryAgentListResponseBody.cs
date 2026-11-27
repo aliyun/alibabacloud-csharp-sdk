@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class PageQueryAgentListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Access Denied</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public PageQueryAgentListResponseBodyData Data { get; set; }
         public class PageQueryAgentListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of agent data.</para>
+            /// <para>The list of agents.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The agent name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>TestAgent</para>
+                /// <para>Test agent</para>
                 /// </summary>
                 [NameInMap("AgentName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The reason for review failure.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Provide additional process description</para>
+                /// <para>Please provide the process description</para>
                 /// </summary>
                 [NameInMap("AuditReason")]
                 [Validation(Required=false)]
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The business scenario name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Personal customer lead conversion</para>
+                /// <para>Individual customer lead conversion</para>
                 /// </summary>
                 [NameInMap("BusinessTypeName")]
                 [Validation(Required=false)]
                 public string BusinessTypeName { get; set; }
 
                 /// <summary>
-                /// <para>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</para>
+                /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-28 17:10:17</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The most recent online time, in the format of YYYY-MM-DD HH:mm:ss.</para>
+                /// <para>The last online time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-28 14:38:15</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string LastOnlineTime { get; set; }
 
                 /// <summary>
-                /// <para>The most recent modification time, in the format of YYYY-MM-DD HH:mm:ss.</para>
+                /// <para>The last modification time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-28 17:10:17</para>
@@ -154,6 +154,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? Status { get; set; }
 
                 /// <summary>
+                /// <para>Specifies whether the agent has an active prompt. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Active.</description></item>
+                /// <item><description>false: Inactive.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -162,7 +168,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public bool? WithActivePrompt { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the agent has been configured.</para>
+                /// <para>Specifies whether the agent has been configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -184,7 +190,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -209,7 +215,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Succeeded</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -226,7 +232,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Specifies whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>

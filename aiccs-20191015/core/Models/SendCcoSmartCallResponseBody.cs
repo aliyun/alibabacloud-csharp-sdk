@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class SendCcoSmartCallResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code. OK indicates a successful request.</para>
+        /// <para>The request status code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

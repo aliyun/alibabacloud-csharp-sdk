@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试任务</para>
+        /// <para>Test task</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

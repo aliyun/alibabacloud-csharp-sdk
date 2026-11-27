@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateAiCallTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason for access denial.</para>
+        /// <para>The detailed reasons for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The update result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The update is successful.</para>
+        /// <item><description><para><b>true</b>: The update succeeded.</para>
         /// </description></item>
         /// <item><description><para><b>false</b>: The update failed.</para>
         /// </description></item>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The call succeeded.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

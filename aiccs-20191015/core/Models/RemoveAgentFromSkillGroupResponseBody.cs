@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class RemoveAgentFromSkillGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of &quot;Success&quot; indicates that the request succeeded.</para>
+        /// <para>The status code. A value of Success indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RemoveAgentFromSkillGroupResponseBodyData Data { get; set; }
         public class RemoveAgentFromSkillGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of agents successfully removed.</para>
+            /// <para>The number of agents that are successfully removed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API invocation succeeded. Valid values:</para>
+        /// <para>Indicates whether the API operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The operation is successful.</description></item>
+        /// <item><description><b>false</b>: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

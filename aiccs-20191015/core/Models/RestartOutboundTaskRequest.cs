@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class RestartOutboundTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID of the Artificial Intelligence Cloud Call Service (AICCS) instance. You can obtain instance ID from the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ccc_xp_pre***</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the outbound task.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>120001</para>
         /// </summary>
         [NameInMap("OutboundTaskId")]
         [Validation(Required=false)]

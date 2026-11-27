@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ImportOneTaskPhoneNumberShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The encryption method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: no encryption</description></item>
+        /// <item><description>1: MD5</description></item>
+        /// <item><description>2: SHA256</description></item>
+        /// <item><description>3: SM3</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>81</para>
         /// </summary>
@@ -21,14 +29,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The extension number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>SampleValueSampleValueSampleValue</para>
         /// </summary>
         [NameInMap("Extension")]
         [Validation(Required=false)]
         public string Extension { get; set; }
 
         /// <summary>
-        /// <para>The external serial number. We recommend that you use a unique ID. The value cannot exceed 128 characters.</para>
+        /// <para>The external serial number. Use a unique ID. The value cannot exceed 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94ba739b-xxxx-ef91-335d-4be006c34899</para>
@@ -72,17 +80,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The variable list in Map format.</para>
+        /// <para>The list of variables in map format.</para>
         /// <remarks>
-        /// <para>Variable format for engine-based voice call tasks:</para>
+        /// <para>Variable format for engine call tasks</para>
         /// <list type="bullet">
-        /// <item><description>{&quot;startWordParam.VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;promptParam.VariableKey2&quot;:&quot;VariableValue2&quot;,&quot;bizParam.VariableKey3&quot;:&quot;VariableValue3&quot;}</description></item>
+        /// <item><description>{&quot;startWordParam.variableKey1&quot;:&quot;variableValue1&quot;,&quot;promptParam.variableKey2&quot;:&quot;variableValue2&quot;,&quot;bizParam.variableKey3&quot;:&quot;variableValue3&quot;}</description></item>
         /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;VariableKey1&quot;:&quot;VariableValue1&quot;,&quot;VariableKey2&quot;:&quot;VariableValue2&quot;}
-        /// For example values of engine-based voice call tasks, refer to the description on the left</para>
+        /// <para>{&quot;variableKey1&quot;:&quot;variableValue1&quot;,&quot;variableKey2&quot;:&quot;variableValue2&quot;}</para>
         /// </summary>
         [NameInMap("Variables")]
         [Validation(Required=false)]

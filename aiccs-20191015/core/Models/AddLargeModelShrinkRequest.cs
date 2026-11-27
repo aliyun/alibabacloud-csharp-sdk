@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>The base model.</para>
+        /// <para>The foundation model.</para>
         /// </summary>
         [NameInMap("BaseModel")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public double? Temperature { get; set; }
 
         /// <summary>
-        /// <para>The <c>top-k</c> value.</para>
+        /// <para>topK</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? TopK { get; set; }
 
         /// <summary>
-        /// <para>The <c>top-p</c> value.</para>
+        /// <para>topP</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1</para>

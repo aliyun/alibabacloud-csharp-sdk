@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class SendCcoSmartCallRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the opening audio file can be interrupted. Default value: <b>true</b>, which indicates the opening audio file can be interrupted.</para>
+        /// <para>Specifies whether the opening audio file can be interrupted. Default value: <b>true</b>, which indicates that the opening audio file can be interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? ActionCodeBreak { get; set; }
 
         /// <summary>
-        /// <para>The duration threshold for interrupting based on continuous user speech. This parameter takes effect only when ActionCodeBreak is set to <b>true</b>. Unit: milliseconds.</para>
+        /// <para>The interruption based on the continuous speaking duration of the user. This parameter takes effect only when ActionCodeBreak is set to <b>true</b>. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <item><description>If only <b>asrModelId</b> is set, the specified ASR model is used.</description></item>
         /// <item><description>If only <b>AsrBaseId</b> is set, the specified ASR foundation model is used.</description></item>
         /// <item><description>If neither is set, the default ASR foundation model is used. The default value of <b>AsrBaseId</b> is <b>customer_service_8k</b>, which indicates the ASR Mandarin foundation model.</description></item>
-        /// <item><description>If both are set, make sure they correspond correctly.</description></item>
+        /// <item><description>If both are set, make sure that they correctly correspond to each other.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When you call the <b>SendCcoSmartCall</b> operation, specify the ASR model to use. Set either <b>asrModelId</b> or <b>AsrBaseId</b>.</para>
+        /// <para>When you call the <b>SendCcoSmartCall</b> operation, you must specify the ASR model to use. Specify either <b>asrModelId</b> or <b>AsrBaseId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AsrBaseId { get; set; }
 
         /// <summary>
-        /// <para>The ASR model ID. View the ASR model ID on the <a href="https://aiccs.console.aliyun.com/sentence/model/private?spm=a2c4g.11186623.0.0.7f9b2964fYSGv4">ASR Model Management page</a>.</para>
+        /// <para>The ASR model ID. You can view the ASR model ID on the <a href="https://aiccs.console.aliyun.com/sentence/model/private?spm=a2c4g.11186623.0.0.7f9b2964fYSGv4">ASR Model Management page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bf71664d30d2478fb8cb8c39c6b6****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AsrModelId { get; set; }
 
         /// <summary>
-        /// <para>The hot word ID. View the ASR hot word ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hot Word Management page</a>.</para>
+        /// <para>The hot word ID. You can view the ASR hot word ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hot Word Management page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AsrVocabularyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the background audio file played during the conversation between the user and the robot. Log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>, choose <b>Intelligent Interaction &gt; Voice File Management</b>, and click <b>Details</b> to view the corresponding voice ID.</para>
+        /// <para>The ID of the background audio file played when the user talks to the robot. You can log on to the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>, choose <b>Intelligent Interaction &gt; Audio File Management</b>, and click <b>Details</b> to view the corresponding audio ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2d4c-4e78-8d2a-afbb06cf****.wav</para>
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
-        /// <para>The China-only caller ID displayed to the called party. The number must be a purchased number.</para>
-        /// <para>Log on to the <a href="https://aiccs.console.aliyun.com/overview?spm=a2c4g.11186623.0.0.7f9bf9658X6jte">Contact Center console</a> to view purchased numbers.</para>
+        /// <para>The called display number. It must be a purchased number.</para>
+        /// <para>You can log on to the <a href="https://aiccs.console.aliyun.com/overview?spm=a2c4g.11186623.0.0.7f9bf9658X6jte">Cloud Call Center console</a> to view the purchased numbers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledShowNumber { get; set; }
 
         /// <summary>
-        /// <para>The dynamic extension ID reserved for the caller. This ID is returned in the callback URL for the caller\&quot;s development identifier.</para>
+        /// <para>The dynamic extension ID reserved for the caller. This ID is returned in the callback URL and used as a development identifier for the customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -144,9 +144,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DynamicId { get; set; }
 
         /// <summary>
-        /// <para>The early media speech recognition flag. If set to true, the reason for unanswered calls is recorded. Default value: <b>false</b>, which indicates the feature is disabled.</para>
+        /// <para>The early media speech recognition identifier. If this parameter is set to true, the reason why the call is not answered is recorded. Default value: <b>false</b>, which indicates that this feature is disabled.</para>
         /// <remarks>
-        /// <para>To enable early media speech recognition, manually set this parameter to <b>true</b>.</para>
+        /// <para>To enable the early media speech recognition identifier, manually set this parameter to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,9 +157,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EarlyMediaAsr { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform Inverse Text Normalization (ITN) in post-processing.</para>
+        /// <para>Specifies whether to perform ITN in post-processing.</para>
         /// <remarks>
-        /// <para>When set to <b>true</b>, Chinese numerals are converted to Arabic numerals in the output. Default value: <b>false</b>.</para>
+        /// <para>If this parameter is set to <b>true</b>, Chinese numerals are converted to Arabic numerals in the output. Default value: <b>false</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -170,9 +170,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableITN { get; set; }
 
         /// <summary>
-        /// <para>The silence duration. Specifies how long the call ends after the user stops speaking. Unit: milliseconds. Valid values: <b>1000 to 20000</b>.</para>
+        /// <para>The mute duration. This parameter specifies how long a user remains silent before the call ends. Unit: milliseconds. Valid values: <b>1000</b> to <b>20000</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If the specified value is outside this range, the default value of <b>10000</b> is used.</description></item>
+        /// <item><description>If the specified value is out of the range, the default value <b>10000</b> is used.</description></item>
         /// <item><description>This parameter can be dynamically set during the call. The last setting takes effect.</description></item>
         /// </list>
         /// 
@@ -184,7 +184,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? MuteTime { get; set; }
 
         /// <summary>
-        /// <para>The ID reserved for the caller. This ID is returned to the caller in the receipt message. The value is a string of 1 to 15 bytes.</para>
+        /// <para>The ID reserved for the caller. This ID is returned to the caller in the receipt message.
+        /// The value must be a string and 1 to 15 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>222356****</para>
@@ -198,9 +199,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The pause duration. Specifies how long a user pause indicates the end of a sentence. Unit: milliseconds. Valid values: <b>300 to 1200</b>. If the specified value is outside this range, the default value of <b>800</b> is used.</para>
+        /// <para>The pause duration. This parameter specifies how long a user pauses to indicate the end of a sentence. Unit: milliseconds. Valid values: <b>300</b> to <b>1200</b>. If the specified value is out of the range, the default value <b>800</b> is used.</para>
         /// <remarks>
-        /// <para>Only the first setting takes effect. Subsequent settings are ignored.</para>
+        /// <para>Only the first setting takes effect. Subsequent settings are invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -231,10 +232,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ProdCode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to record the call. Valid values:</para>
+        /// <para>Specifies whether to record the call.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Record the call.</description></item>
-        /// <item><description><b>false</b>: Do not record the call.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -273,10 +274,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? Speed { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to set TTS voice parameters. Valid values:</para>
+        /// <para>Specifies whether to set TTS voice parameters.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Set the voice style by using the TtsStyle, TtsVolume, and TtsSpeed parameters.</description></item>
-        /// <item><description><b>false</b>: Do not set the related parameters. Even if they are set, they do not take effect.</description></item>
+        /// <item><description><b>true</b>: You must set the voice style by using the TtsStyle, TtsVolume, and TtsSpeed parameters.</description></item>
+        /// <item><description><b>false</b>: You do not need to set the related parameters. Even if they are set, they do not take effect.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -287,7 +288,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? TtsConf { get; set; }
 
         /// <summary>
-        /// <para>The voice speed for TTS variable playback. Valid values: -200 to 200. Default value: 0.</para>
+        /// <para>The voice speed for playing TTS variables. Valid values: -200 to 200. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -297,7 +298,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? TtsSpeed { get; set; }
 
         /// <summary>
-        /// <para>The voice style for TTS variable playback. Default value: <b>xiaoyun</b>. For specific styles, refer to the voice style list.</para>
+        /// <para>The voice style for playing TTS variables. Default value: <b>xiaoyun</b>. For more information about specific styles, see the voice style list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xiaoyun</para>
@@ -307,7 +308,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TtsStyle { get; set; }
 
         /// <summary>
-        /// <para>The volume for TTS variable playback. Valid values: <b>0 to 100</b>. Default value: <b>0</b>.</para>
+        /// <para>The volume for playing TTS variables. Valid values: <b>0</b> to <b>100</b>. Default value: <b>0</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -317,10 +318,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? TtsVolume { get; set; }
 
         /// <summary>
-        /// <para>The intelligent outbound call audio file. Network files and text-to-speech (TTS) are supported. Multiple files and TTS parameters can be mixed and separated by commas (,). The replacement values for TTS parameters are specified in <b>VoiceCodeParam</b>.</para>
+        /// <para>The audio file for the intelligent outbound call. Network files and TTS are supported. You can mix multiple files and TTS parameters, separated by commas (,). The replacement values for TTS parameters are specified in <b>VoiceCodeParam</b>.</para>
         /// <list type="bullet">
-        /// <item><description>When the audio file is a network file: Set VoiceCode to a public network access audio file URL. Use a WAV format audio file with a sampling frequency of 8000 Hz or 16000 Hz.</description></item>
-        /// <item><description>When the audio file is TTS: Set VoiceCode to a variable name such as $name$, and set the corresponding content for the variable in VoiceCodeParam in <b>Settings</b>.</description></item>
+        /// <item><description>If the audio file is a network file: Set the VoiceCode parameter to the URL of an audio file that supports public network access. We recommend that you use an audio file in WAV format with a sampling frequency of 8,000 Hz or 16,000 Hz.</description></item>
+        /// <item><description>If the audio file is TTS: Set the VoiceCode parameter to a variable name such as $name$, and set the content corresponding to the variable in the VoiceCodeParam Settings.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -332,17 +333,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string VoiceCode { get; set; }
 
         /// <summary>
-        /// <para>The TTS parameter string in JSON format. This parameter must correspond to the TTS parameters in VoiceCode.</para>
+        /// <para>The TTS parameter string in JSON format. It must correspond to the TTS parameters in VoiceCode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;Hello, how are you&quot;}</para>
+        /// <para>{&quot;name&quot;:&quot;Hello&quot;}</para>
         /// </summary>
         [NameInMap("VoiceCodeParam")]
         [Validation(Required=false)]
         public string VoiceCodeParam { get; set; }
 
         /// <summary>
-        /// <para>The volume for playing user audio. Valid values: -4 to 4. Set this parameter to 1.</para>
+        /// <para>The volume for playing user audio. Valid values: -4 to 4. Recommended value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

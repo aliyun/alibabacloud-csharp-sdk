@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetConfigNumListRequest : TeaModel {
         /// <summary>
-        /// <para>The agent account name. It is unique within the instance (logon name).</para>
+        /// <para>The name of the agent account. The name is unique within the instance and serves as the logon name.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:123@123.com">123@123.com</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DepartmentId { get; set; }
 
         /// <summary>
-        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</para>
+        /// <para>The ID of the AICCS instance. You can obtain the instance ID in the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

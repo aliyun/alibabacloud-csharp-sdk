@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddOuterAccountRequest : TeaModel {
         /// <summary>
-        /// <para>Profile picture.</para>
+        /// <para>The profile picture.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http://****</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Avatar { get; set; }
 
         /// <summary>
-        /// <para>Extension field, in JSON string format.</para>
+        /// <para>The extension field. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;备注&quot;:&quot;临时技能组&quot;}</para>
+        /// <para>{&quot;Note&quot;:&quot;Temporary skill group&quot;}</para>
         /// </summary>
         [NameInMap("Ext")]
         [Validation(Required=false)]
         public string Ext { get; set; }
 
         /// <summary>
-        /// <para>External Account ID.</para>
+        /// <para>The ID of the external account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,17 +41,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterAccountId { get; set; }
 
         /// <summary>
-        /// <para>External account name.</para>
+        /// <para>The name of the external account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("OuterAccountName")]
         [Validation(Required=false)]
         public string OuterAccountName { get; set; }
 
         /// <summary>
-        /// <para>External account type.</para>
+        /// <para>The type of the external account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterAccountType { get; set; }
 
         /// <summary>
-        /// <para>External department ID.</para>
+        /// <para>The ID of the external department.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterDepartmentId { get; set; }
 
         /// <summary>
-        /// <para>External department type: Invalid department type.</para>
+        /// <para>The type of the external department: invalid department type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>type_invalid</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterDepartmentType { get; set; }
 
         /// <summary>
-        /// <para>List of external skill group IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the external skill groups. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;222&quot;,&quot;333&quot;,&quot;444&quot;]</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterGroupIds { get; set; }
 
         /// <summary>
-        /// <para>Skill group type.</para>
+        /// <para>The type of the skill group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mybank</para>
@@ -102,10 +102,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterGroupType { get; set; }
 
         /// <summary>
-        /// <para>Real name of the account.</para>
+        /// <para>The real name of the account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("RealName")]
         [Validation(Required=false)]
