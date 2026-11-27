@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.PAIModelGallery20250630.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3063233</para>
+        /// </summary>
+        [NameInMap("Doc")]
+        [Validation(Required=false)]
+        public string Doc { get; set; }
+
         [NameInMap("InputDatasetMustBeDirectory")]
         [Validation(Required=false)]
         public bool? InputDatasetMustBeDirectory { get; set; }

@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.PAIModelGallery20250630.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>3063233</para>
+        /// </summary>
+        [NameInMap("Doc")]
+        [Validation(Required=false)]
+        public string Doc { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>advanced_cot_distill</para>
         /// </summary>
         [NameInMap("JobType")]
