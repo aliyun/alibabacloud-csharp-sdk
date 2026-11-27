@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>false: Disabled. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied by default from using the access point to mount and access data. You must grant authorization to the accounts to enable the corresponding access permissions, and mount the file system through the access point. If this feature is disabled, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policy</a>.</para>
+        /// <para>After you enable the RAM policy for the access point, all Resource Access Management (RAM) users are denied by default from using the access point to mount and access data. You must perform authorization for the accounts to grant the corresponding access permissions, and mount the file system through the access point. If this feature is disabled, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policy</a>.</para>
         /// </remarks>
         /// <remarks>
         /// <para>For Agentic file systems, this parameter must be set to true.</para>
@@ -185,10 +185,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag key.
             /// Limits:</para>
             /// <list type="bullet">
-            /// <item><description>The tag key cannot be empty or an empty string.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
-            /// <item><description>The tag key cannot start with aliyun or acs:.</description></item>
-            /// <item><description>The tag key cannot contain http:// or https://.</description></item>
+            /// <item><description>The value cannot be empty or an empty string.</description></item>
+            /// <item><description>The value can be up to 128 characters in length.</description></item>
+            /// <item><description>The value cannot start with aliyun or acs:.</description></item>
+            /// <item><description>The value cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,9 +202,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag value.
             /// Limits:</para>
             /// <list type="bullet">
-            /// <item><description>The tag value cannot be empty or an empty string.</description></item>
-            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
-            /// <item><description>The tag value cannot contain http:// or https://.</description></item>
+            /// <item><description>The value cannot be empty or an empty string.</description></item>
+            /// <item><description>The value can be up to 128 characters in length.</description></item>
+            /// <item><description>The value cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

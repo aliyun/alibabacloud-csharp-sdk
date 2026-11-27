@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class OpenNASServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The details of the permission check failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The order ID for activating the service.</para>
+        /// <para>The order ID for the service activation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20671870151****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateFileRequest : TeaModel {
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>The ID of the file system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The portable account ID.
-        /// Limit: The value is a 16-character string that contains digits and lowercase letters.</para>
+        /// <para>The ID of the portable account.
+        /// Limits: The ID must be a 16-character string that contains only digits and lowercase English letters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>378cc7630f26****</para>
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>Specifies whether to share directory permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): Directory permissions are not shared.</description></item>
-        /// <item><description>true: Directory permissions are shared.<remarks>
+        /// <item><description>false (default): Does not share directory permissions.</description></item>
+        /// <item><description>true: Shares directory permissions.<remarks>
         /// <list type="bullet">
         /// <item><description>This parameter takes effect only when Type is set to Directory and Owner is not empty.</description></item>
-        /// <item><description>The directory has inheritable Owner permissions. The Owner has read and write permissions on subdirectories and files created under this directory, even if they are created by other users.</description></item>
+        /// <item><description>The directory has inheritable Owner permissions. Subdirectories and files created in this directory inherit read and write permissions for this Owner, even if they are created by other users.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The object type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>File: file.</description></item>
-        /// <item><description>Directory: directory.</description></item>
+        /// <item><description>File: file</description></item>
+        /// <item><description>Directory: directory</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

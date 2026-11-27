@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The resource IDs. Valid values of array length: 1 to 50.</para>
+        /// <para>Specifies whether to perform a dry run on the request.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The resource ID. Valid values: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +28,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
-        /// <para>Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>filesystem: file system.</description></item>
-        /// <item><description>accesspoint: access point.</description></item>
+        /// <item><description>filesystem: File system.</description></item>
+        /// <item><description>accesspoint: Access point.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</para>
+        /// <para>The tag array. Length: 1 to 20. If the array contains multiple tag objects, tag keys must be unique.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -49,7 +55,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>Cannot be empty or an empty string. </description></item>
-            /// <item><description>Can be up to 128 characters in length.</description></item>
+            /// <item><description>Maximum length: 128 characters.</description></item>
             /// <item><description>Cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
             /// <item><description>Cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Can be up to 128 characters in length.</description></item>
+            /// <item><description>Maximum length: 128 characters.</description></item>
             /// <item><description>Cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>

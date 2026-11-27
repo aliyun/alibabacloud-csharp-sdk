@@ -28,13 +28,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The release protection property of the instance. Specifies whether the instance can be released from the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</para>
+            /// <para>The release protection property of the instance, which specifies whether the instance can be released from the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</para>
             /// <list type="bullet">
             /// <item><description>true: Release protection is enabled.</description></item>
             /// <item><description>false (default): Release protection is disabled.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This property applies only to manual release operations and does not apply to system-initiated release operations.</para>
+            /// <para>This property only restricts manual release operations and does not take effect on system release operations.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The file count usage.</para>
+            /// <para>The number of used files.</para>
             /// <remarks>
-            /// <para>Only CPFS for Lingjun 2.7.0 and later support this parameter.</para>
+            /// <para>This parameter is supported only by CPFS for Lingjun 2.7.0 and later.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? FileCountUsage { get; set; }
 
             /// <summary>
-            /// <para>The file system ID.</para>
+            /// <para>The ID of the file system.</para>
             /// <list type="bullet">
-            /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+            /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-125487****.</para>
             /// </description></item>
-            /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
+            /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-0015****.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemPath { get; set; }
 
             /// <summary>
-            /// <para>The Fileset ID.</para>
+            /// <para>The ID of the Fileset.</para>
             /// <remarks>
-            /// <para>This parameter is required if the file system type is CPFS.</para>
+            /// <para>This parameter is required when the file system type is CPFS.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The quota information.</para>
             /// <remarks>
-            /// <para>Only CPFS for Lingjun 2.7.0 and later support this parameter.</para>
+            /// <para>This parameter is supported only by CPFS for Lingjun 2.7.0 and later.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Quota")]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public GetFilesetResponseBodyDataQuota Quota { get; set; }
             public class GetFilesetResponseBodyDataQuota : TeaModel {
                 /// <summary>
-                /// <para>The file count limit of the quota. Value range:</para>
+                /// <para>The file count limit of the quota. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>Minimum value: 10,000.</para>
                 /// </description></item>
@@ -134,16 +134,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
                 /// <summary>
                 /// <para>The total capacity limit of the quota. Unit: bytes.</para>
-                /// <para>Value range:</para>
+                /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>Minimum value: 10,737,418,240 (10 GiB).</para>
                 /// </description></item>
-                /// <item><description><para>Increment: 1,073,741,824 (1 GiB).</para>
+                /// <item><description><para>Step size: 1,073,741,824 (1 GiB).</para>
                 /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>10,737,418,240</para>
+                /// <para>10737418240</para>
                 /// </summary>
                 [NameInMap("SizeLimit")]
                 [Validation(Required=false)]
@@ -152,9 +152,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The capacity usage. Unit: bytes.</para>
+            /// <para>The used storage capacity. Unit: bytes.</para>
             /// <remarks>
-            /// <para>Only CPFS for Lingjun 2.7.0 and later support this parameter.</para>
+            /// <para>This parameter is supported only by CPFS for Lingjun 2.7.0 and later.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The status of the Fileset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CREATING: The Fileset is being created.</description></item>
-            /// <item><description>CREATED: The Fileset is created and running as expected. </description></item>
+            /// <item><description>CREATED: The Fileset is created and running normally. </description></item>
             /// <item><description>RELEASING: The Fileset is being released.</description></item>
             /// <item><description>RELEASED: The Fileset is deleted.</description></item>
             /// </list>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC7C825C-5F65-4B56-BEF6-98C56C7C****</para>

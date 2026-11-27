@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAccessPointsRequest : TeaModel {
         /// <summary>
-        /// <para>The permission group name.</para>
-        /// <para>This parameter is required if the file system is a General-purpose NAS file system.</para>
+        /// <para>The name of the permission group.</para>
+        /// <para>This parameter is required when the target file system is a General-purpose NAS file system.</para>
         /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The number of entries to return for each query.</para>
         /// <para>Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</para>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
-            /// <item><description>The tag key cannot start with aliyun or acs:.</description></item>
-            /// <item><description>The tag key cannot contain http:// or https://.</description></item>
+            /// <item><description>It can be up to 128 characters in length.</description></item>
+            /// <item><description>It cannot start with aliyun or acs:.</description></item>
+            /// <item><description>It cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>Limits:</para>
             /// <list type="bullet">
             /// <item><description>Valid values of N: 1 to 20.</description></item>
-            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
-            /// <item><description>The tag value cannot start with aliyun or acs:.</description></item>
-            /// <item><description>The tag value cannot contain http:// or https://.</description></item>
+            /// <item><description>It can be up to 128 characters in length.</description></item>
+            /// <item><description>It cannot start with aliyun or acs:.</description></item>
+            /// <item><description>It cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

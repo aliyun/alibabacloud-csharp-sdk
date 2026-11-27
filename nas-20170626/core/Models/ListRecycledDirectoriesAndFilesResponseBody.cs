@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecycledDirectoriesAndFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of files or directories in the recycle bin.</para>
+        /// <para>The collection of information about files or directories in the recycle bin.</para>
         /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
         public List<ListRecycledDirectoriesAndFilesResponseBodyEntries> Entries { get; set; }
         public class ListRecycledDirectoriesAndFilesResponseBodyEntries : TeaModel {
             /// <summary>
-            /// <para>The most recent access time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The last access time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ATime { get; set; }
 
             /// <summary>
-            /// <para>The most recent metadata modification time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The last modification time of the metadata. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the file or directory was deleted. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The time when the file or directory was deleted. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-30T10:08:08Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Inode { get; set; }
 
             /// <summary>
-            /// <para>The most recent modification time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The last modification time. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string MTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the file or directory before deletion.</para>
+            /// <para>The name of the file or directory before it was deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test001</para>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The file size. Unit: bytes.</para>
-            /// <para>When Type is set to Directory, the value 0 is returned.</para>
+            /// <para>The size of the file. Unit: bytes.</para>
+            /// <para>If Type is set to Directory, 0 is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1073741824</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The object type. Valid values:</para>
+            /// <para>The returned object type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>File: file</description></item>
             /// <item><description>Directory: folder</description></item>
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
-        /// <para>If a single query does not return all files and directories, a non-empty NextToken is returned. You can pass the correct NextToken in subsequent queries to continue retrieving results.</para>
+        /// <para>The token for the next page.</para>
+        /// <para>If the query does not return all files and directories, a non-empty NextToken is returned. You can use the returned NextToken to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98696EF0-1607-4E9D-B01D-F20930B6****</para>

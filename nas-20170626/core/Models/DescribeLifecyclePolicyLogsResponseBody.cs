@@ -34,10 +34,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogsDeleteRules> DeleteRules { get; set; }
             public class DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogsDeleteRules : TeaModel {
                 /// <summary>
-                /// <para>The attribute of the rule.</para>
-                /// <para>Valid values:</para>
+                /// <para>The attribute of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Atime: The last access time of the file.</description></item>
+                /// <item><description>Atime: the last access time of the file.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -48,10 +47,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// <para>The threshold of the rule.</para>
-                /// <para>Valid values:</para>
+                /// <para>The threshold of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>If Attribute is set to Atime, the value indicates the number of days a file has not been accessed. Valid values: 1 to 365.</description></item>
+                /// <item><description>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>The file data retrieval rules.</para>
+            /// <para>The data retrieval rules for files.</para>
             /// </summary>
             [NameInMap("RetrieveRules")]
             [Validation(Required=false)]
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <summary>
                 /// <para>The attribute of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>RetrieveType: The retrieval method.</description></item>
+                /// <item><description>RetrieveType: the retrieval method.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -112,11 +110,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The status of the data retrieval task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PENDING: The task is being created.</description></item>
-            /// <item><description>RUNNING: The task is running.</description></item>
-            /// <item><description>STOPPED: The task is stopped.</description></item>
-            /// <item><description>FINISHED: The task is completed.</description></item>
-            /// <item><description>FAILED: The task fails.</description></item>
+            /// <item><description>PENDING: Creating</description></item>
+            /// <item><description>RUNNING: Running</description></item>
+            /// <item><description>STOPPED: Stopped</description></item>
+            /// <item><description>FINISHED: Finished</description></item>
+            /// <item><description>FAILED: Failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,7 +127,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The tiered storage type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>InfrequentAccess: IA storage class. This is the default value.</description></item>
+            /// <item><description>InfrequentAccess: IA storage class (default).</description></item>
             /// <item><description>Archive: Archive storage class.</description></item>
             /// </list>
             /// 
@@ -151,17 +149,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Summary { get; set; }
 
             /// <summary>
-            /// <para>The file data transition rules.</para>
+            /// <para>The data transition rules for files.</para>
             /// </summary>
             [NameInMap("TransitRules")]
             [Validation(Required=false)]
             public List<DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogsTransitRules> TransitRules { get; set; }
             public class DescribeLifecyclePolicyLogsResponseBodyLifecyclePolicyLogsTransitRules : TeaModel {
                 /// <summary>
-                /// <para>The attribute of the rule.</para>
-                /// <para>Valid values:</para>
+                /// <para>The attribute of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Atime: The last access time of the file.</description></item>
+                /// <item><description>Atime: the last access time of the file.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -172,10 +169,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string Attribute { get; set; }
 
                 /// <summary>
-                /// <para>The threshold of the rule.</para>
-                /// <para>Valid values:</para>
+                /// <para>The threshold of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>If Attribute is set to Atime, the value indicates the number of days a file has not been accessed. Valid values: 1 to 365.</description></item>
+                /// <item><description>If Attribute is set to Atime, the value indicates the number of days that a file has not been accessed. Valid values: 1 to 365.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -200,7 +196,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of log entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -220,8 +216,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
-        /// <para>Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The request is successful.</description></item>
         /// <item><description>false: The request fails.</description></item>
@@ -235,7 +230,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of log entries.</para>
+        /// <para>The total number of logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36</para>

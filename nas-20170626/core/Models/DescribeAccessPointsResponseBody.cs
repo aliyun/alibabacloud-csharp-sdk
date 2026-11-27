@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeAccessPointsResponseBodyAccessPoints> AccessPoints { get; set; }
         public class DescribeAccessPointsResponseBodyAccessPoints : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the access point.</para>
+            /// <para>The ARN of the access point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ARN { get; set; }
 
             /// <summary>
-            /// <para>The permission group name.</para>
+            /// <para>The name of the permission group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessPointName { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was created. Format: Unix/POSIX timestamp.</para>
+            /// <para>The time when the access point was created. Format: UNIX/POSIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709619668276167</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was last modified. Format: Unix/POSIX timestamp.</para>
+            /// <para>The time when the access point was modified. Format: UNIX/POSIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709619668276167</para>
@@ -124,7 +124,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? PosixGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The secondary user group ID.</para>
+                /// <para>The secondary user group IDs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[123,123]</para>
                 /// </summary>
                 [NameInMap("PosixSecondaryGroupIds")]
                 [Validation(Required=false)]
@@ -153,14 +156,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RootPath { get; set; }
 
             /// <summary>
-            /// <para>The root directory permissions.</para>
+            /// <para>The permissions of the root directory.</para>
             /// </summary>
             [NameInMap("RootPathPermission")]
             [Validation(Required=false)]
             public DescribeAccessPointsResponseBodyAccessPointsRootPathPermission RootPathPermission { get; set; }
             public class DescribeAccessPointsResponseBodyAccessPointsRootPathPermission : TeaModel {
                 /// <summary>
-                /// <para>The file group ID of the owner.</para>
+                /// <para>The ID of the owner user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? OwnerGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID of the owner.</para>
+                /// <para>The ID of the owner user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -180,7 +183,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? OwnerUserId { get; set; }
 
                 /// <summary>
-                /// <para>The POSIX permission.</para>
+                /// <para>The POSIX permissions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0755</para>
@@ -192,12 +195,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The current root directory status.</para>
+            /// <para>The current status of the root directory.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The root path status is unknown.</description></item>
+            /// <item><description>0: The status of the root path is unknown.</description></item>
             /// <item><description>1: The root path does not exist. It may have been deleted by the user.</description></item>
-            /// <item><description>2: The root path status is normal.</description></item>
+            /// <item><description>2: The status of the root path is normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,20 +211,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RootPathStatus { get; set; }
 
             /// <summary>
-            /// <para>The current access point status.</para>
+            /// <para>The current status of the access point.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: active.</description></item>
-            /// <item><description>Inactive: inactive.</description></item>
-            /// <item><description>Pending: being created.</description></item>
-            /// <item><description>Deleting: being deleted.</description></item>
+            /// <item><description>active: The access point is available.</description></item>
+            /// <item><description>inactive: The access point is unavailable.</description></item>
+            /// <item><description>pending: The access point is being created.</description></item>
+            /// <item><description>deleting: The access point is being deleted.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>You can mount a file system only when the status is Active.</para>
+            /// <para>You can mount the file system only when the status is active.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>Active</para>
+            /// <para>active</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -279,7 +282,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</para>

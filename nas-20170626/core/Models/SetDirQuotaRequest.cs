@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class SetDirQuotaRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to perform a precheck on the request.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of files in the directory.</para>
         /// <para>This includes files, directories, and special files.</para>
         /// <para>When QuotaType is set to Enforcement, you must specify at least one of SizeLimit and FileCountLimit.</para>
@@ -22,7 +29,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? FileCountLimit { get; set; }
 
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>The ID of the file system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The absolute path of the directory in the file system.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can set a quota only for a directory that already exists in the NAS file system. The directory path for the quota is the absolute path in the NAS file system, not the local path on a compute node (such as an ECS instance or container).</description></item>
+        /// <item><description>Quotas can only be set for directories that have been created in a NAS file system. The quota path is the absolute path of the directory in the NAS file system, not a local path on a compute node (such as an ECS instance or container).</description></item>
         /// <item><description>Directories whose path names contain Chinese characters are not supported.</description></item>
         /// </list>
         /// </remarks>
@@ -53,8 +60,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The quota type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Accounting: statistical quota. Only tracks usage.</description></item>
-        /// <item><description>Enforcement: enforcement quota. When usage exceeds the limit, operations such as creating files or directories and appending data fail.</description></item>
+        /// <item><description>Accounting: accounting quota, which only tracks usage.</description></item>
+        /// <item><description>Enforcement: enforcement quota. If usage exceeds the limit, operations such as creating files or directories and appending data will fail.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,8 +73,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string QuotaType { get; set; }
 
         /// <summary>
-        /// <para>The total capacity limit for files in the directory.</para>
-        /// <para>Unit: GiB.</para>
+        /// <para>The maximum total size of files in the directory.</para>
+        /// <para>Unit: GiB</para>
         /// <para>When QuotaType is set to Enforcement, you must specify at least one of SizeLimit and FileCountLimit.</para>
         /// 
         /// <b>Example:</b>
@@ -78,12 +85,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? SizeLimit { get; set; }
 
         /// <summary>
-        /// <para>The UID or GID to restrict.</para>
-        /// <para>This parameter is required and valid only when UserType is set to Uid or Gid.</para>
+        /// <para>The Uid or Gid to be restricted.</para>
+        /// <para>Required and meaningful only when UserType is Uid or Gid.</para>
         /// <para>Examples:</para>
         /// <list type="bullet">
-        /// <item><description>To restrict the user whose UID is 500, set UserType to Uid and UserId to 500.</description></item>
-        /// <item><description>To restrict the user group whose GID is 100, set UserType to Gid and UserId to 100.</description></item>
+        /// <item><description>To restrict the user with Uid=500, set UserType to Uid and UserId to 500.</description></item>
+        /// <item><description>To restrict the user group with Gid=100, set UserType to Gid and UserId to 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,9 +104,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The user type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Uid: user ID.</description></item>
-        /// <item><description>Gid: user group ID.</description></item>
-        /// <item><description>AllUsers: all users.</description></item>
+        /// <item><description>Uid: user ID</description></item>
+        /// <item><description>Gid: group ID of the user</description></item>
+        /// <item><description>AllUsers: all users</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

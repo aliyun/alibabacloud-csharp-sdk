@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeFilesystemsVscAttachInfoRequestRoleChain> RoleChain { get; set; }
         public class DescribeFilesystemsVscAttachInfoRequestRoleChain : TeaModel {
             /// <summary>
-            /// <para>The UID of the Alibaba Cloud account (the primary account UID). This parameter specifies the Alibaba Cloud account for which the service assumes the role.</para>
+            /// <para>The UID of the Alibaba Cloud account (the UID of the primary account), which specifies the Alibaba Cloud account for which the service assumes the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101522855006****</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The role type. Valid values: service and user.</para>
+            /// <para>The type of the role. Valid values: service and user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service</para>

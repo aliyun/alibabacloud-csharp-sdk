@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ApplyAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the automatic snapshot policy.</para>
+        /// <para>The ID of the destination automatic snapshot policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the Advanced Extreme NAS file systems.</para>
-        /// <para>You can specify up to 100 file system IDs in a single request. To apply the automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).</para>
+        /// <para>The IDs of the destination Advanced Extreme NAS file systems.</para>
+        /// <para>You can specify up to 100 file system IDs in a single call. To apply the automatic snapshot policy to multiple file systems, separate the file system IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

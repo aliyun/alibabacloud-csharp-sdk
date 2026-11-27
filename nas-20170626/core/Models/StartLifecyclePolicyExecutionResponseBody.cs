@@ -20,10 +20,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request status.</para>
-        /// <para>Valid values:</para>
+        /// <para>The request status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>true: The request succeeded.</description></item>
         /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 

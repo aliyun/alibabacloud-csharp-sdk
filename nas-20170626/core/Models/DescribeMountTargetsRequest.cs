@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountTargetsRequest : TeaModel {
         /// <summary>
-        /// <para>The dual-stack (IPv4 and IPv6) mount target domain.</para>
+        /// <para>The IPv4 and IPv6 dual-stack mount target.</para>
         /// <remarks>
-        /// <para>IPv6 is currently supported only in the Chinese mainland regions for Extreme NAS file systems.</para>
+        /// <para>Currently, only Extreme NAS file systems in regions in the Chinese mainland support IPv6.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>General-purpose NAS: 31a8e4****.</para>
         /// </description></item>
-        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, such as extreme-0015****.</para>
         /// </description></item>
-        /// <item><description><para>Cloud Parallel File Storage (CPFS): must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, such as cpfs-125487****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The page number of the list.</para>
-        /// <para>Start value (default value): 1.</para>
+        /// <para>Starting value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

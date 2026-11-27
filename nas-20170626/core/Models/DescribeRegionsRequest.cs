@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The file system type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all: all types</description></item>
-        /// <item><description>standard: General-purpose NAS (default)</description></item>
-        /// <item><description>extreme: Extreme NAS</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage</description></item>
+        /// <item><description>all: All types.</description></item>
+        /// <item><description>standard: General-purpose NAS. This is the default value.</description></item>
+        /// <item><description>extreme: Extreme NAS.</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of regions per page in a paging query.</para>
+        /// <para>The number of regions per page for paging in a paged query.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 

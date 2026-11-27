@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeCpfsAccessPointsResponseBodyAccessPoints> AccessPoints { get; set; }
         public class DescribeCpfsAccessPointsResponseBodyAccessPoints : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the access point.</para>
+            /// <para>The ARN of the access point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessPointId { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The time when the access point was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-28T06:32:14Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was last modified. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The time when the access point was modified. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-28T06:32:14Z</para>
@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The current status of the root directory.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Unknown: the root path status is unknown.</description></item>
-                /// <item><description>NotExist: the root path does not exist. It may have been deleted by the user.</description></item>
-                /// <item><description>Ready: the root path status is normal.</description></item>
+                /// <item><description>Unknown: The status of the root path is unknown.</description></item>
+                /// <item><description>NotExist: The root path does not exist. It may have been deleted.</description></item>
+                /// <item><description>Ready: The root path is normal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The current status of the access point.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: available.</description></item>
-            /// <item><description>Inactive: unavailable.</description></item>
-            /// <item><description>Pending: being created.</description></item>
-            /// <item><description>Deleting: being deleted.</description></item>
+            /// <item><description>Active: The access point is available.</description></item>
+            /// <item><description>Inactive: The access point is unavailable.</description></item>
+            /// <item><description>Pending: The access point is being created.</description></item>
+            /// <item><description>Deleting: The access point is being deleted.</description></item>
             /// </list>
             /// <remarks>
             /// <para>You can mount the file system only when the status is Active.</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of tags for the CPFS access point.</para>
+            /// <para>The tags of the CPFS access point.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page.
+        /// <para>The number of entries returned per page.
         /// Valid values: 1 to 100.<br>Default value: 10.</para>
         /// 
         /// <b>Example:</b>

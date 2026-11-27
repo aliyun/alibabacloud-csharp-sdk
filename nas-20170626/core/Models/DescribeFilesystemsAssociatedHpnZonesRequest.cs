@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFilesystemsAssociatedHpnZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The collection of file system IDs.</para>
+        /// <para>The IDs of the file systems.</para>
         /// <remarks>
         /// <para>The maximum number of elements in the collection must be less than or equal to 20.</para>
         /// </remarks>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the file system.</para>
+        /// <para>The ID of the region to which the file system belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

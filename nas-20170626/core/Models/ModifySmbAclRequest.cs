@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The home folder path for each user. The file path must meet the following format requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Forward slashes (/) or backslashes (\) are used as separators.</para>
+        /// <item><description><para>Forward slashes (/) or backslashes () are used as separators.</para>
         /// </description></item>
         /// <item><description><para>Each segment cannot contain <c>&lt;&gt;&quot;:|?*</c>.</para>
         /// </description></item>

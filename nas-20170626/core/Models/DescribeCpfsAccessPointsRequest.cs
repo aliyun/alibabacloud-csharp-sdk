@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>. Example: cpfs-099394bd928c****.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per query.
+        /// <para>The number of entries to return on each page.
         /// Valid values: 1 to 100.
         /// Default value: 10.</para>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags for the CPFS access point.</para>
+        /// <para>The tags of the CPFS access point.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyAccessPointRequest : TeaModel {
         /// <summary>
-        /// <para>The permission group name.</para>
-        /// <para>This parameter is required if the file system is a General-purpose NAS file system.</para>
-        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</para>
+        /// <para>The name of the permission group.</para>
+        /// <para>This parameter is required when the target file system is a General-purpose NAS file system.</para>
+        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</para>
         /// <remarks>
-        /// <para>Agentic file systems do not support this parameter.</para>
+        /// <para>Not supported by Agentic file systems.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,13 +49,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Specifies whether to enable the RAM policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false (default): Not enabled.</description></item>
+        /// <item><description>false: Disabled. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must perform authorization to grant the corresponding access permissions to the accounts and then mount and access data through the access point. After you disable the RAM policy, the access point allows anonymity mounting.</para>
+        /// <para>After you enable the RAM policy for the access point, all Resource Access Management (RAM) users are denied from using the access point to mount and access data by default. You must grant authorization to the accounts to enable the corresponding access permissions, and mount the file system through the access point. If this feature is disabled, the access point allows anonymous mounting.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Agentic file systems do not support this parameter.</para>
+        /// <para>Not supported by Agentic file systems.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

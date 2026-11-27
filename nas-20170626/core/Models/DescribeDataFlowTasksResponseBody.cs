@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeDataFlowTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the truncation point.</para>
+        /// <para>The next token. If the returned results of a request are truncated, you can use NextToken to initiate another request and obtain the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>

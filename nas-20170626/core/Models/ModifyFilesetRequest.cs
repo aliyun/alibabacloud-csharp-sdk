@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyFilesetRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests.</para>
-        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,13 +24,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The release protection property of the instance. Specifies whether the instance can be released by using the console or the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</para>
+        /// <para>The release protection property of the instance. Specifies whether the instance can be released by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>true: Enables release protection for the instance.</description></item>
-        /// <item><description>false: Disables release protection for the instance.</description></item>
+        /// <item><description>true: enables release protection for the instance.</description></item>
+        /// <item><description>false: disables release protection for the instance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This property only restricts manual release operations and does not take effect on system-initiated release operations.</para>
+        /// <para>This property only restricts manual release operations and does not take effect on system release operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,13 +54,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for this modification request.</para>
-        /// <para>A dry run checks parameter validity and inventory without actually modifying the instance or incurring charges.</para>
+        /// <para>Specifies whether to perform a dry run on the modification request.</para>
+        /// <para>A dry run checks parameter validity and inventory without actually modifying the instance or incurring fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Sends a dry run request without modifying the instance. The check items include whether required parameters are specified, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): Sends a normal request. After the check passes, the instance is directly modified.</description></item>
+        /// <item><description>true: performs a dry run. The instance is not modified. The system checks whether required parameters are specified, the request format, business limits, and NAS inventory. If the request fails the dry run, an error is returned. If the request passes the dry run, the HTTP status code 200 is returned.</description></item>
+        /// <item><description>false: performs a regular request. If the request passes the dry run, the instance is modified.</description></item>
         /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -72,9 +73,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <item><description><para>CPFS for Lingjun: must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -87,7 +88,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>Fileset ID。</para>
+        /// <para>The Fileset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

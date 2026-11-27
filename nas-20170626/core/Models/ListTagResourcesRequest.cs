@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>filesystem: file system.</description></item>
-        /// <item><description>accesspoint: access point.</description></item>
+        /// <item><description>filesystem: file system</description></item>
+        /// <item><description>accesspoint: access point</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags. Array length: 1 to 20. If the array contains multiple tag objects, the tag key (Key) must be unique.</para>
+        /// <para>The array of tags. Array length: 1 to 20. If the array contains multiple tag objects, tag keys must be unique.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag key.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Cannot be empty or an empty string. </description></item>
-            /// <item><description>Can be up to 128 characters in length.</description></item>
-            /// <item><description>Cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
-            /// <item><description>Cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>It cannot be empty or an empty string. </description></item>
+            /// <item><description>It can be up to 128 characters in length.</description></item>
+            /// <item><description>It cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>It cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Can be up to 128 characters in length.</description></item>
-            /// <item><description>Cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description>It can be up to 128 characters in length.</description></item>
+            /// <item><description>It cannot contain <c>http://</c> or <c>https://</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

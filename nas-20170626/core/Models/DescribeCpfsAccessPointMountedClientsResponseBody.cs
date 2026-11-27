@@ -17,11 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeCpfsAccessPointMountedClientsResponseBodyMountedClient> MountedClient { get; set; }
         public class DescribeCpfsAccessPointMountedClientsResponseBodyMountedClient : TeaModel {
             /// <summary>
-            /// <para>The type of the client mounted to the access point. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>vsc</description></item>
-            /// <item><description>tcp</description></item>
-            /// </list>
+            /// <para>The channel type of the client mounted to the access point, such as vsc or tcp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc</para>
@@ -53,7 +49,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries returned on each page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

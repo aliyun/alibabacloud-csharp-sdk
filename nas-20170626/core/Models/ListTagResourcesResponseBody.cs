@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
+        /// <para>The token for the next query. If NextToken is empty, it indicates that the current page is the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

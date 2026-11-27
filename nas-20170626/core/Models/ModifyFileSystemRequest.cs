@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyFileSystemRequest : TeaModel {
         /// <summary>
-        /// <para>The auto-scaling configuration.</para>
+        /// <para>The automatic expansion configuration.</para>
         /// </summary>
         [NameInMap("AutoUpgradeConfig")]
         [Validation(Required=false)]
         public ModifyFileSystemRequestAutoUpgradeConfig AutoUpgradeConfig { get; set; }
         public class ModifyFileSystemRequestAutoUpgradeConfig : TeaModel {
             /// <summary>
-            /// <para>The capacity usage threshold.</para>
+            /// <para>The capacity usage threshold. Valid values: 1 to 99.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -27,14 +27,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public int? CapacityUsedRatio { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable auto-scaling.</para>
+            /// <para>Specifies whether to enable automatic expansion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The scaling increment.</para>
+            /// <para>The expansion step. The step must be a multiple of 100 GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public int? Step { get; set; }
 
             /// <summary>
-            /// <para>The duration.</para>
+            /// <para>The duration. The minimum duration is 5 minutes, and the maximum duration is 24 hours. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -60,8 +63,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
+        /// <item><description>It must start with a letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>It can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,13 +75,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>The ID of the file system.</para>
         /// <list type="bullet">
         /// <item><description><para>General-purpose NAS: <c>31a8e4****</c>.</para>
         /// </description></item>
-        /// <item><description><para>Extreme NAS: The ID must start with <c>extreme-</c>, for example, <c>extreme-0015****</c>.</para>
+        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, such as <c>extreme-0015****</c>.</para>
         /// </description></item>
-        /// <item><description><para>Cloud Parallel File Storage (CPFS): The ID must start with <c>cpfs-</c>, for example, <c>cpfs-125487****</c>.</para>
+        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, such as <c>cpfs-125487****</c>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public ModifyFileSystemRequestOptions Options { get; set; }
         public class ModifyFileSystemRequestOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the SMB Access-Based Enumeration (ABE) feature.</para>
+            /// <para>Specifies whether to enable the SMB ABE access control feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.<remarks>
-            /// <para>Only file systems of the SMB Protocol Type are supported.</para>
+            /// <para>This parameter is supported only for file systems of the SMB Protocol Type.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -126,7 +129,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? EnableOplock { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the Lingjun VSC mount target supports only access point-based access.</para>
+            /// <para>Specifies whether to enable AP-only access for VSC mount targets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

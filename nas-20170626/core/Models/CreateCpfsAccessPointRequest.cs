@@ -14,9 +14,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter.</description></item>
-        /// <item><description>The description cannot start with http:// or https://.</description></item>
-        /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
+        /// <item><description>It must start with a letter or a Chinese character, and cannot start with http:// or https://.</description></item>
+        /// <item><description>It can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,9 +28,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>Cloud Parallel File Storage (CPFS): The ID must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-125487****.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-0015****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -55,14 +54,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The root directory of the access point. Default value: &quot;/&quot;.</para>
+        /// <para>The root directory of the access point. Default value: /.</para>
         /// </summary>
         [NameInMap("RootDirectory")]
         [Validation(Required=false)]
         public CreateCpfsAccessPointRequestRootDirectory RootDirectory { get; set; }
         public class CreateCpfsAccessPointRequestRootDirectory : TeaModel {
             /// <summary>
-            /// <para>The root directory of the access point. The value must start and end with a forward slash (/).</para>
+            /// <para>The root directory of the access point. It must start and end with a forward slash (/).</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test/</para>
@@ -74,7 +73,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The list of tags for the CPFS access point.</para>
+        /// <para>The tags of the CPFS access point.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

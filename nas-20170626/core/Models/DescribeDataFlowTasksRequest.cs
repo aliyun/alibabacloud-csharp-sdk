@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>General-purpose CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// <item><description><para>General-purpose CPFS: must start with <c>cpfs-</c>, for example, cpfs-099394bd928c****.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <item><description><para>CPFS for Lingjun: must start with <c>bmcpfs-</c>, for example, bmcpfs-290w65p03ok64ya****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The collection of filter key information.</para>
+        /// <para>The collection of filter keys.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The name of the filter key.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DataFlowIds: filters by data flow ID.</description></item>
-            /// <item><description>TaskIds: filters by data flow task ID.</description></item>
-            /// <item><description>Originator: filters by the initiator of the data flow task.</description></item>
-            /// <item><description>TaskActions: filters by the type of the data flow task.</description></item>
-            /// <item><description>DataTypes: filters by the data type of the data flow task.</description></item>
-            /// <item><description>Status: filters by data flow status.</description></item>
-            /// <item><description>CreateTimeBegin: filters data flow tasks created after the specified time.</description></item>
-            /// <item><description>CreateTimeEnd: filters data flow tasks created before the specified time.</description></item>
-            /// <item><description>StartTimeBegin: filters data flow tasks started after the specified time.</description></item>
-            /// <item><description>StartTimeEnd: filters data flow tasks started before the specified time.</description></item>
-            /// <item><description>EndTimeBegin: filters data flow tasks that ended after the specified time.</description></item>
-            /// <item><description>EndTimeEnd: filters data flow tasks that ended before the specified time.</description></item>
+            /// <item><description>DataFlowIds: Filters by data flow ID.</description></item>
+            /// <item><description>TaskIds: Filters by data flow task ID.</description></item>
+            /// <item><description>Originator: Filters by the originator of the data flow task.</description></item>
+            /// <item><description>TaskActions: Filters by the type of the data flow task.</description></item>
+            /// <item><description>DataTypes: Filters by the data type of the data flow task.</description></item>
+            /// <item><description>Status: Filters by the data flow status.</description></item>
+            /// <item><description>CreateTimeBegin: Filters data flow tasks created after a specified time.</description></item>
+            /// <item><description>CreateTimeEnd: Filters data flow tasks created before a specified time.</description></item>
+            /// <item><description>StartTimeBegin: Filters data flow tasks started after a specified time.</description></item>
+            /// <item><description>StartTimeEnd: Filters data flow tasks started before a specified time.</description></item>
+            /// <item><description>EndTimeBegin: Filters data flow tasks ended after a specified time.</description></item>
+            /// <item><description>EndTimeEnd: Filters data flow tasks ended before a specified time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,18 +64,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The value of the filter key. This parameter does not support wildcards.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to DataFlowIds, Value is set to a data flow ID or part of a data flow ID. You can specify one or more data flow IDs. You can specify up to 10 data flow IDs. Example: <c>df-194433a5be31****</c> or <c>df-194433a5be31****,df-234533a5be31****</c>.</description></item>
-            /// <item><description>If Key is set to TaskId, Value is set to a data flow task ID or part of a data flow task ID. You can specify one or more data flow task IDs. You can specify up to 10 data flow task IDs. Example: <c>task-38aa8e890f45****</c> or <c>task-38aa8e890f45****,task-29ae8e890f45****</c>.</description></item>
-            /// <item><description>If Key is set to TaskActions, Value is set to the type of the data flow task, including <b>Import</b>, <b>Export</b>, <b>Evict</b>, <b>Inventory</b>, <b>StreamImport</b>, and <b>StreamExport</b>. Combined queries are supported. CPFS for Lingjun supports only Import, Export, StreamImport, and StreamExport. StreamImport and StreamExport are supported only by CPFS for Lingjun 2.6.0 and later.</description></item>
-            /// <item><description>If Key is set to DataTypes, Value is set to the data type of the data flow task, including MetaAndData, Metadata, and Data. Combined queries are supported.</description></item>
-            /// <item><description>If Key is set to Originator, Value is set to the initiator of the data flow task, including User and System.</description></item>
-            /// <item><description>If Key is set to Status, Value is set to the status of the data flow task, including Pending, Executing, Failed, Completed, Canceling, and Canceled. Combined queries are supported.</description></item>
-            /// <item><description>If Key is set to CreateTimeBegin, Value is set to the earliest creation time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
-            /// <item><description>If Key is set to CreateTimeEnd, Value is set to the latest creation time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
-            /// <item><description>If Key is set to StartTimeBegin, Value is set to the earliest start time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
-            /// <item><description>If Key is set to StartTimeEnd, Value is set to the latest start time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
-            /// <item><description>If Key is set to EndTimeBegin, Value is set to the earliest end time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
-            /// <item><description>If Key is set to EndTimeEnd, Value is set to the latest end time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>When Key is set to DataFlowIds, Value is set to the data flow ID or a part of the data flow ID. It can be a single DataFlowId or a list of DataFlowIds. You can specify up to 10 data flow IDs. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</description></item>
+            /// <item><description>When Key is set to TaskIds, Value is set to the data flow task ID or a part of the data flow task ID. It can be a single task ID or a list of task IDs. You can specify up to 10 data flow task IDs. Example: <c>task-38aa8e890f45****</c> or <c>task-38aa8e890f45****,task-29ae8e890f45****</c>.</description></item>
+            /// <item><description>When Key is set to TaskActions, Value is set to the task type of the data flow. Valid values: <b>Import</b>, <b>Export</b>, <b>Evict</b>, <b>Inventory</b>, <b>StreamImport</b>, and <b>StreamExport</b>. Combined queries are supported. Currently, CPFS for Lingjun only supports Import, Export, StreamImport, and StreamExport. StreamImport and StreamExport are supported only in CPFS for Lingjun 2.6.0 and later.</description></item>
+            /// <item><description>When Key is set to DataTypes, Value is set to the data type of the data flow task. Valid values: MetaAndData, Metadata, and Data. Combined queries are supported.</description></item>
+            /// <item><description>When Key is set to Originator, Value is set to the originator of the data flow task. Valid values: User and System.</description></item>
+            /// <item><description>When Key is set to Status, Value is set to the status of the data flow task. Valid values: Pending, Executing, Failed, Completed, Canceling, and Canceled. Combined queries are supported.</description></item>
+            /// <item><description>When Key is set to CreateTimeBegin, Value is set to the minimum creation time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>When Key is set to CreateTimeEnd, Value is set to the maximum creation time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>When Key is set to StartTimeBegin, Value is set to the minimum start time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>When Key is set to StartTimeEnd, Value is set to the maximum start time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>When Key is set to EndTimeBegin, Value is set to the minimum end time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>When Key is set to EndTimeEnd, Value is set to the maximum end time of the data flow task. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The maximum number of entries to return for a single request.</para>
         /// <para>Valid values: 10 to 100.</para>
         /// <para>Default value: 20.</para>
         /// 
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the truncation point.</para>
+        /// <para>The next token. If the returned results of a request are truncated, you can use NextToken to initiate another request and obtain the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -111,14 +111,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to query report information.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True (default): queries reports.</description></item>
-        /// <item><description>False: does not query reports.</description></item>
+        /// <item><description>True: Queries reports. This is the default value.</description></item>
+        /// <item><description>False: Does not query reports.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Setting this parameter to False speeds up the query.</description></item>
-        /// <item><description>Only CPFS for Lingjun is supported.</description></item>
+        /// <item><description>Setting this parameter to false can accelerate the query speed.</description></item>
+        /// <item><description>Only CPFS for Lingjun supports this parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 

@@ -10,13 +10,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>Specifies whether to perform a dry run on the request.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the file system.</para>
         /// <list type="bullet">
-        /// <item><description><para>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>General-purpose NAS: 31a8e4****.</para>
         /// </description></item>
-        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, such as extreme-0015****.</para>
         /// </description></item>
-        /// <item><description><para>Cloud Parallel File Storage (CPFS): must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, such as cpfs-125487****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

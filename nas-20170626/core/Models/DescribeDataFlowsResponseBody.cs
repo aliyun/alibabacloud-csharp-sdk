@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>When the returned results of a request are truncated, you can use NextToken to initiate another request and obtain the remaining results.</para>
+        /// <para>The pagination token. If the returned results are truncated, you can use NextToken to initiate another request to retrieve the remaining results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D69A58F-345C-4FDE-88E4-BF518948****</para>

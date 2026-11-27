@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard (default): General-purpose NAS.</description></item>
+        /// <item><description>standard: General-purpose NAS. This is the default value.</description></item>
         /// <item><description>extreme: Extreme NAS.</description></item>
         /// </list>
         /// 
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>CIDR blocks and IPv6 address ranges are supported.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>IPv6 is supported only by Extreme NAS file systems in regions in the Chinese mainland, and IPv6 must be enabled for the file system.</description></item>
-        /// <item><description>Only VPC networks are supported.</description></item>
+        /// <item><description>Only Extreme NAS file systems in regions in the Chinese mainland support IPv6, and the IPv6 feature must be enabled for the file system.</description></item>
+        /// <item><description>Only VPCs are supported.</description></item>
         /// <item><description>IPv4 and IPv6 are mutually exclusive.</description></item>
         /// </list>
         /// </remarks>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The priority of the permission rule.</para>
-        /// <para>If an authorized address matches multiple rules, the rule with the highest priority takes effect.</para>
+        /// <para>The priority of the permission group rule.</para>
+        /// <para>If an authorized object matches multiple rules, the rule with the highest priority takes effect.</para>
         /// <para>Valid values: 1 to 100. The value 1 indicates the highest priority.</para>
         /// 
         /// <b>Example:</b>
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The read and write permissions of the authorized address on the file system.</para>
+        /// <para>The read and write permissions of the authorized object on the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RDWR (default): Read and write.</description></item>
-        /// <item><description>RDONLY: Read-only.</description></item>
+        /// <item><description>RDWR: read and write. This is the default value.</description></item>
+        /// <item><description>RDONLY: read-only.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,8 +81,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RWAccessType { get; set; }
 
         /// <summary>
-        /// <para>The IP address or CIDR block of the authorized address.</para>
-        /// <para>The value must be a single IP address or a CIDR block.</para>
+        /// <para>The IP address or CIDR block of the authorized object.</para>
+        /// <para>The format must be a single IP address or a CIDR block.</para>
         /// <remarks>
         /// <para>Permission groups of the classic network type support only IP addresses.</para>
         /// </remarks>
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The authorization of the system user of the authorized address on the file system.</para>
+        /// <para>The access permissions of system users of the authorization object on the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>no_squash (default): Allows access to the file system as the root user.</description></item>
-        /// <item><description>root_squash: Maps the root user to the nobody user when the file system is accessed as the root user.</description></item>
-        /// <item><description>all_squash: Maps all users to the nobody user regardless of the user identity used to access the file system.</description></item>
+        /// <item><description>no_squash: allows access to the file system by using the root user. This is the default value.</description></item>
+        /// <item><description>root_squash: maps the root user to the nobody user when the file system is accessed as the root user.</description></item>
+        /// <item><description>all_squash: maps all users to the nobody user regardless of the user identity used to access the file system.</description></item>
         /// </list>
-        /// <para>The nobody user is the default user in Linux. The nobody user can access only public content on the server and has low privileges and high security.</para>
+        /// <para>The nobody user is the default user in Linux systems. This user can only access public content on the server and features low permissions and high security.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no_squash</para>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateRecycleBinRestoreJobRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>You can generate the value on your client to ensure that it is unique across different requests. The ClientToken parameter only supports ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify ClientToken, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
+        /// <para>If you do not specify the ClientToken parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The FileId of the file or directory to restore.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of deleted data.</para>
+        /// <para>The FileId of the file or directory to be restored.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of the deleted data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,13 +39,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The file system ID. <b>Required</b>.</para>
         /// <para><b>How to obtain</b>:</para>
         /// <list type="bullet">
-        /// <item><description>Call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to query the file system list and obtain the FileSystemId.</description></item>
-        /// <item><description>Call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> to create a file system and obtain the FileSystemId from the response.</description></item>
+        /// <item><description>Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> operation to query the file system list and obtain the FileSystemId.</description></item>
+        /// <item><description>Call the <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-createfilesystem">CreateFileSystem</a> operation to create a file system and obtain the returned FileSystemId.</description></item>
         /// </list>
         /// <para><b>Usage notes</b>:</para>
         /// <list type="bullet">
-        /// <item><description>This operation applies only to General-purpose NAS file systems.</description></item>
-        /// <item><description>Before calling this operation, make sure that the recycle bin feature is enabled for the file system.</description></item>
+        /// <item><description>This operation is applicable only to General-purpose NAS file systems.</description></item>
+        /// <item><description>Before you call this operation, make sure that the recycle bin feature is enabled for the target file system.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,16 +57,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The FileId of the directory to which the file is restored.</para>
+        /// <para>The FileId of the directory where the restored file is stored.</para>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories</a> operation to query the TargetFileId of directories from which files were deleted.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories</a> operation to query the TargetFileId of the directory on which the delete operation was performed.</para>
         /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/2412163.html">ListDirectoriesAndFiles</a> operation to query the TargetFileId of existing directories in the file system.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/2412163.html">ListDirectoriesAndFiles</a> operation to query the TargetFileId of an existing directory in the file system.</para>
         /// </description></item>
         /// </list>
         /// <para><b>Special notes</b>:</para>
         /// <list type="bullet">
-        /// <item><description>The FileId of the root directory of a file system is fixed to <c>2</c>. You can use this value directly as the TargetFileId to restore a file to the root directory without querying.</description></item>
+        /// <item><description>The FileId of the root directory of the file system is fixed to <c>2</c>. You can directly use <c>2</c> as the TargetFileId to restore the file to the root directory without querying it.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of mount targets on each page when paging is used.</para>
+        /// <para>The number of mount targets per paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

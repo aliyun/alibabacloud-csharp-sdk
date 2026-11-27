@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListDataInsightDirectoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The directory information.</para>
+        /// <para>The collection of directory information.</para>
         /// </summary>
         [NameInMap("Directory")]
         [Validation(Required=false)]
         public ListDataInsightDirectoriesResponseBodyDirectory Directory { get; set; }
         public class ListDataInsightDirectoriesResponseBodyDirectory : TeaModel {
             /// <summary>
-            /// <para>The directory capacity.</para>
+            /// <para>The capacity of the directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10240</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? FileCount { get; set; }
 
             /// <summary>
-            /// <para>The number of Infrequent Access (IA) files.</para>
+            /// <para>The number of IA files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>204800</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? Inode { get; set; }
 
             /// <summary>
-            /// <para>The subdirectory information.</para>
+            /// <para>The collection of subdirectory information.</para>
             /// </summary>
             [NameInMap("SubDirectories")]
             [Validation(Required=false)]
             public List<ListDataInsightDirectoriesResponseBodyDirectorySubDirectories> SubDirectories { get; set; }
             public class ListDataInsightDirectoriesResponseBodyDirectorySubDirectories : TeaModel {
                 /// <summary>
-                /// <para>The time when the directory was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+                /// <para>The time when the directory was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-23T12:47:14Z</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? DirCapacityOnline { get; set; }
 
                 /// <summary>
-                /// <para>The subdirectory level.</para>
+                /// <para>The level of the subdirectory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? DirLevel { get; set; }
 
                 /// <summary>
-                /// <para>The subdirectory name.</para>
+                /// <para>The name of the subdirectory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/dir_l1_n000</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public long? Inode { get; set; }
 
                 /// <summary>
-                /// <para>The time when the database directory data record was last updated. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+                /// <para>The update time of the database directory data record. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-29T03:41:12Z</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public string LastAccessTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the directory was last accessed. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+                /// <para>The last access time of the directory. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-29T03:41:12Z</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of directories returned.</para>
+        /// <para>The maximum number of directories to return for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The query token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/subDir</para>

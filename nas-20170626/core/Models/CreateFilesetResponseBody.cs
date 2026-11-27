@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateFilesetResponseBody : TeaModel {
         /// <summary>
-        /// <para>Fileset ID。</para>
+        /// <para>The Fileset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fset-1902718ea0ae****</para>

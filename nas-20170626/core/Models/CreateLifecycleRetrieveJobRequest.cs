@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateLifecycleRetrieveJobRequest : TeaModel {
         /// <summary>
-        /// <para>The file system ID.</para>
+        /// <para>The ID of the file system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The list of directories or file paths to retrieve. A maximum of 10 paths are supported.</para>
+        /// <para>The list of paths of the directories or files to retrieve. You can specify up to 10 paths.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The storage class. Valid values:</para>
+        /// <para>The tiered storage type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess (default): IA storage class.</description></item>
-        /// <item><description>Archive: Archive storage class.</description></item>
+        /// <item><description>Archive: Archive storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
