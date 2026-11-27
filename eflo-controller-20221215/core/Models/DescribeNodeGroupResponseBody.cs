@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Az { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i111987311754895199538</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The name of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-basic-cluster</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The creation time. The time is in ISO 8601 format.</para>
+        /// <para>The creation time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-07T17:19:42.980000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether file storage mounting is supported.</para>
+        /// <para>Specifies whether file storage mounting is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
-        /// <para>The image ID.</para>
+        /// <para>The ID of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i190720111752146430748</para>
@@ -90,11 +90,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>Valid values:
-        /// • password: The group supports only password-based logon. 
-        /// • keypair: The group supports only key pair-based logon. 
-        /// • both: The group supports both password-based and key pair-based logon.</para>
-        /// <para>If the value is empty, no logon method is configured for the group.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>password: The current group supports only password logon. </description></item>
+        /// <item><description>keypair: The current group supports only key pair logon. </description></item>
+        /// <item><description>both: The current group supports both password and key pair logon.</description></item>
+        /// </list>
+        /// <para>If this parameter is empty, no logon method is configured for the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>password</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeCount { get; set; }
 
         /// <summary>
-        /// <para>The node group description.</para>
+        /// <para>The description of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lingjun alinux node group</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupDescription { get; set; }
 
         /// <summary>
-        /// <para>The node group ID.</para>
+        /// <para>The ID of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i120982301752461697971</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The node group name.</para>
+        /// <para>The name of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ack</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role for the node. You can call the RAM API ListRoles to query the RAM roles that you have created.</para>
+        /// <para>The name of the RAM role for the node. You can call the ListRoles operation of RAM to query the RAM roles that you have created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xianwen-test-ram-role</para>
@@ -191,10 +193,48 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The performance level (PL) of the ESSD used as the system cloud disk. Valid values:</para>
+            /// <para>Specifies whether the system cloud disk is encrypted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
+            /// <item><description>true: The system cloud disk is encrypted.</description></item>
+            /// <item><description>false: The system cloud disk is not encrypted.</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
+            /// <remarks>
+            /// <para>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk. This ensures that the created cloud disk uses the key of the account that the image is shared with.</notice></para>
+            /// </remarks>
+            /// <remarks>
+            /// <para>You cannot encrypt the system cloud disk when you create an instance in Hong Kong (China) Zone D or Singapore Zone A.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public bool? Encrypted { get; set; }
+
+            /// <summary>
+            /// <para>The KMS key ID for the system cloud disk.</para>
+            /// <para>If the Encrypted parameter is set to true but KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</para>
+            /// <list type="bullet">
+            /// <item><description>If the cloud disk is created from a non-shared encrypted snapshot, the encryption key used for the snapshot is used by default.</description></item>
+            /// <item><description>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</description></item>
+            /// <item><description>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</description></item>
+            /// <item><description>In other cases, the service key is used by default.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2d504554-333a-47c8-8d98-de36a23a1a4f</para>
+            /// </summary>
+            [NameInMap("KMSKeyId")]
+            [Validation(Required=false)]
+            public string KMSKeyId { get; set; }
+
+            /// <summary>
+            /// <para>The performance level of the ESSD used as the system cloud disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,7 +247,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <summary>
             /// <para>The size of the system cloud disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Premium performance disk: 20 to 500.</description></item>
+            /// <item><description>Basic cloud disk: 20 to 500.</description></item>
             /// <item><description>ESSD:<list type="bullet">
             /// <item><description>PL0: 1 to 2048.</description></item>
             /// <item><description>PL1: 20 to 2048.</description></item>
@@ -215,10 +255,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <item><description>PL3: 1261 to 2048.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>ESSD AutoPL: 1 to 2048.</description></item>
+            /// <item><description>ESSD AutoPL cloud disk: 1 to 2048.</description></item>
             /// <item><description>Other cloud disk types: 20 to 2048.</description></item>
             /// </list>
-            /// <para>Default value: max{20, size of the image specified by the parameter ImageId}.</para>
+            /// <para>Default value: max{20, the size of the image specified by the ImageId parameter}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -230,7 +270,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The update time. The time is in ISO 8601 format.</para>
+        /// <para>The update time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-20T11:18:11.164000</para>
@@ -252,7 +292,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether GPU virtualization slicing is supported.</para>
+        /// <para>Specifies whether GPU virtualization and partitioning are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>

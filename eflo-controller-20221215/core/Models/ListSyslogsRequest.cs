@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string FromTime { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. Include this token when you retrieve the next page of results.</para>
+        /// <para>The token for the next page. Include this token to retrieve the next page of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>392e8b4a03ed171433cc39f5b464ec9d</para>
@@ -42,19 +42,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>panic</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query logs in reverse chronological order.</para>
+        /// <para>Specifies whether to search in reverse chronological order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

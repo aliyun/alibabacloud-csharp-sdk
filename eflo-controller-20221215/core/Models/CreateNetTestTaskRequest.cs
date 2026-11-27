@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>Specify this parameter if NetTestType is set to CommTest.</para>
+        /// <para>The communication test configurations. This field is required when the network test type is communication library testing.</para>
         /// </summary>
         [NameInMap("CommTest")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? GPUNum { get; set; }
 
             /// <summary>
-            /// <para>The hosts.</para>
+            /// <para>The resource ID.</para>
             /// </summary>
             [NameInMap("Hosts")]
             [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The type of communication library test. Valid values: ACCL and NCCL.</para>
+            /// <para>The communication library test type. Valid values: ACCL and NCCL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACCL</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Specify this parameter if NetTestType is set to DelayTest.</para>
+        /// <para>The delay test configurations. This field is required when the network test type is latency testing.</para>
         /// </summary>
         [NameInMap("DelayTest")]
         [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Bond { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>The node IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>125.210.225.48</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The type of network test. Valid values: DelayTest, TrafficTest, and CommTest.</para>
+        /// <para>The network test type. Examples: DelayTest for latency testing, TrafficTest for traffic testing, and CommTest for communication library testing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DelayTest</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NetTestType { get; set; }
 
         /// <summary>
-        /// <para>The network mode.</para>
+        /// <para>The network mode. This parameter is required. If you do not specify this parameter, the API returns a 400 error and prompts that the field is missing (NetworkMode field required).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NetworkMode { get; set; }
 
         /// <summary>
-        /// <para>The test port number.</para>
+        /// <para>The test port number. This parameter is required. If you do not specify this parameter, the API returns a 400 error and prompts that the field is missing (Port field required).</para>
         /// 
         /// <b>Example:</b>
         /// <para>23604</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>This field is empty if TrafficModel is set to Fullmesh.</para>
+        /// <para>The traffic test configurations. If the traffic model TrafficModel is Fullmesh, leave this field empty.</para>
         /// </summary>
         [NameInMap("TrafficTest")]
         [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public List<CreateNetTestTaskRequestTrafficTestClients> Clients { get; set; }
             public class CreateNetTestTaskRequestTrafficTestClients : TeaModel {
                 /// <summary>
-                /// <para>The bonded port of the network interface card (NIC).</para>
+                /// <para>The bonded NIC port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond1</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Bond { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>The node IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The runtime duration of the flow task, in seconds.</para>
+            /// <para>The running duration of the workflow task, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>If Protocol is set to RDMA, specify True or False. This field is empty if Protocol is set to TCP.</para>
+            /// <para>If the protocol is RDMA, specify True or False. If the protocol is TCP, leave this field empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>If Protocol is set to TCP, specify the number of concurrent connections for the test. If Protocol is set to RDMA, specify the QP value.</para>
+            /// <para>The number of Concurrent Connections for the test when the protocol is TCP, or the configured queue pair (QP) value when the protocol is RDMA.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? QP { get; set; }
 
             /// <summary>
-            /// <para>The list of servers.</para>
+            /// <para>The server list.</para>
             /// </summary>
             [NameInMap("Servers")]
             [Validation(Required=false)]
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Bond { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>The node IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.121.110.190</para>

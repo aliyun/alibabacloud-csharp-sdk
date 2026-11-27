@@ -30,10 +30,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string MachineType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
+        /// <para>The maximum number of results per paging for a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
-        /// <para>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
-        /// <para>•If this parameter is set to a value greater than 100, the default value is 100.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this parameter is not specified or the Settings value is less than 20, the default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>If the Settings value is greater than 100, the default value is 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned from the last API call.</para>
+        /// <para>The pagination token. The value is the NextToken parameter returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120****</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of unused node statuses to return.</para>
+        /// <para>The list of statuses of unused nodes to return.</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

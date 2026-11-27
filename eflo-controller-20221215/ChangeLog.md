@@ -1,3 +1,6 @@
+2026-11-27 Version: 3.2.1
+- Generated csharp 2022-12-15 for eflo-controller.
+
 2026-10-13 Version: 3.2.0
 - Support API DescribeFaultReport.
 - Support API ListFaultReports.

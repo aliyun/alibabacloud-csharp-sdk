@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The type of the session corresponding to the session package.</para>
+        /// <para>The session type of the session package.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sol</para>
+        /// <para>N Two types:
+        /// Sol: Serial port-based [default]
+        /// Assistant: Cloud Assistant-based</para>
         /// </summary>
         [NameInMap("SessionType")]
         [Validation(Required=false)]
         public string SessionType { get; set; }
 
         /// <summary>
-        /// <para>The start time. The value is a 13-digit timestamp.</para>
+        /// <para>The start time, which is a 13-digit timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1669340937156</para>

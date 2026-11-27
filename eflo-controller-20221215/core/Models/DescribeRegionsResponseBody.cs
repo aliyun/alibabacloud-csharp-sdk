@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The regions.</para>
+        /// <para>The list of region information.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]

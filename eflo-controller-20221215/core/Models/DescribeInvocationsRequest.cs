@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeInvocationsRequest : TeaModel {
         /// <summary>
-        /// <para>The encoding method for the CommandContent and Output fields in the response. Valid values:</para>
+        /// <para>Specifies the encoding method for the CommandContent and Output fields in the returned data. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PlainText: Returns the original command content and output.</description></item>
-        /// <item><description>Base64 (default): Returns the Base64-encoded command content and output.</description></item>
+        /// <item><description>Base64: Returns the Base64-encoded command content and output. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the command output in the results.</para>
+        /// <para>Specifies whether to return the output of the command execution in the result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Returns the output. In this case, specify at least the InvokeId or InstanceId parameter.</description></item>
-        /// <item><description>false (default): Does not return the output.</description></item>
+        /// <item><description>true: Returns the output. In this case, you must specify at least the InvokeId or InstanceId parameter.</description></item>
+        /// <item><description>false: Does not return the output. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IncludeOutput { get; set; }
 
         /// <summary>
-        /// <para>The command execution ID.</para>
+        /// <para>The invocation ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

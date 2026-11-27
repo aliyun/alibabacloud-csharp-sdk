@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ReportNodesStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>Error Message</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource not found</para>

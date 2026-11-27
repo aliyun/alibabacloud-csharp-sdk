@@ -10,13 +10,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The natural language that is used to filter responses. For more information, see RFC 7231. Valid values:</para>
-        /// <para>zh-CN en-US Default value: zh-CN.</para>
-        /// <para>Valid values:</para>
+        /// <para>Filters the returned results by Chinese or English. For more information, see RFC 7231. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>en-US</description></item>
         /// <item><description>zh-CN</description></item>
+        /// <item><description>en-US</description></item>
         /// </list>
+        /// <para>Default value: zh-CN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>

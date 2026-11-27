@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
+        /// <para>Specifies whether to allow skipping failed nodes. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes.</para>
+        /// <para>The list of nodes. The node IDs must belong to created Lingjun nodes. You can obtain the node IDs by calling the ListClusterNodes or ListFreeNodes operation.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListNodeGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster group information.</para>
+        /// <para>The node group information in the cluster.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<ListNodeGroupsResponseBodyGroups> Groups { get; set; }
         public class ListNodeGroupsResponseBodyGroups : TeaModel {
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i113952461729854708648</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wzq-exclusivelite-71</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is in ISO 8601 format.</para>
+            /// <para>The creation time in the ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-02-27T13:16:31.599</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether file storage mounting is supported.</para>
+            /// <para>Indicates whether file system mounting is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? FileSystemMountEnabled { get; set; }
 
             /// <summary>
-            /// <para>The group ID.</para>
+            /// <para>The ID of the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>238276221</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The group name.</para>
+            /// <para>The name of the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>backend-group</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The image ID.</para>
+            /// <para>The ID of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i194015071707321240258</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The image name.</para>
+            /// <para>The name of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CentOS_7.9_x86_64_FULL_20221110</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? NodeCount { get; set; }
 
             /// <summary>
-            /// <para>The update time. The time is in ISO 8601 format.</para>
+            /// <para>The update time in the ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-22T00:03:05.114</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The NextToken for the next page. Include this return value when requesting the next page.</para>
+        /// <para>The token for the next page. Include this token in the request to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>

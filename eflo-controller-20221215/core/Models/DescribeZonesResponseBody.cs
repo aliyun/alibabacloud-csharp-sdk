@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<DescribeZonesResponseBodyZones> Zones { get; set; }
         public class DescribeZonesResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>The zone name.</para>
+            /// <para>The name of the zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hangzhou</para>

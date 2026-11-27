@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class SendFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the execution.</para>
+        /// <para>The command execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-hz03la52z1zkvls</para>

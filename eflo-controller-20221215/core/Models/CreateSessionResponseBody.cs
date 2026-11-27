@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The session credential.</para>
+        /// <para>The session token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string SessionToken { get; set; }
 
         /// <summary>
-        /// <para>The WebSocket address.</para>
+        /// <para>The WebSocket endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws://x.x.x.x:xx/calypso_web_console</para>

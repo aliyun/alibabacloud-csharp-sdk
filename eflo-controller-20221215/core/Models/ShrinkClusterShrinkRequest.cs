@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. The default value is False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The information about the node groups.</para>
+        /// <para>The node group information. Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter error (NodeGroups field required).</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]

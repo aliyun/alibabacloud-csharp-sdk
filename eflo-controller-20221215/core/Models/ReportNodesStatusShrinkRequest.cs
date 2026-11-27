@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The end time of the node issue. The time is in the ISO 8601 format \<c>yyyy-MM-ddTHH:mm:ss+0800\\</c> and includes the time zone.</para>
+        /// <para>The end time of the node exception. Specify the time in the ISO 8601 standard with the time zone. The format is yyyy-MM-ddTHH:mm:ss+0800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T10:17:06</para>
@@ -30,17 +30,19 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The category of the issue. This parameter is required when \<c>Reason\\</c> is set to \<c>HardwareError\\</c>. Valid values:<br>
-        /// ● hardware-cpu-error: CPU failure<br>
-        /// ● hardware-gpu-error: GPU failure<br>
-        /// ● hardware-motherboard-error: Motherboard failure<br>
-        /// ● hardware-mem-error: Memory failure<br>
-        /// ● hardware-power-error: Power supply failure<br>
-        /// ● hardware-disk-error: Disk failure
-        /// ● hardware-networkcard-error: Network interface card failure<br>
-        /// ● hardware-fan-error: Fan failure<br>
-        /// ● hardware-cable-error: Network cable failure<br>
-        /// ● others: Other<br><br><br><br><br><br><br><br><br></para>
+        /// <para>The category of the exception. This parameter is required when Reason is set to HardwareError. Valid values:</br></para>
+        /// <list type="bullet">
+        /// <item><description>hardware-cpu-error: CPU failure.</br></description></item>
+        /// <item><description>hardware-gpu-error: GPU failure.</br></description></item>
+        /// <item><description>hardware-motherboard-error: Motherboard failure.</br></description></item>
+        /// <item><description>hardware-mem-error: Memory failure.</br></description></item>
+        /// <item><description>hardware-power-error: Power supply failure.</br></description></item>
+        /// <item><description>hardware-disk-error: Disk failure.</description></item>
+        /// <item><description>hardware-networkcard-error: NIC failure.</br></description></item>
+        /// <item><description>hardware-fan-error: Fan failure.</br></description></item>
+        /// <item><description>hardware-cable-error: Network cable failure.</br></description></item>
+        /// <item><description>others: Others.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>hardware-disk-error</para>
@@ -57,12 +59,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodesShrink { get; set; }
 
         /// <summary>
-        /// <para>The impact of the issue on the Lingjun node.
-        /// Valid values:
-        /// ● HardwareError: A hardware error occurred.
-        /// ● SoftwareError: A software error occurred.
-        /// ● NetworkError: A network error occurred.
-        /// ● Others: Other issues. If none of the preceding values apply, set this parameter to \<c>Others\\</c> and provide details in the \<c>Description\\</c> parameter.</para>
+        /// <para>The impact of the exception on the Lingjun node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>HardwareError: A hardware exception occurs.</description></item>
+        /// <item><description>SoftwareError: A software exception occurs.</description></item>
+        /// <item><description>NetworkError: A network exception occurs.</description></item>
+        /// <item><description>Others: Other exceptions. If none of the preceding impact types apply, set Reason to Others and provide more information in Description.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SoftwareError</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The start time of the node issue. The time is in the ISO 8601 format \<c>yyyy-MM-ddTHH:mm:ss+0800\\</c> and includes the time zone.</para>
+        /// <para>The start time of the node exception. Specify the time in the ISO 8601 standard with the time zone. The format is yyyy-MM-ddTHH:mm:ss+0800. Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter (field required) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-22T16:00:00Z</para>

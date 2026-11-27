@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListClusterHyperNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node list.</para>
+        /// <para>The hypernode list.</para>
         /// </summary>
         [NameInMap("HyperNodes")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The machine expiration time. The time is in ISO 8601 format. The Z in the example indicates UTC.</para>
+            /// <para>The expiration time of the machine. The time is in ISO 8601 format. The Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-19T02:32:48Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether file storage mounting is supported.</para>
+            /// <para>Specifies whether file system mounting is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The hypernode ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e01-cn-2r42tmj4z02</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeGroupName { get; set; }
 
             /// <summary>
-            /// <para>The hypernode status.</para>
+            /// <para>The hypernode operating state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Using</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned in this call.</para>
+        /// <para>The query token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>

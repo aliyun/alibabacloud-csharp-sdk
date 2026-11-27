@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListNetTestResultsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
+        /// <para>The maximum number of entries per page for paging in a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
+        /// <item><description><para>If you do not specify the Settings or the specified Settings value is less than 20, the default value is 20.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is set to a value greater than 100, the default value is 100.</para>
+        /// <item><description><para>If the specified Settings value is greater than 100, the default value is 100.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The node list.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("NetTestResults")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The communication library test information. This parameter is required when the test type is communication library test.</para>
+            /// <para>The communication library test information. This field is populated when the traffic test type is communication library test.</para>
             /// </summary>
             [NameInMap("CommTest")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Model { get; set; }
 
                 /// <summary>
-                /// <para>The communication library test category. Valid values: ACCL or NCCL.</para>
+                /// <para>The communication library test type. Valid values: ACCL and NCCL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACCL</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
+            /// <para>The creation time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-19T02:18:12Z</para>
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The latency test information. This parameter is returned when the network test type is latency test.</para>
+            /// <para>The delay test information. This field is populated when the network test type is delay test.</para>
             /// </summary>
             [NameInMap("DelayTest")]
             [Validation(Required=false)]
             public ListNetTestResultsResponseBodyNetTestResultsDelayTest DelayTest { get; set; }
             public class ListNetTestResultsResponseBodyNetTestResultsDelayTest : TeaModel {
                 /// <summary>
-                /// <para>The resources.</para>
+                /// <para>The list of resources.</para>
                 /// </summary>
                 [NameInMap("Hosts")]
                 [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The completion time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
+            /// <para>The completion time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-30T02:07Z</para>
@@ -240,10 +240,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The network test task status. Valid values:</br>
-            /// ● InProgress: The test is in progress.</br>
-            /// ● Finished: The test is complete.</br>
-            /// ● Failed: The test failed.</para>
+            /// <para>The status of the network test task. Valid values:</br></para>
+            /// <list type="bullet">
+            /// <item><description>InProgress: The test is in progress.</br></description></item>
+            /// <item><description>Finished: The test is completed.</br></description></item>
+            /// <item><description>Failed: The test failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>InProgress</para>
@@ -263,7 +265,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TestId { get; set; }
 
             /// <summary>
-            /// <para>The traffic test information. This parameter is returned when the network test type is traffic test.</para>
+            /// <para>The traffic test information. This field is populated when the network test type is traffic test.</para>
             /// </summary>
             [NameInMap("TrafficTest")]
             [Validation(Required=false)]
@@ -319,7 +321,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>The duration of the workflow task. Unit: seconds.</para>
+                /// <para>The duration of the workflow task, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -329,7 +331,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether GPUDirect RDMA is enabled. Valid values: True and False. This parameter is returned only when the protocol is RDMA. This field is empty when the protocol is TCP.</para>
+                /// <para>Indicates whether GDR is enabled when the protocol is RDMA. Valid values: True and False. This field is empty when the protocol is TCP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -339,7 +341,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string GDR { get; set; }
 
                 /// <summary>
-                /// <para>The network protocol. Valid values: RDMA or TCP.</para>
+                /// <para>The network protocol. Valid values: RDMA and TCP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TCP</para>
@@ -349,17 +351,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The number of concurrent connections for TCP tests, or the QP value for RDMA tests.</para>
+                /// <para>The number of concurrent connections for the test when the protocol is TCP, or the configured QP value when the protocol is RDMA.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>RDMA</para>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("QP")]
                 [Validation(Required=false)]
                 public long? QP { get; set; }
 
                 /// <summary>
-                /// <para>The servers. This field is empty when the traffic model (TrafficModel) is Fullmesh.</para>
+                /// <para>The servers. This field is empty if the traffic model is Fullmesh.</para>
                 /// </summary>
                 [NameInMap("Servers")]
                 [Validation(Required=false)]
@@ -408,7 +410,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>The traffic model. Valid values: MTON or Fullmesh.</para>
+                /// <para>The traffic model. Valid values: MTON and Fullmesh.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Fullmesh</para>
@@ -422,7 +424,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The NextToken for the next page. Include this value when requesting the next page.</para>
+        /// <para>The next token. Include this value in the request to query the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a6b93229825ac667104463b5679****</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The creation time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
+        /// <para>The creation time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-30T03:35:53Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The list of disk information.</para>
+        /// <para>The disk information.</para>
         /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <summary>
             /// <para>The disk category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_essd: ESSD cloud disk.</description></item>
+            /// <item><description>cloud_essd: ESSD.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,10 +70,48 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level (PL) of the ESSD cloud disk when it is used as the system cloud disk. Valid values:</para>
+            /// <para>Specifies whether the system cloud disk is encrypted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: a maximum of 10,000 random read/write IOPS per disk.</description></item>
-            /// <item><description>PL1: a maximum of 50,000 random read/write IOPS per disk.</description></item>
+            /// <item><description>true: The disk is encrypted.</description></item>
+            /// <item><description>false: The disk is not encrypted.</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
+            /// <remarks>
+            /// <para>Notice: When you use a shared encrypted image to create a cloud disk from an encrypted snapshot, you must set the request parameter Encrypted to true for the cloud disk to ensure that the created cloud disk uses the key of the sharer.</notice></para>
+            /// </remarks>
+            /// <remarks>
+            /// <para>System cloud disk encryption during instance creation is not supported in Hong Kong (China) Zone D or Singapore Zone A.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("Encrypted")]
+            [Validation(Required=false)]
+            public bool? Encrypted { get; set; }
+
+            /// <summary>
+            /// <para>The KMS key ID of the system cloud disk.</para>
+            /// <para>If Encrypted is specified as true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</para>
+            /// <list type="bullet">
+            /// <item><description>If the cloud disk is created from an unshared encrypted snapshot, the encryption key used for the snapshot is used by default.</description></item>
+            /// <item><description>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</description></item>
+            /// <item><description>If the cloud disk is created in a region where account-level default encryption for Elastic Block Storage (EBS) is enabled, the specified account-level key is used by default.</description></item>
+            /// <item><description>In other cases, the service key is used by default.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>d76693f2-32db-483c-ad4a-d3139f42ced4</para>
+            /// </summary>
+            [NameInMap("KMSKeyId")]
+            [Validation(Required=false)]
+            public string KMSKeyId { get; set; }
+
+            /// <summary>
+            /// <para>The performance level of the ESSD when it is used as the system cloud disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +148,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
+        /// <para>The expiration time. The time is displayed in ISO 8601 format. Z in the example indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-23T16:00:00Z</para>
@@ -120,7 +158,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether file storage mounting is supported.</para>
+        /// <para>Specifies whether file storage mounting is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -150,7 +188,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>The HyperNode ID.</para>
+        /// <para>The hypernode ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
@@ -207,7 +245,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string BondName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the machine.</para>
+            /// <para>The machine IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.254.235.44</para>
@@ -289,13 +327,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The type of the current node. Valid values:
-        /// ● cpfs-enhanced
-        /// ● ebs-enhanced
-        /// ● standard
-        /// ● standby
-        /// ● standard-v2
-        /// ● standby-v2</para>
+        /// <para>The type of the current node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cpfs-enhanced</description></item>
+        /// <item><description>ebs-enhanced</description></item>
+        /// <item><description>standard</description></item>
+        /// <item><description>standby</description></item>
+        /// <item><description>standard-v2</description></item>
+        /// <item><description>standby-v2</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>
@@ -305,7 +345,22 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The node status.</para>
+        /// <para>The operating state of the node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Extending: scaling out</description></item>
+        /// <item><description>UnusedNodeStopped: unused node stopped</description></item>
+        /// <item><description>UnusedNodeStopping: stopping unused node</description></item>
+        /// <item><description>Unused: unused</description></item>
+        /// <item><description>Using: in use</description></item>
+        /// <item><description>ReleaseLocking: pending release</description></item>
+        /// <item><description>Operating: operating</description></item>
+        /// <item><description>ClusterNodeStopped: cluster node stopped</description></item>
+        /// <item><description>Cutting: scaling in</description></item>
+        /// <item><description>UnusedNodeRecovering: recovering unused node</description></item>
+        /// <item><description>ClusterNodeStopping: stopping cluster node</description></item>
+        /// <item><description>ClusterNodeRecovering: recovering cluster node</description></item>
+        /// <item><description>Replacing: replacing</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Using</para>

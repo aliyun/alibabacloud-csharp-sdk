@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListDiagnosticResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The diagnostic type.</para>
+        /// <para>The diagnostic type. This parameter is required. If you do not specify this parameter, the API returns a 400 error (field required).</para>
         /// 
         /// <b>Example:</b>
         /// <para>NetDiag</para>
@@ -20,14 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string DiagType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
-        /// <para>Default value:</para>
-        /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is set to a value greater than 100, the default value is 100.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The maximum number of entries to return on each page during paging in a paged query. Valid values: 1 to 100. If you do not specify this parameter in the Settings, the default value is 10. If the specified value is greater than 100, the value 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -37,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned from the previous API call.</para>
+        /// <para>The pagination token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120****</para>
@@ -47,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmywpvugk****</para>

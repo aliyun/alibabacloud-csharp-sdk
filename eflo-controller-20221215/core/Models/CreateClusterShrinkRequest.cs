@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateClusterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>The description of the cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>标准集群测试</para>
+        /// <para>Standard cluster test</para>
         /// </summary>
         [NameInMap("ClusterDescription")]
         [Validation(Required=false)]
         public string ClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The name of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard_Cluster</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The cluster type.</para>
+        /// <para>The type of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Lite</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NimizVSwitchesShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of node groups.</para>
+        /// <para>The list of node groups. This parameter is actually required. If it is not provided, the API returns InvalidParameter (NodeGroups field required).</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]

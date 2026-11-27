@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The node group name.</para>
+        /// <para>The name of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr-default</para>

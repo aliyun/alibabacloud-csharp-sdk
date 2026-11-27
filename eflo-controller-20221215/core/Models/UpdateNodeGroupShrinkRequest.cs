@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
-        /// <para>The default image ID of the node group. If you do not specify this parameter, the image ID remains unchanged.</para>
+        /// <para>The ID of the default image for the node group. If you do not specify this parameter, the image remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i1232142432432</para>
@@ -70,7 +70,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role for the node. You can call the ListRoles API operation of RAM to query the RAM roles that you have created. The trusted entity of the role must be Lingjun AI Computing Service. <warning>Submitting an empty string &quot;&quot; clears the RAM role of the node group.</warning></para>
+        /// <para>The name of the RAM role for the node. You can call the ListRoles operation of Resource Access Management (RAM) to query the RAM roles that you have created. The trusted entity of the specified role must be Lingjun AI Computing Service.
+        /// <warning>Submitting an empty string &quot;&quot; clears the RAM role of the node group.</warning></para>
         /// 
         /// <b>Example:</b>
         /// <para>xianwen-test-ram-role</para>
@@ -80,14 +81,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// <para>The system cloud disk configuration.</para>
+        /// <para>The configuration of the system cloud disk.</para>
         /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public string SystemDiskShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom executable shell script. It must be Base64-encoded, and the maximum size of the raw data is 16 KB.</para>
+        /// <para>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ZWNobyBoZWxsbyBlY3Mh</para>

@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The key pair name.</para>
+            /// <para>The name of the key pair. You must specify at least one of LoginPassword and KeyPairName. If neither is specified, the API returns InvalidParameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-keypair</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string KeyPairName { get; set; }
 
             /// <summary>
-            /// <para>The logon password.</para>
+            /// <para>The logon password. You must specify at least one of LoginPassword and KeyPairName. If neither is specified, the API returns InvalidParameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-LoginPassword</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// <para>The machine type.</para>
+            /// <para>The instance type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -92,17 +92,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>The node group description.</para>
+            /// <para>The description of the node group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>节点分组描述</para>
+            /// <para>Node group description</para>
             /// </summary>
             [NameInMap("NodeGroupDescription")]
             [Validation(Required=false)]
             public string NodeGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The node group name.</para>
+            /// <para>The name of the node group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -113,10 +113,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeGroupName { get; set; }
 
             /// <summary>
-            /// <para>The RAM role name of the node. You can call the RAM API ListRoles to query the RAM roles you have created. The trusted entity of the role must be set to Lingjun AI Computing Service.</para>
-            /// <remarks>
-            /// <para>Note: Clearing an existing role is not currently supported.</para>
-            /// </remarks>
+            /// <para>The name of the RAM role for the node. You can call the ListRoles operation of RAM to query the RAM roles that you have created. The trusted entity of the specified role must be Lingjun AI Computing Service. Note: You cannot clear an existing role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xianwen-test-ram-role</para>
@@ -126,7 +123,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string RamRoleName { get; set; }
 
             /// <summary>
-            /// <para>The system disk configuration of the node.</para>
+            /// <para>The system cloud disk configuration of the node.</para>
             /// </summary>
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
@@ -135,7 +132,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <summary>
                 /// <para>The cloud disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>cloud_essd: Enterprise SSD (ESSD) cloud disk.</description></item>
+                /// <item><description>cloud_essd: ESSD.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -146,10 +143,48 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The performance level (PL) of the ESSD cloud disk used as the system disk. Valid values:</para>
+                /// <para>Specifies whether to encrypt the system cloud disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</description></item>
-                /// <item><description>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description>true: Encrypts the system cloud disk.</description></item>
+                /// <item><description>false: Does not encrypt the system cloud disk.</description></item>
+                /// </list>
+                /// <para>Default value: false.</para>
+                /// <remarks>
+                /// <para>Notice: When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk to ensure that the created cloud disk uses the key of the account that receives the shared image.</para>
+                /// </remarks>
+                /// <remarks>
+                /// <para>System cloud disk encryption during instance creation is not supported in Hong Kong (China) Zone D and Singapore Zone A.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("Encrypted")]
+                [Validation(Required=false)]
+                public bool? Encrypted { get; set; }
+
+                /// <summary>
+                /// <para>The KMS key ID corresponding to the system cloud disk.</para>
+                /// <para>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</para>
+                /// <list type="bullet">
+                /// <item><description>If the cloud disk is created from a non-shared encrypted snapshot, the encryption key used for the snapshot is used by default.</description></item>
+                /// <item><description>If the cloud disk is created from a shared encrypted snapshot, the service key is used by default.</description></item>
+                /// <item><description>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled, the specified account-level key is used by default.</description></item>
+                /// <item><description>In other cases, the service key is used by default.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2ae0a815-a877-4bce-b5ec-4becb8ab4d89</para>
+                /// </summary>
+                [NameInMap("KMSKeyId")]
+                [Validation(Required=false)]
+                public string KMSKeyId { get; set; }
+
+                /// <summary>
+                /// <para>The performance level of the ESSD when used as the system cloud disk. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>PL0: Up to 10,000 random read/write IOPS per disk.</description></item>
+                /// <item><description>PL1: Up to 50,000 random read/write IOPS per disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -160,7 +195,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The disk size. Unit: GB.</para>
+                /// <para>The size of the system cloud disk. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -172,7 +207,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>A custom executable shell script that must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
+            /// <para>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
@@ -182,7 +217,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string UserData { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether GPU virtualization splitting is enabled.</para>
+            /// <para>Specifies whether to enable vGPU splitting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -197,7 +232,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The node information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;NodeUnitId\&quot;:\&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f\&quot;,\&quot;ResourceGroupId\&quot;:\&quot;\&quot;,\&quot;MaxNodes\&quot;:0,\&quot;NodeUnitName\&quot;:\&quot;asi_cn-serverless-sale_e01-lingjun-psale\&quot;}</para>
+        /// <para>{&quot;NodeUnitId&quot;:&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f&quot;,&quot;ResourceGroupId&quot;:&quot;&quot;,&quot;MaxNodes&quot;:0,&quot;NodeUnitName&quot;:&quot;asi_cn-serverless-sale_e01-lingjun-psale&quot;}</para>
         /// </summary>
         [NameInMap("NodeUnit")]
         [Validation(Required=false)]

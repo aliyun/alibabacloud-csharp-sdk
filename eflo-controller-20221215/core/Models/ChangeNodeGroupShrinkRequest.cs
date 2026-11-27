@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ChangeNodeGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

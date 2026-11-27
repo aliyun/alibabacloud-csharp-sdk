@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListVscsResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is not returned. Use the \<c>TotalCount\\</c> parameter instead.</para>
+        /// <para>This parameter is not returned. Use the `TotalCount` parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string VscName { get; set; }
 
             /// <summary>
-            /// <para>The type of the VSC. Valid values: \<c>primary\\</c> and \<c>standard\\</c>.</para>
+            /// <para>The type of the VSC. Valid values: `primary` and `standard`.</para>
             /// 
             /// <b>Example:</b>
             /// <para>primary</para>

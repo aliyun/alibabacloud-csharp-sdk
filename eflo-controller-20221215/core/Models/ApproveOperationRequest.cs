@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The O\&amp;M operation type</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>RepairMachine</description></item>
-        /// </list>
+        /// <para>The O&amp;M operation type. This parameter is required. If it is not provided, the API returns a 400 InvalidParameter (field required) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RepairMachine</para>

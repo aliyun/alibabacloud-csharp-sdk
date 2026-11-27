@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The creation time. The time is in ISO 8601 format.</para>
+            /// <para>The creation time in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-06T10:11:41.569</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The machine expiration time. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
+            /// <para>The expiration time of the machine in ISO 8601 format. The Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-22T23:59:59Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
-            /// <para>The node ID.</para>
+            /// <para>The hypernode ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e01-cn-7pp2x193801</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>The hyper node status.</para>
+            /// <para>The hypernode status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Using</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The hyper node status.</para>
+            /// <para>The hypernode status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Using</para>
@@ -161,10 +161,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
+        /// <para>The maximum number of results per paging for a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
-        /// <para>•If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
-        /// <para>•If this parameter is set to a value greater than 100, the default value is 100.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this parameter is not specified or the Settings value is less than 20, the default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>If the Settings value is greater than 100, the default value is 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -174,7 +178,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>

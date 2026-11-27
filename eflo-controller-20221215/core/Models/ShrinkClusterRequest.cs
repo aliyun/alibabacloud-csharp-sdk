@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. The default value is False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The information about the node groups.</para>
+        /// <para>The node group information. Note: This parameter is actually required. If it is not provided, the API returns a 400 InvalidParameter error (NodeGroups field required).</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<ShrinkClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ShrinkClusterRequestNodeGroups : TeaModel {
             /// <summary>
-            /// <para>The list of hyper nodes.</para>
+            /// <para>The hypernode list.</para>
             /// </summary>
             [NameInMap("HyperNodes")]
             [Validation(Required=false)]
             public List<ShrinkClusterRequestNodeGroupsHyperNodes> HyperNodes { get; set; }
             public class ShrinkClusterRequestNodeGroupsHyperNodes : TeaModel {
                 /// <summary>
-                /// <para>The hyper node ID.</para>
+                /// <para>The hypernode ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>e01-cn-zvp2tgykr08</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeGroupId { get; set; }
 
             /// <summary>
-            /// <para>The list of nodes.</para>
+            /// <para>The node list.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]

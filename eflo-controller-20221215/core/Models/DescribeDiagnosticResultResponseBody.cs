@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time when the device was created. The time is in ISO 8601 format.</para>
+        /// <para>The time when the device was created. The time follows the ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-15T10:17:56</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<object> DiagnosticResults { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic status.</para>
+        /// <para>The diagnostic state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Fault</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string DiagnosticType { get; set; }
 
         /// <summary>
-        /// <para>The time when the node exception ended. The time is in ISO 8601 format with a time zone, in the yyyy-MM-ddTHH:mm:ss+0800 format.</para>
+        /// <para>The time when the node exception ended. The time follows the ISO 8601 standard and includes the time zone. The format is yyyy-MM-ddTHH:mm:ss+0800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-11T10:00:30</para>

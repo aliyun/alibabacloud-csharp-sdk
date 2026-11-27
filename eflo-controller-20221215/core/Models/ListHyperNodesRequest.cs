@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListHyperNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The name of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard_Cluster</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>The node ID.</para>
+        /// <para>The ID of the hypernode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HyperNodeId { get; set; }
 
         /// <summary>
-        /// <para>The list of node IDs.</para>
+        /// <para>The list of hypernode IDs.</para>
         /// </summary>
         [NameInMap("HyperNodeIds")]
         [Validation(Required=false)]
@@ -67,13 +67,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string MachineType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
+        /// <para>The maximum number of entries to return per page for paging in a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is set to a value greater than 100, the default value is 100.</para>
-        /// </description></item>
+        /// <item><description>If no Settings are specified or the Settings value is less than 20, the default value is 20.</description></item>
+        /// <item><description>If the Settings value is greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the last API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a6b93229825ac667104463b56790c91</para>
@@ -104,14 +102,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>The node status. If this parameter is not specified, all statuses are returned. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</para>
+        /// <para>The operating states of the nodes. If you do not specify this parameter, all states are queried. Valid values: Extending, UnusedNodeStopped, UnusedNodeStopping, Unused, Using, ReleaseLocking, Operating, Cutting, ClusterNodeStopped, UnusedNodeRecovering, ClusterNodeStopping, ClusterNodeRecovering, and Replacing.</para>
         /// </summary>
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]
         public List<string> OperatingStates { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwfm33rlt6zi</para>

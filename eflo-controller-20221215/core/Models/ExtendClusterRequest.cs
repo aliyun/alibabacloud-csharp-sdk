@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The combined policy for IP allocation. Each policy can use only one policy type, and multiple policies can be combined.</para>
+        /// <para>The combined IP allocation policies. Each policy supports only one policy type, and multiple policies can be combined.</para>
         /// </summary>
         [NameInMap("IpAllocationPolicy")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The cluster subnet from which the IP address is allocated.</para>
+                    /// <para>The source cluster subnet for IP addresses.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subnet-3od2fe</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The cluster subnet from which the IP address is allocated.</para>
+                    /// <para>The source cluster subnet for IP addresses.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subnet-fdo3dv</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The cluster subnet from which the IP address is allocated.</para>
+                    /// <para>The source cluster subnet for IP addresses.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subnet-fdo3dv</para>
@@ -193,14 +193,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The node group.</para>
+        /// <para>The node groups.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<ExtendClusterRequestNodeGroups> NodeGroups { get; set; }
         public class ExtendClusterRequestNodeGroups : TeaModel {
             /// <summary>
-            /// <para>The number of nodes to purchase. Valid values: 0 to 500. If Amount is set to 0, no nodes are purchased and existing nodes are used for scale-out. If Amount is set to a value from 1 to 500, the specified number of nodes are purchased and used for scale-out. Default value: 0.</para>
+            /// <para>The number of nodes to purchase. Valid values: 0 to 500. If the Amount parameter is set to 0, no nodes are purchased, and existing nodes are used for scaling. If the Amount parameter is set to a value from 1 to 500, a specified number of nodes are purchased and used for scaling. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? Amount { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal for the purchased nodes. This parameter takes effect when Amount is not 0 and ChargeType is set to PREPAY or POSTPAY. Valid values: True: Enable auto-renewal. False: Disable auto-renewal. Default value: False.</para>
+            /// <para>Specifies whether to enable auto-renewal for the purchased node. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PREPAY or POSTPAY. Valid values: True: Auto-renewal is enabled. False: Auto-renewal is disabled. Default value: False.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the nodes. This parameter does not take effect when Amount is set to 0. Valid values: PREPAY: subscription. POSTPAY: pay-as-you-go. Default value: PREPAY.</para>
+            /// <para>The billing method of the node. This parameter does not take effect when the Amount parameter is set to 0. Valid values: PREPAY: subscription; POSTPAY: pay-as-you-go. Default value: PREPAY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -230,14 +230,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The hostnames of the purchased nodes. This parameter does not take effect when Amount is set to 0.</para>
+            /// <para>The hostnames of the purchased nodes. This parameter does not take effect when the Amount parameter is set to 0.</para>
             /// </summary>
             [NameInMap("Hostnames")]
             [Validation(Required=false)]
             public List<string> Hostnames { get; set; }
 
             /// <summary>
-            /// <para>The list of hyper nodes.</para>
+            /// <para>The list of hypernodes.</para>
             /// </summary>
             [NameInMap("HyperNodes")]
             [Validation(Required=false)]
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public List<ExtendClusterRequestNodeGroupsHyperNodesDataDisk> DataDisk { get; set; }
                 public class ExtendClusterRequestNodeGroupsHyperNodesDataDisk : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable burst (performance burst).</para>
+                    /// <para>Specifies whether to enable burstable performance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -261,9 +261,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? BurstingEnabled { get; set; }
 
                     /// <summary>
-                    /// <para>The cloud disk type. Valid values:</para>
+                    /// <para>The disk category. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>cloud_essd: Enterprise SSD (ESSD) cloud disk.</description></item>
+                    /// <item><description>cloud_essd: ESSD.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -284,10 +284,61 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? DeleteWithNode { get; set; }
 
                     /// <summary>
-                    /// <para>The performance level (PL) of the ESSD cloud disk used as a system cloud disk. Valid values:</para>
+                    /// <para>The device name of the data cloud disk. This parameter applies only to full image scenarios. You can use this parameter to set the device name of the data cloud disk to match the source data cloud disk in the full image, and modify the properties of the corresponding data cloud disk. For non-full image scaling, the Device parameter is set by the system by default. When you use full image scaling:</para>
                     /// <list type="bullet">
-                    /// <item><description>PL0: A maximum of 10,000 random read/write IOPS per disk.</description></item>
-                    /// <item><description>PL1: A maximum of 50,000 random read/write IOPS per disk.</description></item>
+                    /// <item><description>Regardless of whether the data cloud disk parameters are explicitly set, the system restores the data cloud disks from the source image. The content is consistent with the source image data cloud disks.</description></item>
+                    /// <item><description>If the data cloud disk is explicitly specified but the Device parameter is not set, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</description></item>
+                    /// <item><description>If the data cloud disk Device is explicitly specified but does not match the Device of the source image data cloud disk, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</description></item>
+                    /// <item><description>If multiple data cloud disks and their Devices are explicitly specified, but all Devices point to the device of a single data cloud disk in the source image, only one of the specified data cloud disks matches and overwrites the source image data cloud disk. The other specified data cloud disks are silently discarded, and no additional empty data cloud disks are created.</description></item>
+                    /// <item><description>If the data cloud disk Device is explicitly specified and matches the Device of the source image data cloud disk, no additional empty data cloud disks are created. The data cloud disks specified by the user correspond one-to-one with the source image data cloud disks. If the Size of the data cloud disk set by the user is less than the Size of the source image data cloud disk, HTTP status code 417 and the error message &quot;Data disk Size can not be less than the image data disk snapshot size for Device &quot;/dev/xvdb&quot;&quot; are returned.</description></item>
+                    /// <item><description>Total number of data cloud disks = Number of data cloud disks mounted on the node + Number of data cloud disks restored from the image. For standard cloud disk groups, the maximum is 16. If CPFS is enabled, the maximum is 4.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/dev/xvdb</para>
+                    /// </summary>
+                    [NameInMap("Device")]
+                    [Validation(Required=false)]
+                    public string Device { get; set; }
+
+                    /// <summary>
+                    /// <para>Specifies whether to encrypt the data cloud disk. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true: Encrypted.</description></item>
+                    /// <item><description>false: Not encrypted.</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
+                    /// <para><notice>When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk to ensure that the created cloud disk uses the recipient&quot;s own key.</notice></para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
+                    [NameInMap("Encrypted")]
+                    [Validation(Required=false)]
+                    public bool? Encrypted { get; set; }
+
+                    /// <summary>
+                    /// <para>The KMS key ID for the data cloud disk.</para>
+                    /// <para>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</para>
+                    /// <list type="bullet">
+                    /// <item><description>If the cloud disk is created from an unshared encrypted snapshot: The encryption key used by the snapshot is used by default.</description></item>
+                    /// <item><description>If the cloud disk is created from a shared encrypted snapshot: The service key is used by default.</description></item>
+                    /// <item><description>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled: The specified account-level key is used by default.</description></item>
+                    /// <item><description>In other cases: The service key is used by default.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>69dfe996-ae32-4d61-a4aa-914aff3fc3a0</para>
+                    /// </summary>
+                    [NameInMap("KMSKeyId")]
+                    [Validation(Required=false)]
+                    public string KMSKeyId { get; set; }
+
+                    /// <summary>
+                    /// <para>The performance level of the ESSD when it is used as the system cloud disk. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+                    /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -298,7 +349,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string PerformanceLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The provisioned performance of read/write IOPS for the ESSD AutoPL cloud disk (per disk).</para>
+                    /// <para>The read and write IOPS of the provisioned performance for a single ESSD AutoPL cloud disk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9600</para>
@@ -330,7 +381,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Hostname { get; set; }
 
                 /// <summary>
-                /// <para>The hyper node ID.</para>
+                /// <para>The hypernode ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>e01-cn-2r42tmj4z02</para>
@@ -343,7 +394,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <para>The logon password.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>Demo****123!</para>
                 /// </summary>
                 [NameInMap("LoginPassword")]
                 [Validation(Required=false)]
@@ -382,7 +433,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The logon password of the purchased nodes. This parameter does not take effect when Amount is set to 0.</para>
+            /// <para>The logon password of the purchased node. This parameter does not take effect when the Amount parameter is set to 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>skkO(*89Y</para>
@@ -445,7 +496,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public List<ExtendClusterRequestNodeGroupsNodesDataDisk> DataDisk { get; set; }
                 public class ExtendClusterRequestNodeGroupsNodesDataDisk : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable burst (performance burst).</para>
+                    /// <para>Specifies whether to enable burstable performance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -455,7 +506,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? BurstingEnabled { get; set; }
 
                     /// <summary>
-                    /// <para>The type.</para>
+                    /// <para>The disk category.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cloud_essd</para>
@@ -473,6 +524,57 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     [NameInMap("DeleteWithNode")]
                     [Validation(Required=false)]
                     public bool? DeleteWithNode { get; set; }
+
+                    /// <summary>
+                    /// <para>The device name of the data cloud disk. This parameter applies only to full image scenarios. You can use this parameter to set the device name of the data cloud disk to match the source data cloud disk in the full image, and modify the properties of the corresponding data cloud disk. For non-full image scaling, the Device parameter is set by the system by default. When you use full image scaling:</para>
+                    /// <list type="bullet">
+                    /// <item><description>Regardless of whether the data cloud disk parameters are explicitly set, the system restores the data cloud disks from the source image. The content is consistent with the source image data cloud disks.</description></item>
+                    /// <item><description>If the data cloud disk is explicitly specified but the Device parameter is not set, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</description></item>
+                    /// <item><description>If the data cloud disk Device is explicitly specified but does not match the Device of the source image data cloud disk, additional empty data cloud disks are created. The quantity and properties are specified by the data cloud disk parameters provided by the user.</description></item>
+                    /// <item><description>If multiple data cloud disks and their Devices are explicitly specified, but all Devices point to the device of a single data cloud disk in the source image, only one of the specified data cloud disks matches and overwrites the source image data cloud disk. The other specified data cloud disks are silently discarded, and no additional empty data cloud disks are created.</description></item>
+                    /// <item><description>If the data cloud disk Device is explicitly specified and matches the Device of the source image data cloud disk, no additional empty data cloud disks are created. The data cloud disks specified by the user correspond one-to-one with the source image data cloud disks. If the Size of the data cloud disk set by the user is less than the Size of the source image data cloud disk, HTTP status code 417 and the error message &quot;Data disk Size can not be less than the image data disk snapshot size for Device &quot;/dev/xvdb&quot;&quot; are returned.</description></item>
+                    /// <item><description>Total number of data cloud disks = Number of data cloud disks mounted on the node + Number of data cloud disks restored from the image. For standard cloud disk groups, the maximum is 16. If CPFS is enabled, the maximum is 4.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>/dev/xvdb</para>
+                    /// </summary>
+                    [NameInMap("Device")]
+                    [Validation(Required=false)]
+                    public string Device { get; set; }
+
+                    /// <summary>
+                    /// <para>Specifies whether to encrypt the data cloud disk. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true: Encrypted.</description></item>
+                    /// <item><description>false: Not encrypted.</description></item>
+                    /// </list>
+                    /// <para>Default value: false.</para>
+                    /// <para><notice>When you use a shared encrypted image to create a cloud disk based on an encrypted snapshot, you must set the Encrypted request parameter to true for the cloud disk to ensure that the created cloud disk uses the recipient&quot;s own key.</notice></para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
+                    [NameInMap("Encrypted")]
+                    [Validation(Required=false)]
+                    public bool? Encrypted { get; set; }
+
+                    /// <summary>
+                    /// <para>The KMS key ID for the data cloud disk.</para>
+                    /// <para>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</para>
+                    /// <list type="bullet">
+                    /// <item><description>If the cloud disk is created from an unshared encrypted snapshot: The encryption key used by the snapshot is used by default.</description></item>
+                    /// <item><description>If the cloud disk is created from a shared encrypted snapshot: The service key is used by default.</description></item>
+                    /// <item><description>If the cloud disk is created in a region where account-level default encryption for Block Storage is enabled: The specified account-level key is used by default.</description></item>
+                    /// <item><description>In other cases: The service key is used by default.</description></item>
+                    /// </list>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>719e7359-1a44-4bab-a520-6d4648b610d0</para>
+                    /// </summary>
+                    [NameInMap("KMSKeyId")]
+                    [Validation(Required=false)]
+                    public string KMSKeyId { get; set; }
 
                     /// <summary>
                     /// <para>The performance parameter of the data cloud disk.</para>
@@ -520,7 +622,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <para>The logon password.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>Demo****123!</para>
                 /// </summary>
                 [NameInMap("LoginPassword")]
                 [Validation(Required=false)]
@@ -569,7 +671,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The subscription duration of the purchased nodes. Unit: months. Valid values: 1, 6, 12, 24, 36, and 48. This parameter takes effect when Amount is not 0 and ChargeType is set to PREPAY.</para>
+            /// <para>The subscription period of the node. Unit: months. Valid values: 1, 6, 12, 24, 36, and 48. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PREPAY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -589,7 +691,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string SavingsPlanId { get; set; }
 
             /// <summary>
-            /// <para>The custom executable shell script. The script must be in Base64 encoding. The maximum size of the raw data is 16 KB.</para>
+            /// <para>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>

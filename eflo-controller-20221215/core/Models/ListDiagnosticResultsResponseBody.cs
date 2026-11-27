@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<ListDiagnosticResultsResponseBodyDiagnosticResults> DiagnosticResults { get; set; }
         public class ListDiagnosticResultsResponseBodyDiagnosticResults : TeaModel {
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i11857814169474524****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The cluster name.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pjlab-lingjun</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The time when the diagnostic task was created. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
+            /// <para>The time when the diagnostic task was created. The time follows the ISO 8601 standard. Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-15T02:01:12Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiagResult { get; set; }
 
             /// <summary>
-            /// <para>The time when the diagnostic task was completed. The time is in ISO 8601 format. Z in the example indicates UTC.</para>
+            /// <para>The time when the diagnostic task was completed. The time follows the ISO 8601 standard. Z in the example indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-16T02:04Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string FinishedTime { get; set; }
 
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e01-cn-bl03ofg6****</para>
@@ -119,14 +119,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100.</para>
-        /// <para>Default value:</para>
-        /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified or is set to a value less than 20, the default value is 20.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is set to a value greater than 100, the default value is 100.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The maximum number of entries to return on each page during paging in a paged query. Valid values: 1 to 100. If you do not specify this parameter in the Settings, the default value is 10. If the specified value is greater than 100, the value 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -136,7 +129,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The NextToken for the next page. Include this value when you request the next page.</para>
+        /// <para>The NextToken value for the next page. Include this value in the request to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120****</para>
@@ -146,7 +139,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</para>
