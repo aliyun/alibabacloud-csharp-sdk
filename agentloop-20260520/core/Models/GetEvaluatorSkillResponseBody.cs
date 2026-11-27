@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public GetEvaluatorSkillResponseBodySkill Skill { get; set; }
         public class GetEvaluatorSkillResponseBodySkill : TeaModel {
             /// <summary>
-            /// <para>The creation time, in seconds-level UNIX timestamp.</para>
+            /// <para>The creation time. UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Trace Context Loader</para>
+            /// <para>Read trace context</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the skill is enabled.</para>
+            /// <para>Specifies whether the skill is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string LatestVersion { get; set; }
 
             /// <summary>
-            /// <para>The skill name.</para>
+            /// <para>The name of the skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trace_context_loader</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The update time, in seconds-level UNIX timestamp.</para>
+            /// <para>The update time. UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>
@@ -155,14 +155,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The list of skill versions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;Initial release version&quot;}]</para>
+            /// <para>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;Initial release&quot;}]</para>
             /// </summary>
             [NameInMap("versions")]
             [Validation(Required=false)]
             public List<GetEvaluatorSkillResponseBodySkillVersions> Versions { get; set; }
             public class GetEvaluatorSkillResponseBodySkillVersions : TeaModel {
                 /// <summary>
-                /// <para>The version creation time, in seconds-level UNIX timestamp.</para>
+                /// <para>The creation time of the version. UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1782816000</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 /// <para>The version description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Initial release version</para>
+                /// <para>Initial release</para>
                 /// </summary>
                 [NameInMap("versionDescription")]
                 [Validation(Required=false)]

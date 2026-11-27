@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateEvaluatorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The evaluator name.</para>
+        /// <para>The name of the evaluator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace_task_completion</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version number that is created.</para>
+        /// <para>The created version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>

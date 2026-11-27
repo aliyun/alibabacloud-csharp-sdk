@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The display name of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Read Trace Context</para>
+        /// <para>Read trace context</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the skill is enabled.</para>
+        /// <para>Specifies whether to enable the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -51,6 +51,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <para>The target evaluator version for updating the skill. If omitted, the latestVersion of the evaluator is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v2</para>
         /// </summary>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The list of skill files. If specified, the content of the skill files is updated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Primary skill description&quot;}]</para>
+        /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Main skill description&quot;}]</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The remark for the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Primary skill description</para>
+            /// <para>Main skill description</para>
             /// </summary>
             [NameInMap("remark")]
             [Validation(Required=false)]

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
+        /// <para>The custom evaluator version for which to query the list of skills. If omitted, the latestVersion of the evaluator is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v2</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string EvaluatorVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

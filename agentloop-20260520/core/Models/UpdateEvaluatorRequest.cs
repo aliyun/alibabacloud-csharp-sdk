@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<string> Annotations { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the new version. This parameter is typically required when <c>version</c> is specified.</para>
+        /// <para>The configuration for the new version. This parameter is typically required when version is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;prompt&quot;:&quot;Evaluate task completion more strictly&quot;}</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to create a new draft. Set to true to create a new draft, or false to update a specified existing draft. When this parameter is specified, the version status defaults to DRAFT.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? CreateVersion { get; set; }
 
         /// <summary>
-        /// <para>The evaluator description.</para>
+        /// <para>The description of the evaluator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Determines whether the agent completes the user task</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Task completion of the chain</para>
+        /// <para>Pipeline task completion</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -68,30 +70,38 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Properties { get; set; }
 
         /// <summary>
+        /// <para>The complete list of business skills saved for the standard agent evaluator in this request. Pass an empty array to clear the business skills for this version.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]}]</para>
+        /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify factual basis in responses\n---\nVerify the facts in the response item by item and list the basis.&quot;}]}]</para>
         /// </summary>
         [NameInMap("skills")]
         [Validation(Required=false)]
         public List<UpdateEvaluatorRequestSkills> Skills { get; set; }
         public class UpdateEvaluatorRequestSkills : TeaModel {
             /// <summary>
+            /// <para>The description of the skill purpose.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>核对回答中的事实依据</para>
+            /// <para>Verify factual basis in responses</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The display name of the skill.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>事实核查</para>
+            /// <para>Fact-checking</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable the skill. Default value: true.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -100,25 +110,31 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public bool? Enable { get; set; }
 
             /// <summary>
+            /// <para>The complete list of files for the skill, which must include SKILL.md in the root directory.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]</para>
+            /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify factual basis in responses\n---\nVerify the facts in the response item by item and list the basis.&quot;}]</para>
             /// </summary>
             [NameInMap("files")]
             [Validation(Required=false)]
             public List<UpdateEvaluatorRequestSkillsFiles> Files { get; set; }
             public class UpdateEvaluatorRequestSkillsFiles : TeaModel {
                 /// <summary>
+                /// <para>The text content of the file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <hr>
                 /// <h2>name: fact-check
-                /// description: 核对回答中的事实依据</h2>
-                /// <para>逐项核对回答中的事实，并列出依据。</para>
+                /// description: Verify factual basis in responses</h2>
+                /// <para>Verify the facts in the response item by item and list the basis</para>
                 /// </summary>
                 [NameInMap("content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The path of the file relative to the root directory of the skill.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SKILL.md</para>
                 /// </summary>
@@ -129,6 +145,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
+            /// <para>The name of the skill, which must be unique in the list of skills submitted in this request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fact-check</para>
             /// </summary>
@@ -139,6 +157,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
+        /// <para>The status of the evaluator version to be written. Only DRAFT is supported when explicitly specified. To publish a draft, call UpdateEvaluatorVersionStatus.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DRAFT</para>
         /// </summary>
@@ -167,7 +187,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</para>
+        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to locate the request when troubleshooting issues.</para>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpaceName { get; set; }
 
             /// <summary>
-            /// <para>The current attempt number.</para>
+            /// <para>The current number of retries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the data window. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The start time of the data window in UNIX seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735660800</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? FromTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of attempts.</para>
+            /// <para>The maximum number of retries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string NextRetryTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the pipeline.</para>
+            /// <para>The pipeline name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-pipeline</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RunId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the execution in ISO 8601 UTC format.</para>
+            /// <para>The execution start time in ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
             /// 
             /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The run statistics metrics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</para>
+            /// <para>The run statistics, including processedRows (number of processed rows), processedBytes (number of processed bytes), outputRows (number of output rows), outputBytes (number of output bytes), elapsedMs (elapsed time in milliseconds), cpuSec (CPU seconds), cpuCores (number of CPU cores), and tokenCount (number of consumed tokens).</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;processedRows&quot;:1000,&quot;elapsedMs&quot;:2500}</para>
@@ -180,7 +180,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The end time of the data window. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The frozen task version number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("taskVersion")]
+            [Validation(Required=false)]
+            public int? TaskVersion { get; set; }
+
+            /// <summary>
+            /// <para>The end time of the data window in UNIX seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735747200</para>
@@ -188,6 +198,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [NameInMap("toTime")]
             [Validation(Required=false)]
             public long? ToTime { get; set; }
+
+            /// <summary>
+            /// <para>The total number of input records.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("totalCount")]
+            [Validation(Required=false)]
+            public long? TotalCount { get; set; }
 
             /// <summary>
             /// <para>The trigger time in ISO 8601 UTC format.</para>
@@ -213,7 +233,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The total number of pipeline runs that meet the filter conditions.</para>
+        /// <para>The total number of pipeline runs that meet the filtering conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

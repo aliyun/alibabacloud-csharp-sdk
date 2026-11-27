@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetEvaluatorSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpace name.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
+        /// <para>The version number of the custom evaluator to which the queried skill belongs. If omitted, the latestVersion of the evaluator is used. The revision number of the skill itself is specified by version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v2</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string EvaluatorVersion { get; set; }
 
         /// <summary>
-        /// <para>The skill version.</para>
+        /// <para>The version of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816000000</para>

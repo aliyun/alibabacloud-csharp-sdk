@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the nextToken value from the previous response to retrieve the next page of results. Do not specify this parameter for the first request.</para>
+        /// <para>The pagination token. Pass the nextToken value from the previous response to retrieve the next page. Do not specify this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg5MA==</para>
@@ -30,7 +30,22 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the pipeline. Supports exact matching. If not specified, the results are not filtered by pipeline name.</para>
+        /// <para>The type of the pipeline. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PROCESSING: Data processing.</description></item>
+        /// <item><description>ORCHESTRATION: Orchestration task.
+        /// Default value: PROCESSING.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ORCHESTRATION</para>
+        /// </summary>
+        [NameInMap("pipelineKind")]
+        [Validation(Required=false)]
+        public string PipelineKind { get; set; }
+
+        /// <summary>
+        /// <para>The name of the pipeline for exact match filtering. If you do not specify this parameter, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-pipeline</para>
@@ -40,7 +55,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The schedule status. Valid values: None (no schedule), Active (active), Paused (paused), and Terminated (terminated). If not specified, the results are not filtered by schedule status.</para>
+        /// <para>The schedule status of the pipeline. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>None: No schedule.</description></item>
+        /// <item><description>Active: Active.</description></item>
+        /// <item><description>Paused: Paused.</description></item>
+        /// <item><description>Terminated: Terminated.
+        /// If you do not specify this parameter, no filtering is applied.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -50,7 +72,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ScheduleStatus { get; set; }
 
         /// <summary>
-        /// <para>The schedule type. Valid values: RunOnce (single execution), Scheduled (periodic scheduling), and Continuous (continuous execution driven by trace source signals). If not specified, the results are not filtered by schedule type.</para>
+        /// <para>The schedule type of the pipeline. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RunOnce: Single execution.</description></item>
+        /// <item><description>Scheduled: Periodic scheduling.</description></item>
+        /// <item><description>Continuous: Continuous execution driven by trace source signals.
+        /// If you do not specify this parameter, no filtering is applied.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>RunOnce</para>
@@ -60,7 +88,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ScheduleType { get; set; }
 
         /// <summary>
-        /// <para>The name of the output dataset. Supports exact matching and applies to standard sinks, conditional branch sinks, and default sinks. If not specified, the results are not filtered by sink name.</para>
+        /// <para>The name of the output dataset for exact match filtering. This matches standard sinks, conditional branch sinks, and default sinks. If you do not specify this parameter, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-dataset</para>

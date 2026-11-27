@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class DeleteEvaluatorSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpace name.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
+        /// <para>The target evaluator version for deleting the skill. If omitted, the latestVersion of the evaluator is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v2</para>
         /// </summary>

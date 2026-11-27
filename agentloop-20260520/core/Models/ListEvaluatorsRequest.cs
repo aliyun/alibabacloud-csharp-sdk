@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries to return per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

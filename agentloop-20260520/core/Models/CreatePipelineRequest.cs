@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreatePipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the pipeline. Maximum length: 256 characters.</para>
+        /// <para>The description of the pipeline. The description can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Collect trace data from SLS and perform data cleaning into a Dataset</para>
+        /// <para>Collect trace data from SLS and perform data cleaning into a dataset</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The scheduling method.</para>
+        /// <para>The scheduling policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;mode&quot;:&quot;RunOnce&quot;,&quot;runOnce&quot;:{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public CreatePipelineRequestExecutePolicy ExecutePolicy { get; set; }
         public class CreatePipelineRequestExecutePolicy : TeaModel {
             /// <summary>
-            /// <para>The continuous execution configuration. This is used when the type is trace. The processing frequency is a fixed value managed by the server.</para>
+            /// <para>The continuous execution configuration. This parameter is used when type is set to trace. The processing frequency is a fixed value managed by the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;fromTime&quot;:1735660800}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public CreatePipelineRequestExecutePolicyContinuous Continuous { get; set; }
             public class CreatePipelineRequestExecutePolicyContinuous : TeaModel {
                 /// <summary>
-                /// <para>The bootstrap historical start point as a UNIX timestamp in seconds. It shares the same precision as runOnce or scheduled fromTime. Millisecond values greater than or equal to 1e12 are automatically converted. The cursor starts from this time aligned to the grid and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and processes only incremental data.</para>
+                /// <para>The historical starting point for bootstrap, specified as a Unix timestamp in seconds. It shares the same precision as runOnce/scheduled.fromTime, and millisecond values greater than or equal to 1e12 are automatically converted for compatibility. The cursor starts from this time, aligns to the time grid, and catches up window by window. After catching up, it switches to minute intervals. By default, it starts from the current time and processes only incremental data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The single execution configuration. This parameter is required only when the mode is RunOnce.</para>
+            /// <para>The single execution configuration. This parameter is required only when mode is set to RunOnce.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;fromTime&quot;:1735660800,&quot;toTime&quot;:1735664400}</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public CreatePipelineRequestExecutePolicyRunOnce RunOnce { get; set; }
             public class CreatePipelineRequestExecutePolicyRunOnce : TeaModel {
                 /// <summary>
-                /// <para>The start time of the data processing window as a UNIX timestamp in seconds. The value must be less than the toTime value.</para>
+                /// <para>The start time of the data processing window. The value is a UNIX timestamp in seconds and must be less than the value of toTime.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public long? FromTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the data processing window as a UNIX timestamp in seconds. The value must be greater than the fromTime value.</para>
+                /// <para>The end time of the data processing window. The value is a UNIX timestamp in seconds and must be greater than the value of fromTime.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735747200</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The periodic scheduling configuration. This parameter is required only when the mode is Scheduled.</para>
+            /// <para>The periodic scheduling configuration. This parameter is required only when mode is set to Scheduled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;interval&quot;:&quot;1h&quot;,&quot;fromTime&quot;:1735660800}</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public CreatePipelineRequestExecutePolicyScheduled Scheduled { get; set; }
             public class CreatePipelineRequestExecutePolicyScheduled : TeaModel {
                 /// <summary>
-                /// <para>The scheduling start time as a UNIX timestamp in milliseconds.</para>
+                /// <para>The scheduling start time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The pipeline configuration for node orchestration.</para>
+        /// <para>The pipeline configuration, including node orchestration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;nodes&quot;:[{&quot;id&quot;:&quot;select-fields&quot;,&quot;type&quot;:&quot;project&quot;,&quot;parameters&quot;:{&quot;question&quot;:&quot;user_query&quot;}}]}</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The parameters of the node. This is a key-value structure that varies based on the node type.</para>
+                /// <para>The parameters of the node. The parameters are in key-value pairs and vary based on the node type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;ID&quot;: &quot;ID&quot;}</para>
@@ -182,6 +182,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
+        /// <para>The pipeline type. Valid values: PROCESSING (data processing) and ORCHESTRATION (orchestration task).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ORCHESTRATION</para>
+        /// </summary>
+        [NameInMap("pipelineKind")]
+        [Validation(Required=false)]
+        public string PipelineKind { get; set; }
+
+        /// <summary>
         /// <para>The name of the pipeline. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens.</para>
         /// 
         /// <b>Example:</b>
@@ -192,21 +202,21 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The pipeline sink, which is the data write destination.</para>
+        /// <para>The pipeline destination for writing data.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
         public CreatePipelineRequestSink Sink { get; set; }
         public class CreatePipelineRequestSink : TeaModel {
             /// <summary>
-            /// <para>The conditional routing configuration, which is used only when sink.type is set to condition.</para>
+            /// <para>The conditional routing configuration. This parameter is used only when sink.type is set to condition.</para>
             /// </summary>
             [NameInMap("condition")]
             [Validation(Required=false)]
             public CreatePipelineRequestSinkCondition Condition { get; set; }
             public class CreatePipelineRequestSinkCondition : TeaModel {
                 /// <summary>
-                /// <para>The default sink used when no conditional route is matched.</para>
+                /// <para>The default destination used when no conditional route is matched.</para>
                 /// </summary>
                 [NameInMap("defaultSink")]
                 [Validation(Required=false)]
@@ -242,7 +252,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     }
 
                     /// <summary>
-                    /// <para>The default destination type. Currently, only dataset is supported.</para>
+                    /// <para>The default destination type. Valid values: dataset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dataset</para>
@@ -254,7 +264,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 }
 
                 /// <summary>
-                /// <para>The route matching mode. Currently, only all is supported.</para>
+                /// <para>The route matching mode. Valid values: all.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>all</para>
@@ -293,14 +303,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The sink for the route.</para>
+                    /// <para>The destination for the route.</para>
                     /// </summary>
                     [NameInMap("sink")]
                     [Validation(Required=false)]
                     public CreatePipelineRequestSinkConditionRoutesSink Sink { get; set; }
                     public class CreatePipelineRequestSinkConditionRoutesSink : TeaModel {
                         /// <summary>
-                        /// <para>The destination dataset for the route.</para>
+                        /// <para>The route destination dataset.</para>
                         /// </summary>
                         [NameInMap("dataset")]
                         [Validation(Required=false)]
@@ -329,7 +339,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                         }
 
                         /// <summary>
-                        /// <para>The route destination type. Currently, only dataset is supported.</para>
+                        /// <para>The route destination type. Valid values: dataset.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>dataset</para>
@@ -374,7 +384,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The destination type. Currently, dataset is supported.</para>
+            /// <para>The destination type. Valid values: dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Dataset</para>
@@ -386,7 +396,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The pipeline data source.</para>
+        /// <para>The data source of the pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;logstore&quot;,&quot;logstore&quot;:{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;},&quot;inputFields&quot;:[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]}</para>
@@ -396,7 +406,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public CreatePipelineRequestSource Source { get; set; }
         public class CreatePipelineRequestSource : TeaModel {
             /// <summary>
-            /// <para>The Dataset datasource config under the current AgentSpace.</para>
+            /// <para>The Dataset datasource config in the current AgentSpace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;dataset&quot;:&quot;my-dataset&quot;,&quot;filter&quot;:&quot;status = &quot;pending&quot;&quot;}</para>
@@ -416,7 +426,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Dataset { get; set; }
 
                 /// <summary>
-                /// <para>The data filter condition for the dataset.</para>
+                /// <para>The filter condition for the dataset data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>status = &quot;pending&quot;</para>
@@ -428,7 +438,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The input fields and their types. This applies to all data source types.</para>
+            /// <para>The input fields and their data types. This applies to all data source types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;name&quot;:&quot;question&quot;,&quot;type&quot;:&quot;text&quot;}]</para>
@@ -448,7 +458,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field. Valid values: text, long, double, and json.</para>
+                /// <para>The data type of the field. Valid values: text, long, double, and json.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -460,7 +470,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The Simple Log Service (SLS) Logstore datasource config.</para>
+            /// <para>The SLS Logstore datasource config.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;project&quot;:&quot;my-sls-project&quot;,&quot;logstore&quot;:&quot;agent-logs&quot;}</para>
@@ -490,7 +500,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The filtered query statement for data in SLS query and analysis syntax.</para>
+                /// <para>The filtered query statement (SLS query and analysis syntax).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -504,7 +514,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The trajectory data configuration. This is optional and takes effect only when the type is trace. It retrieves ATIF standard trajectory data from the trajectory scrubbing service and extends it by feature.</para>
+            /// <para>The configuration of the trajectory data. This parameter is optional and takes effect only when the type is set to trace. It obtains ATIF standard trajectory data from the trajectory cleansing service and extends it based on features.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;enrich&quot;:{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}}</para>
@@ -514,7 +524,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public CreatePipelineRequestSourceTrajectory Trajectory { get; set; }
             public class CreatePipelineRequestSourceTrajectory : TeaModel {
                 /// <summary>
-                /// <para>The trajectory enrichment configuration. It mounts trajectory data into the scrubbing result based on trace_id. When writing to the dataset, the data is stored in the fixed column agent_trajectory, where the column value is the trajectory JSON content.</para>
+                /// <para>The trajectory enrichment configuration. It mounts trajectory data into the cleansing result based on the trace_id. When writing to the dataset, the data is stored in the fixed column agent_trajectory, where the column value is the JSON content of the trajectory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;enabled&quot;:true,&quot;columns&quot;:[&quot;input&quot;,&quot;output&quot;]}</para>
@@ -524,7 +534,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public CreatePipelineRequestSourceTrajectoryEnrich Enrich { get; set; }
                 public class CreatePipelineRequestSourceTrajectoryEnrich : TeaModel {
                     /// <summary>
-                    /// <para>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs only the fixed column agent_trajectory, so this parameter no longer affects the output.</para>
+                    /// <para>The list of enrichment columns. This parameter is retained for compatibility. The current implementation outputs a single fixed column named agent_trajectory, and this parameter no longer affects the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;input&quot;,&quot;output&quot;,&quot;session_id&quot;]</para>
@@ -548,7 +558,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The data source type. Currently, SLS is supported.</para>
+            /// <para>The type of the data source. Currently, only SLS is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SLS</para>
@@ -560,7 +570,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The idempotency token. It is a unique string generated by the client to ensure the idempotence of the create operation.</para>
+        /// <para>The client token that is used to ensure the idempotency of the request. The token is a unique string generated by the client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>

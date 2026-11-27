@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateEvaluatorVersionStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The expected current status. Valid values: DRAFT, PUBLISHED, and OFFLINE. If the specified value does not match the actual status, the API operation returns a 409 error.</para>
+        /// <para>The expected current status. Valid values: DRAFT, PUBLISHED, and OFFLINE. If the specified value does not match the actual status, the API returns a 409 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DRAFT</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExpectedStatus { get; set; }
 
         /// <summary>
-        /// <para>The target status. PUBLISHED indicates publishing a draft for the first time or bringing an offline version back online. OFFLINE indicates taking a published version offline.</para>
+        /// <para>The target status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PUBLISHED: Publishes a draft for the first time or brings an offline version back online.</description></item>
+        /// <item><description>OFFLINE: Takes a published version offline.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The version description that you can provide when publishing a draft for the first time. The maximum length is 256 characters.</para>
+        /// <para>The version description provided when a draft is published for the first time. The maximum length is 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Added scoring rules for answer accuracy</para>

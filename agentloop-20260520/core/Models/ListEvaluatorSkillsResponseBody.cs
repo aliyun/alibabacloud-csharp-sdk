@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListEvaluatorSkillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page used in this request.</para>
+        /// <para>The maximum number of results per page used in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The list of skill summaries.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Trace Context Loader&quot;,&quot;enable&quot;:true}]</para>
+        /// <para>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Read trace context&quot;,&quot;enable&quot;:true}]</para>
         /// </summary>
         [NameInMap("skills")]
         [Validation(Required=false)]
         public List<ListEvaluatorSkillsResponseBodySkills> Skills { get; set; }
         public class ListEvaluatorSkillsResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The creation time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <c>createTime</c> string field.</para>
+            /// <para>The creation time. CloudSpec declares this field as int64, but the current backend returns the StarOps <c>createTime</c> string field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Reads trace context to assist evaluation</para>
+            /// <para>Read trace context to assist evaluation</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Trace Context Loader</para>
+            /// <para>Read trace context</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the skill is enabled.</para>
+            /// <para>Specifies whether the skill is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The latest version. This field is declared in CloudSpec but is not currently populated in the backend response.</para>
+            /// <para>The latest version. This field is declared in CloudSpec but is not populated in the current backend response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000000</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The update time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <c>updateTime</c> string field.</para>
+            /// <para>The update time. CloudSpec declares this field as int64, but the current backend returns the StarOps <c>updateTime</c> string field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>

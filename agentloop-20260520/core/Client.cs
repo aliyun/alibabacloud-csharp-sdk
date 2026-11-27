@@ -2737,6 +2737,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["pipeline"] = request.Pipeline;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineKind))
+            {
+                body["pipelineKind"] = request.PipelineKind;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
             {
                 body["pipelineName"] = request.PipelineName;
@@ -2808,6 +2812,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pipeline))
             {
                 body["pipeline"] = request.Pipeline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineKind))
+            {
+                body["pipelineKind"] = request.PipelineKind;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
             {
@@ -6530,12 +6538,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6575,12 +6583,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6620,12 +6628,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6644,12 +6652,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Queries the details of a single run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and fault message.</para>
+        /// <para>Invokes GetPipelineRun to retrieve the details of a single pipeline run, including the data window, execute status, retry information, run statistics, and the error message for the fault.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7952,7 +7960,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of skills for an evaluator.</para>
+        /// <para>Queries the list of evaluator skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8010,7 +8018,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of skills for an evaluator.</para>
+        /// <para>Queries the list of evaluator skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8068,7 +8076,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of skills for an evaluator.</para>
+        /// <para>Queries the list of evaluator skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8087,7 +8095,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of skills for an evaluator.</para>
+        /// <para>Queries the list of evaluator skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8993,7 +9001,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// <para>Calls ListPipelineRuns to query the pipeline run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9064,7 +9072,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// <para>Calls ListPipelineRuns to query the pipeline run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9135,7 +9143,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// <para>Calls ListPipelineRuns to query the pipeline run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9159,7 +9167,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the ListPipelineRuns operation to query the pipeline run history. You can filter the results by status, trigger type, and time range, and use cursor-based pagination.</para>
+        /// <para>Calls ListPipelineRuns to query the pipeline run history. Supports filtering by status, trigger type, and time range, and uses cursor-based pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9178,7 +9186,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and uses cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9205,6 +9213,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineKind))
+            {
+                query["pipelineKind"] = request.PipelineKind;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
             {
@@ -9244,7 +9256,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and uses cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9271,6 +9283,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineKind))
+            {
+                query["pipelineKind"] = request.PipelineKind;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
             {
@@ -9310,7 +9326,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and uses cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9329,7 +9345,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and cursor-based pagination.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status, and uses cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpace { get; set; }
 
             /// <summary>
-            /// <para>The list of annotations.</para>
+            /// <para>The list of annotation tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;__en&quot;]</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> Annotations { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the current version.</para>
+            /// <para>The current version configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;prompt&quot;:&quot;Please evaluate the task completion&quot;}</para>
+            /// <para>{&quot;prompt&quot;:&quot;Evaluate the task completion&quot;}</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public Dictionary<string, object> Config { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in seconds-level UNIX timestamp.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The version number returned in the current response.</para>
+            /// <para>The current version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The evaluator description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Determines whether the Agent has completed the user task</para>
+            /// <para>Determines whether the agent completed the user task</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Trace task completion</para>
+            /// <para>Workflow task completion</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -130,6 +130,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public Dictionary<string, object> Properties { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether this version can be selected when creating an evaluation task or an experiment plan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -138,14 +140,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public bool? Selectable { get; set; }
 
             /// <summary>
+            /// <para>The list of business skill summaries for the queried evaluator version.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;displayName&quot;:&quot;事实核查&quot;,&quot;description&quot;:&quot;核对回答中的事实依据&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1770386951147366810&quot;}]</para>
+            /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;displayName&quot;:&quot;Fact-checking&quot;,&quot;description&quot;:&quot;Verify the factual basis in the response&quot;,&quot;enable&quot;:true,&quot;currentVersion&quot;:&quot;1770386951147366810&quot;}]</para>
             /// </summary>
             [NameInMap("skills")]
             [Validation(Required=false)]
             public List<GetEvaluatorResponseBodyEvaluatorSkills> Skills { get; set; }
             public class GetEvaluatorResponseBodyEvaluatorSkills : TeaModel {
                 /// <summary>
+                /// <para>The skill revision number used by this evaluator version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1770386951147366810</para>
                 /// </summary>
@@ -154,22 +160,28 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string CurrentVersion { get; set; }
 
                 /// <summary>
+                /// <para>The description of the skill purpose.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>核对回答中的事实依据</para>
+                /// <para>Verify the factual basis in the response</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The display name of the skill.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>事实核查</para>
+                /// <para>Fact-checking</para>
                 /// </summary>
                 [NameInMap("displayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the skill is enabled in the queried evaluator version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -178,6 +190,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
+                /// <para>The skill name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fact-check</para>
                 /// </summary>
@@ -188,6 +202,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
+            /// <para>The version status. DRAFT indicates a draft. PUBLISHED indicates that the version is published. OFFLINE indicates that the version is offline.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PUBLISHED</para>
             /// </summary>
@@ -206,7 +222,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The update time, in seconds-level UNIX timestamp.</para>
+            /// <para>The update time. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>
@@ -226,7 +242,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<GetEvaluatorResponseBodyEvaluatorVersions> Versions { get; set; }
             public class GetEvaluatorResponseBodyEvaluatorVersions : TeaModel {
                 /// <summary>
-                /// <para>The version creation time, in seconds-level UNIX timestamp.</para>
+                /// <para>The time when the version was created. The value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1782816000</para>
@@ -236,6 +252,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public long? CreatedAt { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether this version can be selected when creating an evaluation task or an experiment plan.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -244,6 +262,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public bool? Selectable { get; set; }
 
                 /// <summary>
+                /// <para>The version status. DRAFT indicates a draft. PUBLISHED indicates that the version is published. OFFLINE indicates that the version is offline.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PUBLISHED</para>
                 /// </summary>
@@ -252,6 +272,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The time when the version was last updated. The value is a UNIX timestamp in seconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1795478400</para>
                 /// </summary>

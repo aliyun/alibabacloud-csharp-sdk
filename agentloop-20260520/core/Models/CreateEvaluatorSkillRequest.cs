@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateEvaluatorSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpace name.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
-        /// <para>The skill description.</para>
+        /// <para>The description of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Reads trace context to assist evaluation</para>
+        /// <para>Read trace context to assist evaluation</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The display name of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Trace Context Loader</para>
+        /// <para>Read Trace Context</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -51,6 +51,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <para>The target evaluator version number for creating the skill. If omitted, the latestVersion of the evaluator is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v2</para>
         /// </summary>
@@ -92,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The remark for the file.</para>
+            /// <para>The remark of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Main skill description</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The skill name.</para>
+        /// <para>The name of the skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</para>
+        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>

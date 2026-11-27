@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreatePipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID used to locate the request for troubleshooting.</para>
+        /// <para>The request ID. You can use the ID to troubleshoot issues and locate the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>

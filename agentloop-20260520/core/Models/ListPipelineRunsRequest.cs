@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListPipelineRunsRequest : TeaModel {
         /// <summary>
-        /// <para>The upper bound of the trigger time filter (triggered_at &lt;= endTime). The value is a UNIX timestamp in seconds.</para>
+        /// <para>The upper bound for filtering by trigger time (triggered_at &lt;= endTime) in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. To retrieve the next page of results, pass the nextToken value from the previous response. Do not specify this parameter for the first request.</para>
+        /// <para>The pagination token. Pass the nextToken value from the previous response to retrieve the next page. Do not specify this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg5MA==</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The lower bound of the trigger time filter (triggered_at &gt;= startTime). The value is a UNIX timestamp in seconds.</para>
+        /// <para>The lower bound for filtering by trigger time (triggered_at &gt;= startTime) in UNIX seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735574400</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by run status. Valid values: Pending, Running, Succeeded, Failed, and Cancelled. If you do not specify this parameter, the results are not filtered by status.</para>
+        /// <para>Filters runs by status. Valid values: Pending, Running, Succeeded, Failed, and Cancelled. If you do not specify this parameter, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by trigger type. Valid values: Manual, Scheduled, and RunOnce. If you do not specify this parameter, the results are not filtered by trigger type.</para>
+        /// <para>Filters by trigger type. Valid values: Manual, Scheduled, and RunOnce. If you do not specify this parameter, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>

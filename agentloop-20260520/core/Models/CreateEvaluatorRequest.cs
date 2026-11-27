@@ -20,27 +20,27 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<string> Annotations { get; set; }
 
         /// <summary>
-        /// <para>The evaluator configuration. LLM/AGENT types typically include prompt, variables, and outputSchema. CODE types typically include codeType, faasConfig, variables, and parameters.</para>
+        /// <para>The evaluator configuration. For LLM or AGENT evaluators, the configuration typically includes prompt, variables, and outputSchema. For CODE evaluators, it typically includes codeType, faasConfig, variables, and parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;prompt&quot;:&quot;Please evaluate task completion&quot;,&quot;variables&quot;:[{&quot;name&quot;:&quot;input&quot;}]}</para>
+        /// <para>{&quot;prompt&quot;:&quot;Please evaluate the task completion&quot;,&quot;variables&quot;:[{&quot;name&quot;:&quot;input&quot;}]}</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
-        /// <para>The description of the evaluator. Maximum length: 256 characters.</para>
+        /// <para>The description of the evaluator. The description can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Determines whether the Agent completed the user task</para>
+        /// <para>Determines whether the agent completes the user task</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name. Maximum length: 128 characters.</para>
+        /// <para>The display name. The name can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Trace task completion</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The evaluation metric name.</para>
+        /// <para>The name of the evaluation metric.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The evaluator name. The name cannot start with a system-reserved prefix. Maximum length: 128 characters.</para>
+        /// <para>The name of the evaluator. The name cannot start with a system-reserved prefix and can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,30 +82,38 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Properties { get; set; }
 
         /// <summary>
+        /// <para>The list of business skills for the initial version of a standard agent evaluator.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]}]</para>
+        /// <para>[{&quot;skillName&quot;:&quot;fact-check&quot;,&quot;files&quot;:[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify the factual basis in the response\n---\nVerify the facts in the response item by item and list the evidence.&quot;}]}]</para>
         /// </summary>
         [NameInMap("skills")]
         [Validation(Required=false)]
         public List<CreateEvaluatorRequestSkills> Skills { get; set; }
         public class CreateEvaluatorRequestSkills : TeaModel {
             /// <summary>
+            /// <para>The description of the skill purpose.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>核对回答中的事实依据</para>
+            /// <para>Verify the factual basis in the response</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The display name of the skill.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>事实核查</para>
+            /// <para>Fact check</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable the skill. Default value: true.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -114,25 +122,31 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public bool? Enable { get; set; }
 
             /// <summary>
+            /// <para>The complete list of files for the skill. The list must include SKILL.md in the root directory.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: 核对回答中的事实依据\n---\n逐项核对回答中的事实，并列出依据。&quot;}]</para>
+            /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;---\nname: fact-check\ndescription: Verify the factual basis in the response\n---\nVerify the facts in the response item by item and list the evidence.&quot;}]</para>
             /// </summary>
             [NameInMap("files")]
             [Validation(Required=false)]
             public List<CreateEvaluatorRequestSkillsFiles> Files { get; set; }
             public class CreateEvaluatorRequestSkillsFiles : TeaModel {
                 /// <summary>
+                /// <para>The text content of the file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <hr>
                 /// <h2>name: fact-check
-                /// description: 核对回答中的事实依据</h2>
-                /// <para>逐项核对回答中的事实，并列出依据。</para>
+                /// description: Verify the factual basis in the response</h2>
+                /// <para>Verify the facts in the response item by item and list the evidence</para>
                 /// </summary>
                 [NameInMap("content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The path of the file relative to the root directory of the skill.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SKILL.md</para>
                 /// </summary>
@@ -143,6 +157,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
+            /// <para>The name of the skill. The name must be unique in the list of skills submitted in this request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fact-check</para>
             /// </summary>
@@ -153,6 +169,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
+        /// <para>The initial version status. Set this parameter to DRAFT to save the evaluator as a draft. If you omit this parameter, the initial version is directly published.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DRAFT</para>
         /// </summary>
@@ -161,12 +179,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The evaluator type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>LLM: an inner join large language model evaluation evaluator.</description></item>
-        /// <item><description>AGENT: a StarOps digital worker evaluator.</description></item>
-        /// <item><description>CODE: a code evaluator.</description></item>
-        /// </list>
+        /// <para>The type of the evaluator. <c>LLM</c> indicates an inner join model evaluation tool for large language models, <c>AGENT</c> indicates a StarOps digital employee evaluator, and <c>CODE</c> indicates a code evaluator.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -198,7 +211,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. This is a unique string generated by the client to ensure idempotence of the create operation. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</para>
+        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>
