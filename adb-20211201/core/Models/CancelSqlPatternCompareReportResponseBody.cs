@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CancelSqlPatternCompareReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the report was first canceled. The time is in UTC in the yyyy-MM-ddTHH:mmZ format.</para>
+        /// <para>The time of the first cancellation. The time is displayed in UTC in the yyyy-MM-ddTHH:mmZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-08T01:06Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CancelTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the report is canceled. The value true is returned when the report is successfully canceled or canceled again.</para>
+        /// <para>Indicates whether the report is canceled. true is returned if the cancellation is successful or if the report is repeatedly canceled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Canceled { get; set; }
 
         /// <summary>
-        /// <para>The SQL Pattern comparison report ID.</para>
+        /// <para>The ID of the SQL pattern comparison report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1001</para>

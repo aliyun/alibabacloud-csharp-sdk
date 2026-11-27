@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The file ID.</para>
+        /// <para>The ID of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2134143</para>

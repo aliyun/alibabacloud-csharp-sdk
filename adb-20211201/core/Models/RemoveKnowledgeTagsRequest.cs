@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class RemoveKnowledgeTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The database cluster ID.</para>
+        /// <para>The ID of the database cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The file ID.</para>
+        /// <para>The ID of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2131234</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base document location.</para>
+        /// <para>The location of the knowledge base document.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/doc.pdf</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileLocation { get; set; }
 
         /// <summary>
-        /// <para>The JSON string of the tag array to be deleted.</para>
+        /// <para>The JSON string of the array of tags to delete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;tag_key&quot;:&quot;biz.scene&quot;,&quot;tag_value&quot;:&quot;test&quot;}]</para>

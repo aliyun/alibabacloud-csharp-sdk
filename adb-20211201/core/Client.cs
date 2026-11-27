@@ -1857,19 +1857,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// <para>Cancels an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <para>Cancels a specified SQL pattern comparison report. You can cancel reports in the following states:</para>
         /// <list type="bullet">
-        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
-        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <item><description><c>PENDING</c>: Pending generation.</description></item>
+        /// <item><description><c>RUNNING</c>: Generation in progress.<remarks>
         /// <list type="bullet">
         /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
-        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
-        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Completed, failed, or expired reports cannot be canceled.</description></item>
+        /// <item><description>If you repeatedly cancel an already canceled report, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> remains the time of the first cancellation.</description></item>
         /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
@@ -1924,19 +1924,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// <para>Cancels an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <para>Cancels a specified SQL pattern comparison report. You can cancel reports in the following states:</para>
         /// <list type="bullet">
-        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
-        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <item><description><c>PENDING</c>: Pending generation.</description></item>
+        /// <item><description><c>RUNNING</c>: Generation in progress.<remarks>
         /// <list type="bullet">
         /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
-        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
-        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Completed, failed, or expired reports cannot be canceled.</description></item>
+        /// <item><description>If you repeatedly cancel an already canceled report, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> remains the time of the first cancellation.</description></item>
         /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
@@ -1991,19 +1991,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// <para>Cancels an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <para>Cancels a specified SQL pattern comparison report. You can cancel reports in the following states:</para>
         /// <list type="bullet">
-        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
-        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <item><description><c>PENDING</c>: Pending generation.</description></item>
+        /// <item><description><c>RUNNING</c>: Generation in progress.<remarks>
         /// <list type="bullet">
         /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
-        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
-        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Completed, failed, or expired reports cannot be canceled.</description></item>
+        /// <item><description>If you repeatedly cancel an already canceled report, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> remains the time of the first cancellation.</description></item>
         /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
@@ -2026,19 +2026,19 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// <para>Cancels an SQL pattern comparison report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <para>Cancels a specified SQL pattern comparison report. You can cancel reports in the following states:</para>
         /// <list type="bullet">
-        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
-        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <item><description><c>PENDING</c>: Pending generation.</description></item>
+        /// <item><description><c>RUNNING</c>: Generation in progress.<remarks>
         /// <list type="bullet">
         /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
-        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
-        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Completed, failed, or expired reports cannot be canceled.</description></item>
+        /// <item><description>If you repeatedly cancel an already canceled report, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> remains the time of the first cancellation.</description></item>
         /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
         /// </list>
         /// </remarks>
@@ -2493,7 +2493,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log synchronization to Simple Log Service (SLS).</para>
+        /// <para>Disables log synchronization to Simple Log Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2552,7 +2552,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log synchronization to Simple Log Service (SLS).</para>
+        /// <para>Disables log synchronization to Simple Log Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2611,7 +2611,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log synchronization to Simple Log Service (SLS).</para>
+        /// <para>Disables log synchronization to Simple Log Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2638,7 +2638,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables log synchronization to Simple Log Service (SLS).</para>
+        /// <para>Disables log synchronization to Simple Log Service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7050,12 +7050,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <para>Creates a semantic view. Before calling this operation, ensure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
-        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
-        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
-        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// <item><description>An ADB cluster is created. You can call DescribeDBClusters to obtain the cluster ID (DBClusterId).</description></item>
+        /// <item><description>A Super database account exists in the cluster. You can call CreateAccount to create one.</description></item>
+        /// <item><description>The current RAM user is bound to the database account. BindAccount only supports binding regular database accounts. If the target account is a Super account, bind the RAM user by using the RamUserList parameter of CreateAccount.</description></item>
+        /// <item><description>The database specified by SchemaName already exists.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7115,12 +7115,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <para>Creates a semantic view. Before calling this operation, ensure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
-        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
-        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
-        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// <item><description>An ADB cluster is created. You can call DescribeDBClusters to obtain the cluster ID (DBClusterId).</description></item>
+        /// <item><description>A Super database account exists in the cluster. You can call CreateAccount to create one.</description></item>
+        /// <item><description>The current RAM user is bound to the database account. BindAccount only supports binding regular database accounts. If the target account is a Super account, bind the RAM user by using the RamUserList parameter of CreateAccount.</description></item>
+        /// <item><description>The database specified by SchemaName already exists.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7180,12 +7180,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <para>Creates a semantic view. Before calling this operation, ensure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
-        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
-        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
-        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// <item><description>An ADB cluster is created. You can call DescribeDBClusters to obtain the cluster ID (DBClusterId).</description></item>
+        /// <item><description>A Super database account exists in the cluster. You can call CreateAccount to create one.</description></item>
+        /// <item><description>The current RAM user is bound to the database account. BindAccount only supports binding regular database accounts. If the target account is a Super account, bind the RAM user by using the RamUserList parameter of CreateAccount.</description></item>
+        /// <item><description>The database specified by SchemaName already exists.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7209,12 +7209,12 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建语义视图。调用前请确认已满足以下条件：</para>
+        /// <para>Creates a semantic view. Before calling this operation, ensure that the following conditions are met:</para>
         /// <ol>
-        /// <item><description>已创建 ADB 集群，可通过 DescribeDBClusters 获取集群 ID（DBClusterId）。</description></item>
-        /// <item><description>集群中已存在 Super 类型的数据库账号，可通过 CreateAccount 创建。</description></item>
-        /// <item><description>当前 RAM 用户已绑定到该数据库账号：BindAccount 仅支持绑定数据库普通账号；若目标账号为 Super 类型，建议通过 CreateAccount 的 RamUserList 参数完成绑定。</description></item>
-        /// <item><description>SchemaName 指定的数据库已存在。</description></item>
+        /// <item><description>An ADB cluster is created. You can call DescribeDBClusters to obtain the cluster ID (DBClusterId).</description></item>
+        /// <item><description>A Super database account exists in the cluster. You can call CreateAccount to create one.</description></item>
+        /// <item><description>The current RAM user is bound to the database account. BindAccount only supports binding regular database accounts. If the target account is a Super account, bind the RAM user by using the RamUserList parameter of CreateAccount.</description></item>
+        /// <item><description>The database specified by SchemaName already exists.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9721,7 +9721,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified semantic view.</para>
+        /// <para>Deletes a specified semantic view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9771,7 +9771,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified semantic view.</para>
+        /// <para>Deletes a specified semantic view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9821,7 +9821,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified semantic view.</para>
+        /// <para>Deletes a specified semantic view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9839,7 +9839,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified semantic view.</para>
+        /// <para>Deletes a specified semantic view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16581,12 +16581,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a specific cluster.</para>
+        /// <para>Queries the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To find the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16628,12 +16628,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a specific cluster.</para>
+        /// <para>Queries the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To find the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16675,12 +16675,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a specific cluster.</para>
+        /// <para>Queries the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To find the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16698,12 +16698,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns the details of a specific cluster.</para>
+        /// <para>Queries the details of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To find the endpoints for this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration address of the current service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43713,7 +43713,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of a knowledge base document.</para>
+        /// <para>Deletes tags from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43767,7 +43767,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of a knowledge base document.</para>
+        /// <para>Deletes tags from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43821,7 +43821,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of a knowledge base document.</para>
+        /// <para>Deletes tags from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43839,7 +43839,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of a knowledge base document.</para>
+        /// <para>Deletes tags from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43857,7 +43857,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes authorized users of a knowledge base document.</para>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43911,7 +43911,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes authorized users of a knowledge base document.</para>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43965,7 +43965,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes authorized users of a knowledge base document.</para>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43983,7 +43983,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes authorized users of a knowledge base document.</para>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46645,7 +46645,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// <para>Submits a task to reparse a knowledge base file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46695,7 +46695,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// <para>Submits a task to reparse a knowledge base file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46745,7 +46745,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// <para>Submits a task to reparse a knowledge base file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46763,7 +46763,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a reparse task for a knowledge base file.</para>
+        /// <para>Submits a task to reparse a knowledge base file.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SELECT * FROM <c>fotor_com_datastore_resource</c>.<c>fotor_ai_create_task</c> where <c>date</c> = \&quot;2023-05-13\&quot; LIMIT 10;</para>
+        /// <para>SELECT * FROM <c>fotor_com_datastore_resource</c>.<c>fotor_ai_create_task</c> where <c>date</c> = &quot;2023-05-13&quot; LIMIT 10;</para>
         /// </summary>
         [NameInMap("SQL")]
         [Validation(Required=false)]

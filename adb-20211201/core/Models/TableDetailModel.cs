@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The table property parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;escape.delim&quot;:&quot;\\&quot;,&quot;field.delim&quot;:&quot; &quot;}</para>
+        /// <para>{&quot;escape.delim&quot;:&quot;\&quot;,&quot;field.delim&quot;:&quot; &quot;}</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]

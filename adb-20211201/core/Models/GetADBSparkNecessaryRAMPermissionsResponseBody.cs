@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The recommended configurations in the RAM system based on the diagnostic information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Grant the system RAM policy \&quot;AliyunADBDeveloperAccess\&quot; to current RAM user can quickly solve this issue.</para>
+            /// <para>Grant the system RAM policy &quot;AliyunADBDeveloperAccess&quot; to current RAM user can quickly solve this issue.</para>
             /// </summary>
             [NameInMap("Suggestion")]
             [Validation(Required=false)]

@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The refresh interval.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>(now() + INTERVAL \&quot;10\&quot; SECOND)</para>
+        /// <para>(now() + INTERVAL &quot;10&quot; SECOND)</para>
         /// </summary>
         [NameInMap("RefreshInterval")]
         [Validation(Required=false)]

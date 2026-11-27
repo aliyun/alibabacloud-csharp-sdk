@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{     \&quot;name\&quot;: \&quot;SparkPi\&quot;,     \&quot;file\&quot;: \&quot;local:///tmp/spark-examples.jar\&quot;,     \&quot;className\&quot;: \&quot;org.apache.spark.examples.SparkPi\&quot;,     \&quot;args\&quot;: [         \&quot;1000000\&quot;     ],     \&quot;conf\&quot;: {         \&quot;spark.driver.resourceSpec\&quot;: \&quot;small\&quot;,         \&quot;spark.executor.instances\&quot;: 1,         \&quot;spark.executor.resourceSpec\&quot;: \&quot;small\&quot;     } }&quot;,
+        /// <para>{     &quot;name&quot;: &quot;SparkPi&quot;,     &quot;file&quot;: &quot;local:///tmp/spark-examples.jar&quot;,     &quot;className&quot;: &quot;org.apache.spark.examples.SparkPi&quot;,     &quot;args&quot;: [         &quot;1000000&quot;     ],     &quot;conf&quot;: {         &quot;spark.driver.resourceSpec&quot;: &quot;small&quot;,         &quot;spark.executor.instances&quot;: 1,         &quot;spark.executor.resourceSpec&quot;: &quot;small&quot;     } }&quot;,
         ///       &quot;EstimateExecutionCpuTimeInSeconds&quot; : 100,
         ///       &quot;LogRootPath&quot; : &quot;oss://test/logs/driver&quot;,
         ///       &quot;LastAttemptId&quot; : &quot;s202204291426hzpre60cfabb0000004-0003&quot;,

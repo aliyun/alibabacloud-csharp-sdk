@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully deleted users.</para>
+            /// <para>The number of users that were successfully removed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? Removed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request is successful. Valid values:</para>
+            /// <para>Indicates whether the request was successful. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Successful.</description></item>
             /// <item><description><b>false</b>: Failed.</description></item>

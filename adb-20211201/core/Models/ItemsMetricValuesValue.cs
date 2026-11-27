@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MaxDisplayValue { get; set; }
 
             /// <summary>
-            /// <para>The percentage of this Pattern\&quot;s Time 2 total sum relative to the total sum of all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
+            /// <para>The percentage of this Pattern&quot;s Time 2 total sum relative to the total sum of all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? SumRatioPercent { get; set; }
 
             /// <summary>
-            /// <para>The percentage of this Pattern\&quot;s Time 2 average value relative to the sum of average values across all Patterns before dimension filtering in the current report. A value of 10 indicates 10%.</para>
+            /// <para>The percentage of this Pattern&quot;s Time 2 average value relative to the sum of average values across all Patterns before dimension filtering in the current report. A value of 10 indicates 10%.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Time1DisplayValue { get; set; }
 
             /// <summary>
-            /// <para>The percentage of this Pattern\&quot;s Time 1 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
+            /// <para>The percentage of this Pattern&quot;s Time 1 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Time2DisplayValue { get; set; }
 
             /// <summary>
-            /// <para>The percentage of this Pattern\&quot;s Time 2 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
+            /// <para>The percentage of this Pattern&quot;s Time 2 average value across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Time1DisplayValue { get; set; }
 
             /// <summary>
-            /// <para>The percentage of this Pattern\&quot;s Time 1 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
+            /// <para>The percentage of this Pattern&quot;s Time 1 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Time2DisplayValue { get; set; }
 
             /// <summary>
-            /// <para>The percentage of this Pattern\&quot;s Time 2 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
+            /// <para>The percentage of this Pattern&quot;s Time 2 sum of metric values across active query minute buckets relative to the sum of the corresponding statistics for all results before dimension filtering in the current report. A value of 10 indicates 10%.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

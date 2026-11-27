@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The allowed operation information. When you use this parameter, the system matches the operation action based on the currentStepName and status in this information. If no action is matched, the current task status does not support the operation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;steps\&quot;:[{\&quot;action_info\&quot;:{\&quot;Waiting\&quot;:[\&quot;modifySwitchTime\&quot;]},\&quot;step_name\&quot;:\&quot;exec_task\&quot;}]}</para>
+            /// <para>{&quot;steps&quot;:[{&quot;action_info&quot;:{&quot;Waiting&quot;:[&quot;modifySwitchTime&quot;]},&quot;step_name&quot;:&quot;exec_task&quot;}]}</para>
             /// </summary>
             [NameInMap("ActionInfo")]
             [Validation(Required=false)]
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The task details.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;callerUid\&quot;:\&quot;test\&quot;}</para>
+            /// <para>{&quot;callerUid&quot;:&quot;test&quot;}</para>
             /// </summary>
             [NameInMap("TaskDetail")]
             [Validation(Required=false)]

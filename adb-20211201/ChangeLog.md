@@ -1,3 +1,9 @@
+2026-11-27 Version: 5.6.1
+- Update API DescribeDBClusterAttribute: add response parameters Body.Items.$.RoutingControllerNodeCountFree.
+- Update API DescribeDBClusterAttribute: add response parameters Body.Items.$.RoutingControllerNodeCountPaid.
+- Update API DescribeDBClusterAttribute: add response parameters Body.Items.$.RoutingControllerNodeSize.
+
+
 2026-11-24 Version: 5.6.0
 - Support API ForkKnowledgeFile.
 - Support API TriggerKnowledgeFileParse.

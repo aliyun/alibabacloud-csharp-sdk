@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DeleteSemanticViewRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ADB cluster.</para>
+        /// <para>The ADB cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the schema.</para>
+        /// <para>The schema name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>The name of the semantic view.</para>
+        /// <para>The semantic view name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

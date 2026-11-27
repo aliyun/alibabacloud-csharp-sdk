@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The scheduling frequency.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;cron\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;run_on_demand\&quot;}</para>
+            /// <para>{&quot;cron&quot;:&quot;&quot;,&quot;type&quot;:&quot;run_on_demand&quot;}</para>
             /// </summary>
             [NameInMap("SyncTime")]
             [Validation(Required=false)]

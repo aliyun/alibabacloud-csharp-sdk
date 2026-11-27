@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// 
         /// <b>Example:</b>
         /// <para>CREATE TABLE user(id INT, name STRING);
-        /// INSERT INTO t VALUE(1, \&quot;Bob\&quot;);
+        /// INSERT INTO t VALUE(1, &quot;Bob&quot;);
         /// SELECT * FROM t;</para>
         /// </summary>
         [NameInMap("Query")]

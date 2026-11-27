@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge base file. You must specify either this parameter or FileLocation, but not both.</para>
+        /// <para>The ID of the knowledge base file. You must specify either this parameter or FileLocation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The URL of a single knowledge base file. You must specify either this parameter or FileId, but not both. You cannot specify a directory. The URL must uniquely point to an existing file.</para>
+        /// <para>The path to a single file in the knowledge base. You must specify either this parameter or FileId. You cannot specify a directory. The path must uniquely identify an existing file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/doc.pdf</para>

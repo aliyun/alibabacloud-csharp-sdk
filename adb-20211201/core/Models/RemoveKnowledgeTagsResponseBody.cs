@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public RemoveKnowledgeTagsResponseBodyData Data { get; set; }
         public class RemoveKnowledgeTagsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The knowledge base file location.</para>
+            /// <para>The location of the knowledge base file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://bucket/doc.pdf</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string FileLocation { get; set; }
 
             /// <summary>
-            /// <para>The API message.</para>
+            /// <para>The message returned by the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The number of tags successfully deleted.</para>
+            /// <para>The number of successfully deleted tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

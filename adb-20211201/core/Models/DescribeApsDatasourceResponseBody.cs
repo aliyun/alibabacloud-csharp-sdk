@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <para>kafka topic</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{\&quot;value\&quot;: \&quot;hongxian_test\&quot;}]</para>
+                /// <para>[{&quot;value&quot;: &quot;hongxian_test&quot;}]</para>
                 /// </summary>
                 [NameInMap("KafkaTopic")]
                 [Validation(Required=false)]

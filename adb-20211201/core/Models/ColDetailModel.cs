@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The time when the column was created. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-01-05\&quot;T\&quot;13:17:55\&quot;Z\&quot;</para>
+        /// <para>2023-01-05&quot;T&quot;13:17:55&quot;Z&quot;</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The time when the column was updated. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-01-05\&quot;T\&quot;13:17:55\&quot;Z\&quot;</para>
+        /// <para>2023-01-05&quot;T&quot;13:17:55&quot;Z&quot;</para>
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]

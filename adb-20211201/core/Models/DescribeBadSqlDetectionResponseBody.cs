@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>SELECT * FROM device WHERE product_key = \&quot;h66zXfxet2X\&quot; AND name = \&quot;device@zntbtfptv5_9237117\&quot;</para>
+                /// <para>SELECT * FROM device WHERE product_key = &quot;h66zXfxet2X&quot; AND name = &quot;device@zntbtfptv5_9237117&quot;</para>
                 /// </summary>
                 [NameInMap("SQL")]
                 [Validation(Required=false)]

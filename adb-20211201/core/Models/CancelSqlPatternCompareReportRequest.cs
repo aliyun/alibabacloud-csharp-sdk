@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CancelSqlPatternCompareReportRequest : TeaModel {
         /// <summary>
-        /// <para>The AnalyticDB for MySQL instance ID.</para>
+        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The SQL Pattern comparison report ID.</para>
+        /// <para>The ID of the SQL pattern comparison report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

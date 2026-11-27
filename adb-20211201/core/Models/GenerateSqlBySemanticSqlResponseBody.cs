@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The error message returned when the task fails to be created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Failed to rewrite semantic SQL: Ambiguous path from \&quot;lineitem\&quot; to \&quot;nation\&quot;. Multiple paths found</para>
+            /// <para>Failed to rewrite semantic SQL: Ambiguous path from &quot;lineitem&quot; to &quot;nation&quot;. Multiple paths found</para>
             /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]

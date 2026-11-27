@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;Field\&quot;:\&quot;AdviceType\&quot;,\&quot;Type\&quot;:\&quot;Desc\&quot;}]</para>
+        /// <para>[{&quot;Field&quot;:&quot;AdviceType&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]

@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;Type\&quot;: \&quot;ASC\&quot;, \&quot;Field\&quot;: \&quot;StartTime\&quot;}</para>
+        /// <para>{&quot;Type&quot;: &quot;ASC&quot;, &quot;Field&quot;: &quot;StartTime&quot;}</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]

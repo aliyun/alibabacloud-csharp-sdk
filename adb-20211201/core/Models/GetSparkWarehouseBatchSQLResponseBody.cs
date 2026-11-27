@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;DBClusterId\&quot;: \&quot;amv-uf6485635fz852mn\&quot;, \&quot;Statements\&quot;: [{\&quot;Code\&quot;: \&quot;show databases\&quot;, \&quot;State\&quot;: \&quot;FINISHED\&quot;, \&quot;StatementId\&quot;: \&quot;sq202501141001sh8e12e080006846-0000\&quot;, \&quot;Result\&quot;: \&quot;+--------------------+n</para>
+        /// <para>{&quot;DBClusterId&quot;: &quot;amv-uf6485635fz852mn&quot;, &quot;Statements&quot;: [{&quot;Code&quot;: &quot;show databases&quot;, &quot;State&quot;: &quot;FINISHED&quot;, &quot;StatementId&quot;: &quot;sq202501141001sh8e12e080006846-0000&quot;, &quot;Result&quot;: &quot;+--------------------+n</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

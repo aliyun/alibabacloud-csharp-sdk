@@ -153,6 +153,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("RoutingControllerNodeCountFree")]
+                [Validation(Required=false)]
+                public int? RoutingControllerNodeCountFree { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("RoutingControllerNodeCountPaid")]
+                [Validation(Required=false)]
+                public int? RoutingControllerNodeCountPaid { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("RoutingControllerNodeSize")]
+                [Validation(Required=false)]
+                public string RoutingControllerNodeSize { get; set; }
+
                 [NameInMap("SecondaryVSwitchId")]
                 [Validation(Required=false)]
                 public string SecondaryVSwitchId { get; set; }

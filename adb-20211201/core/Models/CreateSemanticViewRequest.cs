@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateSemanticViewRequest : TeaModel {
         /// <summary>
-        /// <para>ADB cluster ID.</para>
+        /// <para>The ID of the ADB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>YAML definition of the semantic view.</para>
+        /// <para>The YAML definition of the semantic view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>YAML 内容</para>
+        /// <para>YAML content</para>
         /// </summary>
         [NameInMap("Definition")]
         [Validation(Required=false)]
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>Schema name.</para>
+        /// <para>The name of the schema.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
-        /// <para>Semantic view name.</para>
+        /// <para>The name of the semantic view.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

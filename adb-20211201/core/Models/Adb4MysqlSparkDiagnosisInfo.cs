@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The diagnostic cause.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查询执行耗时较长。</para>
+        /// <para>The query execution duration is long.</para>
         /// </summary>
         [NameInMap("DiagnosisCodeLabel")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The diagnostic suggestion.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查查询执行计划并优化 SQL。</para>
+        /// <para>Check the query execution plan and optimize the SQL.</para>
         /// </summary>
         [NameInMap("DiagnosisMsg")]
         [Validation(Required=false)]

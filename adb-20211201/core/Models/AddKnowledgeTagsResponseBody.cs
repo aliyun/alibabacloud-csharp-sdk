@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The number of tags that were successfully modified.</para>
+            /// <para>The number of tags that are successfully modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<AddKnowledgeTagsResponseBodyDataSkipped> Skipped { get; set; }
             public class AddKnowledgeTagsResponseBodyDataSkipped : TeaModel {
                 /// <summary>
-                /// <para>The reason why the tag was skipped.</para>
+                /// <para>The reason why the tag is skipped.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>conflict</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the request was successful. Valid values:</para>
+            /// <para>Indicates whether the request is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The request was successful.</description></item>
-            /// <item><description><b>false</b>: The request failed.</description></item>
+            /// <item><description><b>true</b>: The request is successful.</description></item>
+            /// <item><description><b>false</b>: The request fails.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The number of tags that were successfully added.</para>
+            /// <para>The number of tags that are successfully added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

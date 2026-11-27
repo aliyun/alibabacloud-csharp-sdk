@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The partition column information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>DATE_FORMAT(login_time, \&quot;%Y%m%d\&quot;)</para>
+            /// <para>DATE_FORMAT(login_time, &quot;%Y%m%d&quot;)</para>
             /// </summary>
             [NameInMap("PartitionColumn")]
             [Validation(Required=false)]

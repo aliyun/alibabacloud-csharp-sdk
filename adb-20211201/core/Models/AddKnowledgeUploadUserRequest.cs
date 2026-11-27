@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file.</para>
+        /// <para>The file ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3214123</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The path of the knowledge base document.</para>
+        /// <para>The address of the knowledge base document.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucketName/path/to/file.pdf</para>

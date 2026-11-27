@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The list of database names.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;adb_platform\&quot;, \&quot;adb_ai\&quot;, \&quot;adb_data\&quot;]</para>
+        /// <para>[&quot;adb_platform&quot;, &quot;adb_ai&quot;, &quot;adb_data&quot;]</para>
         /// </summary>
         [NameInMap("SchemaNames")]
         [Validation(Required=false)]

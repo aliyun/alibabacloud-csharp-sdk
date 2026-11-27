@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public TriggerKnowledgeFileParseResponseBodyData Data { get; set; }
         public class TriggerKnowledgeFileParseResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the file submitted for reparsing, which is a decimal string. This parameter is returned only when the request is successful.</para>
+            /// <para>The ID of the file submitted for reparsing. The value is a decimal string. This parameter is returned only when the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The description of the operation result. If the operation fails, this parameter indicates the cause or the security error code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Reparse task submitted</para>
+            /// <para>Submitted for reparsing</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The status before submission. Valid values: PENDING, COMPLETED, FAILED, SKIPPED, and DUPLICATED. This parameter is returned only when the request is successful.</para>
+            /// <para>The status before the submission. Valid values: PENDING, COMPLETED, FAILED, SKIPPED, and DUPLICATED. This parameter is returned only when the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PreviousStatus { get; set; }
 
             /// <summary>
-            /// <para>The status after submission. The value is fixed to PENDING. This parameter is returned only when the request is successful.</para>
+            /// <para>The status after the submission. The value is fixed to PENDING. This parameter is returned only when the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PENDING</para>

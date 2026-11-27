@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The SQL statement.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>select * from device where name = \&quot;105506012112790031\&quot;</para>
+            /// <para>select * from device where name = &quot;105506012112790031&quot;</para>
             /// </summary>
             [NameInMap("SQL")]
             [Validation(Required=false)]

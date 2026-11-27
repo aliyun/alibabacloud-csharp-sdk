@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Update\&quot;\&quot;</para>
+            /// <para>Update&quot;&quot;</para>
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
