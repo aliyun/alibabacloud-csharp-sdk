@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Example: cn-hangzhou.</para>
+        /// <para>The region ID, such as cn-hangzhou.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,13 +31,23 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resources to unmount. You can specify up to 100 resources.</para>
+        /// <para>The list of resources to detach. You can specify up to 100 resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<DetachKVCacheStoreRequestResourceIds> ResourceIds { get; set; }
         public class DetachKVCacheStoreRequestResourceIds : TeaModel {
+            /// <summary>
+            /// <para>The ID of the compute instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-hdska8721321</para>
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
             /// <summary>
             /// <para>KVCacheStore KvcsId</para>
             /// <para>This parameter is required.</para>
@@ -51,7 +61,6 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 
             /// <summary>
             /// <para>The ID of the VSC on the compute side.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-uf6cpove22nrjnpenwkyal</para>

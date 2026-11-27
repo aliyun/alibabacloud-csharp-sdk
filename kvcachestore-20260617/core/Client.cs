@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts multiple KVCache instances to the virtualization side.</para>
+        /// <para>Mounts multiple KVCache instances to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation is asynchronous. A return value of Attaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. When the record status changes to Attached, the mounting is complete.</para>
         /// <list type="bullet">
-        /// <item><description>The KVCacheStore must be in the Available or InUse state to be mounted.</description></item>
+        /// <item><description>The KVCacheStore must be in the Available or InUse state before it can be mounted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts multiple KVCache instances to the virtualization side.</para>
+        /// <para>Mounts multiple KVCache instances to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation is asynchronous. A return value of Attaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. When the record status changes to Attached, the mounting is complete.</para>
         /// <list type="bullet">
-        /// <item><description>The KVCacheStore must be in the Available or InUse state to be mounted.</description></item>
+        /// <item><description>The KVCacheStore must be in the Available or InUse state before it can be mounted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -174,14 +174,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts multiple KVCache instances to the virtualization side.</para>
+        /// <para>Mounts multiple KVCache instances to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation is asynchronous. A return value of Attaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. When the record status changes to Attached, the mounting is complete.</para>
         /// <list type="bullet">
-        /// <item><description>The KVCacheStore must be in the Available or InUse state to be mounted.</description></item>
+        /// <item><description>The KVCacheStore must be in the Available or InUse state before it can be mounted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -200,14 +200,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts multiple KVCache instances to the virtualization side.</para>
+        /// <para>Mounts multiple KVCache instances to the virtualization side in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation is asynchronous. A return value of Attaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. When the record status changes to Attached, the mounting is complete.</para>
         /// <list type="bullet">
-        /// <item><description>The KVCacheStore must be in the Available or InUse state to be mounted.</description></item>
+        /// <item><description>The KVCacheStore must be in the Available or InUse state before it can be mounted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -862,12 +862,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts multiple KVCache instances from the virtualization stack.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query mount records. If no record is found for the specified KvcsId and VscId, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. If no record is found for the specified KvcsId and VscId, the detach operation is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -917,12 +917,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts multiple KVCache instances from the virtualization stack.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query mount records. If no record is found for the specified KvcsId and VscId, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. If no record is found for the specified KvcsId and VscId, the detach operation is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -972,12 +972,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts multiple KVCache instances from the virtualization stack.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query mount records. If no record is found for the specified KvcsId and VscId, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. If no record is found for the specified KvcsId and VscId, the detach operation is complete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -995,12 +995,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unmounts multiple KVCache instances from the virtualization stack.</para>
+        /// <para>Detaches multiple KVCache instances from the virtualization side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query mount records. If no record is found for the specified KvcsId and VscId, the unmount operation is complete.</para>
+        /// <para>This operation is asynchronous. A return value of Detaching indicates that the request is accepted. Call ListKVCacheStoreAttachInfo to query the mount records. If no record is found for the specified KvcsId and VscId, the detach operation is complete.</para>
         /// </description>
         /// 
         /// <param name="request">

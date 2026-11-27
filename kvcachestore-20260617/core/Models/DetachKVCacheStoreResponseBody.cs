@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class DetachKVCacheStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of unmount results.</para>
+        /// <para>The list of detach results.</para>
         /// </summary>
         [NameInMap("DetachResults")]
         [Validation(Required=false)]
         public List<DetachKVCacheStoreResponseBodyDetachResults> DetachResults { get; set; }
         public class DetachKVCacheStoreResponseBodyDetachResults : TeaModel {
             /// <summary>
-            /// <para>The error code returned when the operation fails. This field is null when the operation succeeds.</para>
+            /// <para>The error code returned when the operation fails. This parameter is null when the operation succeeds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KVCacheInstance.NotAttached</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the operation fails. This field is null when the operation succeeds.</para>
+            /// <para>The error message returned when the operation fails. This parameter is null when the operation succeeds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The KVCacheInstance is not in ATTACHED status.</para>
@@ -35,6 +35,16 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the compute instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i-hdska8721321</para>
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
 
             /// <summary>
             /// <para>KVCacheStore KvcsId</para>
@@ -47,7 +57,12 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The operation result. Valid values: DETACHING (the request is accepted and the asynchronous unmount operation is in progress; this value is also returned for idempotent calls), Success (synchronous verification passed and asynchronous operation completed), and Failed (the operation failed).</para>
+            /// <para>The operation result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DETACHING: The request is accepted and the asynchronous detach operation is in progress. This value is also returned for idempotent calls.</description></item>
+            /// <item><description>Success: The synchronous verification is passed and the asynchronous operation is complete.</description></item>
+            /// <item><description>Failed: The operation failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DETACHING</para>
@@ -69,7 +84,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The request ID. This ID is returned regardless of whether the API call succeeds.</para>
+        /// <para>The request ID. This ID is returned regardless of whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</para>
