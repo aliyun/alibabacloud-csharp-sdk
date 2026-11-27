@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The query expression, which is PromQL for PROMETHEUS_MULTI_QUERY and SPL for SLS_MULTI_QUERY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("expr")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The metric name for UMODEL_METRICSET_MULTI_QUERY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称</para>
+        /// <para>Sample name</para>
         /// </summary>
         [NameInMap("metric")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The metric set name for UMODEL_METRICSET_MULTI_QUERY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称</para>
+        /// <para>Sample name</para>
         /// </summary>
         [NameInMap("metricSet")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The query name for PROMETHEUS_MULTI_QUERY or UMODEL_METRICSET_MULTI_QUERY, such as $A or $B, which is referenced by condition triggers.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称</para>
+        /// <para>Sample name</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

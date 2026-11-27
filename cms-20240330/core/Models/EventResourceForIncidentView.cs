@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The tags.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;value\&quot;:\&quot;测试\&quot;,\&quot;key\&quot;:\&quot;环境\&quot;}]</para>
+        /// <para>[{&quot;value&quot;:&quot;测试&quot;,&quot;key&quot;:&quot;环境&quot;}]</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

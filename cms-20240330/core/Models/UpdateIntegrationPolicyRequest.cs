@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;Id\&quot;: \&quot;kgqie6hm\&quot;, \&quot;Name\&quot;: \&quot;Sheet1\&quot;}]</para>
+            /// <para>[{&quot;Id&quot;: &quot;kgqie6hm&quot;, &quot;Name&quot;: &quot;Sheet1&quot;}]</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

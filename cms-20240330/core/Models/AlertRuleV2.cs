@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The business source. This parameter is read-only. Examples include managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("bizSource")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The content template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>告警触发: ${metricName} 当前值 ${currentValue} 超过阈值 ${threshold}</para>
+        /// <para>Alert triggered: the current value ${currentValue} of ${metricName} exceeds the threshold ${threshold}</para>
         /// </summary>
         [NameInMap("contentTemplate")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CPU水位告警95%</para>
+        /// <para>CPU usage alert: 95%</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The partition key. This parameter is read-only and maintained by the system for rule routing and sharding.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("partitionKey")]
         [Validation(Required=false)]

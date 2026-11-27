@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The query expression or Search Processing Language (SPL) statement. Recommended when the type is PROMETHEUS_SINGLE_QUERY. Optional when the type is UMODEL_METRICSET_QUERY for custom SPL. Required when the type is UMODEL_LOGSET_QUERY, where an SPL query statement must be provided and validated by the business layer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("expr")]
         [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The raw V1 query JSON string returned as a fallback when the type is UNKNOWN_QUERY and parsing fails in the read path. This string includes the field values that triggered the failure, such as filter.operator=ABC. The frontend displays this field in read-only mode when it is not empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("legacyRaw")]
         [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name of the logset when the type is UMODEL_LOGSET_QUERY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称</para>
+        /// <para>Sample name</para>
         /// </summary>
         [NameInMap("logSet")]
         [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The measure group key. This parameter is optional when the type is APM_MULTI_QUERY and corresponds to alertMetricInput.groupKey in V1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("measureGroupKey")]
         [Validation(Required=false)]
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The CloudMonitor namespace, which is the cloud service name, when the type is CLOUD_MONITORING_QUERY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称</para>
+        /// <para>Sample name</para>
         /// </summary>
         [NameInMap("namespace")]
         [Validation(Required=false)]

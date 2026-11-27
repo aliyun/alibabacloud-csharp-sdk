@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>集成名</para>
+        /// <para>Integration name</para>
         /// </summary>
         [NameInMap("alertEventIntegrationPolicyName")]
         [Validation(Required=false)]

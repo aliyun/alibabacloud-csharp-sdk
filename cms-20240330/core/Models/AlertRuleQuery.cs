@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>Applicable query type: PROMQL_QUERY. The query expression in PromQL.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sum(sum(max_over_time(kube_pod_status_phase{phase=~\&quot;Pending\&quot;,job=\&quot;_kube-state-metrics\&quot;}[5m])) by (pod)) &gt; 1000</para>
+        /// <para>sum(sum(max_over_time(kube_pod_status_phase{phase=~&quot;Pending&quot;,job=&quot;_kube-state-metrics&quot;}[5m])) by (pod)) &gt; 1000</para>
         /// </summary>
         [NameInMap("expr")]
         [Validation(Required=false)]
@@ -418,7 +418,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>sum by (rpc,acs_arms_service_id,pid,rpcType) (sum_over_time_lorc(arms_app_requests_count_ign_destid_endpoint_parent_ppid_prpc{callKind=~\&quot;http|rpc|custom_entry|server|consumer\&quot;,pid=\&quot;gaddp9ap8q@cb005ffdf44b8ac\&quot;,source=\&quot;apm\&quot;}[1m]))</para>
+            /// <para>sum by (rpc,acs_arms_service_id,pid,rpcType) (sum_over_time_lorc(arms_app_requests_count_ign_destid_endpoint_parent_ppid_prpc{callKind=~&quot;http|rpc|custom_entry|server|consumer&quot;,pid=&quot;gaddp9ap8q@cb005ffdf44b8ac&quot;,source=&quot;apm&quot;}[1m]))</para>
             /// </summary>
             [NameInMap("expr")]
             [Validation(Required=false)]

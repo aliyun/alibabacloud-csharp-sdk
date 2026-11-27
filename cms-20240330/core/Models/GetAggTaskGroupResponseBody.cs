@@ -26,8 +26,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// interval: &quot;60s&quot;
             /// rules:<list type="bullet">
             /// <item><description>record: &quot;node_namespace_pod:kube_pod_info:&quot;
-            /// expr: &quot;max(label_replace(kube_pod_info{job=\&quot;kubernetes-pods-kube-state-metrics\&quot;\
-            ///   }, \&quot;pod\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (node, namespace, pod, cluster)&quot;</description></item>
+            /// expr: &quot;max(label_replace(kube_pod_info{job=&quot;kubernetes-pods-kube-state-metrics&quot;<br>  }, &quot;pod&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (node, namespace, pod, cluster)&quot;</description></item>
             /// </list>
             /// </description></item>
             /// </list>

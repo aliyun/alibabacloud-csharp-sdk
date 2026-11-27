@@ -10,91 +10,130 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ObserveGroupInstance : TeaModel {
         /// <summary>
-        /// <para>实体分类（由 entityType 适配）。</para>
+        /// <para>The entity category adapted from entityType.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs</para>
         /// </summary>
         [NameInMap("category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>监控维度键值对。</para>
+        /// <para>The key-value pairs of the monitoring dimensions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;userId&quot;:&quot;1234567890123456&quot;,&quot;instanceId&quot;:&quot;i-bp1gj8wyq4fxk28k6iy2&quot;}</para>
         /// </summary>
         [NameInMap("dimension")]
         [Validation(Required=false)]
         public Dictionary<string, string> Dimension { get; set; }
 
         /// <summary>
-        /// <para>实体域（如 acs）。</para>
+        /// <para>The entity domain, such as acs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs</para>
         /// </summary>
         [NameInMap("entityDomain")]
         [Validation(Required=false)]
         public string EntityDomain { get; set; }
 
         /// <summary>
-        /// <para>UModel 实体 ID，与实体域和类型共同标识成员。</para>
+        /// <para>The UModel entity ID, which corresponds to the <b>entity_id</b> field of the entity and identifies a member of the observation group together with entityDomain and entityType.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp1gj8wyq4fxk28k6iy2</para>
         /// </summary>
         [NameInMap("entityId")]
         [Validation(Required=false)]
         public string EntityId { get; set; }
 
         /// <summary>
-        /// <para>实体角色，main 为主实体、related 为关联子实体。</para>
+        /// <para>The role of the entity in the observation group. main indicates the primary entity directly matched by the management rule. related indicates the child entity managed through associations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>main</para>
         /// </summary>
         [NameInMap("entityRole")]
         [Validation(Required=false)]
         public string EntityRole { get; set; }
 
         /// <summary>
-        /// <para>实体类型（如 acs.ecs.instance）。</para>
+        /// <para>The entity type, such as acs.ecs.instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs.ecs.instance</para>
         /// </summary>
         [NameInMap("entityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>所属观测分组 ID。</para>
+        /// <para>The ID of the observation group to which the entity belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>og-845e0a26455f437c</para>
         /// </summary>
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>实例 ID。</para>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-bp1gj8wyq4fxk28k6iy2</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>实例名称。</para>
+        /// <para>The instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs-prod-01</para>
         /// </summary>
         [NameInMap("instanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>实例所属地域 ID。</para>
+        /// <para>The ID of the region to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>实例所属资源组 ID。</para>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfm3gn5i6bigbi</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>实例标签键值对。</para>
+        /// <para>The key-value pairs of the instance tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;env&quot;:&quot;prod&quot;}</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>实例归属的用户 UID。</para>
+        /// <para>The UID of the user that owns the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234567890123456</para>
         /// </summary>
         [NameInMap("userId")]
         [Validation(Required=false)]

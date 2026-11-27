@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The contact.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;mobile_phone_num\&quot;:\&quot;153xxxx8040\&quot;,\&quot;mobile_country_code\&quot;:\&quot;86\&quot;,\&quot;email\&quot;:\&quot;<a href="mailto:flightxxg@dida.com">flightxxg@dida.com</a>\&quot;}</para>
+            /// <para>{&quot;mobile_phone_num&quot;:&quot;153xxxx8040&quot;,&quot;mobile_country_code&quot;:&quot;86&quot;,&quot;email&quot;:&quot;<a href="mailto:flightxxg@dida.com">flightxxg@dida.com</a>&quot;}</para>
             /// </summary>
             [NameInMap("contact")]
             [Validation(Required=false)]

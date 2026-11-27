@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The precondition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>连续3次</para>
+        /// <para>3 consecutive times</para>
         /// </summary>
         [NameInMap("preCondition")]
         [Validation(Required=false)]

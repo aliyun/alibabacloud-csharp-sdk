@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 /// <para>The phase status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;phase\&quot;: \&quot;Created\&quot;, \&quot;executionDetails\&quot;: [], \&quot;invocations\&quot;: [], \&quot;latestExecError\&quot;: {\&quot;message\&quot;: \&quot;\&quot;, \&quot;code\&quot;: \&quot;\&quot;, \&quot;requestId\&quot;: \&quot;\&quot;, \&quot;extraInfo\&quot;: \&quot;\&quot;, \&quot;title\&quot;: \&quot;\&quot;}}</para>
+                /// <para>{&quot;phase&quot;: &quot;Created&quot;, &quot;executionDetails&quot;: [], &quot;invocations&quot;: [], &quot;latestExecError&quot;: {&quot;message&quot;: &quot;&quot;, &quot;code&quot;: &quot;&quot;, &quot;requestId&quot;: &quot;&quot;, &quot;extraInfo&quot;: &quot;&quot;, &quot;title&quot;: &quot;&quot;}}</para>
                 /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]

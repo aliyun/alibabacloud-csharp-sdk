@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The list of notification contacts in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.contacts.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;张三&quot;,&quot;李四&quot;]</para>
+        /// <para>[&quot;Zhang San&quot;,&quot;Li Si&quot;]</para>
         /// </summary>
         [NameInMap("containsContacts")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The list of notification contact groups in the rule contains any value in the array. This uses OR logic and corresponds to V1 notification.groups.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;运维组&quot;,&quot;SRE团队&quot;]</para>
+        /// <para>[&quot;O&amp;M team&quot;,&quot;SRE team&quot;]</para>
         /// </summary>
         [NameInMap("containsGroups")]
         [Validation(Required=false)]

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>检查工具调用中的命令是否安全。</para>
+        /// <para>Check whether the commands in tool calls are safe.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The execution instruction. For the prompt type, it is a prompt. For the bash type, it is a Bash script. For the python3 type, it is a Python 3 script. For the hint type, it is contextual text directly appended. Non-empty UTF-8 text must be provided for all four types.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>检查当前工具调用是否安全。</para>
+            /// <para>Check whether the current tool call is safe.</para>
             /// </summary>
             [NameInMap("instruction")]
             [Validation(Required=false)]

@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The old memory.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>I really don\&quot;t like Python at all.</para>
+            /// <para>I really don&quot;t like Python at all.</para>
             /// </summary>
             [NameInMap("oldMemory")]
             [Validation(Required=false)]

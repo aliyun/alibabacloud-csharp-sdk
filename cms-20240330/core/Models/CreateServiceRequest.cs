@@ -120,6 +120,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. Valid values: true: performs a dry run. The system checks the request but does not perform actual operations. false: sends a normal request. Default value: false.</para>
+        /// </summary>
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
     }
 
 }

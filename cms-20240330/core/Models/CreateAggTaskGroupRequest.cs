@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// interval: &quot;60s&quot;
         /// rules:<list type="bullet">
         /// <item><description>record: &quot;node_namespace_pod:kube_pod_info:&quot;
-        /// expr: &quot;max(label_replace(kube_pod_info{job=\&quot;kubernetes-pods-kube-state-metrics\&quot;\
-        ///   }, \&quot;pod\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (node, namespace, pod, cluster)&quot;</description></item>
+        /// expr: &quot;max(label_replace(kube_pod_info{job=&quot;kubernetes-pods-kube-state-metrics&quot;<br>  }, &quot;pod&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (node, namespace, pod, cluster)&quot;</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -115,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The precheck configuration. By default, this parameter is not configured. The input string must be valid JSON.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=\&quot;_arms/kubelet/cadvisor\&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</para>
+        /// <para>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=&quot;_arms/kubelet/cadvisor&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</para>
         /// </summary>
         [NameInMap("precheckString")]
         [Validation(Required=false)]

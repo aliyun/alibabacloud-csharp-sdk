@@ -1,3 +1,6 @@
+2026-11-27 Version: 10.11.0
+- Generated csharp 2024-03-30 for Cms.
+
 2026-11-21 Version: 10.10.1
 - Update API CreateEntityStore: add request parameters dryRun.
 - Update API CreateUmodel: add request parameters dryRun.

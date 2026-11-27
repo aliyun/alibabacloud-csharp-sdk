@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The SPL query statement.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</para>
+            /// <para>.entity with(type=&quot;acs.ecs.instance&quot;) | where region_id in (&quot;cn-beijing&quot;)</para>
             /// </summary>
             [NameInMap("spl")]
             [Validation(Required=false)]

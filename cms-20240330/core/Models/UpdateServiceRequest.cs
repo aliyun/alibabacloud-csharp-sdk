@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The extended properties.</para>
+        /// <para>The extended attributes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;language&quot;:&quot;java&quot;}</para>
@@ -48,6 +48,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("serviceStatus")]
         [Validation(Required=false)]
         public string ServiceStatus { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values: true: sends a check request and does not perform the actual operation. false: sends a normal request. Default value: false.</para>
+        /// </summary>
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
     }
 

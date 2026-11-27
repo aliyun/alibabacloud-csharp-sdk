@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>.entity with(domain=\&quot;acs\&quot;, type=\&quot;acs.k8s.node\&quot;) | limit 0, 10</para>
+        /// <para>.entity with(domain=&quot;acs&quot;, type=&quot;acs.k8s.node&quot;) | limit 0, 10</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
