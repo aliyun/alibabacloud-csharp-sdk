@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public List<DescribeDBInstancesResponseBodyItems> Items { get; set; }
         public class DescribeDBInstancesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The edition of the instance. Default value: basic.</para>
+            /// <para>The instance edition. Default value: basic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+            /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
             /// </description></item>
-            /// <item><description><para><b>Prepaid</b>: subscription</para>
+            /// <item><description><para><b>Prepaid</b>: subscription.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The deployment mode of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>multi_az: zone-redundant</description></item>
-            /// <item><description>single_az: locally redundant</description></item>
+            /// <item><description>multi_az: zone-redundant.</description></item>
+            /// <item><description>single_az: locally redundant.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>New instance test</para>
+            /// <para>Create instance test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the cluster. The time is displayed in ISO 8601 format and includes the time zone.</para>
+            /// <para>The expiration time of the cluster. The time follows the ISO 8601 standard and includes time zone information.</para>
             /// <remarks>
             /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). For clusters whose billing method is <b>Postpaid</b> (pay-as-you-go), an empty value is returned.</para>
             /// </remarks>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The FE cluster list.</para>
+            /// <para>The list of FE clusters.</para>
             /// </summary>
             [NameInMap("FEClusterList")]
             [Validation(Required=false)]
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The usage type of the instance.</para>
+            /// <para>The instance usage type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Instance</para>
@@ -221,9 +221,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>Indicates whether the instance is deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: deleted</para>
+            /// <item><description><para><b>true</b>: The instance is deleted.</para>
             /// </description></item>
-            /// <item><description><para><b>fasle</b>: not deleted</para>
+            /// <item><description><para><b>fasle</b>: The instance is not deleted.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string MaintainEndTimeStr { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter. Not returned. Therefore, the time format does not apply.</para>
+            /// <para>A reserved parameter. It is not returned at the moment, so the time format does not apply.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter. Not returned</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string MaintainStartTimeStr { get; set; }
 
             /// <summary>
-            /// <para>Reserved parameter. Not returned. Therefore, the time format does not apply.</para>
+            /// <para>A reserved parameter. It is not returned at the moment, so the time format does not apply.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reserved parameter. Not returned</para>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ResourceMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</para>
+            /// <para>The maximum number of RDS capacity units (RCUs) for automatic scaling of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</para>
+            /// <para>The minimum number of RDS capacity units (RCUs) for automatic scaling of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -401,10 +401,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ScaleMin { get; set; }
 
             /// <summary>
-            /// <para>The redundant field.</para>
+            /// <para>A redundant field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Empty</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("ScaleReplica")]
             [Validation(Required=false)]
@@ -423,12 +423,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CREATING</b>: Creating.</description></item>
-            /// <item><description><b>ACTIVATION</b>: Running.</description></item>
-            /// <item><description><b>RESOURCE_CHANGING</b>: Changing specifications.</description></item>
-            /// <item><description><b>ORDER_PREPARING</b>: Confirming order.</description></item>
-            /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: Changing resources (the instance is locked for write operations).</description></item>
-            /// <item><description><b>DELETING</b>: Deleting.</description></item>
+            /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
+            /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
+            /// <item><description><b>RESOURCE_CHANGING</b>: The instance specifications are being changed.</description></item>
+            /// <item><description><b>ORDER_PREPARING</b>: The order is being confirmed.</description></item>
+            /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: The instance resources are being changed and the instance is locked for writes.</description></item>
+            /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage space size.</para>
+            /// <para>The storage capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -555,7 +555,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The connection endpoint.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Not returned</para>
@@ -569,7 +569,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b>: Default value.</description></item>
+        /// <item><description><b>30</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>

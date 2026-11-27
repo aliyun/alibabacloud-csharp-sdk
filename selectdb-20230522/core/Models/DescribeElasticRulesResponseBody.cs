@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public List<DescribeElasticRulesResponseBodyDataRules> Rules { get; set; }
             public class DescribeElasticRulesResponseBodyDataRules : TeaModel {
                 /// <summary>
-                /// <para>The target compute resource rule of the cluster.</para>
+                /// <para>The target compute resource rule for the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>selectdb.2xlarge</para>

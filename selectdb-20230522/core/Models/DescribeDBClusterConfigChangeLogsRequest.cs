@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time to query change records. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query for change records. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time to query change records. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query for change records. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

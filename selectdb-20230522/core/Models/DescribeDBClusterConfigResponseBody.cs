@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string DefaultValue { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the parameter takes effect dynamically without a restart.</para>
+                /// <para>Indicates whether the parameter takes effect dynamically without a restart.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? IsDynamic { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether users are allowed to modify the parameter.</para>
+                /// <para>Indicates whether the parameter can be modified by users.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of region data.</para>
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("RegionModelList")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public List<DescribeRegionsResponseBodyRegionModelListZones> Zones { get; set; }
             public class DescribeRegionsResponseBodyRegionModelListZones : TeaModel {
                 /// <summary>
-                /// <para>The zone description.</para>
+                /// <para>The description of the zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Beijing Zone H</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The zone name.</para>
+                /// <para>The name of the zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Beijing H</para>

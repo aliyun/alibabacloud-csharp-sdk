@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>New instance test</para>
+        /// <para>Create instance test</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -32,12 +32,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CREATING</b>: Creating.</description></item>
-        /// <item><description><b>ACTIVATION</b>: Running.</description></item>
-        /// <item><description><b>RESOURCE_CHANGING</b>: Changing specifications.</description></item>
-        /// <item><description><b>ORDER_PREPARING</b>: Confirming order.</description></item>
-        /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: Changing resources (the instance is locked for write operations).</description></item>
-        /// <item><description><b>DELETING</b>: Deleting.</description></item>
+        /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
+        /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
+        /// <item><description><b>RESOURCE_CHANGING</b>: The instance specifications are being changed.</description></item>
+        /// <item><description><b>ORDER_PREPARING</b>: The order is being confirmed.</description></item>
+        /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: The instance resources are being changed and the instance is locked for writes.</description></item>
+        /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b>: Default value.</description></item>
+        /// <item><description><b>30</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>

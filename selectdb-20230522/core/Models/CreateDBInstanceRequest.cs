@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>Specifies whether to add the VPC CIDR block to the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: yes</description></item>
-        /// <item><description>0: no</description></item>
+        /// <item><description>1: yes.</description></item>
+        /// <item><description>0: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
         /// </description></item>
-        /// <item><description><para><b>Prepaid</b>: subscription</para>
+        /// <item><description><para><b>Prepaid</b>: subscription.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>New instance test</para>
+        /// <para>Test new instance</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The node specifications of a single node in the frontend (FE) cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: selectdb_fe.xlarge16.</para>
+        /// <para>The single node specifications of the FE cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: selectdb_fe.xlarge16.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb_fe.xlarge16</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string FEClassCode { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes in the FE cluster. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: 3. Valid values: 1 to 11. The value must be an odd number.</para>
+        /// <para>The number of FE cluster nodes. This parameter takes effect only when you create a pay-as-you-go or subscription instance. Default value: 3. Valid values: 1 to 11, and the value must be an odd number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -214,10 +214,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>Specifies the billing cycle of the subscription cluster. Valid values:</para>
+        /// <para>The subscription period unit of the subscription cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: yearly.</description></item>
-        /// <item><description><b>Month</b>: monthly.<remarks>
+        /// <item><description><b>Year</b>: yearly subscription.</description></item>
+        /// <item><description><b>Month</b>: monthly subscription.<remarks>
         /// <para>This parameter takes effect and is required only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// </description></item>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The tag list information of the instance.</para>
+        /// <para>The instance label list information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable TDE on the instance.</para>
+        /// <para>Specifies whether to enable TDE for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string TdeEnabled { get; set; }
 
         /// <summary>
-        /// <para>The mode for enabling Transparent Data Encryption (TDE) on the instance.</para>
+        /// <para>The specific mode for enabling TDE on the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MANAGED</para>
@@ -335,10 +335,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string TdeMode { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. The unit is specified by the Period parameter. Year indicates years, and Month indicates months. Valid values:</para>
+        /// <para>The subscription duration of the subscription instance. The unit is specified by the Period parameter. Year indicates years, and Month indicates months. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If Period is set to Year, valid values are 1, 2, 3, 4, and 5.</description></item>
-        /// <item><description>If Period is set to Month, valid values are 1 to 12.<remarks>
+        /// <item><description>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>If Period is set to Month, valid values of UsedTime are 1 to 12.<remarks>
         /// <para>This parameter takes effect and is required only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// </description></item>

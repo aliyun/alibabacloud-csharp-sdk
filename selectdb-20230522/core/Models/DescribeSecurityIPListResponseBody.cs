@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The group tag.</para>
+            /// <para>The tag of the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>

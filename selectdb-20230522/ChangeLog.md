@@ -1,3 +1,7 @@
+2026-11-27 Version: 5.2.0
+- Support API ModifyFECluster.
+
+
 2026-10-28 Version: 5.1.4
 - Update API DescribeDBInstances: add response parameters Body.Items.$.TdeEnabled.
 

@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The coupon ID.</para>
+        /// <para>The coupon code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123412345</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The coupon ID.</para>
+            /// <para>The coupon codes.</para>
             /// </summary>
             [NameInMap("OptionalPromotions")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 /// <para>The coupon description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>General coupon with a deduction of 100</para>
+                /// <para>General coupon deducts 100</para>
                 /// </summary>
                 [NameInMap("PromotionDesc")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string PromotionName { get; set; }
 
                 /// <summary>
-                /// <para>The coupon ID.</para>
+                /// <para>The coupon code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>732211480132</para>
