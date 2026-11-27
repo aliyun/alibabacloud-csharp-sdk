@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class CancelShiftLoadBalancerZonesRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client. Make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run without adding the zone back. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx HTTP</c> status code is returned and the operation is performed.</para>
+        /// <item><description><para><b>false</b> (default): performs a dry run and sends the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ALB instance.</para>
+        /// <para>The application load balancing instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The mappings between zones and vSwitches.</para>
+        /// <para>The zone and vSwitch mappings.</para>
         /// <remarks>
-        /// <para>You can add only one zone in each call.</para>
+        /// <para>You can add back only one zone in each call.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<CancelShiftLoadBalancerZonesRequestZoneMappings> ZoneMappings { get; set; }
         public class CancelShiftLoadBalancerZonesRequestZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.</para>
+            /// <para>The ID of the vSwitch that corresponds to the zone. By default, each zone uses one vSwitch and one subnet.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the most recent zone list.</para>
+            /// <para>The zone ID. You can obtain the zone ID by calling the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

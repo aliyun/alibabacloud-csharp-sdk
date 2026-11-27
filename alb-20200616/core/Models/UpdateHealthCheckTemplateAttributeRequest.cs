@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>The port used for health checks. Valid values: <b>0</b> to <b>65535</b>.
-        /// The default value is <b>0</b>, which means the health check uses the backend server\&quot;s port.</para>
+        /// The default value is <b>0</b>, which means the health check uses the backend server&quot;s port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>The URL used for health checks.</para>
-        /// <para>The URL must be 1 to 80 characters long. It can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended characters: <c>_;~!()*[]@$^:\\&quot;,+</c>.</para>
+        /// <para>The URL must be 1 to 80 characters long. It can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended characters: <c>_;~!()*[]@$^:\&quot;,+</c>.</para>
         /// <para>The URL must start with a forward slash (/).</para>
         /// <remarks>
         /// <para>This parameter takes effect only when the <b>HealthCheckProtocol</b> parameter is set to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? HealthCheckTimeout { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive successful health checks required to change a backend server\&quot;s status from <b>unhealthy</b> to <b>healthy</b>.</para>
+        /// <para>The number of consecutive successful health checks required to change a backend server&quot;s status from <b>unhealthy</b> to <b>healthy</b>.</para>
         /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
         /// <para>Default value: <b>3</b>.</para>
         /// 
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? HealthyThreshold { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive failed health checks required to change a backend server\&quot;s status from <b>healthy</b> to <b>unhealthy</b>.</para>
+        /// <para>The number of consecutive failed health checks required to change a backend server&quot;s status from <b>healthy</b> to <b>unhealthy</b>.</para>
         /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
         /// <para>Default value: <b>3</b>.</para>
         /// 

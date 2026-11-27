@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class UpdateRulesAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Make sure that the client token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The ClientToken parameter can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run only. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned. In this case, the properties of the forwarding rules are not updated.</para>
+        /// <item><description><para><b>true</b>: performs a dry run only and does not batch update the forwarding rule attributes. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, an error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the system returns an <c>HTTP 2xx</c> status code and starts the update.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, an <c>HTTP 2xx</c> status code is returned and the operation is performed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The list of forwarding rule actions.</para>
+            /// <para>The list of actions for the forwarding rule.</para>
             /// </summary>
             [NameInMap("RuleActions")]
             [Validation(Required=false)]
             public List<UpdateRulesAttributeRequestRulesRuleActions> RuleActions { get; set; }
             public class UpdateRulesAttributeRequestRulesRuleActions : TeaModel {
                 /// <summary>
-                /// <para>The cross-origin resource sharing (CORS) configuration.</para>
+                /// <para>The CORS configuration.</para>
                 /// </summary>
                 [NameInMap("CorsConfig")]
                 [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string AllowCredentials { get; set; }
 
                     /// <summary>
-                    /// <para>The list of headers that are allowed for cross-origin requests.</para>
+                    /// <para>The list of allowed headers for cross-origin requests.</para>
                     /// </summary>
                     [NameInMap("AllowHeaders")]
                     [Validation(Required=false)]
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<string> AllowOrigin { get; set; }
 
                     /// <summary>
-                    /// <para>The list of headers that can be exposed to the client.</para>
+                    /// <para>The list of exposed headers.</para>
                     /// </summary>
                     [NameInMap("ExposeHeaders")]
                     [Validation(Required=false)]
                     public List<string> ExposeHeaders { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum cache duration of preflight requests in the browser.</para>
+                    /// <para>The maximum cache time for preflight requests in the browser.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>60</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the action to return a fixed response.</para>
+                /// <para>The configuration of the fixed response action.</para>
                 /// </summary>
                 [NameInMap("FixedResponseConfig")]
                 [Validation(Required=false)]
@@ -161,21 +161,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the action to forward requests to server groups.</para>
+                /// <para>The configuration of the forward group action.</para>
                 /// </summary>
                 [NameInMap("ForwardGroupConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfig ForwardGroupConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfig : TeaModel {
                     /// <summary>
-                    /// <para>Session persistence between server groups.</para>
+                    /// <para>The session persistence across server groups.</para>
                     /// </summary>
                     [NameInMap("ServerGroupStickySession")]
                     [Validation(Required=false)]
                     public UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession ServerGroupStickySession { get; set; }
                     public class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupStickySession : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether to enable session persistence.</para>
+                        /// <para>Specifies whether session persistence is enabled.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public bool? Enabled { get; set; }
 
                         /// <summary>
-                        /// <para>The timeout period.</para>
+                        /// <para>The timeout period for session persistence across server groups. Unit: seconds. Valid values: 1 to 86400.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -197,14 +197,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     }
 
                     /// <summary>
-                    /// <para>The list of destination server groups.</para>
+                    /// <para>The list of destination server groups to which requests are forwarded.</para>
                     /// </summary>
                     [NameInMap("ServerGroupTuples")]
                     [Validation(Required=false)]
                     public List<UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples> ServerGroupTuples { get; set; }
                     public class UpdateRulesAttributeRequestRulesRuleActionsForwardGroupConfigServerGroupTuples : TeaModel {
                         /// <summary>
-                        /// <para>The server group ID.</para>
+                        /// <para>The ID of the server group.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>sgp-3kbj35ay7cvi******</para>
@@ -228,14 +228,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the action to insert a header.</para>
+                /// <para>The configuration of the insert header action.</para>
                 /// </summary>
                 [NameInMap("InsertHeaderConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleActionsInsertHeaderConfig InsertHeaderConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsInsertHeaderConfig : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to overwrite the value of a request header.</para>
+                    /// <para>Specifies whether to overwrite the existing value in the request.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>False</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The content of the HTTP header.</para>
+                    /// <para>The value of the HTTP header.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>value</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Value { get; set; }
 
                     /// <summary>
-                    /// <para>The value type.</para>
+                    /// <para>The type of the value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SystemDefined</para>
@@ -288,14 +288,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? Order { get; set; }
 
                 /// <summary>
-                /// <para>The configuration of the redirection action.</para>
+                /// <para>The configuration of the redirect action.</para>
                 /// </summary>
                 [NameInMap("RedirectConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleActionsRedirectConfig RedirectConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsRedirectConfig : TeaModel {
                     /// <summary>
-                    /// <para>The destination host to which requests are redirected.</para>
+                    /// <para>The host to which requests are redirected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test.alb.com</para>
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Host { get; set; }
 
                     /// <summary>
-                    /// <para>The redirection method.</para>
+                    /// <para>The redirect method.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>301</para>
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string HttpCode { get; set; }
 
                     /// <summary>
-                    /// <para>The destination path to which requests are redirected.</para>
+                    /// <para>The path to which requests are redirected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The destination port to which requests are redirected.</para>
+                    /// <para>The port to which requests are redirected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>443</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Port { get; set; }
 
                     /// <summary>
-                    /// <para>The destination protocol to which requests are redirected.</para>
+                    /// <para>The protocol to which requests are redirected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTTPS</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Protocol { get; set; }
 
                     /// <summary>
-                    /// <para>The destination query string to which requests are redirected.</para>
+                    /// <para>The query string to which requests are redirected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>${query}</para>
@@ -357,14 +357,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration for removing a specific HTTP header.</para>
+                /// <para>Removes HTTP headers.</para>
                 /// </summary>
                 [NameInMap("RemoveHeaderConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig RemoveHeaderConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsRemoveHeaderConfig : TeaModel {
                     /// <summary>
-                    /// <para>The key of the HTTP header.</para>
+                    /// <para>The HTTP header key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key</para>
@@ -403,7 +403,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The query.</para>
+                    /// <para>The query string.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>${query}</para>
@@ -415,14 +415,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The throttling configuration.</para>
+                /// <para>The traffic throttling configuration.</para>
                 /// </summary>
                 [NameInMap("TrafficLimitConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleActionsTrafficLimitConfig TrafficLimitConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsTrafficLimitConfig : TeaModel {
                     /// <summary>
-                    /// <para>The number of QPS for a single IP address.</para>
+                    /// <para>The number of requests per second per IP address.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public int? PerIpQps { get; set; }
 
                     /// <summary>
-                    /// <para>The number of queries per second (QPS).</para>
+                    /// <para>The number of requests per second.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfig TrafficMirrorConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleActionsTrafficMirrorConfig : TeaModel {
                     /// <summary>
-                    /// <para>The server groups to which traffic is mirrored.</para>
+                    /// <para>The configuration for mirroring traffic to a server group.</para>
                     /// </summary>
                     [NameInMap("MirrorGroupConfig")]
                     [Validation(Required=false)]
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     }
 
                     /// <summary>
-                    /// <para>The type of the mirror destination.</para>
+                    /// <para>The type of the mirror target.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ForwardGroupMirror</para>
@@ -511,7 +511,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<UpdateRulesAttributeRequestRulesRuleConditions> RuleConditions { get; set; }
             public class UpdateRulesAttributeRequestRulesRuleConditions : TeaModel {
                 /// <summary>
-                /// <para>The configuration of the cookie-based condition.</para>
+                /// <para>The cookie condition configuration.</para>
                 /// </summary>
                 [NameInMap("CookieConfig")]
                 [Validation(Required=false)]
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public List<UpdateRulesAttributeRequestRulesRuleConditionsCookieConfigValues> Values { get; set; }
                     public class UpdateRulesAttributeRequestRulesRuleConditionsCookieConfigValues : TeaModel {
                         /// <summary>
-                        /// <para>The key of the cookie.</para>
+                        /// <para>The cookie condition key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>key</para>
@@ -535,7 +535,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the cookie.</para>
+                        /// <para>The cookie condition value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>value</para>
@@ -549,14 +549,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the header-based condition.</para>
+                /// <para>The HTTP header condition configuration.</para>
                 /// </summary>
                 [NameInMap("HeaderConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleConditionsHeaderConfig HeaderConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleConditionsHeaderConfig : TeaModel {
                     /// <summary>
-                    /// <para>The key of the HTTP header.</para>
+                    /// <para>The HTTP header key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key</para>
@@ -575,7 +575,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the host-based condition.</para>
+                /// <para>The hostname condition configuration.</para>
                 /// </summary>
                 [NameInMap("HostConfig")]
                 [Validation(Required=false)]
@@ -591,7 +591,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the method-based condition.</para>
+                /// <para>The HTTP request method condition configuration.</para>
                 /// </summary>
                 [NameInMap("MethodConfig")]
                 [Validation(Required=false)]
@@ -607,7 +607,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the path-based condition.</para>
+                /// <para>The query character string condition configuration.</para>
                 /// </summary>
                 [NameInMap("PathConfig")]
                 [Validation(Required=false)]
@@ -623,21 +623,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the query string-based condition.</para>
+                /// <para>The query character string condition configuration.</para>
                 /// </summary>
                 [NameInMap("QueryStringConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfig QueryStringConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfig : TeaModel {
                     /// <summary>
-                    /// <para>The list of query string key-value pairs.</para>
+                    /// <para>The list of query string condition key-value pairs.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
                     public List<UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfigValues> Values { get; set; }
                     public class UpdateRulesAttributeRequestRulesRuleConditionsQueryStringConfigValues : TeaModel {
                         /// <summary>
-                        /// <para>The key of the query string.</para>
+                        /// <para>The query string condition key.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>account</para>
@@ -647,7 +647,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the query string.</para>
+                        /// <para>The query string condition value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>on</para>
@@ -661,14 +661,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the response header-based condition.</para>
+                /// <para>The response HTTP header.</para>
                 /// </summary>
                 [NameInMap("ResponseHeaderConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleConditionsResponseHeaderConfig ResponseHeaderConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleConditionsResponseHeaderConfig : TeaModel {
                     /// <summary>
-                    /// <para>The key of the response header.</para>
+                    /// <para>The response HTTP header key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -678,7 +678,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The values of the response header.</para>
+                    /// <para>The response HTTP header values.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
@@ -687,14 +687,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the response status code-based condition.</para>
+                /// <para>The response status code condition.</para>
                 /// </summary>
                 [NameInMap("ResponseStatusCodeConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleConditionsResponseStatusCodeConfig ResponseStatusCodeConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleConditionsResponseStatusCodeConfig : TeaModel {
                     /// <summary>
-                    /// <para>The response status codes.</para>
+                    /// <para>The response status code condition.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
@@ -703,14 +703,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration for matching service traffic based on the source IP address.</para>
+                /// <para>The configuration for matching service traffic based on source IP addresses.</para>
                 /// </summary>
                 [NameInMap("SourceIpConfig")]
                 [Validation(Required=false)]
                 public UpdateRulesAttributeRequestRulesRuleConditionsSourceIpConfig SourceIpConfig { get; set; }
                 public class UpdateRulesAttributeRequestRulesRuleConditionsSourceIpConfig : TeaModel {
                     /// <summary>
-                    /// <para>One or more IP addresses or CIDR blocks.</para>
+                    /// <para>Adds one or more IP addresses or CIDR blocks.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
@@ -719,7 +719,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the condition.</para>
+                /// <para>The condition type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Header</para>
@@ -731,7 +731,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The forwarding rule ID.</para>
+            /// <para>The ID of the forwarding rule.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

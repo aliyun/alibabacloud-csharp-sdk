@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListServerGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries to return for a single request. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request or if no next query exists.</description></item>
-        /// <item><description>If a next query exists, set the value to the <b>NextToken</b> value returned in the previous API call.</description></item>
+        /// <item><description>For the first request or when no subsequent request is required, leave this parameter empty.</description></item>
+        /// <item><description>For a subsequent request, set this parameter to the <b>NextToken</b> value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-atstuj3rtop****</para>
@@ -44,29 +44,29 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the server groups.</para>
+        /// <para>The list of server group IDs.</para>
         /// </summary>
         [NameInMap("ServerGroupIds")]
         [Validation(Required=false)]
         public List<string> ServerGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The names of the server groups. You can specify up to 10 names.</para>
+        /// <para>The list of server group names. You can specify up to 10 server group names.</para>
         /// </summary>
         [NameInMap("ServerGroupNames")]
         [Validation(Required=false)]
         public List<string> ServerGroupNames { get; set; }
 
         /// <summary>
-        /// <para>The type of the server group. Valid values:</para>
+        /// <para>The server group type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Instance</b>: server type, which includes ECS, ENI, and ECI instances.</para>
+        /// <item><description><para><b>Instance</b>: the server type, which includes ECS, ENI, and ECI instances.</para>
         /// </description></item>
-        /// <item><description><para><b>Ip</b>: IP address type.</para>
+        /// <item><description><para><b>Ip</b>: the IP address type.</para>
         /// </description></item>
-        /// <item><description><para><b>Fc</b>: Function Compute type.</para>
+        /// <item><description><para><b>Fc</b>: the Function Compute type.</para>
         /// </description></item>
-        /// <item><description><para>If you leave this parameter empty, all types of server groups are queried.</para>
+        /// <item><description><para>If you leave this parameter empty, all types are queried.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ServerGroupType { get; set; }
 
         /// <summary>
-        /// <para>The tags that are bound to the server group. You can specify up to 10 tags in a single request.</para>
+        /// <para>The list of tags that are added to the server group. You can specify up to 10 tags in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public class ListServerGroupsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key. You can specify up to 10 tag keys.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The tag value. You can specify up to 10 tag values.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC-connected instance.</para>
+        /// <para>The VPC-connected instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp15zckdt37pq72zv****</para>

@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>i-bp1f9kdprbgy9uiu****</para>
+            /// <para>ecs-123</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Ecs</para>
+            /// <para>ecs</para>
             /// </summary>
             [NameInMap("ServerType")]
             [Validation(Required=false)]

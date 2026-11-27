@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListHealthCheckTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of health check templates.</para>
+        /// <para>The list of health check template IDs.</para>
         /// </summary>
         [NameInMap("HealthCheckTemplateIds")]
         [Validation(Required=false)]
         public List<string> HealthCheckTemplateIds { get; set; }
 
         /// <summary>
-        /// <para>The health check templates.</para>
+        /// <para>The list of health check template names.</para>
         /// </summary>
         [NameInMap("HealthCheckTemplateNames")]
         [Validation(Required=false)]
         public List<string> HealthCheckTemplateNames { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return in each call. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b></para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// <item><description>If this is the first query or no next query is required, leave this parameter empty.</description></item>
+        /// <item><description>If a next query is required, set the value to the <b>NextToken</b> value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. You can filter the query results based on the specified ID.</para>
+        /// <para>The resource group ID. The results are filtered based on the specified resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-atstuj3rtop****</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ListHealthCheckTemplatesRequestTag> Tag { get; set; }
         public class ListHealthCheckTemplatesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. The key can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The value can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>

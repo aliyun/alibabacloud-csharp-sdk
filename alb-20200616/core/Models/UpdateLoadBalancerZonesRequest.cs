@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateLoadBalancerZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique token from your client for each request. The <c>ClientToken</c> parameter can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the request\&quot;s <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> differs for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run to check for potential issues, including missing parameters, incorrect formatting, and service limits. If the request fails the dry run, the system returns an error message. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</para>
+        /// <item><description><para><b>true</b>: performs a dry run and does not modify the active zone property of the application load balancing instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends the request. If the request passes the check, the system returns an HTTP <c>2xx</c> status code and performs the operation.</para>
+        /// <item><description><para><b>false</b> (default): performs a dry run and sends a Normal request. If the request passes the dry run, the system returns an <c>HTTP_2xx</c> status code and performs the operation.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ALB instance.</para>
+        /// <para>The instance ID of the application load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,12 +50,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
+        /// <summary>
+        /// <para>The types of resources that undergo automatic creation and attach to the ALB instance, which need to be retained. When you remove an active zone from an Internet-facing ALB instance, you can update the Settings to eip to retain the EIP that undergoes automatic creation and attach by ALB. Anycast EIPs do not support retention, and EIPs that users manually attach are automatically retained.</para>
+        /// </summary>
         [NameInMap("RetainResourceType")]
         [Validation(Required=false)]
         public List<string> RetainResourceType { get; set; }
 
         /// <summary>
-        /// <para>The mappings between availability zones and VSwitches. You can specify up to 10 availability zones. If the current region supports two or more availability zones, you must specify at least two. Specifying this parameter overwrites the existing availability zone configuration.</para>
+        /// <para>The mappings between zones and vSwitches. You can specify up to 10 zones. If the current region supports two or more zones, you must specify at least two zones. If you specify this parameter, the previous zone configurations are replaced.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
@@ -63,15 +66,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<UpdateLoadBalancerZonesRequestZoneMappings> ZoneMappings { get; set; }
         public class UpdateLoadBalancerZonesRequestZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The type of the EIP. Valid values:</para>
+            /// <para>The type of the Internet-facing EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Common</b>: an EIP.</para>
-            /// </description></item>
-            /// <item><description><para><b>Anycast</b>: an Anycast EIP.</para>
-            /// </description></item>
+            /// <item><description><b>Common</b>: EIP.</description></item>
+            /// <item><description><b>Anycast</b>: Anycast EIP.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>For a list of regions that support binding an Anycast EIP to an ALB instance, see <a href="https://help.aliyun.com/document_detail/460727.html">Usage limits</a>.</para>
+            /// <para>For more information about the regions where ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -82,7 +83,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string EipType { get; set; }
 
             /// <summary>
-            /// <para>The private IPv4 address.</para>
+            /// <para>The IPv4 private endpoint of the private network. You must add at least two active zones and can add up to 10 active zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.1</para>
@@ -92,7 +93,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string IntranetAddress { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VSwitch in the availability zone. Each availability zone uses one VSwitch and one subnet by default.</para>
+            /// <para>The vSwitch that corresponds to the zone. By default, each zone uses one vSwitch and one subnet. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the availability zone. You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the IDs of available zones.</para>
+            /// <para>The name of the zone. You can obtain the zone name by calling the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

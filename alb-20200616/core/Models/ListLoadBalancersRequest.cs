@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListLoadBalancersRequest : TeaModel {
         /// <summary>
-        /// <para>The protocol version. Valid values:</para>
+        /// <para>The IP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>IPv4</b>: IPv4</para>
-        /// </description></item>
-        /// <item><description><para><b>DualStack</b>: dual-stack</para>
-        /// </description></item>
+        /// <item><description><b>IPv4</b>: IPv4.</description></item>
+        /// <item><description><b>DualStack</b>: dual-stack.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,11 +24,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The type of the IP address that the Application Load Balancer instance uses to provide services. Valid values:</para>
+        /// <para>The address type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Internet</b>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</para>
+        /// <item><description><para><b>Internet</b>: The load balancing has a public IP address. The DNS domain name is parsed to the public IP address, so it can be accessed in the public network environment.</para>
         /// </description></item>
-        /// <item><description><para><b>Intranet</b>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed in the VPC where the ALB instance is deployed.</para>
+        /// <item><description><para><b>Intranet</b>: The load balancing has only a private IP address. The DNS domain name is parsed to the private IP address, so it can only be accessed in the internal network environment of the VPC where the load balancing resides.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The DNS domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alb-95qnr2itwu9orb****.cn-hangzhou.alb.aliyuncs.com</para>
@@ -52,11 +50,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string DNSName { get; set; }
 
         /// <summary>
-        /// <para>The type of the IPv6 address that the Application Load Balancer instance uses to provide services. Valid values:</para>
+        /// <para>The IPv6 address type of the application load balancing instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Internet</b>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</para>
+        /// <item><description><para><b>Internet</b>: The load balancing has a public IP address. The DNS domain name is parsed to the public IP address, so it can be accessed in the public network environment.</para>
         /// </description></item>
-        /// <item><description><para><b>Intranet</b>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed in the VPC where the ALB instance is deployed.</para>
+        /// <item><description><para><b>Intranet</b>: The load balancing has only a private IP address. The DNS domain name is parsed to the private IP address, so it can only be accessed in the internal network environment of the VPC where the load balancing resides.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -68,11 +66,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string Ipv6AddressType { get; set; }
 
         /// <summary>
-        /// <para>The service status of the Application Load Balancer instance. Valid values:</para>
+        /// <para>The business status of the application load balancing instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Abnormal</b>: The instance is not working as expected.</para>
+        /// <item><description><para><b>Abnormal</b>: Abnormal.</para>
         /// </description></item>
-        /// <item><description><para><b>Normal</b>: The instance is working as expected.</para>
+        /// <item><description><para><b>Normal</b>: Normal.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -84,31 +82,31 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerBussinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs. You can specify up to 20 Application Load Balancer instance IDs.</para>
+        /// <para>The IDs of the instances. You can specify up to 20 application load balancing instance IDs.</para>
         /// </summary>
         [NameInMap("LoadBalancerIds")]
         [Validation(Required=false)]
         public List<string> LoadBalancerIds { get; set; }
 
         /// <summary>
-        /// <para>The instance names. You can specify up to 10 instance names.</para>
+        /// <para>The names of the instances. You can specify up to 10 instance names.</para>
         /// </summary>
         [NameInMap("LoadBalancerNames")]
         [Validation(Required=false)]
         public List<string> LoadBalancerNames { get; set; }
 
         /// <summary>
-        /// <para>The state of the Application Load Balancer instance. Valid values:</para>
+        /// <para>The instance status of the application load balancing instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Inactive</b>: The instance is disabled. Listeners of the instance do not forward traffic.</para>
+        /// <item><description><para><b>Inactive</b>: The instance is stopped and listeners no longer forward traffic.</para>
         /// </description></item>
         /// <item><description><para><b>Active</b>: The instance is running.</para>
         /// </description></item>
         /// <item><description><para><b>Provisioning</b>: The instance is being created.</para>
         /// </description></item>
-        /// <item><description><para><b>Configuring</b>: The instance is being configured.</para>
+        /// <item><description><para><b>Configuring</b>: Upgrade/Downgrade in progress.</para>
         /// </description></item>
-        /// <item><description><para><b>CreateFailed</b>: The instance failed to be created. You are not charged for the instance. You can only delete the instance. The system automatically deletes instances that failed to be created within one day.</para>
+        /// <item><description><para><b>CreateFailed</b>: The instance failed to be created. In this case, no fees are generated and the instance can only be deleted. By default, the system cleans up instances that failed to be created within the last 24 hours.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -120,7 +118,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -130,12 +128,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>You do not need to specify this parameter for the first request.</para>
-        /// </description></item>
-        /// <item><description><para>If a subsequent call is required, set the value to the <b>NextToken</b> value returned from the previous call.</para>
-        /// </description></item>
+        /// <item><description>Leave this parameter empty for the first query or when no next query is required.</description></item>
+        /// <item><description>If a next query is required, set the value to the <b>NextToken</b> value returned in the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,8 +142,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid value:</para>
-        /// <para><b>PostPay</b> (default): The instance is billed on a pay-as-you-go basis.</para>
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para><b>PostPay</b> (default value): pay-as-you-go billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPay</para>
@@ -167,7 +163,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instances.</para>
+        /// <para>The instance label.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -198,15 +194,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the Application Load Balancer instance belongs. You can specify up to 10 VPC IDs.</para>
+        /// <para>The IDs of the VPCs to which the application load balancing instances belong. You can specify up to 10 VPC IDs.</para>
         /// </summary>
         [NameInMap("VpcIds")]
         [Validation(Required=false)]
         public List<string> VpcIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where the Application Load Balancer instance is deployed.</para>
-        /// <para>You can call the <a href="t2324479.xdita#"></a>operation to query information about the zones.</para>
+        /// <para>The ID of the active zone where the application load balancing instance resides.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the active zone information corresponding to the active zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-a</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACL.</para>
+        /// <para>The ACL instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl-hp34s2h0xx1ht4nwo****</para>

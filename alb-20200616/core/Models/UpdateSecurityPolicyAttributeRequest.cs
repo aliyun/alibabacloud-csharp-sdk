@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateSecurityPolicyAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The supported cipher suites.</para>
+        /// <para>The list of supported cipher suites.</para>
         /// </summary>
         [NameInMap("Ciphers")]
         [Validation(Required=false)]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the value from your client. Make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,12 +31,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run to check the request without updating the security policy. The system checks for required parameters, the request format, and service limits. If the check fails, the system returns an error. If the check passes, the system returns the <c>DryRunOperation</c> error code.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. If the check succeeds, the system returns a 2xx HTTP status code and updates the security policy.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs only a dry run and does not update the security policy attributes. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The security policy ID.</para>
+        /// <para>The ID of the security policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,8 +56,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string SecurityPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the security policy.</para>
-        /// <para>The name must be 2 to 128 characters long and can contain digits, periods (.), underscores (_), hyphens (-), and spaces. It must start with a letter, a Chinese character, or a digit.</para>
+        /// <para>Policy Name of the security policy.</para>
+        /// <para>Policy Name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. It must start with a letter, Chinese character, or digit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-secrity</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string SecurityPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The supported TLS protocol versions.</para>
+        /// <para>The list of supported TLS protocol versions.</para>
         /// </summary>
         [NameInMap("TLSVersions")]
         [Validation(Required=false)]

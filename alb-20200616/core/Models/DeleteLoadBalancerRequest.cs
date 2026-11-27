@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DeleteLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>You can generate a token by using your client. The token must be unique across requests and contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can generate a parameter value from your client to ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</para>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Performs a dry run to check the request\&quot;s validity without deleting the Application Load Balancer instance. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run on the request and does not delete the application load balancing instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, an <c>HTTP 2xx</c> status code is returned and the instance is deleted.</para>
+        /// <item><description><para><b>false</b> (default): sends a Normal request. If the request passes the dry run, the <c>HTTP 2xx</c> status code is returned and the operation is performed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Application Load Balancer instance.</para>
+        /// <para>The application load balancing instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
+        /// <summary>
+        /// <para>The type of resources that are of automatic creation and attach by application load balancing and need to be retained. When you release an Internet-facing application load balancing instance, you can configure the Settings to eip to retain the EIP that is of automatic creation and attach by application load balancing. Anycast EIPs are not supported for retention, and EIPs that users manually attach are automatically retained.</para>
+        /// </summary>
         [NameInMap("RetainResourceType")]
         [Validation(Required=false)]
         public List<string> RetainResourceType { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateLoadBalancerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Application Load Balancer instance ID.</para>
+        /// <para>The instance ID of the Application Load Balancing (ALB) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alb-o9ulmq5hqn68jk****</para>

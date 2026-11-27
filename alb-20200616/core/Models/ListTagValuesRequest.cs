@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The resource ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alb-gws76zijb0******</para>
+        /// <para>eip-resource-test</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

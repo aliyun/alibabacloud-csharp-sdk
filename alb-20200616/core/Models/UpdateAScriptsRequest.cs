@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>The content of the programmable script.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>if and(match_re($uri, \&quot;^/1.txt$\&quot;), $arg_type) { rewrite(concat(\&quot;/1.\&quot;, $arg_type), \&quot;break\&quot;) }</para>
+            /// <para>if and(match_re($uri, &quot;^/1.txt$&quot;), $arg_type) { rewrite(concat(&quot;/1.&quot;, $arg_type), &quot;break&quot;) }</para>
             /// </summary>
             [NameInMap("ScriptContent")]
             [Validation(Required=false)]

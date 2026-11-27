@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateAclRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the ACL. The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), hyphens (-), letters, and Chinese characters. The name must start with a letter, a Chinese character, or a digit.</para>
+        /// <para>The name of the ACL. The name must start with a letter, Chinese character, or digit, and can contain digits, periods (.), underscores (_), hyphens (-), and spaces. The name must be 2 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-acl</para>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate the parameter value on your client to ensure that the value is unique across different requests. The client token supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,12 +34,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned. No ACL is created.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The system performs a dry run on the request without creating the access control policy group. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</description></item>
+        /// <item><description><b>false</b> (default): The system sends a normal request. If the request passes the dry run, the system returns an HTTP 2xx status code and performs the operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the ACL.</para>
+        /// <para>The tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-12313</para>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<CreateAclRequestTag> Tag { get; set; }
         public class CreateAclRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>

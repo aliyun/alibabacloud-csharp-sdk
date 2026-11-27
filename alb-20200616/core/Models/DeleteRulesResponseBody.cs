@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DeleteRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asynchronous task ID.</para>
+        /// <para>The ID of the asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72dcd26b-f12d-4c27-b3af-18f6aed5****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7BED4F62-3E6E-5E4F-8C53-2D8CCE77F2ED</para>

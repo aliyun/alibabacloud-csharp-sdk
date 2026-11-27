@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<ListAclsResponseBodyAclsTags> Tags { get; set; }
             public class ListAclsResponseBodyAclsTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
+                /// <para>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
+                /// <para>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product</para>

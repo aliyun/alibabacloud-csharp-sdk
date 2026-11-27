@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListServerGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paginated query.</para>
+        /// <para>The number of entries returned per request in a paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a next query exists. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token that is used to start the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no more results are available.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value is the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,12 +65,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? ConfigManagedEnabled { get; set; }
 
             /// <summary>
-            /// <para>The connection draining configuration.</para>
-            /// <para>After connection draining is enabled, when a backend server is removed or a health check has failed, load balancing allows existing connections to continue Normal data transmission for a specified period of time before the connection is subject to break.</para>
+            /// <para>The graceful connection break configuration.</para>
+            /// <para>When graceful connection break is enabled, load balancing allows existing connections to be transmitted normally within a specified period after a backend server is removed or a health check failed.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>Basic Edition instances do not support connection draining. Only Standard Edition and WAF-enabled Edition instances support this feature.</description></item>
-            /// <item><description>Server type and IP type server groups support connection draining. Function Compute type server groups do not.</description></item>
+            /// <item><description>Graceful connection break is not supported by Basic Edition instances. Only Standard Edition and WAF Enhanced Edition instances support this feature.</description></item>
+            /// <item><description>Graceful connection break is supported by server groups of the server type and IP type, but not by server groups of the Function Compute type.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public ListServerGroupsResponseBodyServerGroupsConnectionDrainConfig ConnectionDrainConfig { get; set; }
             public class ListServerGroupsResponseBodyServerGroupsConnectionDrainConfig : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether connection draining is enabled.</para>
+                /// <para>Specifies whether to enable connection draining.</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b>: Enabled.</description></item>
                 /// <item><description><b>false</b>: Disabled.</description></item>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public bool? ConnectionDrainEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The connection draining timeout period.</para>
+                /// <para>The timeout period for connection draining.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The time when the resource was created.</para>
+            /// <para>The time when the resource was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-07-02T02:49:05Z</para>
@@ -115,9 +115,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether cross-zone load balancing is enabled for the server group. Valid values:</para>
+            /// <para>Specifies whether to enable cross-zone load balancing for the server group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Enabled (default).</para>
+            /// <item><description><para><b>true</b>: Enabled. This is the default value.</para>
             /// </description></item>
             /// <item><description><para><b>false</b>: Disabled.</para>
             /// </description></item>
@@ -138,15 +138,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig HealthCheckConfig { get; set; }
             public class ListServerGroupsResponseBodyServerGroupsHealthCheckConfig : TeaModel {
                 /// <summary>
-                /// <para>The list of status codes that indicate healthy health checks.</para>
+                /// <para>The list of status codes that indicate a successful health check.</para>
                 /// </summary>
                 [NameInMap("HealthCheckCodes")]
                 [Validation(Required=false)]
                 public List<string> HealthCheckCodes { get; set; }
 
                 /// <summary>
-                /// <para>The port of the backend server used for health checks. Valid values: <b>0</b> to <b>65535</b>.</para>
-                /// <para>A value of <b>0</b> indicates that the port of the backend server is used for health checks.</para>
+                /// <para>The port of the backend server used for health checks. Valid values: <b>0</b> to <b>65535</b>. A value of <b>0</b> indicates that the port of the backend server is used for health checks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -172,25 +171,25 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>The domain name used for health checks.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Use the internal IP address of the backend server</b> (default): The internal IP address of the backend server is used as the health check domain name.</para>
+                /// <item><description><para><b>Use the internal IP address of the backend server</b> (default): The internal IP address of the backend server is used as the domain name for health checks.</para>
                 /// </description></item>
                 /// <item><description><para><b>Specify a domain name</b>: Enter a domain name.</para>
                 /// <list type="bullet">
                 /// <item><description><para>The domain name must be 1 to 80 characters in length.</para>
                 /// </description></item>
-                /// <item><description><para>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</para>
+                /// <item><description><para>It can contain lowercase letters, digits, hyphens (-), and periods (.).</para>
                 /// </description></item>
-                /// <item><description><para>The domain name must contain at least one period (.). Periods (.) cannot appear at the beginning or end.</para>
+                /// <item><description><para>It must contain at least one period (.), and the period (.) cannot be at the beginning or end.</para>
                 /// </description></item>
-                /// <item><description><para>The rightmost domain label can contain only letters, not digits or hyphens (-).</para>
+                /// <item><description><para>The rightmost domain label can contain only letters, and cannot contain digits or hyphens (-).</para>
                 /// </description></item>
-                /// <item><description><para>Hyphens (-) cannot appear at the beginning or end.</para>
+                /// <item><description><para>A hyphen (-) cannot be at the beginning or end.</para>
                 /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This parameter takes effect only when HealthCheckProtocol is set to HTTP, HTTPS, or gRPC.</para>
+                /// <para>This parameter takes effect only when <b>HealthCheckProtocol</b> is set to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -201,8 +200,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckHost { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP version for health checks.</para>
-                /// <para>Valid values: <b>HTTP1.0</b> or <b>HTTP1.1</b>.</para>
+                /// <para>The HTTP version for health checks. Valid values: <b>HTTP1.0</b> and <b>HTTP1.1</b>.</para>
                 /// <remarks>
                 /// <para>This parameter takes effect only when <b>HealthCheckProtocol</b> is set to <b>HTTP</b> or <b>HTTPS</b>.</para>
                 /// </remarks>
@@ -225,13 +223,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? HealthCheckInterval { get; set; }
 
                 /// <summary>
-                /// <para>The health check method. Valid values:</para>
+                /// <para>The HTTP method used for health checks. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>GET</b>: If the response body exceeds 8 KB, it is truncated, but this does not affect the health check result.</para>
+                /// <item><description><para><b>GET</b>: If the response message exceeds 8 KB, it is truncated. However, this does not affect the health check result.</para>
                 /// </description></item>
-                /// <item><description><para><b>POST</b>: gRPC listener health checks use the POST method by default.</para>
+                /// <item><description><para><b>POST</b>: The POST method is used by default for gRPC listener health checks.</para>
                 /// </description></item>
-                /// <item><description><para><b>HEAD</b>: HTTP and HTTPS listener health checks use the HEAD method by default.</para>
+                /// <item><description><para><b>HEAD</b>: The HEAD method is used by default for HTTP and HTTPS listener health checks.</para>
                 /// </description></item>
                 /// </list>
                 /// <remarks>
@@ -246,7 +244,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckMethod { get; set; }
 
                 /// <summary>
-                /// <para>The path of the forwarding rule for health checks.</para>
+                /// <para>The path used for health checks.</para>
                 /// <remarks>
                 /// <para>This parameter takes effect only when <b>HealthCheckProtocol</b> is set to <b>HTTP</b> or <b>HTTPS</b>.</para>
                 /// </remarks>
@@ -259,13 +257,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckPath { get; set; }
 
                 /// <summary>
-                /// <para>The health check protocol. Valid values:</para>
+                /// <para>The protocol used for health checks. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>HTTP</b>: Sends HEAD or GET requests to simulate browser access behavior and check whether the server application is healthy.</para>
+                /// <item><description><para><b>HTTP</b>: Sends HEAD or GET requests for browser impersonation to check whether the server application is healthy.</para>
                 /// </description></item>
-                /// <item><description><para><b>HTTPS</b>: Sends HEAD or GET requests to simulate browser access behavior and check whether the server application is healthy. (Data encryption is used, which is more secure than HTTP.)</para>
+                /// <item><description><para><b>HTTPS</b>: Sends HEAD or GET requests for browser impersonation to check whether the server application is healthy. (Data encryption, more secure than HTTP.)</para>
                 /// </description></item>
-                /// <item><description><para><b>TCP</b>: Sends SYN handshake packets to check whether the server port is alive.</para>
+                /// <item><description><para><b>TCP</b>: Sends SYN handshake messages to check whether the server port is alive.</para>
                 /// </description></item>
                 /// <item><description><para><b>gRPC</b>: Sends POST or GET requests to check whether the server application is healthy.</para>
                 /// </description></item>
@@ -279,7 +277,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The amount of time to wait for a response from a health check. If the backend server does not respond correctly within the specified time, the health check fails. Unit: seconds.</para>
+                /// <para>The timeout period for a health check response. If the backend server does not respond within the specified timeout period, the health check fails. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -289,7 +287,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? HealthCheckTimeout { get; set; }
 
                 /// <summary>
-                /// <para>The number of consecutive successful health checks required before the health check status of a backend server changes from <b>fail</b> to <b>success</b>.</para>
+                /// <para>The number of consecutive successful health checks required to change the health check status of a backend server from <b>Failed</b> to <b>Successful</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -299,7 +297,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? HealthyThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The number of consecutive failed health checks required before the health check status of a backend server changes from <b>success</b> to <b>fail</b>.</para>
+                /// <para>The number of consecutive failed health checks required to change the health check status of a backend server from <b>Successful</b> to <b>Failed</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -311,7 +309,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The IP version affinity mode of the server group.</para>
+            /// <para>The IP version affinity mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NonAffinity: No affinity mode. This is the default value.</description></item>
+            /// <item><description>Affinity: Affinity mode.</description></item>
+            /// </list>
+            /// <para>This parameter takes effect only when Ipv6Enabled is set to true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Affinity</para>
@@ -321,10 +324,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string IpVersionAffinityMode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether IPv6 is supported. Valid values:</para>
+            /// <para>Indicates whether the IP protocol version used by the load balancing to forward traffic to the backend server group supports IPv6. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Supported.</description></item>
-            /// <item><description><b>false</b>: Not supported.</description></item>
+            /// <item><description><b>false</b> (default): IPv6 is not supported. For the IPv4 type, only IPv4 backend servers can be added.</description></item>
+            /// <item><description><b>true</b>: Dual-stack type. Both IPv4 and IPv6 backend servers can be added.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -337,11 +340,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The backend protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>HTTP</b>: Can be associated with HTTPS, HTTP, and QUIC listeners.</para>
+            /// <item><description><para><b>HTTP</b>: Supports association with HTTPS, HTTP, and QUIC listeners.</para>
             /// </description></item>
-            /// <item><description><para><b>HTTPS</b>: Can be associated with HTTPS listeners.</para>
+            /// <item><description><para><b>HTTPS</b>: Supports association with HTTPS listeners.</para>
             /// </description></item>
-            /// <item><description><para><b>GRPC</b>: Can be associated with HTTPS and QUIC listeners.</para>
+            /// <item><description><para><b>GRPC</b>: Supports association with HTTPS and QUIC listeners.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -360,7 +363,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<string> RelatedLoadBalancerIds { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-atstuj3rtop****</para>
@@ -372,9 +375,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The scheduling algorithm. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Wrr</b>: Weighted round-robin. Backend servers with higher weights are polled more frequently.</description></item>
-            /// <item><description><b>Wlc</b>: Weighted least connections. In addition to polling based on the weight of each backend server, the actual load (number of connections) of the backend server is also considered. When the weights are the same, backend servers with fewer current connections are polled more frequently.</description></item>
-            /// <item><description><b>Sch</b>: Consistent hashing. Requests with the same hash factor are dispatched to the same backend server. If the UchConfig parameter is not configured, the default hash factor is the source IP address, and requests from the same source IP address are distributed to the same backend server. If the UchConfig parameter is configured, the hash factor is the URL parameter, and requests with the same URL parameter are distributed to the same backend server.</description></item>
+            /// <item><description><b>Wrr</b>: Weighted round-robin. Backend servers with higher weights are more likely to be polled.</description></item>
+            /// <item><description><b>Wlc</b>: Weighted least connections. In addition to the weight of each backend server, the actual load (number of connections) is also considered. When weights are the same, backend servers with fewer current connections are more likely to be polled.</description></item>
+            /// <item><description><b>Sch</b>: Consistent hashing. Requests with the same hash factor calculation result are scheduled to the same backend server. If the UchConfig parameter is not configured, the default hash factor is the source IP address, and requests from the same source IP address are distributed to the same backend server. If the UchConfig parameter is configured, the hash factor is the URL parameter, and requests with the same URL parameter are distributed to the same backend server.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -395,7 +398,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? ServerCount { get; set; }
 
             /// <summary>
-            /// <para>The server group ID.</para>
+            /// <para>The ID of the server group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sgp-cige6j****</para>
@@ -405,7 +408,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The server group name.</para>
+            /// <para>The name of the server group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Group3</para>
@@ -415,13 +418,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerGroupName { get; set; }
 
             /// <summary>
-            /// <para>The server group status. Valid values:</para>
+            /// <para>The status of the server group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>Creating</b>: The server group is being created.</para>
             /// </description></item>
             /// <item><description><para><b>Available</b>: The server group is available.</para>
             /// </description></item>
-            /// <item><description><para><b>Configuring</b>: The server group is being configured.</para>
+            /// <item><description><para><b>Configuring</b>: The server group is being reconfigured.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -433,7 +436,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerGroupStatus { get; set; }
 
             /// <summary>
-            /// <para>The server group type. Valid values:</para>
+            /// <para>The type of the server group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>Instance</b>: Server type, including ECS, ENI, and ECI instances.</para>
             /// </description></item>
@@ -462,12 +465,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The slow start configuration.</para>
-            /// <para>After slow start is enabled, newly added backend servers in the server group are warmed up within the specified period of time. The number of requests forwarded to the server increases linearly.</para>
+            /// <para>After slow start is enabled, newly added backend servers in the backend server group are warmed up within a specified period, and the number of requests forwarded to the servers increases linearly.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>Basic Edition instances do not support slow start. Only Standard Edition and WAF-enabled Edition instances support this feature.</description></item>
-            /// <item><description>Server type and IP backend server groups support slow start configuration. Function Compute backend server groups do not.</description></item>
-            /// <item><description>Slow start can be enabled only when the backend scheduling algorithm is weighted round-robin.</description></item>
+            /// <item><description>Slow start is not supported by Basic Edition instances. Only Standard Edition and WAF Enhanced Edition instances support this feature.</description></item>
+            /// <item><description>Slow start can be configured for server groups of the server type and IP type, but not for server groups of the Function Compute type.</description></item>
+            /// <item><description>Slow start can be enabled only when the backend scheduling algorithm is set to the weighted polling algorithm.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -476,7 +479,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public ListServerGroupsResponseBodyServerGroupsSlowStartConfig SlowStartConfig { get; set; }
             public class ListServerGroupsResponseBodyServerGroupsSlowStartConfig : TeaModel {
                 /// <summary>
-                /// <para>The slow start duration.</para>
+                /// <para>The duration of slow start.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -486,7 +489,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public int? SlowStartDuration { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether slow start is enabled.</para>
+                /// <para>Specifies whether to enable slow start.</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b>: Enabled.</description></item>
                 /// <item><description><b>false</b>: Disabled.</description></item>
@@ -502,7 +505,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The session persistence configuration struct.</para>
+            /// <para>The session persistence configuration.</para>
             /// </summary>
             [NameInMap("StickySessionConfig")]
             [Validation(Required=false)]
@@ -519,7 +522,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Cookie { get; set; }
 
                 /// <summary>
-                /// <para>The cookie timeout period. Unit: seconds. Valid values: <b>1</b> to <b>86400</b>.</para>
+                /// <para>The timeout period of the cookie. Unit: seconds. Valid values: <b>1</b> to <b>86400</b>.</para>
                 /// <remarks>
                 /// <para>This parameter takes effect only when <b>StickySessionEnabled</b> is set to <b>true</b> and <b>StickySessionType</b> is set to <b>Insert</b>.</para>
                 /// </remarks>
@@ -548,8 +551,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>The method used to handle cookies. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Insert</b>: Inserts a cookie. When a client accesses the server for the first time, load balancing inserts a cookie (SERVERID) into the HTTP or HTTPS response. The next time the client accesses the server with this cookie, load balancing forwards the request to the previously recorded backend server.</description></item>
-                /// <item><description><b>Server</b>: Rewrites a cookie. When load balancing detects a user-defined cookie, it rewrites the original cookie. The next time the client accesses the server with the new cookie, load balancing forwards the request to the previously recorded backend server.</description></item>
+                /// <item><description><b>Insert</b>: Insert a cookie. When a client accesses the service for the first time, the load balancing inserts a cookie (that is, inserts SERVERID into the HTTP or HTTPS response message). The next time the client accesses the service with this cookie, the load balancing service forwards the request to the previously recorded backend server.</description></item>
+                /// <item><description><b>Server</b>: Rewrite a cookie. When the load balancing detects a user-defined cookie, it rewrites the original cookie. The next time the client accesses the service with the new cookie, the load balancing service forwards the request to the previously recorded backend server.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -591,7 +594,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The URL consistent hashing parameter settings.</para>
+            /// <para>The URL consistent hash parameter settings.</para>
             /// </summary>
             [NameInMap("UchConfig")]
             [Validation(Required=false)]
@@ -608,7 +611,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The consistent hashing parameter value.</para>
+                /// <para>The consistent hash parameter value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -620,7 +623,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether backend keepalive is enabled. Valid values:</para>
+            /// <para>Indicates whether upstream keep-alive is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Enabled.</description></item>
             /// <item><description><b>false</b>: Disabled.</description></item>
@@ -634,7 +637,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? UpstreamKeepaliveEnabled { get; set; }
 
             /// <summary>
-            /// <para>The VPC instance ID.</para>
+            /// <para>The VPC-connected instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp15zckdt37pq72zv****</para>
@@ -646,7 +649,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>The URL that is used for health checks.</para>
-        /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <c>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</c>. The URL must start with a forward slash (/).</para>
+        /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <c>_ ; ~ ! ( ) * [ ] @ $ ^ : \&quot; , +</c>. The URL must start with a forward slash (/).</para>
         /// <remarks>
         /// <para> This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
         /// </remarks>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DB1AFC33-DAE8-528E-AA4D-4A6A******</para>
+        /// <para>DB1AFC33-DAE8-528E-AA4D-4A6AABE71945</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

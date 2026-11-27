@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DeleteAScriptsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asynchronous task ID.</para>
+        /// <para>The ID of the asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03cf3fe1-ab37-479b-92a6-b481d762****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1B7B7695-3596-50C8-B739-030C******</para>

@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>SLBPort</b>: the Application Load Balancer (ALB) instance listener port.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description>If <b>ValueType</b> is set to <b>UserDefined</b>: you can specify a custom header value. The value must be 1 to 128 characters in length and can contain wildcards asterisks (*), question marks (?), and printable characters whose ASCII values are <c>ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. The value cannot contain <c>&quot;</c>. The value cannot start or end with a space. The value cannot end with <c>\\</c>.</description></item>
+                /// <item><description>If <b>ValueType</b> is set to <b>UserDefined</b>: you can specify a custom header value. The value must be 1 to 128 characters in length and can contain wildcards asterisks (*), question marks (?), and printable characters whose ASCII values are <c>ch &gt;= 32 &amp;&amp; ch &lt; 127</c>. The value cannot contain <c>&quot;</c>. The value cannot start or end with a space. The value cannot end with <c>\</c>.</description></item>
                 /// <item><description>If <b>ValueType</b> is set to <b>ReferenceHeader</b>: you can reference a field in the request header. The value must be 1 to 128 characters in length and can contain lowercase letters a to z, digits, hyphens (-), and underscores (_).</description></item>
                 /// </list>
                 /// 
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>${path}</b> (default): you can reference <b>${host}</b>, <b>${protocol}</b>, and <b>${port}</b>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</description></item>
                 /// <item><description>Other values. Character set and format restrictions are as follows:<list type="bullet">
                 /// <item><description>The path must be 1 to 256 characters in length.</description></item>
-                /// <item><description>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$-_.+/&amp;~@:</c>. The path cannot contain <c>&quot;%#;!()[]^,&quot;\\&quot;</c>. Asterisks (*) and question marks (?) can be used as wildcards.</description></item>
+                /// <item><description>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$-_.+/&amp;~@:</c>. The path cannot contain <c>&quot;%#;!()[]^,&quot;\&quot;</c>. Asterisks (*) and question marks (?) can be used as wildcards.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>${query}</b> (default): you can reference <b>${host}</b>, <b>${protocol}</b>, and <b>${port}</b>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</description></item>
                 /// <item><description>Other values. Character set and format restrictions are as follows:<list type="bullet">
                 /// <item><description>The query string must be 1 to 128 characters in length.</description></item>
-                /// <item><description>The query string can contain printable characters but cannot contain spaces or <c>#[]{}\\|&lt;&gt;&quot;</c>. Letters must be lowercase.</description></item>
+                /// <item><description>The query string can contain printable characters but cannot contain spaces or <c>#[]{}\|&lt;&gt;&quot;</c>. Letters must be lowercase.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -499,7 +499,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>${path}</b> (default): you can reference <b>${host}</b>, <b>${protocol}</b>, and <b>${port}</b>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</description></item>
                 /// <item><description>Other values. Character set and format restrictions are as follows:<list type="bullet">
                 /// <item><description>The path must be 1 to 256 characters in length.</description></item>
-                /// <item><description>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$-_.+/&amp;~@:</c>. The path cannot contain <c>&quot;%#;!()[]^,&quot;\\&quot;</c>. Asterisks (*) and question marks (?) can be used as wildcards.</description></item>
+                /// <item><description>The path must start with a forward slash (/) and can contain letters, digits, and the following special characters: <c>$-_.+/&amp;~@:</c>. The path cannot contain <c>&quot;%#;!()[]^,&quot;\&quot;</c>. Asterisks (*) and question marks (?) can be used as wildcards.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -517,7 +517,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <item><description><b>${query}</b> (default): you can reference <b>${host}</b>, <b>${protocol}</b>, and <b>${port}</b>. Each variable can appear at most once. These variables can be used together or concatenated with characters within the allowed value range listed below.</description></item>
                 /// <item><description>Other values. Character set and format restrictions are as follows:<list type="bullet">
                 /// <item><description>The query string must be 1 to 128 characters in length.</description></item>
-                /// <item><description>The query string can contain printable characters but cannot contain spaces or <c>#[]{}\\|&lt;&gt;&quot;</c>. Letters must be lowercase.</description></item>
+                /// <item><description>The query string can contain printable characters but cannot contain spaces or <c>#[]{}\|&lt;&gt;&quot;</c>. Letters must be lowercase.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -670,7 +670,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public List<UpdateRuleAttributeRequestRuleConditionsCookieConfigValues> Values { get; set; }
                 public class UpdateRuleAttributeRequestRuleConditionsCookieConfigValues : TeaModel {
                     /// <summary>
-                    /// <para>The cookie key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <c>#[]{}\\|&lt;&gt;&amp;&quot;;</c>.</para>
+                    /// <para>The cookie key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <c>#[]{}\|&lt;&gt;&amp;&quot;;</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -680,7 +680,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The cookie value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <c>#[]{}\\|&lt;&gt;&amp;</c>.</para>
+                    /// <para>The cookie value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <c>#[]{}\|&lt;&gt;&amp;</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -782,7 +782,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public List<UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues> Values { get; set; }
                 public class UpdateRuleAttributeRequestRuleConditionsQueryStringConfigValues : TeaModel {
                     /// <summary>
-                    /// <para>The query string key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <c>#[]{}\\|&lt;&gt;&amp;&quot;</c>.</para>
+                    /// <para>The query string key. The key must be 1 to 100 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The key cannot contain spaces or <c>#[]{}\|&lt;&gt;&amp;&quot;</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -792,7 +792,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The query string value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <c>#[]{}\\|&lt;&gt;&amp;&quot;</c>.</para>
+                    /// <para>The query string value. The value must be 1 to 128 characters in length and can contain lowercase letters, printable characters, asterisks (*), and question marks (?). The value cannot contain spaces or <c>#[]{}\|&lt;&gt;&amp;&quot;</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>

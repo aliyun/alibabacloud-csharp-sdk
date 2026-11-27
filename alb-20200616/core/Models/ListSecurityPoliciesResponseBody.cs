@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0F******</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>The ID of the security policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sp-9cdjz6o******</para>
+            /// <para>rg-atstuj3rtop****</para>
             /// </summary>
             [NameInMap("SecurityPolicyId")]
             [Validation(Required=false)]

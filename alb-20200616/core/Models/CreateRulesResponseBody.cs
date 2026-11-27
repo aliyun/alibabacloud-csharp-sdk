@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asynchronous task ID.</para>
+        /// <para>The ID of the asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72dcd26b-f12d-4c27-b3af-18f6aed5****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The forwarding rule ID.</para>
+            /// <para>The ID of the forwarding rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule-a3x3pg1yohq3lq****</para>

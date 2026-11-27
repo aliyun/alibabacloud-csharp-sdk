@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateLoadBalancerAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>A client-generated token that is used to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
-        /// <para>Generate a value from your client and make sure that the value is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can generate the parameter value on your client. Make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Performs a dry run. The system checks for required parameters, the request format, and business limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned. No properties of the Application Load Balancer instance are modified.</para>
+        /// <item><description><para><b>true</b>: sends a check request without modifying the property of the application load balancing instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): Sends a normal request. After the request passes the check, a <c>2xx</c> status code is returned and the operation is performed.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, an <c>HTTP_2xx</c> status code is returned and the operation is directly performed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The Application Load Balancer instance ID.</para>
+        /// <para>The instance ID of the application load balancing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Application Load Balancer instance must be 2 to 128 characters in length. It must start with a letter, a Chinese character, or a number. The name can contain numbers, periods (.), underscores (_), hyphens (-), and spaces.</para>
+        /// <para>The name of the Application Load Balancer instance. The name must be 2 to 128 characters in length and start with a letter, Chinese character, or digit. It can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alb-instance-test</para>
@@ -61,16 +61,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The modification protection settings.</para>
+        /// <para>The modification protection configuration.</para>
         /// </summary>
         [NameInMap("ModificationProtectionConfig")]
         [Validation(Required=false)]
         public UpdateLoadBalancerAttributeRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class UpdateLoadBalancerAttributeRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>The reason for enabling modification protection.</para>
-            /// <para>The reason must be 2 to 128 characters long. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
-            /// <para>This parameter is valid only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
+            /// <para>The reason for enabling modification protection. The value must be 2 to 128 characters in length. It must start with a letter or Chinese character and can contain digits, periods (.), underscores (_), and hyphens (-). This parameter is valid only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Managed Instance</para>
@@ -80,15 +78,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The modification protection status of the Application Load Balancer instance. Valid values:</para>
+            /// <para>The modification protection status of the application load balancing instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>NonProtection</b>: Disables modification protection. If you specify a value for <b>Reason</b>, the value is cleared.</para>
+            /// <item><description><para><b>NonProtection</b>: disables modification protection. If <b>Reason</b> is specified, it is forcibly cleared.</para>
             /// </description></item>
-            /// <item><description><para><b>ConsoleProtection</b>: Enables modification protection in the console. If you specify a value for <b>Reason</b>, the value takes effect.</para>
+            /// <item><description><para><b>ConsoleProtection</b>: enables console modification protection. If <b>Reason</b> is specified, it takes effect.</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>If you set the value to <b>ConsoleProtection</b>, you cannot modify the instance configuration in the Application Load Balancer console. However, you can still modify the instance configuration by calling API operations.</para>
+            /// <para>If this parameter is set to <b>ConsoleProtection</b>, modification protection is enabled. In this case, you cannot modify the instance configurations in the load balancing console, but you can invoke API operations to modify the instance configurations.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

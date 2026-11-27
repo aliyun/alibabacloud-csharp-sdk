@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListHealthCheckTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The health check templates.</para>
+        /// <para>The list of health check templates.</para>
         /// </summary>
         [NameInMap("HealthCheckTemplates")]
         [Validation(Required=false)]
         public List<ListHealthCheckTemplatesResponseBodyHealthCheckTemplates> HealthCheckTemplates { get; set; }
         public class ListHealthCheckTemplatesResponseBodyHealthCheckTemplates : TeaModel {
             /// <summary>
-            /// <para>The HTTP status codes that indicate healthy backend servers.</para>
+            /// <para>The list of status codes that indicate a successful health check.</para>
             /// </summary>
             [NameInMap("HealthCheckCodes")]
             [Validation(Required=false)]
             public List<string> HealthCheckCodes { get; set; }
 
             /// <summary>
-            /// <para>The port that is used for health checks.</para>
-            /// <para>Valid values: \<em>\</em> 0 to 65535\<em>\</em>.</para>
-            /// <para>The default value is <b>0</b>, which specifies that the port of a backend server is used for health checks.</para>
+            /// <para>The port used for health checks.</para>
+            /// <para>Valid values: <b>0</b> to <b>65535</b>.</para>
+            /// <para>Default value: <b>0</b>, which indicates that the port of the backend server is used for health checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -36,13 +36,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// <para>The domain name that is used for health checks. Valid values:</para>
+            /// <para>The domain name used for health checks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>$SERVER_IP</b> (default): the private IP address of a backend server. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP address of each backend server as the domain name for health checks.</description></item>
-            /// <item><description><b>domain</b>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</description></item>
+            /// <item><description><para><b>$SERVER_IP</b> (default): the private IP of the backend server. If you specify an IP address or leave this parameter empty, load balancing uses the private IP of each backend server as the domain name for health checks.</para>
+            /// </description></item>
+            /// <item><description><para><b>domain</b>: The domain name must be 1 to 80 characters in length, and can contain only letters, digits, periods (.), and hyphens (-).</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <c>HealthCheckProtocol</c> to <b>HTTP</b> or <b>HTTPS</b>.</para>
+            /// <para>This parameter takes effect only when <c>HealthCheckProtocol</c> is set to <b>HTTP</b> or <b>HTTPS</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,11 +55,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckHost { get; set; }
 
             /// <summary>
-            /// <para>The HTTP version for health checks.</para>
+            /// <para>The HTTP version used for health checks.</para>
             /// <para>Valid values: <b>HTTP 1.0</b> and <b>HTTP 1.1</b>.</para>
             /// <para>Default value: <b>HTTP 1.1</b>.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <c>HealthCheckProtocol</c> to <b>HTTP</b> or <b>HTTPS</b>.</para>
+            /// <para>This parameter takes effect only when <c>HealthCheckProtocol</c> is set to <b>HTTP</b> or <b>HTTPS</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckHttpVersion { get; set; }
 
             /// <summary>
-            /// <para>The interval at which health checks are performed. Unit: seconds. Valid values: <b>1 to 50</b>. Default value: <b>2</b>.</para>
+            /// <para>The interval between two consecutive health checks. Unit: seconds. Valid values: <b>1</b> to <b>50</b>. Default value: <b>2</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -78,14 +80,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthCheckInterval { get; set; }
 
             /// <summary>
-            /// <para>The HTTP method that is used for health checks. Valid values:</para>
+            /// <para>The health check method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HEAD</b> (default): By default, HTTP and HTTPS health checks use the HEAD method.</description></item>
-            /// <item><description><b>GET</b>: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</description></item>
-            /// <item><description><b>POST</b>: gRPC health checks use the POST method by default.</description></item>
+            /// <item><description><para><b>HEAD</b> (default): The default method for HTTP and HTTPS health checks.</para>
+            /// </description></item>
+            /// <item><description><para><b>GET</b>: If the length of the response message exceeds 8 KB, the message is truncated. However, the truncation does not affect the health check result.</para>
+            /// </description></item>
+            /// <item><description><para><b>POST</b>: The default method for gRPC health checks.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckProtocol</b> to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckProtocol</b> is set to <b>HTTP</b>, <b>HTTPS</b>, or <b>gRPC</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -96,8 +101,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckMethod { get; set; }
 
             /// <summary>
-            /// <para>The URL path that you want to use for health checks.</para>
-            /// <para>The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &amp;, and the following extended characters: <c>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</c>. The URL must start with a forward slash (/).</para>
+            /// <para>The URL used for health checks.</para>
+            /// <para>The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), ampersands (&amp;), and the following extended characters: <c>_;~!()*[]@$^:\&quot;,+</c>. The URL must start with a forward slash (/).</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test/index.html</para>
@@ -107,12 +112,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckPath { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used for health checks. Valid values:</para>
+            /// <para>The protocol used for health checks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HTTP</b> (default): The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy.</description></item>
-            /// <item><description><b>HTTPS</b>: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS provides higher security because HTTPS supports data encryption.</description></item>
-            /// <item><description><b>TCP</b>: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.</description></item>
-            /// <item><description><b>gRPC</b>: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.</description></item>
+            /// <item><description><para><b>HTTP</b> (default): sends HEAD or GET requests to perform browser access impersonation and check whether the server application is healthy.</para>
+            /// </description></item>
+            /// <item><description><para><b>HTTPS</b>: sends HEAD or GET requests to perform browser access impersonation and check whether the server application is healthy. (With data encryption, it is more secure than HTTP.)</para>
+            /// </description></item>
+            /// <item><description><para><b>TCP</b>: sends SYN handshake messages to check whether the server port is alive.</para>
+            /// </description></item>
+            /// <item><description><para><b>gRPC</b>: sends POST or GET requests to check whether the server application is healthy.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +132,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckProtocol { get; set; }
 
             /// <summary>
-            /// <para>The ID of the health check template.</para>
+            /// <para>The health check template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hct-bp1qjwo61pqz3ahltv****</para>
@@ -133,8 +142,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the health check template.</para>
-            /// <para>The name must be 2 to 128 character characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+            /// <para>The health check template name.</para>
+            /// <para>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>HealthCheckTemplate1</para>
@@ -144,8 +153,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string HealthCheckTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not respond within the specified timeout period, the ECS instance fails to pass the health check.</para>
-            /// <para>Valid values: <b>1 to 300</b>. Unit: seconds.</para>
+            /// <para>The timeout period for receiving a response from a health check. If the backend ECS instance does not return a correct response within the specified timeout period, the health check is considered failed.</para>
+            /// <para>Valid values: <b>1</b> to <b>300</b>. Unit: seconds.</para>
             /// <para>Default value: <b>5</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -156,8 +165,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? HealthCheckTimeout { get; set; }
 
             /// <summary>
-            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>.</para>
-            /// <para>Valid values: <b>2 to 10</b>.</para>
+            /// <para>The number of consecutive successful health checks required to change the health check status of a backend server from <b>Failed</b> to <b>Successful</b>.</para>
+            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>3</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -185,7 +194,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<ListHealthCheckTemplatesResponseBodyHealthCheckTemplatesTags> Tags { get; set; }
             public class ListHealthCheckTemplatesResponseBodyHealthCheckTemplatesTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key. The tag key can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+                /// <para>The tag key. The key can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -195,7 +204,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value. The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+                /// <para>The tag value. The value can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product</para>
@@ -207,8 +216,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>.</para>
-            /// <para>Valid values: <b>2 to 10</b>.</para>
+            /// <para>The number of consecutive failed health checks required to change the health check status of a backend server from <b>Successful</b> to <b>Failed</b>.</para>
+            /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>3</b>.</para>
             /// 
             /// <b>Example:</b>
@@ -221,7 +230,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -231,10 +240,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -255,7 +264,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
