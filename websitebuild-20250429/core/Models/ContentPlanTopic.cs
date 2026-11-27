@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ContentPlanTopic : TeaModel {
         /// <summary>
-        /// <para>The article generation session ID.</para>
+        /// <para>The session ID for article generation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conv_8a2b3c</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ArticleConversationId { get; set; }
 
         /// <summary>
-        /// <para>The generated article ID.</para>
+        /// <para>The ID of the generated article.</para>
         /// 
         /// <b>Example:</b>
         /// <para>art_9f2k3d</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ArticleId { get; set; }
 
         /// <summary>
-        /// <para>The status of the associated article. Valid values: DRAFT, PUBLISHED, and PUBLISH_FAILED. This parameter is empty if the article is not generated.</para>
+        /// <para>The status of the associated article. Valid values: DRAFT, PUBLISHED, and PUBLISH_FAILED. This field is empty if no article is generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLISHED</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ArticleStatus { get; set; }
 
         /// <summary>
+        /// <para>The delivery mode inherited from the plan. Valid values: SOCIAL, WEBSITE, and BOTH. Historical and unplanned manual entries default to SOCIAL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BOTH</para>
         /// </summary>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeliveryMode { get; set; }
 
         /// <summary>
-        /// <para>The GEO diagnostic item references.</para>
+        /// <para>The GEO diagnostic references.</para>
         /// </summary>
         [NameInMap("DiagnosisReferences")]
         [Validation(Required=false)]
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The reason for the execution failure.</para>
+        /// <para>The reason for execution failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Article generation failed. Try again later</para>
@@ -74,11 +76,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string FailReason { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether user action is still required. Ignored or successful channels are not counted as pending tasks.</para>
+        /// </summary>
         [NameInMap("NeedsAttention")]
         [Validation(Required=false)]
         public bool? NeedsAttention { get; set; }
 
         /// <summary>
+        /// <para>The origin type. Valid values: PLAN for full-term plans and MANUAL for manual scheduling.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PLAN</para>
         /// </summary>
@@ -97,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PlanId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. This refers to the GEO workspace for brand marketing, which is the appWorkspaceId.</para>
+        /// <para>The workspace ID, which refers to the appWorkspaceId for GEO workspaces of the brand marketing type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d4e5f60718293a4b5c6d7e8f90a1b2c3</para>
@@ -107,10 +114,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The rationale for topic selection.</para>
+        /// <para>The topic rationale.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Users show high interest in AI website builder capabilities, making it a suitable entry point for brand awareness</para>
+        /// <para>Users show high interest in the capabilities of AI website building products, making it a suitable entry point for brand awareness</para>
         /// </summary>
         [NameInMap("Rationale")]
         [Validation(Required=false)]
@@ -137,13 +144,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The reason for skipping.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This topic duplicates a published article and has been skipped</para>
+        /// <para>This topic is a duplicate of a published article and has been skipped</para>
         /// </summary>
         [NameInMap("SkipReason")]
         [Validation(Required=false)]
         public string SkipReason { get; set; }
 
         /// <summary>
+        /// <para>The social media delivery status. Valid values: PENDING, RUNNING, FAILED, SUCCESS, and IGNORED. This field is empty if no record exists. Platform drafts are not considered successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>
         /// </summary>
@@ -165,7 +174,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The content title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Analysis of the core capabilities of Wanxiaozhi AI website builder</para>
+        /// <para>Core capabilities of the Wanxiaozhi AI website builder</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
@@ -182,6 +191,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string TopicId { get; set; }
 
         /// <summary>
+        /// <para>The channel draft ID bound to the website delivery. This field is empty if no draft is created or no record exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>draft_example001</para>
         /// </summary>
@@ -190,6 +201,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string WebsiteDraftId { get; set; }
 
         /// <summary>
+        /// <para>The website target ID for the entry. If delivery exists, the bound website is used. If no article is generated, the plan configuration is inherited.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20261126000000000001</para>
         /// </summary>
@@ -198,6 +211,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string WebsiteId { get; set; }
 
         /// <summary>
+        /// <para>The website delivery status. Valid values: PENDING, RUNNING, UNKNOWN, FAILED, SUCCESS, and IGNORED. This field is empty if no record exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -206,10 +221,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string WebsiteStatus { get; set; }
 
         /// <summary>
-        /// <para>The writing direction, which only describes the structure and perspective.</para>
+        /// <para>The writing direction, which describes only the structure and perspective.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>First summarize the product positioning, then introduce the core capabilities point by point, and finally provide the applicable scenarios</para>
+        /// <para>Start with an overview of the product positioning, introduce the core capabilities in bullet points, and conclude with applicable scenarios</para>
         /// </summary>
         [NameInMap("WritingDirection")]
         [Validation(Required=false)]

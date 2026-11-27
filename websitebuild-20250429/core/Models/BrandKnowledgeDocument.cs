@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class BrandKnowledgeDocument : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the content is sufficient to be considered for plan summary candidates.</para>
+        /// <para>Specifies whether the content is sufficient to be included as a candidate for plan summaries.</para>
         /// </summary>
         [NameInMap("ContentSufficient")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The creation time in Unix milliseconds.</para>
+        /// <para>The creation time in UNIX milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660800000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The display title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Wanxiaozhi product introduction</para>
+        /// <para>Wanxiaozhi Product Introduction</para>
         /// </summary>
         [NameInMap("DisplayTitle")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DocCategory { get; set; }
 
         /// <summary>
-        /// <para>The ID of the brand knowledge document.</para>
+        /// <para>The brand knowledge document ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bkd_3f7a1c2e9b7d4a5f8c0e1d2b3a4c5d6e</para>
@@ -73,6 +73,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DocumentId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the brand material corresponding to the document is enabled for retrieval.</para>
+        /// </summary>
         [NameInMap("Enabled")]
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
@@ -115,6 +118,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<string> KeyTopics { get; set; }
 
         /// <summary>
+        /// <para>The ID of the brand knowledge base to which the document belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bkb_example001</para>
         /// </summary>
@@ -123,6 +128,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
+        /// <para>The brand material ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bkm_example001</para>
         /// </summary>
@@ -131,10 +138,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string MaterialId { get; set; }
 
         /// <summary>
-        /// <para>The one-line summary, which is used only to construct search queries and cannot be used as factual evidence.</para>
+        /// <para>The one-line summary, which is used only to construct retrieval queries and cannot be used as factual evidence.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Introduces the product positioning and core capabilities of the Wanxiaozhi AI website building platform. It can be used as a reference for content topic selection</para>
+        /// <para>Introduces the product positioning and core capabilities of the Wanxiaozhi AI website building platform, which can be used as a reference for content topic selection</para>
         /// </summary>
         [NameInMap("OneLineSummary")]
         [Validation(Required=false)]
@@ -144,14 +151,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The original file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Wanxiaozhi product introduction.pdf</para>
+        /// <para>Wanxiaozhi Product Introduction.pdf</para>
         /// </summary>
         [NameInMap("OriginalName")]
         [Validation(Required=false)]
         public string OriginalName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business workspace. For GEO business workspaces of the brand marketing type, this is the appWorkspaceId.</para>
+        /// <para>The workspace ID, which is the GEO workspace for brand marketing, namely appWorkspaceId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d4e5f60718293a4b5c6d7e8f90a1b2c3</para>
@@ -161,7 +168,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The time when the document is ready for reference, in Unix milliseconds.</para>
+        /// <para>The time when the document is ready for citation, in UNIX milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660900000</para>
@@ -181,7 +188,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The message displayed on the status page.</para>
+        /// <para>The text displayed on the status page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Parsing completed and available for content plans</para>
@@ -211,7 +218,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SummaryStatus { get; set; }
 
         /// <summary>
-        /// <para>The last update time in Unix milliseconds.</para>
+        /// <para>The last update time in UNIX milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735660900000</para>

@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>Indicates whether this entitlement item is currently available.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>on</para>
                 /// </summary>
                 [NameInMap("Available")]
                 [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 /// <para>Indicates whether the instance is running.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Running")]
                 [Validation(Required=false)]
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         /// <para>The root error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>系统异常</para>
+        /// <para>System exception</para>
         /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]

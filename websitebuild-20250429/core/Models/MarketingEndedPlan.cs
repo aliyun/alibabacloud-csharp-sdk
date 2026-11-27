@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class MarketingEndedPlan : TeaModel {
         /// <summary>
+        /// <para>The end date of the plan, in yyyy-MM-dd format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-12-25</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The creation plan ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>plan_example001</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PlanId { get; set; }
 
         /// <summary>
+        /// <para>The GEO project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AW20261126000000000001</para>
         /// </summary>

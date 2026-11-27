@@ -1780,7 +1780,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
+        /// <para>The Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1853,7 +1853,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
+        /// <para>The Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1926,7 +1926,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
+        /// <para>The Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1949,7 +1949,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initiates a Wanxiaozhi 2.0 AI conversation.</para>
+        /// <para>The Wanxiaozhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7483,6 +7483,158 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAIStaffPreviewUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves encrypted zero-trust temporary credentials by role for authorized partners. Each call returns a temporary AccessKey ID, AccessKey secret, and security token.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sign the request with an identity that is added to the partner whitelist and granted the websitebuild:GetAklessTmpIdentityForPartner permission. Pass a role code in the query parameters and make a separate call for each role.
+        /// After a successful call, read the three ciphertext strings from Data.Credentials and decrypt them by using the pre-shared key. After decryption, configure the AccessKey ID, AccessKey secret, and security token from the same response into the SDK of the target cloud service. The validity period of the temporary credentials is managed by Akless.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAklessTmpIdentityForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAklessTmpIdentityForPartnerResponse
+        /// </returns>
+        public GetAklessTmpIdentityForPartnerResponse GetAklessTmpIdentityForPartnerWithOptions(GetAklessTmpIdentityForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                query["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCode))
+            {
+                query["RoleCode"] = request.RoleCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAklessTmpIdentityForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAklessTmpIdentityForPartnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves encrypted zero-trust temporary credentials by role for authorized partners. Each call returns a temporary AccessKey ID, AccessKey secret, and security token.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sign the request with an identity that is added to the partner whitelist and granted the websitebuild:GetAklessTmpIdentityForPartner permission. Pass a role code in the query parameters and make a separate call for each role.
+        /// After a successful call, read the three ciphertext strings from Data.Credentials and decrypt them by using the pre-shared key. After decryption, configure the AccessKey ID, AccessKey secret, and security token from the same response into the SDK of the target cloud service. The validity period of the temporary credentials is managed by Akless.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAklessTmpIdentityForPartnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAklessTmpIdentityForPartnerResponse
+        /// </returns>
+        public async Task<GetAklessTmpIdentityForPartnerResponse> GetAklessTmpIdentityForPartnerWithOptionsAsync(GetAklessTmpIdentityForPartnerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCode))
+            {
+                query["AppCode"] = request.AppCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCode))
+            {
+                query["RoleCode"] = request.RoleCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAklessTmpIdentityForPartner",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAklessTmpIdentityForPartnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves encrypted zero-trust temporary credentials by role for authorized partners. Each call returns a temporary AccessKey ID, AccessKey secret, and security token.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sign the request with an identity that is added to the partner whitelist and granted the websitebuild:GetAklessTmpIdentityForPartner permission. Pass a role code in the query parameters and make a separate call for each role.
+        /// After a successful call, read the three ciphertext strings from Data.Credentials and decrypt them by using the pre-shared key. After decryption, configure the AccessKey ID, AccessKey secret, and security token from the same response into the SDK of the target cloud service. The validity period of the temporary credentials is managed by Akless.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAklessTmpIdentityForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAklessTmpIdentityForPartnerResponse
+        /// </returns>
+        public GetAklessTmpIdentityForPartnerResponse GetAklessTmpIdentityForPartner(GetAklessTmpIdentityForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAklessTmpIdentityForPartnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves encrypted zero-trust temporary credentials by role for authorized partners. Each call returns a temporary AccessKey ID, AccessKey secret, and security token.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sign the request with an identity that is added to the partner whitelist and granted the websitebuild:GetAklessTmpIdentityForPartner permission. Pass a role code in the query parameters and make a separate call for each role.
+        /// After a successful call, read the three ciphertext strings from Data.Credentials and decrypt them by using the pre-shared key. After decryption, configure the AccessKey ID, AccessKey secret, and security token from the same response into the SDK of the target cloud service. The validity period of the temporary credentials is managed by Akless.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAklessTmpIdentityForPartnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAklessTmpIdentityForPartnerResponse
+        /// </returns>
+        public async Task<GetAklessTmpIdentityForPartnerResponse> GetAklessTmpIdentityForPartnerAsync(GetAklessTmpIdentityForPartnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAklessTmpIdentityForPartnerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class MarketingChannelDistribution : TeaModel {
         /// <summary>
+        /// <para>The number of articles in the channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public long? ArticleCount { get; set; }
 
         /// <summary>
+        /// <para>The content distribution channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WEBSITE</para>
         /// </summary>

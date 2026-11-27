@@ -1,3 +1,7 @@
+2026-11-27 Version: 2.38.0
+- Support API GetAklessTmpIdentityForPartner.
+
+
 2026-11-26 Version: 2.37.3
 - Update API CreateAIStaffChat: add request parameters ClientToken.
 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class BrandKnowledgeOperation : TeaModel {
         /// <summary>
+        /// <para>The knowledge base document ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bkd_example001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DocumentId { get; set; }
 
         /// <summary>
+        /// <para>The processing status after the material operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PARSING</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The task ID used to query the processing progress.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bwb_example001</para>
         /// </summary>

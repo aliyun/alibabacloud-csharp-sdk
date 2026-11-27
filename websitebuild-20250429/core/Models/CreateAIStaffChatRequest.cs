@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ChatId { get; set; }
 
         /// <summary>
+        /// <para>The optional business idempotency token. The same token under the same primary account must correspond to the same input.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>27d4520e-90ab-49a2-a164-7d48e8a82115</para>
         /// </summary>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The business extension metadata in map format. The value must be a JSON string.</para>
+            /// <para>The business extension metadata in map format. Must be a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
