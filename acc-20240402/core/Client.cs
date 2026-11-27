@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "acc";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建镜像缓存</para>
+        /// <para>Creates an image cache to accelerate the pulling of container images when creating ACS pods.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -109,6 +112,10 @@ namespace AlibabaCloud.SDK.Acc20240402
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBaseImageCacheMatch))
+            {
+                query["EnableBaseImageCacheMatch"] = request.EnableBaseImageCacheMatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCacheName))
             {
                 query["ImageCacheName"] = request.ImageCacheName;
@@ -141,6 +148,10 @@ namespace AlibabaCloud.SDK.Acc20240402
             {
                 query["Tags"] = request.Tags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -162,7 +173,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建镜像缓存</para>
+        /// <para>Creates an image cache to accelerate the pulling of container images when creating ACS pods.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -193,6 +204,10 @@ namespace AlibabaCloud.SDK.Acc20240402
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBaseImageCacheMatch))
+            {
+                query["EnableBaseImageCacheMatch"] = request.EnableBaseImageCacheMatch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCacheName))
             {
                 query["ImageCacheName"] = request.ImageCacheName;
@@ -225,6 +240,10 @@ namespace AlibabaCloud.SDK.Acc20240402
             {
                 query["Tags"] = request.Tags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -246,7 +265,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建镜像缓存</para>
+        /// <para>Creates an image cache to accelerate the pulling of container images when creating ACS pods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -264,7 +283,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建镜像缓存</para>
+        /// <para>Creates an image cache to accelerate the pulling of container images when creating ACS pods.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -282,7 +301,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除镜像缓存</para>
+        /// <para>Deletes an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -332,7 +351,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除镜像缓存</para>
+        /// <para>Deletes an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -382,7 +401,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除镜像缓存</para>
+        /// <para>Deletes an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -400,7 +419,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除镜像缓存</para>
+        /// <para>Deletes an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -418,7 +437,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -464,7 +483,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -510,7 +529,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -528,7 +547,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of an image cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -546,7 +565,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of image caches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -616,7 +635,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of image caches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -686,7 +705,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of image caches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -704,7 +723,7 @@ namespace AlibabaCloud.SDK.Acc20240402
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询镜像缓存</para>
+        /// <para>Queries the details of image caches.</para>
         /// </summary>
         /// 
         /// <param name="request">

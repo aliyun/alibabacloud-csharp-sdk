@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
 {
     public class DeleteImageCacheRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to force delete the image cache. Default value: <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
         public bool? Force { get; set; }
 
         /// <summary>
+        /// <para>The image cache ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
         public string ImageCacheId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

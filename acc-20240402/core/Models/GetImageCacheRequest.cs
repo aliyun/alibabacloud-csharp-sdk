@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
 {
     public class GetImageCacheRequest : TeaModel {
         /// <summary>
+        /// <para>The image cache ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
         public string ImageCacheId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

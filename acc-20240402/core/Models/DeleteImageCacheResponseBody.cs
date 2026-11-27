@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Acc20240402.Models
 {
     public class DeleteImageCacheResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0E234675-3465-4CC3-9D0F-9A864BC*****</para>
         /// </summary>
