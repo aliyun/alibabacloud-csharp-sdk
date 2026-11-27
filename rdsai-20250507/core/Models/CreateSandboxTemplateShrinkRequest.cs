@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string DefaultCpu { get; set; }
 
+        [NameInMap("DefaultDisk")]
+        [Validation(Required=false)]
+        public string DefaultDisk { get; set; }
+
         /// <summary>
         /// <para>The memory size of sandboxes created by using this template. Unit: GiB. Valid values: 1 to 8.</para>
         /// 

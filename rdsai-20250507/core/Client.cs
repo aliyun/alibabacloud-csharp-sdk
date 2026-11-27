@@ -3028,6 +3028,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["DefaultCpu"] = request.DefaultCpu;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDisk))
+            {
+                query["DefaultDisk"] = request.DefaultDisk;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultMemory))
             {
                 query["DefaultMemory"] = request.DefaultMemory;
@@ -3115,6 +3119,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCpu))
             {
                 query["DefaultCpu"] = request.DefaultCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDisk))
+            {
+                query["DefaultDisk"] = request.DefaultDisk;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultMemory))
             {
@@ -7881,14 +7889,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -7959,14 +7967,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8037,14 +8045,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8063,14 +8071,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related feature documentation</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -14721,7 +14729,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 RDS PG AI 网关指标</para>
+        /// <para>Retrieves ApsaraDB RDS for PostgreSQL AI gateway metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14787,7 +14795,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 RDS PG AI 网关指标</para>
+        /// <para>Retrieves ApsaraDB RDS for PostgreSQL AI gateway metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14853,7 +14861,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 RDS PG AI 网关指标</para>
+        /// <para>Retrieves ApsaraDB RDS for PostgreSQL AI gateway metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14871,7 +14879,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 RDS PG AI 网关指标</para>
+        /// <para>Retrieves ApsaraDB RDS for PostgreSQL AI gateway metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17078,9 +17086,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -17107,6 +17115,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCpu))
             {
                 query["DefaultCpu"] = request.DefaultCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDisk))
+            {
+                query["DefaultDisk"] = request.DefaultDisk;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultMemory))
             {
@@ -17162,9 +17174,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -17191,6 +17203,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCpu))
             {
                 query["DefaultCpu"] = request.DefaultCpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDisk))
+            {
+                query["DefaultDisk"] = request.DefaultDisk;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultMemory))
             {
@@ -17246,9 +17262,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -17272,9 +17288,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 

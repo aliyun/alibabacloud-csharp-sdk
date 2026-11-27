@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>instance_info,resource_usage</para>
+            /// </summary>
             [NameInMap("InspectionItems")]
             [Validation(Required=false)]
             public string InspectionItems { get; set; }
@@ -80,10 +84,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>zh-CN</para>
+            /// </summary>
             [NameInMap("ReportLanguage")]
             [Validation(Required=false)]
             public string ReportLanguage { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mysql</para>
+            /// </summary>
             [NameInMap("ReportType")]
             [Validation(Required=false)]
             public string ReportType { get; set; }

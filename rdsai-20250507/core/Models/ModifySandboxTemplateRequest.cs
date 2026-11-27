@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultCpu { get; set; }
 
         /// <summary>
+        /// <para>The default disk space for sandboxes created by using this template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30Gi</para>
+        /// </summary>
+        [NameInMap("DefaultDisk")]
+        [Validation(Required=false)]
+        public string DefaultDisk { get; set; }
+
+        /// <summary>
         /// <para>The memory size for sandboxes created by using this template. Unit: GiB. Valid values: 1 to 8.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultMemory { get; set; }
 
         /// <summary>
-        /// <para>The container image used for the sandbox template. Format: <c>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</c>.</para>
+        /// <para>The container image used by the sandbox template. Format: <c>[registry/]&lt;repo&gt;[:tag][@sha256:digest]</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.example.com/example/sandbox:1.0</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the AI application.</para>
+        /// <para>The ID of the AI application instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +81,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The custom tags of the sandbox template. The key is the tag name, and the value is the tag value. You cannot use the system-reserved tag createdBy or the system-reserved tag hidden.</para>
+        /// <para>The custom tags of the sandbox template. The key is the tag name, and the value is the tag value. You cannot use the system-reserved tags createdBy and hidden.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

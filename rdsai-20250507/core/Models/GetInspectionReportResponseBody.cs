@@ -258,10 +258,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>system-default-mysql-template</para>
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MySQL 默认巡检模板</para>
+        /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }

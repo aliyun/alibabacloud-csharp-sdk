@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>mysql</para>
+        /// </summary>
         [NameInMap("ReportType")]
         [Validation(Required=false)]
         public string ReportType { get; set; }

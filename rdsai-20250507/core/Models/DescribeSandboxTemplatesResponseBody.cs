@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeSandboxTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup parameter. You can ignore this parameter.</para>
+        /// <para>A reserved parameter. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position from which the read operation starts. An empty value indicates that the read operation starts from the beginning.</para>
+        /// <para>The position from which the current query starts. If this parameter is left empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLYz/NvD85HpgBeRBCusEIeVQ0dHZH9jr+NP3X9Jx0iSoql55b9nd4PIDm252/a0f+U=</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public List<DescribeSandboxTemplatesResponseBodySandboxTemplates> SandboxTemplates { get; set; }
         public class DescribeSandboxTemplatesResponseBodySandboxTemplates : TeaModel {
             /// <summary>
-            /// <para>The source that created the sandbox template. Valid values: user (created by a user) and system (created by the system).</para>
+            /// <para>The creation source of the sandbox template. Valid values: user (created by a user) and system (created by the system).</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>The number of CPUs allocated to the sandbox created by using this template.</para>
+            /// <para>The number of vCPUs allocated to the sandbox created by using this template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -85,6 +85,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("DefaultCpu")]
             [Validation(Required=false)]
             public string DefaultCpu { get; set; }
+
+            /// <summary>
+            /// <para>The default disk space of the sandbox created by using this template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30Gi</para>
+            /// </summary>
+            [NameInMap("DefaultDisk")]
+            [Validation(Required=false)]
+            public string DefaultDisk { get; set; }
 
             /// <summary>
             /// <para>The memory size of the sandbox created by using this template.</para>
@@ -107,7 +117,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</para>
+            /// <para>Specifies whether the sandbox created by using this template can access resources in the VPC where Supabase resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -137,7 +147,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of replicas for the sandbox template.</para>
+            /// <para>The number of replicas of the sandbox template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -147,14 +157,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? Replicas { get; set; }
 
             /// <summary>
-            /// <para>The custom tags of the sandbox template. A key represents a tag name, and a value represents a tag value.</para>
+            /// <para>The custom tags of the sandbox template. The key is the tag name and the value is the tag value.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public Dictionary<string, string> Tags { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sandbox template. Specify this ID when creating a sandbox by using this template.</para>
+            /// <para>The ID of the sandbox template. Specify this ID when you create a sandbox by using this template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>code-interpreter-asdxxxx</para>

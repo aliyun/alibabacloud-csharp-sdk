@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string DefaultCpu { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>30Gi</para>
+            /// </summary>
+            [NameInMap("DefaultDisk")]
+            [Validation(Required=false)]
+            public string DefaultDisk { get; set; }
+
+            /// <summary>
             /// <para>The default memory size for a sandbox created by using this template. The unit ends with Gi.</para>
             /// 
             /// <b>Example:</b>

@@ -130,10 +130,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 [Validation(Required=false)]
                 public string ToolName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>用户询问实例 pgm-example12345678（PostgreSQL，cn-hangzhou）的存储扩容方法。先检索相关文档，再查询实例配置。</para>
+                /// <para>当前会话处于只读模式，仅提供操作说明，不执行变更。</para>
+                /// </summary>
                 [NameInMap("answer")]
                 [Validation(Required=false)]
                 public string Answer { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>thinking</para>
+                /// </summary>
                 [NameInMap("event")]
                 [Validation(Required=false)]
                 public string Event { get; set; }
@@ -150,14 +159,26 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Feedback { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1767323076</para>
+            /// </summary>
             [NameInMap("GenerationFinishedAt")]
             [Validation(Required=false)]
             public string GenerationFinishedAt { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1767323045</para>
+            /// </summary>
             [NameInMap("GenerationStartedAt")]
             [Validation(Required=false)]
             public string GenerationStartedAt { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>completed</para>
+            /// </summary>
             [NameInMap("GenerationStatus")]
             [Validation(Required=false)]
             public string GenerationStatus { get; set; }
@@ -172,6 +193,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5561345587003-4</para>
+            /// </summary>
             [NameInMap("LastSentEntryId")]
             [Validation(Required=false)]
             public string LastSentEntryId { get; set; }
@@ -180,14 +205,26 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public List<GetMessagesResponseBodyDataMessageFiles> MessageFiles { get; set; }
             public class GetMessagesResponseBodyDataMessageFiles : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ac6bff58-75b7-43b2-8149-7dcc1c57cf11</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://example.com/3493759g.png?x-oss-date=20260102T030405Z&x-oss-expires=723&x-oss-signature-version=OSS4********A256&x-oss-credential=PC******zb&x-oss-signature=">https://example.com/3493759g.png?x-oss-date=20260102T030405Z&amp;x-oss-expires=723&amp;x-oss-signature-version=OSS4********A256&amp;x-oss-credential=PC******zb&amp;x-oss-signature=</a></para>
+                /// </summary>
                 [NameInMap("PreviewUrl")]
                 [Validation(Required=false)]
                 public string PreviewUrl { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>image</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

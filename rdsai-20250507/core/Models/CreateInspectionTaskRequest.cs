@@ -54,18 +54,34 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
+        /// </summary>
         [NameInMap("ReportLanguage")]
         [Validation(Required=false)]
         public string ReportLanguage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("ReportRegionId")]
         [Validation(Required=false)]
         public string ReportRegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>mysql</para>
+        /// </summary>
         [NameInMap("ReportType")]
         [Validation(Required=false)]
         public string ReportType { get; set; }
@@ -80,6 +96,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>system-default-mysql-template</para>
+        /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }

@@ -1,3 +1,6 @@
+2026-11-27 Version: 3.12.1
+- Generated csharp 2025-05-07 for RdsAi.
+
 2026-11-25 Version: 3.12.0
 - Support API ListLLMGatewayMetrics.
 

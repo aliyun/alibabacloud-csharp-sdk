@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifySandboxTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the AI application.</para>
+        /// <para>The ID of the AI application instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
